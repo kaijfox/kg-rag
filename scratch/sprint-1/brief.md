@@ -1,62 +1,34 @@
-# Sprint 1 brief and plan (written 2026-10-18, before execution)
+# Sprint 1 brief (state at the end, 2026-10-18)
 
-**Goal:** all v0 components built by cheap models from their package cards and working together, including the viewer (roadmap Phases 2 and 3). Phase 4 (baseline measurement) is Sprint 2.
-**Starting point:** end of Sprint 0, see `../sprint-0/brief.md`. `core` 0.2.0, `testkit`, 12 package cards, 278 tests passing, hidden skeleton in `packages/app/src/skeleton`. Nothing is committed to git yet.
+**Goal (met):** all v0 components built from their cards and working together, including the viewer (roadmap Phases 2 and 3). Phase 4 (baseline measurement) is Sprint 2.
 
-## Decided since Sprint 0 (decision log 2026-10-18)
-- Amendments recorded in `design/260916_initial-roadmap.md`: builds in v0, logging below MCP, chunk reading of Rule 4 (chunks derived by parse + chunk recipes, no "ground truth"), definition of "current ingest".
-- Roadmap Phase 2 now names the formula spike and its review criterion.
-- Q5: skeleton stays hidden; implementers must not read `packages/app/src/skeleton`; after each of the five duplicated packages (chunk, ingest, search, api, embed) is built, diff it against the skeleton as an oracle.
-- Adopt P-1 (named candidate pools) as core 0.3.0.
-- Keep a small agent-scored sample (about 30 answers) to validate the judge; no human scoring.
-- Judge, answerer and question writer are local Ollama models until the GPU server is ready (expected before Phase 4).
+## State
+- 16 packages in `packages/`, contract `@kg/core` 0.6.1, 903 tests passing plus 24 in the sidecar, `pnpm depcruise` clean. Git has one commit (Sprint 0); the Sprint 1 work is uncommitted (218 paths).
+- Pipelines are XState machines in `@kg/pipeline` (search `similarity`, ingest, eval run and question, generation, judge). Formula decoding is an optional parse stage; the default recipe has none.
+- Integration on the stat-mech corpus: 312 chunks, first ingest 8.0 s, re-ingest 60 ms with the same build, search median 29 ms, viewer checked live and finished in Chrome. Rules 1, 5, 6 audited with zero violations (Rules 1 and 4 vacuous for derived items).
+- Reviews: four reports, no blocker, 15 should-fix items, about 65 of 203 mutants survived; oracle diff against the hidden skeleton found 13 divergences. Review fixes are applied. Triage and retro are done.
+- No eval number is trustworthy: the judge is unvalidated.
 
-## Work, in order
+## Provisional
+- Embedding model embeddinggemma until after the baseline (Q4).
+- The chunker is not frozen; ids may still move. Chunk recipe `version '1'` is provisional until the freeze.
+- Defaults: undecoded formulas (Q13), local Ollama (qwen3.5) for all model calls.
+- Deferred: delta-encoded `considered` in the log, relation `position` column, summary storage, parser quality gate, Kardar glyph cleanup, PROV export, derived item identity (AM-7).
 
-### Wave 0: contract and design tasks (before any package is handed out)
-1. **Commit the repo** (nothing is in git). Ask the user first; one commit of Sprint 0's state is enough.
-2. **Pools (P-1), core 0.3.0.** `pools: Record<string, Candidate[]>` on `SearchState` (`{}` in v0), an optional `pools` summary on `StepTrace`, `vector-knn` gets an optional `into` param (default unchanged), and the contract text for a fuse step (not built). Update the search step conformance suite, the viewer and search cards, golden vectors or fixtures if they change, and `contract-revisions.md` (new entry). `pnpm check` must pass. No v0 behaviour changes. Do this before the state-machine spike so the spike works against 0.3.0.
-3. **Lifecycle document** (`scratch/sprint-1/lifecycle.md`): the ingest sequence (identify, parse|cache|import, chunk, embed, build, commit pointers) with which pointer moves when and what each event records; the search state and step rules (`done` skip, merge-on-retrieve); the invariants as one-line checks, each with the test that enforces it. Becomes an acceptance check for store, ingest and search.
+## Waits on the user (`../open-questions.md`)
+- Q12 approve amendments AM-1 to AM-6, AM-8 (`proposed-amendments.md`).
+- Q13 freeze the baseline on the undecoded parse recipe.
+- Q14 commit the Sprint 1 state.
+- Q15 timing of the arXiv-with-LaTeX corpus (recommended after the baseline).
 
-### Wave 1: spikes (run in parallel with Wave 2, no package changes)
-4. **State-machine spike** (`spike-state-machine.md`). Strong model. **Blocks only `search` and `ingest`.** Result decides whether those two packages are built as step runner (current cards) or as machines; contract changes come back as proposals.
-5. **Formula spike** (`spike-formula-vlm.md`). Must finish before the chunker freezes (before Phase 4 question generation), not before the chunk package is built.
-6. **PROV / Nix review.** One reviewer maps the provenance model (recipes, builds, content-addressed items, event log) onto W3C PROV and Nix/Bazel/DVC vocabulary; reports ideas we missed or terms we should adopt in docs. Output: `scratch/sprint-1/prov-review.md`. Blocks nothing.
+## Sprint 2 prep (Phase 4)
+1. Re-run the chunk mutation survivors; freeze the chunker and parse recipe together (needs Q13); then generate questions.
+2. Judge validation: run `judge-validation/plan.md` on 30 answers (10 per condition, forced hard cases, scorer a stronger model, blind, two passes); thresholds are pre-registered in the decision log. Report the judge's retry and failure rate.
+3. Question leakage review: sample questions for passage wording (4-word copy rule), passage-dependent phrasing (two seen: "equation (2.10)"), gold uniqueness and answerability without context (no-context judged 0.75 in the integration run). Log the 25 to 40 percent of generation groups that are dropped, with reasons.
+4. GPU server: not needed for formula speed (decoding takes 4 minutes). An eval run costs about 19 to 29 s per question on the laptop; budget a few hours locally, or switch the model client when the server exists. Record the Ollama digest of judge and answerer in the run.
+5. Pre-checks from the failure-mode table: rank distribution of gold items (reranking); all-gold recall on multi-hop against single-hop and the gap to the ceiling; topic-level gap; the "evidence split across chunks" signature; paraphrase recall for failing queries; a pilot extraction on a sample (not-extracted, fragmentation, conflict rates). Also the share of Kardar chunks with glyph names, and the formula-tagged question subset with a decode-only-gold oracle.
+6. Fixes first (check which are already done): a test for the failed-state record, `pool < k` check, MCP `search` default `k`, viewer list stability, viewer type declarations.
+7. Measure the log size after the baseline run to settle delta encoding.
 
-### Wave 2: package builds (parallel, cheap models, each from its card + core + testkit only)
-Model assignments from the cards: `parse-sidecar` (Sonnet), `parse` (Haiku), `chunk` (Sonnet), `embed` (Haiku), `store` (Sonnet), `eventlog` (Haiku), `api` (Sonnet), `mcp` (Haiku), `eval` 11a metrics and runner (Haiku) and 11b prompts (Opus for prompts, Haiku for parsers), `viewer` (Haiku/Sonnet). Each package: owned directory only, README with assumptions and known gaps, a notes file in `scratch/notes/<package>.md`, and changes to contracts only via a change proposal.
-- `store` is the riskiest (no SQLite implementation exists). Add a fake-vs-SQLite cross-check, run `knnFixtureSuite`, and confirm the S2 build rule against SQLite.
-- `mcp` must be run against the real MCP SDK; zod 4 schema handling is a known trap (card).
-- `chunk` freezes before Phase 4; it must still pass the golden vectors.
-- `eval` judge and prompts: validated in Wave 3 review, not by the author.
-
-### Wave 3: `search` and `ingest` (after the state-machine spike)
-Built either from the current cards (Haiku for steps and tests, Sonnet for the runner; Sonnet for ingest) or from machine-based cards written after the spike. If the spike changes contracts, revise cards and conformance first (Wave 0 style), then build.
-
-### Phase 3: integration
-Merge the packages and run the full suites with real implementations. Ingest the stat-mech corpus end to end, run searches and a small eval, and inspect the results and the log (not just green). Check the viewer against a live and a finished session. Cross-package review for duplicated logic, divergent contract readings and log gaps.
-
-## Review (stronger model than the implementers; not the author)
-- Mechanical per package: tests, types, dependency-cruiser, owns only its directory.
-- Contract: diff against the card for behaviour beyond spec and silent deviations.
-- Design rules: audit the six rules, with mutation testing on contract-bearing packages (it found 12 weak spots in Sprint 0).
-- Oracle diff: compare the five packages with skeleton equivalents.
-- Eval design: sample generated questions for leakage, answerability and tag correctness; validate the judge against the 30-answer agent-scored sample before trusting any number.
-- Spike reviews as in the roadmap.
-
-## Retro questions (in addition to the standing ones)
-- Where did cheap models need sibling code or contract changes? Which models handled which packages well?
-- Did the lifecycle document and invariants catch anything the package tests did not?
-- Did the state-machine decision hold up once applied?
-- Is v0 a sound base for the relation layer?
-
-## Open / provisional
-- Embedding model stays embeddinggemma until after the Phase 4 baseline (Q4).
-- P-2(a)/(c) deferred; P-1 adopted this sprint.
-- Parser quality gate and Kardar glyph-name cleanup not built; depends on the formula spike and measurement.
-- GPU-server parsing and equation decoding: not needed this sprint.
-
-## Waiting on the user
-- Approval to commit the repo (Wave 0, step 1).
-- Any contract change the state-machine spike proposes.
-- Design-doc changes arising from reviews (amendments need approval).
+## Links
+Triage `../design-feedback.md` (originals `design-feedback-triaged-originals.md`); `proposed-amendments.md`; `retro.md`; `../decision-log.md`; reviews `review-*.md`; `integration-report.md` and `change-proposals/`; `lifecycle.md` (stale, written against 0.2.0); `contract-0.6.1.md`; spikes `spike-state-machine.md`, `spike-formula-vlm.md`; PROV `prov-review.md`, `prov-followup.md`; plans `state-machine-revision.md`, `judge-validation/plan.md`.

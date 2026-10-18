@@ -1,0 +1,2006 @@
+{
+ "glm_ocr_4bit_mlx": {
+  "FK-p09-t137": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\frac {1}{\\tau_ {U}} \\sim \\frac {\\partial U}{\\partial \\vec {q}} \\cdot \\frac {\\partial}{\\partial \\vec {p}}"
+  },
+  "FK-p19-t277": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\ln f _ {1} \\left(\\vec {p} _ {1}, \\vec {q}\\right) + \\ln f _ {1} \\left(\\vec {p} _ {2}, \\vec {q}\\right) = \\ln f _ {1} \\left(\\vec {p} _ {1} ^ {\\prime}, \\vec {q}\\right) + \\ln f _ {1} \\left(\\vec {p} _ {2} ^ {\\prime}, \\vec {q}\\right). \\tag {3.51}"
+  },
+  "FK-p20-t290": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "f _ {1} \\left(\\vec {p}, \\vec {q}\\right) = n \\left(\\frac {\\beta}{2 \\pi m}\\right) ^ {3 / 2} \\exp \\left[ - \\frac {\\beta \\left(\\vec {p} - \\vec {p} _ {0}\\right) ^ {2}}{2 m} \\right], \\tag {3.56}"
+  },
+  "FK-p27-t426": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "v _ {\\ell} = \\sqrt {\\frac {5}{3} \\frac {k _ {B} \\bar {T}}{m}} \\tag {3.106}"
+  },
+  "FK-p28-t439": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\begin{array}{l} \\mathcal {L} \\left[ \\ln f _ {1} ^ {0} \\right] = 0 - \\frac {m c ^ {2}}{3 k _ {B} T} \\partial_ {\\alpha} u _ {\\alpha} + c _ {\\alpha} \\left[ \\left(\\frac {F _ {\\alpha}}{k _ {B} T} - \\frac {\\partial_ {\\alpha} n}{n} - \\frac {\\partial_ {\\alpha} T}{T}\\right) + \\left(\\frac {\\partial_ {\\alpha} n}{n} - \\frac {3}{2} \\frac {\\partial_ {\\alpha} T}{T}\\right) - \\frac {F _ {\\alpha}}{k _ {B} T} \\right] \\\\ + \\frac {m c ^ {2}}{2 k _ {B} T ^ {2}} c _ {\\alpha} \\partial_ {\\alpha} T + \\frac {m}{k _ {B} T} c _ {\\alpha} c _ {\\beta} u _ {\\alpha \\beta} \\\\ = \\frac {m}{k _ {B} T} \\left(c _ {\\alpha} c _ {\\beta} - \\frac {\\delta_ {\\alpha \\beta}}{3} c ^ {2}\\right) u _ {\\alpha \\beta} + \\left(\\frac {m c ^ {2}}{2 k _ {B} T} - \\frac {5}{2}\\right) \\frac {c _ {\\alpha}}{T} \\partial_ {\\alpha} T. \\tag {3.110} \\\\ \\end{array}"
+  },
+  "FK-p56-t936": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\left\\langle \\mathcal {H} ^ {n} \\right\\rangle_ {c} = (- 1) ^ {n} \\frac {\\partial^ {n} \\ln Z}{\\partial \\beta^ {n}}. \\tag {4.67}"
+  },
+  "FK-p60-t1007": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\begin{array}{l} \\mathcal {Z} (N, T, P) = \\int_ {0} ^ {\\infty} \\mathrm {d} V \\mathrm {e} ^ {- \\beta P V} \\int \\frac {1}{N !} \\prod_ {i = 1} ^ {N} \\frac {\\mathrm {d} ^ {3} \\vec {q} _ {i} \\mathrm {d} ^ {3} \\vec {p} _ {i}}{h ^ {3}} \\exp \\left[ - \\beta \\sum_ {i = 1} ^ {N} \\frac {p _ {i} ^ {2}}{2 m} \\right] \\tag {4.91} \\\\ = \\int_ {0} ^ {\\infty} \\mathrm {d} V V ^ {N} \\mathrm {e} ^ {- \\beta P V} \\frac {1}{N ! \\lambda (T) ^ {3 N}} = \\frac {1}{(\\beta P) ^ {N + 1} \\lambda (T) ^ {3 N}}. \\\\ \\end{array}"
+  },
+  "FK-p64-t1075": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "P = - \\frac {\\mathcal {G}}{V} = - \\left. \\frac {\\partial \\mathcal {G}}{\\partial V} \\right| _ {\\mu , T} = k _ {B} T \\frac {\\mathrm {e} ^ {\\beta \\mu}}{\\lambda^ {3}}. \\tag {4.110}"
+  },
+  "TK-p04-t55": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\begin{array}{l} \\left(P + \\frac {a}{V ^ {2}}\\right) \\left(V - b\\right) \\left(L - L _ {0}\\right) - c \\left[ F - K \\left(L - L _ {0}\\right) \\right] = 0, \\tag {1.7} \\\\ \\left(P + \\frac {a}{V ^ {2}}\\right) (V - b) M - d B = 0. \\\\ \\end{array}"
+  },
+  "TK-p04-t57": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\Theta \\propto \\left(P + \\frac {a}{V ^ {2}}\\right) (V - b) = c \\left(\\frac {F}{L - L _ {0}} - K\\right) = d \\frac {B}{M}. \\tag {1.8}"
+  },
+  "TK-p14-t275": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\mathrm {d} Q _ {R} = T _ {0} \\frac {\\mathrm {d} Q}{T}. \\tag {1.23}"
+  },
+  "TK-p17-t334": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "x _ {i} = - \\left. \\frac {\\partial H}{\\partial J _ {i}} \\right| _ {S, J _ {j \\neq i}}. \\tag {1.32}"
+  },
+  "TK-p20-t385": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "E \\left(\\lambda S, \\lambda \\mathbf {x}, \\lambda \\mathbf {N}\\right) = \\lambda E \\left(S, \\mathbf {x}, \\mathbf {N}\\right). \\tag {1.46}"
+  },
+  "TK-p24-t460": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\begin{array}{l} \\delta S = - \\frac {2}{T _ {A}} \\left[ \\delta T _ {A} \\left(\\frac {\\delta E _ {A} - \\mathbf {J} _ {A} \\cdot \\delta \\mathbf {x} _ {A} - \\mu_ {A} \\cdot \\delta \\mathbf {N} _ {A}}{T _ {A}}\\right) + \\delta \\mathbf {J} _ {A} \\cdot \\delta \\mathbf {x} _ {A} + \\delta \\mu_ {A} \\cdot \\delta \\mathbf {N} _ {A} \\right] \\tag {1.70} \\\\ = - \\frac {2}{T _ {A}} \\left[ \\delta T _ {A} \\delta S _ {A} + \\delta \\mathbf {J} _ {A} \\cdot \\delta \\mathbf {x} _ {A} + \\delta \\mu_ {A} \\cdot \\delta \\mathbf {N} _ {A} \\right]. \\\\ \\end{array}"
+  },
+  "TK-p24-t447": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\left(E _ {B} - \\delta E, \\mathbf {x} _ {B} - \\delta \\mathbf {x}, \\mathbf {N} _ {B} - \\delta \\mathbf {N}\\right) \\text {a n d} \\left(T _ {B} + \\delta T _ {B}, \\mathbf {J} _ {B} + \\delta \\mathbf {J} _ {B}, \\mu_ {B} + \\delta \\mu_ {B}\\right). \\tag {1.66}"
+  },
+  "TK-p25-t472": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "C _ {\\mathrm {x}} = \\left. \\frac {\\mathrm {d} Q}{\\mathrm {d} T} \\right| _ {\\mathrm {x}} = T \\left. \\frac {\\partial S}{\\partial T} \\right| _ {\\mathrm {x}} \\geq 0. \\tag {1.74}"
+  },
+  "FP-p06-t65": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "d S (E, N, V) = \\frac {d E}{T} + \\frac {P d V}{T} - \\frac {\\mu d N}{T}. \\tag {2.16}"
+  },
+  "FP-p15-t194": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\begin{array}{l} \\left(\\frac {\\partial}{\\partial v}\\right) _ {V, T} = \\left(\\frac {\\partial N}{\\partial v}\\right) _ {V, T} \\left(\\frac {\\partial}{\\partial N}\\right) _ {V, T} = - \\frac {N ^ {2}}{V} \\left(\\frac {\\partial}{\\partial N}\\right) _ {V, T} \\\\ \\left(\\frac {\\partial}{\\partial v}\\right) _ {N, T} = \\left(\\frac {\\partial V}{\\partial v}\\right) _ {N, T} \\left(\\frac {\\partial}{\\partial V}\\right) _ {N, T} = N \\left(\\frac {\\partial}{\\partial V}\\right) _ {N, T}. \\tag {2.63} \\\\ \\end{array}"
+  },
+  "FP-p18-t235": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "\\langle n _ {\\mathbf {k}} \\rangle = - k _ {B} T \\frac {1}{\\partial \\mu} \\ln [ 1 - \\exp \\{- \\beta \\left(E _ {\\mathbf {k}} - \\mu\\right) \\} ] = \\frac {1}{\\exp \\{\\beta \\left(E _ {\\mathbf {k}} - \\mu\\right) \\} - 1}. \\tag {2.77}"
+  },
+  "FP-p21-t292": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "Z (1) \\frac {d S (Z (1) Z (2))}{d (Z (1))} = Z (1) \\frac {d S (Z (1))}{d Z (1)} = Z (1) Z (2) \\frac {d S (Z (1) Z (2))}{d (Z (1) Z (2))}"
+  },
+  "FP-p23-t314": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\int_ {E < H (\\mathbf {x}) < E + \\delta E} d \\mathbf {x} \\rho (\\mathbf {x}) = 1. \\tag {2.101}"
+  },
+  "FP-p23-t322": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\frac {\\delta}{\\delta \\rho (x)} \\left\\{- k _ {B} \\int d ^ {6} N x \\left[ \\rho \\ln \\left(h ^ {3 N} N! \\rho\\right) - \\lambda \\rho \\right] \\right\\}"
+  },
+  "TP-p10-t123": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "\\begin{array}{l} d A = d E - d (T S) \\\\ = d Q - T d S - S d T - d W. \\tag {1.28} \\\\ \\end{array}"
+  },
+  "TP-p10-t121": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\begin{array}{l} d A = d E - T d S - S d T \\\\ = - S d T + \\sum_ {i} X _ {i} d x _ {i} + \\sum_ {j} \\mu_ {j} d N _ {j}. \\tag {1.27} \\\\ \\end{array}"
+  },
+  "TP-p16-t221": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\begin{array}{l} d S = \\left(\\frac {\\partial S _ {1}}{\\partial E _ {1}}\\right) _ {V _ {1}} d E _ {1} + \\left(\\frac {\\partial S _ {2}}{\\partial E _ {2}}\\right) _ {V _ {2}} d E _ {2} + \\left(\\frac {\\partial S _ {1}}{\\partial V _ {1}}\\right) _ {E _ {1}} d V _ {1} + \\left(\\frac {\\partial S _ {2}}{\\partial V _ {2}}\\right) _ {E _ {2}} d V _ {2} \\\\ = \\left[ \\left(\\frac {\\partial S _ {1}}{\\partial E _ {1}}\\right) _ {V _ {1}} - \\left(\\frac {\\partial S _ {2}}{\\partial E _ {2}}\\right) _ {V _ {2}} \\right] d E _ {1} + \\left[ \\left(\\frac {\\partial S _ {1}}{\\partial V _ {1}}\\right) _ {E _ {1}} - \\left(\\frac {\\partial S _ {2}}{\\partial V _ {2}}\\right) _ {E _ {2}} \\right] d V _ {1} = 0 \\tag {1.67} \\\\ \\end{array}"
+  },
+  "TP-p17-t233": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "G _ {1} \\left(P _ {0}, T _ {0}\\right) = E _ {1} - T _ {0} S _ {1} + P _ {0} V _ {1}. \\tag {1.72}"
+  },
+  "TP-p18-t245": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\left(\\frac {\\partial T}{\\partial S}\\right) _ {V} = \\frac {T}{C _ {V}} > 0 \\mathrm {o r} C _ {V} > 0 \\tag {1.76}"
+  },
+  "TP-p18-t248": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\frac {T}{V K _ {S} C _ {V}} > \\left(\\frac {\\partial T}{\\partial V}\\right) _ {S} ^ {2}. \\tag {1.78}"
+  },
+  "TP-p24-t315": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "v _ {1} \\left(P _ {c}, T _ {c}\\right) = \\left. \\frac {\\partial g _ {1}}{\\partial P} \\right| _ {P _ {c}, T _ {c}} = v _ {2} \\left(P _ {c}, T _ {c}\\right) = \\left. \\frac {\\partial g _ {2}}{\\partial P} \\right| _ {P _ {c}, T _ {c}} \\tag {1.90}"
+  },
+  "IFK-p17-51": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\left(\\vec {p} _ {1} ^ {\\prime}, \\vec {p} _ {2} ^ {\\prime}, \\vec {b} ^ {\\prime}\\right)"
+  },
+  "IFK-p23-116": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\left(\\vec {p} _ {1} ^ {\\prime}, \\vec {p} _ {2} ^ {\\prime}\\right)"
+  },
+  "ITK-p12-329": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\left(T _ {1} > T _ {2} > T _ {3}\\right)."
+  },
+  "ITK-p18-377": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\left\\{N _ {1}, N _ {2}, \\dots \\right\\}"
+  }
+ },
+ "glm_ocr_4bit_mlx_tight": {
+  "FK-p09-t137": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\frac {1}{\\tau_ {U}} \\sim \\frac {\\partial U}{\\partial \\vec {q}} \\cdot \\frac {\\partial}{\\partial \\vec {p}}"
+  },
+  "FK-p19-t277": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\ln f _ {1} \\left(\\vec {p} _ {1}, \\vec {q}\\right) + \\ln f _ {1} \\left(\\vec {p} _ {2}, \\vec {q}\\right) = \\ln f _ {1} \\left(\\vec {p} _ {1} ^ {\\prime}, \\vec {q}\\right) + \\ln f _ {1} \\left(\\vec {p} _ {2} ^ {\\prime}, \\vec {q}\\right). \\tag {3.51}"
+  },
+  "FK-p20-t290": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "f _ {1} (\\vec {p}, \\vec {q}) = n \\left(\\frac {\\beta}{2 \\pi m}\\right) ^ {3 / 2} \\exp \\left[ - \\frac {\\beta (\\vec {p} - \\vec {p} _ {0}) ^ {2}}{2 m} \\right], \\tag {3.56}"
+  },
+  "FK-p27-t426": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "v _ {\\ell} = \\sqrt {\\frac {5}{3} \\frac {k _ {B} \\bar {T}}{m}} \\tag {3.106}"
+  },
+  "FK-p28-t439": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\begin{array}{l} \\mathcal {L} \\left[ \\ln f _ {1} ^ {0} \\right] = 0 - \\frac {m c ^ {2}}{3 k _ {B} T} \\partial_ {\\alpha} u _ {\\alpha} + c _ {\\alpha} \\left[ \\left(\\frac {F _ {\\alpha}}{k _ {B} T} - \\frac {\\partial_ {\\alpha} n}{n} - \\frac {\\partial_ {\\alpha} T}{T}\\right) + \\left(\\frac {\\partial_ {\\alpha} n}{n} - \\frac {3}{2} \\frac {\\partial_ {\\alpha} T}{T}\\right) - \\frac {F _ {\\alpha}}{k _ {B} T} \\right] \\\\ + \\frac {m c ^ {2}}{2 k _ {B} T ^ {2}} c _ {\\alpha} \\partial_ {\\alpha} T + \\frac {m}{k _ {B} T} c _ {\\alpha} c _ {\\beta} u _ {\\alpha \\beta} \\\\ = \\frac {m}{k _ {B} T} \\left(c _ {\\alpha} c _ {\\beta} - \\frac {\\delta_ {\\alpha \\beta}}{3} c ^ {2}\\right) u _ {\\alpha \\beta} + \\left(\\frac {m c ^ {2}}{2 k _ {B} T} - \\frac {5}{2}\\right) \\frac {c _ {\\alpha}}{T} \\partial_ {\\alpha} T. \\tag {3.110} \\\\ \\end{array}"
+  },
+  "FK-p56-t936": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "\\left\\langle \\mathcal {H} ^ {n} \\right\\rangle_ {c} = (- 1) ^ {n} \\frac {\\partial^ {n} \\ln Z}{\\partial \\beta^ {2}}. \\tag {4.67}"
+  },
+  "FK-p60-t1007": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\begin{array}{l} \\mathcal {Z} (N, T, P) = \\int_ {0} ^ {\\infty} \\mathrm {d} V \\mathrm {e} ^ {- \\beta P V} \\int \\frac {1}{N !} \\prod_ {i = 1} ^ {N} \\frac {\\mathrm {d} ^ {3} \\vec {q} _ {i} \\mathrm {d} ^ {3} \\vec {p} _ {i}}{h ^ {3}} \\exp \\left[ - \\beta \\sum_ {i = 1} ^ {N} \\frac {p _ {i} ^ {2}}{2 m} \\right] \\tag {4.91} \\\\ = \\int_ {0} ^ {\\infty} \\mathrm {d} V V ^ {N} \\mathrm {e} ^ {- \\beta P V} \\frac {1}{N ! \\lambda (T) ^ {3 N}} = \\frac {1}{(\\beta P) ^ {N + 1} \\lambda (T) ^ {3 N}}. \\\\ \\end{array}"
+  },
+  "FK-p64-t1075": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "P = - \\frac {\\mathcal {G}}{V} = - \\left. \\frac {\\partial \\mathcal {G}}{\\partial V} \\right| _ {\\mu , T} = k _ {B} T \\frac {\\mathrm {e} ^ {\\beta \\mu}}{\\lambda^ {3}}. \\tag {4.110}"
+  },
+  "TK-p04-t55": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\begin{array}{l} \\left(P + \\frac {a}{V ^ {2}}\\right) \\left(V - b\\right) \\left(L - L _ {0}\\right) - c \\left[ F - K \\left(L - L _ {0}\\right) \\right] = 0, \\tag {1.7} \\\\ \\left(P + \\frac {a}{V ^ {2}}\\right) (V - b) M - d B = 0. \\\\ \\end{array}"
+  },
+  "TK-p04-t57": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\Theta \\propto \\left(P + \\frac {a}{V ^ {2}}\\right) (V - b) = c \\left(\\frac {F}{L - L _ {0}} - K\\right) = d \\frac {B}{M}. \\tag {1.8}"
+  },
+  "TK-p14-t275": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\mathrm {d} Q _ {R} = T _ {0} \\frac {\\mathrm {d} Q}{T}. \\tag {1.23}"
+  },
+  "TK-p17-t334": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "x _ {i} = - \\left. \\frac {\\partial H}{\\partial J _ {i}} \\right| _ {S, J _ {j i}}. \\tag {1.32}"
+  },
+  "TK-p20-t385": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "E (\\lambda S, \\lambda \\mathbf {x}, \\lambda \\mathbf {N}) = \\lambda E (S, \\mathbf {x}, \\mathbf {N}). \\tag {1.46}"
+  },
+  "TK-p24-t460": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\begin{array}{l} \\delta S = - \\frac {2}{T _ {A}} \\left[ \\delta T _ {A} \\left(\\frac {\\delta E _ {A} - \\mathbf {J} _ {A} \\cdot \\delta \\mathbf {x} _ {A} - \\mu_ {A} \\cdot \\delta \\mathbf {N} _ {A}}{T _ {A}}\\right) + \\delta \\mathbf {J} _ {A} \\cdot \\delta \\mathbf {x} _ {A} + \\delta \\mu_ {A} \\cdot \\delta \\mathbf {N} _ {A} \\right] \\tag {1.70} \\\\ = - \\frac {2}{T _ {A}} \\left[ \\delta T _ {A} \\delta S _ {A} + \\delta \\mathbf {J} _ {A} \\cdot \\delta \\mathbf {x} _ {A} + \\delta \\mu_ {A} \\cdot \\delta \\mathbf {N} _ {A} \\right]. \\\\ \\end{array}"
+  },
+  "TK-p24-t447": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\left(E _ {B} - \\delta E, \\mathbf {x} _ {B} - \\delta \\mathbf {x}, \\mathbf {N} _ {B} - \\delta \\mathbf {N}\\right) \\mathrm {a n d} \\left(T _ {B} + \\delta T _ {B}, \\mathbf {J} _ {B} + \\delta \\mathbf {J} _ {B}, \\mu_ {B} + \\delta \\mu_ {B}\\right). \\tag {1.66}"
+  },
+  "TK-p25-t472": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "C _ {x} = \\frac {\\mathrm {d} Q}{\\mathrm {d} T} \\Bigg | _ {x} = T \\left. \\frac {\\partial S}{\\partial T} \\right| _ {x} \\geq 0. \\tag {1.74}"
+  },
+  "FP-p06-t65": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "d S (E, N, V) = \\frac {d E}{T} + \\frac {P d V}{T} - \\frac {\\mu d N}{T}. \\tag {2.16}"
+  },
+  "FP-p15-t194": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\begin{array}{l} \\left(\\frac {\\partial}{\\partial v}\\right) _ {V, T} = \\left(\\frac {\\partial N}{\\partial v}\\right) _ {V, T} \\left(\\frac {\\partial}{\\partial N}\\right) _ {V, T} = - \\frac {N ^ {2}}{V} \\left(\\frac {\\partial}{\\partial N}\\right) _ {V, T} \\\\ \\left(\\frac {\\partial}{\\partial v}\\right) _ {N, T} = \\left(\\frac {\\partial V}{\\partial v}\\right) _ {N, T} \\left(\\frac {\\partial}{\\partial V}\\right) _ {N, T} = N \\left(\\frac {\\partial}{\\partial V}\\right) _ {N, T}. \\tag {2.63} \\\\ \\end{array}"
+  },
+  "FP-p18-t235": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "\\langle n _ {\\mathbf {k}} \\rangle = - k _ {B} T \\frac {\\partial}{\\partial \\mu} \\ln [ 1 - \\exp \\{- \\beta \\left(E _ {\\mathbf {k}} - \\mu\\right) \\} ] = \\frac {\\exp \\left\\{\\beta \\left(E _ {\\mathbf {k}} - \\mu\\right) \\right\\} - 1}{.} \\tag {2.77}"
+  },
+  "FP-p21-t292": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "Z (1) \\frac {d S (Z (1) Z (2))}{d (Z (1))} = Z (1) \\frac {d S (Z (1))}{d Z (1)} = Z (1) Z (2) \\frac {d S (Z (1) Z (2))}{d (Z (1) Z (2))}"
+  },
+  "FP-p23-t314": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\int_ {E < H (\\mathbf {x}) < E + \\delta E} d \\mathbf {x} \\rho (\\mathbf {x}) = 1. \\tag {2.101}"
+  },
+  "FP-p23-t322": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "\\frac {\\delta}{\\delta \\rho (x)} \\left\\{- k _ {B} \\int d ^ {4 N} x \\left[ \\rho \\ln \\left(h ^ {3 N} N! \\rho\\right) - \\lambda \\rho \\right] \\right\\}"
+  },
+  "TP-p10-t123": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "\\begin{array}{l} d A = d E - d (T S) \\\\ = d Q - T d S - S d T - d W. \\tag {1.28} \\\\ \\end{array}"
+  },
+  "TP-p10-t121": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\begin{array}{l} d A = d E - T d S - S d T \\\\ = - S d T + \\sum_ {i} X _ {i} d x _ {i} + \\sum_ {j} \\mu_ {j} d N _ {j}. \\tag {1.27} \\\\ \\end{array}"
+  },
+  "TP-p16-t221": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\begin{array}{l} d S = \\left(\\frac {\\partial S _ {1}}{\\partial E _ {1}}\\right) _ {V _ {1}} d E _ {1} + \\left(\\frac {\\partial S _ {2}}{\\partial E _ {2}}\\right) _ {V _ {2}} d E _ {2} + \\left(\\frac {\\partial S _ {1}}{\\partial V _ {1}}\\right) _ {E _ {1}} d V _ {1} + \\left(\\frac {\\partial S _ {2}}{\\partial V _ {2}}\\right) _ {E _ {2}} d V _ {2} \\\\ = \\left[ \\left(\\frac {\\partial S _ {1}}{\\partial E _ {1}}\\right) _ {V _ {1}} - \\left(\\frac {\\partial S _ {2}}{\\partial E _ {2}}\\right) _ {V _ {2}} \\right] d E _ {1} + \\left[ \\left(\\frac {\\partial S _ {1}}{\\partial V _ {1}}\\right) _ {E _ {1}} - \\left(\\frac {\\partial S _ {2}}{\\partial V _ {2}}\\right) _ {E _ {2}} \\right] d V _ {1} = 0 \\tag {1.67} \\\\ \\end{array}"
+  },
+  "TP-p17-t233": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "G _ {1} \\left(P _ {0}, T _ {0}\\right) = E _ {1} - T _ {0} S _ {1} + P _ {0} V _ {1}. \\tag {1.72}"
+  },
+  "TP-p18-t245": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\left(\\frac {\\partial T}{\\partial S}\\right) _ {V} = \\frac {T}{C _ {V}} > 0 \\mathrm {o r} C _ {V} > 0 \\tag {1.76}"
+  },
+  "TP-p18-t248": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\frac {T}{V K _ {S} C _ {V}} > \\left(\\frac {\\partial T}{\\partial V}\\right) _ {S} ^ {2}. \\tag {1.78}"
+  },
+  "TP-p24-t315": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "v _ {1} \\left(P _ {c}, T _ {c}\\right) = \\frac {\\partial \\sigma_ {1}}{\\partial P} \\Bigg | _ {P _ {c}, T _ {c}} = v _ {2} \\left(P _ {c}, T _ {c}\\right) = \\frac {\\partial \\sigma_ {2}}{\\partial P} \\Bigg | _ {P _ {c}, T _ {c}} \\tag {1.90}"
+  },
+  "IFK-p17-51": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\left(\\vec {p} _ {1} ^ {\\prime}, \\vec {p} _ {2} ^ {\\prime}, \\vec {b} ^ {\\prime}\\right)"
+  },
+  "IFK-p23-116": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\left(\\vec {p} _ {1} ^ {\\prime}, \\vec {p} _ {2} ^ {\\prime}\\right)"
+  },
+  "ITK-p12-329": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\left(T _ {1} > T _ {2} > T _ {3}\\right)."
+  },
+  "ITK-p18-377": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\left\\{N _ {1}, N _ {2}, \\dots \\right\\}"
+  }
+ },
+ "paddleocr_vl_1.6_4bit_mlx": {
+  "FK-p09-t137": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\frac{1}{\\tau_{U}}\\sim\\frac{\\partial U}{\\partial\\vec{q}}\\cdot\\frac{\\partial}{\\partial\\vec{p}}"
+  },
+  "FK-p19-t277": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\operatorname{l n}f_{1}(\\vec{p}_{1},\\vec{q})+\\operatorname{l n}f_{1}(\\vec{p}_{2},\\vec{q})=\\operatorname{l n}f_{1}(\\vec{p}_{1}^{\\prime},\\vec{q})+\\operatorname{l n}f_{1}(\\vec{p}_{2}^{\\prime},\\vec{q}).\\quad(3.51)"
+  },
+  "FK-p20-t290": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "f_{1}(\\vec{p},\\vec{q})=n\\left(\\frac{\\beta}{2\\pi m}\\right)^{3/2}\\operatorname{e x p}\\left[-\\frac{\\beta(\\vec{p}-\\vec{p}_{0})^{2}}{2m}\\right],\\quad\\quad(3.56)"
+  },
+  "FK-p27-t426": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "v_{\\ell}=\\sqrt{\\frac{5}{3}\\frac{k_{B}\\overline{{T}}}{m}}\\quad(3.106)"
+  },
+  "FK-p28-t439": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "\\begin{aligned} we~can~simplify~the~above~equation~to\\\\\\mathcal{L}\\left[\\ln f_{1}^{0}\\right]&=0-\\frac{mc^{2}}{3k_{B}T}\\partial_{\\alpha}u_{\\alpha}+c_{\\alpha}\\left[\\left(\\frac{F_{\\alpha}}{k_{B}T}-\\frac{\\partial_{\\alpha}n}{n}-\\frac{\\partial_{\\alpha}T}{T}\\right)+\\left(\\frac{\\partial_{\\alpha}n}{n}-\\frac{3}{2}\\frac{\\partial_{\\alpha}T}{T}\\right)-\\frac{F_{\\alpha}}{k_{B}T}\\right]\\\\&\\quad+\\frac{mc^{2}}{2k_{B}T^{2}}c_{\\alpha}\\partial_{\\alpha}T+\\frac{m}{k_{B}T}c_{\\alpha}c_{\\beta}u_{\\alpha\\beta}\\\\&=\\frac{m}{k_{B}T}\\left(c_{\\alpha}c_{\\beta}-\\frac{\\hat{\\delta}_{\\alpha\\beta}}{3}c^{2}\\right)u_{\\alpha\\beta}+\\left(\\frac{mc^{2}}{2k_{B}T}-\\frac{5}{2}\\right)\\frac{c_{\\alpha}}{T}\\partial_{\\alpha}T.\\\\&\\quad(3.110)\\end{aligned}"
+  },
+  "FK-p56-t936": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\left<\\mathcal{H}^{n}\\right>_{c}=(-1)^{n}\\frac{\\partial^{n}\\operatorname{l n}Z}{\\partial\\beta^{n}}.\\eqno(4.67)"
+  },
+  "FK-p60-t1007": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "&\\text{The normalization factor is now}\\\\&\\mathcal{Z}(N,T,P)=\\int_{0}^{\\infty}\\mathrm{d}V\\mathrm{e}^{-\\beta PV}\\int\\frac{1}{N!}\\prod_{i=1}^{N}\\frac{\\mathrm{d}^{3}\\vec{q}_i\\mathrm{d}^{3}\\vec{p}_i}{h^3}\\exp\\left[-\\beta\\sum_{i=1}^{N}\\frac{p_i^2}{2m}\\right]\\\\&=\\int_{0}^{\\infty}\\mathrm{d}V V^N\\ \\mathrm{e}^{-\\beta PV}\\frac{1}{N!\\lambda(T)^{3N}}=\\frac{1}{(\\beta P)^{N+1}\\lambda(T)^{3N}}.\\\\&\\text{Ignoring non-extensive contributions,the Gibbs free energy is given by}"
+  },
+  "FK-p64-t1075": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "P&=-\\frac{\\mathcal{G}}{V}=-\\left.\\frac{\\partial\\mathcal{G}}{\\partial V}\\right|_{\\mu,T}=k_BT\\frac{\\mathrm{e}^{\\beta\\mu}}{\\lambda^3}.&\\qquad&(4.110)"
+  },
+  "TK-p04-t55": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "\\begin{aligned}&\\text{for~conditions~are~satisfied~between~then~coordinates.}\\\\ &\\begin{aligned}\\\\ &\\left(P+\\frac{a}{V^{2}}\\right)(V-b)(L-L_{0})-c[F-K(L-L_{0})]=0,\\\\&\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad(1.7)\\\\&\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad(2.7)\\\\&\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad(3.7)\\end{aligned}\\\\ &\\\\ &two~conditions~can~be~organized~into~three~empirical~temperature~func-\\\\ &\\end{aligned}"
+  },
+  "TK-p04-t57": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\begin{array}{c} ns~as\\\\\\Theta\\propto\\left(P+\\frac{a}{V^{2}}\\right)\\left(V-b\\right)=c\\left(\\frac{F}{L-L_{0}}-K\\right)=d\\frac{B}{M}.\\tag{1.8}\\\\\\text{ste~that~the~zeroth~low~severally~constraints~the~form~of~the~constraint~age.}\\end{array}"
+  },
+  "TK-p14-t275": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\mathfrak{d}Q_{R}=T_{0}\\frac{\\mathfrak{d}Q}{T}.\\quad(1.23)"
+  },
+  "TK-p17-t334": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "\\begin{array}{c} Eq.\\ (1.31)\\text{that}\\\\\\left.x_{i}=-\\left.\\frac{\\partial H}{\\partial J_{i}}\\right|_{S,J_{j\\neq i}}.\\right.\\\\\\left.(1.32)\\right.\\\\\\text{thalpy with temperature are related to heat capacities at\\\\\\text{examples.}}\\end{array}"
+  },
+  "TK-p20-t385": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "E(\\lambda S,\\lambda\\mathbf{x},\\lambda\\mathbf{N})=\\lambda E(S,\\mathbf{x},\\mathbf{N}).\\quad(1.46)"
+  },
+  "TK-p24-t460": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\begin{aligned}{\\delta S}&{{}=-\\frac{2}{T_{A}}\\left[\\delta T_{A}\\left(\\frac{\\delta E_{A}-\\mathbf{J}_{A}\\cdot\\delta\\mathbf{x}_{A}-\\mu_{A}\\cdot\\delta\\mathbf{N}_{A}}{T_{A}}\\right)+\\delta\\mathbf{J}_{A}\\cdot\\delta\\mathbf{x}_{A}+\\delta\\mu_{A}\\cdot\\delta\\mathbf{N}_{A}\\right]}&{}&{{}\\quad(1.70)}\\\\ {}&{{}=-\\frac{2}{T_{A}}\\left[\\delta T_{A}\\delta S_{A}+\\delta\\mathbf{J}_{A}\\cdot\\delta\\mathbf{x}_{A}+\\delta\\mu_{A}\\cdot\\delta\\mathbf{N}_{A}\\right].}\\\\ \\end{aligned}"
+  },
+  "TK-p24-t447": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "(E_{B}-\\delta E,{{\\bf~x}}_{B}-\\delta{{\\bf x}},{{\\bf~N}}_{B}-\\delta{{\\bf N}})\\quad{\\operatorname{a n d}}\\quad(T_{B}+\\delta T_{B},{{\\bf~J}}_{B}+\\delta{{\\bf J}}_{B},\\quad\\mu_{B}+\\delta\\mu_{B}).\\quad(1.66)"
+  },
+  "TK-p25-t472": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "\\begin{aligned}&\\mathrm{iures}\\ \\partial S/\\partial T|_{\\mathbf{x}}\\geq0,implying~a~positive~heat~capacity,since\\\\&\\quad C_{\\mathbf{x}}=\\left.\\frac{\\partial Q}{\\partial T}\\right|_{\\mathbf{x}}=T\\left.\\frac{\\partial S}{\\partial T}\\right|_{\\mathbf{x}}\\geq0.\\tag{1.74}\\\\&\\text{of the}\\ \\delta x_{i}\\text{in Eq.}(1.71)\\text{is non-zero,the corresponding response}\\\\&\\mathcal{I}|_{t}=\\text{must be positive. However,a more general requirement}\\end{aligned}"
+  },
+  "FP-p06-t65": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "d S(E,N,V)=\\frac{d E}{T}+\\frac{P d V}{T}-\\frac{\\mu d N}{T}\\;."
+  },
+  "FP-p15-t194": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\begin{array}{r l r l r}{\\left(\\frac{\\partial}{\\partial v}\\right)_{V,T}}&{=}&{\\left(\\frac{\\partial N}{\\partial v}\\right)_{V,T}\\left(\\frac{\\partial}{\\partial N}\\right)_{V,T}=-\\frac{N^{2}}{V}\\left(\\frac{\\partial}{\\partial N}\\right)_{V,T}}&\\\\ {\\left(\\frac{\\partial}{\\partial v}\\right)_{N,T}}&{=}&{\\left(\\frac{\\partial V}{\\partial v}\\right)_{N,T}\\left(\\frac{\\partial}{\\partial V}\\right)_{N,T}=N\\left(\\frac{\\partial}{\\partial V}\\right)_{N,T}.}&&{(2.63)}\\end{array}"
+  },
+  "FP-p18-t235": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "\\langle n_{\\bf k}\\rangle=-k_{B}T\\frac{c}{\\partial u}\\ln[1-\\exp\\{-\\beta(E_{\\bf k}-\\mu)\\}]=\\frac{1}{\\exp\\{\\beta(E_{\\bf k}-u)\\}-1}\\;.\\quad(2.77)"
+  },
+  "FP-p21-t292": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "Z(1)\\frac{d S(Z(1)Z(2))}{d(Z(1))}=Z(1)\\frac{d S(Z(1))}{d Z(1)}=Z(1)Z(2)\\frac{d S(Z(1)Z(2))}{d(Z(1)Z(2))}"
+  },
+  "FP-p23-t314": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\int_{E<H({\\bf x})<E+\\delta E}d{\\bf x}\\rho({\\bf x})=1\\ ."
+  },
+  "FP-p23-t322": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\frac{\\delta}{\\delta\\rho(x)}\\left\\{-k_{B}\\int d^{6N}x[\\rho\\mathrm{l n}(h^{3N}N!\\rho)-\\lambda\\rho]\\right\\}"
+  },
+  "TP-p10-t123": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\begin{array}{r l r l r l}{d A}&{=}&{d E-d(T S)}&\\\\ &{=}&{d Q-T d S-S d T-d W~.}&{\\quad}&{(1.28)}\\end{array}"
+  },
+  "TP-p10-t121": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\begin{array}{r c l}{d A}&{=}&{d E-T d S-S d T}\\\\ {}&{=}&{-S d T+\\displaystyle\\sum_{i}X_{i}d x_{i}+\\displaystyle\\sum_{j}\\mu_{j}d N_{j}~.}\\\\ \\end{array}\\quad(1.27)"
+  },
+  "TP-p16-t221": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\begin{array}{c}{{d S}=\\left(\\frac{\\partial S_{1}}{\\partial E_{1}}\\right)_{V_{1}}d E_{1}+\\left(\\frac{\\partial S_{2}}{\\partial E_{2}}\\right)_{V_{2}}d E_{2}+\\left(\\frac{\\partial S_{1}}{\\partial V_{1}}\\right)_{E_{1}}d V_{1}+\\left(\\frac{\\partial S_{2}}{\\partial V_{2}}\\right)_{E2}d V_{2}}}\\\\ {{=\\left[\\left(\\frac{\\partial S_{1}}{\\partial E_{1}}\\right)_{V_{1}}-\\left(\\frac{\\partial S_{2}}{\\partial E_{2}}\\right)_{V_{2}}\\right]d E_{1}+\\left[\\left(\\frac{\\partial S_{1}}{\\partial V_{1}}\\right)_{E_{1}}-\\left(\\frac{\\partial S_{2}}{\\partial V_{2}}\\right)_{E_{2}}\\right]d V_{1}=0\\quad(1.67)}}\\\\ \\end{array}"
+  },
+  "TP-p17-t233": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "G_{1}(P_{0},T_{0})=E_{1}-T_{0}S_{1}+P_{0}V_{1}\\ .\\ \\ \\ \\ \\ \\ \\ \\ \\ \\ (1.72)"
+  },
+  "TP-p18-t245": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\left(\\frac{\\partial T}{\\partial S}\\right)_{V}=\\frac{T}{C_{V}}>0\\;\\mathrm{o r}\\;C_{V}>0\\quad(1.76)"
+  },
+  "TP-p18-t248": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\frac{T}{V K_{S}C_{V}}>\\left(\\frac{\\partial T}{\\partial V}\\right)_{S}^{2}.\\quad(1.78)"
+  },
+  "TP-p24-t315": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "v_{1}(P_{c},T_{c})=\\left.{\\frac{\\partial g_{1}}{\\partial P}}\\right|_{P_{c},T_{c}}=v_{2}(P_{c},T_{c})=\\left.{\\frac{\\partial g_{2}}{\\partial P}}\\right|_{P_{c},T_{c}}\\quad(1.90)"
+  },
+  "IFK-p17-51": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "(\\vec{p}_{1}^{\\prime},\\vec{p}_{2}^{\\prime},\\vec{b}^{\\prime})"
+  },
+  "IFK-p23-116": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "(\\vec{p}_{1}^{\\prime},\\vec{p}_{2}^{\\prime})"
+  },
+  "ITK-p12-329": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "(T_{1}>T_{2}>T_{3})."
+  },
+  "ITK-p18-377": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\{N_{1},N_{2},\\cdots\\}"
+  }
+ },
+ "paddleocr_vl_1.6_4bit_mlx_tight": {
+  "FK-p09-t137": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\frac{1}{\\tau_{U}}\\sim\\frac{\\partial U}{\\partial\\vec{q}}\\cdot\\frac{\\partial}{\\partial\\vec{p}}"
+  },
+  "FK-p19-t277": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\begin{array}{r l}{\\ln f_{1}(\\vec{p}_{1},\\vec{q})+\\ln f_{1}(\\vec{p}_{2},\\vec{q})=\\ln f_{1}(\\vec{p}_{1}^{\\prime},\\vec{q})+\\ln f_{1}(\\vec{p}_{2}^{\\prime},\\vec{q}).\\qquad\\quad}&{\\quad(3.51)}\\end{array}"
+  },
+  "FK-p20-t290": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "f_{1}(\\vec{p},\\vec{q})=n\\left(\\frac{\\beta}{2\\pi m}\\right)^{3/2}\\exp\\left[-\\frac{\\beta(\\vec{p}-\\vec{p}_{0})^{2}}{2m}\\right],\\quad\\quad(3.56)"
+  },
+  "FK-p27-t426": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "v_{\\ell}=\\sqrt{\\frac{5}{3}\\frac{k_{B}\\overline{{T}}}{m}}\\qquad\\quad(3.106)"
+  },
+  "FK-p28-t439": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\begin{array}{r l}{\\mathcal{L}\\left[\\ln f_{1}^{0}\\right]=}&{0-\\cfrac{m c^{2}}{3k_{B}T}\\partial_{\\alpha}u_{\\alpha}+c_{\\alpha}\\left[\\left(\\cfrac{F_{\\alpha}}{k_{B}T}-\\cfrac{\\partial_{\\alpha}n}{n}-\\cfrac{\\partial_{\\alpha}T}{T}\\right)+\\left(\\cfrac{\\partial_{\\alpha}n}{n}-\\cfrac{3}{2}\\frac{\\partial_{\\alpha}T}{T}\\right)-\\cfrac{F_{\\alpha}}{k_{B}T}\\right]}\\\\ &{+\\cfrac{m c^{2}}{2k_{B}T^{2}}c_{\\alpha}\\partial_{\\alpha}T+\\cfrac{m}{k_{B}T}c_{\\alpha}c_{\\beta}u_{\\alpha\\beta}}\\\\ &{=\\cfrac{m}{k_{B}T}\\left(c_{\\alpha}c_{\\beta}-\\cfrac{\\delta_{\\alpha\\beta}}{3}c^{2}\\right)u_{\\alpha\\beta}+\\left(\\cfrac{m c^{2}}{2k_{B}T}-\\cfrac{5}{2}\\right)\\cfrac{c_{\\alpha}}{T}\\partial_{\\alpha}T.}\\end{array}"
+  },
+  "FK-p56-t936": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\langle\\mathcal{H}^{n}\\rangle_{c}=(-1)^{n}\\frac{\\partial^{n}\\ln Z}{\\partial\\beta^{n}}.\\eqno(4.67)"
+  },
+  "FK-p60-t1007": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\mathcal{Z}(N,T,P)=&\\int_{0}^{\\infty}\\mathrm{d}V\\mathrm{e}^{-\\beta PV}\\int\\frac{1}{N!}\\prod_{i=1}^{N}\\frac{\\mathrm{d}^{3}\\vec{q}_{i}\\mathrm{d}^{3}\\vec{p}_{i}}{h^{3}}\\exp\\left[-\\beta\\sum_{i=1}^{N}\\frac{p_{i}^{2}}{2m}\\right]\\\\=&\\int_{0}^{\\infty}\\mathrm{d}V V^{N}\\mathrm{e}^{-\\beta PV}\\frac{1}{N!\\lambda(T)^{3N}}=\\frac{1}{(\\beta P)^{N+1}\\lambda(T)^{3N}}."
+  },
+  "FK-p64-t1075": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "P&=-\\frac{\\mathcal{G}}{V}=-\\left.\\frac{\\partial\\mathcal{G}}{\\partial V}\\right|_{\\mu,T}=k_BT\\frac{\\mathrm{e}^{\\beta\\mu}}{\\lambda^3}.&\\qquad&(4.110)\\\\ \\text{er and the chemical potential are related by}&"
+  },
+  "TK-p04-t55": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\begin{array}{r l r}&{\\left(P+\\frac{a}{V^{2}}\\right)(V-b)(L-L_{0})-c[F-K(L-L_{0})]=0,}&\\\\ &{\\quad\\left(P+\\frac{a}{V^{2}}\\right)(V-b)M-d B=0.}&&{(1.7)}\\end{array}"
+  },
+  "TK-p04-t57": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\Theta\\propto\\left(P+\\frac{a}{V^{2}}\\right)(V-b)=c\\left(\\frac{F}{L-L_{0}}-K\\right)=d\\frac{B}{M}.\\eqno(1.8)"
+  },
+  "TK-p14-t275": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\mathrm{d}Q_{R}=T_{0}\\frac{\\mathrm{d}Q}{T}.\\quad(1.23)"
+  },
+  "TK-p17-t334": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "\\begin{array}{c}x_{i}=-\\left.\\frac{\\partial H}{\\partial J_{i}}\\right|_{S,J_{j\\neq i}}.\\\\ (1.32)\\\\\\text{with temperature are related to heat capacities at}\\end{array}"
+  },
+  "TK-p20-t385": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "E(\\lambda S,\\lambda\\mathbf{x},\\lambda\\mathbf{N})=\\lambda E(S,\\mathbf{x},\\mathbf{N}).\\quad(1.46)"
+  },
+  "TK-p24-t460": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\delta S&=-\\frac{2}{T_{A}}\\left[\\delta T_{A}\\left(\\frac{\\delta E_{A}-\\mathbf{J}_{A}\\cdot\\delta\\mathbf{x}_{A}-\\mu_{A}\\cdot\\delta\\mathbf{N}_{A}}{T_{A}}\\right)+\\delta\\mathbf{J}_{A}\\cdot\\delta\\mathbf{x}_{A}+\\delta\\mu_{A}\\cdot\\delta\\mathbf{N}_{A}\\right]\\\\&=-\\frac{2}{T_{A}}\\left[\\delta T_{A}\\delta S_{A}+\\delta\\mathbf{J}_{A}\\cdot\\delta\\mathbf{x}_{A}+\\delta\\mu_{A}\\cdot\\delta\\mathbf{N}_{A}\\right]."
+  },
+  "TK-p24-t447": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "(E_{B}-\\delta E,\\mathbf{x}_{B}-\\delta\\mathbf{x},\\mathbf{N}_{B}-\\delta\\mathbf{N})\\mathrm{a n d}(T_{B}+\\delta T_{B},\\mathbf{J}_{B}+\\delta\\mathbf{J}_{B},\\mathbf{\\mu}_{B}+\\delta\\mathbf{\\mu}_{B}).\\quad(1.66)"
+  },
+  "TK-p25-t472": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "C_{\\mathbf{x}}&=\\left.\\frac{\\mathrm{d}Q}{\\mathrm{d}T}\\right|_{\\mathbf{x}}=T\\left.\\frac{\\partial S}{\\partial T}\\right|_{\\mathbf{x}}\\geq0.\\\\S_{i}&in Eq.~(1.71)$ is non-zero,the corresponding response"
+  },
+  "FP-p06-t65": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "d S(E,N,V)=\\frac{d E}{T}+\\frac{P d V}{T}-\\frac{\\mu d N}{T}."
+  },
+  "FP-p15-t194": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\begin{array}{r c l}{{\\left(\\frac{\\partial}{\\partial v}\\right)_{V,T}}}&{{=}}&{{\\left(\\frac{\\partial N}{\\partial v}\\right)_{V,T}\\left(\\frac{\\partial}{\\partial N}\\right)_{V,T}=-\\frac{N^{2}}{V}\\left(\\frac{\\partial}{\\partial N}\\right)_{V,T}}}\\\\ {{\\left(\\frac{\\partial}{\\partial v}\\right)_{N,T}}}&{{=}}&{{\\left(\\frac{\\partial V}{\\partial v}\\right)_{N,T}\\left(\\frac{\\partial}{\\partial V}\\right)_{N,T}=N\\left(\\frac{\\partial}{\\partial V}\\right)_{N,T}.}}\\\\ \\end{array}\\quad(2.63)"
+  },
+  "FP-p18-t235": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "\\langle n_{\\mathbf{k}}\\rangle=-k_{B}T\\frac{1}{\\partial u}\\ln[1-\\exp\\{-\\beta(E_{\\mathbf{k}}-\\mu)\\}]=\\frac{1}{\\mathrm{e x p}\\{\\beta(E_{\\mathbf{k}}-\\mu)\\}-1}\\cdot\\quad(2.77)"
+  },
+  "FP-p21-t292": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "Z(1)\\frac{d S(Z(1)Z(2))}{d(Z(1))}=Z(1)\\frac{d S(Z(1))}{d Z(1)}=Z(1)Z(2)\\frac{d S(Z(1)Z(2))}{d(Z(1)Z(2))}"
+  },
+  "FP-p23-t314": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\int_{E<H(\\mathbf{x})<E+\\delta E}d\\mathbf{x}\\rho(\\mathbf{x})=1~.~~~\\quad(2.101)"
+  },
+  "FP-p23-t322": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\frac{\\delta}{\\delta\\rho(x)}\\left\\{-k_{B}\\int d^{6N}x[\\rho\\mathrm{l n}(h^{3N}N!\\rho)-\\lambda\\rho]\\right\\}"
+  },
+  "TP-p10-t123": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\begin{array}{r l r l r l}{d A}&{=}&{d E-d(T S)}\\\\ &{=}&{d Q-T d S-S d T-d W~.}&&{(1.28)}\\end{array}"
+  },
+  "TP-p10-t121": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\begin{array}{r c l}{d A}&{=}&{d E-T d S-S d T}\\\\ &{=}&{-S d T+\\displaystyle\\sum_{i}X_{i}d x_{i}+\\displaystyle\\sum_{j}\\mu_{j}d N_{j}~.}\\end{array}\\quad(1.27)"
+  },
+  "TP-p16-t221": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "dS&=\\left(\\frac{\\partial S_1}{\\partial E_1}\\right)_{V_1}dE_1+\\left(\\frac{\\partial S_2}{\\partial E_2}\\right)_{V_2}dE_2+\\left(\\frac{\\partial S_1}{\\partial V_1}\\right)_{E_1}dV_1+\\left(\\frac{\\partial S_2}{\\partial V_2}\\right)_{E_2}dV_2\\\\&=\\left[\\left(\\frac{\\partial S_1}{\\partial E_1}\\right)_{V_1}-\\left(\\frac{\\partial S_2}{\\partial E_2}\\right)_{V_2}\\right]dE_1+\\left[\\left(\\frac{\\partial S_1}{\\partial V_1}\\right)_{E_1}-\\left(\\frac{\\partial S_2}{\\partial V_2}\\right)_{E_2}\\right]dV_1=0\\tag{1.67}"
+  },
+  "TP-p17-t233": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "G_{1}(P_{0},T_{0})=E_{1}-T_{0}S_{1}+P_{0}V_{1}\\quad."
+  },
+  "TP-p18-t245": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\left(\\frac{\\partial T}{\\partial S}\\right)_{V}=\\frac{T}{C_{V}}>0\\mathrm{o r}C_{V}>0\\quad(1.76)"
+  },
+  "TP-p18-t248": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\frac{T}{V K_{S}C_{V}}>\\left(\\frac{\\partial T}{\\partial V}\\right)_{S}^{2}.\\eqno(1.78)"
+  },
+  "TP-p24-t315": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "v_{1}(P_{c},T_{c})=\\left.{\\frac{\\partial g_{1}}{\\partial P}}\\right|_{P_{c},T_{c}}=v_{2}(P_{c},T_{c})={\\frac{\\partial g_{2}}{\\partial P}}\\bigg|_{P_{c},T_{c}}(1.90)"
+  },
+  "IFK-p17-51": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "(\\vec{p}_{1}^{\\prime},\\vec{p}_{2}^{\\prime},\\vec{b}^{\\prime})"
+  },
+  "IFK-p23-116": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "(\\vec{p}_{1}^{\\prime},\\vec{p}_{2}^{\\prime})"
+  },
+  "ITK-p12-329": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "(T_{1}>T_{2}>T_{3})."
+  },
+  "ITK-p18-377": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\{N_{1},N_{2},\\cdots\\}"
+  }
+ },
+ "codeformulav2_mps_bf16": {
+  "FK-p09-t137": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\frac { 1 } { \\tau _ { U } } \\sim \\frac { \\partial U } { \\partial \\vec { q } } \\cdot \\frac { \\partial } { \\partial \\vec { p } }"
+  },
+  "FK-p19-t277": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "\\ln f _ { 1 } ( \\vec { p } _ { 1 } , \\vec { q } ) + \\ln f _ { 1 } ( \\vec { p } _ { 2 } , \\vec { q } ) = \\ln f _ { 1 } ( \\vec { p } _ { 1 } , \\vec { q } ) + \\ln f _ { 1 } ( \\vec { p } _ { 2 } , \\vec { q } ) ."
+  },
+  "FK-p20-t290": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "f _ { 1 } ( \\vec { p } , \\vec { q } ) = n \\left ( \\frac { \\beta } { 2 \\pi m } \\right ) ^ { 3 / 2 } \\exp \\left [ - \\frac { \\beta ( \\vec { p } - \\vec { p } _ { 0 } ) ^ { 2 } } { 2 m } \\right ] ,"
+  },
+  "FK-p27-t426": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "v _ { \\ell } = \\sqrt { \\frac { 5 } { 3 } \\, \\frac { k _ { B } \\overline { T } } { m } } & & ( 3 . 1 0 6 )"
+  },
+  "FK-p28-t439": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "\\text {we can simplify the above equation to} \\\\ \\mathcal { L } [ \\ln f _ { 1 } ^ { 0 } ] & = 0 - \\frac { m c ^ { 2 } } { 3 k _ { B } T } \\partial _ { \\alpha } u _ { \\alpha } + c _ { \\alpha } \\left [ \\left ( \\frac { F _ { \\alpha } } { k _ { B } T } - \\frac { \\partial _ { \\alpha } n } { n } - \\frac { \\partial _ { \\alpha } T } { T } \\right ) + \\left ( \\frac { \\partial _ { \\alpha } n } { n } - \\frac { 3 } { 2 } \\frac { \\partial _ { \\alpha } T } { T } \\right ) - \\frac { F _ { \\alpha } } { k _ { B } T } \\right ] \\\\ & + \\frac { m c ^ { 2 } } { 2 k _ { B } T ^ { 2 } } c _ { \\alpha } \\partial _ { \\alpha } T + \\frac { m } { k _ { B } T } c _ { \\alpha } c _ { \\alpha } u _ { \\alpha } \\\\ & = \\frac { m } { k _ { B } T } \\left ( c _ { \\alpha } c _ { \\beta } - \\frac { \\delta _ { \\alpha \\beta } } { 3 } c ^ { 2 } \\right ) u _ { \\alpha \\beta } + \\left ( \\frac { m c ^ { 2 } } { 2 k _ { B } T } - \\frac { 5 } { 2 } \\right ) \\frac { c _ { \\alpha } } { T } \\partial _ { \\alpha } T . \\\\ \\\\ \\text {The characteristic time scale} \\, \\tau _ { \\alpha } \\text { is arbitrary and compact} \\, b \\text { mode much}"
+  },
+  "FK-p56-t936": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\langle \\mathcal { H } ^ { n } \\rangle _ { c } = ( - 1 ) ^ { n } \\frac { \\partial ^ { n } \\ln Z } { \\partial \\beta ^ { n } } ."
+  },
+  "FK-p60-t1007": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "The normalization factor is now \\\\ Z ( N , T , P ) = \\int _ { 0 } ^ { \\infty } d V e ^ { - \\beta P V } \\int \\frac { 1 } { N ! } \\prod _ { i = 1 } ^ { N } \\frac { d ^ { 3 } \\bar { q } _ { i } d ^ { 3 } \\bar { p } _ { i } } { h ^ { 3 } } \\exp \\left [ - \\beta \\sum _ { i = 1 } ^ { N } \\frac { p _ { i } ^ { 2 } } { 2 m } \\right ] \\\\ = \\int _ { 0 } ^ { \\infty } d V V ^ { N } \\, e ^ { - \\beta p V } \\frac { 1 } { N ! \\lambda ( T ) ^ { 3 N } } = \\frac { 1 } { ( \\beta P ) ^ { N + 1 } \\, \\lambda ( T ) ^ { 3 N } } . \\\\ \\text {Ignoring non-extensive contributions, the Gibbs free energy is given by}"
+  },
+  "FK-p64-t1075": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "P = - \\frac { \\mathcal { G } } { V } = - \\, \\frac { \\partial \\mathcal { G } } { \\partial V } \\Big | _ { \\mu , T } = k _ { B } T \\frac { e ^ { \\beta \\mu } } { \\lambda ^ { 3 } } \\cdot \\\\ \\intertext { l e $ b $ number and the chemical potential are related by }"
+  },
+  "TK-p04-t55": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\text {ing constraints are satisfied between their coordinates:} \\\\ & \\left ( P + \\frac { a } { V ^ { 2 } } \\right ) ( V - b ) ( L - L _ { 0 } ) - c [ F - K ( L - L _ { 0 } ) ] = 0 , \\\\ & \\left ( P + \\frac { a } { V ^ { 2 } } \\right ) ( V - b ) M - d B = 0 . \\\\ \\intertext { w i o d i t i o n s c a n d e b e r a n g i z e d i n t a r y e c h i m p e r i c a l t e m p e r u c h e r f o w }"
+  },
+  "TK-p04-t57": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "\\Theta \\, \\alpha \\left ( P + \\frac { a } { V ^ { 2 } } \\right ) ( V - b ) = c \\left ( \\frac { F } { L - L _ { 0 } } - K \\right ) = d \\frac { B } { M } . \\\\ \\intertext { t o f t h e z o r o t h l o w y s o r o w l o c u r p a n t r i o n s }"
+  },
+  "TK-p14-t275": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\mathfrak { d } Q _ { R } = T _ { 0 } \\frac { \\mathfrak { d } Q } { T } ."
+  },
+  "TK-p17-t334": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "E q . \\, ( 1 . 3 1 ) \\, \\text {that} \\\\ x _ { i } = - \\, \\frac { \\partial H } { \\partial J _ { i } } \\Big | _ { s , J , \\neq i } \\cdot \\\\ \\intertext { t h a l p y \\, w i t h e r $ \\ } \\text {temperature are related to heat capacities at }"
+  },
+  "TK-p20-t385": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "E ( \\lambda S , \\lambda x , \\lambda N ) = \\lambda E ( S , x , N ) ."
+  },
+  "TK-p24-t460": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\text {same as } A . ) \\, \\text {Equation (1.69)} \\, \\text { can be realized to } \\\\ \\delta S & = - \\frac { 2 } { T _ { A } } \\left [ \\delta T _ { A } \\left ( \\frac { \\delta E _ { A } - J _ { A } \\cdot \\delta x _ { A } - \\mu _ { A } \\cdot \\delta N _ { A } } { T _ { A } } \\right ) + \\delta J _ { A } \\cdot \\delta x _ { A } + \\delta \\mu _ { A } \\cdot \\delta N _ { A } \\right ] \\\\ & = - \\frac { 2 } { T _ { A } } \\left [ \\delta T _ { A } \\delta S _ { A } + \\delta J _ { A } \\cdot \\delta x _ { A } + \\delta \\mu _ { A } \\cdot \\delta N _ { A } \\right ] ."
+  },
+  "TK-p24-t447": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "( E _ { B } - \\delta E , \\, \\mathbf x _ { B } - \\delta \\mathbf x , \\, N _ { B } - \\delta N ) \\, \\text { and } ( T _ { B } + \\delta T _ { B } , \\, J _ { B } + \\delta J _ { B } , \\, \\mu _ { B } + \\delta \\mu _ { B } ) ."
+  },
+  "TK-p25-t472": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "i r e s \\ \\partial S / \\partial T | _ { x } \\geq 0 , \\, \\text {impllying a positive heat capacity, since} \\\\ C _ { x } = \\frac { d Q } { d T } \\Big | _ { x } = T \\, \\frac { \\partial S } { \\partial T } \\Big | _ { x } \\geq 0 . \\\\ \\text {of the $\\delta_{x}_{i}$ in Eq. (1.71) is non-zero, the corresponding response} \\\\ \\cdot \\Big | _ { x } \\Big | _ { x } \\, \\text {must be positive. However, a more general requirement}"
+  },
+  "FP-p06-t65": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "d S ( E , N , V ) = \\frac { d E } { T } + \\frac { P d V } { T } - \\frac { \\mu d N } { T } \\ ."
+  },
+  "FP-p15-t194": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\begin{array} { r l r } { \\left ( \\frac { \\partial } { \\partial v } \\right ) _ { V , T } } & { = } & { \\left ( \\frac { \\partial N } { \\partial v } \\right ) _ { V , T } \\left ( \\frac { \\partial } { \\partial N } \\right ) _ { V , T } = - \\frac { N ^ { 2 } } { V } \\left ( \\frac { \\partial } { \\partial N } \\right ) _ { V , T } } \\\\ { \\left ( \\frac { \\partial } { \\partial v } \\right ) _ { N , T } } & { = } & { \\left ( \\frac { \\partial V } { \\partial v } \\right ) _ { N , T } \\left ( \\frac { \\partial } { \\partial V } \\right ) _ { N , T } = N \\left ( \\frac { \\partial } { \\partial V } \\right ) _ { N , T } \\, . } \\end{array}"
+  },
+  "FP-p18-t235": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "\\langle n _ { k } \\rangle = - k _ { B } T \\frac { \\smile } { \\partial u } \\ln [ 1 - \\exp \\{ - \\beta ( E _ { k } - \\mu ) \\} ] = \\frac { 1 } { \\exp \\{ \\beta ( E _ { k } - u ) \\} - 1 } \\ ."
+  },
+  "FP-p21-t292": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "Z ( 1 ) \\frac { d S ( Z ( 1 ) Z ( 2 ) ) } { d ( Z ( 1 ) ) } = Z ( 1 ) \\frac { d S ( Z ( 1 ) ) } { d Z ( 1 ) } = Z ( 1 ) Z ( 2 ) \\frac { d S ( Z ( 1 ) Z ( 2 ) ) } { d ( Z ( 1 ) Z ( 2 ) ) }"
+  },
+  "FP-p23-t314": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\int _ { E < H ( x ) < E + \\delta E } d x \\rho ( x ) = 1 \\, ."
+  },
+  "FP-p23-t322": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\frac { \\delta } { \\delta \\rho ( x ) } \\left \\{ - k _ { B } \\int d ^ { 6 N } x [ \\rho \\ln ( h ^ { 3 N } N ! \\rho ) - \\lambda \\rho ] \\right \\}"
+  },
+  "TP-p10-t123": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "d A \\ & = \\ d E - d ( T S ) \\\\ & = \\ \\tilde { d } Q - T d S - S d T - d W \\ ."
+  },
+  "TP-p10-t121": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "d A \\ & = \\ d E - T d S - S d T \\\\ & = \\ - S d T + \\sum _ { i } X _ { i } d x _ { i } + \\sum _ { j } \\mu _ { j } d N _ { j } \\ ."
+  },
+  "TP-p16-t221": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\text {must be a maximum.  This} \\\\ d S & = \\left ( \\frac { \\partial S _ { 1 } } { \\partial E _ { 1 } } \\right ) _ { V _ { 1 } } d E _ { 1 } + \\left ( \\frac { \\partial S _ { 2 } } { \\partial E _ { 2 } } \\right ) _ { V _ { 2 } } d E _ { 2 } + \\left ( \\frac { \\partial S _ { 1 } } { \\partial V _ { 1 } } \\right ) _ { E _ { 1 } } d V _ { 1 } + \\left ( \\frac { \\partial S _ { 2 } } { \\partial V _ { 2 } } \\right ) _ { E _ { 2 } } d V _ { 2 } \\\\ & = \\left [ \\left ( \\frac { \\partial S _ { 1 } } { \\partial E _ { 1 } } \\right ) _ { V _ { 1 } } - \\left ( \\frac { \\partial S _ { 2 } } { \\partial E _ { 2 } } \\right ) _ { V _ { 2 } } \\right ] d E _ { 1 } + \\left [ \\left ( \\frac { \\partial S _ { 1 } } { \\partial V _ { 1 } } \\right ) _ { E _ { 1 } } - \\left ( \\frac { \\partial S _ { 2 } } { \\partial V _ { 2 } } \\right ) _ { E _ { 2 } } \\right ] d V _ { 1 } = 0 \\ \\ ( 1 . 6 7 ) \\\\"
+  },
+  "TP-p17-t233": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "G _ { 1 } ( P _ { 0 } , T _ { 0 } ) = E _ { 1 } - T _ { 0 } S _ { 1 } + P _ { 0 } V _ { 1 } \\ ."
+  },
+  "TP-p18-t245": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\left ( \\frac { \\partial T } { \\partial S } \\right ) _ { V } = \\frac { T } { C _ { V } } > 0 \\ \\text { or } \\ C _ { V } > 0"
+  },
+  "TP-p18-t248": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\frac { T } { V K _ { S } C _ { V } } > \\left ( \\frac { \\partial T } { \\partial V } \\right ) _ { S } ^ { 2 } \\ ."
+  },
+  "TP-p24-t315": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "v _ { 1 } ( P _ { c } , T _ { c } ) = \\frac { \\partial g _ { 1 } } { \\partial P } \\Big { \\Big { | } } _ { P _ { c } , T _ { c } } = v _ { 2 } ( P _ { c } , T _ { c } ) = \\frac { \\partial g _ { 2 } } { \\partial P } \\Big { | } _ { P _ { c } , T _ { c } }"
+  },
+  "IFK-p17-51": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "\\stackrel { 1 } { ( \\vec { p } _ { 1 } , \\vec { ^ { \\prime } } , \\vec { p } _ { 2 } , \\vec { ^ { \\prime } } , \\vec { b } ^ { \\prime } ) }"
+  },
+  "IFK-p23-116": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "( \\vec { p } _ { 1 } \\, ^ { \\prime } , \\vec { p } _ { 2 } \\, ^ { \\prime } ) \\\\ \\text {oh} \\, \\quad \\text {with} \\, t i t"
+  },
+  "ITK-p12-329": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "( T _ { 1 } > T _ { 2 } > T _ { 3 } ) ."
+  },
+  "ITK-p18-377": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "\\{ N _ { 1 } , N _ { 2 } , \\cdots \\} \\\\ \\{ \\ t h o o o o i o t"
+  }
+ },
+ "codeformulav2_mps_bf16_tight": {
+  "FK-p09-t137": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\frac { 1 } { \\tau _ { U } } \\sim \\frac { \\partial U } { \\partial \\vec { q } } \\cdot \\frac { \\partial } { \\partial \\vec { p } }"
+  },
+  "FK-p19-t277": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\ln f _ { 1 } ( \\vec { p } _ { 1 } , \\vec { q } \\, ) + \\ln f _ { 1 } ( \\vec { p } _ { 2 } , \\vec { q } \\, ) = \\ln f _ { 1 } ( \\vec { p } _ { 1 } \\, ^ { \\prime } , \\vec { q } \\, ) + \\ln f _ { 1 } ( \\vec { p } _ { 2 } \\, ^ { \\prime } , \\vec { q } \\, ) ."
+  },
+  "FK-p20-t290": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "f _ { 1 } ( \\vec { p } , \\vec { q } ) = n \\left ( \\frac { \\beta } { 2 \\pi m } \\right ) ^ { 3 / 2 } \\exp \\left [ - \\frac { \\beta ( \\vec { p } - \\vec { p } _ { 0 } ) ^ { 2 } } { 2 m } \\right ] ,"
+  },
+  "FK-p27-t426": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "v _ { \\ell } = \\sqrt { \\frac { 5 } { 3 } \\, \\frac { k _ { B } \\, \\overline { T } } { m } }"
+  },
+  "FK-p28-t439": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "\\mathcal { L } \\left [ \\ln f _ { 1 } ^ { 0 } \\right ] & = 0 - \\frac { m c ^ { 2 } } { 3 k _ { B } T } \\partial _ { \\alpha } u _ { \\alpha } + c _ { \\alpha } \\left [ \\left ( \\frac { F _ { \\alpha } } { k _ { B } T } - \\frac { \\partial _ { \\alpha } n } { n } - \\frac { \\partial _ { \\alpha } T } { T } \\right ) + \\left ( \\frac { \\partial _ { \\alpha } n } { n } - \\frac { 3 } { 2 } \\frac { \\partial _ { \\alpha } T } { T } \\right ) - \\frac { F _ { \\alpha } } { k _ { B } T } \\right ] \\\\ & + \\frac { m c ^ { 2 } } { 2 k _ { B } T ^ { 2 } } c _ { \\alpha } \\partial _ { \\alpha } T + \\frac { m } { k _ { B } T } c _ { \\alpha } u _ { \\alpha \\beta } \\\\ & = \\frac { m } { k _ { B } T } \\left ( c _ { \\alpha } c _ { \\beta } - \\frac { \\delta _ { \\alpha \\beta } } { 3 } c ^ { 2 } \\right ) u _ { \\alpha \\beta } + \\left ( \\frac { m c ^ { 2 } } { 2 k _ { B } T } - \\frac { 5 } { 2 } \\right ) \\frac { c _ { \\alpha } } { T } \\partial _ { \\alpha } T ."
+  },
+  "FK-p56-t936": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\langle \\mathcal { H } ^ { n } \\rangle _ { c } = ( - 1 ) ^ { n } \\frac { \\partial ^ { n } \\ln Z } { \\partial \\beta ^ { n } } ."
+  },
+  "FK-p60-t1007": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "Z ( N , T , P ) & = \\int _ { 0 } ^ { \\infty } d V e ^ { - \\beta P V } \\int \\frac { 1 } { N ! } \\prod _ { i = 1 } ^ { N } \\frac { d ^ { 3 } \\vec { q } _ { i } d ^ { 3 } \\vec { p } _ { i } } { h ^ { 3 } } \\exp \\left [ - \\beta \\sum _ { i = 1 } ^ { N } \\frac { p _ { i } ^ { 2 } } { 2 m } \\right ] \\\\ & = \\int _ { 0 } ^ { \\infty } d V V ^ { N } \\ e ^ { - \\beta P V } \\frac { 1 } { N ! \\lambda ( T ) ^ { 3 N } } = \\frac { 1 } { ( \\beta P ) ^ { N + 1 } \\lambda ( T ) ^ { 3 N } } ."
+  },
+  "FK-p64-t1075": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "P = - \\frac { \\mathcal { G } } { V } = - \\, \\frac { \\partial \\mathcal { G } } { \\partial V } \\Big | _ { \\mu , T } = k _ { B } T \\frac { e ^ { \\beta \\mu } } { \\lambda ^ { 3 } } . \\\\ \\intertext { r e a n d t h e c h i m a l p o t e n t i a r e r a l l e r d o b y }"
+  },
+  "TK-p04-t55": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\left ( P + \\frac { a } { V ^ { 2 } } \\right ) ( V - b ) ( L - L _ { 0 } ) - & c [ F - K ( L - L _ { 0 } ) ] = 0 , \\\\ \\left ( P + \\frac { a } { V ^ { 2 } } \\right ) ( V - b ) M - & d B = 0 ."
+  },
+  "TK-p04-t57": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "\\Theta \\, \\infty \\left ( P + \\frac { a } { V ^ { 2 } } \\right ) \\left ( V - b \\right ) = c \\left ( \\frac { F } { L - L _ { 0 } } - K \\right ) = d \\frac { B } { M } ."
+  },
+  "TK-p14-t275": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\mathfrak { d } Q _ { R } = T _ { 0 } \\frac { \\mathfrak { d } Q } { T } ."
+  },
+  "TK-p17-t334": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "x _ { i } = & - \\frac { \\partial H } { \\partial J _ { i } } \\Big | _ { S , J _ { i } , \\# i } . \\\\ \\text {with temperature are related to heat capacities at}"
+  },
+  "TK-p20-t385": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "E ( \\lambda S , \\lambda x , \\lambda N ) = \\lambda E ( S , x , N ) ."
+  },
+  "TK-p24-t460": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\delta S & = - \\frac { 2 } { T _ { A } } \\left [ \\delta T _ { A } \\left ( \\frac { \\delta E _ { A } - J _ { A } \\cdot \\delta x _ { A } - \\mu _ { A } \\cdot \\delta N _ { A } } { T _ { A } } \\right ) + \\delta J _ { A } \\cdot \\delta x _ { A } + \\delta \\mu _ { A } \\cdot \\delta N _ { A } \\right ] \\\\ & = - \\frac { 2 } { T _ { A } } \\left [ \\delta T _ { A } \\delta S _ { A } + \\delta J _ { A } \\cdot \\delta x _ { A } + \\delta \\mu _ { A } \\cdot \\delta N _ { A } \\right ] ."
+  },
+  "TK-p24-t447": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "( E _ { B } - \\delta E , \\, \\mathbf x _ { B } - \\delta \\mathbf x , \\, N _ { B } - \\delta N ) \\, \\text {and} \\, ( T _ { B } + \\delta T _ { B } , \\, J _ { B } + \\delta J _ { B } , \\, \\mu _ { B } + \\delta \\mu _ { B } ) ."
+  },
+  "TK-p25-t472": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "C _ { x } = \\frac { \\mathrm d Q } { \\mathrm d T } \\Big | _ { x } = T \\, \\frac { \\partial S } { \\partial T } \\Big | _ { x } \\geq 0 . \\\\ \\mathrm x _ { i } \\, \\text {in} \\, \\text {Eq. (1.71)} \\, \\text {is non-zero, the corresponding response}"
+  },
+  "FP-p06-t65": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "d S ( E , N , V ) = \\frac { d E } { T } + \\frac { P d V } { T } - \\frac { \\mu d N } { T } \\ ."
+  },
+  "FP-p15-t194": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "\\begin{array} { r l r } { \\left ( \\frac { \\partial } { \\partial v } \\right ) _ { V , T } } & { = } & { \\left ( \\frac { \\partial N } { \\partial v } \\right ) _ { V , T } \\left ( \\frac { \\partial } { \\partial N } \\right ) _ { V , T } = - \\frac { N ^ { 2 } } { V } \\left ( \\frac { \\partial } { \\partial \\overline { N } } \\right ) _ { V , T } } \\\\ { \\left ( \\frac { \\partial } { \\partial v } \\right ) _ { N , T } } & { = } & { \\left ( \\frac { \\partial V } { \\partial v } \\right ) _ { N , T } \\left ( \\frac { \\partial } { \\partial V } \\right ) _ { N , T } = N \\left ( \\frac { \\partial } { \\partial V } \\right ) _ { N , T } \\, . } \\end{array}"
+  },
+  "FP-p18-t235": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "\\langle n _ { k } \\rangle = - k _ { B } T \\underset { \\partial u } { \\longrightarrow } \\ln [ 1 - \\exp \\{ - \\beta ( E _ { k } ^ { l } - \\mu ) \\} ] = \\underset { \\exp \\{ \\beta ( F _ { i } = u ) \\} = 1 } { \\longrightarrow } \\, \\overline { \\exp \\{ \\beta ( F _ { i } = u ) \\} = 1 } \\ ."
+  },
+  "FP-p21-t292": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "Z ( 1 ) \\frac { d S ( Z ( 1 ) Z ( 2 ) ) } { d ( Z ( 1 ) ) } = Z ( 1 ) \\frac { d S ( Z ( 1 ) ) } { d Z ( 1 ) } = Z ( 1 ) Z ( 2 ) \\frac { d S ( Z ( 1 ) Z ( 2 ) ) } { d ( Z ( 1 ) Z ( 2 ) ) }"
+  },
+  "FP-p23-t314": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\int _ { E < H ( \\mathbf x ) < E + \\delta E } d \\mathbf x \\rho ( \\mathbf x ) = 1 \\, ."
+  },
+  "FP-p23-t322": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\frac { \\delta } { \\delta \\rho ( x ) } \\left \\{ - k _ { B } \\int d ^ { 6 N } x [ \\rho \\ln ( h ^ { 3 N } N ! \\rho ) - \\lambda \\rho ] \\right \\}"
+  },
+  "TP-p10-t123": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "d A \\ & = \\ d E - d ( T S ) \\\\ & = \\ \\ d Q - T d S - S d T - d W \\ ."
+  },
+  "TP-p10-t121": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\begin{array} { r l r } { d A } & { = } & { d E - T d S - S d T } \\\\ & { = } & { - S d T + \\sum _ { i } X _ { i } d x _ { i } + \\sum _ { j } \\mu _ { j } d N _ { j } \\ . } \\end{array}"
+  },
+  "TP-p16-t221": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "& d S = \\left ( \\frac { \\partial S _ { 1 } } { \\partial E _ { 1 } } \\right ) _ { V _ { 1 } } d E _ { 1 } + \\left ( \\frac { \\partial S _ { 2 } } { \\partial E _ { 2 } } \\right ) _ { V _ { 2 } } d E _ { 2 } + \\left ( \\frac { \\partial S _ { 1 } } { \\partial V _ { 1 } } \\right ) _ { E _ { 1 } } d V _ { 1 } + \\left ( \\frac { \\partial S _ { 2 } } { \\partial V _ { 2 } } \\right ) _ { E _ { 2 } } d V _ { 2 } \\\\ & = \\left [ \\left ( \\frac { \\partial S _ { 1 } } { \\partial E _ { 1 } } \\right ) _ { V _ { 1 } } - \\left ( \\frac { \\partial S _ { 2 } } { \\partial E _ { 2 } } \\right ) _ { V _ { 2 } } \\right ] d E _ { 1 } + \\left [ \\left ( \\frac { \\partial S _ { 1 } } { \\partial V _ { 1 } } \\right ) _ { E _ { 1 } } - \\left ( \\frac { \\partial S _ { 2 } } { \\partial V _ { 2 } } \\right ) _ { E _ { 2 } } \\right ] d V _ { 1 } = 0 \\ \\ ( 1 . 6 7 )"
+  },
+  "TP-p17-t233": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "G _ { 1 } ( P _ { 0 } , T _ { 0 } ) = E _ { 1 } - T _ { 0 } S _ { 1 } + P _ { 0 } V _ { 1 } \\ ."
+  },
+  "TP-p18-t245": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\left ( \\frac { \\partial T } { \\partial S } \\right ) _ { V } = \\frac { T } { C _ { V } } > 0 \\ \\text { or } \\ C _ { V } > 0"
+  },
+  "TP-p18-t248": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\frac { T } { V K _ { S } C _ { V } } > \\left ( \\frac { \\partial T } { \\partial V } \\right ) _ { S } ^ { 2 } \\, ."
+  },
+  "TP-p24-t315": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "v _ { 1 } ( P _ { c } , T _ { c } ) = \\frac { \\partial g _ { 1 } } { \\partial P } \\Big { \\} } _ { P _ { c } , T _ { c } } = v _ { 2 } ( P _ { c } , T _ { c } ) = \\frac { \\partial g _ { 2 } } { \\partial P } \\Big { \\} } _ { P _ { c } , T _ { c } }"
+  },
+  "IFK-p17-51": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "\\stackrel { 1 } { ( \\vec { p } _ { 1 } , \\vec { ^ { \\prime } } , \\vec { p } _ { 2 } , \\vec { ^ { \\prime } } , \\vec { b } ^ { \\prime } ) }"
+  },
+  "IFK-p23-116": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "( \\vec { p } _ { 1 } \\, ^ { \\prime } , \\vec { p } _ { 2 } \\, ^ { \\prime } ) \\\\ \\text {oh} \\, \\quad \\text {with} \\, t i t"
+  },
+  "ITK-p12-329": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "( T _ { 1 } > T _ { 2 } > T _ { 3 } ) ."
+  },
+  "ITK-p18-377": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "\\{ N _ { 1 } , N _ { 2 } , \\cdots \\} \\\\ \\{ \\ t h o o o o i o t"
+  }
+ },
+ "granite_docling_258m_mlx": {
+  "FK-p09-t137": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "<loc_0><loc_0><loc_500><loc_500>\\frac { 1 } { \\tau _ { U } } \\sim \\frac { \\partial U } { \\partial \\vec { q } } \\cdot \\frac { \\partial } { \\partial \\vec { p } }</formula>"
+  },
+  "FK-p19-t277": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "<loc_0><loc_0><loc_500><loc_500>\\ln f _ { 1 } ( \\vec { p } _ { 1 } , \\vec { q } \\, ) + \\ln f _ { 1 } ( \\vec { p } _ { 2 } , \\vec { q } \\, ) = \\ln f _ { 1 } ( \\vec { p } _ { 1 } \\, ^ { \\prime } , \\vec { q } \\, ) + \\ln f _ { 1 } ( \\vec { p } _ { 2 } \\, ^ { \\prime } , \\vec { q } \\, ) . \\quad ( 3 . 5 1 )</formula>"
+  },
+  "FK-p20-t290": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "<loc_0><loc_0><loc_500><loc_500>f _ { 1 } ( \\vec { p } , \\vec { q } ) = n \\left ( \\frac { \\beta } { 2 \\pi m } \\right ) ^ { 3 / 2 } \\exp \\left [ - \\frac { \\beta ( \\vec { p } - \\vec { p } _ { 0 } ) ^ { 2 } } { 2 m } \\right ] ,</formula>"
+  },
+  "FK-p27-t426": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "<loc_0><loc_0><loc_500><loc_500>v _ { \\ell } = \\sqrt { \\frac { 5 \\, k _ { B } \\overline { T } } { 3 } } \\, \\quad ( 3 . 1 0 6 )</formula>"
+  },
+  "FK-p28-t439": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "<loc_0><loc_0><loc_500><loc_500>\\begin{array} { r l } & { w e c a n s i m p l i t y e f t h e a b o v e q u a t i o n t o } \\\\ & { \\quad \\mathcal { L } \\left [ \\ln f _ { 1 } ^ { 0 } \\right ] = 0 - \\frac { m c ^ { 2 } } { 3 k _ { B } T } \\partial _ { \\alpha } u _ { \\alpha } + c _ { \\alpha } \\left [ \\left ( \\frac { F _ { \\alpha } } { k _ { B } T } - \\frac { \\partial _ { \\alpha } n } { n } - \\frac { \\partial _ { \\alpha } T } { T } \\right ) + \\left ( \\frac { \\partial _ { \\alpha } n } { n } - \\frac { 3 } { 2 } \\frac { \\partial _ { \\alpha } T } { T } \\right ) - \\frac { F _ { \\alpha } } { k _ { B } T } \\right ] } \\\\ & { \\quad + \\frac { m c ^ { 2 } } { 2 k _ { B } T ^ { 2 } } c _ { \\alpha } \\partial _ { \\alpha } T + \\frac { m } { k _ { B } T } c _ { \\alpha } c _ { \\beta } u _ { \\alpha \\beta } } \\\\ & { = \\frac { m } { k _ { B } T } \\left ( c _ { \\alpha } c _ { \\beta } - \\frac { \\delta _ { \\alpha \\beta } } { 3 } c ^ { 2 } \\right ) u _ { \\alpha \\beta } + \\left ( \\frac { m c ^ { 2 } } { 2 k _ { B } T } - \\frac { 5 } { 2 } \\right ) \\frac { c _ { \\alpha } } { T } \\partial _ { \\alpha } T . } \\\\ & { \\quad ( 3 . 1 1 0 ) } \\end{array}</formula>"
+  },
+  "FK-p56-t936": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "<loc_0><loc_0><loc_500><loc_500>\\left \\langle \\mathcal { H } ^ { n } \\right \\rangle _ { c } = ( - 1 ) ^ { n } \\frac { \\partial ^ { n } \\ln Z } { \\partial \\beta ^ { n } } . & & ( 4 . 6 7 )</formula>"
+  },
+  "FK-p60-t1007": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "<loc_0><loc_0><loc_500><loc_500>\\text {The normalization factor is now} \\\\ \\mathcal { Z } ( N , T , P ) = & \\int _ { 0 } ^ { \\infty } \\text {d} V e ^ { - \\beta P V } \\int \\frac { 1 } { N ! } \\prod _ { i = 1 } ^ { N } \\frac { \\text {d} ^ { 3 } \\vec { q } _ { i } \\text {d} ^ { 3 } \\vec { p } _ { i } } { h ^ { 3 } } \\exp \\left [ - \\beta \\sum _ { i = 1 } ^ { N } \\frac { p _ { i } ^ { 2 } } { 2 m } \\right ] \\\\ = & \\int _ { 0 } ^ { \\infty } \\text {d} V V ^ { N } \\text { e} ^ { - \\beta P V } \\frac { 1 } { N ! \\lambda ( T ) ^ { 3 N } } = \\frac { 1 } { ( \\beta P ) ^ { N + 1 } \\lambda ( T ) ^ { 3 N } } .</formula>"
+  },
+  "FK-p64-t1075": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "<loc_0><loc_0><loc_500><loc_500>P = - \\frac { \\mathcal { G } } { V } = - \\, \\frac { \\partial \\mathcal { G } } { \\partial V } \\Big | _ { | _ { \\mu , T } } = k _ { B } T \\frac { \\mathrm e ^ { \\beta \\mu } } { \\lambda ^ { 3 } } .</formula>"
+  },
+  "TK-p04-t55": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "<loc_0><loc_0><loc_500><loc_500>\\begin{array} { r l r } & { \\left ( P + \\frac { a } { V ^ { 2 } } \\right ) \\left ( V - b \\right ) \\left ( L - L _ { 0 } \\right ) - c \\left [ F - K \\left ( L - L _ { 0 } \\right ) \\right ] = 0 , } \\\\ & { \\left ( P + \\frac { a } { V ^ { 2 } } \\right ) \\left ( V - b \\right ) M - d B = 0 . } \\end{array} \\quad ( 1 . 7 )</formula>"
+  },
+  "TK-p04-t57": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "<loc_0><loc_0><loc_500><loc_500>\\Theta \\varpropto \\left ( P + \\frac { a } { V ^ { 2 } } \\right ) \\left ( V - b \\right ) = c \\left ( \\frac { F } { L - L _ { 0 } } - K \\right ) = d \\frac { B } { M } .</formula>"
+  },
+  "TK-p14-t275": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "<loc_0><loc_0><loc_500><loc_500>\\, \\mathrm d Q _ { R } = T _ { 0 } \\frac { \\mathrm d Q } { T } . & & ( 1 . 2 3 )</formula>"
+  },
+  "TK-p17-t334": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "<loc_0><loc_0><loc_500><loc_500>x _ { i } = - \\, \\frac { \\partial H } { \\partial J _ { i } } \\Big | _ { | S , J _ { j \\neq i } | } .</formula>"
+  },
+  "TK-p20-t385": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "<loc_0><loc_0><loc_500><loc_500>E ( \\lambda S , \\lambda { \\mathbf x } , \\lambda { \\mathbf N } ) = \\lambda E ( S , { \\mathbf x } , { \\mathbf N } ) . & & ( 1 . 4 6 )</formula>"
+  },
+  "TK-p24-t460": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "<loc_0><loc_0><loc_500><loc_500>\\delta S & = - \\frac { 2 } { T _ { A } } \\left [ \\delta T _ { A } \\left ( \\frac { \\delta E _ { A } - \\mathbf J _ { A } \\cdot \\delta \\mathbf x _ { A } - \\mu _ { A } \\cdot \\delta \\mathbf N _ { A } } { T _ { A } } \\right ) + \\delta \\mathbf J _ { A } \\cdot \\delta \\mathbf x _ { A } + \\delta \\mu _ { A } \\cdot \\delta \\mathbf N _ { A } \\right ] \\\\ & = - \\frac { 2 } { T _ { A } } \\left [ \\delta T _ { A } \\delta S _ { A } + \\delta \\mathbf J _ { A } \\cdot \\delta \\mathbf x _ { A } + \\delta \\mu _ { A } \\cdot \\delta \\mathbf N _ { A } \\right ] .</formula>"
+  },
+  "TK-p24-t447": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "<loc_0><loc_0><loc_500><loc_500>( E _ { B } - \\delta E , \\ x _ { B } - \\delta \\mathbf x , \\ N _ { B } - \\delta \\mathbf N ) \\text { and } ( T _ { B } + \\delta T _ { B } , \\ \\mathbf J _ { B } + \\delta \\mathbf J _ { B } , \\ \\mu _ { B } + \\delta \\mu _ { B } ) . \\quad ( 1 . 6 6 )</formula>"
+  },
+  "TK-p25-t472": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "<loc_0><loc_0><loc_500><loc_500>C _ { x } = \\frac { d Q } { d T } \\Big | _ { x } = T \\, \\frac { \\partial S } { \\partial T } \\Big | _ { x } \\geq 0 . \\\\ \\text {of the $\\delta x_{i}$ in Eq. (1.71) is non-zero, the corresponding response}</formula>"
+  },
+  "FP-p06-t65": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "<loc_0><loc_0><loc_500><loc_500>d S ( E , N , V ) = \\frac { d E } { T } + \\frac { P d V } { T } - \\frac { \\mu d N } { T } \\ .</formula>"
+  },
+  "FP-p15-t194": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "<loc_0><loc_0><loc_500><loc_500>\\begin{array} { r l r } { W o e a l l g i n g e c l l e r V o i n . } & { = } & { \\left ( \\frac { \\partial N } { \\partial v } \\right ) _ { V , T } \\left ( \\frac { \\partial } { \\partial N } \\right ) _ { V , T } = - \\frac { N ^ { 2 } } { V } \\left ( \\frac { \\partial } { \\partial N } \\right ) _ { V , T } } \\\\ & { \\left ( \\frac { \\partial } { \\partial v } \\right ) _ { N , T } } & { = } & { \\left ( \\frac { \\partial V } { \\partial v } \\right ) _ { N , T } \\left ( \\frac { \\partial } { \\partial V } \\right ) _ { N , T } = N \\left ( \\frac { \\partial } { \\partial V } \\right ) _ { N , T } \\, . } \\end{array}</formula>"
+  },
+  "FP-p18-t235": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "<loc_0><loc_0><loc_500><loc_500>\\langle n _ { k } \\rangle = - k _ { B } T \\frac { \\ln [ 1 - \\exp \\{ - \\beta ( E _ { k } - \\mu ) \\} ] } { \\partial u } = \\frac { 1 } { \\exp \\{ \\beta ( E _ { k } - \\mu ) \\} - 1 } \\, . \\quad ( 2 . 7 7 )</formula>"
+  },
+  "FP-p21-t292": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "<loc_0><loc_0><loc_500><loc_500>Z ( 1 ) \\frac { d S ( Z ( 1 ) Z ( 2 ) ) } { d ( Z ( 1 ) ) } = Z ( 1 ) \\frac { d S ( Z ( 1 ) ) } { d Z ( 1 ) } = Z ( 1 ) Z ( 2 ) \\frac { d S ( Z ( 1 ) Z ( 2 ) ) } { d ( Z ( 1 ) Z ( 2 ) ) }</formula>"
+  },
+  "FP-p23-t314": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "<loc_0><loc_0><loc_500><loc_500>\\int _ { E < H ( { \\mathbf x } ) < E + \\delta E } d { \\mathbf x } \\rho ( { \\mathbf x } ) = 1 \\ .</formula>"
+  },
+  "FP-p23-t322": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "<loc_0><loc_0><loc_500><loc_500>\\frac { \\delta } { \\delta \\rho ( x ) } \\left \\{ - k _ { B } \\int d ^ { 6 N } x [ \\rho \\ln ( h ^ { 3 N } N ! \\rho ) - \\lambda \\rho ] \\right \\}</formula>"
+  },
+  "TP-p10-t123": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "<loc_0><loc_0><loc_500><loc_500>\\begin{array} { r c l } d A & = & d E - d ( T S ) \\\\ & = & \\dot { d } Q - T d S - S d T - \\dot { d } W \\ . \\end{array}</formula>"
+  },
+  "TP-p10-t121": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "<loc_0><loc_0><loc_500><loc_500>d A \\ & = \\ \\ & d E - T d S - S d T \\\\ & = \\ \\ & - S d T + \\sum _ { i } X _ { i } d x _ { i } + \\sum _ { j } \\mu _ { j } d N _ { j } \\ .</formula>"
+  },
+  "TP-p16-t221": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "<loc_0><loc_0><loc_500><loc_500>\\begin{array} { r l } & { m u s t b e a m a x i m u m . T h u s } \\\\ & { \\quad d S = \\left ( \\frac { \\partial S _ { 1 } } { \\partial E _ { 1 } } \\right ) _ { V _ { 1 } } d E _ { 1 } + \\left ( \\frac { \\partial S _ { 2 } } { \\partial E _ { 2 } } \\right ) _ { V _ { 2 } } d E _ { 2 } + \\left ( \\frac { \\partial S _ { 1 } } { \\partial V _ { 1 } } \\right ) _ { E _ { 1 } } d V _ { 1 } + \\left ( \\frac { \\partial S _ { 2 } } { \\partial V _ { 2 } } \\right ) _ { E _ { 2 } } d V _ { 2 } } \\\\ & { = \\left [ \\left ( \\frac { \\partial S _ { 1 } } { \\partial E _ { 1 } } \\right ) _ { V _ { 1 } } - \\left ( \\frac { \\partial S _ { 2 } } { \\partial E _ { 2 } } \\right ) _ { V _ { 2 } } \\right ] d E _ { 1 } + \\left [ \\left ( \\frac { \\partial S _ { 1 } } { \\partial V _ { 1 } } \\right ) _ { E _ { 1 } } - \\left ( \\frac { \\partial S _ { 2 } } { \\partial V _ { 2 } } \\right ) _ { E _ { 2 } } \\right ] d V _ { 1 } = 0 \\ \\ ( 1 . 6 7 ) } \\end{array}</formula>"
+  },
+  "TP-p17-t233": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "<loc_0><loc_0><loc_500><loc_500>G _ { 1 } ( P _ { 0 } , T _ { 0 } ) = E _ { 1 } - T _ { 0 } S _ { 1 } + P _ { 0 } V _ { 1 } \\ .</formula>"
+  },
+  "TP-p18-t245": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "<loc_0><loc_0><loc_500><loc_500>\\left ( \\frac { \\partial T } { \\partial S } \\right ) _ { V } = \\frac { T } { C _ { V } } > 0 \\, \\text { or } \\, C _ { V } > 0</formula>"
+  },
+  "TP-p18-t248": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "<loc_0><loc_0><loc_500><loc_500>\\frac { T } { V K _ { S } C _ { V } } > \\left ( \\frac { \\partial T } { \\partial V } \\right ) _ { S } ^ { 2 } \\ .</formula>"
+  },
+  "TP-p24-t315": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "<loc_0><loc_0><loc_500><loc_500>v _ { 1 } ( P _ { c } , T _ { c } ) = \\frac { \\partial g _ { 1 } } { \\partial P } \\Big | _ { P _ { c } , T _ { c } } = v _ { 2 } ( P _ { c } , T _ { c } ) = \\frac { \\partial g _ { 2 } } { \\partial P } \\Big | _ { P _ { c } , T _ { c } }</formula>"
+  },
+  "IFK-p17-51": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "<loc_0><loc_0><loc_500><loc_500>( \\vec { p } _ { 1 } \\, ^ { \\prime } , \\vec { p } _ { 2 } \\, ^ { \\prime } , \\vec { b } \\, ^ { \\prime } )</formula>"
+  },
+  "IFK-p23-116": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "<loc_0><loc_0><loc_500><loc_500>( \\vec { p } _ { 1 } \\, ^ { \\prime } , \\vec { p } _ { 2 } \\, ^ { \\prime } )</formula>"
+  },
+  "ITK-p12-329": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "<loc_0><loc_0><loc_500><loc_500>( T _ { 1 } > T _ { 2 } > T _ { 3 } ) .</formula>"
+  },
+  "ITK-p18-377": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "<loc_0><loc_0><loc_500><loc_500>\\{ N _ { 1 } , N _ { 2 } , \\cdots \\}</formula>"
+  }
+ },
+ "granite_docling_258m_mlx_tight": {
+  "FK-p09-t137": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "<loc_0><loc_0><loc_500><loc_500>\\frac { 1 } { \\tau _ { U } } \\sim \\frac { \\partial U } { \\partial \\vec { q } } \\cdot \\frac { \\partial } { \\partial \\vec { p } }</formula>"
+  },
+  "FK-p19-t277": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "<loc_0><loc_0><loc_500><loc_500>\\ln f _ { 1 } ( \\vec { p } _ { 1 } , \\vec { q } \\, ) + \\ln f _ { 1 } ( \\vec { p } _ { 2 } , \\vec { q } \\, ) = \\ln f _ { 1 } ( \\vec { p } _ { 1 } \\, ^ { \\prime } , \\vec { q } \\, ) + \\ln f _ { 1 } ( \\vec { p } _ { 2 } \\, ^ { \\prime } , \\vec { q } \\, ) .</formula>"
+  },
+  "FK-p20-t290": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "<loc_0><loc_0><loc_500><loc_500>f _ { 1 } ( \\vec { p } , \\vec { q } \\, ) = n \\left ( \\frac { \\beta } { 2 \\pi m } \\right ) ^ { 3 / 2 } \\exp \\left [ - \\frac { \\beta ( \\vec { p } - \\vec { p } _ { 0 } ) ^ { 2 } } { 2 m } \\right ] , \\quad \\ \\ ( 3 . 5 6 )</formula>"
+  },
+  "FK-p27-t426": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "<loc_0><loc_0><loc_500><loc_500>v _ { \\ell } = \\sqrt { \\frac { 5 \\, k _ { B } \\overline { T } } { 3 } } \\, \\quad ( 3 . 1 0 6 )</formula>"
+  },
+  "FK-p28-t439": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "<loc_0><loc_0><loc_500><loc_500>\\mathcal { L } \\left [ \\ln f _ { 1 } ^ { 0 } \\right ] & = 0 - \\frac { m c ^ { 2 } } { 3 k _ { B } T } \\partial _ { \\alpha } u _ { \\alpha } + c _ { \\alpha } \\left [ \\left ( \\frac { F _ { \\alpha } } { k _ { B } T } - \\frac { \\partial _ { \\alpha } n } { n } - \\frac { \\partial _ { \\alpha } T } { T } \\right ) + \\left ( \\frac { \\partial _ { \\alpha } n } { n } - \\frac { 3 } { 2 } \\frac { \\partial _ { \\alpha } T } { T } \\right ) - \\frac { F _ { \\alpha } } { k _ { B } T } \\right ] \\\\ & \\quad + \\frac { m c ^ { 2 } } { 2 k _ { B } T ^ { 2 } } c _ { \\alpha } \\partial _ { \\alpha } T + \\frac { m } { k _ { B } T } c _ { \\alpha } c _ { \\beta } u _ { \\alpha \\beta } \\\\ & = \\frac { m } { k _ { B } T } \\left ( c _ { \\alpha } c _ { \\beta } - \\frac { \\delta _ { \\alpha \\beta } } { 3 } c ^ { 2 } \\right ) u _ { \\alpha \\beta } + \\left ( \\frac { m c ^ { 2 } } { 2 k _ { B } T } - \\frac { 5 } { 2 } \\right ) \\frac { c _ { \\alpha } } { T } \\partial _ { \\alpha } T . \\\\</formula>"
+  },
+  "FK-p56-t936": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "<loc_0><loc_0><loc_500><loc_500>\\langle \\mathcal { H } ^ { n } \\rangle _ { c } = ( - 1 ) ^ { n } \\frac { \\partial ^ { n } \\ln Z } { \\partial \\beta ^ { n } } . \\quad ( 4 . 6 7 )</formula>"
+  },
+  "FK-p60-t1007": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "<loc_0><loc_0><loc_500><loc_500>\\mathcal { Z } ( N , T , P ) = & \\int _ { 0 } ^ { \\infty } \\mathrm d V \\mathrm e ^ { - \\beta P V } \\int \\, \\frac { 1 } { N ! } \\prod _ { i = 1 } ^ { N } \\frac { \\mathrm d ^ { 3 } \\vec { q } _ { i } \\mathrm d ^ { 3 } \\vec { p } _ { i } } { h ^ { 3 } } \\exp \\left [ - \\beta \\sum _ { i = 1 } ^ { N } \\frac { p _ { i } ^ { 2 } } { 2 m } \\right ] \\\\ = & \\int _ { 0 } ^ { \\infty } \\mathrm d V V ^ { N } \\, \\mathrm e ^ { - \\beta P V } \\frac { 1 } { N ! \\lambda ( T ) ^ { 3 N } } = \\frac { 1 } { ( \\beta P ) ^ { N + 1 } \\, \\lambda ( T ) ^ { 3 N } } .</formula>"
+  },
+  "FK-p64-t1075": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "<loc_0><loc_0><loc_500><loc_500>P = - \\frac { \\mathcal { G } } { V } = - \\, \\frac { \\partial \\mathcal { G } } { \\partial V } \\Big | _ { \\mu , T } = k _ { B } T \\frac { \\mathbf e ^ { \\beta \\mu } } { \\lambda ^ { 3 } } .</formula>"
+  },
+  "TK-p04-t55": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "<loc_0><loc_0><loc_500><loc_500>\\left ( P + \\frac { a } { V ^ { 2 } } \\right ) & \\left ( V - b \\right ) \\left ( L - L _ { 0 } \\right ) - c [ F - K ( L - L _ { 0 } ) ] = 0 , & & ( 1 . 7 ) \\\\ & \\left ( P + \\frac { a } { V ^ { 2 } } \\right ) \\left ( V - b \\right ) M - d B = 0 . & &</formula>"
+  },
+  "TK-p04-t57": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "<loc_0><loc_0><loc_500><loc_500>\\Theta \\, \\infty \\, \\left ( P + \\frac { a } { V ^ { 2 } } \\right ) \\, \\left ( V - b \\right ) = c \\, \\left ( \\frac { F } { L - L _ { 0 } } - K \\right ) = d \\frac { B } { M } . \\quad \\ \\ ( 1 . 8 )</formula>"
+  },
+  "TK-p14-t275": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "<loc_0><loc_0><loc_500><loc_500>\\mathfrak { d } Q _ { R } = T _ { 0 } \\frac { \\mathfrak { d } Q } { T } . \\quad ( 1 . 2 3 )</formula>"
+  },
+  "TK-p17-t334": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "<loc_0><loc_0><loc_500><loc_500>x _ { i } = - \\, \\frac { \\partial H } { \\partial J _ { i } } \\Big | _ { | _ { S , J _ { j \\neq i } } } .</formula>"
+  },
+  "TK-p20-t385": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "<loc_0><loc_0><loc_500><loc_500>E ( \\lambda S , \\lambda { \\mathbf x } , \\lambda { \\mathbf N } ) = \\lambda E ( S , { \\mathbf x } , { \\mathbf N } ) . & & ( 1 . 4 6 )</formula>"
+  },
+  "TK-p24-t460": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "<loc_0><loc_0><loc_500><loc_500>\\delta S & = - \\frac { 2 } { T _ { A } } \\left [ \\delta T _ { A } \\left ( \\frac { \\delta E _ { A } - \\mathbf J _ { A } \\cdot \\delta \\mathbf x _ { A } - \\mu _ { A } \\cdot \\delta \\mathbf N _ { A } } { T _ { A } } \\right ) + \\delta \\mathbf J _ { A } \\cdot \\delta \\mathbf x _ { A } + \\delta \\mu _ { A } \\cdot \\delta \\mathbf N _ { A } \\right ] \\\\ & = - \\frac { 2 } { T _ { A } } \\left [ \\delta T _ { A } \\delta S _ { A } + \\delta \\mathbf J _ { A } \\cdot \\delta \\mathbf x _ { A } + \\delta \\mu _ { A } \\cdot \\delta \\mathbf N _ { A } \\right ] .</formula>"
+  },
+  "TK-p24-t447": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "<loc_0><loc_0><loc_500><loc_500>( E _ { B } - \\delta E , \\ { \\mathbf x } _ { B } - \\delta { \\mathbf x } , \\ { \\mathbf N } _ { B } - \\delta { \\mathbf N } ) \\text { and } ( T _ { B } + \\delta T _ { B } , \\ { \\mathbf J } _ { B } + \\delta { \\mathbf J } _ { B } , \\ \\mu _ { B } + \\delta \\mu _ { B } ) . \\quad ( 1 . 6 6 )</formula>"
+  },
+  "TK-p25-t472": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "<loc_0><loc_0><loc_500><loc_500>C _ { x } = \\frac { \\mathrm d Q } { \\mathrm d T } \\left | _ { x } = T \\, \\frac { \\partial S } { \\partial T } \\right | _ { x } \\geq 0 .</formula>"
+  },
+  "FP-p06-t65": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "<loc_0><loc_0><loc_500><loc_500>d S ( E , N , V ) = \\frac { d E } { T } + \\frac { P d V } { T } - \\frac { \\mu d N } { T } \\ .</formula>"
+  },
+  "FP-p15-t194": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "<loc_0><loc_0><loc_500><loc_500>\\begin{array} { c c l } { { \\left ( \\frac { \\partial } { \\partial v } \\right ) _ { V , T } } } & { = } & { { \\left ( \\frac { \\partial N } { \\partial v } \\right ) _ { V , T } \\left ( \\frac { \\partial } { \\partial N } \\right ) _ { V , T } = - \\frac { N ^ { 2 } } { V } \\left ( \\frac { \\partial } { \\partial N } \\right ) _ { V , T } } } \\\\ { { \\left ( \\frac { \\partial } { \\partial v } \\right ) _ { N , T } } } & { = } & { { \\left ( \\frac { \\partial V } { \\partial v } \\right ) _ { N , T } \\left ( \\frac { \\partial } { \\partial V } \\right ) _ { N , T } = N \\left ( \\frac { \\partial } { \\partial V } \\right ) _ { N , T } \\, . } } \\end{array}</formula>"
+  },
+  "FP-p18-t235": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "<loc_0><loc_0><loc_500><loc_500>\\langle n _ { k } \\rangle = - k _ { B } T _ { \\frac { \\partial u } { \\partial u } } \\ln | 1 - \\exp \\{ - \\beta ( E _ { k } - \\mu ) \\} | = \\frac { \\exp \\{ \\beta ( E _ { k } - \\mu ) \\} } { \\sqrt { \\frac { 1 } { 2 } ( E _ { k } - \\mu ) \\sqrt { \\frac { 1 } { 2 } ( E _ { k } - \\mu ) } - 1 } } \\cdot ( 2 . 7 7 )</formula>"
+  },
+  "FP-p21-t292": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "<loc_0><loc_0><loc_500><loc_500>Z ( 1 ) \\frac { d S ( Z ( 1 ) Z ( 2 ) ) } { d ( Z ( 1 ) ) } = Z ( 1 ) \\frac { d S ( Z ( 1 ) ) } { d Z ( 1 ) } = Z ( 1 ) Z ( 2 ) \\frac { d S ( Z ( 1 ) Z ( 2 ) ) } { d ( Z ( 1 ) Z ( 2 ) ) }</formula>"
+  },
+  "FP-p23-t314": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "<loc_0><loc_0><loc_500><loc_500>\\int _ { E < H ( { \\mathbf x } ) < E + \\delta E } d { \\mathbf x } \\rho ( { \\mathbf x } ) = 1 \\ .</formula>"
+  },
+  "FP-p23-t322": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "<loc_0><loc_0><loc_500><loc_500>\\frac { \\delta } { \\delta \\rho ( x ) } \\left \\{ - k _ { B } \\int d ^ { 6 N } x [ \\rho \\ln ( h ^ { 3 N } N ! \\rho ) - \\lambda \\rho ] \\right \\}</formula>"
+  },
+  "TP-p10-t123": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "<loc_0><loc_0><loc_500><loc_500>\\begin{array} { r c l } { { d A } } & { = } & { { d E - d ( T S ) } } \\\\ & { = } & { { \\dot { d } Q - T d S - S d T - \\dot { d } W } . } \\end{array}</formula>"
+  },
+  "TP-p10-t121": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "<loc_0><loc_0><loc_500><loc_500>\\begin{array} { r c l } { { d A } } & { = } & { { d E - T d S - S d T } } \\\\ & { = } & { { - S d T + \\sum _ { i } X _ { i } d x _ { i } + \\sum _ { j } \\mu _ { j } d N _ { j } } \\ . } \\end{array} ( 1 . 2 7 )</formula>"
+  },
+  "TP-p16-t221": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "<loc_0><loc_0><loc_500><loc_500>\\begin{array} { r l r } & { d S = \\left ( \\frac { \\partial S _ { 1 } } { \\partial E _ { 1 } } \\right ) _ { V _ { 1 } } d E _ { 1 } + \\left ( \\frac { \\partial S _ { 2 } } { \\partial E _ { 2 } } \\right ) _ { V _ { 2 } } d E _ { 2 } + \\left ( \\frac { \\partial S _ { 1 } } { \\partial V _ { 1 } } \\right ) _ { E _ { 1 } } d V _ { 1 } + \\left ( \\frac { \\partial S _ { 2 } } { \\partial V _ { 2 } } \\right ) _ { E 2 } d V _ { 2 } } \\\\ & { = \\left [ \\left ( \\frac { \\partial S _ { 1 } } { \\partial E _ { 1 } } \\right ) _ { V _ { 1 } } - \\left ( \\frac { \\partial S _ { 2 } } { \\partial E _ { 2 } } \\right ) _ { V _ { 2 } } \\right ] d E _ { 1 } + \\left [ \\left ( \\frac { \\partial S _ { 1 } } { \\partial V _ { 1 } } \\right ) _ { E _ { 1 } } - \\left ( \\frac { \\partial S _ { 2 } } { \\partial V _ { 2 } } \\right ) _ { E _ { 2 } } \\right ] d V _ { 1 } = 0 } \\end{array} \\, ( 1 . 6 7 )</formula>"
+  },
+  "TP-p17-t233": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "<loc_0><loc_0><loc_500><loc_500>G _ { 1 } ( P _ { 0 } , T _ { 0 } ) = E _ { 1 } - T _ { 0 } S _ { 1 } + P _ { 0 } V _ { 1 } \\ .</formula>"
+  },
+  "TP-p18-t245": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "<loc_0><loc_0><loc_500><loc_500>\\left ( \\frac { \\partial T } { \\partial S } \\right ) _ { v } = \\frac { T } { C _ { V } } > 0 \\, \\text { or } \\, C _ { V } > 0</formula>"
+  },
+  "TP-p18-t248": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "<loc_0><loc_0><loc_500><loc_500>\\frac { T } { V K _ { S } C _ { V } } > \\left ( \\frac { \\partial T } { \\partial V } \\right ) _ { S } ^ { 2 } \\, .</formula>"
+  },
+  "TP-p24-t315": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "<loc_0><loc_0><loc_500><loc_500>\\upsilon _ { 1 } ( P _ { c } , T _ { c } ) = \\frac { \\partial g _ { 1 } } { \\partial P } \\right | _ { P _ { c } , T _ { c } } = \\upsilon _ { 2 } ( P _ { c } , T _ { c } ) = \\frac { \\partial g _ { 2 } } { \\partial P } \\right | _ { P _ { c } , T _ { c } } \\quad ( 1 . 9 0 )</formula>"
+  },
+  "IFK-p17-51": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "<loc_0><loc_0><loc_500><loc_500>( \\vec { p } _ { 1 } \\, ^ { \\prime } , \\vec { p } _ { 2 } \\, ^ { \\prime } , \\vec { b } \\, ^ { \\prime } )</formula>"
+  },
+  "IFK-p23-116": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "<loc_0><loc_0><loc_500><loc_500>( \\vec { p } _ { 1 } \\, ^ { \\prime } , \\vec { p } _ { 2 } \\, ^ { \\prime } )</formula>"
+  },
+  "ITK-p12-329": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "<loc_0><loc_0><loc_500><loc_500>( T _ { 1 } > T _ { 2 } > T _ { 3 } ) .</formula>"
+  },
+  "ITK-p18-377": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "<loc_0><loc_0><loc_500><loc_500>\\{ N _ { 1 } , N _ { 2 } , \\cdots \\}</formula>"
+  }
+ },
+ "texify_mps": {
+  "FK-p09-t137": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\frac{1}{\\tau_{U}}\\sim\\frac{\\partial U}{\\partial\\vec{q}}\\cdot\\frac{\\partial}{\\partial\\vec{p}}"
+  },
+  "FK-p19-t277": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\ln f_{1}(\\vec{p}_{1},\\vec{q})+\\ln f_{1}(\\vec{p}_{2},\\vec{q}\\,)=\\ln f_{1}(\\vec{p}_{1}\\,^{\\prime},\\vec{q}\\,)+\\ln f_{1}(\\vec{p}_{2}\\,^{\\prime},\\vec{q}\\,).\\tag{3.51}"
+  },
+  "FK-p20-t290": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "f_{1}(\\vec{p},\\,\\vec{q}\\,)=n\\left(\\frac{\\beta}{2\\pi m}\\right)^{3/2}\\exp\\left[-\\frac{\\beta(\\vec{p}-\\vec{p}_{0})^{2}}{2m}\\right],\\tag{3.56}"
+  },
+  "FK-p27-t426": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "v_{\\ell}=\\sqrt{\\frac{5}{3}\\frac{k_{B}\\overline{T}}{m}}\\tag{3.106}"
+  },
+  "FK-p28-t439": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "we can simplify the above equation to\n\n$$\\mathcal{L}\\left[\\ln f_{1}^{a}\\right]=0-\\frac{mc^{2}}{3k_{B}T}\\partial_{a}u_{a}+c_{a}\\left[\\left(\\frac{F_{a}}{k_{B}T}-\\frac{\\partial_{a}n}{n}-\\frac{\\partial_{a}T}{T}\\right)+\\left(\\frac{\\partial_{a}n}{n}-\\frac{3}{2}\\frac{\\partial_{a}T}{T}\\right)-\\frac{F_{a}}{k_{B}T}\\right]\\tag{3.110}$$ $$+\\frac{mc^{2}}{2k_{B}T^{2}}c_{a}\\partial_{a}T+\\frac{m}{k_{B}T}c_{a}c_{b}u_{a}$$ $$=\\frac{m}{k_{B}T}\\left(c_{a}c_{\\beta}-\\frac{\\partial_{a}\\delta_{a}}{3c^{2}}\\right)u_{a\\beta}+\\left(\\frac{mc^{2}}{2k_{B}T}-\\frac{5}{2}\\right)\\frac{c_{a}}{T}\\partial_{"
+  },
+  "FK-p56-t936": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\left\\langle{\\cal H}^{n}\\right\\rangle_{c}=(-1)^{n}\\frac{\\partial^{n}\\ln Z}{\\partial\\beta^{n}}.\\tag{4.67}"
+  },
+  "FK-p60-t1007": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "The normalization factor is now\n\n$$\\begin{split}\\mathcal{Z}(N,T,P)&=\\int_{0}^{\\infty}\\mathrm{d}V\\mathrm{e}^{-\\beta PV}\\int\\frac{1}{N!}\\prod_{i=1}^{N}\\frac{\\mathrm{d}^{3}\\vec{q}_{i}\\mathrm{d}^{3}\\vec{p}_{i}}{h^{3}}\\exp\\left[-\\beta\\sum_{i=1}^{N}\\frac{p_{i}^{2}}{2m}\\right]\\\\ &=\\int_{0}^{\\infty}\\mathrm{d}W^{N}\\;\\mathrm{e}^{-\\beta PV}\\;\\frac{1}{N!\\Lambda(T)^{3N}}=\\frac{1}{\\left(\\beta P\\right)^{N+1}\\Lambda(T)^{3N}}.\\end{split}\\tag{4.91}$$\n\nIgnoring non-extensive contributions, the Gibbs free energy is given by"
+  },
+  "FK-p64-t1075": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "P=-\\frac{\\mathcal{G}}{V}=-\\left.\\frac{\\partial\\mathcal{G}}{\\partial V}\\right|_{\\mu,T}=k_{B}T\\frac{e^{\\beta\\mu}}{\\lambda^{3}}.\\tag{4.110}$$\n\nThe number and the chemical potential are related by"
+  },
+  "TK-p04-t55": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "ing constraints are satisfied between their coordinates.\n\n$$\\begin{split}\\left(P+\\frac{a}{V^{2}}\\right)(V-b)(L-L_{0})-c[F-K(L-L_{0})]=0,\\\\ \\left(P+\\frac{a}{V^{2}}\\right)(V-b)M-dB=0.\\end{split}\\tag{1.7}$$\n\ntwo conditions can be organized into three empirical temperature func"
+  },
+  "TK-p04-t57": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "ns as\n\n$$\\Theta\\propto\\left(P+\\frac{a}{V^{2}}\\right)(V-b)=c\\left(\\frac{F}{L-L_{0}}-K\\right)=d\\,\\frac{B}{M}.\\tag{1.8}$$\n\nNote that the zeroth law covers the same as the second law. The second law is the second law. The second law is the second law. The second law is the second law. The third law is the second law. The third law is the second law. The third law is the second law. The third law is the second law. The third law is the second law. The third law is the second law. The third law is the second law. The third law is the second law. The third law is the second law. The third law is the second law. The third law is the second law. The third law is the second law. The third law is the second law. The third law is the second law. The third law is the second law. The third law is the second law. The third law is the second law. The third law is the second law. The third law is the second law. The third law is the second law. The third law is the second law. The third law is the second law. The third law is the second law. The third law is the second law. The third law is the second law. The third law is the second law. The third law is the second law. The third law is the second law. The third law is the second law. The third law is the second law. The third law is the second law."
+  },
+  "TK-p14-t275": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\mathrm{d}Q_{R}=T_{0}\\frac{\\mathrm{d}Q}{T}$."
+  },
+  "TK-p17-t334": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "Eq. (1.31) that\n\n$$x_{i}=-\\left.\\frac{\\partial H}{\\partial J_{i}}\\right|_{S,J_{j\\neq i}}.\\tag{1.32}$$\n\nntplay with temperature are related to heat capacities at $i=1$."
+  },
+  "TK-p20-t385": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "E(\\lambda S,\\lambda{\\bf x},\\lambda{\\bf N})=\\lambda E(S,{\\bf x},{\\bf N})$. (1.46)"
+  },
+  "TK-p24-t460": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "Same as $A_{A}$) Equation (1.99) can be rearranged to\n\n$$\\begin{split}\\delta S&=-\\frac{2}{T_{A}}\\left[\\delta T_{A}\\left(\\frac{\\delta E_{A}-\\mathbf{J}_{A}\\cdot\\delta\\mathbf{x}_{A}-\\mu_{A}\\cdot\\delta\\mathbf{N}_{A}}{T_{A}}\\right)+\\delta\\mathbf{J}_{A}\\cdot\\delta\\mathbf{x}_{A}+\\delta\\mu_{A}\\cdot\\delta\\mathbf{N}_{A}\\right]\\\\ &=-\\frac{2}{T_{A}}\\left[\\delta T_{A}\\delta S_{A}+\\delta\\mathbf{J}_{A}\\cdot\\delta\\mathbf{x}_{A}+\\delta\\mu_{A}\\cdot\\delta\\mathbf{N}_{A}\\right].\\end{split}\\tag{1.70}"
+  },
+  "TK-p24-t447": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "(E_{B}-\\delta E,\\ {\\bf x}_{B}-\\delta{\\bf x},\\ {\\bf N}_{B}-\\delta{\\bf N})$ and $(T_{B}+\\delta T_{B},\\ {\\bf J}_{B}+\\delta{\\bf J}_{B},\\ \\mu_{B}+\\delta\\mu_{B})$."
+  },
+  "TK-p25-t472": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "ures $\\left.\\partial S/\\partial T\\right|_{\\mathbf{x}}\\geq0$, implying a positive heat capacity, since\n\n$$C_{\\mathbf{x}}=\\left.\\frac{\\mathrm{d}Q}{\\mathrm{d}T}\\right|_{\\mathbf{x}}=T\\left.\\frac{\\partial S}{\\partial T}\\right|_{\\mathbf{x}}\\geq0.\\tag{1.74}$$\n\nof the $\\delta x_{i}$ in Eq. (1.71) is non-zero, the corresponding response $\\left.\\partial J\\right|_{\\mathbf{x}}$ must be positive. However, a more general requirement"
+  },
+  "FP-p06-t65": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "dS(E,N,V)=\\frac{dE}{T}+\\frac{PdV}{T}-\\frac{\\mu dN}{T}.\\tag{2.16}"
+  },
+  "FP-p15-t194": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "We can change $\\theta$ by changing order $\\theta$ of $\\pi$:\n\n$$\\left(\\frac{\\partial}{\\partial v}\\right)_{V,T}=\\left(\\frac{\\partial N}{\\partial v}\\right)_{V,T}\\left(\\frac{\\partial}{\\partial N}\\right)_{V,T}=-\\frac{N^{2}}{V}\\left(\\frac{\\partial}{\\partial N}\\right)_{V,T}$$ $$\\left(\\frac{\\partial}{\\partial v}\\right)_{N,T}=\\left(\\frac{\\partial V}{\\partial v}\\right)_{N,T}\\left(\\frac{\\partial}{\\partial V}\\right)_{N,T}=N\\left(\\frac{\\partial}{\\partial V}\\right)_{N,T}.\\tag{2.63}$$\n\nHowever, the sum is which is independent of $\\pi$ ($\\theta$ $\\theta$) $\\pi"
+  },
+  "FP-p18-t235": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "\\langle n_{\\bf k}\\rangle=-k_{B}T\\frac{\\omega}{\\partial\\mu}\\ln[1-\\exp\\{-\\beta(E_{\\bf k}-\\mu)\\}]=\\frac{\\omega}{\\exp\\{\\beta(E_{\\bf k}-\\mu)\\}-1}.\\tag{2.77}"
+  },
+  "FP-p21-t292": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "Z(1){\\frac{d S(Z(1)Z(2))}{d(Z(1))}}=Z(1){\\frac{d S(Z(1))}{d Z(1)}}=Z(1)Z(2){\\frac{d S(Z(1)Z(2))}{d(Z(1)Z(2))}}"
+  },
+  "FP-p23-t314": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\int_{E<H({\\bf x})<E+\\delta E}{\\rm d}{\\bf x}\\rho({\\bf x})=1.\\tag{2.101}"
+  },
+  "FP-p23-t322": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\frac{\\delta}{\\delta\\rho(x)}\\left\\{-k_{B}\\int d^{6N}x[\\rho\\ln(h^{3N}N!\\rho)-\\lambda\\rho]\\right\\}"
+  },
+  "TP-p10-t123": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "d A=d E-d(T S)\\tag{1.28}$$ $$=d Q-Td S-SdT-d W\\ ."
+  },
+  "TP-p10-t121": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "dA=dE-TdS-SdT\\tag{1.27}$$ $$=-SdT+\\sum_{i}X_{i}dx_{i}+\\sum_{j}\\mu_{j}dN_{j}\\."
+  },
+  "TP-p16-t221": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "must be a maximum. Thus\n\n$$dS=\\left(\\frac{\\partial S_{1}}{\\partial E_{1}}\\right)_{V_{1}}dE_{1}+\\left(\\frac{\\partial S_{2}}{\\partial E_{2}}\\right)_{V_{2}}dE_{2}+\\left(\\frac{\\partial S_{1}}{\\partial V_{1}}\\right)_{E_{1}}dV_{1}+\\left(\\frac{\\partial S_{2}}{\\partial V_{2}}\\right)_{E_{2}}dV_{2}$$\n\n$$=\\left[\\left(\\frac{\\partial S_{1}}{\\partial E_{1}}\\right)_{V_{1}}-\\left(\\frac{\\partial S_{2}}{\\partial E_{2}}\\right)_{V_{2}}\\right]dE_{1}+\\left[\\left(\\frac{\\partial S_{1}}{\\partial V_{1}}\\right)_{E_{1}}-\\left(\\frac{\\partial S_{2}}{\\partial V_{2}}\\right)_{E_{2}}\\right]dV_{1}=0\\tag{1.67}$$\n\nwhere $\\alpha$ and $\\beta$ are both constants. But $E_{1}$ are not $V_{1}"
+  },
+  "TP-p17-t233": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "G_{1}(P_{0},T_{0})=E_{1}-T_{0}S_{1}+P_{0}V_{1}$."
+  },
+  "TP-p18-t245": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\left(\\frac{\\partial T}{\\partial S}\\right)_{V}=\\frac{T}{C_{V}}>0\\;\\;\\mbox{or}\\;\\;C_{V}>0\\tag{1.76}"
+  },
+  "TP-p18-t248": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\frac{T}{V K_{S}C_{V}}>\\left(\\frac{\\partial T}{\\partial V}\\right)_{S}^{2}.\\tag{1.78}"
+  },
+  "TP-p24-t315": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "v_{1}(P_{\\rm e},T_{\\rm e})=\\left.\\frac{\\partial g_{1}}{\\partial P}\\right|_{P_{\\rm e},T_{\\rm e}}=v_{2}(P_{\\rm e},T_{\\rm e})=\\left.\\frac{\\partial g_{2}}{\\partial P}\\right|_{P_{\\rm e},T_{\\rm e}}\\tag{1.90}"
+  },
+  "IFK-p17-51": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "(\\vec{p}_{1}\\,^{\\prime},\\vec{p}_{2}\\,^{\\prime},\\vec{b}\\,^{\\prime})"
+  },
+  "IFK-p23-116": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": ".$ (\\vec{p}_1\\,',\\vec{p}_2\\,')$\n\nugh...quantit"
+  },
+  "ITK-p12-329": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "(T_{1}>T_{2}>T_{3})."
+  },
+  "ITK-p18-377": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "* [10] M. C."
+  }
+ },
+ "texify_mps_tight": {
+  "FK-p09-t137": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "{\\frac{1}{\\tau_{U}}}\\sim{\\frac{\\partial U}{\\partial{\\vec{q}}}}\\cdot{\\frac{\\partial}{\\partial{\\vec{p}}}}"
+  },
+  "FK-p19-t277": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\ln f_{1}(\\bar{p}_{1},\\bar{q}\\,)+\\ln f_{1}(\\bar{p}_{2},\\bar{q}\\,)=\\ln f_{1}(\\bar{p}_{1}\\,^{\\prime},\\bar{q}\\,)+\\ln f_{1}(\\bar{p}_{2}\\,^{\\prime},\\bar{q}\\,).\\tag{3.51}"
+  },
+  "FK-p20-t290": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "f_{1}(\\vec{p},\\vec{q}\\,)=n\\left(\\frac{\\beta}{2\\pi m}\\right)^{3/2}\\exp\\left[-\\frac{\\beta(\\vec{p}-\\vec{p}_{0})^{2}}{2m}\\right],\\tag{3.56}"
+  },
+  "FK-p27-t426": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "v_{\\ell}=\\sqrt{\\frac{5}{3}\\frac{k_{B}\\overline{T}}{m}}\\tag{3.106}"
+  },
+  "FK-p28-t439": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\mathcal{L}\\left[\\ln f_{1}^{0}\\right]=0-\\frac{mc^{2}}{3k_{B}T}\\partial_{a}u_{a}+c_{a}\\left[\\left(\\frac{F_{a}}{k_{B}T}-\\frac{\\partial_{a}n}{n}-\\frac{\\partial_{a}T}{T}\\right)+\\left(\\frac{\\partial_{a}n}{n}-\\frac{3}{2}\\frac{\\partial_{a}T}{T}\\right)-\\frac{F_{a}}{k_{B}T}\\right]$$ $$\\quad+\\frac{mc^{2}}{2k_{B}T}c_{a}\\partial_{a}T+\\frac{m}{k_{B}T}c_{a}c_{\\beta}u_{a\\beta}$$ $$=\\frac{m}{k_{B}T}\\left(c_{a}c_{\\beta}-\\frac{\\delta_{a\\beta}}{3}c^{2}\\right)u_{a\\beta}+\\left(\\frac{mc^{2}}{2k_{B}T}-\\frac{5}{2}\\right)\\frac{c_{a}}{T}\\partial_{a}T.\\tag{3.110}"
+  },
+  "FK-p56-t936": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\left\\langle{\\cal H}^{n}\\right\\rangle_{c}=(-1)^{n}\\frac{\\partial^{n}\\ln Z}{\\partial\\beta^{n}}.\\tag{4.67}"
+  },
+  "FK-p60-t1007": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "**Definition factor is now**\n\n$$\\begin{split}\\mathcal{Z}(N,\\,T,\\,P)&=\\int_{0}^{\\infty}\\mathrm{d}V\\mathrm{e}^{-\\beta PV}\\int\\frac{1}{N!}\\prod_{i=1}^{N}\\frac{\\mathrm{d}^{3}\\vec{q}_{i}\\mathrm{d}^{3}\\vec{p}_{i}}{h^{3}}\\exp\\left[-\\beta\\sum_{i=1}^{N}\\frac{p_{i}^{2}}{2m}\\right]\\\\ &=\\int_{0}^{\\infty}\\mathrm{d}VW^{N}\\ \\mathrm{e}^{-\\beta PV}\\frac{1}{N!\\lambda(T)^{3N}}=\\frac{1}{\\left(\\beta P\\right)^{N+1}\\lambda(T)^{3N}}.\\end{split}\\tag{4.91}"
+  },
+  "FK-p64-t1075": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "P=-\\frac{\\mathcal{G}}{V}=-\\left.\\frac{\\partial\\mathcal{G}}{\\partial V}\\right|_{\\mu,T}=k_{B}T\\frac{\\mathrm{e}^{\\beta\\mu}}{\\lambda^{3}}\\,.\\tag{4.110}$$\n\nare and the chemical potential are related by"
+  },
+  "TK-p04-t55": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\begin{split}\\left(P+\\frac{a}{V^{2}}\\right)(V-b)(L-L_{0})-c[F-K(L-L_{0})]=0,\\\\ \\left(P+\\frac{a}{V^{2}}\\right)(V-b)M-dB=0.\\end{split}\\tag{1.7}"
+  },
+  "TK-p04-t57": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\Theta\\propto\\left(P+\\frac{a}{V^{2}}\\right)(V-b)=c\\left(\\frac{F}{L-L_{0}}-K\\right)=d\\frac{B}{M}.\\tag{1.8}"
+  },
+  "TK-p14-t275": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\mathrm{d}Q_{R}=T_{0}\\,\\frac{\\mathrm{d}Q}{T}$."
+  },
+  "TK-p17-t334": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "x_{i}=-\\left.\\frac{\\partial H}{\\partial J_{i}}\\right|_{S,J_{j\\neq i}}.\\tag{1.32}$$\n\nIn with temperature are related to heat capacities at"
+  },
+  "TK-p20-t385": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "E(\\lambda S,\\lambda{\\bf x},\\lambda{\\bf N})=\\lambda E(S,{\\bf x},{\\bf N})$. (1.46)"
+  },
+  "TK-p24-t460": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\delta S=-\\frac{2}{T_{A}}\\left[\\delta T_{A}\\left(\\frac{\\delta E_{A}-\\mathbf{J}_{A}\\cdot\\delta\\mathbf{x}_{A}-\\mu_{A}\\cdot\\delta\\mathbf{N}_{A}}{T_{A}}\\right)+\\delta\\mathbf{J}_{A}\\cdot\\delta\\mathbf{x}_{A}+\\delta\\mu_{A}\\cdot\\delta\\mathbf{N}_{A}\\right]\\tag{1.70}$$ $$=-\\frac{2}{T_{A}}\\left[\\delta T_{A}\\delta S_{A}+\\delta\\mathbf{J}_{A}\\cdot\\delta\\mathbf{x}_{A}+\\delta\\mu_{A}\\cdot\\delta\\mathbf{N}_{A}\\right]."
+  },
+  "TK-p24-t447": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "(E_{B}-\\delta E,\\ {\\bf x}_{B}-\\delta{\\bf x},\\ {\\bf N}_{B}-\\delta{\\bf N})\\ {\\rm and}\\ (T_{B}+\\delta T_{B},\\ {\\bf J}_{B}+\\delta{\\bf J}_{B},\\ \\mu_{B}+\\delta\\mu_{B}).\\tag{1.66}"
+  },
+  "TK-p25-t472": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "C_{\\bf x}=\\frac{{\\rm d}Q}{{\\rm d}T}\\bigg{|}_{\\bf x}=T\\left.\\frac{\\partial S}{\\partial T}\\right|_{\\bf x}\\geq0.\\tag{1.74}$$\n\n$\\delta x_{i}$ in Eq. (1.71) is non-zero, the corresponding response"
+  },
+  "FP-p06-t65": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "d S(E,N,V)=\\frac{d E}{T}+\\frac{P d V}{T}-\\frac{\\mu d N}{T}.\\tag{2.16}"
+  },
+  "FP-p15-t194": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\left(\\frac{\\partial}{\\partial v}\\right)_{V,T}=\\left(\\frac{\\partial N}{\\partial v}\\right)_{V,T}\\left(\\frac{\\partial}{\\partial N}\\right)_{V,T}=-\\frac{N^{2}}{V}\\left(\\frac{\\partial}{\\partial N}\\right)_{V,T}$$ $$\\left(\\frac{\\partial}{\\partial v}\\right)_{N,T}=\\left(\\frac{\\partial V}{\\partial v}\\right)_{N,T}\\left(\\frac{\\partial}{\\partial V}\\right)_{N,T}=N\\left(\\frac{\\partial}{\\partial V}\\right)_{N,T}.\\tag{2.63}"
+  },
+  "FP-p18-t235": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "\\langle n_{\\bf k}\\rangle=-k_{B}T\\frac{\\cdot}{\\partial\\mu}\\ln[1-\\exp\\{-\\beta(E_{\\bf k}-\\mu)\\}]=\\frac{\\cdot}{\\exp\\{\\beta(E_{\\bf k}-\\mu)\\}-1}.\\tag{2.77}"
+  },
+  "FP-p21-t292": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "Z(1)\\frac{d S(Z(1)Z(2))}{d(Z(1))}=Z(1)\\frac{d S(Z(1))}{d Z(1)}=Z(1)Z(2)\\frac{d S(Z(1)Z(2))}{d(Z(1)Z(2))}"
+  },
+  "FP-p23-t314": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\int_{E<H({\\bf x})<E+\\delta E}d{\\bf x}\\rho({\\bf x})=1\\ .\\eqno(2.101)"
+  },
+  "FP-p23-t322": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\frac{\\delta}{\\delta\\rho(x)}\\left\\{-k_{B}\\int d^{6N}x[\\rho\\ln(h^{3N}N!\\rho)-\\lambda\\rho]\\right\\}"
+  },
+  "TP-p10-t123": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "d A=d E-d(T S)\\tag{1.28}$$ $$=d Q-T d S-S d T-d W\\ ."
+  },
+  "TP-p10-t121": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\begin{array}{r c l}{{d A}}&{{=}}&{{d E-T d S-S d T}}\\\\ {{}}&{{=}}&{{-S d T+\\sum_{i}X_{i}d x_{i}+\\sum_{j}\\mu_{j}d N_{j}\\ .}}\\end{array}\\tag{1.27}"
+  },
+  "TP-p16-t221": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "dS=\\left(\\frac{\\partial S_{1}}{\\partial E_{1}}\\right)_{V_{1}}dE_{1}+\\left(\\frac{\\partial S_{2}}{\\partial E_{2}}\\right)_{V_{2}}dE_{2}+\\left(\\frac{\\partial S_{1}}{\\partial V_{1}}\\right)_{E_{1}}dV_{1}+\\left(\\frac{\\partial S_{2}}{\\partial V_{2}}\\right)_{E_{2}}dV_{2}$$\n\n$$=\\left[\\left(\\frac{\\partial S_{1}}{\\partial E_{1}}\\right)_{V_{1}}-\\left(\\frac{\\partial S_{2}}{\\partial E_{2}}\\right)_{V_{2}}\\right]dE_{1}+\\left[\\left(\\frac{\\partial S_{1}}{\\partial V_{1}}\\right)_{E_{1}}-\\left(\\frac{\\partial S_{2}}{\\partial V_{2}}\\right)_{E_{2}}\\right]dV_{1}=0\\tag{1.67}"
+  },
+  "TP-p17-t233": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "G_{1}(P_{0},T_{0})=E_{1}-T_{0}S_{1}+P_{0}V_{1}$."
+  },
+  "TP-p18-t245": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "\\left(\\frac{\\partial\\Omega}{\\partial S}\\right)_{V}=\\frac{T}{C_{V}}>0\\;\\;\\mbox{or}\\;\\;C_{V}>0\\tag{1.76}"
+  },
+  "TP-p18-t248": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\frac{T}{V K_{S}C_{V}}>\\left(\\frac{\\partial T}{\\partial V}\\right)_{S}^{2}.\\tag{1.78}"
+  },
+  "TP-p24-t315": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "v_{1}(P_{c},T_{c})=\\left.\\frac{\\omega g_{1}}{\\partial P}\\right|_{P_{c},T_{c}}=v_{2}(P_{c},T_{c})=\\left.\\frac{\\omega g_{2}}{\\partial P}\\right|_{P_{c},T_{c}}\\tag{1.90}"
+  },
+  "IFK-p17-51": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "(\\vec{p}_{1}\\,^{\\prime},\\vec{p}_{2}\\,^{\\prime},\\vec{b}\\,^{\\prime})"
+  },
+  "IFK-p23-116": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": ".$ (\\vec{p}_1\\,',\\vec{p}_2\\,')$\n\nugh...quantit"
+  },
+  "ITK-p12-329": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "(T_{1}>T_{2}>T_{3})."
+  },
+  "ITK-p18-377": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "* [10] M. C."
+  }
+ },
+ "qwen3_vl_2b_4bit_mlx": {
+  "FK-p09-t137": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "{ \\frac { 1 } { \\tau _ { U } } } \\sim { \\frac { \\partial U } { \\partial \\bar { q } } } \\cdot { \\frac { \\partial } { \\partial \\bar { p } } }"
+  },
+  "FK-p19-t277": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\ln f _ { 1 } ( \\vec { p } _ { 1 } , \\vec { q } ) + \\ln f _ { 1 } ( \\vec { p } _ { 2 } , \\vec { q } ) = \\ln f _ { 1 } ( \\vec { p } _ { 1 } ' , \\vec { q } ) + \\ln f _ { 1 } ( \\vec { p } _ { 2 } ' , \\vec { q } ) ."
+  },
+  "FK-p20-t290": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "f _ { 1 } ( \\vec { p } , \\vec { q } ) = n \\left( { \\frac { \\beta } { 2 \\pi m } } \\right) ^ { 3 / 2 } \\exp \\left[ - { \\frac { \\beta ( \\vec { p } - \\vec { p } _ { 0 } ) ^ { 2 } } { 2 m } } \\right] ,"
+  },
+  "FK-p27-t426": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "v _ { \\ell } = \\sqrt { \\frac { 5 } { 3 } \\frac { k _ { B } \\overline { { T } } } { m } }"
+  },
+  "FK-p28-t439": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "\\mathcal { L } [ \\ln f _ { 1 } ^ { 0 } ] = 0 - \\frac { m c ^ { 2 } } { 3 k _ { b } T } \\partial _ { a } T u _ { a } + c _ { a } \\left[ \\frac { \\left( \\frac { f _ { a } } { k _ { b } T } - \\frac { \\partial _ { a } n } { n } - \\frac { \\partial _ { a } T } { T } \\right) } { 2 } \\right] + \\frac { m c ^ { 2 } } { 2 k _ { b } T ^ { 2 } } c _ { a } \\partial _ { a } T + \\frac { m } { k _ { b } T } c _ { a } c _ { \\beta } u _ { a \\beta } \\right. \\\\ + \\frac { m } { k _ { b } T } \\left( c _ { a } c _ { \\beta } - \\frac { \\partial _ { a } \\beta } { c ^ { 2 } } \\right) u _ { a \\beta } + \\left( \\frac { m c ^ { 2 } } { 2 k _ { b } T } - \\frac { 5 } { 2 } \\right) \\frac { c _ { a } } { T } \\partial _ { a } T ."
+  },
+  "FK-p56-t936": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\langle { \\mathcal { H } } ^ { n } \\rangle _ { c } = ( - 1 ) ^ { n } \\frac { \\partial ^ { n } \\ln Z } { \\partial \\beta ^ { n } } ."
+  },
+  "FK-p60-t1007": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "Z ( N , T , P ) = \\int _ { 0 } ^ { \\infty } \\mathrm { d } V e ^ { - \\beta P V } \\int \\frac { 1 } { N ! } \\prod _ { i = 1 } ^ { N } \\frac { \\mathrm { d } ^ { 3 } q _ { i } \\mathrm { d } ^ { 3 } q _ { i } p _ { i } } { h ^ { 3 } } \\exp \\left[ - \\beta \\sum _ { i = 1 } ^ { N } \\frac { p _ { i } ^ { 2 } } { 2 m } \\right]$$\n\n$$ = \\int _ { 0 } ^ { \\infty } \\mathrm { d } W ^ { N } e ^ { - \\beta P V } \\frac { 1 } { N ! \\lambda ( T ) ^ { 3 N } } = \\frac { 1 } { ( \\beta P ) ^ { N + 1 } \\lambda ( T ) ^ { 3 N } } ."
+  },
+  "FK-p64-t1075": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "P = - \\frac { g } { V } = - \\frac { \\partial g } { \\partial V } \\Big | _ { \\lambda ^ { 2 } , T } = k _ { B } T \\frac { e ^ { \\beta \\mu } } { \\lambda ^ { 3 } } ."
+  },
+  "TK-p04-t55": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "( P + \\frac { a } { V ^ { 2 } } ) ( V - b ) - c [ F - K ( L - L _ { 0 } ) ] = 0 ,$$\n\n$$( P + \\frac { a } { V ^ { 2 } } ) ( V - b ) M - d B = 0 ."
+  },
+  "TK-p04-t57": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\Theta \\propto \\left( P + \\frac{a}{V^2} \\right) (V - b) = c \\left( \\frac{F}{L - L_0} - K \\right) = d \\frac{B}{M}."
+  },
+  "TK-p14-t275": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\mathrm { d } Q _ { R } = T _ { 0 } { \\frac { \\mathrm { d } Q } { T } } ."
+  },
+  "TK-p17-t334": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "x_i = - \\frac{ \\partial H }{ \\partial J_i } \\bigg|_{S, J_{j \\ne i}} ."
+  },
+  "TK-p20-t385": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "E ( \\lambda S , \\lambda x , \\lambda N ) = \\lambda E ( S , x , N ) ."
+  },
+  "TK-p24-t460": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "\\delta S = - \\frac { 2 } { T _ { A } } \\left[ \\delta E _ { A } - \\mathbf { J } _ { A } \\cdot \\delta \\mathbf { x } _ { A } - \\mu _ { A } \\cdot \\delta \\mathbf { N } _ { A } \\right] + \\delta J _ { A } \\cdot \\delta \\mathbf { x } _ { A } + \\delta \\mu _ { A } \\cdot \\delta \\mathbf { N } _ { A } \\right]"
+  },
+  "TK-p24-t447": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "( E _ { B } - \\delta E , \\, x _ { B } - \\delta x , \\, N _ { B } - \\delta N ) \\mathrm { ~ a n d } \\, ( T _ { B } + \\delta T _ { B } , \\, J _ { B } + \\delta J _ { B } , \\, \\mu _ { B } + \\delta \\mu _ { B } ) ."
+  },
+  "TK-p25-t472": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "C _ { x } = { \\frac { \\partial Q } { \\partial T } } _ { x } = T { \\frac { \\partial S } { \\partial T } } _ { x } \\geq 0 ."
+  },
+  "FP-p06-t65": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "d S ( E , N , V ) = { \\frac { d E } { T } } + { \\frac { P d V } { T } } - { \\frac { \\mu d N } { T } } ."
+  },
+  "FP-p15-t194": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "\\begin{array} { c } { { \\left( { \\frac { \\partial N } { \\partial v } } \\right) _ { V , T } } } \\\\ { = } \\\\ { { \\left( { \\frac { \\partial N } { \\partial v } } \\right) _ { N , T } } } \\\\ { = } \\\\ { { - { \\frac { N ^ { 2 } } { V } } \\left( { \\frac { \\partial } { \\partial N } } \\right) _ { V , T } } } \\\\ { = } \\\\ { { N } \\left( { \\frac { \\partial } { \\partial v } } \\right) _ { N , T } } } \\end{array}"
+  },
+  "FP-p18-t235": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "\\langle n _ { \\mathbf { k } } \\rangle = - k _ { B } T { \\frac { \\partial } { \\partial \\mu } } \\ln [ 1 - \\exp \\{ - \\beta ( E _ { \\mathbf { k } } - \\mu ) \\} ] = { \\frac { \\mu } { \\exp \\{ \\beta ( E _ { \\mathbf { k } } - \\mu ) \\} - 1 } } . \\quad ( 2.77 )"
+  },
+  "FP-p21-t292": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "{ \\mathrm { Z } ( 1 ) } { \\frac { d S ( Z ( 1 ) Z ( 2 ) ) } { d Z ( 1 ) } } = Z ( 1 ) { \\frac { d S ( Z ( 1 ) ) } { d Z ( 1 ) } } = Z ( 1 ) Z ( 2 ) { \\frac { d S ( Z ( 1 ) Z ( 2 ) ) } { d Z ( 1 ) Z ( 2 ) } } }"
+  },
+  "FP-p23-t314": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\int _ { E < H ( \\mathbf { x } ) < E + \\delta E } d \\mathbf { x } \\rho ( \\mathbf { x } ) = 1 \\, ."
+  },
+  "FP-p23-t322": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "{ \\frac { \\delta } { \\delta \\rho ( x ) } } \\left\\{ - k _ { B } \\int d ^ { 6 N } x [ \\rho \\ln ( h ^ { 3 N } N ! \\rho ) - \\lambda \\rho ] \\right\\} }"
+  },
+  "TP-p10-t123": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\begin{array}{r l l} d A & = d E - d ( T S ) \\\\ & = d Q - T d S - S d T - d W \\ . \\end{array}"
+  },
+  "TP-p10-t121": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\begin{array} { l } { d A = d E - T d S - S d T } \\\\ { = - S d T + \\sum _ { i } X _ { i } d x _ { i } + \\sum _ { j } \\mu _ { j } d N _ { j } } \\end{array}"
+  },
+  "TP-p16-t221": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "\\begin{array} { l } { d S = \\left( \\frac { \\partial S _ { 1 } } { \\partial E _ { 1 } } \\right) _ { V } d E _ { 1 } + \\left( \\frac { \\partial S _ { 2 } } { \\partial E _ { 2 } } \\right) _ { V } d E _ { 2 } + \\left( \\frac { \\partial S _ { 1 } } { \\partial V } \\right) _ { E _ { 1 } } d V _ { 1 } + \\left( \\frac { \\partial S _ { 2 } } { \\partial V } \\right) _ { E _ { 2 } } d V _ { 2 } } \\\\ { = \\left[ \\left( \\frac { \\partial S _ { 1 } } { \\partial E _ { 1 } } \\right) _ { V } - \\left( \\frac { \\partial S _ { 2 } } { \\partial E _ { 2 } } \\right) _ { V } \\right] d E _ { 1 } + \\left[ \\left( \\frac { \\partial S _ { 1 } } { \\partial V } \\right) _ { E _ { 1 } } - \\left( \\frac { \\partial S _ { 2 } } { \\partial V } \\right) _ { E _ { 2 } } \\right] d V _ { 1 } = 0 } \\end{array}"
+  },
+  "TP-p17-t233": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "G _ { 1 } ( P _ { 0 } , T _ { 0 } ) = E _ { 1 } - T _ { 0 } S _ { 1 } + P _ { 0 } V _ { 1 } \\, ."
+  },
+  "TP-p18-t245": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "( \\frac { \\partial T } { \\partial S } ) _ { V } = \\frac { T } { C _ { V } } > 0 \\text { or } C _ { V } > 0 \\quad \\quad ( 1 . 7 6 )"
+  },
+  "TP-p18-t248": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "{ \\frac { T } { V K _ { s } C _ { v } } } > \\left( { \\frac { \\partial T } { \\partial V } } \\right) _ { s } ^ { 2 } ."
+  },
+  "TP-p24-t315": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "v _{ 1 } ( P _{ c } , T _{ c } ) = { \\frac { \\partial g _{ 1 } } { \\partial P } } \\Bigg | _ { P _{ c } , T _{ c } } = v _{ 2 } ( P _{ c } , T _{ c } ) = { \\frac { \\partial g _{ 2 } } { \\partial P } } \\Bigg | _ { P _{ c } , T _{ c } }"
+  },
+  "IFK-p17-51": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "( \\vec { p } _ { 1 } ' , \\vec { p } _ { 2 } ' , \\vec { b } ' )"
+  },
+  "IFK-p23-116": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "( \\vec { p } _ { 1 } ' , \\vec { p } _ { 2 } ' )"
+  },
+  "ITK-p12-329": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "( T _ { 1 } > T _ { 2 } > T _ { 3 } )."
+  },
+  "ITK-p18-377": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\{ N _ { 1 } , N _ { 2 } , \\cdots \\}"
+  }
+ },
+ "qwen3_vl_2b_4bit_mlx_tight": {
+  "FK-p09-t137": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "{ \\frac { 1 } { \\tau _ { U } } } \\sim { \\frac { \\partial U } { \\partial { \\vec { q } } } } \\cdot { \\frac { \\partial } { \\partial { \\vec { p } } } } }"
+  },
+  "FK-p19-t277": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\ln f _ { 1 } ( \\vec { p } _ { 1 } , \\vec { q } ) + \\ln f _ { 1 } ( \\vec { p } _ { 2 } , \\vec { q } ) = \\ln f _ { 1 } ( \\vec { p } _ { 1 } ' , \\vec { q } ) + \\ln f _ { 1 } ( \\vec { p } _ { 2 } ' , \\vec { q } ) ."
+  },
+  "FK-p20-t290": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "f _ { 1 } ( \\vec { p } , \\vec { q } ) = n \\left( \\frac { \\beta } { 2 \\pi m } \\right) ^ { 3 / 2 } \\exp \\left[ - \\frac { \\beta ( \\vec { p } - \\vec { p } _ { 0 } ) ^ { 2 } } { 2 m } \\right] ,"
+  },
+  "FK-p27-t426": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "v _ { \\ell } = \\sqrt { \\frac { 5 } { 3 } \\frac { k _ { B } \\overline { { T } } } { m } } \\quad \\quad ( 3.106 )"
+  },
+  "FK-p28-t439": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "\\begin{aligned} \\mathcal { L } \\left[ \\ln f _ { 1 } ^ { 0 } \\right] = 0 - \\frac { m c ^ { 2 } } { 3 k _ { b } T } \\partial _ { a } u _ { a } + c _ { a } \\left[ \\frac { F _ { a } } { k _ { b } T } - \\frac { \\partial _ { a } T } { n } - \\frac { \\partial _ { a } T } { T } \\right] + \\frac { m c ^ { 2 } } { 2 k _ { b } T ^ { 2 } } c _ { a } \\partial _ { a } u _ { a } + \\frac { m } { k _ { b } T } c _ { a } c _ { \\beta } c _ { \\beta } ^ { 2 } \\right] u _ { a } ^ { \\beta } + \\left( \\frac { m c ^ { 2 } } { 2 k _ { b } T } - \\frac { 5 } { 2 } \\right) \\frac { c _ { a } } { T } \\partial _ { a } T . \\end{aligned}"
+  },
+  "FK-p56-t936": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\langle { \\mathcal { H } } ^ { n } \\rangle _ { c } = ( - 1 ) ^ { n } { \\frac { \\partial ^ { n } \\ln Z } { \\partial \\beta ^ { n } } } . \\quad \\quad ( 4 . 6 7 )"
+  },
+  "FK-p60-t1007": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "Z ( N , T , P ) = \\int _ { 0 } ^ { \\infty } \\mathrm { d } v \\mathrm { e } ^ { - \\beta P V } \\left[ \\frac { 1 } { N ! } \\prod _ { i = 1 } ^ { N } \\frac { \\mathrm { d } ^ { 3 } q _ { i } \\mathrm { d } ^ { 3 } p _ { i } } { \\hbar ^ { 3 } } \\exp \\left[ - \\beta \\sum _ { i = 1 } ^ { N } \\frac { p _ { i } ^ { 2 } } { 2 m } \\right] \\right] = \\int _ { 0 } ^ { \\infty } \\mathrm { d } V ^ { N } \\mathrm { e } ^ { - \\beta P V } \\frac { 1 } { N ! \\lambda ( T ) ^ { 3 N } } = \\frac { 1 } { ( \\beta P ) ^ { N } \\lambda ( T ) ^ { 3 N } } ."
+  },
+  "FK-p64-t1075": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "P = - { \\frac { G } { V } } = - { \\frac { \\partial G } { \\partial V } } \\Big | _ { \\mu , T } = k _ { B } T { \\frac { \\mathrm { e } ^ { \\beta \\mu } } { \\lambda ^ { 3 } } } ."
+  },
+  "TK-p04-t55": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\left( P + \\frac { a } { V ^ { 2 } } \\right) ( V - b ) ( L - L _ { 0 } ) - c [ F - K ( L - L _ { 0 } ) ] = 0 ,$$\n\n$$ \\left( P + \\frac { a } { V ^ { 2 } } \\right) ( V - b ) M - d B = 0 ."
+  },
+  "TK-p04-t57": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\Theta \\propto \\left( P + \\frac { a } { V ^ { 2 } } \\right) ( V - b ) = c \\left( \\frac { F } { L - L _ { 0 } } - K \\right) = d \\frac { B } { M } ."
+  },
+  "TK-p14-t275": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\mathrm { d } Q _ { R } = T _ { 0 } { \\frac { \\mathrm { d } Q } { T } } ."
+  },
+  "TK-p17-t334": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "x _{ i } = - { \\frac { \\partial H } { \\partial J _ { i } } } \\Big | _ { s , J _ { j \\ne i } } ."
+  },
+  "TK-p20-t385": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "E ( \\lambda S , \\lambda x , \\lambda N ) = \\lambda E ( S , x , N ) ."
+  },
+  "TK-p24-t460": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\begin{aligned} \\delta S & = - \\frac { 2 } { T _ { A } } \\left[ \\delta T _ { A } \\left( \\frac { \\delta E _ { A } - \\mathbf { J } _ { A } \\cdot \\delta \\mathbf { x } _ { A } - \\mu _ { A } \\cdot \\delta \\mathbf { N } _ { A } } { T _ { A } } \\right) + \\delta \\mathbf { J } _ { A } \\cdot \\delta \\mathbf { x } _ { A } + \\delta \\mu _ { A } \\cdot \\delta \\mathbf { N } _ { A } \\right] \\\\ & = - \\frac { 2 } { T _ { A } } \\left[ \\delta T _ { A } \\delta S _ { A } + \\delta \\mathbf { J } _ { A } \\cdot \\delta \\mathbf { x } _ { A } + \\delta \\mu _ { A } \\cdot \\delta \\mathbf { N } _ { A } \\right] . \\end{aligned}"
+  },
+  "TK-p24-t447": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "( E _ { B } - \\delta E , \\, x _ { B } - \\delta x , \\, N _ { B } - \\delta N ) \\mathrm { a n d } ( T _ { B } + \\delta T _ { B } , \\, J _ { B } + \\delta J _ { B } , \\, \\mu _ { B } + \\delta \\mu _ { B } ) . \\quad ( 1 . 6 6 )"
+  },
+  "TK-p25-t472": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "{ C } _ { x } = { \\frac { \\partial Q } { \\partial T } } _ { \\mathrm { x } } = T { \\frac { \\partial S } { \\partial T } } _ { \\mathrm { x } } \\geq 0 ."
+  },
+  "FP-p06-t65": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "d S ( E , N , V ) = { \\frac { d E } { T } } + { \\frac { P d V } { T } } - { \\frac { \\mu d N } { T } } \\, ."
+  },
+  "FP-p15-t194": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "{ \\left( { \\frac { \\partial } { \\partial v } } \\right) } _ { V , T } = { \\left( { \\frac { \\partial N } { \\partial v } } \\right) } _ { V , T } \\left( { \\frac { \\partial } { \\partial N } } \\right) _ { V , T } = - { \\frac { N ^ { 2 } } { V } } \\left( { \\frac { \\partial } { \\partial N } } \\right) _ { V , T } , }$$\n\n$${ \\left( { \\frac { \\partial } { \\partial v } } \\right) } _ { N , T } = { \\left( { \\frac { \\partial V } { \\partial v } } \\right) } _ { N , T } \\left( { \\frac { \\partial } { \\partial V } } \\right) _ { N , T } = N \\left( { \\frac { \\partial } { \\partial V } } \\right) _ { N , T } . }"
+  },
+  "FP-p18-t235": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "\\langle n _ { \\mathbf { k } } \\rangle = - k _ { B } T _ { \\frac { 1 } { 2 } } ^ { \\frac { 1 } { 2 } } \\ln [ 1 - \\exp \\{ - \\beta ( E _ { \\mathbf { k } } - \\mu ) \\} ] = \\frac { 1 } { \\exp \\{ \\beta ( E _ { \\mathbf { k } } - \\mu ) \\} - 1 } . \\quad ( 2.77 )"
+  },
+  "FP-p21-t292": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "Z ( 1 ) { \\frac { d S ( Z ( 1 ) Z ( 2 ) ) } { d ( Z ( 1 ) ) } } = Z ( 1 ) { \\frac { d S ( Z ( 1 ) ) } { d Z ( 1 ) } } = Z ( 1 ) Z ( 2 ) { \\frac { d S ( Z ( 1 ) Z ( 2 ) ) } { d ( Z ( 1 ) Z ( 2 ) ) } }"
+  },
+  "FP-p23-t314": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\int _ { E < H ( \\mathbf { x } ) < E + \\delta E } d \\mathbf { x } \\rho ( \\mathbf { x } ) = 1 \\, ."
+  },
+  "FP-p23-t322": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "{ \\frac { \\partial } { \\delta \\rho ( x ) } } \\left\\{ - k _ { B } \\int d ^ { 6 N } x [ \\rho \\ln ( h ^ { 3 N } N ! \\rho ) - \\lambda \\rho ] \\right\\} }"
+  },
+  "TP-p10-t123": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\begin{array} { l l } { d A } & { = d E - d ( T S ) } \\\\ { = d Q - T d S - S d T - d W } \\end{array} \\quad \\mathrm { ( 1 . 2 8 ) }"
+  },
+  "TP-p10-t121": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\begin{array}{rcl} dA & = & dE - TdS - SdT \\\\ & = & - SdT + \\sum _{i} X_{i}dx_{i} + \\sum _{j} \\mu _{j}dN_{j} \\ . \\end{array}"
+  },
+  "TP-p16-t221": {
+   "verdict": "different",
+   "raw": "different",
+   "cand": "{ \\begin{array} { c } { d S = \\left( { \\frac { \\partial S _ { 1 } } { \\partial E _ { 1 } } } \\right) _ { V _ { 1 } } d E _ { 1 } + \\left( { \\frac { \\partial S _ { 2 } } { \\partial E _ { 2 } } } \\right) _ { V _ { 2 } } d E _ { 2 } + \\left( { \\frac { \\partial S _ { 1 } } { \\partial V _ { 1 } } } \\right) _ { E _ { 1 } } d V _ { 1 } + \\left( { \\frac { \\partial S _ { 2 } } { \\partial V _ { 2 } } } \\right) _ { E _ { 2 } } d V _ { 2 } } \\\\ { = \\left[ { \\frac { \\partial S _ { 1 } } { \\partial E _ { 1 } } } - { \\frac { \\partial S _ { 2 } } { \\partial E _ { 2 } } } \\right] _ { V _ { 1 } } d E _ { 1 } + \\left[ { \\frac { \\partial S _ { 1 } } { \\partial V _ { 1 } } } - { \\frac { \\partial S _ { 2 } } { \\partial V _ { 2 } } } \\right] _ { E _ { 1 } } d V _ { 1 } = 0 } \\end{array} }"
+  },
+  "TP-p17-t233": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "G _ { 1 } ( P _ { 0 } , T _ { 0 } ) = E _ { 1 } - T _ { 0 } S _ { 1 } + P _ { 0 } V _ { 1 } \\, ."
+  },
+  "TP-p18-t245": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "( \\frac { \\partial T } { \\partial S } ) _ { V } = \\frac { T } { C _ { V } } > 0 \\text { or } C _ { V } > 0"
+  },
+  "TP-p18-t248": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "{ \\frac { T } { V K _ { s } C _ { v } } } > \\left( { \\frac { \\partial T } { \\partial V } } \\right) _ { s } ^ { 2 } ."
+  },
+  "TP-p24-t315": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "v _{ 1 } ( P _ { c } , T _ { c } ) = { \\frac { \\partial g _ { 1 } } { \\partial P } } \\Bigg | _ { P _ { c } , T _ { c } } = v _ { 2 } ( P _ { c } , T _ { c } ) = { \\frac { \\partial g _ { 2 } } { \\partial P } } \\Bigg | _ { P _ { c } , T _ { c } }"
+  },
+  "IFK-p17-51": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "( \\vec { p } _ { 1 } ' , \\vec { p } _ { 2 } ' , \\vec { b } ' )"
+  },
+  "IFK-p23-116": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "( \\vec { p } _ { 1 } ' , \\vec { p } _ { 2 } ' )"
+  },
+  "ITK-p12-329": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "( T _ { 1 } > T _ { 2 } > T _ { 3 } )."
+  },
+  "ITK-p18-377": {
+   "verdict": "same",
+   "raw": "same",
+   "cand": "\\{ N _ { 1 } , N _ { 2 } , \\cdots \\}"
+  }
+ }
+}

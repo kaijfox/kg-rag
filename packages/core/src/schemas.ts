@@ -26,13 +26,16 @@ import type {
   AnyItem,
   Chunk,
   EmbeddingSpaceSpec,
+  FormulaDecodingSpec,
   Json,
   JsonObject,
   ParseArtifact,
+  MachineMap,
   ParseRecipeSpec,
   ParseStats,
   RecipeSpec,
   Relation,
+  SearchRecipeSpec,
   SearchResponse,
   SearchResult,
   Summary,
@@ -162,12 +165,14 @@ export const seedSchema: z.ZodType<Seed> = z.strictObject({
 });
 export const stepTraceSchema: z.ZodType<StepTrace> = z.strictObject({
   stepIndex: nonNegInt,
+  state: z.string().min(1),
   stepType: z.string().min(1),
   params: jsonObjectSchema,
   considered: z.array(rankedRefSchema),
   output: z.array(rankedRefSchema),
   queries: z.array(queryVariantSchema).optional(),
   seeds: z.array(seedSchema).optional(),
+  pools: z.record(z.string().min(1), z.array(rankedRefSchema)).optional(),
   details: jsonSchema.optional(),
   durationMs: z.number().nonnegative(),
 });
@@ -190,6 +195,13 @@ export const recipeSpecSchema: z.ZodType<RecipeSpec> = z.strictObject({
   spec: jsonObjectSchema,
 });
 
+export const formulaDecodingSchema: z.ZodType<FormulaDecodingSpec> = z.strictObject({
+  model: z.string().min(1),
+  revision: z.string().min(1),
+  prompt: z.string().min(1),
+  cropMargin: z.number().min(0).max(1),
+});
+
 export const parseRecipeSchema: z.ZodType<ParseRecipeSpec> = z.strictObject({
   kind: z.literal('parse'),
   version: z.string().min(1),
@@ -199,7 +211,44 @@ export const parseRecipeSchema: z.ZodType<ParseRecipeSpec> = z.strictObject({
     options: z
       .looseObject({ do_ocr: z.boolean(), do_table_structure: z.boolean(), do_formula_enrichment: z.literal(false) })
       .catchall(jsonSchema) as unknown as z.ZodType<ParseRecipeSpec['spec']['options']>,
+    formulaDecoding: formulaDecodingSchema.optional(),
   }),
+});
+
+/** A search recipe: machine name, version, settings (checked by the machine's own schema), topology pin, optional prompt digest. */
+export const searchRecipeSchema: z.ZodType<SearchRecipeSpec> = z.strictObject({
+  kind: z.literal('search'),
+  version: z.string().min(1),
+  spec: z.strictObject({
+    machine: z.string().min(1),
+    settings: jsonObjectSchema,
+    topology: z.string().regex(/^[0-9a-f]{16}$/, { message: 'topology must be 16 lowercase hex chars' }),
+    promptDigest: z.string().regex(ID_PATTERNS.sha256, { message: 'promptDigest must be a sha256 hex digest' }).optional(),
+  }),
+});
+
+export const machineNodeSchema = z.strictObject({
+  id: z.string().min(1),
+  parent: z.string().min(1).nullable(),
+  kind: z.enum(['work', 'routing', 'final']),
+  label: z.string(),
+  logs: z.array(z.string().min(1)),
+  step: z.string().min(1).nullable(),
+  loop: z.boolean(),
+});
+export const machineEdgeSchema = z.strictObject({
+  from: z.string().min(1),
+  to: z.string().min(1),
+  event: z.enum(['done', 'error', 'always']),
+  guard: z.string().min(1).nullable(),
+});
+export const machineMapSchema: z.ZodType<MachineMap> = z.strictObject({
+  machine: z.string().min(1),
+  version: z.string().min(1),
+  topology: z.string().regex(/^[0-9a-f]{16}$/),
+  initial: z.string().min(1),
+  nodes: z.array(machineNodeSchema).min(1),
+  edges: z.array(machineEdgeSchema),
 });
 
 export const parseStatsSchema: z.ZodType<ParseStats> = z.strictObject({
@@ -233,9 +282,11 @@ export const parseArtifactSchema: z.ZodType<ParseArtifact> = z.strictObject({
 
 export const embeddingSpaceSpecSchema: z.ZodType<EmbeddingSpaceSpec> = z.strictObject({
   model: z.string().min(1),
+  digest: z.string().min(1),
   dims: z.number().int().positive(),
   documentTemplate: z.string().min(1),
   queryTemplate: z.string().min(1),
+  formulaView: z.enum(['placeholder', 'full']),
 });
 
 export const relevanceSchema = z.union([z.literal(0), z.literal(1), z.literal(2)]);
@@ -259,3 +310,7 @@ export const evalSetSchema: z.ZodType<EvalSet> = z.strictObject({
 });
 
 export { nonNegInt as nonNegIntSchema };
+
+/** 0.6.1: the judge and answerer a run records (eval.run.started, EvalRunRecord.config). */
+export const evalJudgeSchema = z.strictObject({ recipeId: S.recipeId, model: z.string().min(1) });
+export const evalAnswererSchema = z.strictObject({ model: z.string().min(1), promptDigest: S.sha256 });

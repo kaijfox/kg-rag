@@ -1,0 +1,25 @@
+stateDiagram-v2
+  [*] --> preparing
+  preparing : preparing
+  nextDocument : nextDocument
+  document : run one document (step document; logs ingest.started ingest.parsed ingest.chunked ingest.embedded)
+  extras : embed other documents that lack vectors (step embed-others; logs ingest.embedded)
+  gate : gate
+  committing : commit the documents and the build (step commit; logs ingest.completed build.created)
+  done : done
+  failed : failed
+  preparing --> failed : always [spaceMismatch]
+  preparing --> nextDocument : always
+  nextDocument --> document : always [hasDocument]
+  nextDocument --> extras : always
+  document --> failed : done [documentFailed]
+  document --> nextDocument : done
+  document --> failed : error
+  extras --> gate : done
+  extras --> failed : error
+  gate --> failed : always [unembeddedLeft]
+  gate --> committing : always
+  committing --> done : done
+  committing --> failed : error
+  done --> [*]
+  failed --> [*]

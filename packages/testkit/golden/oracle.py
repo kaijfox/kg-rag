@@ -73,13 +73,15 @@ chunk = [
 ]
 
 PARSE = '{"kind":"parse","spec":{"doclingVersion":"2.140.0","options":{"do_formula_enrichment":false,"do_ocr":false,"do_table_structure":true},"parser":"docling"},"version":"1"}'
+PARSE_FD = '{"kind":"parse","spec":{"doclingVersion":"2.140.0","formulaDecoding":{"cropMargin":0.18,"model":"mlx-community/GLM-OCR-4bit","prompt":"Formula Recognition:","revision":"rev-test-1"},"options":{"do_formula_enrichment":false,"do_ocr":false,"do_table_structure":true},"parser":"docling"},"version":"1"}'
 CHUNK = '{"kind":"chunk","spec":{"algorithm":"section-pack/1","maxChars":1500,"minChars":200,"targetChars":1000},"version":"1"}'
-SEARCH = '{"kind":"search","spec":{"steps":[{"params":{"kinds":["chunk"],"pool":100},"type":"vector-knn"},{"params":{},"type":"truncate"}]},"version":"1"}'
-SPACE = '{"dims":768,"documentTemplate":"title: {headings} | text: {text}","model":"embeddinggemma:latest","queryTemplate":"task: search result | query: {query}"}'
+SEARCH = '{"kind":"search","spec":{"machine":"similarity","settings":{"kinds":["chunk"],"pool":100},"topology":"ab74647e68ade0b3"},"version":"1"}'
+SPACE = '{"digest":"85462619ee721b466c5927d109d4cb765861907d5417b9109caebc4e614679f1","dims":768,"documentTemplate":"title: {headings} | text: {text}","formulaView":"placeholder","model":"embeddinggemma:latest","queryTemplate":"task: search result | query: {query}"}'
 recipes = [
     {"name": "DEFAULT_PARSE_RECIPE", "canonical": PARSE, "id": h("rc_", "recipe/1", [PARSE])},
     {"name": "DEFAULT_CHUNK_RECIPE", "canonical": CHUNK, "id": h("rc_", "recipe/1", [CHUNK])},
     {"name": "DEFAULT_SEARCH_RECIPE", "canonical": SEARCH, "id": h("rc_", "recipe/1", [SEARCH])},
+    {"name": "PARSE_RECIPE_WITH_FORMULA_DECODING", "canonical": PARSE_FD, "id": h("rc_", "recipe/1", [PARSE_FD]), "why": "formulaDecoding present: a different parse recipe; DEFAULT_PARSE_RECIPE (key absent) is unchanged"},
 ]
 space = {"name": "DEFAULT_SPACE", "canonical": SPACE, "id": h("es_", "space/1", [SPACE])}
 

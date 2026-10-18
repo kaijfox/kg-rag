@@ -3,15 +3,33 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Composition root. Phase 1: walking skeleton wiring fakes and skeleton implementations end to end.",
-  "exports": { ".": "./src/index.ts" },
+  "description": "Composition root. src/skeleton holds the walking skeleton (a test oracle); src/compose.ts wires the real packages.",
+  "exports": {
+    ".": "./src/index.ts"
+  },
   "scripts": {
     "test": "vitest run",
     "typecheck": "tsc -p tsconfig.json",
-    "skeleton": "tsx scripts/skeleton.ts"
+    "skeleton": "tsx scripts/skeleton.ts",
+    "integrate": "tsx scripts/integrate.ts",
+    "serve-mcp": "tsx scripts/serve-mcp.ts",
+    "serve-viewer": "tsx scripts/serve-viewer.ts"
   },
   "dependencies": {
     "@kg/core": "workspace:*",
-    "@kg/testkit": "workspace:*"
+    "@kg/testkit": "workspace:*",
+    "@kg/api": "workspace:*",
+    "@kg/chunk": "workspace:*",
+    "@kg/embed": "workspace:*",
+    "@kg/eval": "workspace:*",
+    "@kg/eventlog": "workspace:*",
+    "@kg/ingest": "workspace:*",
+    "@kg/mcp": "workspace:*",
+    "@kg/parse": "workspace:*",
+    "@kg/pipeline": "workspace:*",
+    "@kg/search": "workspace:*",
+    "@kg/store": "workspace:*",
+    "@kg/viewer": "workspace:*",
+    "@modelcontextprotocol/sdk": "1.32.0"
   }
 }

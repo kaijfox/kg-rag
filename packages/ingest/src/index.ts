@@ -1,5 +1,8 @@
 /**
- * @kg/ingest: Phase 2 stub. See CARD.md for the contract, the tests to pass and the decisions already made.
- * This package must import only @kg/core (and @kg/testkit in tests).
+ * @kg/ingest: the ingest service. A request runs through two state machines (ingest, one document child per entry);
+ * every parse, chunk and embed call is injected through IngestDeps. See README.md for the decisions.
  */
-export {};
+export { createIngest } from './service';
+export type { IngestDeps, FormulaDecoder, Vector } from './deps';
+export { ingestMachine } from './machines/ingest';
+export { documentMachine } from './machines/document';

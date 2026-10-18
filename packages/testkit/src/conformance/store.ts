@@ -32,7 +32,7 @@ import {
 } from '@kg/core';
 import { expectKgError, type Suite } from './harness';
 
-const SPACE: EmbeddingSpaceSpec = { model: 'test-3d', dims: 3, documentTemplate: '{headings}: {text}', queryTemplate: '{query}' };
+const SPACE: EmbeddingSpaceSpec = { model: 'test-3d', digest: 'fake-test-3d', dims: 3, documentTemplate: '{headings}: {text}', queryTemplate: '{query}', formulaView: 'placeholder' };
 const v3 = (x: number, y: number, z: number) => {
   const n = Math.hypot(x, y, z);
   return Float32Array.from([x / n, y / n, z / n]);
@@ -148,6 +148,20 @@ export function corpusStoreConformance(make: () => CorpusStore): Suite {
           const missing = artifactId(sha256hex('nowhere'), recipeId(DEFAULT_PARSE_RECIPE));
           await expectKgError(() => s.putDocVersion({ ...good, artifactId: missing, id: docVersionId(docKey, missing, crid) }, drafts), 'not_found');
           expect(s.putDocVersion(good, drafts)).toEqual({ inserted: good.chunkIds, reused: [] });
+        },
+      },
+      {
+        name: 'CP-01b: putDocVersion with an existing id and a different chunk list is an immutable_violation',
+        async run() {
+          const s = make();
+          const a = seed(s, 'doc', 'doc-v1', ['one', 'two', 'three']);
+          const other = draftsFor(a.docKey, [{ text: 'one' }, { text: 'two changed' }, { text: 'three' }]);
+          await expectKgError(() => s.putDocVersion({ ...a.v, chunkIds: other.map((d) => d.id) }, other), 'immutable_violation');
+          await expectKgError(() => s.putDocVersion({ ...a.v, chunkIds: a.v.chunkIds.slice(0, 2) }, a.drafts.slice(0, 2)), 'immutable_violation');
+          // nothing was written, the stored version is unchanged, and the identical call still succeeds
+          expect(s.getDocVersion(a.v.id)?.chunkIds).toEqual(a.v.chunkIds);
+          expect(s.getItems([other[1]!.id])).toEqual([]);
+          expect(s.putDocVersion(a.v, a.drafts)).toEqual({ inserted: [], reused: a.v.chunkIds });
         },
       },
       {
@@ -384,6 +398,22 @@ export function corpusStoreConformance(make: () => CorpusStore): Suite {
           const other = { ...b.manifest, mixedRecipes: true };
           await expectKgError(() => s.putBuild({ parentId: null, manifest: other, itemIds: [...b.itemIds].reverse() }), 'invalid_input');
           await expectKgError(() => s.putBuild({ parentId: null, manifest: other, itemIds: ['ch_zzzzzzzzzzzzzzzzzzzz' as ChunkId] }), 'not_found');
+        },
+      },
+      {
+        name: 'S-11: putBuild of an existing build keeps the first-seen parentId',
+        run() {
+          const s = make();
+          const a = seed(s, 'doc', 'doc', ['x', 'y']);
+          s.setCurrentDocVersion(a.docKey, a.v.id);
+          const first = build(s);
+          const v2 = seed(s, 'doc', 'doc-v2', ['x', 'z']);
+          s.setCurrentDocVersion(v2.docKey, v2.v.id);
+          const second = build(s, first.id);
+          expect(s.getBuild(second.id)!.parentId).toBe(first.id);
+          // the first build, written again with another parent (a revert): the stored row is untouched
+          expect(s.putBuild({ parentId: second.id, manifest: structuredClone(first.b.manifest), itemIds: [...first.b.itemIds] })).toBe(first.id);
+          expect(s.getBuild(first.id)!.parentId).toBeNull();
         },
       },
       {

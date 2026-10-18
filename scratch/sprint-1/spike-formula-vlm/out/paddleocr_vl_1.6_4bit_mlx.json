@@ -1,0 +1,239 @@
+{
+ "tag": "paddleocr_vl_1.6_4bit_mlx",
+ "repo": "mlx-community/PaddleOCR-VL-1.6-4bit",
+ "prompt": "Formula Recognition:",
+ "load_s": 1.1299591064453125,
+ "results": {
+  "FK-p09-t137": {
+   "text": "\\[\\frac{1}{\\tau_{U}}\\sim\\frac{\\partial U}{\\partial\\vec{q}}\\cdot\\frac{\\partial}{\\partial\\vec{p}}\\]",
+   "s": 0.35387301445007324,
+   "gen_tokens": 37,
+   "peak_gb": 1.3232921,
+   "finish": "stop"
+  },
+  "FK-p19-t277": {
+   "text": "\\[\\operatorname{l n}f_{1}(\\vec{p}_{1},\\vec{q})+\\operatorname{l n}f_{1}(\\vec{p}_{2},\\vec{q})=\\operatorname{l n}f_{1}(\\vec{p}_{1}^{\\prime},\\vec{q})+\\operatorname{l n}f_{1}(\\vec{p}_{2}^{\\prime},\\vec{q}).\\quad(3.51)\\]",
+   "s": 0.47947192192077637,
+   "gen_tokens": 94,
+   "peak_gb": 1.310528964,
+   "finish": "stop"
+  },
+  "FK-p20-t290": {
+   "text": "\\[f_{1}(\\vec{p},\\vec{q})=n\\left(\\frac{\\beta}{2\\pi m}\\right)^{3/2}\\operatorname{e x p}\\left[-\\frac{\\beta(\\vec{p}-\\vec{p}_{0})^{2}}{2m}\\right],\\quad\\quad(3.56)\\]",
+   "s": 0.45654296875,
+   "gen_tokens": 73,
+   "peak_gb": 1.411245924,
+   "finish": "stop"
+  },
+  "FK-p27-t426": {
+   "text": "\\[v_{\\ell}=\\sqrt{\\frac{5}{3}\\frac{k_{B}\\overline{{T}}}{m}}\\quad(3.106)\\]",
+   "s": 0.34890294075012207,
+   "gen_tokens": 35,
+   "peak_gb": 1.310512996,
+   "finish": "stop"
+  },
+  "FK-p28-t439": {
+   "text": "\\[\\begin{aligned} we~can~simplify~the~above~equation~to\\\\\\mathcal{L}\\left[\\ln f_{1}^{0}\\right]&=0-\\frac{mc^{2}}{3k_{B}T}\\partial_{\\alpha}u_{\\alpha}+c_{\\alpha}\\left[\\left(\\frac{F_{\\alpha}}{k_{B}T}-\\frac{\\partial_{\\alpha}n}{n}-\\frac{\\partial_{\\alpha}T}{T}\\right)+\\left(\\frac{\\partial_{\\alpha}n}{n}-\\frac{3}{2}\\frac{\\partial_{\\alpha}T}{T}\\right)-\\frac{F_{\\alpha}}{k_{B}T}\\right]\\\\&\\quad+\\frac{mc^{2}}{2k_{B}T^{2}}c_{\\alpha}\\partial_{\\alpha}T+\\frac{m}{k_{B}T}c_{\\alpha}c_{\\beta}u_{\\alpha\\beta}\\\\&=\\frac{m}{k_{B}T}\\left(c_{\\alpha}c_{\\beta}-\\frac{\\hat{\\delta}_{\\alpha\\beta}}{3}c^{2}\\right)u_{\\alpha\\beta}+\\left(\\frac{mc^{2}}{2k_{B}T}-\\frac{5}{2}\\right)\\frac{c_{\\alpha}}{T}\\partial_{\\alpha}T.\\\\&\\quad(3.110)\\end{aligned}\\]",
+   "s": 1.1190800666809082,
+   "gen_tokens": 297,
+   "peak_gb": 1.476619108,
+   "finish": "stop"
+  },
+  "FK-p56-t936": {
+   "text": "\\[\\left<\\mathcal{H}^{n}\\right>_{c}=(-1)^{n}\\frac{\\partial^{n}\\operatorname{l n}Z}{\\partial\\beta^{n}}.\\eqno(4.67)\\]",
+   "s": 0.3842759132385254,
+   "gen_tokens": 50,
+   "peak_gb": 1.317361508,
+   "finish": "stop"
+  },
+  "FK-p60-t1007": {
+   "text": "\\[\\begin{align*}&\\text{The normalization factor is now}\\\\&\\mathcal{Z}(N,T,P)=\\int_{0}^{\\infty}\\mathrm{d}V\\mathrm{e}^{-\\beta PV}\\int\\frac{1}{N!}\\prod_{i=1}^{N}\\frac{\\mathrm{d}^{3}\\vec{q}_i\\mathrm{d}^{3}\\vec{p}_i}{h^3}\\exp\\left[-\\beta\\sum_{i=1}^{N}\\frac{p_i^2}{2m}\\right]\\\\&=\\int_{0}^{\\infty}\\mathrm{d}V V^N\\ \\mathrm{e}^{-\\beta PV}\\frac{1}{N!\\lambda(T)^{3N}}=\\frac{1}{(\\beta P)^{N+1}\\lambda(T)^{3N}}.\\\\&\\text{Ignoring non-extensive contributions,the Gibbs free energy is given by}\\end{align*}\\]",
+   "s": 0.7374458312988281,
+   "gen_tokens": 207,
+   "peak_gb": 1.310528918,
+   "finish": "stop"
+  },
+  "FK-p64-t1075": {
+   "text": "\\[\\begin{align*}P&=-\\frac{\\mathcal{G}}{V}=-\\left.\\frac{\\partial\\mathcal{G}}{\\partial V}\\right|_{\\mu,T}=k_BT\\frac{\\mathrm{e}^{\\beta\\mu}}{\\lambda^3}.&\\qquad&(4.110)\\end{align*}\\]",
+   "s": 0.4541749954223633,
+   "gen_tokens": 71,
+   "peak_gb": 1.359193956,
+   "finish": "stop"
+  },
+  "TK-p04-t55": {
+   "text": "\\[\\begin{aligned}&\\text{for~conditions~are~satisfied~between~then~coordinates.}\\\\ &\\begin{aligned}\\\\ &\\left(P+\\frac{a}{V^{2}}\\right)(V-b)(L-L_{0})-c[F-K(L-L_{0})]=0,\\\\&\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad(1.7)\\\\&\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad(2.7)\\\\&\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad(3.7)\\end{aligned}\\\\ &\\\\ &two~conditions~can~be~organized~into~three~empirical~temperature~func-\\\\ &\\end{aligned}\\]",
+   "s": 0.9350309371948242,
+   "gen_tokens": 276,
+   "peak_gb": 1.359193956,
+   "finish": "stop"
+  },
+  "TK-p04-t57": {
+   "text": "\\[\\begin{array}{c} ns~as\\\\\\Theta\\propto\\left(P+\\frac{a}{V^{2}}\\right)\\left(V-b\\right)=c\\left(\\frac{F}{L-L_{0}}-K\\right)=d\\frac{B}{M}.\\tag{1.8}\\\\\\text{ste~that~the~zeroth~low~severally~constraints~the~form~of~the~constraint~age.}\\end{array}\\]",
+   "s": 0.5488362312316895,
+   "gen_tokens": 109,
+   "peak_gb": 1.388996452,
+   "finish": "stop"
+  },
+  "TK-p14-t275": {
+   "text": "\\[\\mathfrak{d}Q_{R}=T_{0}\\frac{\\mathfrak{d}Q}{T}.\\quad(1.23)\\]",
+   "s": 0.33480238914489746,
+   "gen_tokens": 33,
+   "peak_gb": 1.30299274,
+   "finish": "stop"
+  },
+  "TK-p17-t334": {
+   "text": "\\[\\begin{array}{c} Eq.\\ (1.31)\\text{that}\\\\\\left.x_{i}=-\\left.\\frac{\\partial H}{\\partial J_{i}}\\right|_{S,J_{j\\neq i}}.\\right.\\\\\\left.(1.32)\\right.\\\\\\text{thalpy with temperature are related to heat capacities at\\\\\\text{examples.}}\\end{array}\\]",
+   "s": 0.4643218517303467,
+   "gen_tokens": 89,
+   "peak_gb": 1.332615012,
+   "finish": "stop"
+  },
+  "TK-p20-t385": {
+   "text": "\\[E(\\lambda S,\\lambda\\mathbf{x},\\lambda\\mathbf{N})=\\lambda E(S,\\mathbf{x},\\mathbf{N}).\\quad(1.46)\\]",
+   "s": 0.414370059967041,
+   "gen_tokens": 41,
+   "peak_gb": 1.44504714,
+   "finish": "stop"
+  },
+  "TK-p24-t460": {
+   "text": "\\[\\begin{aligned}{\\delta S}&{{}=-\\frac{2}{T_{A}}\\left[\\delta T_{A}\\left(\\frac{\\delta E_{A}-\\mathbf{J}_{A}\\cdot\\delta\\mathbf{x}_{A}-\\mu_{A}\\cdot\\delta\\mathbf{N}_{A}}{T_{A}}\\right)+\\delta\\mathbf{J}_{A}\\cdot\\delta\\mathbf{x}_{A}+\\delta\\mu_{A}\\cdot\\delta\\mathbf{N}_{A}\\right]}&{}&{{}\\quad(1.70)}\\\\ {}&{{}=-\\frac{2}{T_{A}}\\left[\\delta T_{A}\\delta S_{A}+\\delta\\mathbf{J}_{A}\\cdot\\delta\\mathbf{x}_{A}+\\delta\\mu_{A}\\cdot\\delta\\mathbf{N}_{A}\\right].}\\\\ \\end{aligned}\\]",
+   "s": 0.7338151931762695,
+   "gen_tokens": 190,
+   "peak_gb": 1.381263204,
+   "finish": "stop"
+  },
+  "TK-p24-t447": {
+   "text": "\\[(E_{B}-\\delta E,{{\\bf~x}}_{B}-\\delta{{\\bf x}},{{\\bf~N}}_{B}-\\delta{{\\bf N}})\\quad{\\operatorname{a n d}}\\quad(T_{B}+\\delta T_{B},{{\\bf~J}}_{B}+\\delta{{\\bf J}}_{B},\\quad\\mu_{B}+\\delta\\mu_{B}).\\quad(1.66)\\]",
+   "s": 0.4810197353363037,
+   "gen_tokens": 88,
+   "peak_gb": 1.346152292,
+   "finish": "stop"
+  },
+  "TK-p25-t472": {
+   "text": "\\[\\begin{aligned}&\\mathrm{iures}\\ \\partial S/\\partial T|_{\\mathbf{x}}\\geq0,implying~a~positive~heat~capacity,since\\\\&\\quad C_{\\mathbf{x}}=\\left.\\frac{\\partial Q}{\\partial T}\\right|_{\\mathbf{x}}=T\\left.\\frac{\\partial S}{\\partial T}\\right|_{\\mathbf{x}}\\geq0.\\tag{1.74}\\\\&\\text{of the}\\ \\delta x_{i}\\text{in Eq.}(1.71)\\text{is non-zero,the corresponding response}\\\\&\\mathcal{I}|_{t}=\\text{must be positive. However,a more general requirement}\\end{aligned}\\]",
+   "s": 0.6270508766174316,
+   "gen_tokens": 153,
+   "peak_gb": 1.332615012,
+   "finish": "stop"
+  },
+  "FP-p06-t65": {
+   "text": "\\[d S(E,N,V)=\\frac{d E}{T}+\\frac{P d V}{T}-\\frac{\\mu d N}{T}\\;.\\]",
+   "s": 0.3736429214477539,
+   "gen_tokens": 36,
+   "peak_gb": 1.38124682,
+   "finish": "stop"
+  },
+  "FP-p15-t194": {
+   "text": "\\[\\begin{array}{r l r l r}{\\left(\\frac{\\partial}{\\partial v}\\right)_{V,T}}&{=}&{\\left(\\frac{\\partial N}{\\partial v}\\right)_{V,T}\\left(\\frac{\\partial}{\\partial N}\\right)_{V,T}=-\\frac{N^{2}}{V}\\left(\\frac{\\partial}{\\partial N}\\right)_{V,T}}&\\\\ {\\left(\\frac{\\partial}{\\partial v}\\right)_{N,T}}&{=}&{\\left(\\frac{\\partial V}{\\partial v}\\right)_{N,T}\\left(\\frac{\\partial}{\\partial V}\\right)_{N,T}=N\\left(\\frac{\\partial}{\\partial V}\\right)_{N,T}.}&&{(2.63)}\\end{array}\\]",
+   "s": 0.6648111343383789,
+   "gen_tokens": 172,
+   "peak_gb": 1.332615012,
+   "finish": "stop"
+  },
+  "FP-p18-t235": {
+   "text": "\\[\\langle n_{\\bf k}\\rangle=-k_{B}T\\frac{c}{\\partial u}\\ln[1-\\exp\\{-\\beta(E_{\\bf k}-\\mu)\\}]=\\frac{1}{\\exp\\{\\beta(E_{\\bf k}-u)\\}-1}\\;.\\quad(2.77)\\]",
+   "s": 0.47742700576782227,
+   "gen_tokens": 70,
+   "peak_gb": 1.475750756,
+   "finish": "stop"
+  },
+  "FP-p21-t292": {
+   "text": "\\[Z(1)\\frac{d S(Z(1)Z(2))}{d(Z(1))}=Z(1)\\frac{d S(Z(1))}{d Z(1)}=Z(1)Z(2)\\frac{d S(Z(1)Z(2))}{d(Z(1)Z(2))}\\]",
+   "s": 0.49201107025146484,
+   "gen_tokens": 80,
+   "peak_gb": 1.398237028,
+   "finish": "stop"
+  },
+  "FP-p23-t314": {
+   "text": "\\[\\int_{E<H({\\bf x})<E+\\delta E}d{\\bf x}\\rho({\\bf x})=1\\ .\\]",
+   "s": 0.3733859062194824,
+   "gen_tokens": 32,
+   "peak_gb": 1.410377572,
+   "finish": "stop"
+  },
+  "FP-p23-t322": {
+   "text": "\\[\\frac{\\delta}{\\delta\\rho(x)}\\left\\{-k_{B}\\int d^{6N}x[\\rho\\mathrm{l n}(h^{3N}N!\\rho)-\\lambda\\rho]\\right\\}\\]",
+   "s": 0.3719651699066162,
+   "gen_tokens": 51,
+   "peak_gb": 1.30299274,
+   "finish": "stop"
+  },
+  "TP-p10-t123": {
+   "text": "\\[\\begin{array}{r l r l r l}{d A}&{=}&{d E-d(T S)}&\\\\ &{=}&{d Q-T d S-S d T-d W~.}&{\\quad}&{(1.28)}\\end{array}\\]",
+   "s": 0.4125807285308838,
+   "gen_tokens": 65,
+   "peak_gb": 1.317361508,
+   "finish": "stop"
+  },
+  "TP-p10-t121": {
+   "text": "\\[\\begin{array}{r c l}{d A}&{=}&{d E-T d S-S d T}\\\\ {}&{=}&{-S d T+\\displaystyle\\sum_{i}X_{i}d x_{i}+\\displaystyle\\sum_{j}\\mu_{j}d N_{j}~.}\\\\ \\end{array}\\quad(1.27)\\]",
+   "s": 0.46341705322265625,
+   "gen_tokens": 84,
+   "peak_gb": 1.34815114,
+   "finish": "stop"
+  },
+  "TP-p16-t221": {
+   "text": "\\[\\begin{array}{c}{{d S}=\\left(\\frac{\\partial S_{1}}{\\partial E_{1}}\\right)_{V_{1}}d E_{1}+\\left(\\frac{\\partial S_{2}}{\\partial E_{2}}\\right)_{V_{2}}d E_{2}+\\left(\\frac{\\partial S_{1}}{\\partial V_{1}}\\right)_{E_{1}}d V_{1}+\\left(\\frac{\\partial S_{2}}{\\partial V_{2}}\\right)_{E2}d V_{2}}}\\\\ {{=\\left[\\left(\\frac{\\partial S_{1}}{\\partial E_{1}}\\right)_{V_{1}}-\\left(\\frac{\\partial S_{2}}{\\partial E_{2}}\\right)_{V_{2}}\\right]d E_{1}+\\left[\\left(\\frac{\\partial S_{1}}{\\partial V_{1}}\\right)_{E_{1}}-\\left(\\frac{\\partial S_{2}}{\\partial V_{2}}\\right)_{E_{2}}\\right]d V_{1}=0\\quad(1.67)}}\\\\ \\end{array}\\]",
+   "s": 0.7935278415679932,
+   "gen_tokens": 230,
+   "peak_gb": 1.284675428,
+   "finish": "stop"
+  },
+  "TP-p17-t233": {
+   "text": "\\[G_{1}(P_{0},T_{0})=E_{1}-T_{0}S_{1}+P_{0}V_{1}\\ .\\ \\ \\ \\ \\ \\ \\ \\ \\ \\ (1.72)\\]",
+   "s": 0.4334409236907959,
+   "gen_tokens": 52,
+   "peak_gb": 1.418127204,
+   "finish": "stop"
+  },
+  "TP-p18-t245": {
+   "text": "\\[\\left(\\frac{\\partial T}{\\partial S}\\right)_{V}=\\frac{T}{C_{V}}>0\\;\\mathrm{o r}\\;C_{V}>0\\quad(1.76)\\]",
+   "s": 0.35652613639831543,
+   "gen_tokens": 49,
+   "peak_gb": 1.284675428,
+   "finish": "stop"
+  },
+  "TP-p18-t248": {
+   "text": "\\[\\frac{T}{V K_{S}C_{V}}>\\left(\\frac{\\partial T}{\\partial V}\\right)_{S}^{2}.\\quad(1.78)\\]",
+   "s": 0.3883681297302246,
+   "gen_tokens": 41,
+   "peak_gb": 1.368696676,
+   "finish": "stop"
+  },
+  "TP-p24-t315": {
+   "text": "\\[v_{1}(P_{c},T_{c})=\\left.{\\frac{\\partial g_{1}}{\\partial P}}\\right|_{P_{c},T_{c}}=v_{2}(P_{c},T_{c})=\\left.{\\frac{\\partial g_{2}}{\\partial P}}\\right|_{P_{c},T_{c}}\\quad(1.90)\\]",
+   "s": 0.47771477699279785,
+   "gen_tokens": 80,
+   "peak_gb": 1.381263204,
+   "finish": "stop"
+  },
+  "IFK-p17-51": {
+   "text": "\\[(\\vec{p}_{1}^{\\prime},\\vec{p}_{2}^{\\prime},\\vec{b}^{\\prime})\\]",
+   "s": 0.3339831829071045,
+   "gen_tokens": 26,
+   "peak_gb": 1.34815114,
+   "finish": "stop"
+  },
+  "IFK-p23-116": {
+   "text": "\\[(\\vec{p}_{1}^{\\prime},\\vec{p}_{2}^{\\prime})\\]",
+   "s": 0.3315401077270508,
+   "gen_tokens": 20,
+   "peak_gb": 1.35921034,
+   "finish": "stop"
+  },
+  "ITK-p12-329": {
+   "text": "\\[(T_{1}>T_{2}>T_{3}).\\]",
+   "s": 0.3225390911102295,
+   "gen_tokens": 16,
+   "peak_gb": 1.35921034,
+   "finish": "stop"
+  },
+  "ITK-p18-377": {
+   "text": "\\[\\{N_{1},N_{2},\\cdots\\}\\]",
+   "s": 0.30428194999694824,
+   "gen_tokens": 14,
+   "peak_gb": 1.297946468,
+   "finish": "stop"
+  }
+ }
+}

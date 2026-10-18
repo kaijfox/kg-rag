@@ -1,6 +1,6 @@
 # @kg/parse (WP2, Haiku)
 
-Contract: `@kg/core` CONTRACT_VERSION 0.2.0. You need this card, `core`, and `testkit`; nothing else.
+Contract: `@kg/core` CONTRACT_VERSION 0.6.1. You need this card, `core`, and `testkit`; nothing else.
 
 ## Implements (core `ports/parse.ts`, `Parser`)
 - `class SubprocessParser implements Parser`: `identify(path)` = sha256 of the file bytes + base name;
@@ -12,6 +12,12 @@ Contract: `@kg/core` CONTRACT_VERSION 0.2.0. You need this card, `core`, and `te
   `sourceSha256` and recipe (no docling needed: the import path for artifacts produced elsewhere), else
   `not_found`; `identify` and `readArtifact` as above.
 - Validation: `parseArtifactSchema` from core (throw `invalid_input` with the zod path on failure).
+
+## Formula decoding (0.6.0)
+No code change. A recipe with `spec.formulaDecoding` is a different parse recipe: `SubprocessParser.parse` still runs
+`kg-parse parse` (the plain docling pass; the sidecar's `check-recipe` accepts and ignores that key for `parse`), and the
+decoded artifact comes from the separate `kg-parse decode-formulas` step that ingest runs. `ArtifactDirParser` finds a
+decoded artifact by its recipe like any other. `parse` must not fail on a recipe carrying `formulaDecoding`.
 
 ## package.json to create
 dependencies `@kg/core: workspace:*`; devDependencies `@kg/testkit: workspace:*`. Node builtins only otherwise

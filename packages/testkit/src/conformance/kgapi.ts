@@ -46,13 +46,13 @@ export function kgApiConformance(make: () => KgApiHarness | Promise<KgApiHarness
         },
       },
       {
-        name: 'search: tool.called -> query -> search.step+ -> search.result -> tool.returned, contiguous, parented',
+        name: 'search: tool.called -> query -> pipeline.started -> search.step+ -> pipeline.finished -> search.result -> tool.returned, contiguous, parented',
         async run() {
           const h = await make();
           const { sessionId, resp } = await withSearch(h);
           const evs = h.reader.events(sessionId, 1);
           checkToolEnvelope(evs, 'search', 'tool.returned');
-          expect(evs.slice(1, -1).map((e) => e.type)).toEqual(['query', ...evs.slice(2, -2).map(() => 'search.step'), 'search.result']);
+          expect(evs.slice(1, -1).map((e) => e.type)).toEqual(['query', 'pipeline.started', ...evs.slice(3, -3).map(() => 'search.step'), 'pipeline.finished', 'search.result']);
           for (const e of evs.slice(1, -1)) {
             expect(e.searchId).toBe(resp.searchId);
             expect(e.buildId).toBe(resp.buildId);

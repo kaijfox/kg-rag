@@ -3,6 +3,8 @@
  *
  * Document template placeholders: {text} (the item text, verbatim) and {headings} (the section path
  * joined by " > ", or "" when the path is empty). Query template placeholder: {query}.
+ * `{text}` is the text the caller passes: for chunks of a space whose `formulaView` differs from the stored text, ingest
+ * renders it first with the chunk package's view renderer (ChunkViewRenderer); this module only substitutes.
  * Any other {word} in a template is an error. Rendering is plain substitution: no trimming, no escaping.
  */
 import { KgError } from './errors';

@@ -1,0 +1,1 @@
+npx tsx scripts/integrate.ts eval --questions 8 >  2>&1  1.22s user 0.47s system 1% cpu 2:40.26 total

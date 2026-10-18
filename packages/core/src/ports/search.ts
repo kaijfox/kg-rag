@@ -1,14 +1,30 @@
 /**
  * Search pipeline contract.
  *
- * A search recipe is a linear list of steps. The runner (package `search`) is the only code that emits
- * search events: `query`, then one `search.step` per step with that step's StepTrace, then `search.result`.
+ * A search is run by a hand-written state machine named in the search recipe (`SearchRecipeSpec.spec.machine`, with
+ * typed settings and a topology pin). Each state that does work calls one `SearchStep` and logs it: the search
+ * service emits `query`, then `pipeline.started`, then one `search.step` per step run with that step's StepTrace
+ * (`state` names the machine state that ran it), then `pipeline.finished`, then `search.result`. A loop is a move
+ * back to an earlier state, so the same state can appear in several traces; `stepIndex` counts executions.
  * Steps are pure with respect to logging: they receive a state and return a new state plus a trace.
  * A step must not mutate its input state.
- * Retrieval steps (P-2b, R-25) MERGE into the existing candidates: output = fuseMax(existing candidates +
- * retrieved candidates), never a replacement, so re-running a retrieval step on its own output is idempotent.
+ * Retrieval steps MERGE into the existing candidates: output = fuseMax(existing candidates + retrieved candidates),
+ * never a replacement, so re-running a retrieval step on its own output is idempotent.
  * `considered` must contain every candidate of the input state (the previous step's output): a step logs what it
  * was given plus what it found, before its own cut.
+ *
+ * Named pools. `SearchState.pools` holds named side lists of candidates that are NOT the current ranking.
+ * - A pool is a Candidate[] that is unique per itemId (fuseMax within the pool) and ordered by sortCandidates().
+ *   Names are non-empty strings. A pool is not a QueryVariant list and has no meaning beyond its name.
+ * - `pools` is `{}` until a step writes one. Steps that do not read or write pools pass `state.pools` through
+ *   unchanged (same names, same lists); they never drop or rewrite a pool they did not write.
+ * - A retrieval step configured to write into a pool retrieves exactly as without, but MERGES the hits into
+ *   `pools[name]` (output pool = fuseMax(existing pool + hits), so a re-run is idempotent) and does NOT touch
+ *   `candidates`: output candidates equal input candidates.
+ * - Trace: a step that reads or writes pools sets `StepTrace.pools` to the ranked refs of those pools AFTER the
+ *   step (name -> RankedRef[], same shape as considered/output). `considered` and `output` are about
+ *   `candidates` only, as always.
+ * - A pool never leaves the search: the final result is cut from `candidates` only.
  */
 import type { BuildId, ChunkId, ItemId, NodeId, RecipeId, SpaceId } from '../ids';
 import type { EmbeddingSpaceSpec, ItemKind, Json, JsonObject, SearchResponse } from '../model';
@@ -58,14 +74,17 @@ export interface SearchState {
   candidates: Candidate[];
   /** reserved for graph walk; [] in v0 */
   seeds: Seed[];
-  /** reserved for critique loops; v0 runner ignores it (always false) */
-  done: boolean;
+  /** named candidate pools: side lists written by retrieval into a named pool, read by a later step; {} in v0 */
+  pools: Record<string, Candidate[]>;
   /** reserved scratch area (e.g. a critique's draft answer); {} in v0 */
   notes: JsonObject;
 }
 
 export interface StepTrace {
+  /** execution counter within the search, contiguous from 0; exceeds the number of states when a loop runs */
   stepIndex: number;
+  /** id of the machine state that ran this step; the viewer maps the trace onto that state of the MachineMap */
+  state: string;
   stepType: string;
   params: JsonObject;
   /** everything this step scored, before its own cut (e.g. the 100-candidate pool), ranked */
@@ -76,6 +95,8 @@ export interface StepTrace {
   queries?: QueryVariant[];
   /** seeds after this step, when the step reads or writes them */
   seeds?: Seed[];
+  /** pools this step read or wrote, as they are after the step: name -> ranked refs */
+  pools?: Record<string, RankedRef[]>;
   /** free slot for step-specific detail (rewrite prompts, walk parameters, timings of sub-calls) */
   details?: Json;
   durationMs: number;
@@ -94,9 +115,8 @@ export interface SearchStep {
   run(
     state: Readonly<SearchState>,
     env: StepEnv,
-  ): Promise<{ state: SearchState; trace: Omit<StepTrace, 'stepIndex' | 'durationMs'> }>;
+  ): Promise<{ state: SearchState; trace: Omit<StepTrace, 'stepIndex' | 'state' | 'durationMs'> }>;
 }
-export type StepFactory = (params: JsonObject) => SearchStep;
 
 export interface SearchRequest {
   query: string;

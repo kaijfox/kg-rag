@@ -1,6 +1,6 @@
 # @kg/embed (WP4, Haiku)
 
-Contract: `@kg/core` CONTRACT_VERSION 0.2.0. You need this card, `core`, and `testkit`; nothing else.
+Contract: `@kg/core` CONTRACT_VERSION 0.6.1. You need this card, `core`, and `testkit`; nothing else.
 
 ## Implements (core `ports/embed.ts`, `Embedder`)
 `ollamaEmbedder(model: string, dims: number, o?: {baseUrl?: string; batchSize?: number; fetch?: typeof fetch}): Embedder`.
@@ -9,6 +9,14 @@ Batches of `batchSize` (default 32), order preserved, each vector `l2normalize`d
 `dims` components (else `KgError('upstream')`); network errors and non-2xx -> `upstream`. `embed([])`
 resolves `[]` without a request. Texts arrive already conditioned (core `renderDocument`/`renderQuery`);
 never add prefixes here.
+Since 0.6.0 the text it receives is already rendered under the space's `formulaView` (ingest calls the chunk package's
+view renderer before `renderDocument`); the embedder does nothing about formulas and its code is unchanged.
+Digest (CP-01a, 0.4.0): `EmbeddingSpaceSpec.digest` pins the model weights (Ollama `/api/tags` `models[].digest`,
+hex, no prefix; `DEFAULT_SPACE` pins embeddinggemma:latest = `85462619...79f1`). `o.digest?: string` is added to the
+options: when given, before the first embedding request the embedder reads `GET {baseUrl}/api/tags`, finds the
+entry named `model` and throws `KgError('precondition')` if it is absent or its digest differs (never embed into a
+space with another model build); network failure there is `upstream`. Tests: stub fetch serving a matching and a
+mismatching `/api/tags`; one case without `digest` (no check).
 
 ## package.json to create
 dependencies `@kg/core: workspace:*`; devDependencies `@kg/testkit: workspace:*`. Use global `fetch`; inject it
@@ -48,4 +56,4 @@ Any `@kg/*` other than core (testkit in tests). Do not pull Ollama models.
 
 ## Open questions (note, do not decide)
 Other models were not compared (none installed: nomic-embed-text, mxbai-embed-large, bge-m3, qwen3-embedding).
-Ollama truncates inputs beyond the model context (2048 tokens) silently; chunks are <= 1500 chars, so fine.
+The request sets `truncate: false`: an input beyond the model context (2048 tokens) makes Ollama answer 400, which the embedder raises as `upstream` (message carries Ollama's text) instead of embedding only the head. Chunks are <= 1500 chars, but decoded-formula chunks can be longer.

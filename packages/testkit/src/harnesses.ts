@@ -93,7 +93,7 @@ export const fixtureChunker: Chunker = (a, docKey) => {
 export function stepState(): SearchState {
   const items = miniChunks(1);
   const cands = [0.2, 0.9, 0.5, 0.9].map((score, i) => ({ itemId: items[i]!.id, kind: 'chunk' as const, score, sourceChunkIds: items[i]!.sourceChunkIds, via: 'seed', queryId: 'q0' }));
-  return { query: 'q', k: 3, buildId: BUILD_A, queries: [{ id: 'q0', text: 'q', origin: 'original', parentId: null }], candidates: cands, seeds: [], done: false, notes: {} };
+  return { query: 'q', k: 3, buildId: BUILD_A, queries: [{ id: 'q0', text: 'q', origin: 'original', parentId: null }], candidates: cands, seeds: [], pools: {}, notes: {} };
 }
 export const nullEnv = {} as StepEnv;
 export { DEFAULT_SEARCH_RECIPE };

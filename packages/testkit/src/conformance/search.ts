@@ -25,6 +25,12 @@ export interface StepHarness {
   env: StepEnv;
   /** true for retrieval steps (vector-knn, later graph walk): they must merge, P-2b */
   retrieval?: boolean;
+  /**
+   * P-1: set when the step is configured to retrieve `into` named pools. The pool names it is expected to
+   * write for this harness's state (after `{queryId}` expansion). The step must then leave `candidates`
+   * alone and write exactly these pools (plus whatever pools the input state already had).
+   */
+  into?: string[];
 }
 
 export function searchStepConformance(make: () => StepHarness | Promise<StepHarness>): Suite {
@@ -90,6 +96,56 @@ export function searchStepConformance(make: () => StepHarness | Promise<StepHarn
         },
       },
       {
+        name: 'P-1: pools default to {}: a step given no pools returns pools that are an empty object (or only its own into pools)',
+        async run() {
+          const { h, out } = await go();
+          expect(h.state.pools, 'harness state must start with pools {}').toEqual({});
+          expect(Object.keys(out.state.pools).sort()).toEqual([...(h.into ?? [])].sort());
+          if (!h.into) expect(out.trace.pools === undefined || Object.keys(out.trace.pools).length === 0).toBe(true);
+        },
+      },
+      {
+        name: 'P-1: pools the step did not write pass through unchanged',
+        async run() {
+          const h = await make();
+          const carried = h.state.candidates.length > 0 ? h.state.candidates : [];
+          const state: SearchState = { ...structuredClone(h.state), pools: { __carried__: structuredClone(sortCandidates(carried)) } };
+          const out = await h.step.run(deepFreeze(state), h.env);
+          expect(out.state.pools['__carried__'], 'a pool the step does not write was dropped or rewritten').toEqual(state.pools['__carried__']);
+        },
+      },
+      {
+        name: 'P-1: into: candidates untouched, pools unique/ranked/merged, trace.pools matches, re-run idempotent',
+        async run() {
+          const h = await make();
+          if (!h.into) return;
+          const once = await h.step.run(structuredClone(h.state), h.env);
+          const input = sortCandidates(h.state.candidates);
+          expect(once.state.candidates, 'an into step must not touch candidates').toEqual(input);
+          expect(once.trace.output.map((r) => r.itemId)).toEqual(input.map((c) => c.itemId));
+          for (const name of h.into) {
+            const pool = once.state.pools[name];
+            expect(pool, `pool ${name} not written`).toBeDefined();
+            expect(pool!.length).toBeGreaterThan(0);
+            expect(pool).toEqual(sortCandidates(pool!));
+            expect(new Set(pool!.map((c) => c.itemId)).size).toBe(pool!.length);
+            for (const c of pool!) expect(c.sourceChunkIds.length).toBeGreaterThan(0);
+            for (const x of h.state.pools[name] ?? []) {
+              const kept = pool!.find((c) => c.itemId === x.itemId);
+              expect(kept, `existing pool item ${x.itemId} was dropped`).toBeDefined();
+              expect(kept!.score).toBeGreaterThanOrEqual(x.score);
+            }
+            const refs = once.trace.pools?.[name];
+            expect(refs, `trace.pools lacks ${name}`).toBeDefined();
+            expect(isProperlyRanked(refs!)).toBe(true);
+            expect(refs!.map((r) => [r.itemId, r.score])).toEqual(pool!.map((c) => [c.itemId, c.score]));
+          }
+          const twice = await h.step.run(structuredClone(once.state), h.env);
+          expect(twice.state.pools).toEqual(once.state.pools);
+          expect(twice.state.candidates).toEqual(once.state.candidates);
+        },
+      },
+      {
         name: 'Rule 1: every candidate has non-empty sourceChunkIds',
         async run() {
           const { out } = await go();
@@ -138,7 +194,7 @@ export function searchServiceConformance(make: () => SearchServiceHarness | Prom
     name: 'searchServiceConformance',
     cases: [
       {
-        name: 'event sequence: tool.called, query, search.step x n (n >= 1), search.result, tool.returned',
+        name: 'event sequence: tool.called, query, pipeline.started, search.step x n (n >= 1), pipeline.finished, search.result, tool.returned',
         async run() {
           const h = await make();
           const { events } = await runSearch(h, h.queries[0]!, 5);
@@ -146,11 +202,57 @@ export function searchServiceConformance(make: () => SearchServiceHarness | Prom
           expect(types[0]).toBe('session.started');
           expect(types[1]).toBe('tool.called');
           expect(types[2]).toBe('query');
+          expect(types[3]).toBe('pipeline.started');
+          expect(types.at(-3)).toBe('pipeline.finished');
           expect(types.at(-2)).toBe('search.result');
           expect(types.at(-1)).toBe('tool.returned');
-          const steps = types.slice(3, -2);
+          const steps = types.slice(4, -3);
           expect(steps.length).toBeGreaterThan(0);
           expect(steps.every((t) => t === 'search.step')).toBe(true);
+        },
+      },
+      {
+        name: 'pipeline.started names the search machine: pipeline search, non-empty machine and version, 16-hex topology, the search\'s buildId and searchId',
+        async run() {
+          const h = await make();
+          const { resp, events } = await runSearch(h, h.queries[0]!, 5);
+          const started = events.find((e): e is EventEnvelope<'pipeline.started'> => e.type === 'pipeline.started')!;
+          expect(started.payload.pipeline).toBe('search');
+          expect(started.payload.machine.length).toBeGreaterThan(0);
+          expect(started.payload.version.length).toBeGreaterThan(0);
+          expect(started.payload.topology).toMatch(/^[0-9a-f]{16}$/);
+          expect(started.buildId).toBe(resp.buildId);
+          expect(started.searchId).toBe(resp.searchId);
+        },
+      },
+      {
+        name: 'pipeline.finished closes the search: pipeline search, status done, a non-empty state, the search\'s buildId and searchId',
+        async run() {
+          const h = await make();
+          const { resp, events } = await runSearch(h, h.queries[0]!, 5);
+          const finished = events.filter((e): e is EventEnvelope<'pipeline.finished'> => e.type === 'pipeline.finished');
+          expect(finished.length).toBe(1);
+          expect(finished[0]!.payload.pipeline).toBe('search');
+          expect(finished[0]!.payload.status).toBe('done');
+          expect(finished[0]!.payload.state.length).toBeGreaterThan(0);
+          expect(finished[0]!.buildId).toBe(resp.buildId);
+          expect(finished[0]!.searchId).toBe(resp.searchId);
+        },
+      },
+      {
+        name: 'every search.step trace has a non-empty state, and every step lies between pipeline.started and pipeline.finished',
+        async run() {
+          const h = await make();
+          const { events } = await runSearch(h, h.queries[0]!, 3);
+          const steps = events.filter((e): e is EventEnvelope<'search.step'> => e.type === 'search.step');
+          expect(steps.length).toBeGreaterThan(0);
+          for (const s of steps) expect(s.payload.trace.state.length, `step ${s.payload.trace.stepIndex}`).toBeGreaterThan(0);
+          const started = events.findIndex((e) => e.type === 'pipeline.started');
+          const finished = events.findIndex((e) => e.type === 'pipeline.finished');
+          for (const s of steps) {
+            const at = events.indexOf(s);
+            expect(at > started && at < finished).toBe(true);
+          }
         },
       },
       {
@@ -159,7 +261,7 @@ export function searchServiceConformance(make: () => SearchServiceHarness | Prom
           const h = await make();
           const { resp, events } = await runSearch(h, h.queries[0]!, 5);
           const parent = events[1]!.id;
-          for (const e of events.filter((x) => x.type === 'query' || x.type === 'search.step' || x.type === 'search.result')) {
+          for (const e of events.filter((x) => x.type === 'query' || x.type === 'pipeline.started' || x.type === 'search.step' || x.type === 'pipeline.finished' || x.type === 'search.result')) {
             expect(e.searchId).toBe(resp.searchId);
             expect(e.buildId).toBe(resp.buildId);
             expect(e.parentId).toBe(parent);

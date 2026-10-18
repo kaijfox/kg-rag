@@ -1,6 +1,6 @@
 # @kg/eventlog (WP6, Haiku)
 
-Contract: `@kg/core` CONTRACT_VERSION 0.2.0. You need this card, `core`, and `testkit`; nothing else.
+Contract: `@kg/core` CONTRACT_VERSION 0.6.1. You need this card, `core`, and `testkit`; nothing else.
 
 ## Implements
 `class SqliteEventLog implements EventLog, LogReader` (core `ports/log.ts`), constructor

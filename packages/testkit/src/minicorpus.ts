@@ -43,7 +43,7 @@ export class RecordingHashEmbedder extends HashEmbedder {
 
 /** The v1 build uses this search recipe, v2 uses DEFAULT_SEARCH_RECIPE, so a runner that reads the recipe of the
  * current build instead of the searched one is caught (review M31). Same ranking on 17 chunks. */
-export const V1_SEARCH_RECIPE = { ...DEFAULT_SEARCH_RECIPE, version: 'mini-v1', spec: { steps: [{ type: 'vector-knn', params: { pool: 50, kinds: ['chunk'] } }, { type: 'truncate', params: {} }] } } as const;
+export const V1_SEARCH_RECIPE = { ...DEFAULT_SEARCH_RECIPE, version: '1', spec: { ...DEFAULT_SEARCH_RECIPE.spec, settings: { pool: 50, kinds: ['chunk'] } } } as const;
 
 export interface MiniCorpus {
   store: CorpusStore;
@@ -89,7 +89,7 @@ export async function loadMiniCorpus(store: CorpusStore = new InMemoryCorpusStor
  * (q0 "entropy", q1 "Carnot efficiency" derived from q0). Pass `seed` to run a retrieval step first, so that
  * a step that reorders or cuts candidates (truncate, rerank) has something to work on.
  */
-export async function miniStepHarness(step: SearchStep, seed?: SearchStep, o: { retrieval?: boolean } = {}) {
+export async function miniStepHarness(step: SearchStep, seed?: SearchStep, o: { retrieval?: boolean; into?: string[] } = {}) {
   const mc = await loadMiniCorpus();
   const space = mc.store.getSpace(mc.store.getBuild(mc.builds.v1)!.manifest.embeddingSpaces[0]!)!;
   const env = { store: mc.store, embedder: mc.embedder, space };
@@ -103,7 +103,7 @@ export async function miniStepHarness(step: SearchStep, seed?: SearchStep, o: { 
     ],
     candidates: [],
     seeds: [],
-    done: false,
+    pools: {},
     notes: {},
   };
   if (seed) state = (await seed.run(state, env)).state;
@@ -112,7 +112,7 @@ export async function miniStepHarness(step: SearchStep, seed?: SearchStep, o: { 
     const id = mc.labels['gas/pre']!;
     state = { ...state, candidates: [{ itemId: id, kind: 'chunk', score: -0.5, sourceChunkIds: [id], via: 'earlier-step', queryId: null }, ...state.candidates] };
   }
-  return { step, state, env, retrieval: o.retrieval ?? false };
+  return { step, state, env, retrieval: o.retrieval ?? false, ...(o.into ? { into: o.into } : {}) };
 }
 
 /**

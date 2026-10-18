@@ -5,6 +5,7 @@
 import {
   DEFAULT_POOL,
   KgError,
+  errorCodeOf,
   fuseMax,
   renderQuery,
   sortCandidates,
@@ -23,9 +24,23 @@ import {
   type SearchState,
   type SearchStep,
   type StepEnv,
-  type StepFactory,
   type ItemKind,
 } from '@kg/core';
+
+/** A step as the runner sees it: the machine state that runs it is named here, so the trace can carry it. */
+export type StepFactory = (params: JsonObject) => SearchStep & { readonly state: string };
+
+/** Legacy v0 step list (pre-0.5.0 recipes named their steps). The machine name in a recipe resolves to one of these. */
+interface LegacyStepSpec {
+  type: string;
+  params: JsonObject;
+}
+const MACHINE_STEPS: Record<string, (settings: JsonObject) => LegacyStepSpec[]> = {
+  similarity: (settings) => [
+    { type: 'vector-knn', params: settings },
+    { type: 'truncate', params: {} },
+  ],
+};
 
 const intParam = (p: JsonObject, k: string, dflt: number) => {
   const v = p[k] ?? dflt;
@@ -39,6 +54,7 @@ export const vectorKnn: StepFactory = (params) => {
   const kinds = (params['kinds'] ?? ['chunk']) as ItemKind[];
   return {
     type: 'vector-knn',
+    state: 'retrieve',
     async run(state: Readonly<SearchState>, env: StepEnv) {
       const vecs = await env.embedder.embed(state.queries.map((q) => renderQuery(env.space, q.text)));
       const all: Candidate[] = [];
@@ -66,6 +82,7 @@ export const vectorKnn: StepFactory = (params) => {
 /** truncate {k?}: keeps the first k candidates (default: the request's k). */
 export const truncate: StepFactory = (params) => ({
   type: 'truncate',
+  state: 'cut',
   async run(state: Readonly<SearchState>) {
     const k = params['k'] === undefined ? state.k : intParam(params, 'k', state.k);
     const sorted = sortCandidates(state.candidates);
@@ -94,7 +111,10 @@ export function createSearch(d: { store: CorpusStore; embedder: Embedder; steps?
       const space = spaceId ? d.store.getSpace(spaceId) : null;
       if (!space) throw new KgError('not_found', `embedding space of build ${buildId}`);
       if (space.model !== d.embedder.model || space.dims !== d.embedder.dims) throw new KgError('precondition', `embedder ${d.embedder.model} does not serve space ${space.model}`);
-      const plan = (recipe as unknown as SearchRecipeSpec).spec.steps.map((s) => {
+      const spec = recipe as unknown as SearchRecipeSpec;
+      const machine = MACHINE_STEPS[spec.spec.machine];
+      if (!machine) throw new KgError('invalid_input', `unknown search machine ${spec.spec.machine}`);
+      const plan = machine(spec.spec.settings).map((s) => {
         const f = steps[s.type];
         if (!f) throw new KgError('invalid_input', `unknown step type ${s.type}`);
         return f(s.params);
@@ -103,20 +123,30 @@ export function createSearch(d: { store: CorpusStore; embedder: Embedder; steps?
       const searchId = ctx.ids.ulid('sr_') as SearchId;
       const tag = { searchId, buildId };
       ctx.emit('query', { query: req.query, k: req.k, searchRecipeId: rid }, tag);
-      const env: StepEnv = { store: d.store, embedder: d.embedder, space, ...(d.llm ? { llm: d.llm } : {}) };
-      let state: SearchState = { query: req.query, k: req.k, buildId, queries: [{ id: 'q0', text: req.query, origin: 'original', parentId: null }], candidates: [], seeds: [], done: false, notes: {} };
-      for (const [i, step] of plan.entries()) {
-        const t0 = ctx.clock.monotonicMs();
-        const out = await (step as SearchStep).run(state, env);
-        state = out.state;
-        ctx.emit('search.step', { trace: { ...out.trace, stepIndex: i, durationMs: Math.max(0, ctx.clock.monotonicMs() - t0) } }, tag);
+      ctx.emit('pipeline.started', { pipeline: 'search', machine: spec.spec.machine, version: spec.version, topology: spec.spec.topology, recipeId: rid }, tag);
+      let current = 'failed';
+      try {
+        const env: StepEnv = { store: d.store, embedder: d.embedder, space, ...(d.llm ? { llm: d.llm } : {}) };
+        let state: SearchState = { query: req.query, k: req.k, buildId, queries: [{ id: 'q0', text: req.query, origin: 'original', parentId: null }], candidates: [], seeds: [], pools: {}, notes: {} };
+        for (const [i, step] of plan.entries()) {
+          current = step.state;
+          const t0 = ctx.clock.monotonicMs();
+          const out = await step.run(state, env);
+          state = out.state;
+          ctx.emit('search.step', { trace: { ...out.trace, state: step.state, stepIndex: i, durationMs: Math.max(0, ctx.clock.monotonicMs() - t0) } }, tag);
+        }
+        const final = sortCandidates(state.candidates).slice(0, req.k);
+        const texts = new Map(d.store.getItems(final.map((c) => c.itemId)).map((i) => [i.id, i.text]));
+        const items = final.map((c, i) => ({ itemId: c.itemId, kind: c.kind, text: texts.get(c.itemId) ?? '', score: c.score, rank: i + 1, sourceChunkIds: c.sourceChunkIds }));
+        const stale = d.store.staleCheck(buildId).stale;
+        ctx.emit('pipeline.finished', { pipeline: 'search', status: 'done', state: 'done' }, tag);
+        ctx.emit('search.result', { items: items.map(({ itemId, kind, rank, score, sourceChunkIds }) => ({ itemId, kind, rank, score, sourceChunkIds })), stale }, tag);
+        return { searchId, buildId, stale, items };
+      } catch (e) {
+        const message = e instanceof Error ? e.message : String(e);
+        ctx.emit('pipeline.finished', { pipeline: 'search', status: 'failed', state: current, error: { code: errorCodeOf(e), message } }, tag);
+        throw e;
       }
-      const final = sortCandidates(state.candidates).slice(0, req.k);
-      const texts = new Map(d.store.getItems(final.map((c) => c.itemId)).map((i) => [i.id, i.text]));
-      const items = final.map((c, i) => ({ itemId: c.itemId, kind: c.kind, text: texts.get(c.itemId) ?? '', score: c.score, rank: i + 1, sourceChunkIds: c.sourceChunkIds }));
-      const stale = d.store.staleCheck(buildId).stale;
-      ctx.emit('search.result', { items: items.map(({ itemId, kind, rank, score, sourceChunkIds }) => ({ itemId, kind, rank, score, sourceChunkIds })), stale }, tag);
-      return { searchId, buildId, stale, items };
     },
   };
 }

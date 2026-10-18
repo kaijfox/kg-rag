@@ -1,0 +1,1 @@
+{"name":"spike-state-machine","private":true,"type":"module","dependencies":{"robot3":"1.4.0","xstate":"5.33.3"}}

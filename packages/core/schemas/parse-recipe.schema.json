@@ -44,6 +44,35 @@
           "additionalProperties": {
             "$ref": "#/$defs/__schema0"
           }
+        },
+        "formulaDecoding": {
+          "type": "object",
+          "properties": {
+            "model": {
+              "type": "string",
+              "minLength": 1
+            },
+            "revision": {
+              "type": "string",
+              "minLength": 1
+            },
+            "prompt": {
+              "type": "string",
+              "minLength": 1
+            },
+            "cropMargin": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            }
+          },
+          "required": [
+            "model",
+            "revision",
+            "prompt",
+            "cropMargin"
+          ],
+          "additionalProperties": false
         }
       },
       "required": [

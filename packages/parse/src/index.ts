@@ -1,5 +1,7 @@
 /**
- * @kg/parse: Phase 2 stub. See CARD.md for the contract, the tests to pass and the decisions already made.
- * This package must import only @kg/core (and @kg/testkit in tests).
+ * @kg/parse: the two Parser implementations. SubprocessParser runs the kg-parse sidecar CLI; ArtifactDirParser
+ * reads artifacts that were produced elsewhere. Depends on @kg/core only.
  */
-export {};
+export { SubprocessParser, type SubprocessParserOptions } from './subprocess';
+export { ArtifactDirParser } from './artifactDir';
+export { readArtifactFile, validateArtifact } from './artifactFile';

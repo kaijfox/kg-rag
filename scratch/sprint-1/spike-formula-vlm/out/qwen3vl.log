@@ -1,0 +1,37 @@
+W1018 16:13:19.740000 27241 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+Fetching 14 files:   0%|          | 0/14 [00:00<?, ?it/s]Fetching 14 files:   7%|▋         | 1/14 [00:00<00:01,  8.25it/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Fetching 14 files:  14%|█▍        | 2/14 [00:00<00:01,  8.95it/s]Fetching 14 files:  57%|█████▋    | 8/14 [00:00<00:00, 24.98it/s]Fetching 14 files:  86%|████████▌ | 12/14 [00:00<00:00, 26.14it/s]Fetching 14 files:  93%|█████████▎| 13/14 [00:20<00:00, 26.14it/s]Fetching 14 files: 100%|██████████| 14/14 [00:35<00:00,  4.26s/it]Fetching 14 files: 100%|██████████| 14/14 [00:35<00:00,  2.55s/it]
+Fetching 14 files:   0%|          | 0/14 [00:00<?, ?it/s]Fetching 14 files: 100%|██████████| 14/14 [00:00<00:00, 3771.61it/s]
+FK-p09-t137 0.64s 58 ' $${ \\frac { 1 } { \\tau _ { U } } } \\sim { \\frac { \\partial U } { \\partial \\bar { q } } } \\cdot { \\f'
+FK-p19-t277 1.03s 113 ' $$\\ln f _ { 1 } ( \\vec { p } _ { 1 } , \\vec { q } ) + \\ln f _ { 1 } ( \\vec { p } _ { 2 } , \\vec { q'
+FK-p20-t290 0.94s 99 ' $$f _ { 1 } ( \\vec { p } , \\vec { q } ) = n \\left( { \\frac { \\beta } { 2 \\pi m } } \\right) ^ { 3 / '
+FK-p27-t426 0.55s 44 ' $$v _ { \\ell } = \\sqrt { \\frac { 5 } { 3 } \\frac { k _ { B } \\overline { { T } } } { m } }$$'
+FK-p28-t439 2.74s 327 ' $$\\mathcal { L } [ \\ln f _ { 1 } ^ { 0 } ] = 0 - \\frac { m c ^ { 2 } } { 3 k _ { b } T } \\partial _'
+FK-p56-t936 0.64s 57 ' $$ \\langle { \\mathcal { H } } ^ { n } \\rangle _ { c } = ( - 1 ) ^ { n } \\frac { \\partial ^ { n } \\l'
+FK-p60-t1007 2.04s 245 ' $$Z ( N , T , P ) = \\int _ { 0 } ^ { \\infty } \\mathrm { d } V e ^ { - \\beta P V } \\int \\frac { 1 } '
+FK-p64-t1075 0.75s 72 ' $$P = - \\frac { g } { V } = - \\frac { \\partial g } { \\partial V } \\Big | _ { \\lambda ^ { 2 } , T } '
+TK-p04-t55 0.79s 79 ' $$( P + \\frac { a } { V ^ { 2 } } ) ( V - b ) - c [ F - K ( L - L _ { 0 } ) ] = 0 ,$$\n\n$$( P + \\fra'
+TK-p04-t57 0.66s 60 '$$\\Theta \\propto \\left( P + \\frac{a}{V^2} \\right) (V - b) = c \\left( \\frac{F}{L - L_0} - K \\right) ='
+TK-p14-t275 0.49s 36 ' $$\\mathrm { d } Q _ { R } = T _ { 0 } { \\frac { \\mathrm { d } Q } { T } } .$$'
+TK-p17-t334 0.48s 35 '$$x_i = - \\frac{ \\partial H }{ \\partial J_i } \\bigg|_{S, J_{j \\ne i}} .$$'
+TK-p20-t385 0.46s 29 ' $$E ( \\lambda S , \\lambda x , \\lambda N ) = \\lambda E ( S , x , N ) .$$'
+TK-p24-t460 1.16s 128 ' $$\\delta S = - \\frac { 2 } { T _ { A } } \\left[ \\delta E _ { A } - \\mathbf { J } _ { A } \\cdot \\del'
+TK-p24-t447 0.93s 98 ' $$( E _ { B } - \\delta E , \\, x _ { B } - \\delta x , \\, N _ { B } - \\delta N ) \\mathrm { ~ a n d } '
+TK-p25-t472 0.61s 53 ' $$ C _ { x } = { \\frac { \\partial Q } { \\partial T } } _ { x } = T { \\frac { \\partial S } { \\partia'
+FP-p06-t65 0.62s 52 ' $$d S ( E , N , V ) = { \\frac { d E } { T } } + { \\frac { P d V } { T } } - { \\frac { \\mu d N } { T'
+FP-p15-t194 1.44s 167 ' $$ \\begin{array} { c } { { \\left( { \\frac { \\partial N } { \\partial v } } \\right) _ { V , T } } } \\'
+FP-p18-t235 1.08s 117 ' $$ \\langle n _ { \\mathbf { k } } \\rangle = - k _ { B } T { \\frac { \\partial } { \\partial \\mu } } \\l'
+FP-p21-t292 1.07s 116 ' $${ \\mathrm { Z } ( 1 ) } { \\frac { d S ( Z ( 1 ) Z ( 2 ) ) } { d Z ( 1 ) } } = Z ( 1 ) { \\frac { d'
+FP-p23-t314 0.57s 48 ' $$\\int _ { E < H ( \\mathbf { x } ) < E + \\delta E } d \\mathbf { x } \\rho ( \\mathbf { x } ) = 1 \\, .'
+FP-p23-t322 0.72s 69 ' $${ \\frac { \\delta } { \\delta \\rho ( x ) } } \\left\\{ - k _ { B } \\int d ^ { 6 N } x [ \\rho \\ln ( h '
+TP-p10-t123 0.57s 47 ' $$\\begin{array}{r l l} d A & = d E - d ( T S ) \\\\ & = d Q - T d S - S d T - d W \\ . \\end{array}$$'
+TP-p10-t121 0.78s 76 ' $$\\begin{array} { l } { d A = d E - T d S - S d T } \\\\ { = - S d T + \\sum _ { i } X _ { i } d x _ {'
+TP-p16-t221 2.78s 344 ' $$\\begin{array} { l } { d S = \\left( \\frac { \\partial S _ { 1 } } { \\partial E _ { 1 } } \\right) _ '
+TP-p17-t233 0.67s 60 ' $$G _ { 1 } ( P _ { 0 } , T _ { 0 } ) = E _ { 1 } - T _ { 0 } S _ { 1 } + P _ { 0 } V _ { 1 } \\, .$'
+TP-p18-t245 0.68s 63 ' $$( \\frac { \\partial T } { \\partial S } ) _ { V } = \\frac { T } { C _ { V } } > 0 \\text { or } C _ '
+TP-p18-t248 0.61s 54 ' $${ \\frac { T } { V K _ { s } C _ { v } } } > \\left( { \\frac { \\partial T } { \\partial V } } \\right'
+TP-p24-t315 1.09s 118 ' $$v _{ 1 } ( P _{ c } , T _{ c } ) = { \\frac { \\partial g _{ 1 } } { \\partial P } } \\Bigg | _ { P _'
+IFK-p17-51 0.48s 35 " $$( \\vec { p } _ { 1 } ' , \\vec { p } _ { 2 } ' , \\vec { b } ' )$$"
+IFK-p23-116 0.43s 28 " $$( \\vec { p } _ { 1 } ' , \\vec { p } _ { 2 } ' )$$"
+ITK-p12-329 0.41s 25 ' $$( T _ { 1 } > T _ { 2 } > T _ { 3 } ).$$'
+ITK-p18-377 0.41s 24 ' $$\\{ N _ { 1 } , N _ { 2 } , \\cdots \\}$$'

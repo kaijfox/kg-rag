@@ -1,6 +1,6 @@
 # @kg/store (WP5, Sonnet)
 
-Contract: `@kg/core` CONTRACT_VERSION 0.2.0. You need this card, `core`, and `testkit`; nothing else.
+Contract: `@kg/core` CONTRACT_VERSION 0.6.1. You need this card, `core`, and `testkit`; nothing else.
 
 ## Implements
 - `class SqliteCorpusStore implements CorpusStore` (core `ports/store.ts`), constructor
@@ -46,6 +46,13 @@ write `sessions`, `events`, `session_notes` (eventlog owns them).
 - knn restricted by `JOIN build_items ON build_id = ?` and `items.kind IN (...)`.
 - `putBuild`: id = `buildId(manifest, itemIds)` (R-23); refuse with `precondition` if any item lacks a vector in
   any manifest space (S2, R-24).
+- `builds.parent_id` is the parent of the first write of that build ID; a repeat `putBuild` keeps the stored
+  row and does not compare the parent (`parentId` is excluded from `buildId`). Lineage across ingests comes
+  from the `build.created` event, which carries the parent it was created with (CP-03).
+- ID addressing modes are labelled in core `ids.ts` (header): `ch_`, `nd_`, `bd_`, `mp_`, `qs_` content-addressed;
+  `pa_`, `dv_` input-addressed; `rc_`, `es_` spec hashes. Glossary: `scratch/sprint-1/lifecycle.md` section 0.
+- `putDocVersion` of an existing `dv_` with the same ordered chunk list is a no-op (`{inserted: [], reused: all}`);
+  with a different chunk list it throws `immutable_violation` and writes nothing (CP-01b, 0.4.0).
 - Insert-only everywhere except `documents.current_version` and `db_meta.current_build`; triggers enforce
   it. Map trigger aborts and constraint errors to `KgError` with the codes in the port doc
   (`immutable_violation`, `not_found`, `invalid_input`, `conflict`).
@@ -54,7 +61,7 @@ write `sessions`, `events`, `session_notes` (eventlog owns them).
   to `doc_version_chunks` (contract-revisions R-03).
 - Build names are insert-only rows in `build_labels` (R-04). `putBuild` is idempotent on the manifest hash.
 - Parse artifacts stored gzipped (`zlib.gzipSync` of the envelope JSON) in `parse_artifacts.body`.
-- `transaction(fn)`: `db.transaction(fn)()`; nested calls join (better-sqlite3 uses savepoints; fine).
+- `transaction(fn)`: `db.transaction(fn).immediate()` (write lock taken up front); nested calls join (better-sqlite3 uses savepoints; fine).
 
 ## Open questions (note, do not decide)
 - Float32 storage vs the in-memory fake's float64 arithmetic: scores differ in the 7th digit, so near-ties

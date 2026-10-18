@@ -1,0 +1,97 @@
+{
+  "id": "qs_46xbmyqoyl76wzprnilp",
+  "name": "stat-mech-integration",
+  "genRecipeId": null,
+  "questions": [
+    {
+      "type": "single-hop",
+      "question": "What specific question regarding moving particle systems does kinetic theory aim to address in order to derive macroscopic laws?",
+      "referenceAnswer": "Kinetic theory attempts to answer how one can define the concept of equilibrium for a system consisting of moving particles.",
+      "goldChunkIds": [
+        "ch_2tlnvyubkiwldhdt2nfp"
+      ],
+      "goldText": [
+        "Kinetic theory studies the macroscopic properties of large numbers of particles, starting from their (classical) equations of motion.\n\nThermodynamics describes the equilibrium behavior of macroscopic objects in terms of concepts such as work, heat, and entropy. The phenomenological laws of thermodynamics tell us how these quantities are constrained as a system approaches its equilibrium. At the microscopic level, we know that these systems are composed of particles (atoms, molecules), whose interactions and dynamics are reasonably well understood in terms of more fundamental theories. If these microscopic descriptions are complete, we should be able to account for the macroscopic behavior, that is, derive the laws governing the macroscopic state functions in equilibrium. Kinetic theory attempts to achieve this objective. In particular, we shall try to answer the following questions:\n\nHow can we define \"equilibrium\" for a system of moving particles?"
+      ],
+      "sourceDocKeys": [
+        "FoundationsKardar"
+      ],
+      "id": "q1"
+    },
+    {
+      "type": "single-hop",
+      "question": "How have modern computational tools influenced the debate regarding whether classical equations of motion are sufficient to describe macroscopic irreversibility?",
+      "referenceAnswer": "The ability to simulate large collections of particles using classical, reversible equations has shown that these models can produce irreversible macroscopic behaviors similar to those seen in nature, despite the simulations being limited to relatively small numbers of particles.",
+      "goldChunkIds": [
+        "ch_hoznabamnawpuy4mafug"
+      ],
+      "goldText": [
+        "Irreversibility: the second law is an empirical formulation of the vast number of everyday observations that support the existence of an arrow of time. Reconciling the reversibility of laws of physics governing the microscopic domain with the observed irreversibility of macroscopic phenomena is a fundamental problem. Of course, not all microscopic laws of physics are reversible: weak nuclear interactions violate time reversal symmetry, and the collapse of the quantum wave function in the act of observation is irreversible. The former interactions in fact do not play any significant role in everyday observations that lead to the second law. The irreversible collapse of the wave function may itself be an artifact of treating macroscopic observers and microscopic observables distinctly. 1 There are proponents of the view that the reversibility of the currently accepted microscopic equations of motion (classical or quantum) is indicative of their inadequacy. However, the advent of powerful computers has made it possible to simulate the evolution of collections of large numbers of particles, governed by classical, reversible equations of motion. Although simulations are currently limited to relatively small numbers of particles lparenori10 6 rparenori, they do exhibit the irreversible macroscopic behaviors similar to those observed in nature (typically involving 10 23 particles)."
+      ],
+      "sourceDocKeys": [
+        "FoundationsKardar"
+      ],
+      "id": "q2"
+    },
+    {
+      "type": "single-hop",
+      "question": "What specific term accounts for the increase in entropy when two gases are mixed without a temperature change?",
+      "referenceAnswer": "The mixing entropy arises solely from the contribution of the coordinates, as the momentum contribution remains unchanged because it depends only on temperature.",
+      "goldChunkIds": [
+        "ch_y33ctyue6khxul7f4q32"
+      ],
+      "goldText": [
+        "is the momentum contribution to the entropy of the SLalphath gas. Since E SLalpha /N SLalpha = 3k B T/2 for a monotonic gas,\n\n[formula]\n\nThe temperature of the gas is unchanged by mixing, since\n\n[formula]\n\nFig. 4.6 A mixing entropy results from removing the partition separating two gases.\n\nThe final entropy of the mixed gas is\n\n[formula]\n\nThere is no change in the contribution from the momenta, which depends only on temperature. The mixing entropy,\n\n[formula]\n\nis solely from the contribution of the coordinates. The above expression is easily generalized to the mixing of many components, with CS Mix = -Nk B ∑SLalpha lparenoriN SLalpha /N rparenori lnlparenoriV SLalpha /V rparenori."
+      ],
+      "sourceDocKeys": [
+        "FoundationsKardar"
+      ],
+      "id": "q3"
+    },
+    {
+      "type": "single-hop",
+      "question": "Which types of physical systems are classified as non-normal because their energy grows faster than linearly with particle number?",
+      "referenceAnswer": "Systems that are self-bound by gravitational forces and systems possessing a net macroscopic charge are considered non-normal. In these cases, specific contributions to the energy increase more rapidly than linearly with the number of particles.",
+      "goldChunkIds": [
+        "ch_44zlo3f4o52c5dyopusu"
+      ],
+      "goldText": [
+        "The variables T, P, and /J, are independent of the size of the system in the limit N -> oo and are thus intensive (Section 1.1). The ideal gas is an example of a normal system. We will consider a system to be normal if in the thermodynamic limit, N ->· oo with N/V = constant, the energy and entropy are extensive (i.e., proportional to TV), and T, P, and fj, are intensive. Not all systems are normal in this sense. Examples of systems which are not are (i) a system that is self-bound by gravitational forces (see Problem 2.12), and (ii) a system with a net macroscopic charge. In both cases there are contributions to the energy which increase more rapidly than linearly with the number of particles (charges). Neutral systems are, however, normal [168] [172], An important property of normal thermodynamic systems is the Gibbs-Duhem relation (see Section 1.4)."
+      ],
+      "sourceDocKeys": [
+        "FoundationsPlischke"
+      ],
+      "id": "q4"
+    },
+    {
+      "type": "single-hop",
+      "question": "How can one calculate the change in potential energy for a spring stretched quasi-statically?",
+      "referenceAnswer": "The change in potential energy is calculated by integrating the force F with respect to the length L (∫ FdL), provided the stretching is performed sufficiently slowly so that the external force matches the internal force at every stage.",
+      "goldChunkIds": [
+        "ch_ncxioxtnrakyc4qqnbp3"
+      ],
+      "goldText": [
+        "A quasi-static transformation is one that is performed sufficiently slowly so that the system is always in equilibrium. Thus, at any stage of the process, the thermodynamic coordinates of the system exist and can in principle be computed. For such transformations, the work done on the system (equal in magnitude but opposite in sign to the work done by the system) can be related to changes in these coordinates. As a mechanical example, consider the stretching of a spring or rubber band. To construct the potential energy of the system as a function of its length L, we can pull the spring sufficiently slowly so that at each stage the external force is matched by the internal force F from the spring. For such a quasi-static process, the change in the potential energy of the spring is ∫ FdL. If the spring is pulled abruptly, some of the external work is converted into kinetic energy and eventually lost as the spring comes to rest."
+      ],
+      "sourceDocKeys": [
+        "ThermoKardar"
+      ],
+      "id": "q5"
+    },
+    {
+      "type": "single-hop",
+      "question": "What distinguishes an equilibrium system from a steady-state system in the context of thermodynamics?",
+      "referenceAnswer": "An equilibrium system has no macroscopic currents, such as heat or particle flow, whereas a steady state is defined only by variables that are independent of time.",
+      "goldChunkIds": [
+        "ch_j46sirqjzm4c4e2t6jxw"
+      ],
+      "goldText": [
+        "A macroscopic system has many degrees of freedom, only a few of which are measurable. Thermodynamics thus concerns itself with the relation between a small number of variables which are sufficient to describe the bulk behavior of the system in question. In the case of a gas or liquid the appropriate variables are the pressure P, volume V, and temperature T. In the case of a magnetic solid the appropriate variables are the magnetic field H, the magnetization M, and the temperature T. In more complicated situations, such as when a liquid is in contact with its vapor, additional variables may be needed: such as the volume of both liquid and gas VL, VG, the interfacial area A, and surface tension a. If the thermodynamic variables are independent of time, the system is said to be in a steady state. If, moreover, there are no macroscopic currents in the system, such as a flow of heat or particles through the material, the system is in equilibrium. Any quantity which, in equilibrium, depends only on the thermodynamic variables, rather than on the history of the sample, is called a state function. In subsequent sections we shall meet a number of such quantities. For a large system, the state variables can normally be taken to be either extensive (i.e., proportional to the size of the system) or intensive (i.e., independent of system size)."
+      ],
+      "sourceDocKeys": [
+        "ThermoPlischke"
+      ],
+      "id": "q6"
+    }
+  ]
+}

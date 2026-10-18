@@ -53,7 +53,9 @@ export interface CorpusStore {
    * not_found if the artifact or chunk recipe is absent.
    * A chunk ID already present is reused, not rewritten: the first-seen verbatim text and provenance stay
    * on the item; per-version pages and blockRefs are kept with the doc version.
-   * Idempotent: an existing doc version id returns {inserted: [], reused: all}.
+   * Idempotent: an existing doc version id with the same ordered chunk list returns {inserted: [], reused: all}.
+   * An existing doc version id with a different chunk list throws immutable_violation (0.4.0, CP-01b): the same
+   * artifact and chunk recipe produced other chunks, i.e. the chunker changed without a recipe version bump.
    * Does not change the document's current version.
    */
   putDocVersion(v: Omit<DocVersion, 'createdAt'>, chunks: readonly ChunkDraft[]): { inserted: ChunkId[]; reused: ChunkId[] };
@@ -93,7 +95,8 @@ export interface CorpusStore {
   // ---- builds
   /**
    * Idempotent; id = buildId(b.manifest, b.itemIds); if the id exists the stored build is kept (parentId of the
-   * first write wins). invalid_input if itemIds are not sorted and unique; not_found if any item, doc version,
+   * first write wins). builds.parent_id is first-seen history, not identity; lineage across ingests is in the
+   * build.created events (see store card). invalid_input if itemIds are not sorted and unique; not_found if any item, doc version,
    * space or recipe it names is absent; precondition if any item lacks an embedding in any of the manifest's
    * embeddingSpaces (S2: a build never holds items its search cannot see).
    */

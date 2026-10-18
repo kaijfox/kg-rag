@@ -78,7 +78,7 @@ CREATE TABLE IF NOT EXISTS derivation_runs (                                    
   run_id TEXT PRIMARY KEY, recipe_id TEXT NOT NULL REFERENCES recipes(recipe_id),
   input_state_hash TEXT NOT NULL, base_build_id TEXT, created_at TEXT NOT NULL);
 CREATE TABLE IF NOT EXISTS mappings (                                                                  -- S
-  mapping_id TEXT PRIMARY KEY, kind TEXT NOT NULL CHECK (kind IN ('same-as', 'duplicate-of', 'refines', 'supersedes')),
+  mapping_id TEXT PRIMARY KEY, kind TEXT NOT NULL CHECK (kind IN ('same-as', 'duplicate-of', 'refined-by', 'superseded-by')),
   subject TEXT NOT NULL CHECK (subject IN ('node', 'item')), from_id TEXT NOT NULL, to_id TEXT NOT NULL,
   run_id TEXT NOT NULL REFERENCES derivation_runs(run_id), confidence REAL, note TEXT);
 CREATE INDEX IF NOT EXISTS mappings_from ON mappings(from_id);

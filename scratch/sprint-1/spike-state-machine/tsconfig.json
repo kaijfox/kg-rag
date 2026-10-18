@@ -1,0 +1,5 @@
+{
+  "extends": "../../../tsconfig.base.json",
+  "compilerOptions": { "paths": { "@kg/core": ["../../../packages/core/src/index.ts"], "@kg/testkit": ["../../../packages/testkit/src/index.ts"], "@kg/testkit/conformance": ["../../../packages/testkit/src/conformance.ts"] }, "types": ["node"], "typeRoots": ["../../../node_modules/@types"] },
+  "include": ["src", "test"]
+}

@@ -79,6 +79,8 @@ const ingestReportSchema: z.ZodType<IngestReport> = z.strictObject({
 const eventIdOut = z.strictObject({ eventId: S.eventId });
 
 export const MAX_K = 100;
+/** `k` of a search that omits it. */
+export const DEFAULT_K = 10;
 
 export const TOOLS: { [K in ToolName]: ToolDef<ToolInput<K>, ToolOutput<K>> } = {
   search: {
@@ -86,7 +88,7 @@ export const TOOLS: { [K in ToolName]: ToolDef<ToolInput<K>, ToolOutput<K>> } = 
     description: 'Similarity search over the current build. Returns ranked items with source chunk IDs and a searchId for feedback.',
     input: z.strictObject({
       query: z.string().min(1),
-      k: z.number().int().min(1).max(MAX_K),
+      k: z.number().int().min(1).max(MAX_K).default(DEFAULT_K),
       searchRecipeId: S.recipeId.optional(),
       buildId: S.buildId.optional(),
     }),

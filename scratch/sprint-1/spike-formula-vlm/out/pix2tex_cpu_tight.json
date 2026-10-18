@@ -1,0 +1,173 @@
+{
+ "tag": "pix2tex_cpu_tight",
+ "repo": "pix2tex",
+ "prompt": null,
+ "load_s": 0.4260249137878418,
+ "results": {
+  "FK-p09-t137": {
+   "text": "\\frac{1}{\\tau_{U}}\\sim\\frac{\\partial U}{\\partial{\\vec{q}}}\\cdot\\frac{\\partial}{\\partial{\\vec{p}}}",
+   "s": 0.4898848533630371,
+   "peak_gb": null
+  },
+  "FK-p19-t277": {
+   "text": "\\ln f_{1}(\\vec{p}_{1},\\vec{q})+\\ln f_{1}(\\vec{p}_{2},\\vec{q})=\\ln f_{1}(\\vec{p}_{1}!\\cdot\\vec{q})+\\ln f_{1}(\\vec{p}_{2}\\cdot\\vec{q}).",
+   "s": 1.1232078075408936,
+   "peak_gb": null
+  },
+  "FK-p20-t290": {
+   "text": "f_{1}(\\vec{p},\\vec{q})=n\\left(\\frac{\\beta}{2\\pi m}\\right)^{3/2}\\exp\\biggl[-\\frac{\\beta(\\vec{p}-\\vec{p}_{0})^{2}}{2m}\\biggr],\\qquad\\qquad\\qquad(3.56)",
+   "s": 1.254460096359253,
+   "peak_gb": null
+  },
+  "FK-p27-t426": {
+   "text": "v_{t}={\\sqrt{\\frac{5\\ k_{B}T}{3}}}\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad(3.106)",
+   "s": 0.6220638751983643,
+   "peak_gb": null
+  },
+  "FK-p28-t439": {
+   "text": "\\begin{array}{c}{{\\displaystyle{\\mathcal{L}}\\left[\\ln f_{1}^{0}\\right]=0-\\frac{m c^{2}}{3k_{B}T}\\partial_{\\alpha}u_{\\alpha}+c_{\\alpha}\\left[\\left(\\frac{F_{\\alpha}}{k_{B}T}-\\frac{\\partial_{\\alpha}n}{n}-\\frac{\\partial_{\\alpha}T}{T}\\right)+\\left(\\frac{\\partial_{\\alpha}n}{n}-\\frac{3}{2}\\frac{\\partial_{\\alpha}T}{T}\\right)-\\frac{F_{\\alpha}}{k_{B}T}\\right]}}\\\\ {{}}&{{}}&{{}}\\\\ {{}}&{{}}&{{}}\\\\ {{}}&{{}}&{{}}\\\\ {{}}&{{}}&{{}}\\\\ {{}}&{{}}&{{}}\\\\ {{}}&{{}}&{{}}\\\\ {{}}&{{}}\\end{array}",
+   "s": 7.72819709777832,
+   "peak_gb": null
+  },
+  "FK-p56-t936": {
+   "text": "\\langle\\mathcal{H}^{n}\\rangle_{c}=(-1)^{n}\\frac{\\partial^{n}\\ln Z}{\\partial\\beta^{n}}.\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad(4.67)",
+   "s": 1.0289068222045898,
+   "peak_gb": null
+  },
+  "FK-p60-t1007": {
+   "text": "\\begin{array}{l l}{{}}&{{\\quad\\quad\\quad}}\\\\ {{\\tilde{z}(N,T,P)=\\int_{0}^{\\infty}\\mathrm{d}V\\mathrm{e}^{-\\beta P V}\\int\\frac{1}{N!}\\displaystyle\\prod_{i=1}^{N}\\frac{\\mathrm{d}^{3}\\tilde{q}_{i}\\mathrm{d}^{3}\\tilde{p}_{i}}{h^{3}}\\exp\\left[-\\beta\\sum_{i=1}^{N}\\frac{p_{i}^{2}}{2m}\\right]}}\\\\ {{}}&{{=\\int_{0}^{\\infty}\\mathrm{d}V V^{N}\\mathrm{e}^{-\\beta P V}\\frac{1}{N!\\mathrm{d}(T)^{3N}}=\\frac{1}{(\\beta P)^{N+1}\\lambda(T)^{3N}}.}}\\end{array}",
+   "s": 6.103782892227173,
+   "peak_gb": null
+  },
+  "FK-p64-t1075": {
+   "text": "\\left.\\begin{array}{l l}{{P=-\\frac{g}{V}=-\\left.\\frac{\\partial g}{\\partial V}\\right|_{\\mu,\\tau}=k_{B}T\\frac{\\Theta\\mu}{\\lambda^{3}}.}}\\\\ {{\\mathrm{er~and~Ile~chemical~potenial~are~related~by~}}}\\end{array}\\right.",
+   "s": 2.046370029449463,
+   "peak_gb": null
+  },
+  "TK-p04-t55": {
+   "text": "\\left(P+{\\frac{a}{V^{2}}}\\right)(V-b)(L-L_{0})-c[F-K(L-L_{0})]=0,\\qquad\\qquad(1.7)",
+   "s": 0.9939408302307129,
+   "peak_gb": null
+  },
+  "TK-p04-t57": {
+   "text": "\\Theta\\propto\\left(P+\\frac{a}{V^{2}}\\right)(V-b)=c\\left(\\frac{F}{L-L_{0}}-K\\right)=d\\frac{B}{M}.\\qquad\\qquad\\qquad(1.8)",
+   "s": 1.172687292098999,
+   "peak_gb": null
+  },
+  "TK-p14-t275": {
+   "text": "\\mathbf{u}Q_{R}=T_{0}{\\frac{\\mathrm{d}Q}{T}}.\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad(1.23)",
+   "s": 0.5834751129150391,
+   "peak_gb": null
+  },
+  "TK-p17-t334": {
+   "text": "\\begin{array}{l l}{{x_{i}=-~{\\frac{\\partial H}{\\partial J_{i}}}\\ {.}}}\\\\ {{{}}}&{{{}}}\\\\ {{{}}}&{{{}}}\\\\ {{{}}}&{{{\\mathrm{~with~temperature~~are~~related~~to~heat~~capacities~at~}}}}\\\\ {{{}}}&{{{}}}\\end{array}",
+   "s": 2.869990110397339,
+   "peak_gb": null
+  },
+  "TK-p20-t385": {
+   "text": "E(\\lambda S,\\lambda\\mathbf{x},\\lambda\\mathbf{N})=\\lambda E(S,\\mathbf{x},\\lambda\\mathbf{N}).\\qquad\\qquad\\qquad\\qquad\\qquad(1.46)",
+   "s": 0.7513210773468018,
+   "peak_gb": null
+  },
+  "TK-p24-t460": {
+   "text": "\\begin{array}{c}{{\\delta{\\cal S}=-\\frac{2}{T_{A}}\\left[\\delta{\\cal T}_{A}\\left(\\frac{\\delta{\\cal L}_{A}-{\\bf J}_{A}\\cdot\\delta{\\bf A}_{A}-\\mu_{A}\\cdot\\delta{\\bf N}_{A}}{{\\cal T}_{A}}\\right)+\\delta{\\bf J}_{A}\\cdot\\delta{\\bf N}_{A}+\\delta\\mu_{A}\\cdot\\delta{\\bf N}_{A}\\right]}}\\\\ {{=-\\frac{2}{T_{A}}\\left[\\delta{\\cal T}_{A}\\delta S_{A}+\\delta{\\bf J}_{A}\\cdot\\delta{\\bf A}_{A}+\\delta\\mu_{A}\\cdot\\delta{\\bf N}_{A}\\right].}}\\end{array}",
+   "s": 4.933166027069092,
+   "peak_gb": null
+  },
+  "TK-p24-t447": {
+   "text": "({\\cal E}_{B}-\\delta{\\cal E},\\mathrm{\\bf~x}_{B}-\\delta{\\bf x},\\mathrm{\\bf~N}_{B}-\\delta{\\bf N})\\mathrm{~and~}(T_{B}+\\delta T_{B},\\mathrm{\\bf~J}_{B}+\\delta{\\bf J}_{B},\\mathrm{\\bf~\\Delta}\\mu_{B}+\\delta\\mu_{B}).",
+   "s": 2.121149778366089,
+   "peak_gb": null
+  },
+  "TK-p25-t472": {
+   "text": "\\left.\\begin{array}{l l}{{}}&{{}}&{{\\ast}}\\\\ {{C_{\\star}=\\frac{\\bar{\\bf{d}}Q}{\\bar{\\bf{d}}T}\\right\\vert_{\\star}^{\\star}=T\\frac{\\partial S}{\\partial T}\\bigg\\vert_{\\star}^{\\star}\\geq0.}}\\\\ {{}}&{{}}&{{}}\\\\ {{\\vdots}{\\bf{}_{\\star}{\\mathrm{in}}\\;E{\\bf_{q}}.(1.71){\\mathrm\\ ~i s\\;n o n{\\bar{\\bf{p}}}}\\;\\mathrm{response}}}\\end{array}\\right.",
+   "s": 4.1218671798706055,
+   "peak_gb": null
+  },
+  "FP-p06-t65": {
+   "text": "d S(E,N,V)={\\frac{d E}{T}}+{\\frac{P d V}{T}}-{\\frac{\\mu d N}{T}}\\ .\\qquad\\qquad\\qquad(2.16)",
+   "s": 0.8277301788330078,
+   "peak_gb": null
+  },
+  "FP-p15-t194": {
+   "text": "\\begin{array}{r c l}{{\\left(\\frac{\\partial}{\\partial v}\\right)_{V,T}}}&{{=}}&{{\\left(\\frac{\\partial N}{\\partial v}\\right)_{V,T}\\left(\\frac{\\partial}{\\partial N}\\right)_{V,T}=-\\frac{N^{2}}{V}\\left(\\frac{\\partial}{\\partial N}\\right)_{V,T}}}\\\\ {{\\left(\\frac{\\partial}{\\partial v}\\right)_{N,T}}}&{{=}}&{{\\left(\\frac{\\partial}{\\partial V}\\right)_{N,T}\\left(\\frac{\\partial}{\\partial V}\\right)_{N,T}\\cdot\\mathbf{}}}&{{(2.63)}}\\end{array}",
+   "s": 4.568103790283203,
+   "peak_gb": null
+  },
+  "FP-p18-t235": {
+   "text": "(n_{\\bf k})=-k_{B}T\\frac{\\overline{{{n}}}_{s}\\ln[1-\\exp\\{-\\beta(B_{\\bf k}-\\mu)\\}\\}=\\frac{\\overline{{{n}}}\\mathrm{{evn}}\\,t\\beta\\ell F_{\\bf k}\\,-\\,\\mu\\}}{\\mathrm{evn}\\,t\\beta\\ell F_{\\bf k}\\,-\\,\\mu\\nu Y}~.",
+   "s": 1.9730229377746582,
+   "peak_gb": null
+  },
+  "FP-p21-t292": {
+   "text": "Z(1)\\frac{d S(Z(1)Z(2))}{d(Z(1))}=Z(1)\\frac{d S(Z(1))}{d Z(1)}=Z(1)Z(2)\\frac{d S(Z(1)Z(2))}{d(Z(1)Z(2))}",
+   "s": 1.2957508563995361,
+   "peak_gb": null
+  },
+  "FP-p23-t314": {
+   "text": "\\int_{E<H({\\bf x})<E+\\delta E}d{\\bf x}\\rho({\\bf x})=1\\;.\\qquad\\qquad\\qquad\\qquad(2.101)",
+   "s": 0.8938510417938232,
+   "peak_gb": null
+  },
+  "FP-p23-t322": {
+   "text": "\\frac{\\partial}{\\delta\\rho(x)}\\left\\{-k_{B}\\int d^{6N}x[\\rho\\ln(h^{3N}N!\\rho)-\\lambda\\rho]\\right\\}",
+   "s": 0.9364588260650635,
+   "peak_gb": null
+  },
+  "TP-p10-t123": {
+   "text": "\\begin{array}{r l r l r l}{{d A}}&{{=}}&{{d E-d(T S)\\,\\qquad}}&{{\\qquad}}&{{\\qquad}}&{{\\qquad}}&{{\\qquad}}\\\\ {{}}&{{=}}&{{d Q-T d S-S d T-d W\\ .\\qquad}}&{{\\qquad}}&{{\\qquad(1.28)}}\\end{array}",
+   "s": 1.8987371921539307,
+   "peak_gb": null
+  },
+  "TP-p10-t121": {
+   "text": "\\begin{array}{r c l}{{d A}}&{{=}}&{{d E-T d S-S d T}}\\\\ {{}}&{{=}}&{{-S d T+\\sum_{i}X_{i}d x_{i}+\\sum_{j}\\mu_{j}d N_{j}~.}}\\end{array}\\qquad\\qquad(1.27)",
+   "s": 1.8883731365203857,
+   "peak_gb": null
+  },
+  "TP-p16-t221": {
+   "text": "\\begin{array}{c}{{d S=\\left({\\frac{\\partial S_{1}}{\\partial E_{1}}}\\right)_{V_{1}}d E_{1}+\\left({\\frac{\\partial S_{2}}{\\partial E_{2}}}\\right)_{V_{2}}d E_{2}+\\left({\\frac{\\partial S_{1}}{\\partial V_{1}}}\\right)_{E_{1}}d V_{1}+\\left({\\frac{\\partial S_{2}}{\\partial V_{2}}}\\right)_{E_{2}}d V_{2}}}\\\\ {{=\\left[\\left({\\frac{\\partial S_{1}}{\\partial E_{1}}}\\right)_{V_{1}}-\\left({\\frac{\\partial S_{2}}{\\partial E_{2}}}\\right)_{V_{2}}\\right]d E_{1}+\\left[\\left({\\frac{\\partial S_{1}}{\\partial V_{1}}}\\right)_{E_{1}}-\\left({\\frac{\\partial S_{2}}{\\partial V_{2}}}\\right)_{E_{2}}d V_{1}=0\\mathbf{1}\\right)d V_{2}}\\end{array}",
+   "s": 10.083139181137085,
+   "peak_gb": null
+  },
+  "TP-p17-t233": {
+   "text": "G_{1}(P_{0},T_{0})=E_{1}-T_{0}S_{1}+P_{0}V_{1}~.~~~~~~~~~~~~~~~~~~~~~~~~(1.72)",
+   "s": 1.0455553531646729,
+   "peak_gb": null
+  },
+  "TP-p18-t245": {
+   "text": "\\left(\\frac{\\partial T}{\\partial S}\\right)_{V}=\\frac{T}{C_{V}}>0~\\mathrm{or}~~C_{V}>0~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~",
+   "s": 13.3180832862854,
+   "peak_gb": null
+  },
+  "TP-p18-t248": {
+   "text": "\\frac{T}{V K s C_{V}}>\\left(\\frac{\\partial T}{\\partial V}\\right)_{S}^{2}\\,.",
+   "s": 0.6789560317993164,
+   "peak_gb": null
+  },
+  "TP-p24-t315": {
+   "text": "v_{1}(P_{c},T_{c})=\\left.\\frac{\\vartheta y}{\\partial P}\\right|_{P_{s},T_{s}}=v_{2}(P_{c},T_{c})=\\left.\\frac{\\vartheta g_{2}}{\\vartheta P}\\right|_{P_{s},T_{s}}~~~~~~~~~~~~(1.90)",
+   "s": 2.238886833190918,
+   "peak_gb": null
+  },
+  "IFK-p17-51": {
+   "text": "{}^{\\left(\\stackrel{\\cdot}{p}_{1}\\!\\!,\\cdot\\!,\\vec{p}_{2}\\!^{\\prime}\\!\\!,\\vec{b}\\,^{\\prime}\\right)}",
+   "s": 0.8050849437713623,
+   "peak_gb": null
+  },
+  "IFK-p23-116": {
+   "text": "\\begin{array}{c}{{(\\overline{{{p}}}_{1}^{\\ \\ },\\overline{{{p}}}_{2}^{\\ \\prime})}}\\\\ {{\\ldots\\pm}}\\\\ {{\\ldots\\ldots-\\ast}}\\end{array}",
+   "s": 1.102220058441162,
+   "peak_gb": null
+  },
+  "ITK-p12-329": {
+   "text": "(T_{1}>T_{2}>T_{3}).",
+   "s": 0.3062143325805664,
+   "peak_gb": null
+  },
+  "ITK-p18-377": {
+   "text": "\\scriptstyle\\{N_{1,2,2-3...}\\}",
+   "s": 0.2818639278411865,
+   "peak_gb": null
+  }
+ }
+}

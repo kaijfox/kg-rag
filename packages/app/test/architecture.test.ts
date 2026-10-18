@@ -14,13 +14,14 @@ function walk(dir: string): string[] {
 }
 
 describe('architecture', () => {
-  it('package.json: only app depends on siblings; others on @kg/core, and on @kg/testkit as a devDependency', () => {
+  it('package.json: only app depends on siblings; others on @kg/core, search/ingest/eval also on @kg/pipeline, and on @kg/testkit as a devDependency', () => {
     for (const p of pkgs) {
       const j = JSON.parse(readFileSync(join(ROOT, p, 'package.json'), 'utf8')) as { name: string; dependencies?: Record<string, string>; devDependencies?: Record<string, string> };
       if (j.name === '@kg/app') continue;
       const deps = Object.keys(j.dependencies ?? {}).filter((d) => d.startsWith('@kg/'));
       const dev = Object.keys(j.devDependencies ?? {}).filter((d) => d.startsWith('@kg/'));
-      expect(deps.filter((d) => d !== '@kg/core'), `${j.name} dependencies`).toEqual([]);
+      const allowedDeps = ['@kg/core', ...(['@kg/search', '@kg/ingest', '@kg/eval'].includes(j.name) ? ['@kg/pipeline'] : [])];
+      expect(deps.filter((d) => !allowedDeps.includes(d)), `${j.name} dependencies`).toEqual([]);
       expect(dev.filter((d) => d !== '@kg/testkit'), `${j.name} devDependencies`).toEqual([]);
       if (j.name === '@kg/core') expect([...deps, ...dev]).toEqual([]);
     }

@@ -1,0 +1,239 @@
+{
+ "tag": "granite_docling_258m_mlx_tight",
+ "repo": "ibm-granite/granite-docling-258M-mlx",
+ "prompt": "<formula>",
+ "load_s": 0.7004988193511963,
+ "results": {
+  "FK-p09-t137": {
+   "text": "<loc_0><loc_0><loc_500><loc_500>\\frac { 1 } { \\tau _ { U } } \\sim \\frac { \\partial U } { \\partial \\vec { q } } \\cdot \\frac { \\partial } { \\partial \\vec { p } }</formula>",
+   "s": 1.2940099239349365,
+   "gen_tokens": 67,
+   "peak_gb": 1.45826007,
+   "finish": "stop"
+  },
+  "FK-p19-t277": {
+   "text": "<loc_0><loc_0><loc_500><loc_500>\\ln f _ { 1 } ( \\vec { p } _ { 1 } , \\vec { q } \\, ) + \\ln f _ { 1 } ( \\vec { p } _ { 2 } , \\vec { q } \\, ) = \\ln f _ { 1 } ( \\vec { p } _ { 1 } \\, ^ { \\prime } , \\vec { q } \\, ) + \\ln f _ { 1 } ( \\vec { p } _ { 2 } \\, ^ { \\prime } , \\vec { q } \\, ) .</formula>",
+   "s": 0.9567906856536865,
+   "gen_tokens": 148,
+   "peak_gb": 1.413769719,
+   "finish": "stop"
+  },
+  "FK-p20-t290": {
+   "text": "<loc_0><loc_0><loc_500><loc_500>f _ { 1 } ( \\vec { p } , \\vec { q } \\, ) = n \\left ( \\frac { \\beta } { 2 \\pi m } \\right ) ^ { 3 / 2 } \\exp \\left [ - \\frac { \\beta ( \\vec { p } - \\vec { p } _ { 0 } ) ^ { 2 } } { 2 m } \\right ] , \\quad \\ \\ ( 3 . 5 6 )</formula>",
+   "s": 0.8489573001861572,
+   "gen_tokens": 126,
+   "peak_gb": 1.413769719,
+   "finish": "stop"
+  },
+  "FK-p27-t426": {
+   "text": "<loc_0><loc_0><loc_500><loc_500>v _ { \\ell } = \\sqrt { \\frac { 5 \\, k _ { B } \\overline { T } } { 3 } } \\, \\quad ( 3 . 1 0 6 )</formula>",
+   "s": 0.6829230785369873,
+   "gen_tokens": 68,
+   "peak_gb": 1.413769719,
+   "finish": "stop"
+  },
+  "FK-p28-t439": {
+   "text": "<loc_0><loc_0><loc_500><loc_500>\\mathcal { L } \\left [ \\ln f _ { 1 } ^ { 0 } \\right ] & = 0 - \\frac { m c ^ { 2 } } { 3 k _ { B } T } \\partial _ { \\alpha } u _ { \\alpha } + c _ { \\alpha } \\left [ \\left ( \\frac { F _ { \\alpha } } { k _ { B } T } - \\frac { \\partial _ { \\alpha } n } { n } - \\frac { \\partial _ { \\alpha } T } { T } \\right ) + \\left ( \\frac { \\partial _ { \\alpha } n } { n } - \\frac { 3 } { 2 } \\frac { \\partial _ { \\alpha } T } { T } \\right ) - \\frac { F _ { \\alpha } } { k _ { B } T } \\right ] \\\\ & \\quad + \\frac { m c ^ { 2 } } { 2 k _ { B } T ^ { 2 } } c _ { \\alpha } \\partial _ { \\alpha } T + \\frac { m } { k _ { B } T } c _ { \\alpha } c _ { \\beta } u _ { \\alpha \\beta } \\\\ & = \\frac { m } { k _ { B } T } \\left ( c _ { \\alpha } c _ { \\beta } - \\frac { \\delta _ { \\alpha \\beta } } { 3 } c ^ { 2 } \\right ) u _ { \\alpha \\beta } + \\left ( \\frac { m c ^ { 2 } } { 2 k _ { B } T } - \\frac { 5 } { 2 } \\right ) \\frac { c _ { \\alpha } } { T } \\partial _ { \\alpha } T . \\\\</formula>",
+   "s": 2.385488271713257,
+   "gen_tokens": 425,
+   "peak_gb": 1.430616022,
+   "finish": "stop"
+  },
+  "FK-p56-t936": {
+   "text": "<loc_0><loc_0><loc_500><loc_500>\\langle \\mathcal { H } ^ { n } \\rangle _ { c } = ( - 1 ) ^ { n } \\frac { \\partial ^ { n } \\ln Z } { \\partial \\beta ^ { n } } . \\quad ( 4 . 6 7 )</formula>",
+   "s": 0.721843957901001,
+   "gen_tokens": 81,
+   "peak_gb": 1.413769719,
+   "finish": "stop"
+  },
+  "FK-p60-t1007": {
+   "text": "<loc_0><loc_0><loc_500><loc_500>\\mathcal { Z } ( N , T , P ) = & \\int _ { 0 } ^ { \\infty } \\mathrm d V \\mathrm e ^ { - \\beta P V } \\int \\, \\frac { 1 } { N ! } \\prod _ { i = 1 } ^ { N } \\frac { \\mathrm d ^ { 3 } \\vec { q } _ { i } \\mathrm d ^ { 3 } \\vec { p } _ { i } } { h ^ { 3 } } \\exp \\left [ - \\beta \\sum _ { i = 1 } ^ { N } \\frac { p _ { i } ^ { 2 } } { 2 m } \\right ] \\\\ = & \\int _ { 0 } ^ { \\infty } \\mathrm d V V ^ { N } \\, \\mathrm e ^ { - \\beta P V } \\frac { 1 } { N ! \\lambda ( T ) ^ { 3 N } } = \\frac { 1 } { ( \\beta P ) ^ { N + 1 } \\, \\lambda ( T ) ^ { 3 N } } .</formula>",
+   "s": 1.4363987445831299,
+   "gen_tokens": 271,
+   "peak_gb": 1.413769719,
+   "finish": "stop"
+  },
+  "FK-p64-t1075": {
+   "text": "<loc_0><loc_0><loc_500><loc_500>P = - \\frac { \\mathcal { G } } { V } = - \\, \\frac { \\partial \\mathcal { G } } { \\partial V } \\Big | _ { \\mu , T } = k _ { B } T \\frac { \\mathbf e ^ { \\beta \\mu } } { \\lambda ^ { 3 } } .</formula>",
+   "s": 0.759009838104248,
+   "gen_tokens": 98,
+   "peak_gb": 1.413769719,
+   "finish": "stop"
+  },
+  "TK-p04-t55": {
+   "text": "<loc_0><loc_0><loc_500><loc_500>\\left ( P + \\frac { a } { V ^ { 2 } } \\right ) & \\left ( V - b \\right ) \\left ( L - L _ { 0 } \\right ) - c [ F - K ( L - L _ { 0 } ) ] = 0 , & & ( 1 . 7 ) \\\\ & \\left ( P + \\frac { a } { V ^ { 2 } } \\right ) \\left ( V - b \\right ) M - d B = 0 . & &</formula>",
+   "s": 0.9448161125183105,
+   "gen_tokens": 135,
+   "peak_gb": 1.413769719,
+   "finish": "stop"
+  },
+  "TK-p04-t57": {
+   "text": "<loc_0><loc_0><loc_500><loc_500>\\Theta \\, \\infty \\, \\left ( P + \\frac { a } { V ^ { 2 } } \\right ) \\, \\left ( V - b \\right ) = c \\, \\left ( \\frac { F } { L - L _ { 0 } } - K \\right ) = d \\frac { B } { M } . \\quad \\ \\ ( 1 . 8 )</formula>",
+   "s": 0.8198020458221436,
+   "gen_tokens": 108,
+   "peak_gb": 1.413769719,
+   "finish": "stop"
+  },
+  "TK-p14-t275": {
+   "text": "<loc_0><loc_0><loc_500><loc_500>\\mathfrak { d } Q _ { R } = T _ { 0 } \\frac { \\mathfrak { d } Q } { T } . \\quad ( 1 . 2 3 )</formula>",
+   "s": 0.6518881320953369,
+   "gen_tokens": 64,
+   "peak_gb": 1.413769719,
+   "finish": "stop"
+  },
+  "TK-p17-t334": {
+   "text": "<loc_0><loc_0><loc_500><loc_500>x _ { i } = - \\, \\frac { \\partial H } { \\partial J _ { i } } \\Big | _ { | _ { S , J _ { j \\neq i } } } .</formula>",
+   "s": 0.6942830085754395,
+   "gen_tokens": 66,
+   "peak_gb": 1.413769719,
+   "finish": "stop"
+  },
+  "TK-p20-t385": {
+   "text": "<loc_0><loc_0><loc_500><loc_500>E ( \\lambda S , \\lambda { \\mathbf x } , \\lambda { \\mathbf N } ) = \\lambda E ( S , { \\mathbf x } , { \\mathbf N } ) . & & ( 1 . 4 6 )</formula>",
+   "s": 0.697699785232544,
+   "gen_tokens": 76,
+   "peak_gb": 1.413769719,
+   "finish": "stop"
+  },
+  "TK-p24-t460": {
+   "text": "<loc_0><loc_0><loc_500><loc_500>\\delta S & = - \\frac { 2 } { T _ { A } } \\left [ \\delta T _ { A } \\left ( \\frac { \\delta E _ { A } - \\mathbf J _ { A } \\cdot \\delta \\mathbf x _ { A } - \\mu _ { A } \\cdot \\delta \\mathbf N _ { A } } { T _ { A } } \\right ) + \\delta \\mathbf J _ { A } \\cdot \\delta \\mathbf x _ { A } + \\delta \\mu _ { A } \\cdot \\delta \\mathbf N _ { A } \\right ] \\\\ & = - \\frac { 2 } { T _ { A } } \\left [ \\delta T _ { A } \\delta S _ { A } + \\delta \\mathbf J _ { A } \\cdot \\delta \\mathbf x _ { A } + \\delta \\mu _ { A } \\cdot \\delta \\mathbf N _ { A } \\right ] .</formula>",
+   "s": 1.2968559265136719,
+   "gen_tokens": 240,
+   "peak_gb": 1.413769719,
+   "finish": "stop"
+  },
+  "TK-p24-t447": {
+   "text": "<loc_0><loc_0><loc_500><loc_500>( E _ { B } - \\delta E , \\ { \\mathbf x } _ { B } - \\delta { \\mathbf x } , \\ { \\mathbf N } _ { B } - \\delta { \\mathbf N } ) \\text { and } ( T _ { B } + \\delta T _ { B } , \\ { \\mathbf J } _ { B } + \\delta { \\mathbf J } _ { B } , \\ \\mu _ { B } + \\delta \\mu _ { B } ) . \\quad ( 1 . 6 6 )</formula>",
+   "s": 0.9138169288635254,
+   "gen_tokens": 145,
+   "peak_gb": 1.413769719,
+   "finish": "stop"
+  },
+  "TK-p25-t472": {
+   "text": "<loc_0><loc_0><loc_500><loc_500>C _ { x } = \\frac { \\mathrm d Q } { \\mathrm d T } \\left | _ { x } = T \\, \\frac { \\partial S } { \\partial T } \\right | _ { x } \\geq 0 .</formula>",
+   "s": 0.6942627429962158,
+   "gen_tokens": 75,
+   "peak_gb": 1.413769719,
+   "finish": "stop"
+  },
+  "FP-p06-t65": {
+   "text": "<loc_0><loc_0><loc_500><loc_500>d S ( E , N , V ) = \\frac { d E } { T } + \\frac { P d V } { T } - \\frac { \\mu d N } { T } \\ .</formula>",
+   "s": 0.664330005645752,
+   "gen_tokens": 63,
+   "peak_gb": 1.413769719,
+   "finish": "stop"
+  },
+  "FP-p15-t194": {
+   "text": "<loc_0><loc_0><loc_500><loc_500>\\begin{array} { c c l } { { \\left ( \\frac { \\partial } { \\partial v } \\right ) _ { V , T } } } & { = } & { { \\left ( \\frac { \\partial N } { \\partial v } \\right ) _ { V , T } \\left ( \\frac { \\partial } { \\partial N } \\right ) _ { V , T } = - \\frac { N ^ { 2 } } { V } \\left ( \\frac { \\partial } { \\partial N } \\right ) _ { V , T } } } \\\\ { { \\left ( \\frac { \\partial } { \\partial v } \\right ) _ { N , T } } } & { = } & { { \\left ( \\frac { \\partial V } { \\partial v } \\right ) _ { N , T } \\left ( \\frac { \\partial } { \\partial V } \\right ) _ { N , T } = N \\left ( \\frac { \\partial } { \\partial V } \\right ) _ { N , T } \\, . } } \\end{array}</formula>",
+   "s": 1.4362659454345703,
+   "gen_tokens": 266,
+   "peak_gb": 1.413769719,
+   "finish": "stop"
+  },
+  "FP-p18-t235": {
+   "text": "<loc_0><loc_0><loc_500><loc_500>\\langle n _ { k } \\rangle = - k _ { B } T _ { \\frac { \\partial u } { \\partial u } } \\ln | 1 - \\exp \\{ - \\beta ( E _ { k } - \\mu ) \\} | = \\frac { \\exp \\{ \\beta ( E _ { k } - \\mu ) \\} } { \\sqrt { \\frac { 1 } { 2 } ( E _ { k } - \\mu ) \\sqrt { \\frac { 1 } { 2 } ( E _ { k } - \\mu ) } - 1 } } \\cdot ( 2 . 7 7 )</formula>",
+   "s": 0.9900610446929932,
+   "gen_tokens": 163,
+   "peak_gb": 1.413769719,
+   "finish": "stop"
+  },
+  "FP-p21-t292": {
+   "text": "<loc_0><loc_0><loc_500><loc_500>Z ( 1 ) \\frac { d S ( Z ( 1 ) Z ( 2 ) ) } { d ( Z ( 1 ) ) } = Z ( 1 ) \\frac { d S ( Z ( 1 ) ) } { d Z ( 1 ) } = Z ( 1 ) Z ( 2 ) \\frac { d S ( Z ( 1 ) Z ( 2 ) ) } { d ( Z ( 1 ) Z ( 2 ) ) }</formula>",
+   "s": 0.8837771415710449,
+   "gen_tokens": 123,
+   "peak_gb": 1.413769719,
+   "finish": "stop"
+  },
+  "FP-p23-t314": {
+   "text": "<loc_0><loc_0><loc_500><loc_500>\\int _ { E < H ( { \\mathbf x } ) < E + \\delta E } d { \\mathbf x } \\rho ( { \\mathbf x } ) = 1 \\ .</formula>",
+   "s": 0.6172597408294678,
+   "gen_tokens": 62,
+   "peak_gb": 1.487038623,
+   "finish": "stop"
+  },
+  "FP-p23-t322": {
+   "text": "<loc_0><loc_0><loc_500><loc_500>\\frac { \\delta } { \\delta \\rho ( x ) } \\left \\{ - k _ { B } \\int d ^ { 6 N } x [ \\rho \\ln ( h ^ { 3 N } N ! \\rho ) - \\lambda \\rho ] \\right \\}</formula>",
+   "s": 0.7304408550262451,
+   "gen_tokens": 81,
+   "peak_gb": 1.413769719,
+   "finish": "stop"
+  },
+  "TP-p10-t123": {
+   "text": "<loc_0><loc_0><loc_500><loc_500>\\begin{array} { r c l } { { d A } } & { = } & { { d E - d ( T S ) } } \\\\ & { = } & { { \\dot { d } Q - T d S - S d T - \\dot { d } W } . } \\end{array}</formula>",
+   "s": 0.7573568820953369,
+   "gen_tokens": 88,
+   "peak_gb": 1.413769719,
+   "finish": "stop"
+  },
+  "TP-p10-t121": {
+   "text": "<loc_0><loc_0><loc_500><loc_500>\\begin{array} { r c l } { { d A } } & { = } & { { d E - T d S - S d T } } \\\\ & { = } & { { - S d T + \\sum _ { i } X _ { i } d x _ { i } + \\sum _ { j } \\mu _ { j } d N _ { j } } \\ . } \\end{array} ( 1 . 2 7 )</formula>",
+   "s": 0.8347618579864502,
+   "gen_tokens": 120,
+   "peak_gb": 1.413769719,
+   "finish": "stop"
+  },
+  "TP-p16-t221": {
+   "text": "<loc_0><loc_0><loc_500><loc_500>\\begin{array} { r l r } & { d S = \\left ( \\frac { \\partial S _ { 1 } } { \\partial E _ { 1 } } \\right ) _ { V _ { 1 } } d E _ { 1 } + \\left ( \\frac { \\partial S _ { 2 } } { \\partial E _ { 2 } } \\right ) _ { V _ { 2 } } d E _ { 2 } + \\left ( \\frac { \\partial S _ { 1 } } { \\partial V _ { 1 } } \\right ) _ { E _ { 1 } } d V _ { 1 } + \\left ( \\frac { \\partial S _ { 2 } } { \\partial V _ { 2 } } \\right ) _ { E 2 } d V _ { 2 } } \\\\ & { = \\left [ \\left ( \\frac { \\partial S _ { 1 } } { \\partial E _ { 1 } } \\right ) _ { V _ { 1 } } - \\left ( \\frac { \\partial S _ { 2 } } { \\partial E _ { 2 } } \\right ) _ { V _ { 2 } } \\right ] d E _ { 1 } + \\left [ \\left ( \\frac { \\partial S _ { 1 } } { \\partial V _ { 1 } } \\right ) _ { E _ { 1 } } - \\left ( \\frac { \\partial S _ { 2 } } { \\partial V _ { 2 } } \\right ) _ { E _ { 2 } } \\right ] d V _ { 1 } = 0 } \\end{array} \\, ( 1 . 6 7 )</formula>",
+   "s": 1.9432048797607422,
+   "gen_tokens": 411,
+   "peak_gb": 1.413769719,
+   "finish": "stop"
+  },
+  "TP-p17-t233": {
+   "text": "<loc_0><loc_0><loc_500><loc_500>G _ { 1 } ( P _ { 0 } , T _ { 0 } ) = E _ { 1 } - T _ { 0 } S _ { 1 } + P _ { 0 } V _ { 1 } \\ .</formula>",
+   "s": 0.6545779705047607,
+   "gen_tokens": 75,
+   "peak_gb": 1.413769719,
+   "finish": "stop"
+  },
+  "TP-p18-t245": {
+   "text": "<loc_0><loc_0><loc_500><loc_500>\\left ( \\frac { \\partial T } { \\partial S } \\right ) _ { v } = \\frac { T } { C _ { V } } > 0 \\, \\text { or } \\, C _ { V } > 0</formula>",
+   "s": 0.6505999565124512,
+   "gen_tokens": 73,
+   "peak_gb": 1.413769719,
+   "finish": "stop"
+  },
+  "TP-p18-t248": {
+   "text": "<loc_0><loc_0><loc_500><loc_500>\\frac { T } { V K _ { S } C _ { V } } > \\left ( \\frac { \\partial T } { \\partial V } \\right ) _ { S } ^ { 2 } \\, .</formula>",
+   "s": 0.6368629932403564,
+   "gen_tokens": 67,
+   "peak_gb": 1.413769719,
+   "finish": "stop"
+  },
+  "TP-p24-t315": {
+   "text": "<loc_0><loc_0><loc_500><loc_500>\\upsilon _ { 1 } ( P _ { c } , T _ { c } ) = \\frac { \\partial g _ { 1 } } { \\partial P } \\right | _ { P _ { c } , T _ { c } } = \\upsilon _ { 2 } ( P _ { c } , T _ { c } ) = \\frac { \\partial g _ { 2 } } { \\partial P } \\right | _ { P _ { c } , T _ { c } } \\quad ( 1 . 9 0 )</formula>",
+   "s": 0.8968327045440674,
+   "gen_tokens": 142,
+   "peak_gb": 1.413769719,
+   "finish": "stop"
+  },
+  "IFK-p17-51": {
+   "text": "<loc_0><loc_0><loc_500><loc_500>( \\vec { p } _ { 1 } \\, ^ { \\prime } , \\vec { p } _ { 2 } \\, ^ { \\prime } , \\vec { b } \\, ^ { \\prime } )</formula>",
+   "s": 0.955672025680542,
+   "gen_tokens": 68,
+   "peak_gb": 1.430616022,
+   "finish": "stop"
+  },
+  "IFK-p23-116": {
+   "text": "<loc_0><loc_0><loc_500><loc_500>( \\vec { p } _ { 1 } \\, ^ { \\prime } , \\vec { p } _ { 2 } \\, ^ { \\prime } )</formula>",
+   "s": 0.9136109352111816,
+   "gen_tokens": 55,
+   "peak_gb": 1.430616022,
+   "finish": "stop"
+  },
+  "ITK-p12-329": {
+   "text": "<loc_0><loc_0><loc_500><loc_500>( T _ { 1 } > T _ { 2 } > T _ { 3 } ) .</formula>",
+   "s": 0.5613729953765869,
+   "gen_tokens": 41,
+   "peak_gb": 1.413769719,
+   "finish": "stop"
+  },
+  "ITK-p18-377": {
+   "text": "<loc_0><loc_0><loc_500><loc_500>\\{ N _ { 1 } , N _ { 2 } , \\cdots \\}</formula>",
+   "s": 0.8447391986846924,
+   "gen_tokens": 39,
+   "peak_gb": 1.430616022,
+   "finish": "stop"
+  }
+ }
+}

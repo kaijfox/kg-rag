@@ -40,7 +40,14 @@ interface Golden {
   buildId: { manifest: BuildManifest; canonical: string; itemIds: string[]; id: string };
 }
 const g = goldenIds<Golden>();
-const RECIPES: Record<string, object> = { DEFAULT_PARSE_RECIPE, DEFAULT_CHUNK_RECIPE, DEFAULT_SEARCH_RECIPE };
+const PARSE_RECIPE_WITH_FORMULA_DECODING = {
+  ...DEFAULT_PARSE_RECIPE,
+  spec: {
+    ...DEFAULT_PARSE_RECIPE.spec,
+    formulaDecoding: { model: 'mlx-community/GLM-OCR-4bit', revision: 'rev-test-1', prompt: 'Formula Recognition:', cropMargin: 0.18 },
+  },
+};
+const RECIPES: Record<string, object> = { DEFAULT_PARSE_RECIPE, PARSE_RECIPE_WITH_FORMULA_DECODING, DEFAULT_CHUNK_RECIPE, DEFAULT_SEARCH_RECIPE };
 
 describe('golden ID vectors', () => {
   it('canonicalJson (RFC 8785)', () => {

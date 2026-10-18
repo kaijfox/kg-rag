@@ -251,14 +251,20 @@
   },
   {
    "name": "DEFAULT_SEARCH_RECIPE",
-   "canonical": "{\"kind\":\"search\",\"spec\":{\"steps\":[{\"params\":{\"kinds\":[\"chunk\"],\"pool\":100},\"type\":\"vector-knn\"},{\"params\":{},\"type\":\"truncate\"}]},\"version\":\"1\"}",
-   "id": "rc_dsttj7ftrqu6ebxcedps"
+   "canonical": "{\"kind\":\"search\",\"spec\":{\"machine\":\"similarity\",\"settings\":{\"kinds\":[\"chunk\"],\"pool\":100},\"topology\":\"ab74647e68ade0b3\"},\"version\":\"1\"}",
+   "id": "rc_o3vj74kof7ugqctjnqhn"
+  },
+  {
+   "name": "PARSE_RECIPE_WITH_FORMULA_DECODING",
+   "canonical": "{\"kind\":\"parse\",\"spec\":{\"doclingVersion\":\"2.140.0\",\"formulaDecoding\":{\"cropMargin\":0.18,\"model\":\"mlx-community/GLM-OCR-4bit\",\"prompt\":\"Formula Recognition:\",\"revision\":\"rev-test-1\"},\"options\":{\"do_formula_enrichment\":false,\"do_ocr\":false,\"do_table_structure\":true},\"parser\":\"docling\"},\"version\":\"1\"}",
+   "id": "rc_4bpgxfz75dnmahodh3kc",
+   "why": "formulaDecoding present: a different parse recipe; DEFAULT_PARSE_RECIPE (key absent) is unchanged"
   }
  ],
  "spaceId": {
   "name": "DEFAULT_SPACE",
-  "canonical": "{\"dims\":768,\"documentTemplate\":\"title: {headings} | text: {text}\",\"model\":\"embeddinggemma:latest\",\"queryTemplate\":\"task: search result | query: {query}\"}",
-  "id": "es_edhtnrpirwpjcmeofygk"
+  "canonical": "{\"digest\":\"85462619ee721b466c5927d109d4cb765861907d5417b9109caebc4e614679f1\",\"dims\":768,\"documentTemplate\":\"title: {headings} | text: {text}\",\"formulaView\":\"placeholder\",\"model\":\"embeddinggemma:latest\",\"queryTemplate\":\"task: search result | query: {query}\"}",
+  "id": "es_rw4fhkj5gv6blkrzm4ss"
  },
  "nodeId": [
   {

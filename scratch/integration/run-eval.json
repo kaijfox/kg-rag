@@ -1,0 +1,141 @@
+{
+  "eval": {
+    "questions": 6,
+    "generateMs": 46013,
+    "runMs": 113702,
+    "perQuestionMs": 18950,
+    "summary": {
+      "buildId": "bd_47kbfvjcibeosornddam",
+      "questions": 6,
+      "ks": [
+        1,
+        5
+      ],
+      "byCondition": {
+        "retrieved": {
+          "judge": 1,
+          "retrieval": {
+            "ks": [
+              1,
+              5
+            ],
+            "perQuestion": {
+              "q1": {
+                "recall": {
+                  "1": 1,
+                  "5": 1
+                },
+                "allGold": {
+                  "1": 1,
+                  "5": 1
+                },
+                "withSummaries": {
+                  "1": 1,
+                  "5": 1
+                }
+              },
+              "q2": {
+                "recall": {
+                  "1": 1,
+                  "5": 1
+                },
+                "allGold": {
+                  "1": 1,
+                  "5": 1
+                },
+                "withSummaries": {
+                  "1": 1,
+                  "5": 1
+                }
+              },
+              "q3": {
+                "recall": {
+                  "1": 0,
+                  "5": 1
+                },
+                "allGold": {
+                  "1": 0,
+                  "5": 1
+                },
+                "withSummaries": {
+                  "1": 0,
+                  "5": 1
+                }
+              },
+              "q4": {
+                "recall": {
+                  "1": 1,
+                  "5": 1
+                },
+                "allGold": {
+                  "1": 1,
+                  "5": 1
+                },
+                "withSummaries": {
+                  "1": 1,
+                  "5": 1
+                }
+              },
+              "q5": {
+                "recall": {
+                  "1": 1,
+                  "5": 1
+                },
+                "allGold": {
+                  "1": 1,
+                  "5": 1
+                },
+                "withSummaries": {
+                  "1": 1,
+                  "5": 1
+                }
+              },
+              "q6": {
+                "recall": {
+                  "1": 1,
+                  "5": 1
+                },
+                "allGold": {
+                  "1": 1,
+                  "5": 1
+                },
+                "withSummaries": {
+                  "1": 1,
+                  "5": 1
+                }
+              }
+            },
+            "overall": {
+              "recall": {
+                "1": 0.8333333333333334,
+                "5": 1
+              },
+              "withSummaries": {
+                "1": 0.8333333333333334,
+                "5": 1
+              }
+            },
+            "byType": {
+              "single-hop": {
+                "n": 6,
+                "recall": {
+                  "1": 0.8333333333333334,
+                  "5": 1
+                },
+                "allGold": {
+                  "1": 0.8333333333333334,
+                  "5": 1
+                }
+              }
+            }
+          }
+        },
+        "gold": {
+          "judge": 1
+        }
+      },
+      "orphaned": []
+    },
+    "runId": "er_01M58MPEFQ4E8W8MGE2M7WE355"
+  }
+}

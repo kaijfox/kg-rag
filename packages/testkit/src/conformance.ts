@@ -8,6 +8,7 @@ export * from './conformance/evalrepo';
 export * from './conformance/store';
 export * from './conformance/eventlog';
 export * from './conformance/search';
+export * from './conformance/machine';
 export * from './conformance/searchFixture';
 export * from './conformance/kgapi';
 export * from './conformance/ingest';

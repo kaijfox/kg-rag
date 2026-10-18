@@ -10,8 +10,10 @@ import {
   type DocKey,
   type EmbeddingSpaceSpec,
   type EventEnvelope,
+  type MachineMap,
   type ParseArtifact,
   type ParseRecipeSpec,
+  type RecipeId,
 } from '@kg/core';
 import type { FixtureEntry } from './fakes/parser';
 
@@ -66,10 +68,12 @@ export const miniParseRecipe = (): ParseRecipeSpec => miniArtifact(1, 'gas').rec
 /** The embedding space used with HashEmbedder in fixtures (search/queries.json expectations depend on it). */
 export const HASH_SPACE: EmbeddingSpaceSpec = {
   model: 'hash-bow-4096',
+  digest: 'fake-hash-bow-4096', // no real model: a fake digest
   dims: 4096,
   documentTemplate: '{headings}\n{text}',
   /** non-identity on purpose: a search that skips the template embeds different text (review M23); 'question' occurs nowhere in the corpus, so rankings equal the bare query's */
   queryTemplate: 'question: {query}',
+  formulaView: 'placeholder',
 };
 export const miniConfig = (): DatabaseConfig => ({
   parseRecipe: miniParseRecipe(),
@@ -118,7 +122,21 @@ export function logFixture(name: LogFixture): EventEnvelope[] {
     .map((l) => validateEventEnvelope(JSON.parse(l)));
 }
 
+// ---------------------------------------------------------------- machine (contract 0.6.0)
+/** The hand-written MachineMap of the similarity search machine (fixtures/machine/search-map.json). */
+export const machineMapFixture = (): MachineMap => json<MachineMap>('machine/search-map.json');
+/** The events of one recorded search run that the map describes (fixtures/machine/search-run.jsonl). */
+export function machineRunFixture(): EventEnvelope[] {
+  return readFileSync(new URL('machine/search-run.jsonl', FIXTURES_DIR), 'utf8')
+    .split('\n')
+    .filter((l) => l.trim() !== '')
+    .map((l) => validateEventEnvelope(JSON.parse(l)));
+}
+
 // ---------------------------------------------------------------- eval
+/** Contract 0.6.1: the judge and answerer that the reference eval runner and the session-eval log fixture record. */
+export const REFERENCE_JUDGE = { recipeId: 'rc_fmzaecx2stduxxewhf62' as RecipeId, model: 'qwen3.5:latest' };
+export const REFERENCE_ANSWERER = { model: 'qwen3.5:latest', promptDigest: '0db52f4076c082518412afd3dd3576e2cb0c63703fd7fed5e23ade60efef31d9' };
 export const evalFixture = <T = unknown>(name: 'mini-set' | 'retrievals' | 'expected-metrics' | 'judge-verdicts'): T =>
   name === 'judge-verdicts'
     ? (readFileSync(new URL('eval/judge-verdicts.jsonl', FIXTURES_DIR), 'utf8')

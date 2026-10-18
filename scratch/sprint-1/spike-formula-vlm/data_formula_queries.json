@@ -1,0 +1,25 @@
+{"about": "Retrieval pilot queries about formula-heavy chunks. Written by the spike agent (not blind to the decoded text, so the 'latex' group is biased towards decoding; treat as an upper bound). gold = case-insensitive substring of the prose of the target chunk, within the named document.",
+ "prose": [
+  {"id": "f01", "q": "How do the three partial derivatives of variables obeying f(x, y, z) = 0 relate to each other?", "gold": [["ThermoPlischke", "which is valid for any three variables obeying an equation of state"]]},
+  {"id": "f02", "q": "Second-order expansion of the energy change for fluctuations of entropy and volume, giving the stability requirement", "gold": [["ThermoPlischke", "there is a fluctuation in the entropy and volume of this system"]]},
+  {"id": "f03", "q": "Expression for the differential of the entropy in terms of energy, volume and particle number, connecting statistical mechanics to thermodynamics", "gold": [["FoundationsPlischke", "We are now in a position to make contact with thermodynamics"]]},
+  {"id": "f04", "q": "Splitting the Hamiltonian of N particles into the s-particle part, the remaining particles and an interaction term", "gold": [["FoundationsKardar", "it is convenient to divide the Hamiltonian into"]]},
+  {"id": "f05", "q": "Local equilibrium form of the one-particle density with position-dependent density, temperature and velocity", "gold": [["FoundationsKardar", "we shall assume that in local equilibrium, the density f"]]},
+  {"id": "f06", "q": "Canonical partition function for N non-interacting two-level impurities", "gold": [["FoundationsKardar", "re-examined in the canonical ensemble"]]},
+  {"id": "f07", "q": "Grand partition function as a sum over particle number of fugacity to the N times the canonical partition function", "gold": [["FoundationsKardar", "The normalization factor is the grand partition function"]]},
+  {"id": "f08", "q": "The entropy integral of C over T would diverge at low temperature unless the heat capacity vanishes", "gold": [["ThermoKardar", "Heat capacities must vanish as"]]},
+  {"id": "f09", "q": "Definition of the H function as the integral of f1 ln f1 over one-particle phase space", "gold": [["FoundationsKardar", "is related to the information content of the one-particle PDF"]]},
+  {"id": "f10", "q": "Expanding the exponent around its maximum shows the energy distribution is a narrow Gaussian", "gold": [["FoundationsPlischke", "it is overwhelmingly probable that the energy will be close to the most likely value"]]}
+ ],
+ "latex": [
+  {"id": "l01", "q": "\\left(\\frac{\\partial x}{\\partial y}\\right)_z \\left(\\frac{\\partial y}{\\partial z}\\right)_x \\left(\\frac{\\partial z}{\\partial x}\\right)_y = -1", "gold": [["ThermoPlischke", "which is valid for any three variables obeying an equation of state"]]},
+  {"id": "l02", "q": "\\delta S \\delta V second order fluctuation \\frac{1}{2} \\left( \\frac{\\partial^2 E}{\\partial S^2} \\delta S^2 + 2 \\frac{\\partial^2 E}{\\partial S \\partial V} \\delta S \\delta V + \\frac{\\partial^2 E}{\\partial V^2} \\delta V^2 \\right)", "gold": [["ThermoPlischke", "there is a fluctuation in the entropy and volume of this system"]]},
+  {"id": "l03", "q": "dS = \\frac{1}{T} dE + \\frac{P}{T} dV - \\frac{\\mu}{T} dN", "gold": [["FoundationsPlischke", "We are now in a position to make contact with thermodynamics"]]},
+  {"id": "l04", "q": "\\mathcal{H}_{N} = \\mathcal{H}_s + \\mathcal{H}_{N-s} + \\mathcal{H}_{int}", "gold": [["FoundationsKardar", "it is convenient to divide the Hamiltonian into"]]},
+  {"id": "l05", "q": "f_1(\\vec{p}, \\vec{q}) = \\frac{n(\\vec{q})}{(2\\pi m k_B T(\\vec{q}))^{3/2}} \\exp\\left[-\\frac{(\\vec{p} - m\\vec{u}(\\vec{q}))^2}{2 m k_B T(\\vec{q})}\\right]", "gold": [["FoundationsKardar", "we shall assume that in local equilibrium, the density f"]]},
+  {"id": "l06", "q": "Z = \\sum_{N_1} \\binom{N}{N_1} e^{-\\beta \\epsilon N_1} = (1 + e^{-\\beta\\epsilon})^N", "gold": [["FoundationsKardar", "re-examined in the canonical ensemble"]]},
+  {"id": "l07", "q": "\\mathcal{Q}(\\mu, T, V) = \\sum_{N=0}^{\\infty} e^{\\beta\\mu N} Z(N, T, V)", "gold": [["FoundationsKardar", "The normalization factor is the grand partition function"]]},
+  {"id": "l08", "q": "S(T) - S(0) = \\int_0^T \\frac{C_x(T')}{T'} dT'", "gold": [["ThermoKardar", "Heat capacities must vanish as"]]},
+  {"id": "l09", "q": "H(t) = \\int d^3p\\, d^3q\\, f_1 \\ln f_1", "gold": [["FoundationsKardar", "is related to the information content of the one-particle PDF"]]},
+  {"id": "l10", "q": "\\exp[S(E)/k_B] \\approx \\exp\\left[S(\\langle E\\rangle)/k_B - \\frac{(E-\\langle E\\rangle)^2}{2 k_B T^2 C_V}\\right]", "gold": [["FoundationsPlischke", "it is overwhelmingly probable that the energy will be close to the most likely value"]]}
+ ]}

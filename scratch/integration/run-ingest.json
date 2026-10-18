@@ -1,0 +1,111 @@
+{
+  "firstIngest": {
+    "ms": 8043,
+    "report": {
+      "docs": [
+        {
+          "docKey": "FoundationsKardar",
+          "docVersionId": "dv_v7u3wk6tuzs3id2vmw7s",
+          "unchanged": false,
+          "inserted": 147,
+          "reused": 0,
+          "dropped": 0
+        },
+        {
+          "docKey": "FoundationsPlischke",
+          "docVersionId": "dv_oftn46cq5t3w5aa6uvhp",
+          "unchanged": false,
+          "inserted": 50,
+          "reused": 0,
+          "dropped": 0
+        },
+        {
+          "docKey": "ThermoKardar",
+          "docVersionId": "dv_3yh5pp3fcsh7idrqk2vd",
+          "unchanged": false,
+          "inserted": 76,
+          "reused": 0,
+          "dropped": 0
+        },
+        {
+          "docKey": "ThermoPlischke",
+          "docVersionId": "dv_w2mcshab77ggelaxwzad",
+          "unchanged": false,
+          "inserted": 39,
+          "reused": 0,
+          "dropped": 0
+        }
+      ],
+      "buildId": "bd_47kbfvjcibeosornddam",
+      "buildChanged": true
+    }
+  },
+  "secondIngest": {
+    "ms": 60,
+    "report": {
+      "docs": [
+        {
+          "docKey": "FoundationsKardar",
+          "docVersionId": "dv_v7u3wk6tuzs3id2vmw7s",
+          "unchanged": true,
+          "inserted": 0,
+          "reused": 147,
+          "dropped": 0
+        },
+        {
+          "docKey": "FoundationsPlischke",
+          "docVersionId": "dv_oftn46cq5t3w5aa6uvhp",
+          "unchanged": true,
+          "inserted": 0,
+          "reused": 50,
+          "dropped": 0
+        },
+        {
+          "docKey": "ThermoKardar",
+          "docVersionId": "dv_3yh5pp3fcsh7idrqk2vd",
+          "unchanged": true,
+          "inserted": 0,
+          "reused": 76,
+          "dropped": 0
+        },
+        {
+          "docKey": "ThermoPlischke",
+          "docVersionId": "dv_w2mcshab77ggelaxwzad",
+          "unchanged": true,
+          "inserted": 0,
+          "reused": 39,
+          "dropped": 0
+        }
+      ],
+      "buildId": "bd_47kbfvjcibeosornddam",
+      "buildChanged": false
+    }
+  },
+  "sameBuild": true,
+  "embeddedEvents": [
+    {
+      "payload": "{\"docKey\":\"FoundationsKardar\",\"spaceId\":\"es_rw4fhkj5gv6blkrzm4ss\",\"embedded\":147,\"skipped\":0,\"elapsedMs\":3916.430875}"
+    },
+    {
+      "payload": "{\"docKey\":\"FoundationsPlischke\",\"spaceId\":\"es_rw4fhkj5gv6blkrzm4ss\",\"embedded\":50,\"skipped\":0,\"elapsedMs\":1186.9009999999998}"
+    },
+    {
+      "payload": "{\"docKey\":\"ThermoKardar\",\"spaceId\":\"es_rw4fhkj5gv6blkrzm4ss\",\"embedded\":76,\"skipped\":0,\"elapsedMs\":1774.3519160000005}"
+    },
+    {
+      "payload": "{\"docKey\":\"ThermoPlischke\",\"spaceId\":\"es_rw4fhkj5gv6blkrzm4ss\",\"embedded\":39,\"skipped\":0,\"elapsedMs\":971.2854159999997}"
+    },
+    {
+      "payload": "{\"docKey\":\"FoundationsKardar\",\"spaceId\":\"es_rw4fhkj5gv6blkrzm4ss\",\"embedded\":0,\"skipped\":147,\"elapsedMs\":0.0034589999995660037}"
+    },
+    {
+      "payload": "{\"docKey\":\"FoundationsPlischke\",\"spaceId\":\"es_rw4fhkj5gv6blkrzm4ss\",\"embedded\":0,\"skipped\":50,\"elapsedMs\":0.0024999999986903276}"
+    },
+    {
+      "payload": "{\"docKey\":\"ThermoKardar\",\"spaceId\":\"es_rw4fhkj5gv6blkrzm4ss\",\"embedded\":0,\"skipped\":76,\"elapsedMs\":0.0021660000002157176}"
+    },
+    {
+      "payload": "{\"docKey\":\"ThermoPlischke\",\"spaceId\":\"es_rw4fhkj5gv6blkrzm4ss\",\"embedded\":0,\"skipped\":39,\"elapsedMs\":0.0024159999993571546}"
+    }
+  ]
+}

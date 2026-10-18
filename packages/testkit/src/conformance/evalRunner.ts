@@ -86,6 +86,43 @@ const evalSessionEvents = (log: InMemoryEventLog) => {
   return log.events(s[0]!.sessionId) as EventEnvelope[];
 };
 
+/**
+ * Relative order of one eval session (0.6.1), so both the bracketed shape (pipeline.started before eval.run.started,
+ * pipeline.finished after eval.run.completed) and the unbracketed one pass: eval.run.started follows the outer
+ * tool.called and precedes the first eval.question.scored and every nested query; eval.run.completed follows the last
+ * eval.question.scored; tool.returned is last; a present pipeline.started precedes eval.run.started and a present
+ * pipeline.finished follows eval.run.completed.
+ */
+export function expectEvalRunOrder(evs: EventEnvelope[]) {
+  const idx = (t: string) => evs.flatMap((e, i) => (e.type === t ? [i] : []));
+  const [called] = idx('tool.called');
+  const started = idx('eval.run.started');
+  const completed = idx('eval.run.completed');
+  expect(started.length, 'eval.run.started events').toBe(1);
+  expect(completed.length, 'eval.run.completed events').toBe(1);
+  expect(called, 'an outer tool.called exists').toBeDefined();
+  expect(started[0]!, 'eval.run.started after tool.called').toBeGreaterThan(called!);
+  const scored = idx('eval.question.scored');
+  const queries = idx('query');
+  for (const i of [...scored, ...queries]) expect(started[0]!, `eval.run.started precedes ${evs[i]!.type} at ${i}`).toBeLessThan(i);
+  if (scored.length > 0) expect(completed[0]!, 'eval.run.completed after the last eval.question.scored').toBeGreaterThan(scored.at(-1)!);
+  expect(completed[0]!).toBeGreaterThan(started[0]!);
+  expect(evs.at(-1)!.type, 'tool.returned is last').toBe('tool.returned');
+  expect(evs.filter((e) => e.type === 'tool.returned').length).toBe(evs.filter((e) => e.type === 'tool.called').length);
+  // nested searches bracket themselves (pipeline 'search'); only the eval-run bracket is meant here
+  const own = (t: string) => idx(t).filter((i) => (evs[i]!.payload as { pipeline?: string }).pipeline === 'eval-run');
+  const ps = own('pipeline.started');
+  const pf = own('pipeline.finished');
+  expect(ps.length, 'pipeline.started at most once').toBeLessThanOrEqual(1);
+  expect(pf.length, 'pipeline.finished at most once').toBeLessThanOrEqual(1);
+  expect(ps.length, 'pipeline.started and pipeline.finished come together').toBe(pf.length);
+  if (ps.length === 1) {
+    expect(ps[0]!, 'pipeline.started precedes eval.run.started').toBeLessThan(started[0]!);
+    expect(pf[0]!, 'pipeline.finished follows eval.run.completed').toBeGreaterThan(completed[0]!);
+    expect(pf[0]!, 'pipeline.finished precedes tool.returned').toBeLessThan(evs.length - 1);
+  }
+}
+
 export function evalRunnerConformance(runEval: RunEval): Suite {
   const CONDS = ['no-context', 'gold', 'retrieved'];
   const KS = [1, 3, 5];
@@ -102,9 +139,7 @@ export function evalRunnerConformance(runEval: RunEval): Suite {
           const outer = calls[0]!;
           expect((outer.payload as { tool: string }).tool).toBe('eval_run');
           expect(outer.parentId).toBeNull();
-          expect(evs[2]!.type).toBe('eval.run.started');
-          expect(evs.at(-2)!.type).toBe('eval.run.completed');
-          expect(evs.at(-1)!.type).toBe('tool.returned');
+          expectEvalRunOrder(evs);
           const searches = calls.slice(1);
           expect(searches.map((c) => (c.payload as { tool: string }).tool)).toEqual(e.set.questions.map(() => 'search'));
           for (const c of searches) expect(c.parentId, 'P-3: nested search is parented to eval_run').toBe(outer.id);
@@ -115,6 +150,19 @@ export function evalRunnerConformance(runEval: RunEval): Suite {
             else expect(s.searchId).toBeNull();
           }
           for (const x of evs.filter((y) => y.type === 'llm.called')) expect(x.parentId).toBe(outer.id);
+        },
+      },
+      {
+        name: 'Rule 4 (0.6.1): eval.run.started and the persisted run config record the judge (recipe, model) and the answerer (model, prompt digest)',
+        async run() {
+          const e = await env();
+          const out = await runEval(e.deps, e.set, { conditions: CONDS, ks: KS, buildId: e.mc.builds.v1, allowStale: true });
+          const started = evalSessionEvents(e.log).find((x): x is EventEnvelope<'eval.run.started'> => x.type === 'eval.run.started')!;
+          expect(started.payload.judge, 'judge on eval.run.started').toBeDefined();
+          expect(started.payload.answerer, 'answerer on eval.run.started').toBeDefined();
+          const config = e.repo.getRun(out.runId)!.config;
+          expect(config.judge).toEqual(started.payload.judge);
+          expect(config.answerer).toEqual(started.payload.answerer);
         },
       },
       {

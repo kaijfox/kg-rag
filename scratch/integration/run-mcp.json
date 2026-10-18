@@ -1,0 +1,45 @@
+{
+  "tools": [
+    "search",
+    "get_items",
+    "feedback",
+    "report_usage",
+    "report_outcome",
+    "ingest",
+    "snapshot_build",
+    "add_note"
+  ],
+  "mcp": {
+    "searchMs": 73,
+    "searchId": "sr_01M58MN0ZSTGP6MTYT9SDTA3DW",
+    "feedback": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"eventId\":\"ev_01M58MN121G92JY27G4JSNTQ0G\"}"
+        }
+      ],
+      "structuredContent": {
+        "eventId": "ev_01M58MN121G92JY27G4JSNTQ0G"
+      }
+    },
+    "badSearch": {
+      "content": [
+        {
+          "type": "text",
+          "text": "invalid_input: search: query: Too small: expected string to have >=1 characters; k: Invalid input: expected number, received undefined"
+        }
+      ],
+      "isError": true
+    },
+    "badFeedback": {
+      "content": [
+        {
+          "type": "text",
+          "text": "not_found: unknown search sr_0000000000000000000000ZZZZ"
+        }
+      ],
+      "isError": true
+    }
+  }
+}

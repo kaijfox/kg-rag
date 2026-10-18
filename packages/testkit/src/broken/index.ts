@@ -8,14 +8,17 @@ import {
   createKgApi,
   defaultDocKey,
   docVersionId,
+  errorCodeOf,
   recipeId,
   renderDocument,
   sha256hex,
   sortCandidates,
+  type Candidate,
   spaceId,
   toRankedRefs,
   type AnyItem,
   type Chunker,
+  type ChunkViewRenderer,
   type ChunkId,
   type CorpusStore,
   type Ctx,
@@ -30,6 +33,7 @@ import {
   type KnnQuery,
   type LlmRequest,
   type LlmResponse,
+  type MachineMap,
   type Parser,
   type ParseArtifact,
   type ParseRecipeSpec,
@@ -101,6 +105,14 @@ export class MutableStore extends InMemoryCorpusStore {
     }
   }
 }
+/** Store: re-putting an existing doc version silently keeps the first chunk list (violates CP-01b). */
+export class SilentDocVersionStore extends InMemoryCorpusStore {
+  override putDocVersion(v: Parameters<InMemoryCorpusStore['putDocVersion']>[0], chunks: Parameters<InMemoryCorpusStore['putDocVersion']>[1]) {
+    const existing = this.s.docVersions.get(v.id);
+    if (existing) return { inserted: [], reused: [...existing.chunkIds] };
+    return super.putDocVersion(v, chunks);
+  }
+}
 /** Store: KNN ignores the build (superseded chunks leak into results). */
 export class LeakyKnnStore extends InMemoryCorpusStore {
   protected override candidateIds(q: KnnQuery): ItemId[] {
@@ -160,6 +172,31 @@ export class UnrankedStep implements SearchStep {
   }
 }
 
+/** Steps (P-1): wipe the pools they were given. */
+export class PoolDroppingStep implements SearchStep {
+  readonly type = 'pool-dropping';
+  async run(state: Readonly<SearchState>) {
+    const refs = toRankedRefs(sortCandidates(state.candidates));
+    return { state: { ...state, pools: {} }, trace: { stepType: this.type, params: {}, considered: refs, output: refs } };
+  }
+}
+/** An `into` step that writes the hits to candidates as well (and keeps the pool unsorted/duplicated). */
+export class PoolLeakingStep implements SearchStep {
+  readonly type = 'pool-leaking';
+  constructor(private readonly name: string, private readonly fixed: readonly Candidate[]) {}
+  async run(state: Readonly<SearchState>) {
+    const candidates = sortCandidates([...state.candidates, ...this.fixed]);
+    const pool = [...this.fixed, ...this.fixed]; // duplicated, unsorted
+    const refs = toRankedRefs(candidates);
+    return { state: { ...state, candidates, pools: { ...state.pools, [this.name]: pool } }, trace: { stepType: this.type, params: {}, considered: refs, output: refs, pools: { [this.name]: toRankedRefs(pool) } } };
+  }
+}
+
+/** A context whose emit drops every event type the predicate names (the rest is logged as usual). */
+function withoutEvents(ctx: Ctx, drop: (type: string) => boolean): Ctx {
+  return { ...ctx, emit: ((t: string, p: never, o: never) => (drop(t) ? (undefined as never) : ctx.emit(t as never, p, o))) as Ctx['emit'] };
+}
+
 /** SearchService: forgets to emit search.step (the log could not explain the ranking). */
 export class NoTraceSearchService implements SearchService {
   private readonly inner: ScriptedSearchService;
@@ -167,8 +204,18 @@ export class NoTraceSearchService implements SearchService {
     this.inner = new ScriptedSearchService(script, currentBuild);
   }
   async search(ctx: Ctx, req: SearchRequest): Promise<SearchResponse> {
-    const silent: Ctx = { ...ctx, emit: ((t: string, p: never, o: never) => (t === 'search.step' ? (undefined as never) : ctx.emit(t as never, p, o))) as Ctx['emit'] };
-    return this.inner.search(silent, req);
+    return this.inner.search(withoutEvents(ctx, (t) => t === 'search.step'), req);
+  }
+}
+
+/** SearchService: forgets the pipeline.started / pipeline.finished bracket (the log cannot say which machine ran). */
+export class PipelinelessSearchService implements SearchService {
+  private readonly inner: ScriptedSearchService;
+  constructor(script: Record<string, readonly ScriptedHit[]>, currentBuild: () => BuildId) {
+    this.inner = new ScriptedSearchService(script, currentBuild);
+  }
+  async search(ctx: Ctx, req: SearchRequest): Promise<SearchResponse> {
+    return this.inner.search(withoutEvents(ctx, (t) => t.startsWith('pipeline.')), req);
   }
 }
 
@@ -195,13 +242,31 @@ export class RepeatingIds implements IdGen {
   }
 }
 
+const EAGER_INGEST_TOPOLOGY = '0000000000000000';
+
 /**
  * IngestService: a naive ingest that writes the doc version and moves the current pointer before
  * embedding, never consults the artifact cache, and cannot import artifacts.
  */
 export class EagerIngestService implements IngestService {
-  constructor(private readonly d: { store: CorpusStore; parser: Parser; chunker: Chunker; embedder: Embedder; config: DatabaseConfig }) {}
+  constructor(
+    private readonly d: { store: CorpusStore; parser: Parser; chunker: Chunker; embedder: Embedder; config: DatabaseConfig; chunkView: ChunkViewRenderer },
+    /** false (default): the chunk view is ignored, which is the defect the chunkView scenario catches */
+    private readonly applyView = false,
+  ) {}
   async ingest(ctx: Ctx, req: IngestRequest): Promise<IngestReport> {
+    ctx.emit('pipeline.started', { pipeline: 'ingest', machine: 'ingest', version: '1', topology: EAGER_INGEST_TOPOLOGY, recipeId: null });
+    try {
+      const out = await this.run(ctx, req);
+      ctx.emit('pipeline.finished', { pipeline: 'ingest', status: 'done', state: 'done' });
+      return out;
+    } catch (e) {
+      const message = e instanceof Error ? e.message : String(e);
+      ctx.emit('pipeline.finished', { pipeline: 'ingest', status: 'failed', state: 'failed', error: { code: errorCodeOf(e), message } });
+      throw e;
+    }
+  }
+  private async run(ctx: Ctx, req: IngestRequest): Promise<IngestReport> {
     const { store, parser, chunker, embedder, config } = this.d;
     if (!req.sources) throw new KgError('not_implemented', 'artifact import not supported');
     const parseRid = store.putRecipe(config.parseRecipe);
@@ -222,7 +287,7 @@ export class EagerIngestService implements IngestService {
       store.setCurrentDocVersion(docKey, v.id);
       ctx.emit('ingest.chunked', { docKey, docVersionId: v.id, chunkCount: drafts.length, inserted: r.inserted.length, reused: r.reused.length, dropped: 0 });
       const missing = store.missingEmbeddings(space, v.chunkIds);
-      const vecs = await embedder.embed(missing.map((id) => renderDocument(config.space, drafts.find((x) => x.id === id)!)));
+      const vecs = await embedder.embed(missing.map((id) => ((x) => renderDocument(config.space, this.applyView ? { ...x, text: this.d.chunkView(a, x.blockRefs, x.text, config.space.formulaView) } : x))(drafts.find((x) => x.id === id)!)));
       store.putEmbeddings(space, missing.map((id, i) => ({ itemId: id, vector: vecs[i]! })));
       ctx.emit('ingest.embedded', { docKey, spaceId: space, embedded: missing.length, skipped: v.chunkIds.length - missing.length, elapsedMs: 0 });
       ctx.emit('ingest.completed', { docKey, docVersionId: v.id, unchanged: false });
@@ -235,4 +300,60 @@ export class EagerIngestService implements IngestService {
     ctx.emit('build.created', { buildId: id, parentId: prev, mixedRecipes: b.manifest.mixedRecipes, itemCount: b.itemIds.length }, { buildId: id });
     return { docs, buildId: id, buildChanged: id !== prev };
   }
+}
+
+/** IngestService: the eager ingest without its pipeline.started / pipeline.finished bracket. */
+export class PipelinelessIngestService extends EagerIngestService {
+  override async ingest(ctx: Ctx, req: IngestRequest): Promise<IngestReport> {
+    return super.ingest(withoutEvents(ctx, (t) => t.startsWith('pipeline.')), req);
+  }
+}
+
+/** MachineMap: the final state 'failed' is renamed 'halted' (valid as a map, but no 'failed' final). */
+export function mapWithoutFailedFinal(map: MachineMap): MachineMap {
+  const m = structuredClone(map);
+  for (const n of m.nodes) if (n.id === 'failed') n.id = 'halted';
+  for (const e of m.edges) if (e.to === 'failed') e.to = 'halted';
+  return m;
+}
+/** MachineMap: adds a work state that nothing moves to (it still has moves out, so the map stays structurally valid). */
+export function mapWithUnreachableNode(map: MachineMap): MachineMap {
+  const m = structuredClone(map);
+  m.nodes.push({ id: 'orphan', parent: null, kind: 'work', label: 'orphan', logs: ['search.step'], step: 'rerank', loop: false });
+  m.edges.push({ from: 'orphan', to: 'cut', event: 'done', guard: null }, { from: 'orphan', to: 'failed', event: 'error', guard: null });
+  return m;
+}
+/** MachineMap: the work state 'cut' has no step name. */
+export function mapWithSteplessWork(map: MachineMap): MachineMap {
+  const m = structuredClone(map);
+  const cut = m.nodes.find((n) => n.id === 'cut')!;
+  cut.step = null;
+  return m;
+}
+
+/** Log: the first search.step names a state that is not in the map. */
+export function logWithStrayStep(events: EventEnvelope[]): EventEnvelope[] {
+  const out = structuredClone(events);
+  const step = out.find((e): e is EventEnvelope<'search.step'> => e.type === 'search.step')!;
+  step.payload.trace.state = 'rank';
+  return out;
+}
+/** Log: the run never records pipeline.finished, so its last pipeline event is a search.step. */
+export function logWithoutFinish(events: EventEnvelope[]): EventEnvelope[] {
+  return events.filter((e) => e.type !== 'pipeline.finished');
+}
+
+/** Log: an event type no work node of the map declares (a state that logs without saying so in its map entry). */
+export function logWithUndeclaredEvent(events: EventEnvelope[]): EventEnvelope[] {
+  const out = structuredClone(events);
+  const i = out.findIndex((e) => e.type === 'pipeline.finished');
+  const base = out[i]!;
+  out.splice(i, 0, { ...base, type: 'items.fetched', payload: { itemIds: [] } } as unknown as EventEnvelope);
+  return out;
+}
+/** MachineMap: the work states no longer declare the events they log (their logs are emptied but the nodes stay work). */
+export function mapWithoutDeclaredLogs(map: MachineMap): MachineMap {
+  const m = structuredClone(map);
+  for (const n of m.nodes) n.logs = [];
+  return m;
 }

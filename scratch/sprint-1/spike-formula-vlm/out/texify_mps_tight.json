@@ -1,0 +1,173 @@
+{
+ "tag": "texify_mps_tight",
+ "repo": "vikp/texify",
+ "prompt": null,
+ "load_s": 6.483933925628662,
+ "results": {
+  "FK-p09-t137": {
+   "text": "$${\\frac{1}{\\tau_{U}}}\\sim{\\frac{\\partial U}{\\partial{\\vec{q}}}}\\cdot{\\frac{\\partial}{\\partial{\\vec{p}}}}$$",
+   "s": 0.48259520530700684,
+   "peak_gb": 1.26959616
+  },
+  "FK-p19-t277": {
+   "text": "$$\\ln f_{1}(\\bar{p}_{1},\\bar{q}\\,)+\\ln f_{1}(\\bar{p}_{2},\\bar{q}\\,)=\\ln f_{1}(\\bar{p}_{1}\\,^{\\prime},\\bar{q}\\,)+\\ln f_{1}(\\bar{p}_{2}\\,^{\\prime},\\bar{q}\\,).\\tag{3.51}$$",
+   "s": 0.9628980159759521,
+   "peak_gb": 1.26959616
+  },
+  "FK-p20-t290": {
+   "text": "$$f_{1}(\\vec{p},\\vec{q}\\,)=n\\left(\\frac{\\beta}{2\\pi m}\\right)^{3/2}\\exp\\left[-\\frac{\\beta(\\vec{p}-\\vec{p}_{0})^{2}}{2m}\\right],\\tag{3.56}$$",
+   "s": 0.7013959884643555,
+   "peak_gb": 1.277984768
+  },
+  "FK-p27-t426": {
+   "text": "$$v_{\\ell}=\\sqrt{\\frac{5}{3}\\frac{k_{B}\\overline{T}}{m}}\\tag{3.106}$$",
+   "s": 0.4006791114807129,
+   "peak_gb": 1.26959616
+  },
+  "FK-p28-t439": {
+   "text": "$$\\mathcal{L}\\left[\\ln f_{1}^{0}\\right]=0-\\frac{mc^{2}}{3k_{B}T}\\partial_{a}u_{a}+c_{a}\\left[\\left(\\frac{F_{a}}{k_{B}T}-\\frac{\\partial_{a}n}{n}-\\frac{\\partial_{a}T}{T}\\right)+\\left(\\frac{\\partial_{a}n}{n}-\\frac{3}{2}\\frac{\\partial_{a}T}{T}\\right)-\\frac{F_{a}}{k_{B}T}\\right]$$ $$\\quad+\\frac{mc^{2}}{2k_{B}T}c_{a}\\partial_{a}T+\\frac{m}{k_{B}T}c_{a}c_{\\beta}u_{a\\beta}$$ $$=\\frac{m}{k_{B}T}\\left(c_{a}c_{\\beta}-\\frac{\\delta_{a\\beta}}{3}c^{2}\\right)u_{a\\beta}+\\left(\\frac{mc^{2}}{2k_{B}T}-\\frac{5}{2}\\right)\\frac{c_{a}}{T}\\partial_{a}T.\\tag{3.110}$$",
+   "s": 2.578148126602173,
+   "peak_gb": 1.286373376
+  },
+  "FK-p56-t936": {
+   "text": "$$\\left\\langle{\\cal H}^{n}\\right\\rangle_{c}=(-1)^{n}\\frac{\\partial^{n}\\ln Z}{\\partial\\beta^{n}}.\\tag{4.67}$$",
+   "s": 0.4909849166870117,
+   "peak_gb": 1.277984768
+  },
+  "FK-p60-t1007": {
+   "text": "\n\n**Definition factor is now**\n\n$$\\begin{split}\\mathcal{Z}(N,\\,T,\\,P)&=\\int_{0}^{\\infty}\\mathrm{d}V\\mathrm{e}^{-\\beta PV}\\int\\frac{1}{N!}\\prod_{i=1}^{N}\\frac{\\mathrm{d}^{3}\\vec{q}_{i}\\mathrm{d}^{3}\\vec{p}_{i}}{h^{3}}\\exp\\left[-\\beta\\sum_{i=1}^{N}\\frac{p_{i}^{2}}{2m}\\right]\\\\ &=\\int_{0}^{\\infty}\\mathrm{d}VW^{N}\\ \\mathrm{e}^{-\\beta PV}\\frac{1}{N!\\lambda(T)^{3N}}=\\frac{1}{\\left(\\beta P\\right)^{N+1}\\lambda(T)^{3N}}.\\end{split}\\tag{4.91}$$",
+   "s": 1.9188480377197266,
+   "peak_gb": 1.277984768
+  },
+  "FK-p64-t1075": {
+   "text": "$$P=-\\frac{\\mathcal{G}}{V}=-\\left.\\frac{\\partial\\mathcal{G}}{\\partial V}\\right|_{\\mu,T}=k_{B}T\\frac{\\mathrm{e}^{\\beta\\mu}}{\\lambda^{3}}\\,.\\tag{4.110}$$\n\nare and the chemical potential are related by ",
+   "s": 0.740452766418457,
+   "peak_gb": 1.26959616
+  },
+  "TK-p04-t55": {
+   "text": "$$\\begin{split}\\left(P+\\frac{a}{V^{2}}\\right)(V-b)(L-L_{0})-c[F-K(L-L_{0})]=0,\\\\ \\left(P+\\frac{a}{V^{2}}\\right)(V-b)M-dB=0.\\end{split}\\tag{1.7}$$",
+   "s": 0.7624640464782715,
+   "peak_gb": 1.26959616
+  },
+  "TK-p04-t57": {
+   "text": "$$\\Theta\\propto\\left(P+\\frac{a}{V^{2}}\\right)(V-b)=c\\left(\\frac{F}{L-L_{0}}-K\\right)=d\\frac{B}{M}.\\tag{1.8}$$",
+   "s": 0.5568149089813232,
+   "peak_gb": 1.26959616
+  },
+  "TK-p14-t275": {
+   "text": "$\\mathrm{d}Q_{R}=T_{0}\\,\\frac{\\mathrm{d}Q}{T}$.\n\n",
+   "s": 0.3077540397644043,
+   "peak_gb": 1.26959616
+  },
+  "TK-p17-t334": {
+   "text": "$$x_{i}=-\\left.\\frac{\\partial H}{\\partial J_{i}}\\right|_{S,J_{j\\neq i}}.\\tag{1.32}$$\n\nIn with temperature are related to heat capacities at ",
+   "s": 0.4938480854034424,
+   "peak_gb": 1.277984768
+  },
+  "TK-p20-t385": {
+   "text": "$E(\\lambda S,\\lambda{\\bf x},\\lambda{\\bf N})=\\lambda E(S,{\\bf x},{\\bf N})$. (1.46)",
+   "s": 0.39942002296447754,
+   "peak_gb": 1.26959616
+  },
+  "TK-p24-t460": {
+   "text": "$$\\delta S=-\\frac{2}{T_{A}}\\left[\\delta T_{A}\\left(\\frac{\\delta E_{A}-\\mathbf{J}_{A}\\cdot\\delta\\mathbf{x}_{A}-\\mu_{A}\\cdot\\delta\\mathbf{N}_{A}}{T_{A}}\\right)+\\delta\\mathbf{J}_{A}\\cdot\\delta\\mathbf{x}_{A}+\\delta\\mu_{A}\\cdot\\delta\\mathbf{N}_{A}\\right]\\tag{1.70}$$ $$=-\\frac{2}{T_{A}}\\left[\\delta T_{A}\\delta S_{A}+\\delta\\mathbf{J}_{A}\\cdot\\delta\\mathbf{x}_{A}+\\delta\\mu_{A}\\cdot\\delta\\mathbf{N}_{A}\\right].$$",
+   "s": 1.6143732070922852,
+   "peak_gb": 1.277984768
+  },
+  "TK-p24-t447": {
+   "text": "$$(E_{B}-\\delta E,\\ {\\bf x}_{B}-\\delta{\\bf x},\\ {\\bf N}_{B}-\\delta{\\bf N})\\ {\\rm and}\\ (T_{B}+\\delta T_{B},\\ {\\bf J}_{B}+\\delta{\\bf J}_{B},\\ \\mu_{B}+\\delta\\mu_{B}).\\tag{1.66}$$",
+   "s": 0.9004261493682861,
+   "peak_gb": 1.277984768
+  },
+  "TK-p25-t472": {
+   "text": "$$C_{\\bf x}=\\frac{{\\rm d}Q}{{\\rm d}T}\\bigg{|}_{\\bf x}=T\\left.\\frac{\\partial S}{\\partial T}\\right|_{\\bf x}\\geq0.\\tag{1.74}$$\n\n$\\delta x_{i}$ in Eq. (1.71) is non-zero, the corresponding response ",
+   "s": 0.7752547264099121,
+   "peak_gb": 1.277984768
+  },
+  "FP-p06-t65": {
+   "text": "$$d S(E,N,V)=\\frac{d E}{T}+\\frac{P d V}{T}-\\frac{\\mu d N}{T}.\\tag{2.16}$$",
+   "s": 0.4249229431152344,
+   "peak_gb": 1.277984768
+  },
+  "FP-p15-t194": {
+   "text": "$$\\left(\\frac{\\partial}{\\partial v}\\right)_{V,T}=\\left(\\frac{\\partial N}{\\partial v}\\right)_{V,T}\\left(\\frac{\\partial}{\\partial N}\\right)_{V,T}=-\\frac{N^{2}}{V}\\left(\\frac{\\partial}{\\partial N}\\right)_{V,T}$$ $$\\left(\\frac{\\partial}{\\partial v}\\right)_{N,T}=\\left(\\frac{\\partial V}{\\partial v}\\right)_{N,T}\\left(\\frac{\\partial}{\\partial V}\\right)_{N,T}=N\\left(\\frac{\\partial}{\\partial V}\\right)_{N,T}.\\tag{2.63}$$",
+   "s": 1.5113463401794434,
+   "peak_gb": 1.277984768
+  },
+  "FP-p18-t235": {
+   "text": "$$\\langle n_{\\bf k}\\rangle=-k_{B}T\\frac{\\cdot}{\\partial\\mu}\\ln[1-\\exp\\{-\\beta(E_{\\bf k}-\\mu)\\}]=\\frac{\\cdot}{\\exp\\{\\beta(E_{\\bf k}-\\mu)\\}-1}.\\tag{2.77}$$",
+   "s": 0.7113690376281738,
+   "peak_gb": 1.277984768
+  },
+  "FP-p21-t292": {
+   "text": "$$Z(1)\\frac{d S(Z(1)Z(2))}{d(Z(1))}=Z(1)\\frac{d S(Z(1))}{d Z(1)}=Z(1)Z(2)\\frac{d S(Z(1)Z(2))}{d(Z(1)Z(2))}$$",
+   "s": 0.6826550960540771,
+   "peak_gb": 1.277984768
+  },
+  "FP-p23-t314": {
+   "text": "$$\\int_{E<H({\\bf x})<E+\\delta E}d{\\bf x}\\rho({\\bf x})=1\\ .\\eqno(2.101)$$",
+   "s": 0.41828203201293945,
+   "peak_gb": 1.26959616
+  },
+  "FP-p23-t322": {
+   "text": "$$\\frac{\\delta}{\\delta\\rho(x)}\\left\\{-k_{B}\\int d^{6N}x[\\rho\\ln(h^{3N}N!\\rho)-\\lambda\\rho]\\right\\}$$",
+   "s": 0.48013901710510254,
+   "peak_gb": 1.277984768
+  },
+  "TP-p10-t123": {
+   "text": "$$d A=d E-d(T S)\\tag{1.28}$$ $$=d Q-T d S-S d T-d W\\ .$$",
+   "s": 0.3459000587463379,
+   "peak_gb": 1.26959616
+  },
+  "TP-p10-t121": {
+   "text": "$$\\begin{array}{r c l}{{d A}}&{{=}}&{{d E-T d S-S d T}}\\\\ {{}}&{{=}}&{{-S d T+\\sum_{i}X_{i}d x_{i}+\\sum_{j}\\mu_{j}d N_{j}\\ .}}\\end{array}\\tag{1.27}$$",
+   "s": 0.8206729888916016,
+   "peak_gb": 1.277984768
+  },
+  "TP-p16-t221": {
+   "text": "$$dS=\\left(\\frac{\\partial S_{1}}{\\partial E_{1}}\\right)_{V_{1}}dE_{1}+\\left(\\frac{\\partial S_{2}}{\\partial E_{2}}\\right)_{V_{2}}dE_{2}+\\left(\\frac{\\partial S_{1}}{\\partial V_{1}}\\right)_{E_{1}}dV_{1}+\\left(\\frac{\\partial S_{2}}{\\partial V_{2}}\\right)_{E_{2}}dV_{2}$$\n\n$$=\\left[\\left(\\frac{\\partial S_{1}}{\\partial E_{1}}\\right)_{V_{1}}-\\left(\\frac{\\partial S_{2}}{\\partial E_{2}}\\right)_{V_{2}}\\right]dE_{1}+\\left[\\left(\\frac{\\partial S_{1}}{\\partial V_{1}}\\right)_{E_{1}}-\\left(\\frac{\\partial S_{2}}{\\partial V_{2}}\\right)_{E_{2}}\\right]dV_{1}=0\\tag{1.67}$$",
+   "s": 2.305960178375244,
+   "peak_gb": 1.286373376
+  },
+  "TP-p17-t233": {
+   "text": "$G_{1}(P_{0},T_{0})=E_{1}-T_{0}S_{1}+P_{0}V_{1}$.\n\n",
+   "s": 0.44067883491516113,
+   "peak_gb": 1.26959616
+  },
+  "TP-p18-t245": {
+   "text": "$$\\left(\\frac{\\partial\\Omega}{\\partial S}\\right)_{V}=\\frac{T}{C_{V}}>0\\;\\;\\mbox{or}\\;\\;C_{V}>0\\tag{1.76}$$",
+   "s": 0.5232970714569092,
+   "peak_gb": 1.277984768
+  },
+  "TP-p18-t248": {
+   "text": "$$\\frac{T}{V K_{S}C_{V}}>\\left(\\frac{\\partial T}{\\partial V}\\right)_{S}^{2}.\\tag{1.78}$$",
+   "s": 0.4594848155975342,
+   "peak_gb": 1.277984768
+  },
+  "TP-p24-t315": {
+   "text": "$$v_{1}(P_{c},T_{c})=\\left.\\frac{\\omega g_{1}}{\\partial P}\\right|_{P_{c},T_{c}}=v_{2}(P_{c},T_{c})=\\left.\\frac{\\omega g_{2}}{\\partial P}\\right|_{P_{c},T_{c}}\\tag{1.90}$$",
+   "s": 0.8781771659851074,
+   "peak_gb": 1.277984768
+  },
+  "IFK-p17-51": {
+   "text": "$$(\\vec{p}_{1}\\,^{\\prime},\\vec{p}_{2}\\,^{\\prime},\\vec{b}\\,^{\\prime})$$",
+   "s": 0.3958120346069336,
+   "peak_gb": 1.26959616
+  },
+  "IFK-p23-116": {
+   "text": ".$ (\\vec{p}_1\\,',\\vec{p}_2\\,')$\n\nugh...quantit",
+   "s": 0.29473209381103516,
+   "peak_gb": 1.277984768
+  },
+  "ITK-p12-329": {
+   "text": "$$(T_{1}>T_{2}>T_{3}).$$",
+   "s": 0.22096705436706543,
+   "peak_gb": 1.277984768
+  },
+  "ITK-p18-377": {
+   "text": "* [10] M. C.\n\n",
+   "s": 0.15255188941955566,
+   "peak_gb": 1.26959616
+  }
+ }
+}

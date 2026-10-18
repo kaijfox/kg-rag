@@ -1,5 +1,5 @@
 import type { DocKey, ChunkId } from '../ids';
-import type { ChunkRecipeSpec, ParseArtifact, ParseRecipeSpec } from '../model';
+import type { ChunkRecipeSpec, FormulaView, ParseArtifact, ParseRecipeSpec } from '../model';
 
 export interface SourceRef {
   path: string;
@@ -39,3 +39,20 @@ export interface ChunkDraft {
 
 /** Pure, synchronous, deterministic. The only code that knows docling's JSON layout. */
 export type Chunker = (artifact: ParseArtifact, docKey: DocKey, recipe: ChunkRecipeSpec) => ChunkDraft[];
+
+/**
+ * Renders the embedding text of one chunk under a formula view (0.6.0). Pure, synchronous, deterministic; owned by the
+ * `chunk` package, called by the ingest embed state (the embedder never sees parse structure). `blockRefs` are the
+ * chunk's block refs for the document version (`doc_version_chunks.block_refs`), in reading order; `chunkText` is the
+ * stored chunk text. View `full` returns `chunkText`. View `placeholder` walks the chunk's `formula` blocks in reading
+ * order and replaces each one's text, found in `chunkText` at or after the end of the previous match, with
+ * `[formula]` (formula blocks are never split, so each occurs whole; the walk is positional, not a global search).
+ * A formula block whose text cannot be found in order is an `invalid_input` error. The result is the `{text}` that
+ * `renderDocument` receives.
+ */
+export type ChunkViewRenderer = (
+  artifact: ParseArtifact,
+  blockRefs: readonly string[],
+  chunkText: string,
+  view: FormulaView,
+) => string;

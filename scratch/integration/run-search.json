@@ -1,0 +1,348 @@
+{
+  "queries": [
+    {
+      "kind": "natural",
+      "q": "What does the first law of thermodynamics say about heat and work?",
+      "ms": 76,
+      "searchId": "sr_01M58MMX19N77RQ5M53XDXE5PP",
+      "buildId": "bd_47kbfvjcibeosornddam",
+      "top": [
+        {
+          "score": 0.676,
+          "at": "ThermoKardar#16 p6 [1.3 The first law]"
+        },
+        {
+          "score": 0.635,
+          "at": "ThermoPlischke#5 p3,4 [1.2.1 First law]"
+        },
+        {
+          "score": 0.579,
+          "at": "ThermoKardar#25 p9 [1.4 The second law]"
+        },
+        {
+          "score": 0.571,
+          "at": "ThermoPlischke#6 p4 [1.2.1 First law]"
+        },
+        {
+          "score": 0.554,
+          "at": "ThermoKardar#13 p5 [1.3 The first law]"
+        }
+      ],
+      "topText": "where dE = ∑i SLpartialdiff i EdX i can be obtained by differentiation, while ¯ dQ and ¯ dW generally cannot. Also note that our convention is such that the signs of work and heat indicate the energy "
+    },
+    {
+      "kind": "natural",
+      "q": "How is the Helmholtz free energy obtained from the partition function?",
+      "ms": 38,
+      "searchId": "sr_01M58MMX3MDRE261TTF296WKZS",
+      "buildId": "bd_47kbfvjcibeosornddam",
+      "top": [
+        {
+          "score": 0.592,
+          "at": "ThermoPlischke#17 p10,11 [1.3 Thermodynamic Potentials]"
+        },
+        {
+          "score": 0.578,
+          "at": "ThermoKardar#45 p17 [1.7 Approach to equilibrium and thermodynamic pote]"
+        },
+        {
+          "score": 0.572,
+          "at": "FoundationsPlischke#21 p9,10 [2.2 Systems at Fixed Temperature: Canonical Ensemb]"
+        },
+        {
+          "score": 0.519,
+          "at": "ThermoPlischke#16 p10 [1.3 Thermodynamic Potentials]"
+        },
+        {
+          "score": 0.516,
+          "at": "FoundationsPlischke#46 p25 [2.6 Thermodynamic Variational Principles]"
+        }
+      ],
+      "topText": "As in the case of the internal energy, the change in Helmholtz free energy may be related to the amount of work obtainable from the system. In a general infinitesimal process\n\n[formula]\n\n3 Some author"
+    },
+    {
+      "kind": "exact-term",
+      "q": "Clausius inequality",
+      "ms": 24,
+      "searchId": "sr_01M58MMX4WFKW2Y2M906SDDEJ5",
+      "buildId": "bd_47kbfvjcibeosornddam",
+      "top": [
+        {
+          "score": 0.514,
+          "at": "ThermoKardar#35 p13 [1.6 Entropy]"
+        },
+        {
+          "score": 0.457,
+          "at": "ThermoKardar#26 p9,10 [1.4 The second law]"
+        },
+        {
+          "score": 0.449,
+          "at": "ThermoPlischke#11 p6,7 [1.2.2 Second law]"
+        },
+        {
+          "score": 0.385,
+          "at": "ThermoKardar#37 p14 [1.6 Entropy]"
+        },
+        {
+          "score": 0.379,
+          "at": "ThermoPlischke#35 p22,23 [1.8 Thermodynamics of Phase Transitions]"
+        }
+      ],
+      "topText": "To construct finally the state function that is conjugate to temperature, we appeal to the following theorem:\n\nClausius's theorem For any cyclic transformation (reversible or not), ∮ ¯ dQ/T ≤0, where "
+    },
+    {
+      "kind": "exact-term",
+      "q": "Maxwell relations",
+      "ms": 21,
+      "searchId": "sr_01M58MMX5NSDCDZ720PYX74Q2Q",
+      "buildId": "bd_47kbfvjcibeosornddam",
+      "top": [
+        {
+          "score": 0.609,
+          "at": "ThermoPlischke#21 p13,14 [1.4 Gibbs-Duhem and Maxwell Relations]"
+        },
+        {
+          "score": 0.599,
+          "at": "ThermoKardar#53 p21 [1.8 Useful mathematical results]"
+        },
+        {
+          "score": 0.541,
+          "at": "ThermoKardar#54 p21 [1.8 Useful mathematical results]"
+        },
+        {
+          "score": 0.486,
+          "at": "ThermoPlischke#23 p15,16 [1.5 Response Functions]"
+        },
+        {
+          "score": 0.44,
+          "at": "ThermoPlischke#20 p12,13 [1.4 Gibbs-Duhem and Maxwell Relations]"
+        }
+      ],
+      "topText": "It is a well-known result from the theory of partial differentiation that higher order derivatives are independent of the order in which the differentiation is carried out; that is, if 4> is a single-"
+    },
+    {
+      "kind": "exact-term",
+      "q": "Gibbs-Duhem relation",
+      "ms": 22,
+      "searchId": "sr_01M58MMX6AG2KD7BE83TT0YAMH",
+      "buildId": "bd_47kbfvjcibeosornddam",
+      "top": [
+        {
+          "score": 0.657,
+          "at": "ThermoKardar#52 p20,21 [1.8 Useful mathematical results]"
+        },
+        {
+          "score": 0.578,
+          "at": "ThermoPlischke#21 p13,14 [1.4 Gibbs-Duhem and Maxwell Relations]"
+        },
+        {
+          "score": 0.554,
+          "at": "ThermoPlischke#20 p12,13 [1.4 Gibbs-Duhem and Maxwell Relations]"
+        },
+        {
+          "score": 0.471,
+          "at": "FoundationsKardar#122 p52 [4.5 Mixing entropy and the Gibbs paradox]"
+        },
+        {
+          "score": 0.452,
+          "at": "FoundationsKardar#139 p60,61 [4.8 The Gibbs canonical ensemble]"
+        }
+      ],
+      "topText": "Combining the variations of Eq. (1.48) with Eq. (1.45) leads to a constraint between the variations of intensive coordinates\n\n[formula]\n\nknown as the Gibbs-Duhem relation. While Eq. (1.48) is sometime"
+    },
+    {
+      "kind": "paraphrase",
+      "q": "why does a gas not change temperature when it expands into a vacuum",
+      "ms": 24,
+      "searchId": "sr_01M58MMX716M4BKGJ98QC5PKRM",
+      "buildId": "bd_47kbfvjcibeosornddam",
+      "top": [
+        {
+          "score": 0.504,
+          "at": "ThermoKardar#20 p7 [1.3 The first law]"
+        },
+        {
+          "score": 0.448,
+          "at": "ThermoKardar#22 p8 [1.3 The first law]"
+        },
+        {
+          "score": 0.426,
+          "at": "ThermoKardar#21 p7,8 [1.3 The first law]"
+        },
+        {
+          "score": 0.424,
+          "at": "ThermoKardar#12 p4,5 [1.2 The zeroth law]"
+        },
+        {
+          "score": 0.424,
+          "at": "ThermoPlischke#7 p4 [1.2.1 First law]"
+        }
+      ],
+      "topText": "The ideal gas: we noted in connection with the zeroth law that the equation of state of the ideal gas takes a particularly simple form, PV ∝T. The internal energy of the ideal gas also takes a very si"
+    },
+    {
+      "kind": "paraphrase",
+      "q": "the most efficient engine possible between a hot and a cold reservoir",
+      "ms": 25,
+      "searchId": "sr_01M58MMX7T7VW2R7VNFPBXWZPN",
+      "buildId": "bd_47kbfvjcibeosornddam",
+      "top": [
+        {
+          "score": 0.464,
+          "at": "ThermoPlischke#9 p5,6 [1.2.2 Second law]"
+        },
+        {
+          "score": 0.462,
+          "at": "ThermoPlischke#11 p6,7 [1.2.2 Second law]"
+        },
+        {
+          "score": 0.445,
+          "at": "ThermoKardar#31 p12 [1.5 Carnot engines]"
+        },
+        {
+          "score": 0.441,
+          "at": "ThermoKardar#26 p9,10 [1.4 The second law]"
+        },
+        {
+          "score": 0.434,
+          "at": "ThermoPlischke#10 p6 [1.2.2 Second law]"
+        }
+      ],
+      "topText": "A corollary of these statements is that the most efficient engine operating between two reservoirs at temperatures Ti and T2 is the Carnot engine. The Carnot engine is an idealized engine in which all"
+    },
+    {
+      "kind": "natural",
+      "q": "Liouville theorem and conservation of phase space volume",
+      "ms": 29,
+      "searchId": "sr_01M58MMX8MX3PDZB5XMJJFTGXX",
+      "buildId": "bd_47kbfvjcibeosornddam",
+      "top": [
+        {
+          "score": 0.665,
+          "at": "FoundationsKardar#6 p3 [3.2 Liouville's theorem]"
+        },
+        {
+          "score": 0.638,
+          "at": "FoundationsKardar#7 p3,4 [3.2 Liouville's theorem]"
+        },
+        {
+          "score": 0.602,
+          "at": "FoundationsKardar#8 p4 [3.2 Liouville's theorem]"
+        },
+        {
+          "score": 0.597,
+          "at": "FoundationsKardar#12 p5 [Consequences of Liouville's theorem:]"
+        },
+        {
+          "score": 0.545,
+          "at": "FoundationsKardar#9 p4,5 [Consequences of Liouville's theorem:]"
+        }
+      ],
+      "topText": "Liouville's theorem states that the phase space density SLrholparenoriUPGammacommaori trparenori behaves like an incompressible fluid.\n\nFollow the evolution of dNEUscript pure states in an infinitesim"
+    },
+    {
+      "kind": "natural",
+      "q": "What is the ergodic hypothesis and why is it needed?",
+      "ms": 30,
+      "searchId": "sr_01M58MMX9JX4FX4X1V88AX7ERQ",
+      "buildId": "bd_47kbfvjcibeosornddam",
+      "top": [
+        {
+          "score": 0.595,
+          "at": "FoundationsPlischke#6 p3 [2.1 Isolated Systems: Micro canonical Ensemble]"
+        },
+        {
+          "score": 0.55,
+          "at": "FoundationsPlischke#5 p3 [2.1 Isolated Systems: Micro canonical Ensemble]"
+        },
+        {
+          "score": 0.546,
+          "at": "FoundationsPlischke#49 p26 [2.1 Ergodic Hypothesis.]"
+        },
+        {
+          "score": 0.502,
+          "at": "FoundationsKardar#14 p6 [Consequences of Liouville's theorem:]"
+        },
+        {
+          "score": 0.466,
+          "at": "FoundationsPlischke#37 p20 [2.5 Maximum Entropy Principle]"
+        }
+      ],
+      "topText": "There is nothing obvious about this hypothesis. In Problem 2.1 the reader will find one example of a system that satisfies this hypothesis and one that does not. Both examples are trivial in the sense"
+    },
+    {
+      "kind": "natural",
+      "q": "Boltzmann definition of entropy as the logarithm of the number of microstates",
+      "ms": 31,
+      "searchId": "sr_01M58MMXAHVF15BDGF8Z58A4D7",
+      "buildId": "bd_47kbfvjcibeosornddam",
+      "top": [
+        {
+          "score": 0.531,
+          "at": "FoundationsPlischke#45 p24,25 [2.5 Maximum Entropy Principle]"
+        },
+        {
+          "score": 0.524,
+          "at": "ThermoKardar#70 p28 [Consequences of the third law:]"
+        },
+        {
+          "score": 0.518,
+          "at": "FoundationsKardar#104 p43,44 [4.2 The microcanonical ensemble]"
+        },
+        {
+          "score": 0.514,
+          "at": "FoundationsPlischke#15 p6,7 [2.1 Isolated Systems: Micro canonical Ensemble]"
+        },
+        {
+          "score": 0.512,
+          "at": "FoundationsKardar#109 p45,46 [4.2 The microcanonical ensemble]"
+        }
+      ],
+      "topText": "It should be noted that while the information-theoretic approach and the approach taken in Sections 2.1 to 2.3 lead to similar results, there is a subtle difference in the concept of entropy. In Secti"
+    },
+    {
+      "kind": "natural",
+      "q": "Landau theory of continuous phase transitions",
+      "ms": 33,
+      "searchId": "sr_01M58MMXBHFDD2GRQHJ7AAF22R",
+      "buildId": "bd_47kbfvjcibeosornddam",
+      "top": [
+        {
+          "score": 0.489,
+          "at": "ThermoPlischke#32 p20,21 [1.8 Thermodynamics of Phase Transitions]"
+        },
+        {
+          "score": 0.463,
+          "at": "ThermoPlischke#34 p21,22 [1.8 Thermodynamics of Phase Transitions]"
+        },
+        {
+          "score": 0.456,
+          "at": "ThermoPlischke#35 p22,23 [1.8 Thermodynamics of Phase Transitions]"
+        },
+        {
+          "score": 0.444,
+          "at": "ThermoPlischke#33 p21 [1.8 Thermodynamics of Phase Transitions]"
+        },
+        {
+          "score": 0.416,
+          "at": "ThermoPlischke#36 p23,24 [1.8 Thermodynamics of Phase Transitions]"
+        }
+      ],
+      "topText": "A typical phase diagram for a one-component PVT system looks like Figure 1.4. The solid lines separate the P - T plane into regions in which different phases are the stable thermodynamic states. As th"
+    }
+  ],
+  "latency": {
+    "median": 29,
+    "max": 76,
+    "min": 21
+  },
+  "deadSessionId": "se_01M58MMXCQFWQTJH4F1T9A7PA8",
+  "failures": {
+    "empty-query": "invalid_input: search: query: Too small: expected string to have >=1 characters",
+    "unknown-build": "not_found: build bd_aaaaaaaaaaaaaaaaaaaa not found",
+    "unknown-search-feedback": "not_found: unknown search sr_0000000000000000000000ZZZZ",
+    "embedder-down": "upstream: Ollama request to http://127.0.0.1:1/api/tags failed: fetch failed"
+  },
+  "sessionId": "se_01M58MMX158HZNB4BDBG37V2MZ",
+  "firstSearchId": "sr_01M58MMX19N77RQ5M53XDXE5PP"
+}

@@ -1,5 +1,6 @@
 /**
- * @kg/viewer: Phase 2 stub. See CARD.md for the contract, the tests to pass and the decisions already made.
- * This package must import only @kg/core (and @kg/testkit in tests).
+ * @kg/viewer: read-only HTTP view of the event log (see README.md). The page is served from web/ and vendor/;
+ * the pure rendering functions live in web/render.js so the browser and the tests run the same code.
  */
-export {};
+export { createViewerServer, type ViewerOptions } from './server';
+export { diagramOf, escapeHtml, mermaidOf, nextOf, orderSessions, pathOverlay, pickRun, renderTimeline, runsOf } from '../web/render.js';

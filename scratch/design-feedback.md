@@ -8,125 +8,60 @@ Open entries are at the top; triaged entries move to "Resolved". An entry is pla
 
 ## Open
 
-### 2026-10-17: section-pack/1 (TS) vs docling HybridChunker on the four stat-mech PDFs, OCR off (spike 5a, Phase 1)
-Both chunkers ran on the same OCR-off docling 2.140.0 parses (FoundationsKardar 64 pages 9.6 s, FoundationsPlischke
-2.9 s, ThermoKardar 3.2 s, ThermoPlischke 2.7 s). Counts TS/Hybrid: FK 147/165, FP 50/50, TK 76/77, TP 39/44; total
-312/336 (the "337 chunks" in the decision log was HybridChunker with OCR on). Chunk lengths in chars, TS vs Hybrid:
-median 855 vs 822, p10 437 vs 394, p90 997 vs 1043, max 1500 vs 1229, under 200 chars 3 vs 8. Identical chunk texts
-31 of 312 (they agree on paragraph-aligned chunks; Hybrid renders formulas as a 29-char placeholder and joins with
-single newlines, so texts rarely match byte for byte); shared chunk start blocks 183 of 312. Same number of
-distinct section paths per document (21/13/12/12), because docling reports every header as level 1 and both use
-the nearest header. Spot check of 20 random within-section boundaries: all 20 fall at a docling block boundary or, for split
-paragraphs, a sentence end (none mid-sentence); 6 of 20 separate a chunk ending in "[formula]" from a continuation starting "where ...", the
-main weakness, shared by Hybrid: 45 of 312 TS chunks start lowercase vs 38 of 336 Hybrid, while 30 TS chunks end
-mid-sentence vs 56 Hybrid (Hybrid splits paragraphs by tokens more often). Real structure: furniture texts are
-inside `body.children` (filter by content_layer), pictures carry up to 18 child texts (axis labels, 194 in
-ThermoKardar) that must not leak, captions appear both as picture children and as body texts, lists are
-`list` groups, there are no `inline` groups, no title, one or two tables per Kardar document (rendered
-`cell | cell`), multi-page paragraphs (11-14 per document) and paragraphs up to 1994 chars (split). Bears on v0
-item 1. Recommendation: keep the TS chunker (decision log); it is at least as good on every measure taken and
-needs no Python on an import-only machine. Confidence: moderate; 20 boundaries is a small sample and "good
-boundary" was judged by me. Settling further: the Phase 4 eval's "evidence split across chunks" signature.
-
-### 2026-10-17: chunk IDs under a real insertion and a real in-place edit (spike 5b, Phase 1)
-On each of the four section-pack/1-chunked documents I inserted a 400-char paragraph at the start of a mid-document
-section and, separately, changed one word in a paragraph of another section, by editing the docling JSON (a
-proxy for re-parsing an edited PDF; IDs do not depend on docling refs). Every chunk outside the two touched
-sections kept its ID in all 12 runs (104/104, 41/41, 58/58, 36/36). The insertion changed 1-3 chunks inside its
-section (greedy repacking cascades and then resynchronises); the edit changed exactly one chunk. An index-based
-scheme (sha256(index|text)) did equally well whenever the chunk count stayed the same, but when the insertion
-added a chunk (ThermoPlischke 39 -> 40) it kept only 20 of 39 IDs against 37 of 39. Bears on Core Concepts
-(Chunk) and the eval-set pinning. Confirms the chunk-ID decision; confidence high for these documents.
-Script: packages/app/scripts/spikes/insertion-test.ts.
-
-### 2026-10-17: embeddinggemma through Ollama on the stat-mech chunks (spike 5c, Phase 1)
-embeddinggemma:latest (307M, BF16): 768 dims, unit-norm output, batch-invariant (embed([a,b]) = singletons,
-conformance at 1e-4). Throughput on an M2 Pro: 312 chunks (249k chars) in 8.0 s, about 39 chunks/s or 31k chars/s;
-31 queries in 0.3 s. On 31 hand-written paraphrase queries with gold located by phrase (1-4 gold chunks each,
-spanning both authors; packages/app/scripts/spikes/data/embed-queries.json): with the model's retrieval prompts
-(`title: {headings} | text: {text}` / `task: search result | query: {query}`) hit@1 0.52, hit@5 0.77, hit@10 0.87,
-hit@20 0.97, recall@10 0.81, MRR 0.65; without any template hit@10 0.84, recall@10 0.68, MRR 0.58. Misses at 10:
-grand potential (q08, first gold rank 14), molecular chaos (q23, 15), H-theorem (q24, 30), thermal conductivity
-(q25, 11), mostly Kardar chunks whose text is dominated by math-font glyph names (next entry). Not compared:
-nomic-embed-text, mxbai-embed-large, bge-m3, qwen3-embedding (none installed; I was not to pull models). Bears
-on v0 items 1 and 3 and the "Embeddings" concept (conditioning is part of the space). Meaning: conditioning
-matters (+13 points recall@10), so the space must keep its templates in the ID, as it does. Confidence: the
-query set is small and written by me after reading the chunks, which favours similarity search; the numbers
-are a smoke test, not a baseline. Settling: Phase 4 eval set; a model comparison if the user allows pulls
-(open-questions Q4).
-
-### 2026-10-17: the Kardar PDFs' text layer turns inline math into glyph names (Phase 1)
-With OCR off, Kardar chunks contain strings like "lparenoriA 1 commaoriA 2", "SLpartialdiffV/SLpartialdiffTbarSC P",
-"UPDeltaQ= UPDeltaE!UPDeltaW"; Plischke has milder damage ("q$jv", "6iV-dimensional", "ZN" for 3N). These are the
-PDFs' font encodings, not OCR. They inflate chunk text, add noise tokens to embeddings and will leak into eval
-questions written from those chunks. Bears on v0 item 1 (parse quality) and item 6 (eval). Possible remedies: a
-glyph-name cleanup pass as a parse or chunk recipe (a new recipe, so new chunk IDs), or formula enrichment on a
-GPU server. Not measured: how many Kardar chunks are affected (a large share of the Kardar sample I read).
-Confidence high that it exists; impact on retrieval unmeasured (three of the four spike-5c misses are Kardar).
-
-### 2026-10-17: docling heading detection is flat and sometimes wrong (Phase 1)
-All 65 section headers in the four PDFs come out with level 1, so section paths are one heading deep ("1.2.1 First
-law" replaces "1.2 Laws of Thermodynamics"). Bold run-in heads are detected as headers ("Consequences of the third
-law:", "Consequences of Liouville's theorem:"). In the generated tiny.pdf, the heading "1.1 A small table" became a
-list item with marker "1.1". Bears on Core Concepts (chunk position = section path) and on conditioning (headings
-are embedded). Chunk IDs are still stable across re-parses with the same recipe (spike 5b); a docling upgrade that
-changes header detection would change IDs (expected, it is a new parse recipe). Possible improvement: infer levels
-from numbering; that would be a new chunk recipe. Confidence high on the observation.
-
-### 2026-10-17: decomposition and critique against the linear step contract (spike 5d, Phase 1)
-Wrote both pipeline recipes against the 0.1.0 SearchState/Step contract (scratch/sprint-0/pipeline-recipes.md).
-Decomposition with per-subquery fusion cannot be expressed: retrieval must fuse to one unique-per-item list
-before a fusion step sees per-query ranks. The critique loop can be expressed by unrolling, but only with three
-unstated conventions (runner honours `done`, retrieval merges into existing candidates, variants record that they
-were searched). Bears on Planned Layers (query refinement) and the proposal's weakest-assumption note. Proposed
-fixes P-1 (named candidate pools) and P-2 (runner semantics), both additive now. Confidence high that the gap is
-real; the fixes are untested.
-
-### 2026-10-17: can the log alone diagnose a failed query? (Phase 1 skeleton review)
-The skeleton's log for one search (pnpm skeleton) holds the query, the build, the search recipe, and per step the
-ranked considered pool (all 22 chunks here, up to 100) with scores, then the result and the feedback keyed to the
-same search and build. From the log alone one can read the rank of any gold chunk at every step (the "ranked low"
-and "not retrieved" signatures), which query variants ran, and whether the build was stale. One cannot see why a
-chunk scored as it did: texts and the embedding model are one store read away (item IDs, build manifest). Nested
-tool calls (an eval run's searches) are linked only by order (contract-revisions P-3). Bears on v0 item 3 and the
-analysis tools. Confidence: judged on the mini-corpus and three real slices, not a real failure.
-
-### 2026-10-17: changing the parse recipe changes chunk text, not just IDs (spike, Phase 0)
-Compared chunk sets for OCR on versus OCR off, using HybridChunker, text-whitespace-normalized. ThermoPlischke: 46 vs 44 chunks, only 2 identical texts; heading paths 11 of 12 shared (the odd one was an OCR artifact, "7 of Thermodynamics Review"). FoundationsKardar: 165 vs 165 chunks, all texts and heading paths identical. For ID schemes (section path + text + occurrence, the same with section numbers stripped, and text + occurrence only) the overlap equals the identical-text count in every case, so the section path is not what makes IDs fragile; text is. Bears on Core Concepts (Chunk) and Rule 2. Meaning: a parse recipe change that alters text legitimately produces new chunks, which invalidates eval questions on that document, so the parse recipe must be chosen and frozen before eval generation, along with the chunker. Two architecture drafts named heading instability as their biggest risk and proposed dropping the section path from the ID; this evidence says that fallback gains nothing. Confidence high for these two PDFs, untested on a document where OCR on and off differ only slightly. Settled for the architecture.
-
-### 2026-10-17: derived item IDs vs nondeterministic producers (from the extensible draft, deferred)
-The design says a derived item's ID derives from its recipe and input chunk IDs. An LLM extractor run twice with the same recipe and inputs can give different text, which would collide on ID with different content and violate immutability. Options: add a text hash to the ID (reruns become distinct immutable items and a build chooses), or forbid reruns (the derivation cache is authoritative and a deliberate resample needs a recipe bump such as a seed parameter). v0 writes no derived text items, so nothing is blocked. Defer to the sprint that builds the relation layer; v0 only reserves the ID function. Confidence: the problem is real, the choice is open.
-
-### 2026-10-17: Phase 1 review findings deferred beyond Sprint 0 (independent reviewer)
-Bears on Core Concepts (Chunk), Rule 5, Scale and Cost. Evidence in `scratch/sprint-0/review-phase1.md`. (L1) Greedy chunk packing can renumber every chunk ID in a section after one inserted paragraph (20 paragraphs of 300 chars, inserted at the start: all 7 IDs vanish); the gas fixture resynchronised only by luck. Harmless for the static stat-mech baseline, but "unchanged content keeps its ID" is false for project databases that edit often; content-defined boundaries would fix it. (L2) Section paths `[]` and `[""]` hash identically. (L3) docKey defaults to the file stem, so `a/foo.pdf` then `b/foo.pdf` silently replaces the first. (L4) `derivedItemId` throws, so Rule 4 on derived items is tested only with hand-made IDs. (L5) `parseArtifactSchema` checks only top-level docling keys. (L6) `pool < k` silently returns fewer than k. (L7) a throwing `finish()` in `runTool` masks the original error. (L8) an identical-text duplicate counts as a recall miss; state in the eval card. Also: the log cannot show which query variant produced a candidate (adding `queryId` to `RankedRef` is in the pre-fan-out list), and `mixedRecipes` is a false positive when only `page_range` differs (cosmetic, only fixtures are sliced). Confidence high; each is cheap to fix when its trigger arrives.
-
-### 2026-10-17: parser settings need a quality gate and escalation path (user-raised, Phase 0)
-Observed: the default docling settings (OCR on) cost 15x the time on Plischke and introduced garbled text over a good text layer; the cheap setting (OCR off) was both faster and cleaner on these PDFs, but would presumably fail on genuinely scanned input. Docling gave no signal either way. Bears on v0 item 1 (ingest) and Rule 4 (recipes). Possible meaning: the parser interface should support several recipes (cheap first, escalating options such as OCR or formula decoding) and a check on the output that decides whether to escalate, for example heuristics (text density per page, garble rate against a dictionary) and a sampled LLM check for bad output. Each attempt is a recipe-keyed parse artifact, so escalation is just a second recipe on the same file. Not verified: whether docling has such a mechanism (the user was surprised it lacks one; I have not searched its documentation). Settling it: read docling's confidence-scoring and pipeline docs, then pilot a heuristic gate on the four PDFs plus one genuinely scanned file.
-
-### 2026-10-17: parse speed depends on the PDF; saved docling JSON round-trips to identical chunk IDs (spike, Phase 0)
-All four stat-mech PDFs, default docling pipeline, no formula decoding, CPU:
-
-| PDF | pages | parse | chunks | undecoded formulas | JSON size |
-|---|---|---|---|---|---|
-| FoundationsKardar | 64 | 12s | 165 | 285 | 1.0MB |
-| ThermoKardar | 29 | 18s | 77 | 85 | 0.5MB |
-| FoundationsPlischke | 26 | 89s | 49 | 131 | 0.3MB |
-| ThermoPlischke | 24 | 90s | 46 | 105 | 0.3MB |
-
-Total 337 chunks and 606 undecoded formulas. Every PDF has a text layer (pdftotext gives about 2k chars per page on pages 2-4), so the Plischke slowness (about 4s/page against about 0.3s/page for Kardar) likely comes from docling OCRing pages whose layout looks scanned; this is a guess. The earlier OCR garbling was seen in a Plischke chunk only. Saving the parsed document with `save_as_json`, reloading it and chunking gave identical chunk IDs for all four, so a parse artifact can be produced elsewhere and chunked locally; the artifacts are small (0.3-1.0MB), so transfer is trivial. This supports the portable-artifact constraint (see the entry above) and the default of chunking locally. Follow-up: `do_ocr=False` parsed ThermoPlischke in 6s (against 90s) with 35,562 chars of readable text; The garbled passage near "ideal gas law" is clean without OCR, so the garbling came from OCR over a good text layer. I did not diff the whole text against the OCR run. Not yet settled: the ID scheme. A section-path-plus-ordinal ID limits an insertion's effect to its own section, while a global index shifts every later ID; this follows by construction and I did not test it (my edit test changed one paragraph in place, so it could not tell the schemes apart). Confidence high on the table.
-
-### 2026-10-17: remote parsing and portable parse artifacts (user-raised, Phase 0)
-The user wants v0 to be roughly usable later by installing the parser on a GPU server and downloading the processed and chunked data. Bears on v0 items 1 and 2 and on Scale and Cost. Possible meaning: the parse (and equation decoding) step is a recipe-keyed derived artifact that can be produced anywhere and imported, which fits the recipe and build model in Core Concepts. Needs Phase 0 to decide the artifact format and whether chunking happens on the server or locally (chunk IDs must come out identical either way). Confidence high that it is wanted, open on the format.
-
-### 2026-10-17: docling on stat-mech PDFs is slow, and formulas and some text are poor (spike, Phase 0)
-Observed on `ThermoPlischke.pdf` (24 pages, docling 2.140, CPU, macOS, default pipeline with RapidOCR): parse took 108s and 91s on two runs (about 4s/page). The 46 chunks from HybridChunker have median 857 chars and range 32-1146. Display equations come out as `<!-- formula-not-decoded -->`. At least one chunk contains OCR-garbled text ("ie re Se nns nas Se s to pn ns ideal gas law"), so the PDF probably has scanned or poor text-layer regions. Bears on v0 item 1 (ingest) and on eval quality: questions about equations cannot be answered from these chunks. Possible meaning: parsing cost makes caching parsed documents by file hash necessary (a scale/cost item), and formula enrichment or a different pipeline setting may be needed, or the corpus should be limited to prose questions. Confidence in the numbers is high (two runs), low on cause. Settling it: run the other three PDFs, try formula enrichment, and check whether the text layer exists (`pdftotext`).
-
-### 2026-10-17: docling formula enrichment does not support MPS; CPU decodes correctly but slowly (spike, Phase 0)
-Docling 2.140 on an M2 Pro: `do_formula_enrichment=True` with `device=mps` raises `AcceleratorDeviceNotAvailableError: MPS is not supported by this model. Supported devices: ['cpu', 'cuda', 'xpu']`. On CPU, pages 2-4 of `ThermoPlischke.pdf` took 194s (including model load) and decoded 7 formulas to clean LaTeX, with none left undecoded (e.g. the van der Waals equation was correct). So quality is good and the cost is the problem. Bears on v0 item 1 (ingest) and the eval's handling of equations. Possible meaning: decode equations as a separate, lazily run derived step, not inside ingest. Confidence high on the MPS error, low on per-formula cost (load time is mixed in). Settling it: time a second page after warm-up, count formulas per PDF, and try a vision-LLM transcription of the crops.
-
-### 2026-10-17: chunk IDs were identical across two runs of the same environment (spike, Phase 0)
-Chunk ID = sha256(position index | text)[:12]. Both runs produced identical ID lists for all 46 chunks. This supports "re-ingesting unchanged content is idempotent" only within one docling version and configuration. It does not show stability under a docling upgrade or a small document edit, and an index-based position component means an insertion early in a document shifts every later ID. Bears on Core Concepts (Chunk). Confidence moderate. Settling it: edit-and-reingest test, and decide whether position should be a section path rather than a global index.
+(none; all 22 entries were triaged at the end of Sprint 1. Original texts, with their evidence, are kept in `scratch/sprint-1/design-feedback-triaged-originals.md`.)
 
 ## Resolved
 
-(none yet)
+Triage of 2026-10-18 (end of Sprint 1, reviewer). Entries are grouped. Outcome is adopt / defer / reject; Kind is arbitrary (A), evidence-resolvable (E) or needs the user (U). "Amendment AM-n" refers to `scratch/sprint-1/proposed-amendments.md` (drafts, not applied to `design/`); "Q n" to `scratch/open-questions.md`.
+
+### T1. Search log size and the lost failing state
+Entries: 2026-10-18 "the search log is large and cannot say where a failed search stopped"; 2026-10-17 "can the log alone diagnose a failed query?".
+Evidence checked: the integration report agrees with the entry (28 KB of events per search, 3.3 MB database, log larger than the 312 vectors). `packages/pipeline/src/run.ts` now keeps `lastActive` and writes it as the failing state, so part (a) is fixed in code; I found no test that asserts it (add one). The earlier diagnosis entry stands: the log alone gave rank at every step, variants, and build; it could not give reasons for scores, which the item and build reads supply.
+- (a) Record the work state that threw: adopt, done in code, add a test. Kind: E.
+- (b) Delta-encode `considered` after the first step: defer until the Phase 4 baseline run shows the log size at real scale (the entry's own settling test). Cheap interim if it hurts earlier: let `truncate` log `considered` as a reference to the previous step's output. Kind: E. Does not change a rule: Rule 6 and item 3 require the information be recoverable, not stored twice. Revisit before the relation layer, which adds steps.
+- Also from the integration report, `eventsBySearch` omits `tool.failed`, and `query` records no embedder: defect list in `change-proposals/integration.md`, engineering items, no design effect.
+
+### T2. Formula decoding: speed solved, retrieval benefit not shown
+Entries: 2026-10-18 formula-VLM spike; 2026-10-18 decoders compared by LLM-judged meaning; 2026-10-17 docling formula enrichment does not support MPS; 2026-10-17 docling slow and formulas poor; 2026-10-17 Kardar glyph names; 2026-10-18 arXiv-LaTeX Phase 4 idea.
+Evidence checked: the numbers are consistent with the decision log (GLM-OCR 82% exact on 33 crops against a pre-set 90% rule; MRR 0.671 to 0.598; 312 to 440 chunks). The rule was fixed in advance on exact match, so the 94% meaning-judged rate (a later metric, n=33, one 9.7B judge, two decoders audited) does not retroactively pass it; it supports "good enough for a model to read" only. The spike met speed, missed accuracy, and did not show retrieval benefit.
+- Formula decoding is an optional parse-recipe stage with a view setting in the embedding space (built in contract 0.6.0 after the user's decision recorded in `state-machine-revision.md`, section 13); the default recipe stays placeholder. Adopt as the standing arrangement; whether decoding becomes the default waits for Phase 4 evidence on formula-dependent questions. Kind: U (it touches the parse recipe and embedding concept; AM-2, Q13).
+- MPS limit and CPU cost: closed by the spike (a GPU server is not needed for decoding speed). Kind: E.
+- Glyph-name text in Kardar chunks: defer. Impact unmeasured; Sprint 2 prep measures the share of affected chunks (a script, minutes) and the retrieval misses they explain before any cleanup recipe is considered. A cleanup recipe changes chunk IDs, so if wanted it must precede the freeze. Kind: E.
+- arXiv-with-LaTeX idea: adopt as a Phase 4 extension, first step is to look at the two papers and check the cited works are obtainable. Tagging formula questions and a decode-only-gold oracle are cheap and join the baseline plan. Using these papers as a second corpus is a scope question: Q15. Kind: U for the corpus, E for the check.
+
+### T3. State machines, runner and loops
+Entries: 2026-10-18 "explicit state machines: not worth it for search, rule met for ingest resume"; 2026-10-17 "decomposition and critique against the linear step contract".
+Evidence checked: the spike's code size comparison (104 against 15 lines) and ingest crash-point results are in `spike-state-machine/results.md`. The spike recommended keeping the runner; the user then decided otherwise (machines everywhere, no pause/resume), recorded in `state-machine-revision.md` "Decided", and the code was built that way (contract 0.5.0, `@kg/pipeline`). The decision log had no entry for this decision; one is added by this triage.
+- Machines for every pipeline: adopted by the user. Needs a design amendment: AM-1 (recipe = machine + version + settings + topology). Kind: U, already decided; the amendment waits for approval.
+- Resumable ingest (Q8): resolved as "no" by the same decision (no snapshots). The spike's incidental finding on `revert` after a post-commit crash is moot but is already covered by the `build.created.revert` field. Kind: U, done.
+- `repeat` and `fuse.from` patterns (Q9): moot; machines loop natively, decompose-fuse and critique-loop are not built in v0, and named pools (0.3.0) are the only provision. The linear-contract entry (decomposition cannot be expressed) is closed by pools plus machines; P-2(a)/(c) are dropped, not deferred. Caveat: loops and fan-out are the reason machines were chosen, and no machine in v0 uses one, so the claim is untested until query refinement is built.
+
+### T4. Producer drift and recipe coverage
+Entry: 2026-10-18 "input-addressed rows are first-writer-wins, so producer drift is silent".
+Evidence checked: applied in contract 0.4.0 (`EmbeddingSpaceSpec.digest` required; `putDocVersion` compares the chunk list, invariant S-7 with a testkit case; chunk card says any output change bumps `version`). The drift itself was never observed. Outcome: adopt, done. Kind: E. Design text: AM-3 (Rule 4 reading and the space definition). Remaining gap: the same applies to every LLM named in a recipe (judge, answerer, generation): the digest is not recorded for them; fold into Sprint 2 prep (record the Ollama digest in the run record).
+
+### T5. Chunker, IDs and heading structure
+Entries: 2026-10-17 section-pack/1 vs HybridChunker (5a); chunk IDs under insertion and edit (5b); chunk IDs identical across two runs; changing the parse recipe changes chunk text; docling heading detection is flat; Phase 1 review findings L1-L8.
+Evidence checked: 5a/5b outcomes are in the decision log and the oracle diff reproduces the package against the skeleton on the mini corpus and three real slices. Chunk test count went from 29 to 57, which suggests the freeze-critical boundary tests were added; the unit "survivors" list in the review should be re-run before the freeze.
+- Keep TS chunker and ID scheme; parse recipe frozen together with the chunker before question generation: adopt, already in the roadmap (Phase 2) and decision log. Kind: E. The two sentence-cut and hard-cut divergences were resolved toward the skeleton reading; ids may still move until the freeze.
+- Flat heading levels: reject for the baseline. Inferring levels from numbering changes IDs and has no measured benefit; revisit only if Phase 4 shows heading-related misses. Kind: A.
+- L1 (greedy packing renumbers a section after an insertion): defer to the project-database use case; the Chunk concept's "unchanged content keeps its ID" holds for static corpora and across sections, as 5b measured. Kind: E.
+- L2 (`[]` and `[""]` hash identically; the oracle diff found the package and skeleton differ on an empty heading): decide before the freeze, either reading is fine; adopt "empty headings are dropped" (skeleton). Kind: A.
+- L3 (docKey defaults to file stem, a second `a/foo.pdf` replaces the first): defer, document; same-request duplicates are already `invalid_input`. L4 (`derivedItemId` throws): defer to the relation layer. L5 (`parseArtifactSchema` top level only): defer. L6 (`pool < k` returns fewer silently): adopt as a settings check in search (cheap). L7 (throwing `finish()` masks error) and L8 (identical-text duplicate counts as miss): adopt as one-line card notes. Kinds: A.
+
+### T6. Embedding space
+Entry: 2026-10-17 embeddinggemma through Ollama (5c).
+Outcome: adopt (done). Conditioning stays in the space ID; model comparison only after the Phase 4 baseline (Q4, resolved). The numbers are a smoke test written by the author, so they are not baseline numbers. Kind: A under the user's cheap-option instruction.
+
+### T7. Parsing: portability, cost, quality gate
+Entries: remote parsing and portable parse artifacts; parse speed depends on the PDF and saved JSON round-trips; parser settings need a quality gate.
+- Portable artifacts and import: adopt, done (decision log; `origin: imported`, `ArtifactDirParser`, `mixedRecipes`). Kind: U, decided.
+- OCR off by default and the parse cache by (sha256, recipe): adopt, done. Kind: E.
+- Quality gate with escalation: defer. All four PDFs have text layers; the sidecar already takes OCR as a per-recipe option, so the gate is new scope and no corpus needs it yet. Trigger: the first scanned or garbled input. Pilot (heuristic on four PDFs plus one scanned file) is the settling test. Kind: E; no scope change adopted.
+
+### T8. Derived item IDs and nondeterministic producers
+Entry: 2026-10-17 derived item IDs vs nondeterministic producers.
+Outcome: defer to the relation-layer sprint. The PROV/Nix review (A1) sharpens the choice: ID is input-addressed, with the output text hash stored beside it as an output digest, so a rerun that differs is detectable. A draft sentence is in AM-7, marked hold. Nothing in v0 writes derived text items. Kind: U when it comes up (changes a core concept).
+
+### Reading the groups together
+Needing the user: T2 (default decoding, corpus scope), T3 (amendment AM-1), T4 (AM-3), T8 later. Everything else was arbitrary or settled by evidence and is logged in `scratch/decision-log.md`.

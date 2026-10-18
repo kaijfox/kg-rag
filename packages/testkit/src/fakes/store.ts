@@ -143,7 +143,12 @@ export class InMemoryCorpusStore implements CorpusStore {
     }
     if (!this.s.artifacts.has(v.artifactId)) throw new KgError('not_found', `artifact ${v.artifactId}`);
     if (!this.s.recipes.has(v.chunkRecipeId)) throw new KgError('not_found', `chunk recipe ${v.chunkRecipeId}`);
-    if (this.s.docVersions.has(v.id)) return { inserted: [], reused: [...v.chunkIds] };
+    const existing = this.s.docVersions.get(v.id);
+    if (existing) {
+      if (existing.chunkIds.length !== v.chunkIds.length || existing.chunkIds.some((id, i) => id !== v.chunkIds[i]))
+        throw new KgError('immutable_violation', `doc version ${v.id} already exists with a different chunk list (chunker changed without a recipe version bump?)`);
+      return { inserted: [], reused: [...v.chunkIds] };
+    }
 
     return this.transaction(() => {
       const inserted: ChunkId[] = [];

@@ -1,0 +1,724 @@
+[
+ {
+  "id": "FK-p09-t137",
+  "doc": "FoundationsKardar",
+  "page": 9,
+  "ref": "#/texts/137",
+  "bbox": {
+   "l": 176.5841,
+   "t": 265.76988719999997,
+   "r": 227.2538816,
+   "b": 238.32379279999998,
+   "coord_origin": "BOTTOMLEFT"
+  },
+  "orig": "1 SLtauU + U !q · !p",
+  "kind": "display",
+  "size": [
+   115,
+   62
+  ],
+  "reference": "\\frac { 1 } { \\tau _ { U } } \\sim \\frac { \\partial U } { \\partial \\vec { q } } \\cdot \\frac { \\partial } { \\partial \\vec { p } }",
+  "docling_cpu_raw": "\\frac { 1 } { \\tau _ { U } } \\sim \\frac { \\partial U } { \\partial \\vec { q } } \\cdot \\frac { \\partial } { \\partial \\vec { p } }",
+  "status": "accepted"
+ },
+ {
+  "id": "FK-p19-t277",
+  "doc": "FoundationsKardar",
+  "page": 19,
+  "ref": "#/texts/277",
+  "bbox": {
+   "l": 82.2514,
+   "t": 305.81518,
+   "r": 355.0440224,
+   "b": 289.72649279999996,
+   "coord_origin": "BOTTOMLEFT"
+  },
+  "orig": "ln f1lparenori!p1commaori !q rparenori + ln f1lparenori!p2commaori !q rparenori = ln f1lparenori!p1 ′ commaori !q rparenori + ln f1lparenori!p2 ′ commaori !q rparenoriperiodori (3.51)",
+  "kind": "display",
+  "size": [
+   619,
+   37
+  ],
+  "reference": "\\ln f_1(\\vec p_1,\\vec q)+\\ln f_1(\\vec p_2,\\vec q)=\\ln f_1(\\vec p_1{}',\\vec q)+\\ln f_1(\\vec p_2{}',\\vec q).",
+  "docling_cpu_raw": "\\ln f _ { 1 } ( \\vec { p } _ { 1 } , \\vec { q } ) + \\ln f _ { 1 } ( \\vec { p } _ { 2 } , \\vec { q } ) = \\ln f _ { 1 } ( \\vec { p } _ { 1 } , \\vec { q } ) + \\ln f _ { 1 } ( \\vec { p } _ { 2 } , \\vec { q } ) .",
+  "status": "corrected"
+ },
+ {
+  "id": "FK-p20-t290",
+  "doc": "FoundationsKardar",
+  "page": 20,
+  "ref": "#/texts/290",
+  "bbox": {
+   "l": 211.9244,
+   "t": 471.5291184,
+   "r": 465.53362240000007,
+   "b": 441.87414090325944,
+   "coord_origin": "BOTTOMLEFT"
+  },
+  "orig": "f1lparenori!pcommaori !q rparenori =n ( SLbeta 2SLpim )3/2 exp [ - SLbetalparenori!p - !p0rparenori 2 2m ] commaori (3.56)",
+  "kind": "display",
+  "size": [
+   566,
+   68
+  ],
+  "reference": "f _ { 1 } ( \\vec { p } , \\vec { q } ) = n \\left ( \\frac { \\beta } { 2 \\pi m } \\right ) ^ { 3 / 2 } \\exp \\left [ - \\frac { \\beta ( \\vec { p } - \\vec { p } _ { 0 } ) ^ { 2 } } { 2 m } \\right ] ,",
+  "docling_cpu_raw": "f _ { 1 } ( \\vec { p } , \\vec { q } ) = n \\left ( \\frac { \\beta } { 2 \\pi m } \\right ) ^ { 3 / 2 } \\exp \\left [ - \\frac { \\beta ( \\vec { p } - \\vec { p } _ { 0 } ) ^ { 2 } } { 2 m } \\right ] ,",
+  "status": "accepted"
+ },
+ {
+  "id": "FK-p27-t426",
+  "doc": "FoundationsKardar",
+  "page": 27,
+  "ref": "#/texts/426",
+  "bbox": {
+   "l": 165.0424,
+   "t": 115.06971840000006,
+   "r": 355.04522240000006,
+   "b": 82.82908213048131,
+   "coord_origin": "BOTTOMLEFT"
+  },
+  "orig": "v< = √ 5 3 kBT m (3.106)",
+  "kind": "display",
+  "size": [
+   432,
+   73
+  ],
+  "reference": "v_\\ell=\\sqrt{\\frac{5}{3}\\frac{k_B\\overline{T}}{m}}",
+  "docling_cpu_raw": "v _ { \\ell } = \\sqrt { \\frac { 5 } { 3 } \\, \\frac { k _ { B } \\overline { T } } { m } } & & ( 3 . 1 0 6 )",
+  "status": "corrected"
+ },
+ {
+  "id": "FK-p28-t439",
+  "doc": "FoundationsKardar",
+  "page": 28,
+  "ref": "#/texts/439",
+  "bbox": {
+   "l": 154.4974,
+   "t": 250.06601839999996,
+   "r": 465.5339208000001,
+   "b": 154.86271175590207,
+   "coord_origin": "BOTTOMLEFT"
+  },
+  "orig": "LEUscript ⎠ln f 0 1 ] = 0- mc 2 3kBT SLalphauSLalpha+cSLalpha [( FSLalpha kBT - SLalphan n - SLalphaT T ) + ( SLalphan n - 3 2 SLalphaT T ) - FSLalpha kBT ] + mc 2 2kBT 2 cSLalpha SLalphaT + m kBT cSLalphacSLbetauSLalphaSLbeta = m kBT ( cSLalphacSLbeta - SLdeltaSLalphaSLbeta 3 c 2 ) uSLalphaSLbeta+ ( mc 2 2kBT - 5 2 ) cSLalpha T SLalphaTperiodori (3.110)",
+  "kind": "display",
+  "size": [
+   679,
+   216
+  ],
+  "reference": "\\mathcal{L}[\\ln f_1^0]=0-\\frac{mc^2}{3k_BT}\\partial_\\alpha u_\\alpha+c_\\alpha\\left[\\left(\\frac{F_\\alpha}{k_BT}-\\frac{\\partial_\\alpha n}{n}-\\frac{\\partial_\\alpha T}{T}\\right)+\\left(\\frac{\\partial_\\alpha n}{n}-\\frac32\\frac{\\partial_\\alpha T}{T}\\right)-\\frac{F_\\alpha}{k_BT}\\right]\\\\+\\frac{mc^2}{2k_BT^2}c_\\alpha\\partial_\\alpha T+\\frac{m}{k_BT}c_\\alpha c_\\beta u_{\\alpha\\beta}\\\\=\\frac{m}{k_BT}\\left(c_\\alpha c_\\beta-\\frac{\\delta_{\\alpha\\beta}}{3}c^2\\right)u_{\\alpha\\beta}+\\left(\\frac{mc^2}{2k_BT}-\\frac52\\right)\\frac{c_\\alpha}{T}\\partial_\\alpha T.",
+  "docling_cpu_raw": "\\text {we can simplify the above equation to} \\\\ \\mathcal { L } [ \\ln f _ { 1 } ^ { 0 } ] & = 0 - \\frac { m c ^ { 2 } } { 3 k _ { B } T } \\partial _ { \\alpha } u _ { \\alpha } + c _ { \\alpha } \\left [ \\left ( \\frac { F _ { \\alpha } } { k _ { B } T } - \\frac { \\partial _ { \\alpha } n } { n } - \\frac { \\partial _ { \\alpha } T } { T } \\right ) + \\left ( \\frac { \\partial _ { \\alpha } n } { n } - \\frac { 3 } { 2 } \\frac { \\partial _ { \\alpha } T } { T } \\right ) - \\frac { F _ { \\alpha } } { k _ { B } T } \\right ] \\\\ & + \\frac { m c ^ { 2 } } { 2 k _ { B } T ^ { 2 } } c _ { \\alpha } \\partial _ { \\alpha } T + \\frac { m } { k _ { B } T } c _ { \\alpha } c _ { \\alpha } u _ { \\alpha } \\\\ & = \\frac { m } { k _ { B } T } \\left ( c _ { \\alpha } c _ { \\beta } - \\frac { \\delta _ { \\alpha \\beta } } { 3 } c ^ { 2 } \\right ) u _ { \\alpha \\beta } + \\left ( \\frac { m c ^ { 2 } } { 2 k _ { B } T } - \\frac { 5 } { 2 } \\right ) \\frac { c _ { \\alpha } } { T } \\partial _ { \\alpha } T . \\\\ \\\\ \\text {The characteristic time scale} \\, \\sigma _ { \\alpha } \\text { for } C _ { \\alpha } \\text { is arbitrary and compact} \\, b \\text { mode much}",
+  "status": "corrected"
+ },
+ {
+  "id": "FK-p56-t936",
+  "doc": "FoundationsKardar",
+  "page": 56,
+  "ref": "#/texts/936",
+  "bbox": {
+   "l": 253.2619,
+   "t": 152.1785264,
+   "r": 465.53332240000003,
+   "b": 130.4405821304813,
+   "coord_origin": "BOTTOMLEFT"
+  },
+  "orig": "langleSCHEUscript n rangleSCc = lparenori-1rparenori n n lnZ SLbeta n periodori (4.67)",
+  "kind": "display",
+  "size": [
+   482,
+   50
+  ],
+  "reference": "\\langle \\mathcal { H } ^ { n } \\rangle _ { c } = ( - 1 ) ^ { n } \\frac { \\partial ^ { n } \\ln Z } { \\partial \\beta ^ { n } } .",
+  "docling_cpu_raw": "\\langle \\mathcal { H } ^ { n } \\rangle _ { c } = ( - 1 ) ^ { n } \\frac { \\partial ^ { n } \\ln Z } { \\partial \\beta ^ { n } } .",
+  "status": "accepted"
+ },
+ {
+  "id": "FK-p60-t1007",
+  "doc": "FoundationsKardar",
+  "page": 60,
+  "ref": "#/texts/1007",
+  "bbox": {
+   "l": 192.4037,
+   "t": 195.43231839999999,
+   "r": 465.53392240000005,
+   "b": 130.49179279999998,
+   "coord_origin": "BOTTOMLEFT"
+  },
+  "orig": "ZEUscriptlparenoriNcommaoriTcommaoriPrparenori = ∫ infinity2 0 dVe -SLbetaPV ∫ 1 N ! N∏ i=1 d 3 !qid 3 !pi h 3 exp [ -SLbeta N∑i=1 p 2 i 2m ] = ∫ infinity2 0 dVV N e -SLbetaPV 1 N!SLlambdalparenoriTrparenori 3N = 1 lparenoriSLbetaPrparenori N+1 SLlambdalparenoriTrparenori 3N periodori (4.91)",
+  "kind": "display",
+  "size": [
+   604,
+   147
+  ],
+  "reference": "\\mathcal{Z}(N,T,P)=\\int_0^\\infty dV e^{-\\beta PV}\\int\\frac{1}{N!}\\prod_{i=1}^N\\frac{d^3\\vec q_i d^3\\vec p_i}{h^3}\\exp\\left[-\\beta\\sum_{i=1}^N\\frac{p_i^2}{2m}\\right]\\\\=\\int_0^\\infty dV V^N e^{-\\beta PV}\\frac{1}{N!\\lambda(T)^{3N}}=\\frac{1}{(\\beta P)^{N+1}\\lambda(T)^{3N}}.",
+  "docling_cpu_raw": "The normalization factor is now \\\\ Z ( N , T , P ) = \\int _ { 0 } ^ { \\infty } d V e ^ { - \\beta P V } \\int \\frac { 1 } { N ! } \\prod _ { i = 1 } ^ { N } \\frac { d ^ { 3 } \\bar { q } _ { i } d ^ { 3 } \\bar { p } _ { i } } { h ^ { 3 } } \\exp \\left [ - \\beta \\sum _ { i = 1 } ^ { N } \\frac { p _ { i } ^ { 2 } } { 2 m } \\right ] \\\\ = \\int _ { 0 } ^ { \\infty } d V V ^ { N } \\, e ^ { - \\beta p V } \\frac { 1 } { N ! \\lambda ( T ) ^ { 3 N } } = \\frac { 1 } { ( \\beta P ) ^ { N + 1 } \\, \\lambda ( T ) ^ { 3 N } } . \\\\ \\text {Ignoring non-extensive contributions, the Gibbs free energy is given by}",
+  "status": "corrected"
+ },
+ {
+  "id": "FK-p64-t1075",
+  "doc": "FoundationsKardar",
+  "page": 64,
+  "ref": "#/texts/1075",
+  "bbox": {
+   "l": 232.3922,
+   "t": 540.0303184,
+   "r": 465.5335224000001,
+   "b": 493.7517409032594,
+   "coord_origin": "BOTTOMLEFT"
+  },
+  "orig": "P =- GEUscript V =- GEUscript V ⎛⎛⎛⎛SLmucommaoriT = kBT e SLbetaSLmu SLlambda 3 periodori (4.110)",
+  "kind": "display",
+  "size": [
+   525,
+   105
+  ],
+  "reference": "P=-\\frac{\\mathcal{G}}{V}=-\\frac{\\partial\\mathcal{G}}{\\partial V}\\Big|_{\\mu,T}=k_BT\\frac{e^{\\beta\\mu}}{\\lambda^3}.",
+  "docling_cpu_raw": "P = - \\frac { \\mathcal { G } } { V } = - \\, \\frac { \\partial \\mathcal { G } } { \\partial V } \\Big | _ { \\mu , T } = k _ { B } T \\frac { e ^ { \\beta \\mu } } { \\lambda ^ { 3 } } \\cdot \\\\ \\intertext { l e $ b $ number and the chemical potential are related by }",
+  "status": "corrected"
+ },
+ {
+  "id": "TK-p04-t55",
+  "doc": "ThermoKardar",
+  "page": 4,
+  "ref": "#/texts/55",
+  "bbox": {
+   "l": 213.3715,
+   "t": 418.49761839999996,
+   "r": 465.53532240000004,
+   "b": 366.18734090325944,
+   "coord_origin": "BOTTOMLEFT"
+  },
+  "orig": "( P+ a V 2 ) lparenoriV ! brparenorilparenoriL!L0rparenori!clbracketoriF !KlparenoriL!L0rparenorirbracketori = 0commaori ( P+ a V 2 ) lparenoriV !brparenoriM!dB=0 (1.7)",
+  "kind": "display",
+  "size": [
+   563,
+   119
+  ],
+  "reference": "\\left(P+\\frac{a}{V^2}\\right)(V-b)(L-L_0)-c[F-K(L-L_0)]=0,\\\\\\left(P+\\frac{a}{V^2}\\right)(V-b)M-dB=0.",
+  "docling_cpu_raw": "\\text {ing constraints are satisfied between their coordinates:} \\\\ & \\left ( P + \\frac { a } { V ^ { 2 } } \\right ) ( V - b ) ( L - L _ { 0 } ) - c [ F - K ( L - L _ { 0 } ) ] = 0 , \\\\ & \\left ( P + \\frac { a } { V ^ { 2 } } \\right ) ( V - b ) M - d B = 0 . \\\\ \\intertext { w i o d i t i o n s c a n d e b e r a n g i z e d i n t u r e e m p e r i c a l t e m p e r u c h e r f i n c h e r s }",
+  "status": "corrected"
+ },
+ {
+  "id": "TK-p04-t57",
+  "doc": "ThermoKardar",
+  "page": 4,
+  "ref": "#/texts/57",
+  "bbox": {
+   "l": 205.6495,
+   "t": 342.2694184,
+   "r": 465.53252240000006,
+   "b": 309.6047927999999,
+   "coord_origin": "BOTTOMLEFT"
+  },
+  "orig": "UPTheta∝ ( P+ a V 2 ) lparenoriV !brparenori = c ( F L!L0 !K ) = d B M (1.8)",
+  "kind": "display",
+  "size": [
+   578,
+   75
+  ],
+  "reference": "\\Theta\\propto\\left(P+\\frac{a}{V^2}\\right)(V-b)=c\\left(\\frac{F}{L-L_0}-K\\right)=d\\frac{B}{M}.",
+  "docling_cpu_raw": "\\Theta \\, \\alpha \\left ( P + \\frac { a } { V ^ { 2 } } \\right ) ( V - b ) = c \\left ( \\frac { F } { L - L _ { 0 } } - K \\right ) = d \\frac { B } { M } . \\\\ \\intertext { t o f t h e z o r o t h l o w y s o r o w l o c u r p a n t r i o n s } \\",
+  "status": "corrected"
+ },
+ {
+  "id": "TK-p14-t275",
+  "doc": "ThermoKardar",
+  "page": 14,
+  "ref": "#/texts/275",
+  "bbox": {
+   "l": 270.3467,
+   "t": 403.69388719999995,
+   "r": 465.5340224000001,
+   "b": 382.0246821304812,
+   "coord_origin": "BOTTOMLEFT"
+  },
+  "orig": "¯ dQR = T0 ¯ dQ T (1.23)",
+  "kind": "display",
+  "size": [
+   444,
+   49
+  ],
+  "reference": "\\bar{d}Q_R=T_0\\frac{\\bar{d}Q}{T}.",
+  "docling_cpu_raw": "\\mathfrak { d } Q _ { R } = T _ { 0 } \\frac { \\mathfrak { d } Q } { T } .",
+  "status": "corrected"
+ },
+ {
+  "id": "TK-p17-t334",
+  "doc": "ThermoKardar",
+  "page": 17,
+  "ref": "#/texts/334",
+  "bbox": {
+   "l": 153.6053,
+   "t": 407.0933184,
+   "r": 355.04462240000004,
+   "b": 360.81474090325946,
+   "coord_origin": "BOTTOMLEFT"
+  },
+  "orig": "xi =! SLpartialdiffH SLpartialdiffJi ∣ ∣ ∣ ∣ ScommaoriJj̸ =i (1.32)",
+  "kind": "display",
+  "size": [
+   458,
+   105
+  ],
+  "reference": "x_i=-\\frac{\\partial H}{\\partial J_i}\\Big|_{S,J_{j\\neq i}}.",
+  "docling_cpu_raw": "E q . \\, ( 1 . 3 1 ) \\, \\text {that} \\\\ x _ { i } = - \\, \\frac { \\partial H } { \\partial J _ { i } } \\Big | _ { s , J , \\neq i } \\cdot \\\\ \\intertext { t h a l p y \\, w i t h e r $ \\ } \\text {temperature are related to heat capacities at }",
+  "status": "corrected"
+ },
+ {
+  "id": "TK-p20-t385",
+  "doc": "ThermoKardar",
+  "page": 20,
+  "ref": "#/texts/385",
+  "bbox": {
+   "l": 241.5164,
+   "t": 405.29487839999996,
+   "r": 465.5329224000001,
+   "b": 390.24029279999996,
+   "coord_origin": "BOTTOMLEFT"
+  },
+  "orig": "ElparenoriSLlambdaScommaoriSLlambdaxcommaoriSLlambdaNrparenori =SLlambdaElparenoriScommaorixcommaoriNrparenori (1.46)",
+  "kind": "display",
+  "size": [
+   508,
+   35
+  ],
+  "reference": "E ( \\lambda S , \\lambda x , \\lambda N ) = \\lambda E ( S , x , N ) .",
+  "docling_cpu_raw": "E ( \\lambda S , \\lambda x , \\lambda N ) = \\lambda E ( S , x , N ) .",
+  "status": "accepted"
+ },
+ {
+  "id": "TK-p24-t460",
+  "doc": "ThermoKardar",
+  "page": 24,
+  "ref": "#/texts/460",
+  "bbox": {
+   "l": 164.4152,
+   "t": 100.5545184,
+   "r": 465.53422080000007,
+   "b": 45.32922142032089,
+   "coord_origin": "BOTTOMLEFT"
+  },
+  "orig": "SLdeltaS =! 2 TA [ SLdeltaTA ( SLdeltaEA !JA · SLdeltaxA !SLmuA · SLdeltaNA TA ) +SLdeltaJA · SLdeltaxA +SLdeltaSLmuA · SLdeltaNA ] =! 2 TA lbracketoriSLdeltaTASLdeltaSA+SLdeltaJA ·SLdeltaxA+SLdeltaSLmuA ·SLdeltaNArbracketori (1.70)",
+  "kind": "display",
+  "size": [
+   659,
+   126
+  ],
+  "reference": "\\delta S=-\\frac{2}{T_A}\\left[\\delta T_A\\left(\\frac{\\delta E_A-J_A\\cdot\\delta x_A-\\mu_A\\cdot\\delta N_A}{T_A}\\right)+\\delta J_A\\cdot\\delta x_A+\\delta\\mu_A\\cdot\\delta N_A\\right]\\\\=-\\frac{2}{T_A}\\left[\\delta T_A\\delta S_A+\\delta J_A\\cdot\\delta x_A+\\delta\\mu_A\\cdot\\delta N_A\\right].",
+  "docling_cpu_raw": "\\text {same as } A . ) \\, \\text {Equation (1.69)} \\, \\text { can be realized to } \\\\ \\delta S & = - \\frac { 2 } { T _ { A } } \\left [ \\delta T _ { A } \\left ( \\frac { \\delta E _ { A } - J _ { A } \\cdot \\delta x _ { A } - \\mu _ { A } \\cdot \\delta N _ { A } } { T _ { A } } \\right ) + \\delta J _ { A } \\cdot \\delta x _ { A } + \\delta \\mu _ { A } \\cdot \\delta N _ { A } \\right ] \\\\ & = - \\frac { 2 } { T _ { A } } \\left [ \\delta T _ { A } \\delta S _ { A } + \\delta J _ { A } \\cdot \\delta x _ { A } + \\delta \\mu _ { A } \\cdot \\delta N _ { A } \\right ] .",
+  "status": "corrected"
+ },
+ {
+  "id": "TK-p24-t447",
+  "doc": "ThermoKardar",
+  "page": 24,
+  "ref": "#/texts/447",
+  "bbox": {
+   "l": 168.861,
+   "t": 461.9586784,
+   "r": 465.5315224000001,
+   "b": 446.90409279999994,
+   "coord_origin": "BOTTOMLEFT"
+  },
+  "orig": "lparenoriEB!SLdeltaEcommaori xB!SLdeltaxcommaori NB!SLdeltaNrparenori and lparenoriTB+SLdeltaTBcommaori JB+SLdeltaJBcommaori SLmuB+SLdeltaSLmuBrparenori (1.66)",
+  "kind": "display",
+  "size": [
+   651,
+   34
+  ],
+  "reference": "( E _ { B } - \\delta E , \\, \\mathbf x _ { B } - \\delta \\mathbf x , \\, N _ { B } - \\delta N ) \\, \\text { and } ( T _ { B } + \\delta T _ { B } , \\, J _ { B } + \\delta J _ { B } , \\, \\mu _ { B } + \\delta \\mu _ { B } ) .",
+  "docling_cpu_raw": "( E _ { B } - \\delta E , \\, \\mathbf x _ { B } - \\delta \\mathbf x , \\, N _ { B } - \\delta N ) \\, \\text { and } ( T _ { B } + \\delta T _ { B } , \\, J _ { B } + \\delta J _ { B } , \\, \\mu _ { B } + \\delta \\mu _ { B } ) .",
+  "status": "accepted"
+ },
+ {
+  "id": "TK-p25-t472",
+  "doc": "ThermoKardar",
+  "page": 25,
+  "ref": "#/texts/472",
+  "bbox": {
+   "l": 136.5288,
+   "t": 290.6933184,
+   "r": 355.04432240000006,
+   "b": 244.41474090325949,
+   "coord_origin": "BOTTOMLEFT"
+  },
+  "orig": "Cx = ¯ dQ dT ∣ ∣ ∣ ∣ x =T SLpartialdiffS SLpartialdiffT ∣ ∣ ∣ ∣ x + 0 (1.74)",
+  "kind": "display",
+  "size": [
+   496,
+   106
+  ],
+  "reference": "C_x=\\frac{\\bar{d}Q}{dT}\\Big|_x=T\\frac{\\partial S}{\\partial T}\\Big|_x\\geq0.",
+  "docling_cpu_raw": "i r e s \\ \\partial S / \\partial T | _ { x } \\geq 0 , \\, \\text {impllying a positive heat capacity, since} \\\\ C _ { x } = \\frac { d Q } { d T } \\Big | _ { x } = T \\, \\frac { \\partial S } { \\partial T } \\Big | _ { x } \\geq 0 . \\\\ \\intertext { f o r e s \\ \\partial x _ { i } \\, \\text { in Eq. (1.71) is non-zero, the corresponding response} } I _ { \\cdot } | _ { x } = \\text { must be positive. However, a more general requirement}",
+  "status": "corrected"
+ },
+ {
+  "id": "FP-p06-t65",
+  "doc": "FoundationsPlischke",
+  "page": 6,
+  "ref": "#/texts/65",
+  "bbox": {
+   "l": 121.92,
+   "t": 159.63599999999997,
+   "r": 366.36521000000005,
+   "b": 139.36120000000005,
+   "coord_origin": "BOTTOMLEFT"
+  },
+  "orig": "dSiE,N,V) = f + ^f-^. (2.16)",
+  "kind": "display",
+  "size": [
+   539,
+   46
+  ],
+  "reference": "d S ( E , N , V ) = \\frac { d E } { T } + \\frac { P d V } { T } - \\frac { \\mu d N } { T } \\ .",
+  "docling_cpu_raw": "d S ( E , N , V ) = \\frac { d E } { T } + \\frac { P d V } { T } - \\frac { \\mu d N } { T } \\ .",
+  "status": "accepted"
+ },
+ {
+  "id": "FP-p15-t194",
+  "doc": "FoundationsPlischke",
+  "page": 15,
+  "ref": "#/texts/194",
+  "bbox": {
+   "l": 83.04,
+   "t": 562.1963,
+   "r": 369.2883,
+   "b": 502.8093333333333,
+   "coord_origin": "BOTTOMLEFT"
+  },
+  "orig": "' d N dv, d\\ dv j \\ 1 = ' V,T | N,T /0AP - \\dv, fdV^ \\dv j \\ i j ' V,T i , N,T ( d N KdN, ( d ^ \\dV, \\ _ ' V,T I N,T N 2 ( ^^__ I v V ,rf 9 N {dV 9 \\ 1 dN)VT \\ J N,T (2.63)",
+  "kind": "display",
+  "size": [
+   619,
+   135
+  ],
+  "reference": "\\begin{array} { r l r } { \\left ( \\frac { \\partial } { \\partial v } \\right ) _ { V , T } } & { = } & { \\left ( \\frac { \\partial N } { \\partial v } \\right ) _ { V , T } \\left ( \\frac { \\partial } { \\partial N } \\right ) _ { V , T } = - \\frac { N ^ { 2 } } { V } \\left ( \\frac { \\partial } { \\partial N } \\right ) _ { V , T } } \\\\ { \\left ( \\frac { \\partial } { \\partial v } \\right ) _ { N , T } } & { = } & { \\left ( \\frac { \\partial V } { \\partial v } \\right ) _ { N , T } \\left ( \\frac { \\partial } { \\partial V } \\right ) _ { N , T } = N \\left ( \\frac { \\partial } { \\partial V } \\right ) _ { N , T } \\, . } \\end{array}",
+  "docling_cpu_raw": "\\begin{array} { r l r } { \\left ( \\frac { \\partial } { \\partial v } \\right ) _ { V , T } } & { = } & { \\left ( \\frac { \\partial N } { \\partial v } \\right ) _ { V , T } \\left ( \\frac { \\partial } { \\partial N } \\right ) _ { V , T } = - \\frac { N ^ { 2 } } { V } \\left ( \\frac { \\partial } { \\partial N } \\right ) _ { V , T } } \\\\ { \\left ( \\frac { \\partial } { \\partial v } \\right ) _ { N , T } } & { = } & { \\left ( \\frac { \\partial V } { \\partial v } \\right ) _ { N , T } \\left ( \\frac { \\partial } { \\partial V } \\right ) _ { N , T } = N \\left ( \\frac { \\partial } { \\partial V } \\right ) _ { N , T } \\, . } \\end{array}",
+  "status": "accepted"
+ },
+ {
+  "id": "FP-p18-t235",
+  "doc": "FoundationsPlischke",
+  "page": 18,
+  "ref": "#/texts/235",
+  "bbox": {
+   "l": 41.76,
+   "t": 495.202,
+   "r": 366.52941,
+   "b": 484.7692333333333,
+   "coord_origin": "BOTTOMLEFT"
+  },
+  "orig": "(nk) = -kBT± ln[l - eM-P(Ek - \")>] = ^ ^ J , ^ _ x · ^",
+  "kind": "display",
+  "size": [
+   669,
+   24
+  ],
+  "reference": "\\langle n_k\\rangle=-k_BT\\frac{\\partial}{\\partial\\mu}\\ln[1-\\exp\\{-\\beta(E_k-\\mu)\\}]=\\frac{1}{\\exp\\{\\beta(E_k-\\mu)\\}-1}.",
+  "docling_cpu_raw": "\\langle n _ { k } \\rangle = - k _ { B } T \\frac { \\smile } { \\partial u } \\ln [ 1 - \\exp \\{ - \\beta ( E _ { k } - \\mu ) \\} ] = \\frac { 1 } { \\exp \\{ \\beta ( E _ { k } - u ) \\} - 1 } \\ .",
+  "status": "corrected"
+ },
+ {
+  "id": "FP-p21-t292",
+  "doc": "FoundationsPlischke",
+  "page": 21,
+  "ref": "#/texts/292",
+  "bbox": {
+   "l": 63.84,
+   "t": 149.08000000000004,
+   "r": 336.6734599999998,
+   "b": 127.15333333333331,
+   "coord_origin": "BOTTOMLEFT"
+  },
+  "orig": "dS(Z{l)Z(2)) dS(Z(l)) dS(Z(l)Z(2)) Z{1) d(Z(l)) = Z{l) -^ZW = Z{l)Z{2) d(Z(l)Z(2))",
+  "kind": "display",
+  "size": [
+   620,
+   50
+  ],
+  "reference": "Z ( 1 ) \\frac { d S ( Z ( 1 ) Z ( 2 ) ) } { d ( Z ( 1 ) ) } = Z ( 1 ) \\frac { d S ( Z ( 1 ) ) } { d Z ( 1 ) } = Z ( 1 ) Z ( 2 ) \\frac { d S ( Z ( 1 ) Z ( 2 ) ) } { d ( Z ( 1 ) Z ( 2 ) ) }",
+  "docling_cpu_raw": "Z ( 1 ) \\frac { d S ( Z ( 1 ) Z ( 2 ) ) } { d ( Z ( 1 ) ) } = Z ( 1 ) \\frac { d S ( Z ( 1 ) ) } { d Z ( 1 ) } = Z ( 1 ) Z ( 2 ) \\frac { d S ( Z ( 1 ) Z ( 2 ) ) } { d ( Z ( 1 ) Z ( 2 ) ) }",
+  "status": "accepted"
+ },
+ {
+  "id": "FP-p23-t314",
+  "doc": "FoundationsPlischke",
+  "page": 23,
+  "ref": "#/texts/314",
+  "bbox": {
+   "l": 139.92,
+   "t": 474.083613,
+   "r": 369.2846,
+   "b": 446.452129,
+   "coord_origin": "BOTTOMLEFT"
+  },
+  "orig": "L dxp(x) = 1 . (2.101) E<H(x)<E+SB",
+  "kind": "display",
+  "size": [
+   507,
+   62
+  ],
+  "reference": "\\int _ { E < H ( x ) < E + \\delta E } d x \\rho ( x ) = 1 \\, .",
+  "docling_cpu_raw": "\\int _ { E < H ( x ) < E + \\delta E } d x \\rho ( x ) = 1 \\, .",
+  "status": "accepted"
+ },
+ {
+  "id": "FP-p23-t322",
+  "doc": "FoundationsPlischke",
+  "page": 23,
+  "ref": "#/texts/322",
+  "bbox": {
+   "l": 110.64,
+   "t": 191.0016,
+   "r": 291.96068399999996,
+   "b": 171.10666666666668,
+   "coord_origin": "BOTTOMLEFT"
+  },
+  "orig": "Sp(x) l-kB fd? N x[pln{h 3N N\\p) - \\p)\\",
+  "kind": "display",
+  "size": [
+   412,
+   45
+  ],
+  "reference": "\\frac { \\delta } { \\delta \\rho ( x ) } \\left \\{ - k _ { B } \\int d ^ { 6 N } x [ \\rho \\ln ( h ^ { 3 N } N ! \\rho ) - \\lambda \\rho ] \\right \\}",
+  "docling_cpu_raw": "\\frac { \\delta } { \\delta \\rho ( x ) } \\left \\{ - k _ { B } \\int d ^ { 6 N } x [ \\rho \\ln ( h ^ { 3 N } N ! \\rho ) - \\lambda \\rho ] \\right \\}",
+  "status": "accepted"
+ },
+ {
+  "id": "TP-p10-t123",
+  "doc": "ThermoPlischke",
+  "page": 10,
+  "ref": "#/texts/123",
+  "bbox": {
+   "l": 126.24,
+   "t": 115.10000000000002,
+   "r": 371.1445,
+   "b": 90.19333333333338,
+   "coord_origin": "BOTTOMLEFT"
+  },
+  "orig": "dA - dE- d{TS) = dQ - TdS - SdT - dW . (1.28)",
+  "kind": "display",
+  "size": [
+   533,
+   56
+  ],
+  "reference": "dA=dE-d(TS)\\\\=\\bar{d}Q-TdS-SdT-\\bar{d}W.",
+  "docling_cpu_raw": "d A \\ & = \\ d E - d ( T S ) \\\\ & = \\ \\tilde { d } Q - T d S - S d T - d W \\ .",
+  "status": "corrected"
+ },
+ {
+  "id": "TP-p10-t121",
+  "doc": "ThermoPlischke",
+  "page": 10,
+  "ref": "#/texts/121",
+  "bbox": {
+   "l": 110.88,
+   "t": 215.65999999999997,
+   "r": 372.269122,
+   "b": 178.680115,
+   "coord_origin": "BOTTOMLEFT"
+  },
+  "orig": "dA = dE - TdS - SdT = -SdT + Y, Xidxi + J2 Vi dN j · (1-27) i 3",
+  "kind": "display",
+  "size": [
+   564,
+   84
+  ],
+  "reference": "d A \\ & = \\ d E - T d S - S d T \\\\ & = \\ - S d T + \\sum _ { i } X _ { i } d x _ { i } + \\sum _ { j } \\mu _ { j } d N _ { j } \\ .",
+  "docling_cpu_raw": "d A \\ & = \\ d E - T d S - S d T \\\\ & = \\ - S d T + \\sum _ { i } X _ { i } d x _ { i } + \\sum _ { j } \\mu _ { j } d N _ { j } \\ .",
+  "status": "accepted"
+ },
+ {
+  "id": "TP-p16-t221",
+  "doc": "ThermoPlischke",
+  "page": 16,
+  "ref": "#/texts/221",
+  "bbox": {
+   "l": 46.8,
+   "t": 247.47000000000003,
+   "r": 370.00579999999997,
+   "b": 176.02026666666666,
+   "coord_origin": "BOTTOMLEFT"
+  },
+  "orig": "'dS!\\ Jrn , (dS2\\ Jr, , fdSA fdS_2 dS = dEi Vi Mi^ns^'H^L'\" 4 (dSi\\ _ (dS2\\ \\dEjVi \\dE2)V2 dEx + dvJEl \\dv2)E2 dVi = 0 (1.67)",
+  "kind": "display",
+  "size": [
+   669,
+   162
+  ],
+  "reference": "\\text {must be a maximum.  This} \\\\ d S & = \\left ( \\frac { \\partial S _ { 1 } } { \\partial E _ { 1 } } \\right ) _ { V _ { 1 } } d E _ { 1 } + \\left ( \\frac { \\partial S _ { 2 } } { \\partial E _ { 2 } } \\right ) _ { V _ { 2 } } d E _ { 2 } + \\left ( \\frac { \\partial S _ { 1 } } { \\partial V _ { 1 } } \\right ) _ { E _ { 1 } } d V _ { 1 } + \\left ( \\frac { \\partial S _ { 2 } } { \\partial V _ { 2 } } \\right ) _ { E _ { 2 } } d V _ { 2 } \\\\ & = \\left [ \\left ( \\frac { \\partial S _ { 1 } } { \\partial E _ { 1 } } \\right ) _ { V _ { 1 } } - \\left ( \\frac { \\partial S _ { 2 } } { \\partial E _ { 2 } } \\right ) _ { V _ { 2 } } \\right ] d E _ { 1 } + \\left [ \\left ( \\frac { \\partial S _ { 1 } } { \\partial V _ { 1 } } \\right ) _ { E _ { 1 } } - \\left ( \\frac { \\partial S _ { 2 } } { \\partial V _ { 2 } } \\right ) _ { E _ { 2 } } \\right ] d V _ { 1 } = 0 \\ \\ ( 1 . 6 7 ) \\\\",
+  "docling_cpu_raw": "\\text {must be a maximum.  This} \\\\ d S & = \\left ( \\frac { \\partial S _ { 1 } } { \\partial E _ { 1 } } \\right ) _ { V _ { 1 } } d E _ { 1 } + \\left ( \\frac { \\partial S _ { 2 } } { \\partial E _ { 2 } } \\right ) _ { V _ { 2 } } d E _ { 2 } + \\left ( \\frac { \\partial S _ { 1 } } { \\partial V _ { 1 } } \\right ) _ { E _ { 1 } } d V _ { 1 } + \\left ( \\frac { \\partial S _ { 2 } } { \\partial V _ { 2 } } \\right ) _ { E _ { 2 } } d V _ { 2 } \\\\ & = \\left [ \\left ( \\frac { \\partial S _ { 1 } } { \\partial E _ { 1 } } \\right ) _ { V _ { 1 } } - \\left ( \\frac { \\partial S _ { 2 } } { \\partial E _ { 2 } } \\right ) _ { V _ { 2 } } \\right ] d E _ { 1 } + \\left [ \\left ( \\frac { \\partial S _ { 1 } } { \\partial V _ { 1 } } \\right ) _ { E _ { 1 } } - \\left ( \\frac { \\partial S _ { 2 } } { \\partial V _ { 2 } } \\right ) _ { E _ { 2 } } \\right ] d V _ { 1 } = 0 \\ \\ ( 1 . 6 7 ) \\\\",
+  "status": "accepted"
+ },
+ {
+  "id": "TP-p17-t233",
+  "doc": "ThermoPlischke",
+  "page": 17,
+  "ref": "#/texts/233",
+  "bbox": {
+   "l": 129.6,
+   "t": 290.3,
+   "r": 369.5256,
+   "b": 280.8156666666667,
+   "coord_origin": "BOTTOMLEFT"
+  },
+  "orig": "Gi(Po,T0) = Ei - T0S1 + P0Vr . (1.72)",
+  "kind": "display",
+  "size": [
+   525,
+   22
+  ],
+  "reference": "G _ { 1 } ( P _ { 0 } , T _ { 0 } ) = E _ { 1 } - T _ { 0 } S _ { 1 } + P _ { 0 } V _ { 1 } \\ .",
+  "docling_cpu_raw": "G _ { 1 } ( P _ { 0 } , T _ { 0 } ) = E _ { 1 } - T _ { 0 } S _ { 1 } + P _ { 0 } V _ { 1 } \\ .",
+  "status": "accepted"
+ },
+ {
+  "id": "TP-p18-t245",
+  "doc": "ThermoPlischke",
+  "page": 18,
+  "ref": "#/texts/245",
+  "bbox": {
+   "l": 140.16,
+   "t": 434.5928,
+   "r": 367.77968100000004,
+   "b": 410.00266666666664,
+   "coord_origin": "BOTTOMLEFT"
+  },
+  "orig": "S ) \" = £ > 0 o r O , ' > 0 (1 - 76)",
+  "kind": "display",
+  "size": [
+   504,
+   56
+  ],
+  "reference": "\\left ( \\frac { \\partial T } { \\partial S } \\right ) _ { V } = \\frac { T } { C _ { V } } > 0 \\ \\text { or } \\ C _ { V } > 0",
+  "docling_cpu_raw": "\\left ( \\frac { \\partial T } { \\partial S } \\right ) _ { V } = \\frac { T } { C _ { V } } > 0 \\ \\text { or } \\ C _ { V } > 0",
+  "status": "accepted"
+ },
+ {
+  "id": "TP-p18-t248",
+  "doc": "ThermoPlischke",
+  "page": 18,
+  "ref": "#/texts/248",
+  "bbox": {
+   "l": 154.32,
+   "t": 325.0784,
+   "r": 369.57238304,
+   "b": 297.22026666666665,
+   "coord_origin": "BOTTOMLEFT"
+  },
+  "orig": "T_ (&E_\\ 2 VKSCV >[Hv)s< IJ8 >",
+  "kind": "display",
+  "size": [
+   476,
+   63
+  ],
+  "reference": "\\frac { T } { V K _ { S } C _ { V } } > \\left ( \\frac { \\partial T } { \\partial V } \\right ) _ { S } ^ { 2 } \\ .",
+  "docling_cpu_raw": "\\frac { T } { V K _ { S } C _ { V } } > \\left ( \\frac { \\partial T } { \\partial V } \\right ) _ { S } ^ { 2 } \\ .",
+  "status": "accepted"
+ },
+ {
+  "id": "TP-p24-t315",
+  "doc": "ThermoPlischke",
+  "page": 24,
+  "ref": "#/texts/315",
+  "bbox": {
+   "l": 96.24,
+   "t": 422.73,
+   "r": 368.0883,
+   "b": 400.73013333333336,
+   "coord_origin": "BOTTOMLEFT"
+  },
+  "orig": "vi{Pc,Tc)= - = MPcTc)=|f (1.90) Pc,Tc",
+  "kind": "display",
+  "size": [
+   592,
+   50
+  ],
+  "reference": "v_1(P_c,T_c)=\\frac{\\partial g_1}{\\partial P}\\Big|_{P_c,T_c}=v_2(P_c,T_c)=\\frac{\\partial g_2}{\\partial P}\\Big|_{P_c,T_c}",
+  "docling_cpu_raw": "v _ { 1 } ( P _ { c } , T _ { c } ) = \\frac { \\partial g _ { 1 } } { \\partial P } \\Big { \\} } _ { P _ { c } , T _ { c } } = v _ { 2 } ( P _ { c } , T _ { c } ) = \\frac { \\partial g _ { 2 } } { \\partial P } \\Big { \\} } _ { P _ { c } , T _ { c } }",
+  "status": "corrected"
+ },
+ {
+  "id": "IFK-p17-51",
+  "doc": "FoundationsKardar",
+  "page": 17,
+  "ref": "docling-parse words",
+  "bbox": {
+   "l": 50.285700000000006,
+   "r": 105.089914,
+   "t": 400.23987999999997,
+   "b": 379.58991519999995
+  },
+  "orig": "lparenori!p 1 ′ commaori !p 2 ′ commaori !b ′ rparenori",
+  "kind": "inline",
+  "size": [
+   99,
+   37
+  ],
+  "reference": "(\\vec p_1{}',\\vec p_2{}',\\vec b{}')",
+  "docling_cpu_raw": "\\stackrel { 1 } { ( \\vec { p } _ { 1 } , \\vec { ^ { \\prime } } , \\vec { p } _ { 2 } , \\vec { ^ { \\prime } } , \\vec { b } ^ { \\prime } ) }",
+  "status": "corrected"
+ },
+ {
+  "id": "IFK-p23-116",
+  "doc": "FoundationsKardar",
+  "page": 23,
+  "ref": "docling-parse words",
+  "bbox": {
+   "l": 115.57910000000001,
+   "r": 156.539914,
+   "t": 343.56546,
+   "b": 324.32021519999995
+  },
+  "orig": "lparenori!p 1 ′ commaori !p 2 ′ rparenori",
+  "kind": "inline",
+  "size": [
+   74,
+   34
+  ],
+  "reference": "(\\vec p_1{}',\\vec p_2{}')",
+  "docling_cpu_raw": "( \\vec { p } _ { 1 } \\, ^ { \\prime } , \\vec { p } _ { 2 } \\, ^ { \\prime } ) \\\\ \\text {oh} \\, \\quad \\text {with} \\, t i t",
+  "status": "corrected"
+ },
+ {
+  "id": "ITK-p12-329",
+  "doc": "ThermoKardar",
+  "page": 12,
+  "ref": "docling-parse words",
+  "bbox": {
+   "l": 328.185,
+   "r": 395.42005000000006,
+   "t": 55.521054800000016,
+   "b": 41.95019516345211
+  },
+  "orig": "lparenoriT 1 > T 2 > T 3 rparenori.",
+  "kind": "inline",
+  "size": [
+   121,
+   25
+  ],
+  "reference": "(T_1>T_2>T_3).",
+  "docling_cpu_raw": "( T _ { 1 } > T _ { 2 } > T _ { 3 } ) .",
+  "status": "corrected"
+ },
+ {
+  "id": "ITK-p18-377",
+  "doc": "ThermoKardar",
+  "page": 18,
+  "ref": "docling-parse words",
+  "bbox": {
+   "l": 376.1463,
+   "r": 429.713879,
+   "t": 250.64057999999997,
+   "b": 232.22221519999997
+  },
+  "orig": "lbraceoriN 1 commaoriN 2 commaori · · · rbraceori",
+  "kind": "inline",
+  "size": [
+   97,
+   33
+  ],
+  "reference": "=\\{N_1,N_2,\\cdots\\}",
+  "docling_cpu_raw": "\\{ N _ { 1 } , N _ { 2 } , \\cdots \\} \\\\ \\{ \\ t h o o o o i o t",
+  "status": "corrected"
+ }
+]

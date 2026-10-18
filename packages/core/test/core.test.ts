@@ -1,7 +1,11 @@
 import { describe, expect, it } from 'vitest';
 import Database from 'better-sqlite3';
 import {
+  CONTRACT_VERSION,
   DEFAULT_SPACE,
+  DEFAULT_PARSE_RECIPE,
+  parseRecipeSchema,
+  stepTraceSchema,
   EVENT_TYPES,
   KgError,
   PAYLOADS,
@@ -33,6 +37,15 @@ import {
   type SessionId,
   type ArtifactId,
   type DocVersion,
+  embeddingSpaceSpecSchema,
+  spaceId,
+  DEFAULT_SEARCH_RECIPE,
+  EVAL_RUN_TOOL,
+  machineMapSchema,
+  recipeId,
+  recipesEqual,
+  searchRecipeSchema,
+  validateMachineMap,
 } from '../src/index';
 
 describe('schema.sql', () => {
@@ -186,6 +199,23 @@ describe('generated JSON Schemas', () => {
   });
 });
 
+describe('search tool input', () => {
+  it('k defaults to 10 when omitted, and is still bounded', async () => {
+    const { TOOLS, DEFAULT_K, MAX_K } = await import('../src/index');
+    expect(DEFAULT_K).toBe(10);
+    expect(TOOLS.search.input.parse({ query: 'x' })).toMatchObject({ query: 'x', k: 10 });
+    expect(TOOLS.search.input.parse({ query: 'x', k: 3 })).toMatchObject({ k: 3 });
+    expect(TOOLS.search.input.safeParse({ query: 'x', k: MAX_K + 1 }).success).toBe(false);
+    expect(TOOLS.search.input.safeParse({ query: 'x', k: 0 }).success).toBe(false);
+  });
+  it('the MCP input schema lists k as optional with its default', async () => {
+    const { toolInputJsonSchema } = await import('../src/index');
+    const sch = toolInputJsonSchema('search') as unknown as { required?: string[]; properties: Record<string, { default?: number }> };
+    expect(sch.required).toEqual(['query']);
+    expect(sch.properties.k!.default).toBe(10);
+  });
+});
+
 describe('0.2.0 additions', () => {
   const S = 'se_00000000000000000000000001' as SessionId;
   const S2 = 'se_00000000000000000000000002' as SessionId;
@@ -266,5 +296,189 @@ describe('0.2.0 additions', () => {
       { questionId: 'q3', missing: ['ch_x', 'ch_y'], allMissing: true },
     ]);
     expect(() => orphanedGold(set, store, B2)).toThrow(KgError);
+  });
+});
+
+describe('0.3.0 additions (P-1 pools)', () => {
+  it('stepTraceSchema accepts an optional pools summary and rejects a malformed one', () => {
+    const base = { stepIndex: 0, state: 'retrieve', stepType: 'vector-knn', params: {}, considered: [], output: [], durationMs: 1 };
+    expect(stepTraceSchema.safeParse(base).success).toBe(true);
+    const ref = { itemId: 'ch_' + 'a'.repeat(20), score: 0.5, rank: 1, queryId: 'q0' };
+    expect(stepTraceSchema.safeParse({ ...base, pools: { 'sub:q0': [ref] } }).success).toBe(true);
+    expect(stepTraceSchema.safeParse({ ...base, pools: { '': [ref] } }).success).toBe(false);
+    expect(stepTraceSchema.safeParse({ ...base, pools: { a: [{ ...ref, rank: 'x' }] } }).success).toBe(false);
+  });
+});
+
+describe('0.4.0 additions (CP-01a digest, CP-02 mapping kinds, pointer events)', () => {
+  it('CONTRACT_VERSION is 0.6.1', () => expect(CONTRACT_VERSION).toBe('0.6.1'));
+  it('EmbeddingSpaceSpec requires a digest, and the digest enters the SpaceId', () => {
+    expect(embeddingSpaceSpecSchema.safeParse(DEFAULT_SPACE).success).toBe(true);
+    const { digest: _d, ...noDigest } = DEFAULT_SPACE;
+    expect(embeddingSpaceSpecSchema.safeParse(noDigest).success).toBe(false);
+    expect(embeddingSpaceSpecSchema.safeParse({ ...DEFAULT_SPACE, digest: '' }).success).toBe(false);
+    expect(spaceId({ ...DEFAULT_SPACE, digest: 'other' })).not.toBe(spaceId(DEFAULT_SPACE));
+  });
+  it('mappings.kind accepts superseded-by / refined-by and rejects the old names', () => {
+    const db = new Database(':memory:');
+    db.exec(schemaSql());
+    db.prepare("insert into recipes values ('rc_1','search','1','{}')").run();
+    db.prepare("insert into derivation_runs values ('rn_1','rc_1','h',null,'t')").run();
+    const ins = (id: string, kind: string) => db.prepare("insert into mappings values (?,?, 'item','ch_a','ch_b','rn_1',null,null)").run(id, kind);
+    ins('mp_1', 'superseded-by');
+    ins('mp_2', 'refined-by');
+    expect(() => ins('mp_3', 'supersedes')).toThrow(/CHECK/);
+    expect(() => ins('mp_4', 'refines')).toThrow(/CHECK/);
+  });
+  it('ingest.completed.previousDocVersionId and build.created.revert are optional additions', () => {
+    const dv = 'dv_' + 'a'.repeat(20);
+    const base = { docKey: 'gas', docVersionId: dv, unchanged: false };
+    expect(PAYLOADS['ingest.completed'].safeParse(base).success).toBe(true);
+    expect(PAYLOADS['ingest.completed'].safeParse({ ...base, previousDocVersionId: null }).success).toBe(true);
+    expect(PAYLOADS['ingest.completed'].safeParse({ ...base, previousDocVersionId: dv }).success).toBe(true);
+    expect(PAYLOADS['ingest.completed'].safeParse({ ...base, previousDocVersionId: 'x' }).success).toBe(false);
+    const b = { buildId: 'bd_' + 'a'.repeat(20), parentId: null, mixedRecipes: false, itemCount: 1 };
+    expect(PAYLOADS['build.created'].safeParse(b).success).toBe(true);
+    expect(PAYLOADS['build.created'].safeParse({ ...b, revert: true }).success).toBe(true);
+    expect(PAYLOADS['build.created'].safeParse({ ...b, revert: 'yes' }).success).toBe(false);
+  });
+});
+
+describe('0.6.0 additions (formula view, formula decoding)', () => {
+  it('the default space is the placeholder view and a missing or unknown view is rejected', () => {
+    expect(DEFAULT_SPACE.formulaView).toBe('placeholder');
+    expect(embeddingSpaceSpecSchema.safeParse(DEFAULT_SPACE).success).toBe(true);
+    const { formulaView: _v, ...without } = DEFAULT_SPACE;
+    expect(embeddingSpaceSpecSchema.safeParse(without).success).toBe(false);
+    expect(embeddingSpaceSpecSchema.safeParse({ ...DEFAULT_SPACE, formulaView: 'latex' }).success).toBe(false);
+  });
+  it('the formula view is part of the space id', () => {
+    expect(spaceId({ ...DEFAULT_SPACE, formulaView: 'full' })).not.toBe(spaceId(DEFAULT_SPACE));
+  });
+  it('formulaDecoding is optional on the parse recipe, strict when present, and absent keeps the recipe id', () => {
+    expect(parseRecipeSchema.safeParse(DEFAULT_PARSE_RECIPE).success).toBe(true);
+    const fd = { model: 'mlx-community/GLM-OCR-4bit', revision: 'abc123', prompt: 'Formula Recognition:', cropMargin: 0.18 };
+    const withFd = { ...DEFAULT_PARSE_RECIPE, spec: { ...DEFAULT_PARSE_RECIPE.spec, formulaDecoding: fd } };
+    expect(parseRecipeSchema.safeParse(withFd).success).toBe(true);
+    expect(parseRecipeSchema.safeParse({ ...withFd, spec: { ...withFd.spec, formulaDecoding: { ...fd, extra: 1 } } }).success).toBe(false);
+    expect(parseRecipeSchema.safeParse({ ...withFd, spec: { ...withFd.spec, formulaDecoding: { ...fd, cropMargin: -1 } } }).success).toBe(false);
+    expect(recipeId(withFd)).not.toBe(recipeId(DEFAULT_PARSE_RECIPE));
+    expect(recipeId(withFd)).not.toBe(recipeId({ ...withFd, spec: { ...withFd.spec, formulaDecoding: { ...fd, revision: 'other' } } }));
+  });
+});
+
+describe('0.5.0 additions (machine recipes, pipeline events, state on traces)', () => {
+  const S1 = 'se_00000000000000000000000001';
+  const SR = 'sr_00000000000000000000000001';
+  const B1 = 'bd_' + 'a'.repeat(20);
+  const RC = 'rc_' + 'a'.repeat(20);
+  const env = { sessionId: S1, parentId: null };
+  const started = (pipeline: string) => ({ pipeline, machine: 'similarity', version: '1', topology: '0123456789abcdef', recipeId: RC });
+  const finished = (pipeline: string) => ({ pipeline, status: 'done', state: 'done' });
+
+  it('the default search recipe is a machine recipe and passes its strict schema', () => {
+    expect(searchRecipeSchema.safeParse(DEFAULT_SEARCH_RECIPE).success).toBe(true);
+    expect(DEFAULT_SEARCH_RECIPE.spec.machine).toBe('similarity');
+    expect(recipeId(DEFAULT_SEARCH_RECIPE)).toMatch(/^rc_/);
+  });
+  it('searchRecipeSchema rejects the old step list, a bad topology and a bad prompt digest; accepts a digest', () => {
+    const r = DEFAULT_SEARCH_RECIPE;
+    expect(searchRecipeSchema.safeParse({ kind: 'search', version: '1', spec: { steps: [] } }).success).toBe(false);
+    expect(searchRecipeSchema.safeParse({ ...r, spec: { ...r.spec, topology: 'XYZ' } }).success).toBe(false);
+    expect(searchRecipeSchema.safeParse({ ...r, spec: { ...r.spec, promptDigest: 'abc' } }).success).toBe(false);
+    expect(searchRecipeSchema.safeParse({ ...r, spec: { ...r.spec, promptDigest: 'a'.repeat(64) } }).success).toBe(true);
+    expect(searchRecipeSchema.safeParse({ ...r, spec: { ...r.spec, extra: 1 } }).success).toBe(false);
+  });
+  it('promptDigest, settings and topology each change the recipe id', () => {
+    const r = DEFAULT_SEARCH_RECIPE;
+    const ids = new Set([
+      recipeId(r),
+      recipeId({ ...r, spec: { ...r.spec, promptDigest: 'a'.repeat(64) } }),
+      recipeId({ ...r, spec: { ...r.spec, settings: { pool: 50, kinds: ['chunk'] } } }),
+      recipeId({ ...r, spec: { ...r.spec, topology: '0'.repeat(16) } }),
+    ]);
+    expect(ids.size).toBe(4);
+  });
+  it('stepTraceSchema requires a non-empty state', () => {
+    const base = { stepIndex: 0, stepType: 'vector-knn', params: {}, considered: [], output: [], durationMs: 0 };
+    expect(stepTraceSchema.safeParse(base).success).toBe(false);
+    expect(stepTraceSchema.safeParse({ ...base, state: '' }).success).toBe(false);
+    expect(stepTraceSchema.safeParse({ ...base, state: 'retrieve' }).success).toBe(true);
+  });
+  it('pipeline.started / pipeline.finished payloads round-trip and are strict', () => {
+    expect(PAYLOADS['pipeline.started'].safeParse(started('search')).success).toBe(true);
+    expect(PAYLOADS['pipeline.started'].safeParse({ ...started('search'), recipeId: null }).success).toBe(true);
+    expect(PAYLOADS['pipeline.started'].safeParse({ ...started('search'), topology: 'nope' }).success).toBe(false);
+    expect(PAYLOADS['pipeline.started'].safeParse({ ...started('search'), pipeline: 'other' }).success).toBe(false);
+    expect(PAYLOADS['pipeline.finished'].safeParse(finished('search')).success).toBe(true);
+    const failed = { ...finished('ingest'), status: 'failed', state: 'parsing', error: { code: 'upstream', message: 'x' } };
+    expect(PAYLOADS['pipeline.finished'].safeParse(failed).success).toBe(true);
+    expect(PAYLOADS['pipeline.finished'].safeParse({ ...failed, status: 'paused' }).success).toBe(false);
+    expect(PAYLOADS['pipeline.finished'].safeParse({ ...failed, extra: 1 }).success).toBe(false);
+  });
+  it('pipeline events: envelope tags depend on the pipeline kind', () => {
+    const ev = (type: string, payload: unknown, buildId: string | null, searchId: string | null) => ({ ...env, type, payload, buildId, searchId });
+    for (const type of ['pipeline.started', 'pipeline.finished']) {
+      const p = (k: string) => (type === 'pipeline.started' ? started(k) : finished(k));
+      expect(() => validateEventDraft(ev(type, p('search'), B1, SR))).not.toThrow();
+      expect(() => validateEventDraft(ev(type, p('search'), null, SR))).toThrow(/buildId/);
+      expect(() => validateEventDraft(ev(type, p('search'), B1, null))).toThrow(/searchId/);
+      expect(() => validateEventDraft(ev(type, p('eval-run'), B1, null))).not.toThrow();
+      expect(() => validateEventDraft(ev(type, p('eval-run'), null, null))).toThrow(/buildId/);
+      expect(() => validateEventDraft(ev(type, p('ingest'), null, null))).not.toThrow();
+      expect(() => validateEventDraft(ev(type, p('ingest'), B1, null))).not.toThrow();
+      expect(() => validateEventDraft(ev(type, p('eval-generate'), null, null))).not.toThrow();
+    }
+  });
+  it('eval.run.started and the eval_run tool accept an optional searchRecipes map', () => {
+    const base = { runId: 'er_00000000000000000000000001', buildId: B1, evalSetId: 'qs_aaaaaaaaaaaaaaaaaaaa', evalSetSha256: 'a'.repeat(64), conditions: ['retrieved:k100'], ks: [1] };
+    expect(PAYLOADS['eval.run.started'].safeParse(base).success).toBe(true);
+    expect(PAYLOADS['eval.run.started'].safeParse({ ...base, searchRecipes: { 'retrieved:k100': RC } }).success).toBe(true);
+    expect(PAYLOADS['eval.run.started'].safeParse({ ...base, searchRecipes: { 'retrieved:k100': 'x' } }).success).toBe(false);
+    const { buildId: _b, runId: _r, ...input } = base;
+    expect(EVAL_RUN_TOOL.input.safeParse({ ...input, searchRecipes: { a: RC } }).success).toBe(true);
+    expect(EVAL_RUN_TOOL.input.safeParse({ ...input, searchRecipes: { a: 'x' } }).success).toBe(false);
+  });
+  it('eval.run.started records the judge and answerer (0.6.1): optional to parse, strict when present', () => {
+    const base = { runId: 'er_00000000000000000000000001', buildId: B1, evalSetId: 'qs_aaaaaaaaaaaaaaaaaaaa', evalSetSha256: 'a'.repeat(64), conditions: ['retrieved'], ks: [1] };
+    const judge = { recipeId: RC, model: 'qwen3.5' };
+    const answerer = { model: 'qwen3.5', promptDigest: 'b'.repeat(64) };
+    expect(PAYLOADS['eval.run.started'].safeParse({ ...base, judge, answerer }).success).toBe(true);
+    expect(PAYLOADS['eval.run.started'].safeParse({ ...base, judge }).success).toBe(true);
+    expect(PAYLOADS['eval.run.started'].safeParse({ ...base, judge: { ...judge, extra: 1 } }).success).toBe(false);
+    expect(PAYLOADS['eval.run.started'].safeParse({ ...base, answerer: { ...answerer, promptDigest: 'x' } }).success).toBe(false);
+    expect(PAYLOADS['eval.run.started'].safeParse({ ...base, judge: { recipeId: 'x', model: 'm' } }).success).toBe(false);
+  });
+  it('recipesEqual compares canonical JSON (key order does not matter, a setting does)', () => {
+    const r = DEFAULT_PARSE_RECIPE;
+    const reordered = JSON.parse(JSON.stringify({ spec: r.spec, version: r.version, kind: r.kind }));
+    expect(recipesEqual(r, reordered)).toBe(true);
+    expect(recipesEqual(r, { ...r, version: r.version + 'x' })).toBe(false);
+    expect(recipesEqual(r, r)).toBe(recipeId(r) === recipeId(reordered));
+  });
+  it('MachineMap: zod shape and structural validation', () => {
+    const map = {
+      machine: 'similarity', version: '1', topology: '0123456789abcdef', initial: 'retrieve',
+      nodes: [
+        { id: 'retrieve', parent: null, kind: 'work', label: 'retrieve', logs: ['search.step'], step: 'vector-knn', loop: false },
+        { id: 'cut', parent: null, kind: 'work', label: 'cut', logs: ['search.step'], step: 'truncate', loop: false },
+        { id: 'done', parent: null, kind: 'final', label: 'done', logs: [], step: null, loop: false },
+        { id: 'failed', parent: null, kind: 'final', label: 'failed', logs: [], step: null, loop: false },
+      ],
+      edges: [
+        { from: 'retrieve', to: 'cut', event: 'done', guard: null },
+        { from: 'retrieve', to: 'failed', event: 'error', guard: null },
+        { from: 'cut', to: 'done', event: 'done', guard: null },
+        { from: 'cut', to: 'failed', event: 'error', guard: null },
+      ],
+    };
+    expect(machineMapSchema.safeParse(map).success).toBe(true);
+    expect(validateMachineMap(map)).toEqual([]);
+    expect(validateMachineMap({ ...map, initial: 'nowhere' })).toEqual([expect.stringMatching(/initial/)]);
+    expect(validateMachineMap({ ...map, edges: map.edges.slice(1) })).toEqual([]);
+    expect(validateMachineMap({ ...map, edges: [...map.edges, { from: 'cut', to: 'ghost', event: 'always', guard: null }] })).toEqual([expect.stringMatching(/ghost/)]);
+    expect(validateMachineMap({ ...map, edges: [...map.edges, { from: 'done', to: 'cut', event: 'always', guard: null }] })).toEqual([expect.stringMatching(/final node done/)]);
+    expect(validateMachineMap({ ...map, nodes: [...map.nodes, map.nodes[0]] })[0]).toMatch(/duplicate/);
+    expect(validateMachineMap({ ...map, extra: 1 }).length).toBeGreaterThan(0);
   });
 });

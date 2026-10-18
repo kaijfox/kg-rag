@@ -1,0 +1,142 @@
+generated 6 questions from 10 groups in 46191 ms
+  q1 [single-hop] What specific problem does kinetic theory aim to solve regarding systems of moving particles?
+  q2 [single-hop] How do the particle densities before and after a collision relate to one another?
+  q3 [single-hop] How does quantum statistical mechanics resolve the issue of particle indistinguishability that arises when tracking coordinates in classical mechanics?
+  q4 [single-hop] Why did Gibbs introduce the factor involving N! in equation (2.10)?
+  q5 [single-hop] What specific condition distinguishes a Carnot engine from other types of engines regarding heat exchange?
+  q6 [single-hop] What distinguishes an equilibrium system from a steady-state system in thermodynamics?
+eval run 173385 ms for 6 questions x 2 conditions {
+ "buildId": "bd_47kbfvjcibeosornddam",
+ "questions": 6,
+ "ks": [
+  1,
+  5
+ ],
+ "byCondition": {
+  "retrieved": {
+   "judge": 1,
+   "retrieval": {
+    "ks": [
+     1,
+     5
+    ],
+    "perQuestion": {
+     "q1": {
+      "recall": {
+       "1": 1,
+       "5": 1
+      },
+      "allGold": {
+       "1": 1,
+       "5": 1
+      },
+      "withSummaries": {
+       "1": 1,
+       "5": 1
+      }
+     },
+     "q2": {
+      "recall": {
+       "1": 1,
+       "5": 1
+      },
+      "allGold": {
+       "1": 1,
+       "5": 1
+      },
+      "withSummaries": {
+       "1": 1,
+       "5": 1
+      }
+     },
+     "q3": {
+      "recall": {
+       "1": 1,
+       "5": 1
+      },
+      "allGold": {
+       "1": 1,
+       "5": 1
+      },
+      "withSummaries": {
+       "1": 1,
+       "5": 1
+      }
+     },
+     "q4": {
+      "recall": {
+       "1": 0,
+       "5": 1
+      },
+      "allGold": {
+       "1": 0,
+       "5": 1
+      },
+      "withSummaries": {
+       "1": 0,
+       "5": 1
+      }
+     },
+     "q5": {
+      "recall": {
+       "1": 1,
+       "5": 1
+      },
+      "allGold": {
+       "1": 1,
+       "5": 1
+      },
+      "withSummaries": {
+       "1": 1,
+       "5": 1
+      }
+     },
+     "q6": {
+      "recall": {
+       "1": 1,
+       "5": 1
+      },
+      "allGold": {
+       "1": 1,
+       "5": 1
+      },
+      "withSummaries": {
+       "1": 1,
+       "5": 1
+      }
+     }
+    },
+    "overall": {
+     "recall": {
+      "1": 0.8333333333333334,
+      "5": 1
+     },
+     "withSummaries": {
+      "1": 0.8333333333333334,
+      "5": 1
+     }
+    },
+    "byType": {
+     "single-hop": {
+      "n": 6,
+      "recall": {
+       "1": 0.8333333333333334,
+       "5": 1
+      },
+      "allGold": {
+       "1": 0.8333333333333334,
+       "5": 1
+      }
+     }
+    }
+   }
+  },
+  "gold": {
+   "judge": 0.9166666666666666
+  },
+  "no-context": {
+   "judge": 0.75
+  }
+ },
+ "orphaned": []
+}

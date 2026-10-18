@@ -4,6 +4,9 @@ import { asDocKey, chunkId, evalSetId, evalSetSchema, parseArtifactSchema, type 
 import {
   InMemoryEventLog,
   MINI_DOCS,
+  machineLogConformance,
+  machineMapFixture,
+  runSuite,
   REAL_SLICES,
   evalFixture,
   logFixture,
@@ -11,6 +14,8 @@ import {
   miniExpected,
   miniLabels,
   realArtifact,
+  REFERENCE_ANSWERER,
+  REFERENCE_JUDGE,
   searchQueries,
 } from '../src/all';
 
@@ -69,6 +74,7 @@ describe('logs', () => {
     expect(calls.slice(1).map((e) => e.parentId)).toEqual([calls[0]!.id, calls[0]!.id]); // P-3 nesting
     const started = evs.find((e) => e.type === 'eval.run.started')!;
     expect((started.payload as { buildId: string }).buildId).toBe(started.buildId);
+    expect(started.payload).toMatchObject({ judge: REFERENCE_JUDGE, answerer: REFERENCE_ANSWERER });
     expect(evs.at(-1)!.type).toBe('tool.returned');
   });
   it('the live-partial log stops after a search.step, before that search has a result', () => {
@@ -76,6 +82,29 @@ describe('logs', () => {
     const last = evs.at(-1)!;
     expect(last.type).toBe('search.step');
     expect(evs.some((e) => e.type === 'search.result' && e.searchId === last.searchId)).toBe(false);
+  });
+});
+
+describe('logs: pipeline bracket (contract 0.6.0)', () => {
+  it('every whole search in the recorded logs is bracketed by pipeline events, and each bracket follows the similarity map', async () => {
+    let checked = 0;
+    for (const n of ['session-agent', 'session-eval', 'session-live-partial'] as const) {
+      const evs = logFixture(n);
+      for (const q of evs.filter((e) => e.type === 'query')) {
+        const run = evs.filter((e) => e.searchId === q.searchId || e.id === q.parentId || (e.type === 'tool.returned' && e.parentId === q.parentId));
+        const types = run.map((e) => e.type);
+        if (!types.includes('search.result')) {
+          expect(types, `${n}: partial search ${q.searchId}`).not.toContain('pipeline.finished');
+          continue;
+        }
+        expect(types.filter((t) => t === 'pipeline.started'), `${n}: ${q.searchId}`).toHaveLength(1);
+        expect(types.filter((t) => t === 'pipeline.finished'), `${n}: ${q.searchId}`).toHaveLength(1);
+        const r = await runSuite(machineLogConformance(() => machineMapFixture(), () => run.filter((e) => /^(session\.|tool\.|pipeline\.|query$|search\.)/.test(e.type))));
+        expect(r.failed, `${n}: ${q.searchId}`).toEqual([]);
+        checked++;
+      }
+    }
+    expect(checked).toBe(6); // 3 agent + 2 eval + 1 live-partial
   });
 });
 

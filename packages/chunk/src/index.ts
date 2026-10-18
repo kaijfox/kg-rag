@@ -1,5 +1,6 @@
 /**
- * @kg/chunk: Phase 2 stub. See CARD.md for the contract, the tests to pass and the decisions already made.
- * This package must import only @kg/core (and @kg/testkit in tests).
+ * @kg/chunk: the section-pack/1 chunker and the chunk view renderer. The only code that reads docling's JSON layout.
+ * Depends on @kg/core only. See README.md for the algorithm notes and known gaps.
  */
-export {};
+export { sectionPack } from './chunker';
+export { renderChunkView } from './render';

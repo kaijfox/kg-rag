@@ -1,6 +1,7 @@
 /**
  * ingestScenarios: IngestService invariants on the mini-corpus (core/ports/ingest.ts). Expected counts come
  * from the hand-derived fixtures (expected-chunks-v*.json, expected-diff.json), never from an ingest run.
+ * Contract 0.6.0: every ingest call is bracketed by pipeline.started / pipeline.finished (pipeline 'ingest').
  */
 import { expect } from 'vitest';
 import {
@@ -12,6 +13,7 @@ import {
   runTool,
   spaceId,
   type Chunker,
+  type ChunkViewRenderer,
   type ChunkId,
   type Clock,
   type CorpusStore,
@@ -27,6 +29,7 @@ import {
   type ParseArtifact,
   type ParseRecipeSpec,
   type SourceRef,
+  validateEventDraft,
 } from '@kg/core';
 import { HashEmbedder } from '../fakes/embedder';
 import { InMemoryEventLog } from '../fakes/eventlog';
@@ -40,6 +43,8 @@ export interface IngestDeps {
   store: CorpusStore;
   parser: Parser;
   chunker: Chunker;
+  /** 0.6.1: required; the suite passes a counting identity renderer */
+  chunkView: ChunkViewRenderer;
   embedder: Embedder;
   config: DatabaseConfig;
   clock: Clock;
@@ -52,6 +57,14 @@ class CountingParser extends FixtureParser {
     this.parses++;
     return super.parse(src, recipe);
   }
+}
+/** identity chunk view that counts its calls (the text is returned unchanged, so ids and expected vectors stay valid) */
+class CountingChunkView {
+  renders = 0;
+  readonly render: ChunkViewRenderer = (_artifact, _blockRefs, chunkText) => {
+    this.renders++;
+    return chunkText;
+  };
 }
 class CountingEmbedder extends HashEmbedder {
   texts = 0;
@@ -71,7 +84,8 @@ function setup(make: (d: IngestDeps) => IngestService, chunker: Chunker) {
   const store = new InMemoryCorpusStore(clock);
   const parser = new CountingParser(miniParserEntries());
   const embedder = new CountingEmbedder(4096);
-  let service = make({ store, parser, chunker, embedder, config: miniConfig(), clock, ids });
+  const view = new CountingChunkView();
+  let service = make({ store, parser, chunker, chunkView: view.render, embedder, config: miniConfig(), clock, ids });
   const log = new InMemoryEventLog(clock, ids);
   const session = log.openSession({ kind: 'test', label: 'ingest', meta: {} });
   const rt = { log, clock, ids, currentBuild: () => store.currentBuild() };
@@ -82,9 +96,9 @@ function setup(make: (d: IngestDeps) => IngestService, chunker: Chunker) {
   };
   /** rebuild the service over the same store with another config (e.g. a new embedding space) */
   const reconfigure = (config: DatabaseConfig) => {
-    service = make({ store, parser, chunker, embedder, config, clock, ids });
+    service = make({ store, parser, chunker, chunkView: view.render, embedder, config, clock, ids });
   };
-  return { store, parser, embedder, log, session, ingest, reconfigure };
+  return { store, parser, embedder, view, log, session, ingest, reconfigure };
 }
 
 const sources = (v: 1 | 2, docs: readonly MiniDoc[] = MINI_DOCS): IngestRequest => ({ sources: docs.map((d) => ({ path: miniSourcePath(v, d) })) });
@@ -94,6 +108,31 @@ const expectedIds = (v: 1 | 2, d: MiniDoc): ChunkId[] => {
   const labels = miniLabels();
   return miniExpected(v)[d].map((c) => labels[c.label]!);
 };
+
+/**
+ * Contract 0.6.0 bracket for one ingest call's events: one pipeline.started (ingest) before the first ingest.* event,
+ * one pipeline.finished (ingest) after the last, status 'failed' exactly when the call logged tool.failed. The two
+ * events need no buildId and no searchId (checked by validating them as drafts with both set to null).
+ */
+function expectIngestBracket(evs: EventEnvelope[]) {
+  expect(evs.filter((e) => e.type === 'pipeline.started').length, 'pipeline.started per ingest call').toBe(1);
+  expect(evs.filter((e) => e.type === 'pipeline.finished').length, 'pipeline.finished per ingest call').toBe(1);
+  const started = evs.findIndex((e) => e.type === 'pipeline.started');
+  const finished = evs.findIndex((e) => e.type === 'pipeline.finished');
+  const domain = evs.flatMap((e, i) => (e.type.startsWith('ingest.') ? [i] : []));
+  expect(domain.length).toBeGreaterThan(0);
+  expect(started, 'pipeline.started must precede the first ingest.* event').toBeLessThan(domain[0]!);
+  expect(finished, 'pipeline.finished must follow the last ingest.* event').toBeGreaterThan(domain.at(-1)!);
+  const s = evs[started] as EventEnvelope<'pipeline.started'>;
+  const f = evs[finished] as EventEnvelope<'pipeline.finished'>;
+  expect(s.payload.pipeline).toBe('ingest');
+  expect(f.payload.pipeline).toBe('ingest');
+  const failed = evs.some((e) => e.type === 'tool.failed');
+  expect(f.payload.status).toBe(failed ? 'failed' : 'done');
+  for (const e of [s, f]) {
+    expect(() => validateEventDraft({ sessionId: e.sessionId, buildId: null, searchId: null, parentId: e.parentId, type: e.type, payload: e.payload })).not.toThrow();
+  }
+}
 
 export function ingestScenarios(make: (d: IngestDeps) => IngestService, chunker: Chunker): Suite {
   return {
@@ -137,12 +176,41 @@ export function ingestScenarios(make: (d: IngestDeps) => IngestService, chunker:
         },
       },
       {
+        name: 'pipeline: each ingest call is bracketed by pipeline.started (ingest) before its first ingest.* event and pipeline.finished after its last (done, or failed when the call fails)',
+        async run() {
+          const t = setup(make, chunker);
+          expectIngestBracket((await t.ingest(sources(1))).events);
+          expectIngestBracket((await t.ingest(sources(1))).events); // unchanged re-ingest is bracketed too
+          expectIngestBracket((await t.ingest(sources(2))).events);
+          // a failing call: a fresh database whose embedder fails mid-batch (every chunk still needs a vector)
+          const f = setup(make, chunker);
+          f.embedder.failAfter = 3;
+          await expectKgError(() => f.ingest(sources(1)), 'upstream');
+          const failing = f.log.events(f.session) as EventEnvelope[];
+          expect(failing.some((e) => e.type === 'tool.failed')).toBe(true);
+          expectIngestBracket(failing);
+        },
+      },
+      {
         name: 'chunks are embedded through the space document template (headings included)',
         async run() {
           const t = setup(make, chunker);
           await t.ingest(sources(1));
           for (const d of MINI_DOCS)
             for (const c of miniExpected(1)[d]) expect(t.embedder.seen, c.label).toContain(renderDocument(miniConfig().space, { text: c.text, sectionPath: c.sectionPath }));
+        },
+      },
+      {
+        name: 'embedded texts pass through chunkView: one render per embedded text, none for unchanged chunks',
+        async run() {
+          const t = setup(make, chunker);
+          await t.ingest(sources(1));
+          expect(t.embedder.texts, 'texts embedded').toBeGreaterThan(0);
+          expect(t.view.renders, 'chunkView renders equal embedded texts').toBe(t.embedder.texts);
+          await t.ingest(sources(1)); // unchanged: nothing embedded, nothing rendered
+          expect(t.view.renders).toBe(t.embedder.texts);
+          await t.ingest(sources(2)); // only new chunks are embedded
+          expect(t.view.renders).toBe(t.embedder.texts);
         },
       },
       {
@@ -213,6 +281,31 @@ export function ingestScenarios(make: (d: IngestDeps) => IngestService, chunker:
             stale: true,
           });
           expect(t.store.staleCheck(report.buildId).stale).toBe(false);
+        },
+      },
+      {
+        name: '0.4.0 pointer events: previousDocVersionId on ingest.completed; build.created.parentId and revert',
+        async run() {
+          const t = setup(make, chunker);
+          const dvOf = (r: IngestReport, d: MiniDoc) => doc(r, d).docVersionId;
+          const first = await t.ingest(sources(1));
+          const completed = (evs: EventEnvelope[]) => evs.filter((e): e is EventEnvelope<'ingest.completed'> => e.type === 'ingest.completed');
+          const created = (evs: EventEnvelope[]) => evs.filter((e): e is EventEnvelope<'build.created'> => e.type === 'build.created');
+          for (const e of completed(first.events)) expect(e.payload.previousDocVersionId).toBeNull();
+          expect(created(first.events)[0]!.payload).toMatchObject({ parentId: null, revert: false });
+          // v1 -> v2: previous = the v1 versions; a new build whose event parent is the v1 build
+          const second = await t.ingest(sources(2));
+          for (const d of MINI_DOCS) expect(completed(second.events).find((e) => e.payload.docKey === d)!.payload.previousDocVersionId).toBe(dvOf(first.report, d));
+          expect(created(second.events)[0]!.payload).toMatchObject({ buildId: second.report.buildId, parentId: first.report.buildId, revert: false });
+          // back to v1: the build already exists, so this is a revert; the event parent is the v2 build, the stored parent is not
+          const third = await t.ingest(sources(1));
+          expect(third.report.buildId).toBe(first.report.buildId);
+          for (const d of MINI_DOCS) expect(completed(third.events).find((e) => e.payload.docKey === d)!.payload.previousDocVersionId).toBe(dvOf(second.report, d));
+          expect(created(third.events)[0]!.payload).toMatchObject({ buildId: first.report.buildId, parentId: second.report.buildId, revert: true });
+          expect(t.store.getBuild(first.report.buildId)!.parentId).toBeNull();
+          // unchanged re-ingest: previous equals current
+          const fourth = await t.ingest(sources(1));
+          for (const e of completed(fourth.events)) expect(e.payload.previousDocVersionId).toBe(e.payload.docVersionId);
         },
       },
       {

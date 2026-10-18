@@ -19,14 +19,20 @@ export const DEFAULT_CHUNK_RECIPE: ChunkRecipeSpec = {
   spec: { algorithm: 'section-pack/1', targetChars: 1000, maxChars: 1500, minChars: 200 },
 };
 
+/**
+ * The default search machine: `similarity` (retrieve with vector-knn, then cut with truncate), version 1.
+ * `topology` is the machine's wiring fingerprint, pinned here as a literal because core cannot compute it (it must
+ * not import the search package), exactly as the embedding model digest is pinned below. The search package asserts
+ * that the machine's computed topology equals this literal, so changing the machine forces a conscious edit here and
+ * of the golden id vectors.
+ */
 export const DEFAULT_SEARCH_RECIPE: SearchRecipeSpec = {
   kind: 'search',
   version: '1',
   spec: {
-    steps: [
-      { type: 'vector-knn', params: { pool: DEFAULT_POOL, kinds: ['chunk'] } },
-      { type: 'truncate', params: {} },
-    ],
+    machine: 'similarity',
+    settings: { pool: DEFAULT_POOL, kinds: ['chunk'] },
+    topology: 'ab74647e68ade0b3',
   },
 };
 
@@ -36,9 +42,12 @@ export const DEFAULT_SEARCH_RECIPE: SearchRecipeSpec = {
  */
 export const DEFAULT_SPACE: EmbeddingSpaceSpec = {
   model: 'embeddinggemma:latest',
+  /** `ollama /api/tags` digest of embeddinggemma:latest, read 2026-10-18 */
+  digest: '85462619ee721b466c5927d109d4cb765861907d5417b9109caebc4e614679f1',
   dims: 768,
   documentTemplate: 'title: {headings} | text: {text}',
   queryTemplate: 'task: search result | query: {query}',
+  formulaView: 'placeholder',
 };
 
 export const DEFAULT_CONFIG: DatabaseConfig = {

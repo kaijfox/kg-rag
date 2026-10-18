@@ -1,5 +1,7 @@
 /**
- * @kg/store: Phase 2 stub. See CARD.md for the contract, the tests to pass and the decisions already made.
- * This package must import only @kg/core (and @kg/testkit in tests).
+ * @kg/store: SQLite implementations of the corpus store and eval repo ports, and the database opener.
+ * See README.md for assumptions and known gaps.
  */
-export {};
+export { openDatabase, type Db } from './db';
+export { SqliteCorpusStore } from './sqlite-store';
+export { SqliteEvalRepo } from './sqlite-eval-repo';

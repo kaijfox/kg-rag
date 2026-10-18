@@ -1,0 +1,23 @@
+{
+  "name": "@kg/pipeline",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./testing": "./src/testing.ts"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@kg/core": "workspace:*",
+    "xstate": "5.33.2"
+  },
+  "devDependencies": {
+    "@kg/testkit": "workspace:*",
+    "vitest": "3.2.4"
+  },
+  "description": "Shared toolkit for building and running pipelines (state machines): runner, work-state actor, machine map, diagram, topology fingerprint, test helpers."
+}

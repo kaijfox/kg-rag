@@ -1,0 +1,6823 @@
+[
+ {
+  "name": "codeformulav2_mps_bf16",
+  "n": 33,
+  "lenient": {
+   "exact": 20,
+   "ned_mean": 0.08110040000199777,
+   "render_equal": 16,
+   "compile_fail": 2,
+   "exact_display": 19,
+   "exact_inline": 1,
+   "per_item": {
+    "FK-p09-t137": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p19-t277": {
+     "exact": false,
+     "ned": 0.034482758620689655,
+     "render": false
+    },
+    "FK-p20-t290": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p27-t426": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p28-t439": {
+     "exact": false,
+     "ned": 0.03783783783783784,
+     "render": false
+    },
+    "FK-p56-t936": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p60-t1007": {
+     "exact": false,
+     "ned": 0.20945945945945946,
+     "render": false
+    },
+    "FK-p64-t1075": {
+     "exact": false,
+     "ned": 0.03125,
+     "render": false
+    },
+    "TK-p04-t55": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p04-t57": {
+     "exact": false,
+     "ned": 0.02857142857142857,
+     "render": false
+    },
+    "TK-p14-t275": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p17-t334": {
+     "exact": false,
+     "ned": 0.32,
+     "render": false
+    },
+    "TK-p20-t385": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TK-p24-t460": {
+     "exact": false,
+     "ned": 0.03773584905660377,
+     "render": false
+    },
+    "TK-p24-t447": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TK-p25-t472": {
+     "exact": false,
+     "ned": 0.7669902912621359,
+     "render": false
+    },
+    "FP-p06-t65": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FP-p15-t194": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FP-p18-t235": {
+     "exact": false,
+     "ned": 0.061224489795918366,
+     "render": false
+    },
+    "FP-p21-t292": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FP-p23-t314": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FP-p23-t322": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TP-p10-t123": {
+     "exact": false,
+     "ned": 0.10714285714285714,
+     "render": false
+    },
+    "TP-p10-t121": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TP-p16-t221": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TP-p17-t233": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TP-p18-t245": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TP-p18-t248": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TP-p24-t315": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "IFK-p17-51": {
+     "exact": false,
+     "ned": 0.2608695652173913,
+     "render": false
+    },
+    "IFK-p23-116": {
+     "exact": false,
+     "ned": 0.23529411764705882,
+     "render": false
+    },
+    "ITK-p12-329": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "ITK-p18-377": {
+     "exact": false,
+     "ned": 0.5454545454545454,
+     "render": false
+    }
+   }
+  },
+  "strict": {
+   "exact": 16,
+   "ned_mean": 0.18732305624013168,
+   "render_equal": 13,
+   "compile_fail": 6,
+   "exact_display": 15,
+   "exact_inline": 1,
+   "per_item": {
+    "FK-p09-t137": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p19-t277": {
+     "exact": false,
+     "ned": 0.034482758620689655,
+     "render": false
+    },
+    "FK-p20-t290": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p27-t426": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p28-t439": {
+     "exact": false,
+     "ned": 0.34558823529411764,
+     "render": false
+    },
+    "FK-p56-t936": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p60-t1007": {
+     "exact": false,
+     "ned": 0.44549763033175355,
+     "render": false
+    },
+    "FK-p64-t1075": {
+     "exact": false,
+     "ned": 0.6125,
+     "render": false
+    },
+    "TK-p04-t55": {
+     "exact": false,
+     "ned": 0.6470588235294118,
+     "render": false
+    },
+    "TK-p04-t57": {
+     "exact": false,
+     "ned": 0.5277777777777778,
+     "render": false
+    },
+    "TK-p14-t275": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p17-t334": {
+     "exact": false,
+     "ned": 0.7951807228915663,
+     "render": false
+    },
+    "TK-p20-t385": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TK-p24-t460": {
+     "exact": false,
+     "ned": 0.24444444444444444,
+     "render": false
+    },
+    "TK-p24-t447": {
+     "exact": false,
+     "ned": 0.05555555555555555,
+     "render": false
+    },
+    "TK-p25-t472": {
+     "exact": false,
+     "ned": 0.8702702702702703,
+     "render": false
+    },
+    "FP-p06-t65": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FP-p15-t194": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FP-p18-t235": {
+     "exact": false,
+     "ned": 0.061224489795918366,
+     "render": false
+    },
+    "FP-p21-t292": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FP-p23-t314": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FP-p23-t322": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TP-p10-t123": {
+     "exact": false,
+     "ned": 0.10714285714285714,
+     "render": false
+    },
+    "TP-p10-t121": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TP-p16-t221": {
+     "exact": false,
+     "ned": 0.11049723756906077,
+     "render": false
+    },
+    "TP-p17-t233": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TP-p18-t245": {
+     "exact": false,
+     "ned": 0.08333333333333333,
+     "render": false
+    },
+    "TP-p18-t248": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TP-p24-t315": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "IFK-p17-51": {
+     "exact": false,
+     "ned": 0.2608695652173913,
+     "render": false
+    },
+    "IFK-p23-116": {
+     "exact": false,
+     "ned": 0.43478260869565216,
+     "render": false
+    },
+    "ITK-p12-329": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "ITK-p18-377": {
+     "exact": false,
+     "ned": 0.5454545454545454,
+     "render": false
+    }
+   }
+  },
+  "latency_median_s": 1.2545740604400635,
+  "latency_mean_display_s": 1.4758106511214684,
+  "latency_max_s": 3.973349094390869,
+  "peak_gb": 1.420476416,
+  "load_s": 1.6466920375823975
+ },
+ {
+  "name": "codeformulav2_mps_bf16_tight",
+  "n": 33,
+  "lenient": {
+   "exact": 22,
+   "ned_mean": 0.057352037838751466,
+   "render_equal": 10,
+   "compile_fail": 1,
+   "exact_display": 21,
+   "exact_inline": 1,
+   "per_item": {
+    "FK-p09-t137": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p19-t277": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p20-t290": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p27-t426": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p28-t439": {
+     "exact": false,
+     "ned": 0.016574585635359115,
+     "render": false
+    },
+    "FK-p56-t936": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p60-t1007": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p64-t1075": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p04-t55": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p04-t57": {
+     "exact": false,
+     "ned": 0.02857142857142857,
+     "render": false
+    },
+    "TK-p14-t275": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p17-t334": {
+     "exact": false,
+     "ned": 0.13043478260869565,
+     "render": false
+    },
+    "TK-p20-t385": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TK-p24-t460": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p24-t447": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p25-t472": {
+     "exact": false,
+     "ned": 0.1724137931034483,
+     "render": false
+    },
+    "FP-p06-t65": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FP-p15-t194": {
+     "exact": false,
+     "ned": 0.010416666666666666,
+     "render": false
+    },
+    "FP-p18-t235": {
+     "exact": false,
+     "ned": 0.38461538461538464,
+     "render": false
+    },
+    "FP-p21-t292": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FP-p23-t314": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p23-t322": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TP-p10-t123": {
+     "exact": false,
+     "ned": 0.07407407407407407,
+     "render": false
+    },
+    "TP-p10-t121": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p16-t221": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p17-t233": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TP-p18-t245": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TP-p18-t248": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p24-t315": {
+     "exact": false,
+     "ned": 0.03389830508474576,
+     "render": false
+    },
+    "IFK-p17-51": {
+     "exact": false,
+     "ned": 0.2608695652173913,
+     "render": false
+    },
+    "IFK-p23-116": {
+     "exact": false,
+     "ned": 0.23529411764705882,
+     "render": false
+    },
+    "ITK-p12-329": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "ITK-p18-377": {
+     "exact": false,
+     "ned": 0.5454545454545454,
+     "render": false
+    }
+   }
+  },
+  "strict": {
+   "exact": 19,
+   "ned_mean": 0.11549164448384637,
+   "render_equal": 9,
+   "compile_fail": 2,
+   "exact_display": 18,
+   "exact_inline": 1,
+   "per_item": {
+    "FK-p09-t137": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p19-t277": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p20-t290": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p27-t426": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p28-t439": {
+     "exact": false,
+     "ned": 0.016574585635359115,
+     "render": false
+    },
+    "FK-p56-t936": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p60-t1007": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p64-t1075": {
+     "exact": false,
+     "ned": 0.5294117647058824,
+     "render": false
+    },
+    "TK-p04-t55": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p04-t57": {
+     "exact": false,
+     "ned": 0.02857142857142857,
+     "render": false
+    },
+    "TK-p14-t275": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p17-t334": {
+     "exact": false,
+     "ned": 0.7014925373134329,
+     "render": false
+    },
+    "TK-p20-t385": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TK-p24-t460": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p24-t447": {
+     "exact": false,
+     "ned": 0.05555555555555555,
+     "render": false
+    },
+    "TK-p25-t472": {
+     "exact": false,
+     "ned": 0.6521739130434783,
+     "render": false
+    },
+    "FP-p06-t65": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FP-p15-t194": {
+     "exact": false,
+     "ned": 0.010416666666666666,
+     "render": false
+    },
+    "FP-p18-t235": {
+     "exact": false,
+     "ned": 0.38461538461538464,
+     "render": false
+    },
+    "FP-p21-t292": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FP-p23-t314": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p23-t322": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TP-p10-t123": {
+     "exact": false,
+     "ned": 0.07407407407407407,
+     "render": false
+    },
+    "TP-p10-t121": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p16-t221": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p17-t233": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TP-p18-t245": {
+     "exact": false,
+     "ned": 0.08333333333333333,
+     "render": false
+    },
+    "TP-p18-t248": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p24-t315": {
+     "exact": false,
+     "ned": 0.03389830508474576,
+     "render": false
+    },
+    "IFK-p17-51": {
+     "exact": false,
+     "ned": 0.2608695652173913,
+     "render": false
+    },
+    "IFK-p23-116": {
+     "exact": false,
+     "ned": 0.43478260869565216,
+     "render": false
+    },
+    "ITK-p12-329": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "ITK-p18-377": {
+     "exact": false,
+     "ned": 0.5454545454545454,
+     "render": false
+    }
+   }
+  },
+  "latency_median_s": 1.2570841312408447,
+  "latency_mean_display_s": 1.401703982517637,
+  "latency_max_s": 3.6478688716888428,
+  "peak_gb": 1.412087808,
+  "load_s": 1.6466331481933594
+ },
+ {
+  "name": "codeformulav2_mps_fp16",
+  "n": 33,
+  "lenient": {
+   "exact": 20,
+   "ned_mean": 0.08112513716959208,
+   "render_equal": 16,
+   "compile_fail": 2,
+   "exact_display": 19,
+   "exact_inline": 1,
+   "per_item": {
+    "FK-p09-t137": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p19-t277": {
+     "exact": false,
+     "ned": 0.034482758620689655,
+     "render": false
+    },
+    "FK-p20-t290": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p27-t426": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p28-t439": {
+     "exact": false,
+     "ned": 0.03783783783783784,
+     "render": false
+    },
+    "FK-p56-t936": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p60-t1007": {
+     "exact": false,
+     "ned": 0.20945945945945946,
+     "render": false
+    },
+    "FK-p64-t1075": {
+     "exact": false,
+     "ned": 0.03125,
+     "render": false
+    },
+    "TK-p04-t55": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p04-t57": {
+     "exact": false,
+     "ned": 0.02857142857142857,
+     "render": false
+    },
+    "TK-p14-t275": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p17-t334": {
+     "exact": false,
+     "ned": 0.28,
+     "render": false
+    },
+    "TK-p20-t385": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TK-p24-t460": {
+     "exact": false,
+     "ned": 0.03773584905660377,
+     "render": false
+    },
+    "TK-p24-t447": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TK-p25-t472": {
+     "exact": false,
+     "ned": 0.7669902912621359,
+     "render": false
+    },
+    "FP-p06-t65": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FP-p15-t194": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FP-p18-t235": {
+     "exact": false,
+     "ned": 0.10204081632653061,
+     "render": false
+    },
+    "FP-p21-t292": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FP-p23-t314": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FP-p23-t322": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TP-p10-t123": {
+     "exact": false,
+     "ned": 0.10714285714285714,
+     "render": false
+    },
+    "TP-p10-t121": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TP-p16-t221": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TP-p17-t233": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TP-p18-t245": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TP-p18-t248": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TP-p24-t315": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "IFK-p17-51": {
+     "exact": false,
+     "ned": 0.2608695652173913,
+     "render": false
+    },
+    "IFK-p23-116": {
+     "exact": false,
+     "ned": 0.23529411764705882,
+     "render": false
+    },
+    "ITK-p12-329": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "ITK-p18-377": {
+     "exact": false,
+     "ned": 0.5454545454545454,
+     "render": false
+    }
+   }
+  },
+  "strict": {
+   "exact": 16,
+   "ned_mean": 0.18831918051067079,
+   "render_equal": 13,
+   "compile_fail": 6,
+   "exact_display": 15,
+   "exact_inline": 1,
+   "per_item": {
+    "FK-p09-t137": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p19-t277": {
+     "exact": false,
+     "ned": 0.034482758620689655,
+     "render": false
+    },
+    "FK-p20-t290": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p27-t426": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p28-t439": {
+     "exact": false,
+     "ned": 0.34558823529411764,
+     "render": false
+    },
+    "FK-p56-t936": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p60-t1007": {
+     "exact": false,
+     "ned": 0.44549763033175355,
+     "render": false
+    },
+    "FK-p64-t1075": {
+     "exact": false,
+     "ned": 0.6125,
+     "render": false
+    },
+    "TK-p04-t55": {
+     "exact": false,
+     "ned": 0.6511627906976745,
+     "render": false
+    },
+    "TK-p04-t57": {
+     "exact": false,
+     "ned": 0.5277777777777778,
+     "render": false
+    },
+    "TK-p14-t275": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p17-t334": {
+     "exact": false,
+     "ned": 0.7831325301204819,
+     "render": false
+    },
+    "TK-p20-t385": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TK-p24-t460": {
+     "exact": false,
+     "ned": 0.24444444444444444,
+     "render": false
+    },
+    "TK-p24-t447": {
+     "exact": false,
+     "ned": 0.05555555555555555,
+     "render": false
+    },
+    "TK-p25-t472": {
+     "exact": false,
+     "ned": 0.8702702702702703,
+     "render": false
+    },
+    "FP-p06-t65": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FP-p15-t194": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FP-p18-t235": {
+     "exact": false,
+     "ned": 0.10204081632653061,
+     "render": false
+    },
+    "FP-p21-t292": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FP-p23-t314": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FP-p23-t322": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TP-p10-t123": {
+     "exact": false,
+     "ned": 0.10714285714285714,
+     "render": false
+    },
+    "TP-p10-t121": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TP-p16-t221": {
+     "exact": false,
+     "ned": 0.11049723756906077,
+     "render": false
+    },
+    "TP-p17-t233": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TP-p18-t245": {
+     "exact": false,
+     "ned": 0.08333333333333333,
+     "render": false
+    },
+    "TP-p18-t248": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TP-p24-t315": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "IFK-p17-51": {
+     "exact": false,
+     "ned": 0.2608695652173913,
+     "render": false
+    },
+    "IFK-p23-116": {
+     "exact": false,
+     "ned": 0.43478260869565216,
+     "render": false
+    },
+    "ITK-p12-329": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "ITK-p18-377": {
+     "exact": false,
+     "ned": 0.5454545454545454,
+     "render": false
+    }
+   }
+  },
+  "latency_median_s": 1.1008262634277344,
+  "latency_mean_display_s": 1.2703295493948048,
+  "latency_max_s": 3.6138339042663574,
+  "peak_gb": 1.420476416,
+  "load_s": 1.1852772235870361
+ },
+ {
+  "name": "glm_ocr_4bit_mlx",
+  "n": 33,
+  "lenient": {
+   "exact": 27,
+   "ned_mean": 0.013787729025824263,
+   "render_equal": 3,
+   "compile_fail": 0,
+   "exact_display": 24,
+   "exact_inline": 3,
+   "per_item": {
+    "FK-p09-t137": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p19-t277": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p20-t290": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p27-t426": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p28-t439": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p56-t936": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p60-t1007": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p64-t1075": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p04-t55": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p04-t57": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TK-p14-t275": {
+     "exact": false,
+     "ned": 0.15384615384615385,
+     "render": false
+    },
+    "TK-p17-t334": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p20-t385": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p24-t460": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p24-t447": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p25-t472": {
+     "exact": false,
+     "ned": 0.04,
+     "render": false
+    },
+    "FP-p06-t65": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p15-t194": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p18-t235": {
+     "exact": false,
+     "ned": 0.02040816326530612,
+     "render": false
+    },
+    "FP-p21-t292": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FP-p23-t314": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p23-t322": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p10-t123": {
+     "exact": false,
+     "ned": 0.07407407407407407,
+     "render": false
+    },
+    "TP-p10-t121": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p16-t221": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p17-t233": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p18-t245": {
+     "exact": false,
+     "ned": 0.08333333333333333,
+     "render": false
+    },
+    "TP-p18-t248": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p24-t315": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "IFK-p17-51": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "IFK-p23-116": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "ITK-p12-329": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "ITK-p18-377": {
+     "exact": false,
+     "ned": 0.08333333333333333,
+     "render": false
+    }
+   }
+  },
+  "strict": {
+   "exact": 26,
+   "ned_mean": 0.015471230709325948,
+   "render_equal": 3,
+   "compile_fail": 0,
+   "exact_display": 23,
+   "exact_inline": 3,
+   "per_item": {
+    "FK-p09-t137": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p19-t277": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p20-t290": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p27-t426": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p28-t439": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p56-t936": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p60-t1007": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p64-t1075": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p04-t55": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p04-t57": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TK-p14-t275": {
+     "exact": false,
+     "ned": 0.15384615384615385,
+     "render": false
+    },
+    "TK-p17-t334": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p20-t385": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p24-t460": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p24-t447": {
+     "exact": false,
+     "ned": 0.05555555555555555,
+     "render": false
+    },
+    "TK-p25-t472": {
+     "exact": false,
+     "ned": 0.04,
+     "render": false
+    },
+    "FP-p06-t65": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p15-t194": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p18-t235": {
+     "exact": false,
+     "ned": 0.02040816326530612,
+     "render": false
+    },
+    "FP-p21-t292": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FP-p23-t314": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p23-t322": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p10-t123": {
+     "exact": false,
+     "ned": 0.07407407407407407,
+     "render": false
+    },
+    "TP-p10-t121": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p16-t221": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p17-t233": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p18-t245": {
+     "exact": false,
+     "ned": 0.08333333333333333,
+     "render": false
+    },
+    "TP-p18-t248": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p24-t315": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "IFK-p17-51": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "IFK-p23-116": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "ITK-p12-329": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "ITK-p18-377": {
+     "exact": false,
+     "ned": 0.08333333333333333,
+     "render": false
+    }
+   }
+  },
+  "latency_median_s": 0.29427409172058105,
+  "latency_mean_display_s": 0.46089739635072907,
+  "latency_max_s": 1.541064977645874,
+  "peak_gb": 2.048971906,
+  "load_s": 4.062916994094849
+ },
+ {
+  "name": "glm_ocr_4bit_mlx_tight",
+  "n": 33,
+  "lenient": {
+   "exact": 22,
+   "ned_mean": 0.019953784621772,
+   "render_equal": 4,
+   "compile_fail": 0,
+   "exact_display": 19,
+   "exact_inline": 3,
+   "per_item": {
+    "FK-p09-t137": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p19-t277": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p20-t290": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p27-t426": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p28-t439": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p56-t936": {
+     "exact": false,
+     "ned": 0.04,
+     "render": false
+    },
+    "FK-p60-t1007": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p64-t1075": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p04-t55": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p04-t57": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TK-p14-t275": {
+     "exact": false,
+     "ned": 0.15384615384615385,
+     "render": false
+    },
+    "TK-p17-t334": {
+     "exact": false,
+     "ned": 0.045454545454545456,
+     "render": false
+    },
+    "TK-p20-t385": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p24-t460": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p24-t447": {
+     "exact": false,
+     "ned": 0.05555555555555555,
+     "render": false
+    },
+    "TK-p25-t472": {
+     "exact": false,
+     "ned": 0.04,
+     "render": false
+    },
+    "FP-p06-t65": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p15-t194": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p18-t235": {
+     "exact": false,
+     "ned": 0.02040816326530612,
+     "render": false
+    },
+    "FP-p21-t292": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FP-p23-t314": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p23-t322": {
+     "exact": false,
+     "ned": 0.02857142857142857,
+     "render": false
+    },
+    "TP-p10-t123": {
+     "exact": false,
+     "ned": 0.07407407407407407,
+     "render": false
+    },
+    "TP-p10-t121": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p16-t221": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p17-t233": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p18-t245": {
+     "exact": false,
+     "ned": 0.08333333333333333,
+     "render": false
+    },
+    "TP-p18-t248": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p24-t315": {
+     "exact": false,
+     "ned": 0.03389830508474576,
+     "render": false
+    },
+    "IFK-p17-51": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "IFK-p23-116": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "ITK-p12-329": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "ITK-p18-377": {
+     "exact": false,
+     "ned": 0.08333333333333333,
+     "render": false
+    }
+   }
+  },
+  "strict": {
+   "exact": 22,
+   "ned_mean": 0.019953784621772,
+   "render_equal": 4,
+   "compile_fail": 0,
+   "exact_display": 19,
+   "exact_inline": 3,
+   "per_item": {
+    "FK-p09-t137": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p19-t277": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p20-t290": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p27-t426": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p28-t439": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p56-t936": {
+     "exact": false,
+     "ned": 0.04,
+     "render": false
+    },
+    "FK-p60-t1007": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p64-t1075": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p04-t55": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p04-t57": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TK-p14-t275": {
+     "exact": false,
+     "ned": 0.15384615384615385,
+     "render": false
+    },
+    "TK-p17-t334": {
+     "exact": false,
+     "ned": 0.045454545454545456,
+     "render": false
+    },
+    "TK-p20-t385": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p24-t460": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p24-t447": {
+     "exact": false,
+     "ned": 0.05555555555555555,
+     "render": false
+    },
+    "TK-p25-t472": {
+     "exact": false,
+     "ned": 0.04,
+     "render": false
+    },
+    "FP-p06-t65": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p15-t194": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p18-t235": {
+     "exact": false,
+     "ned": 0.02040816326530612,
+     "render": false
+    },
+    "FP-p21-t292": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FP-p23-t314": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p23-t322": {
+     "exact": false,
+     "ned": 0.02857142857142857,
+     "render": false
+    },
+    "TP-p10-t123": {
+     "exact": false,
+     "ned": 0.07407407407407407,
+     "render": false
+    },
+    "TP-p10-t121": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p16-t221": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p17-t233": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p18-t245": {
+     "exact": false,
+     "ned": 0.08333333333333333,
+     "render": false
+    },
+    "TP-p18-t248": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p24-t315": {
+     "exact": false,
+     "ned": 0.03389830508474576,
+     "render": false
+    },
+    "IFK-p17-51": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "IFK-p23-116": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "ITK-p12-329": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "ITK-p18-377": {
+     "exact": false,
+     "ned": 0.08333333333333333,
+     "render": false
+    }
+   }
+  },
+  "latency_median_s": 0.26772284507751465,
+  "latency_mean_display_s": 0.4279801845550537,
+  "latency_max_s": 1.375925064086914,
+  "peak_gb": 1.890619354,
+  "load_s": 0.9321610927581787
+ },
+ {
+  "name": "granite_docling_258m_mlx",
+  "n": 33,
+  "lenient": {
+   "exact": 19,
+   "ned_mean": 0.08784461946196184,
+   "render_equal": 9,
+   "compile_fail": 3,
+   "exact_display": 16,
+   "exact_inline": 3,
+   "per_item": {
+    "FK-p09-t137": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p19-t277": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p20-t290": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p27-t426": {
+     "exact": false,
+     "ned": 0.2,
+     "render": false
+    },
+    "FK-p28-t439": {
+     "exact": false,
+     "ned": 0.1542056074766355,
+     "render": false
+    },
+    "FK-p56-t936": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p60-t1007": {
+     "exact": false,
+     "ned": 0.041666666666666664,
+     "render": false
+    },
+    "FK-p64-t1075": {
+     "exact": false,
+     "ned": 0.058823529411764705,
+     "render": false
+    },
+    "TK-p04-t55": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p04-t57": {
+     "exact": false,
+     "ned": 0.02857142857142857,
+     "render": false
+    },
+    "TK-p14-t275": {
+     "exact": false,
+     "ned": 0.15384615384615385,
+     "render": false
+    },
+    "TK-p17-t334": {
+     "exact": false,
+     "ned": 0.08333333333333333,
+     "render": false
+    },
+    "TK-p20-t385": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p24-t460": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p24-t447": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p25-t472": {
+     "exact": false,
+     "ned": 0.6923076923076923,
+     "render": false
+    },
+    "FP-p06-t65": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FP-p15-t194": {
+     "exact": false,
+     "ned": 0.18867924528301888,
+     "render": false
+    },
+    "FP-p18-t235": {
+     "exact": false,
+     "ned": 0.10204081632653061,
+     "render": false
+    },
+    "FP-p21-t292": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FP-p23-t314": {
+     "exact": false,
+     "ned": 0.8636363636363636,
+     "render": false
+    },
+    "FP-p23-t322": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TP-p10-t123": {
+     "exact": false,
+     "ned": 0.13793103448275862,
+     "render": false
+    },
+    "TP-p10-t121": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p16-t221": {
+     "exact": false,
+     "ned": 0.11049723756906077,
+     "render": false
+    },
+    "TP-p17-t233": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TP-p18-t245": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p18-t248": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TP-p24-t315": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "IFK-p17-51": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "IFK-p23-116": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "ITK-p12-329": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "ITK-p18-377": {
+     "exact": false,
+     "ned": 0.08333333333333333,
+     "render": false
+    }
+   }
+  },
+  "strict": {
+   "exact": 17,
+   "ned_mean": 0.09652375314109553,
+   "render_equal": 9,
+   "compile_fail": 2,
+   "exact_display": 14,
+   "exact_inline": 3,
+   "per_item": {
+    "FK-p09-t137": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p19-t277": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p20-t290": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p27-t426": {
+     "exact": false,
+     "ned": 0.2,
+     "render": false
+    },
+    "FK-p28-t439": {
+     "exact": false,
+     "ned": 0.1542056074766355,
+     "render": false
+    },
+    "FK-p56-t936": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p60-t1007": {
+     "exact": false,
+     "ned": 0.1891891891891892,
+     "render": false
+    },
+    "FK-p64-t1075": {
+     "exact": false,
+     "ned": 0.058823529411764705,
+     "render": false
+    },
+    "TK-p04-t55": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p04-t57": {
+     "exact": false,
+     "ned": 0.02857142857142857,
+     "render": false
+    },
+    "TK-p14-t275": {
+     "exact": false,
+     "ned": 0.15384615384615385,
+     "render": false
+    },
+    "TK-p17-t334": {
+     "exact": false,
+     "ned": 0.08333333333333333,
+     "render": false
+    },
+    "TK-p20-t385": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p24-t460": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p24-t447": {
+     "exact": false,
+     "ned": 0.05555555555555555,
+     "render": false
+    },
+    "TK-p25-t472": {
+     "exact": false,
+     "ned": 0.6923076923076923,
+     "render": false
+    },
+    "FP-p06-t65": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FP-p15-t194": {
+     "exact": false,
+     "ned": 0.18867924528301888,
+     "render": false
+    },
+    "FP-p18-t235": {
+     "exact": false,
+     "ned": 0.10204081632653061,
+     "render": false
+    },
+    "FP-p21-t292": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FP-p23-t314": {
+     "exact": false,
+     "ned": 0.8636363636363636,
+     "render": false
+    },
+    "FP-p23-t322": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TP-p10-t123": {
+     "exact": false,
+     "ned": 0.13793103448275862,
+     "render": false
+    },
+    "TP-p10-t121": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p16-t221": {
+     "exact": false,
+     "ned": 0.11049723756906077,
+     "render": false
+    },
+    "TP-p17-t233": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TP-p18-t245": {
+     "exact": false,
+     "ned": 0.08333333333333333,
+     "render": false
+    },
+    "TP-p18-t248": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TP-p24-t315": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "IFK-p17-51": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "IFK-p23-116": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "ITK-p12-329": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "ITK-p18-377": {
+     "exact": false,
+     "ned": 0.08333333333333333,
+     "render": false
+    }
+   }
+  },
+  "latency_median_s": 0.7683131694793701,
+  "latency_mean_display_s": 0.9206583088841932,
+  "latency_max_s": 2.6669371128082275,
+  "peak_gb": 1.45826007,
+  "load_s": 0.7214138507843018
+ },
+ {
+  "name": "granite_docling_258m_mlx_tight",
+  "n": 33,
+  "lenient": {
+   "exact": 22,
+   "ned_mean": 0.05833779702419727,
+   "render_equal": 6,
+   "compile_fail": 4,
+   "exact_display": 19,
+   "exact_inline": 3,
+   "per_item": {
+    "FK-p09-t137": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p19-t277": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p20-t290": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p27-t426": {
+     "exact": false,
+     "ned": 0.2,
+     "render": false
+    },
+    "FK-p28-t439": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p56-t936": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p60-t1007": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p64-t1075": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p04-t55": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p04-t57": {
+     "exact": false,
+     "ned": 0.02857142857142857,
+     "render": false
+    },
+    "TK-p14-t275": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p17-t334": {
+     "exact": false,
+     "ned": 0.08333333333333333,
+     "render": false
+    },
+    "TK-p20-t385": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p24-t460": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p24-t447": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p25-t472": {
+     "exact": false,
+     "ned": 0.04,
+     "render": false
+    },
+    "FP-p06-t65": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FP-p15-t194": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p18-t235": {
+     "exact": false,
+     "ned": 0.4027777777777778,
+     "render": false
+    },
+    "FP-p21-t292": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FP-p23-t314": {
+     "exact": false,
+     "ned": 0.8636363636363636,
+     "render": false
+    },
+    "FP-p23-t322": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TP-p10-t123": {
+     "exact": false,
+     "ned": 0.13793103448275862,
+     "render": false
+    },
+    "TP-p10-t121": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p16-t221": {
+     "exact": false,
+     "ned": 0.006211180124223602,
+     "render": false
+    },
+    "TP-p17-t233": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TP-p18-t245": {
+     "exact": false,
+     "ned": 0.045454545454545456,
+     "render": false
+    },
+    "TP-p18-t248": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p24-t315": {
+     "exact": false,
+     "ned": 0.03389830508474576,
+     "render": false
+    },
+    "IFK-p17-51": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "IFK-p23-116": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "ITK-p12-329": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "ITK-p18-377": {
+     "exact": false,
+     "ned": 0.08333333333333333,
+     "render": false
+    }
+   }
+  },
+  "strict": {
+   "exact": 21,
+   "ned_mean": 0.06243176702725819,
+   "render_equal": 6,
+   "compile_fail": 4,
+   "exact_display": 18,
+   "exact_inline": 3,
+   "per_item": {
+    "FK-p09-t137": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p19-t277": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p20-t290": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p27-t426": {
+     "exact": false,
+     "ned": 0.2,
+     "render": false
+    },
+    "FK-p28-t439": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p56-t936": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p60-t1007": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p64-t1075": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p04-t55": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p04-t57": {
+     "exact": false,
+     "ned": 0.02857142857142857,
+     "render": false
+    },
+    "TK-p14-t275": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p17-t334": {
+     "exact": false,
+     "ned": 0.08333333333333333,
+     "render": false
+    },
+    "TK-p20-t385": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p24-t460": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p24-t447": {
+     "exact": false,
+     "ned": 0.05555555555555555,
+     "render": false
+    },
+    "TK-p25-t472": {
+     "exact": false,
+     "ned": 0.04,
+     "render": false
+    },
+    "FP-p06-t65": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FP-p15-t194": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p18-t235": {
+     "exact": false,
+     "ned": 0.4027777777777778,
+     "render": false
+    },
+    "FP-p21-t292": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FP-p23-t314": {
+     "exact": false,
+     "ned": 0.8636363636363636,
+     "render": false
+    },
+    "FP-p23-t322": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TP-p10-t123": {
+     "exact": false,
+     "ned": 0.13793103448275862,
+     "render": false
+    },
+    "TP-p10-t121": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p16-t221": {
+     "exact": false,
+     "ned": 0.006211180124223602,
+     "render": false
+    },
+    "TP-p17-t233": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TP-p18-t245": {
+     "exact": false,
+     "ned": 0.125,
+     "render": false
+    },
+    "TP-p18-t248": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p24-t315": {
+     "exact": false,
+     "ned": 0.03389830508474576,
+     "render": false
+    },
+    "IFK-p17-51": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "IFK-p23-116": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "ITK-p12-329": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "ITK-p18-377": {
+     "exact": false,
+     "ned": 0.08333333333333333,
+     "render": false
+    }
+   }
+  },
+  "latency_median_s": 0.8347618579864502,
+  "latency_mean_display_s": 0.9481096021060286,
+  "latency_max_s": 2.385488271713257,
+  "peak_gb": 1.487038623,
+  "load_s": 0.7004988193511963
+ },
+ {
+  "name": "paddleocr_vl_1.6_4bit_mlx",
+  "n": 33,
+  "lenient": {
+   "exact": 20,
+   "ned_mean": 0.09124441844983026,
+   "render_equal": 3,
+   "compile_fail": 6,
+   "exact_display": 17,
+   "exact_inline": 3,
+   "per_item": {
+    "FK-p09-t137": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p19-t277": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p20-t290": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p27-t426": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p28-t439": {
+     "exact": false,
+     "ned": 0.25980392156862747,
+     "render": false
+    },
+    "FK-p56-t936": {
+     "exact": false,
+     "ned": 0.2,
+     "render": false
+    },
+    "FK-p60-t1007": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p64-t1075": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p04-t55": {
+     "exact": false,
+     "ned": 0.59,
+     "render": false
+    },
+    "TK-p04-t57": {
+     "exact": false,
+     "ned": 0.125,
+     "render": false
+    },
+    "TK-p14-t275": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p17-t334": {
+     "exact": false,
+     "ned": 0.7142857142857143,
+     "render": false
+    },
+    "TK-p20-t385": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p24-t460": {
+     "exact": false,
+     "ned": 0.0196078431372549,
+     "render": false
+    },
+    "TK-p24-t447": {
+     "exact": false,
+     "ned": 0.05555555555555555,
+     "render": false
+    },
+    "TK-p25-t472": {
+     "exact": false,
+     "ned": 0.7386363636363636,
+     "render": false
+    },
+    "FP-p06-t65": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p15-t194": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p18-t235": {
+     "exact": false,
+     "ned": 0.061224489795918366,
+     "render": false
+    },
+    "FP-p21-t292": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FP-p23-t314": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p23-t322": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p10-t123": {
+     "exact": false,
+     "ned": 0.07407407407407407,
+     "render": false
+    },
+    "TP-p10-t121": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p16-t221": {
+     "exact": false,
+     "ned": 0.006211180124223602,
+     "render": false
+    },
+    "TP-p17-t233": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p18-t245": {
+     "exact": false,
+     "ned": 0.08333333333333333,
+     "render": false
+    },
+    "TP-p18-t248": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p24-t315": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "IFK-p17-51": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "IFK-p23-116": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "ITK-p12-329": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "ITK-p18-377": {
+     "exact": false,
+     "ned": 0.08333333333333333,
+     "render": false
+    }
+   }
+  },
+  "strict": {
+   "exact": 19,
+   "ned_mean": 0.13026718258864378,
+   "render_equal": 3,
+   "compile_fail": 6,
+   "exact_display": 16,
+   "exact_inline": 3,
+   "per_item": {
+    "FK-p09-t137": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p19-t277": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p20-t290": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p27-t426": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p28-t439": {
+     "exact": false,
+     "ned": 0.25980392156862747,
+     "render": false
+    },
+    "FK-p56-t936": {
+     "exact": false,
+     "ned": 0.2,
+     "render": false
+    },
+    "FK-p60-t1007": {
+     "exact": false,
+     "ned": 0.4312796208530806,
+     "render": false
+    },
+    "FK-p64-t1075": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p04-t55": {
+     "exact": false,
+     "ned": 0.7248322147651006,
+     "render": false
+    },
+    "TK-p04-t57": {
+     "exact": false,
+     "ned": 0.6698113207547169,
+     "render": false
+    },
+    "TK-p14-t275": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p17-t334": {
+     "exact": false,
+     "ned": 0.7582417582417582,
+     "render": false
+    },
+    "TK-p20-t385": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p24-t460": {
+     "exact": false,
+     "ned": 0.0196078431372549,
+     "render": false
+    },
+    "TK-p24-t447": {
+     "exact": false,
+     "ned": 0.05555555555555555,
+     "render": false
+    },
+    "TK-p25-t472": {
+     "exact": false,
+     "ned": 0.8715083798882681,
+     "render": false
+    },
+    "FP-p06-t65": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p15-t194": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p18-t235": {
+     "exact": false,
+     "ned": 0.061224489795918366,
+     "render": false
+    },
+    "FP-p21-t292": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FP-p23-t314": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p23-t322": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p10-t123": {
+     "exact": false,
+     "ned": 0.07407407407407407,
+     "render": false
+    },
+    "TP-p10-t121": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p16-t221": {
+     "exact": false,
+     "ned": 0.006211180124223602,
+     "render": false
+    },
+    "TP-p17-t233": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p18-t245": {
+     "exact": false,
+     "ned": 0.08333333333333333,
+     "render": false
+    },
+    "TP-p18-t248": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p24-t315": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "IFK-p17-51": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "IFK-p23-116": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "ITK-p12-329": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "ITK-p18-377": {
+     "exact": false,
+     "ned": 0.08333333333333333,
+     "render": false
+    }
+   }
+  },
+  "latency_median_s": 0.4541749954223633,
+  "latency_mean_display_s": 0.5155804732750202,
+  "latency_max_s": 1.1190800666809082,
+  "peak_gb": 1.476619108,
+  "load_s": 1.1299591064453125
+ },
+ {
+  "name": "paddleocr_vl_1.6_4bit_mlx_tight",
+  "n": 33,
+  "lenient": {
+   "exact": 25,
+   "ned_mean": 0.038757788928796555,
+   "render_equal": 5,
+   "compile_fail": 6,
+   "exact_display": 22,
+   "exact_inline": 3,
+   "per_item": {
+    "FK-p09-t137": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p19-t277": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p20-t290": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p27-t426": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p28-t439": {
+     "exact": false,
+     "ned": 0.11049723756906077,
+     "render": false
+    },
+    "FK-p56-t936": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p60-t1007": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p64-t1075": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p04-t55": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p04-t57": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TK-p14-t275": {
+     "exact": false,
+     "ned": 0.15384615384615385,
+     "render": false
+    },
+    "TK-p17-t334": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p20-t385": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p24-t460": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p24-t447": {
+     "exact": false,
+     "ned": 0.05555555555555555,
+     "render": false
+    },
+    "TK-p25-t472": {
+     "exact": false,
+     "ned": 0.6571428571428571,
+     "render": false
+    },
+    "FP-p06-t65": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p15-t194": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p18-t235": {
+     "exact": false,
+     "ned": 0.061224489795918366,
+     "render": false
+    },
+    "FP-p21-t292": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FP-p23-t314": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p23-t322": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p10-t123": {
+     "exact": false,
+     "ned": 0.07407407407407407,
+     "render": false
+    },
+    "TP-p10-t121": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p16-t221": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p17-t233": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p18-t245": {
+     "exact": false,
+     "ned": 0.08333333333333333,
+     "render": false
+    },
+    "TP-p18-t248": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p24-t315": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "IFK-p17-51": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "IFK-p23-116": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "ITK-p12-329": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "ITK-p18-377": {
+     "exact": false,
+     "ned": 0.08333333333333333,
+     "render": false
+    }
+   }
+  },
+  "strict": {
+   "exact": 23,
+   "ned_mean": 0.07541002558103321,
+   "render_equal": 5,
+   "compile_fail": 6,
+   "exact_display": 20,
+   "exact_inline": 3,
+   "per_item": {
+    "FK-p09-t137": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p19-t277": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p20-t290": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p27-t426": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p28-t439": {
+     "exact": false,
+     "ned": 0.11049723756906077,
+     "render": false
+    },
+    "FK-p56-t936": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p60-t1007": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p64-t1075": {
+     "exact": false,
+     "ned": 0.5428571428571428,
+     "render": false
+    },
+    "TK-p04-t55": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p04-t57": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TK-p14-t275": {
+     "exact": false,
+     "ned": 0.15384615384615385,
+     "render": false
+    },
+    "TK-p17-t334": {
+     "exact": false,
+     "ned": 0.6666666666666666,
+     "render": false
+    },
+    "TK-p20-t385": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p24-t460": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p24-t447": {
+     "exact": false,
+     "ned": 0.05555555555555555,
+     "render": false
+    },
+    "TK-p25-t472": {
+     "exact": false,
+     "ned": 0.6571428571428571,
+     "render": false
+    },
+    "FP-p06-t65": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p15-t194": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p18-t235": {
+     "exact": false,
+     "ned": 0.061224489795918366,
+     "render": false
+    },
+    "FP-p21-t292": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FP-p23-t314": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p23-t322": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p10-t123": {
+     "exact": false,
+     "ned": 0.07407407407407407,
+     "render": false
+    },
+    "TP-p10-t121": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p16-t221": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p17-t233": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p18-t245": {
+     "exact": false,
+     "ned": 0.08333333333333333,
+     "render": false
+    },
+    "TP-p18-t248": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p24-t315": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "IFK-p17-51": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "IFK-p23-116": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "ITK-p12-329": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "ITK-p18-377": {
+     "exact": false,
+     "ned": 0.08333333333333333,
+     "render": false
+    }
+   }
+  },
+  "latency_median_s": 0.426422119140625,
+  "latency_mean_display_s": 0.4913842595856765,
+  "latency_max_s": 0.9607417583465576,
+  "peak_gb": 1.517349732,
+  "load_s": 1.4840419292449951
+ },
+ {
+  "name": "pix2tex_cpu",
+  "n": 33,
+  "lenient": {
+   "exact": 10,
+   "ned_mean": 0.2956024629217299,
+   "render_equal": 4,
+   "compile_fail": 10,
+   "exact_display": 9,
+   "exact_inline": 1,
+   "per_item": {
+    "FK-p09-t137": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p19-t277": {
+     "exact": false,
+     "ned": 0.06896551724137931,
+     "render": false
+    },
+    "FK-p20-t290": {
+     "exact": false,
+     "ned": 0.5841584158415841,
+     "render": false
+    },
+    "FK-p27-t426": {
+     "exact": false,
+     "ned": 0.3333333333333333,
+     "render": false
+    },
+    "FK-p28-t439": {
+     "exact": false,
+     "ned": 0.7513812154696132,
+     "render": false
+    },
+    "FK-p56-t936": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p60-t1007": {
+     "exact": false,
+     "ned": 0.8376383763837638,
+     "render": false
+    },
+    "FK-p64-t1075": {
+     "exact": false,
+     "ned": 0.6575342465753424,
+     "render": false
+    },
+    "TK-p04-t55": {
+     "exact": false,
+     "ned": 0.5130434782608696,
+     "render": false
+    },
+    "TK-p04-t57": {
+     "exact": false,
+     "ned": 0.6382978723404256,
+     "render": false
+    },
+    "TK-p14-t275": {
+     "exact": false,
+     "ned": 0.15384615384615385,
+     "render": false
+    },
+    "TK-p17-t334": {
+     "exact": false,
+     "ned": 0.7843137254901961,
+     "render": false
+    },
+    "TK-p20-t385": {
+     "exact": false,
+     "ned": 0.043478260869565216,
+     "render": false
+    },
+    "TK-p24-t460": {
+     "exact": false,
+     "ned": 0.47058823529411764,
+     "render": false
+    },
+    "TK-p24-t447": {
+     "exact": false,
+     "ned": 0.23529411764705882,
+     "render": false
+    },
+    "TK-p25-t472": {
+     "exact": false,
+     "ned": 0.8671328671328671,
+     "render": false
+    },
+    "FP-p06-t65": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p15-t194": {
+     "exact": false,
+     "ned": 0.4263565891472868,
+     "render": false
+    },
+    "FP-p18-t235": {
+     "exact": false,
+     "ned": 0.417910447761194,
+     "render": false
+    },
+    "FP-p21-t292": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FP-p23-t314": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p23-t322": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TP-p10-t123": {
+     "exact": false,
+     "ned": 0.07407407407407407,
+     "render": false
+    },
+    "TP-p10-t121": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p16-t221": {
+     "exact": false,
+     "ned": 0.4161490683229814,
+     "render": false
+    },
+    "TP-p17-t233": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p18-t245": {
+     "exact": false,
+     "ned": 0.08333333333333333,
+     "render": false
+    },
+    "TP-p18-t248": {
+     "exact": false,
+     "ned": 0.09090909090909091,
+     "render": false
+    },
+    "TP-p24-t315": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "IFK-p17-51": {
+     "exact": false,
+     "ned": 0.25,
+     "render": false
+    },
+    "IFK-p23-116": {
+     "exact": false,
+     "ned": 0.5238095238095238,
+     "render": false
+    },
+    "ITK-p12-329": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "ITK-p18-377": {
+     "exact": false,
+     "ned": 0.5333333333333333,
+     "render": false
+    }
+   }
+  },
+  "strict": {
+   "exact": 10,
+   "ned_mean": 0.2956024629217299,
+   "render_equal": 4,
+   "compile_fail": 10,
+   "exact_display": 9,
+   "exact_inline": 1,
+   "per_item": {
+    "FK-p09-t137": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p19-t277": {
+     "exact": false,
+     "ned": 0.06896551724137931,
+     "render": false
+    },
+    "FK-p20-t290": {
+     "exact": false,
+     "ned": 0.5841584158415841,
+     "render": false
+    },
+    "FK-p27-t426": {
+     "exact": false,
+     "ned": 0.3333333333333333,
+     "render": false
+    },
+    "FK-p28-t439": {
+     "exact": false,
+     "ned": 0.7513812154696132,
+     "render": false
+    },
+    "FK-p56-t936": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p60-t1007": {
+     "exact": false,
+     "ned": 0.8376383763837638,
+     "render": false
+    },
+    "FK-p64-t1075": {
+     "exact": false,
+     "ned": 0.6575342465753424,
+     "render": false
+    },
+    "TK-p04-t55": {
+     "exact": false,
+     "ned": 0.5130434782608696,
+     "render": false
+    },
+    "TK-p04-t57": {
+     "exact": false,
+     "ned": 0.6382978723404256,
+     "render": false
+    },
+    "TK-p14-t275": {
+     "exact": false,
+     "ned": 0.15384615384615385,
+     "render": false
+    },
+    "TK-p17-t334": {
+     "exact": false,
+     "ned": 0.7843137254901961,
+     "render": false
+    },
+    "TK-p20-t385": {
+     "exact": false,
+     "ned": 0.043478260869565216,
+     "render": false
+    },
+    "TK-p24-t460": {
+     "exact": false,
+     "ned": 0.47058823529411764,
+     "render": false
+    },
+    "TK-p24-t447": {
+     "exact": false,
+     "ned": 0.23529411764705882,
+     "render": false
+    },
+    "TK-p25-t472": {
+     "exact": false,
+     "ned": 0.8671328671328671,
+     "render": false
+    },
+    "FP-p06-t65": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p15-t194": {
+     "exact": false,
+     "ned": 0.4263565891472868,
+     "render": false
+    },
+    "FP-p18-t235": {
+     "exact": false,
+     "ned": 0.417910447761194,
+     "render": false
+    },
+    "FP-p21-t292": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FP-p23-t314": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p23-t322": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TP-p10-t123": {
+     "exact": false,
+     "ned": 0.07407407407407407,
+     "render": false
+    },
+    "TP-p10-t121": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p16-t221": {
+     "exact": false,
+     "ned": 0.4161490683229814,
+     "render": false
+    },
+    "TP-p17-t233": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p18-t245": {
+     "exact": false,
+     "ned": 0.08333333333333333,
+     "render": false
+    },
+    "TP-p18-t248": {
+     "exact": false,
+     "ned": 0.09090909090909091,
+     "render": false
+    },
+    "TP-p24-t315": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "IFK-p17-51": {
+     "exact": false,
+     "ned": 0.25,
+     "render": false
+    },
+    "IFK-p23-116": {
+     "exact": false,
+     "ned": 0.5238095238095238,
+     "render": false
+    },
+    "ITK-p12-329": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "ITK-p18-377": {
+     "exact": false,
+     "ned": 0.5333333333333333,
+     "render": false
+    }
+   }
+  },
+  "latency_median_s": 1.86704421043396,
+  "latency_mean_display_s": 4.1434344587654905,
+  "latency_max_s": 14.132795095443726,
+  "peak_gb": null,
+  "load_s": 4.737214088439941
+ },
+ {
+  "name": "pix2tex_cpu_tight",
+  "n": 33,
+  "lenient": {
+   "exact": 10,
+   "ned_mean": 0.19882139416611996,
+   "render_equal": 3,
+   "compile_fail": 6,
+   "exact_display": 9,
+   "exact_inline": 1,
+   "per_item": {
+    "FK-p09-t137": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p19-t277": {
+     "exact": false,
+     "ned": 0.06896551724137931,
+     "render": false
+    },
+    "FK-p20-t290": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p27-t426": {
+     "exact": false,
+     "ned": 0.3333333333333333,
+     "render": false
+    },
+    "FK-p28-t439": {
+     "exact": false,
+     "ned": 0.580110497237569,
+     "render": false
+    },
+    "FK-p56-t936": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p60-t1007": {
+     "exact": false,
+     "ned": 0.04132231404958678,
+     "render": false
+    },
+    "FK-p64-t1075": {
+     "exact": false,
+     "ned": 0.6417910447761194,
+     "render": false
+    },
+    "TK-p04-t55": {
+     "exact": false,
+     "ned": 0.36666666666666664,
+     "render": false
+    },
+    "TK-p04-t57": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p14-t275": {
+     "exact": false,
+     "ned": 0.15384615384615385,
+     "render": false
+    },
+    "TK-p17-t334": {
+     "exact": false,
+     "ned": 0.7796610169491526,
+     "render": false
+    },
+    "TK-p20-t385": {
+     "exact": false,
+     "ned": 0.043478260869565216,
+     "render": false
+    },
+    "TK-p24-t460": {
+     "exact": false,
+     "ned": 0.23529411764705882,
+     "render": false
+    },
+    "TK-p24-t447": {
+     "exact": false,
+     "ned": 0.23529411764705882,
+     "render": false
+    },
+    "TK-p25-t472": {
+     "exact": false,
+     "ned": 0.6779661016949152,
+     "render": false
+    },
+    "FP-p06-t65": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p15-t194": {
+     "exact": false,
+     "ned": 0.14736842105263157,
+     "render": false
+    },
+    "FP-p18-t235": {
+     "exact": false,
+     "ned": 0.4603174603174603,
+     "render": false
+    },
+    "FP-p21-t292": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FP-p23-t314": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p23-t322": {
+     "exact": false,
+     "ned": 0.02857142857142857,
+     "render": false
+    },
+    "TP-p10-t123": {
+     "exact": false,
+     "ned": 0.07407407407407407,
+     "render": false
+    },
+    "TP-p10-t121": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p16-t221": {
+     "exact": false,
+     "ned": 0.04216867469879518,
+     "render": false
+    },
+    "TP-p17-t233": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p18-t245": {
+     "exact": false,
+     "ned": 0.08333333333333333,
+     "render": false
+    },
+    "TP-p18-t248": {
+     "exact": false,
+     "ned": 0.09090909090909091,
+     "render": false
+    },
+    "TP-p24-t315": {
+     "exact": false,
+     "ned": 0.1694915254237288,
+     "render": false
+    },
+    "IFK-p17-51": {
+     "exact": false,
+     "ned": 0.25,
+     "render": false
+    },
+    "IFK-p23-116": {
+     "exact": false,
+     "ned": 0.5238095238095238,
+     "render": false
+    },
+    "ITK-p12-329": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "ITK-p18-377": {
+     "exact": false,
+     "ned": 0.5333333333333333,
+     "render": false
+    }
+   }
+  },
+  "strict": {
+   "exact": 10,
+   "ned_mean": 0.19882139416611996,
+   "render_equal": 3,
+   "compile_fail": 6,
+   "exact_display": 9,
+   "exact_inline": 1,
+   "per_item": {
+    "FK-p09-t137": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p19-t277": {
+     "exact": false,
+     "ned": 0.06896551724137931,
+     "render": false
+    },
+    "FK-p20-t290": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p27-t426": {
+     "exact": false,
+     "ned": 0.3333333333333333,
+     "render": false
+    },
+    "FK-p28-t439": {
+     "exact": false,
+     "ned": 0.580110497237569,
+     "render": false
+    },
+    "FK-p56-t936": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p60-t1007": {
+     "exact": false,
+     "ned": 0.04132231404958678,
+     "render": false
+    },
+    "FK-p64-t1075": {
+     "exact": false,
+     "ned": 0.6417910447761194,
+     "render": false
+    },
+    "TK-p04-t55": {
+     "exact": false,
+     "ned": 0.36666666666666664,
+     "render": false
+    },
+    "TK-p04-t57": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p14-t275": {
+     "exact": false,
+     "ned": 0.15384615384615385,
+     "render": false
+    },
+    "TK-p17-t334": {
+     "exact": false,
+     "ned": 0.7796610169491526,
+     "render": false
+    },
+    "TK-p20-t385": {
+     "exact": false,
+     "ned": 0.043478260869565216,
+     "render": false
+    },
+    "TK-p24-t460": {
+     "exact": false,
+     "ned": 0.23529411764705882,
+     "render": false
+    },
+    "TK-p24-t447": {
+     "exact": false,
+     "ned": 0.23529411764705882,
+     "render": false
+    },
+    "TK-p25-t472": {
+     "exact": false,
+     "ned": 0.6779661016949152,
+     "render": false
+    },
+    "FP-p06-t65": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p15-t194": {
+     "exact": false,
+     "ned": 0.14736842105263157,
+     "render": false
+    },
+    "FP-p18-t235": {
+     "exact": false,
+     "ned": 0.4603174603174603,
+     "render": false
+    },
+    "FP-p21-t292": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FP-p23-t314": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p23-t322": {
+     "exact": false,
+     "ned": 0.02857142857142857,
+     "render": false
+    },
+    "TP-p10-t123": {
+     "exact": false,
+     "ned": 0.07407407407407407,
+     "render": false
+    },
+    "TP-p10-t121": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p16-t221": {
+     "exact": false,
+     "ned": 0.04216867469879518,
+     "render": false
+    },
+    "TP-p17-t233": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p18-t245": {
+     "exact": false,
+     "ned": 0.08333333333333333,
+     "render": false
+    },
+    "TP-p18-t248": {
+     "exact": false,
+     "ned": 0.09090909090909091,
+     "render": false
+    },
+    "TP-p24-t315": {
+     "exact": false,
+     "ned": 0.1694915254237288,
+     "render": false
+    },
+    "IFK-p17-51": {
+     "exact": false,
+     "ned": 0.25,
+     "render": false
+    },
+    "IFK-p23-116": {
+     "exact": false,
+     "ned": 0.5238095238095238,
+     "render": false
+    },
+    "ITK-p12-329": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "ITK-p18-377": {
+     "exact": false,
+     "ned": 0.5333333333333333,
+     "render": false
+    }
+   }
+  },
+  "latency_median_s": 1.172687292098999,
+  "latency_mean_display_s": 2.7445213630281646,
+  "latency_max_s": 13.3180832862854,
+  "peak_gb": null,
+  "load_s": 0.4260249137878418
+ },
+ {
+  "name": "pix2tex_mps",
+  "n": 33,
+  "lenient": {
+   "exact": 10,
+   "ned_mean": 0.2956024629217299,
+   "render_equal": 4,
+   "compile_fail": 10,
+   "exact_display": 9,
+   "exact_inline": 1,
+   "per_item": {
+    "FK-p09-t137": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p19-t277": {
+     "exact": false,
+     "ned": 0.06896551724137931,
+     "render": false
+    },
+    "FK-p20-t290": {
+     "exact": false,
+     "ned": 0.5841584158415841,
+     "render": false
+    },
+    "FK-p27-t426": {
+     "exact": false,
+     "ned": 0.3333333333333333,
+     "render": false
+    },
+    "FK-p28-t439": {
+     "exact": false,
+     "ned": 0.7513812154696132,
+     "render": false
+    },
+    "FK-p56-t936": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p60-t1007": {
+     "exact": false,
+     "ned": 0.8376383763837638,
+     "render": false
+    },
+    "FK-p64-t1075": {
+     "exact": false,
+     "ned": 0.6575342465753424,
+     "render": false
+    },
+    "TK-p04-t55": {
+     "exact": false,
+     "ned": 0.5130434782608696,
+     "render": false
+    },
+    "TK-p04-t57": {
+     "exact": false,
+     "ned": 0.6382978723404256,
+     "render": false
+    },
+    "TK-p14-t275": {
+     "exact": false,
+     "ned": 0.15384615384615385,
+     "render": false
+    },
+    "TK-p17-t334": {
+     "exact": false,
+     "ned": 0.7843137254901961,
+     "render": false
+    },
+    "TK-p20-t385": {
+     "exact": false,
+     "ned": 0.043478260869565216,
+     "render": false
+    },
+    "TK-p24-t460": {
+     "exact": false,
+     "ned": 0.47058823529411764,
+     "render": false
+    },
+    "TK-p24-t447": {
+     "exact": false,
+     "ned": 0.23529411764705882,
+     "render": false
+    },
+    "TK-p25-t472": {
+     "exact": false,
+     "ned": 0.8671328671328671,
+     "render": false
+    },
+    "FP-p06-t65": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p15-t194": {
+     "exact": false,
+     "ned": 0.4263565891472868,
+     "render": false
+    },
+    "FP-p18-t235": {
+     "exact": false,
+     "ned": 0.417910447761194,
+     "render": false
+    },
+    "FP-p21-t292": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FP-p23-t314": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p23-t322": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TP-p10-t123": {
+     "exact": false,
+     "ned": 0.07407407407407407,
+     "render": false
+    },
+    "TP-p10-t121": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p16-t221": {
+     "exact": false,
+     "ned": 0.4161490683229814,
+     "render": false
+    },
+    "TP-p17-t233": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p18-t245": {
+     "exact": false,
+     "ned": 0.08333333333333333,
+     "render": false
+    },
+    "TP-p18-t248": {
+     "exact": false,
+     "ned": 0.09090909090909091,
+     "render": false
+    },
+    "TP-p24-t315": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "IFK-p17-51": {
+     "exact": false,
+     "ned": 0.25,
+     "render": false
+    },
+    "IFK-p23-116": {
+     "exact": false,
+     "ned": 0.5238095238095238,
+     "render": false
+    },
+    "ITK-p12-329": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "ITK-p18-377": {
+     "exact": false,
+     "ned": 0.5333333333333333,
+     "render": false
+    }
+   }
+  },
+  "strict": {
+   "exact": 10,
+   "ned_mean": 0.2956024629217299,
+   "render_equal": 4,
+   "compile_fail": 10,
+   "exact_display": 9,
+   "exact_inline": 1,
+   "per_item": {
+    "FK-p09-t137": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p19-t277": {
+     "exact": false,
+     "ned": 0.06896551724137931,
+     "render": false
+    },
+    "FK-p20-t290": {
+     "exact": false,
+     "ned": 0.5841584158415841,
+     "render": false
+    },
+    "FK-p27-t426": {
+     "exact": false,
+     "ned": 0.3333333333333333,
+     "render": false
+    },
+    "FK-p28-t439": {
+     "exact": false,
+     "ned": 0.7513812154696132,
+     "render": false
+    },
+    "FK-p56-t936": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p60-t1007": {
+     "exact": false,
+     "ned": 0.8376383763837638,
+     "render": false
+    },
+    "FK-p64-t1075": {
+     "exact": false,
+     "ned": 0.6575342465753424,
+     "render": false
+    },
+    "TK-p04-t55": {
+     "exact": false,
+     "ned": 0.5130434782608696,
+     "render": false
+    },
+    "TK-p04-t57": {
+     "exact": false,
+     "ned": 0.6382978723404256,
+     "render": false
+    },
+    "TK-p14-t275": {
+     "exact": false,
+     "ned": 0.15384615384615385,
+     "render": false
+    },
+    "TK-p17-t334": {
+     "exact": false,
+     "ned": 0.7843137254901961,
+     "render": false
+    },
+    "TK-p20-t385": {
+     "exact": false,
+     "ned": 0.043478260869565216,
+     "render": false
+    },
+    "TK-p24-t460": {
+     "exact": false,
+     "ned": 0.47058823529411764,
+     "render": false
+    },
+    "TK-p24-t447": {
+     "exact": false,
+     "ned": 0.23529411764705882,
+     "render": false
+    },
+    "TK-p25-t472": {
+     "exact": false,
+     "ned": 0.8671328671328671,
+     "render": false
+    },
+    "FP-p06-t65": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p15-t194": {
+     "exact": false,
+     "ned": 0.4263565891472868,
+     "render": false
+    },
+    "FP-p18-t235": {
+     "exact": false,
+     "ned": 0.417910447761194,
+     "render": false
+    },
+    "FP-p21-t292": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FP-p23-t314": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p23-t322": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TP-p10-t123": {
+     "exact": false,
+     "ned": 0.07407407407407407,
+     "render": false
+    },
+    "TP-p10-t121": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p16-t221": {
+     "exact": false,
+     "ned": 0.4161490683229814,
+     "render": false
+    },
+    "TP-p17-t233": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p18-t245": {
+     "exact": false,
+     "ned": 0.08333333333333333,
+     "render": false
+    },
+    "TP-p18-t248": {
+     "exact": false,
+     "ned": 0.09090909090909091,
+     "render": false
+    },
+    "TP-p24-t315": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "IFK-p17-51": {
+     "exact": false,
+     "ned": 0.25,
+     "render": false
+    },
+    "IFK-p23-116": {
+     "exact": false,
+     "ned": 0.5238095238095238,
+     "render": false
+    },
+    "ITK-p12-329": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "ITK-p18-377": {
+     "exact": false,
+     "ned": 0.5333333333333333,
+     "render": false
+    }
+   }
+  },
+  "latency_median_s": 1.6030950546264648,
+  "latency_mean_display_s": 2.945713125426194,
+  "latency_max_s": 9.833042860031128,
+  "peak_gb": 1.40763136,
+  "load_s": 0.5389480590820312
+ },
+ {
+  "name": "qwen3.5_9b_ollama",
+  "n": 33,
+  "lenient": {
+   "exact": 20,
+   "ned_mean": 0.035160290040672816,
+   "render_equal": 4,
+   "compile_fail": 1,
+   "exact_display": 17,
+   "exact_inline": 3,
+   "per_item": {
+    "FK-p09-t137": {
+     "exact": false,
+     "ned": 0.05555555555555555,
+     "render": false
+    },
+    "FK-p19-t277": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p20-t290": {
+     "exact": false,
+     "ned": 0.045454545454545456,
+     "render": false
+    },
+    "FK-p27-t426": {
+     "exact": false,
+     "ned": 0.3333333333333333,
+     "render": false
+    },
+    "FK-p28-t439": {
+     "exact": false,
+     "ned": 0.005494505494505495,
+     "render": false
+    },
+    "FK-p56-t936": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p60-t1007": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p64-t1075": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p04-t55": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p04-t57": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TK-p14-t275": {
+     "exact": false,
+     "ned": 0.15384615384615385,
+     "render": false
+    },
+    "TK-p17-t334": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p20-t385": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p24-t460": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p24-t447": {
+     "exact": false,
+     "ned": 0.05555555555555555,
+     "render": false
+    },
+    "TK-p25-t472": {
+     "exact": false,
+     "ned": 0.04,
+     "render": false
+    },
+    "FP-p06-t65": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p15-t194": {
+     "exact": false,
+     "ned": 0.042105263157894736,
+     "render": false
+    },
+    "FP-p18-t235": {
+     "exact": false,
+     "ned": 0.02,
+     "render": false
+    },
+    "FP-p21-t292": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FP-p23-t314": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p23-t322": {
+     "exact": false,
+     "ned": 0.13513513513513514,
+     "render": false
+    },
+    "TP-p10-t123": {
+     "exact": false,
+     "ned": 0.10714285714285714,
+     "render": false
+    },
+    "TP-p10-t121": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p16-t221": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p17-t233": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p18-t245": {
+     "exact": false,
+     "ned": 0.08333333333333333,
+     "render": false
+    },
+    "TP-p18-t248": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p24-t315": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "IFK-p17-51": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "IFK-p23-116": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "ITK-p12-329": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "ITK-p18-377": {
+     "exact": false,
+     "ned": 0.08333333333333333,
+     "render": false
+    }
+   }
+  },
+  "strict": {
+   "exact": 20,
+   "ned_mean": 0.035160290040672816,
+   "render_equal": 4,
+   "compile_fail": 1,
+   "exact_display": 17,
+   "exact_inline": 3,
+   "per_item": {
+    "FK-p09-t137": {
+     "exact": false,
+     "ned": 0.05555555555555555,
+     "render": false
+    },
+    "FK-p19-t277": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p20-t290": {
+     "exact": false,
+     "ned": 0.045454545454545456,
+     "render": false
+    },
+    "FK-p27-t426": {
+     "exact": false,
+     "ned": 0.3333333333333333,
+     "render": false
+    },
+    "FK-p28-t439": {
+     "exact": false,
+     "ned": 0.005494505494505495,
+     "render": false
+    },
+    "FK-p56-t936": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p60-t1007": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p64-t1075": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p04-t55": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p04-t57": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TK-p14-t275": {
+     "exact": false,
+     "ned": 0.15384615384615385,
+     "render": false
+    },
+    "TK-p17-t334": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p20-t385": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p24-t460": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p24-t447": {
+     "exact": false,
+     "ned": 0.05555555555555555,
+     "render": false
+    },
+    "TK-p25-t472": {
+     "exact": false,
+     "ned": 0.04,
+     "render": false
+    },
+    "FP-p06-t65": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p15-t194": {
+     "exact": false,
+     "ned": 0.042105263157894736,
+     "render": false
+    },
+    "FP-p18-t235": {
+     "exact": false,
+     "ned": 0.02,
+     "render": false
+    },
+    "FP-p21-t292": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FP-p23-t314": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p23-t322": {
+     "exact": false,
+     "ned": 0.13513513513513514,
+     "render": false
+    },
+    "TP-p10-t123": {
+     "exact": false,
+     "ned": 0.10714285714285714,
+     "render": false
+    },
+    "TP-p10-t121": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p16-t221": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p17-t233": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p18-t245": {
+     "exact": false,
+     "ned": 0.08333333333333333,
+     "render": false
+    },
+    "TP-p18-t248": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p24-t315": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "IFK-p17-51": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "IFK-p23-116": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "ITK-p12-329": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "ITK-p18-377": {
+     "exact": false,
+     "ned": 0.08333333333333333,
+     "render": false
+    }
+   }
+  },
+  "latency_median_s": 3.4973068237304688,
+  "latency_mean_display_s": 5.4841528267695985,
+  "latency_max_s": 18.73339295387268,
+  "peak_gb": null,
+  "load_s": null
+ },
+ {
+  "name": "qwen3.5_9b_ollama_tight",
+  "n": 33,
+  "lenient": {
+   "exact": 17,
+   "ned_mean": 0.0399962788686752,
+   "render_equal": 3,
+   "compile_fail": 0,
+   "exact_display": 14,
+   "exact_inline": 3,
+   "per_item": {
+    "FK-p09-t137": {
+     "exact": false,
+     "ned": 0.1111111111111111,
+     "render": false
+    },
+    "FK-p19-t277": {
+     "exact": false,
+     "ned": 0.01694915254237288,
+     "render": false
+    },
+    "FK-p20-t290": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p27-t426": {
+     "exact": false,
+     "ned": 0.06666666666666667,
+     "render": false
+    },
+    "FK-p28-t439": {
+     "exact": false,
+     "ned": 0.09340659340659341,
+     "render": false
+    },
+    "FK-p56-t936": {
+     "exact": false,
+     "ned": 0.16,
+     "render": false
+    },
+    "FK-p60-t1007": {
+     "exact": false,
+     "ned": 0.05,
+     "render": false
+    },
+    "FK-p64-t1075": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p04-t55": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p04-t57": {
+     "exact": false,
+     "ned": 0.02857142857142857,
+     "render": false
+    },
+    "TK-p14-t275": {
+     "exact": false,
+     "ned": 0.15384615384615385,
+     "render": false
+    },
+    "TK-p17-t334": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p20-t385": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p24-t460": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p24-t447": {
+     "exact": false,
+     "ned": 0.05555555555555555,
+     "render": false
+    },
+    "TK-p25-t472": {
+     "exact": false,
+     "ned": 0.04,
+     "render": false
+    },
+    "FP-p06-t65": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FP-p15-t194": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p18-t235": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p21-t292": {
+     "exact": false,
+     "ned": 0.039473684210526314,
+     "render": false
+    },
+    "FP-p23-t314": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p23-t322": {
+     "exact": false,
+     "ned": 0.23076923076923078,
+     "render": false
+    },
+    "TP-p10-t123": {
+     "exact": false,
+     "ned": 0.07407407407407407,
+     "render": false
+    },
+    "TP-p10-t121": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p16-t221": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p17-t233": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p18-t245": {
+     "exact": false,
+     "ned": 0.08333333333333333,
+     "render": false
+    },
+    "TP-p18-t248": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p24-t315": {
+     "exact": false,
+     "ned": 0.03278688524590164,
+     "render": false
+    },
+    "IFK-p17-51": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "IFK-p23-116": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "ITK-p12-329": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "ITK-p18-377": {
+     "exact": false,
+     "ned": 0.08333333333333333,
+     "render": false
+    }
+   }
+  },
+  "strict": {
+   "exact": 17,
+   "ned_mean": 0.0399962788686752,
+   "render_equal": 3,
+   "compile_fail": 0,
+   "exact_display": 14,
+   "exact_inline": 3,
+   "per_item": {
+    "FK-p09-t137": {
+     "exact": false,
+     "ned": 0.1111111111111111,
+     "render": false
+    },
+    "FK-p19-t277": {
+     "exact": false,
+     "ned": 0.01694915254237288,
+     "render": false
+    },
+    "FK-p20-t290": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p27-t426": {
+     "exact": false,
+     "ned": 0.06666666666666667,
+     "render": false
+    },
+    "FK-p28-t439": {
+     "exact": false,
+     "ned": 0.09340659340659341,
+     "render": false
+    },
+    "FK-p56-t936": {
+     "exact": false,
+     "ned": 0.16,
+     "render": false
+    },
+    "FK-p60-t1007": {
+     "exact": false,
+     "ned": 0.05,
+     "render": false
+    },
+    "FK-p64-t1075": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p04-t55": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p04-t57": {
+     "exact": false,
+     "ned": 0.02857142857142857,
+     "render": false
+    },
+    "TK-p14-t275": {
+     "exact": false,
+     "ned": 0.15384615384615385,
+     "render": false
+    },
+    "TK-p17-t334": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p20-t385": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p24-t460": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p24-t447": {
+     "exact": false,
+     "ned": 0.05555555555555555,
+     "render": false
+    },
+    "TK-p25-t472": {
+     "exact": false,
+     "ned": 0.04,
+     "render": false
+    },
+    "FP-p06-t65": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FP-p15-t194": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p18-t235": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p21-t292": {
+     "exact": false,
+     "ned": 0.039473684210526314,
+     "render": false
+    },
+    "FP-p23-t314": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p23-t322": {
+     "exact": false,
+     "ned": 0.23076923076923078,
+     "render": false
+    },
+    "TP-p10-t123": {
+     "exact": false,
+     "ned": 0.07407407407407407,
+     "render": false
+    },
+    "TP-p10-t121": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p16-t221": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p17-t233": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p18-t245": {
+     "exact": false,
+     "ned": 0.08333333333333333,
+     "render": false
+    },
+    "TP-p18-t248": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p24-t315": {
+     "exact": false,
+     "ned": 0.03278688524590164,
+     "render": false
+    },
+    "IFK-p17-51": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "IFK-p23-116": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "ITK-p12-329": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "ITK-p18-377": {
+     "exact": false,
+     "ned": 0.08333333333333333,
+     "render": false
+    }
+   }
+  },
+  "latency_median_s": 3.3876869678497314,
+  "latency_mean_display_s": 5.572858670662189,
+  "latency_max_s": 19.41883420944214,
+  "peak_gb": null,
+  "load_s": null
+ },
+ {
+  "name": "qwen3_vl_2b_4bit_mlx",
+  "n": 33,
+  "lenient": {
+   "exact": 15,
+   "ned_mean": 0.0793920351587124,
+   "render_equal": 6,
+   "compile_fail": 5,
+   "exact_display": 12,
+   "exact_inline": 3,
+   "per_item": {
+    "FK-p09-t137": {
+     "exact": false,
+     "ned": 0.1111111111111111,
+     "render": false
+    },
+    "FK-p19-t277": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p20-t290": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p27-t426": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p28-t439": {
+     "exact": false,
+     "ned": 0.30386740331491713,
+     "render": false
+    },
+    "FK-p56-t936": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p60-t1007": {
+     "exact": false,
+     "ned": 0.05,
+     "render": false
+    },
+    "FK-p64-t1075": {
+     "exact": false,
+     "ned": 0.14705882352941177,
+     "render": false
+    },
+    "TK-p04-t55": {
+     "exact": false,
+     "ned": 0.11666666666666667,
+     "render": false
+    },
+    "TK-p04-t57": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TK-p14-t275": {
+     "exact": false,
+     "ned": 0.15384615384615385,
+     "render": false
+    },
+    "TK-p17-t334": {
+     "exact": false,
+     "ned": 0.045454545454545456,
+     "render": false
+    },
+    "TK-p20-t385": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TK-p24-t460": {
+     "exact": false,
+     "ned": 0.47058823529411764,
+     "render": false
+    },
+    "TK-p24-t447": {
+     "exact": false,
+     "ned": 0.05555555555555555,
+     "render": false
+    },
+    "TK-p25-t472": {
+     "exact": false,
+     "ned": 0.16,
+     "render": false
+    },
+    "FP-p06-t65": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p15-t194": {
+     "exact": false,
+     "ned": 0.5157894736842106,
+     "render": false
+    },
+    "FP-p18-t235": {
+     "exact": false,
+     "ned": 0.02040816326530612,
+     "render": false
+    },
+    "FP-p21-t292": {
+     "exact": false,
+     "ned": 0.05263157894736842,
+     "render": false
+    },
+    "FP-p23-t314": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p23-t322": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p10-t123": {
+     "exact": false,
+     "ned": 0.07407407407407407,
+     "render": false
+    },
+    "TP-p10-t121": {
+     "exact": false,
+     "ned": 0.023809523809523808,
+     "render": false
+    },
+    "TP-p16-t221": {
+     "exact": false,
+     "ned": 0.09937888198757763,
+     "render": false
+    },
+    "TP-p17-t233": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p18-t245": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p18-t248": {
+     "exact": false,
+     "ned": 0.13636363636363635,
+     "render": false
+    },
+    "TP-p24-t315": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "IFK-p17-51": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "IFK-p23-116": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "ITK-p12-329": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "ITK-p18-377": {
+     "exact": false,
+     "ned": 0.08333333333333333,
+     "render": false
+    }
+   }
+  },
+  "strict": {
+   "exact": 14,
+   "ned_mean": 0.08191728768396493,
+   "render_equal": 6,
+   "compile_fail": 5,
+   "exact_display": 11,
+   "exact_inline": 3,
+   "per_item": {
+    "FK-p09-t137": {
+     "exact": false,
+     "ned": 0.1111111111111111,
+     "render": false
+    },
+    "FK-p19-t277": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p20-t290": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p27-t426": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p28-t439": {
+     "exact": false,
+     "ned": 0.30386740331491713,
+     "render": false
+    },
+    "FK-p56-t936": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p60-t1007": {
+     "exact": false,
+     "ned": 0.05,
+     "render": false
+    },
+    "FK-p64-t1075": {
+     "exact": false,
+     "ned": 0.14705882352941177,
+     "render": false
+    },
+    "TK-p04-t55": {
+     "exact": false,
+     "ned": 0.11666666666666667,
+     "render": false
+    },
+    "TK-p04-t57": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TK-p14-t275": {
+     "exact": false,
+     "ned": 0.15384615384615385,
+     "render": false
+    },
+    "TK-p17-t334": {
+     "exact": false,
+     "ned": 0.045454545454545456,
+     "render": false
+    },
+    "TK-p20-t385": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TK-p24-t460": {
+     "exact": false,
+     "ned": 0.47058823529411764,
+     "render": false
+    },
+    "TK-p24-t447": {
+     "exact": false,
+     "ned": 0.05555555555555555,
+     "render": false
+    },
+    "TK-p25-t472": {
+     "exact": false,
+     "ned": 0.16,
+     "render": false
+    },
+    "FP-p06-t65": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p15-t194": {
+     "exact": false,
+     "ned": 0.5157894736842106,
+     "render": false
+    },
+    "FP-p18-t235": {
+     "exact": false,
+     "ned": 0.02040816326530612,
+     "render": false
+    },
+    "FP-p21-t292": {
+     "exact": false,
+     "ned": 0.05263157894736842,
+     "render": false
+    },
+    "FP-p23-t314": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p23-t322": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p10-t123": {
+     "exact": false,
+     "ned": 0.07407407407407407,
+     "render": false
+    },
+    "TP-p10-t121": {
+     "exact": false,
+     "ned": 0.023809523809523808,
+     "render": false
+    },
+    "TP-p16-t221": {
+     "exact": false,
+     "ned": 0.09937888198757763,
+     "render": false
+    },
+    "TP-p17-t233": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p18-t245": {
+     "exact": false,
+     "ned": 0.08333333333333333,
+     "render": false
+    },
+    "TP-p18-t248": {
+     "exact": false,
+     "ned": 0.13636363636363635,
+     "render": false
+    },
+    "TP-p24-t315": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "IFK-p17-51": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "IFK-p23-116": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "ITK-p12-329": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "ITK-p18-377": {
+     "exact": false,
+     "ned": 0.08333333333333333,
+     "render": false
+    }
+   }
+  },
+  "latency_median_s": 0.6665809154510498,
+  "latency_mean_display_s": 0.9519573573408455,
+  "latency_max_s": 2.784785270690918,
+  "peak_gb": 2.343988651,
+  "load_s": 37.26343107223511
+ },
+ {
+  "name": "qwen3_vl_2b_4bit_mlx_tight",
+  "n": 33,
+  "lenient": {
+   "exact": 20,
+   "ned_mean": 0.04775062701283453,
+   "render_equal": 6,
+   "compile_fail": 4,
+   "exact_display": 17,
+   "exact_inline": 3,
+   "per_item": {
+    "FK-p09-t137": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p19-t277": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p20-t290": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p27-t426": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p28-t439": {
+     "exact": false,
+     "ned": 0.4143646408839779,
+     "render": false
+    },
+    "FK-p56-t936": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p60-t1007": {
+     "exact": false,
+     "ned": 0.075,
+     "render": false
+    },
+    "FK-p64-t1075": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p04-t55": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TK-p04-t57": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TK-p14-t275": {
+     "exact": false,
+     "ned": 0.15384615384615385,
+     "render": false
+    },
+    "TK-p17-t334": {
+     "exact": false,
+     "ned": 0.09090909090909091,
+     "render": false
+    },
+    "TK-p20-t385": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TK-p24-t460": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p24-t447": {
+     "exact": false,
+     "ned": 0.05555555555555555,
+     "render": false
+    },
+    "TK-p25-t472": {
+     "exact": false,
+     "ned": 0.16,
+     "render": false
+    },
+    "FP-p06-t65": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p15-t194": {
+     "exact": false,
+     "ned": 0.010416666666666666,
+     "render": false
+    },
+    "FP-p18-t235": {
+     "exact": false,
+     "ned": 0.1320754716981132,
+     "render": false
+    },
+    "FP-p21-t292": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FP-p23-t314": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p23-t322": {
+     "exact": false,
+     "ned": 0.02857142857142857,
+     "render": false
+    },
+    "TP-p10-t123": {
+     "exact": false,
+     "ned": 0.1111111111111111,
+     "render": false
+    },
+    "TP-p10-t121": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p16-t221": {
+     "exact": false,
+     "ned": 0.12422360248447205,
+     "render": false
+    },
+    "TP-p17-t233": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p18-t245": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p18-t248": {
+     "exact": false,
+     "ned": 0.13636363636363635,
+     "render": false
+    },
+    "TP-p24-t315": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "IFK-p17-51": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "IFK-p23-116": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "ITK-p12-329": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "ITK-p18-377": {
+     "exact": false,
+     "ned": 0.08333333333333333,
+     "render": false
+    }
+   }
+  },
+  "strict": {
+   "exact": 19,
+   "ned_mean": 0.05027587953808706,
+   "render_equal": 6,
+   "compile_fail": 4,
+   "exact_display": 16,
+   "exact_inline": 3,
+   "per_item": {
+    "FK-p09-t137": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p19-t277": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p20-t290": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p27-t426": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p28-t439": {
+     "exact": false,
+     "ned": 0.4143646408839779,
+     "render": false
+    },
+    "FK-p56-t936": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p60-t1007": {
+     "exact": false,
+     "ned": 0.075,
+     "render": false
+    },
+    "FK-p64-t1075": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p04-t55": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TK-p04-t57": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TK-p14-t275": {
+     "exact": false,
+     "ned": 0.15384615384615385,
+     "render": false
+    },
+    "TK-p17-t334": {
+     "exact": false,
+     "ned": 0.09090909090909091,
+     "render": false
+    },
+    "TK-p20-t385": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TK-p24-t460": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p24-t447": {
+     "exact": false,
+     "ned": 0.05555555555555555,
+     "render": false
+    },
+    "TK-p25-t472": {
+     "exact": false,
+     "ned": 0.16,
+     "render": false
+    },
+    "FP-p06-t65": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p15-t194": {
+     "exact": false,
+     "ned": 0.010416666666666666,
+     "render": false
+    },
+    "FP-p18-t235": {
+     "exact": false,
+     "ned": 0.1320754716981132,
+     "render": false
+    },
+    "FP-p21-t292": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FP-p23-t314": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p23-t322": {
+     "exact": false,
+     "ned": 0.02857142857142857,
+     "render": false
+    },
+    "TP-p10-t123": {
+     "exact": false,
+     "ned": 0.1111111111111111,
+     "render": false
+    },
+    "TP-p10-t121": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p16-t221": {
+     "exact": false,
+     "ned": 0.12422360248447205,
+     "render": false
+    },
+    "TP-p17-t233": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p18-t245": {
+     "exact": false,
+     "ned": 0.08333333333333333,
+     "render": false
+    },
+    "TP-p18-t248": {
+     "exact": false,
+     "ned": 0.13636363636363635,
+     "render": false
+    },
+    "TP-p24-t315": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "IFK-p17-51": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "IFK-p23-116": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "ITK-p12-329": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "ITK-p18-377": {
+     "exact": false,
+     "ned": 0.08333333333333333,
+     "render": false
+    }
+   }
+  },
+  "latency_median_s": 0.7268338203430176,
+  "latency_mean_display_s": 1.0107552429725384,
+  "latency_max_s": 2.8213350772857666,
+  "peak_gb": 2.190699884,
+  "load_s": 0.951275110244751
+ },
+ {
+  "name": "texify_mps",
+  "n": 33,
+  "lenient": {
+   "exact": 18,
+   "ned_mean": 0.10860928646471373,
+   "render_equal": 5,
+   "compile_fail": 10,
+   "exact_display": 16,
+   "exact_inline": 2,
+   "per_item": {
+    "FK-p09-t137": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p19-t277": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p20-t290": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p27-t426": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p28-t439": {
+     "exact": false,
+     "ned": 0.40331491712707185,
+     "render": false
+    },
+    "FK-p56-t936": {
+     "exact": false,
+     "ned": 0.08,
+     "render": false
+    },
+    "FK-p60-t1007": {
+     "exact": false,
+     "ned": 0.03333333333333333,
+     "render": false
+    },
+    "FK-p64-t1075": {
+     "exact": false,
+     "ned": 0.5897435897435898,
+     "render": false
+    },
+    "TK-p04-t55": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p04-t57": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p14-t275": {
+     "exact": false,
+     "ned": 0.21428571428571427,
+     "render": false
+    },
+    "TK-p17-t334": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p20-t385": {
+     "exact": false,
+     "ned": 0.22727272727272727,
+     "render": false
+    },
+    "TK-p24-t460": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p24-t447": {
+     "exact": false,
+     "ned": 0.2222222222222222,
+     "render": false
+    },
+    "TK-p25-t472": {
+     "exact": false,
+     "ned": 0.04,
+     "render": false
+    },
+    "FP-p06-t65": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p15-t194": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p18-t235": {
+     "exact": false,
+     "ned": 0.04081632653061224,
+     "render": false
+    },
+    "FP-p21-t292": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FP-p23-t314": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p23-t322": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TP-p10-t123": {
+     "exact": false,
+     "ned": 0.07407407407407407,
+     "render": false
+    },
+    "TP-p10-t121": {
+     "exact": false,
+     "ned": 0.023809523809523808,
+     "render": false
+    },
+    "TP-p16-t221": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p17-t233": {
+     "exact": false,
+     "ned": 0.03125,
+     "render": false
+    },
+    "TP-p18-t245": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p18-t248": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p24-t315": {
+     "exact": false,
+     "ned": 0.13559322033898305,
+     "render": false
+    },
+    "IFK-p17-51": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "IFK-p23-116": {
+     "exact": false,
+     "ned": 0.5517241379310345,
+     "render": false
+    },
+    "ITK-p12-329": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "ITK-p18-377": {
+     "exact": false,
+     "ned": 0.9166666666666666,
+     "render": false
+    }
+   }
+  },
+  "strict": {
+   "exact": 17,
+   "ned_mean": 0.11113453898996625,
+   "render_equal": 5,
+   "compile_fail": 10,
+   "exact_display": 15,
+   "exact_inline": 2,
+   "per_item": {
+    "FK-p09-t137": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p19-t277": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p20-t290": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p27-t426": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p28-t439": {
+     "exact": false,
+     "ned": 0.40331491712707185,
+     "render": false
+    },
+    "FK-p56-t936": {
+     "exact": false,
+     "ned": 0.08,
+     "render": false
+    },
+    "FK-p60-t1007": {
+     "exact": false,
+     "ned": 0.03333333333333333,
+     "render": false
+    },
+    "FK-p64-t1075": {
+     "exact": false,
+     "ned": 0.5897435897435898,
+     "render": false
+    },
+    "TK-p04-t55": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p04-t57": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p14-t275": {
+     "exact": false,
+     "ned": 0.21428571428571427,
+     "render": false
+    },
+    "TK-p17-t334": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p20-t385": {
+     "exact": false,
+     "ned": 0.22727272727272727,
+     "render": false
+    },
+    "TK-p24-t460": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p24-t447": {
+     "exact": false,
+     "ned": 0.2222222222222222,
+     "render": false
+    },
+    "TK-p25-t472": {
+     "exact": false,
+     "ned": 0.04,
+     "render": false
+    },
+    "FP-p06-t65": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p15-t194": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p18-t235": {
+     "exact": false,
+     "ned": 0.04081632653061224,
+     "render": false
+    },
+    "FP-p21-t292": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FP-p23-t314": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p23-t322": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TP-p10-t123": {
+     "exact": false,
+     "ned": 0.07407407407407407,
+     "render": false
+    },
+    "TP-p10-t121": {
+     "exact": false,
+     "ned": 0.023809523809523808,
+     "render": false
+    },
+    "TP-p16-t221": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p17-t233": {
+     "exact": false,
+     "ned": 0.03125,
+     "render": false
+    },
+    "TP-p18-t245": {
+     "exact": false,
+     "ned": 0.08333333333333333,
+     "render": false
+    },
+    "TP-p18-t248": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p24-t315": {
+     "exact": false,
+     "ned": 0.13559322033898305,
+     "render": false
+    },
+    "IFK-p17-51": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "IFK-p23-116": {
+     "exact": false,
+     "ned": 0.5517241379310345,
+     "render": false
+    },
+    "ITK-p12-329": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "ITK-p18-377": {
+     "exact": false,
+     "ned": 0.9166666666666666,
+     "render": false
+    }
+   }
+  },
+  "latency_median_s": 0.5682079792022705,
+  "latency_mean_display_s": 1.009982339267073,
+  "latency_max_s": 3.058687925338745,
+  "peak_gb": 1.294761984,
+  "load_s": 6.999344825744629
+ },
+ {
+  "name": "texify_mps_tight",
+  "n": 33,
+  "lenient": {
+   "exact": 16,
+   "ned_mean": 0.13841431112833977,
+   "render_equal": 6,
+   "compile_fail": 9,
+   "exact_display": 14,
+   "exact_inline": 2,
+   "per_item": {
+    "FK-p09-t137": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p19-t277": {
+     "exact": false,
+     "ned": 0.13793103448275862,
+     "render": false
+    },
+    "FK-p20-t290": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p27-t426": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p28-t439": {
+     "exact": false,
+     "ned": 0.12154696132596685,
+     "render": false
+    },
+    "FK-p56-t936": {
+     "exact": false,
+     "ned": 0.08,
+     "render": false
+    },
+    "FK-p60-t1007": {
+     "exact": false,
+     "ned": 0.008333333333333333,
+     "render": false
+    },
+    "FK-p64-t1075": {
+     "exact": false,
+     "ned": 0.5555555555555556,
+     "render": false
+    },
+    "TK-p04-t55": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p04-t57": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TK-p14-t275": {
+     "exact": false,
+     "ned": 0.21428571428571427,
+     "render": false
+    },
+    "TK-p17-t334": {
+     "exact": false,
+     "ned": 0.6811594202898551,
+     "render": false
+    },
+    "TK-p20-t385": {
+     "exact": false,
+     "ned": 0.22727272727272727,
+     "render": false
+    },
+    "TK-p24-t460": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p24-t447": {
+     "exact": false,
+     "ned": 0.17647058823529413,
+     "render": false
+    },
+    "TK-p25-t472": {
+     "exact": false,
+     "ned": 0.6712328767123288,
+     "render": false
+    },
+    "FP-p06-t65": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p15-t194": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p18-t235": {
+     "exact": false,
+     "ned": 0.04081632653061224,
+     "render": false
+    },
+    "FP-p21-t292": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FP-p23-t314": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p23-t322": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TP-p10-t123": {
+     "exact": false,
+     "ned": 0.07407407407407407,
+     "render": false
+    },
+    "TP-p10-t121": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p16-t221": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p17-t233": {
+     "exact": false,
+     "ned": 0.03125,
+     "render": false
+    },
+    "TP-p18-t245": {
+     "exact": false,
+     "ned": 0.045454545454545456,
+     "render": false
+    },
+    "TP-p18-t248": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p24-t315": {
+     "exact": false,
+     "ned": 0.03389830508474576,
+     "render": false
+    },
+    "IFK-p17-51": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "IFK-p23-116": {
+     "exact": false,
+     "ned": 0.5517241379310345,
+     "render": false
+    },
+    "ITK-p12-329": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "ITK-p18-377": {
+     "exact": false,
+     "ned": 0.9166666666666666,
+     "render": false
+    }
+   }
+  },
+  "strict": {
+   "exact": 16,
+   "ned_mean": 0.140824779447899,
+   "render_equal": 6,
+   "compile_fail": 9,
+   "exact_display": 14,
+   "exact_inline": 2,
+   "per_item": {
+    "FK-p09-t137": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p19-t277": {
+     "exact": false,
+     "ned": 0.13793103448275862,
+     "render": false
+    },
+    "FK-p20-t290": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p27-t426": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p28-t439": {
+     "exact": false,
+     "ned": 0.12154696132596685,
+     "render": false
+    },
+    "FK-p56-t936": {
+     "exact": false,
+     "ned": 0.08,
+     "render": false
+    },
+    "FK-p60-t1007": {
+     "exact": false,
+     "ned": 0.008333333333333333,
+     "render": false
+    },
+    "FK-p64-t1075": {
+     "exact": false,
+     "ned": 0.5555555555555556,
+     "render": false
+    },
+    "TK-p04-t55": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p04-t57": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TK-p14-t275": {
+     "exact": false,
+     "ned": 0.21428571428571427,
+     "render": false
+    },
+    "TK-p17-t334": {
+     "exact": false,
+     "ned": 0.6811594202898551,
+     "render": false
+    },
+    "TK-p20-t385": {
+     "exact": false,
+     "ned": 0.22727272727272727,
+     "render": false
+    },
+    "TK-p24-t460": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p24-t447": {
+     "exact": false,
+     "ned": 0.17647058823529413,
+     "render": false
+    },
+    "TK-p25-t472": {
+     "exact": false,
+     "ned": 0.6712328767123288,
+     "render": false
+    },
+    "FP-p06-t65": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p15-t194": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p18-t235": {
+     "exact": false,
+     "ned": 0.04081632653061224,
+     "render": false
+    },
+    "FP-p21-t292": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FP-p23-t314": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FP-p23-t322": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TP-p10-t123": {
+     "exact": false,
+     "ned": 0.07407407407407407,
+     "render": false
+    },
+    "TP-p10-t121": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p16-t221": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p17-t233": {
+     "exact": false,
+     "ned": 0.03125,
+     "render": false
+    },
+    "TP-p18-t245": {
+     "exact": false,
+     "ned": 0.125,
+     "render": false
+    },
+    "TP-p18-t248": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TP-p24-t315": {
+     "exact": false,
+     "ned": 0.03389830508474576,
+     "render": false
+    },
+    "IFK-p17-51": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "IFK-p23-116": {
+     "exact": false,
+     "ned": 0.5517241379310345,
+     "render": false
+    },
+    "ITK-p12-329": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "ITK-p18-377": {
+     "exact": false,
+     "ned": 0.9166666666666666,
+     "render": false
+    }
+   }
+  },
+  "latency_median_s": 0.5232970714569092,
+  "latency_mean_display_s": 0.8306635494889885,
+  "latency_max_s": 2.578148126602173,
+  "peak_gb": 1.286373376,
+  "load_s": 6.483933925628662
+ },
+ {
+  "name": "docling_codeformulav2_cpu_bf16_batch5",
+  "n": 33,
+  "lenient": {
+   "exact": 19,
+   "ned_mean": 0.07732712740592276,
+   "render_equal": 16,
+   "compile_fail": 2,
+   "exact_display": 18,
+   "exact_inline": 1,
+   "per_item": {
+    "FK-p09-t137": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p19-t277": {
+     "exact": false,
+     "ned": 0.034482758620689655,
+     "render": false
+    },
+    "FK-p20-t290": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p27-t426": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p28-t439": {
+     "exact": false,
+     "ned": 0.05319148936170213,
+     "render": false
+    },
+    "FK-p56-t936": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p60-t1007": {
+     "exact": false,
+     "ned": 0.20945945945945946,
+     "render": false
+    },
+    "FK-p64-t1075": {
+     "exact": false,
+     "ned": 0.03125,
+     "render": false
+    },
+    "TK-p04-t55": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p04-t57": {
+     "exact": false,
+     "ned": 0.02857142857142857,
+     "render": false
+    },
+    "TK-p14-t275": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p17-t334": {
+     "exact": false,
+     "ned": 0.32,
+     "render": false
+    },
+    "TK-p20-t385": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TK-p24-t460": {
+     "exact": false,
+     "ned": 0.03773584905660377,
+     "render": false
+    },
+    "TK-p24-t447": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TK-p25-t472": {
+     "exact": false,
+     "ned": 0.5932203389830508,
+     "render": false
+    },
+    "FP-p06-t65": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FP-p15-t194": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FP-p18-t235": {
+     "exact": false,
+     "ned": 0.061224489795918366,
+     "render": false
+    },
+    "FP-p21-t292": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FP-p23-t314": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FP-p23-t322": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TP-p10-t123": {
+     "exact": false,
+     "ned": 0.10714285714285714,
+     "render": false
+    },
+    "TP-p10-t121": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TP-p16-t221": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TP-p17-t233": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TP-p18-t245": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TP-p18-t248": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TP-p24-t315": {
+     "exact": false,
+     "ned": 0.03389830508474576,
+     "render": false
+    },
+    "IFK-p17-51": {
+     "exact": false,
+     "ned": 0.2608695652173913,
+     "render": false
+    },
+    "IFK-p23-116": {
+     "exact": false,
+     "ned": 0.23529411764705882,
+     "render": false
+    },
+    "ITK-p12-329": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "ITK-p18-377": {
+     "exact": false,
+     "ned": 0.5454545454545454,
+     "render": false
+    }
+   }
+  },
+  "strict": {
+   "exact": 15,
+   "ned_mean": 0.1888157626589673,
+   "render_equal": 13,
+   "compile_fail": 5,
+   "exact_display": 14,
+   "exact_inline": 1,
+   "per_item": {
+    "FK-p09-t137": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p19-t277": {
+     "exact": false,
+     "ned": 0.034482758620689655,
+     "render": false
+    },
+    "FK-p20-t290": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p27-t426": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "FK-p28-t439": {
+     "exact": false,
+     "ned": 0.3597122302158273,
+     "render": false
+    },
+    "FK-p56-t936": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FK-p60-t1007": {
+     "exact": false,
+     "ned": 0.44549763033175355,
+     "render": false
+    },
+    "FK-p64-t1075": {
+     "exact": false,
+     "ned": 0.6125,
+     "render": false
+    },
+    "TK-p04-t55": {
+     "exact": false,
+     "ned": 0.6511627906976745,
+     "render": false
+    },
+    "TK-p04-t57": {
+     "exact": false,
+     "ned": 0.5277777777777778,
+     "render": false
+    },
+    "TK-p14-t275": {
+     "exact": true,
+     "ned": 0.0,
+     "render": false
+    },
+    "TK-p17-t334": {
+     "exact": false,
+     "ned": 0.7951807228915663,
+     "render": false
+    },
+    "TK-p20-t385": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TK-p24-t460": {
+     "exact": false,
+     "ned": 0.24444444444444444,
+     "render": false
+    },
+    "TK-p24-t447": {
+     "exact": false,
+     "ned": 0.05555555555555555,
+     "render": false
+    },
+    "TK-p25-t472": {
+     "exact": false,
+     "ned": 0.8674033149171271,
+     "render": false
+    },
+    "FP-p06-t65": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FP-p15-t194": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FP-p18-t235": {
+     "exact": false,
+     "ned": 0.061224489795918366,
+     "render": false
+    },
+    "FP-p21-t292": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FP-p23-t314": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "FP-p23-t322": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TP-p10-t123": {
+     "exact": false,
+     "ned": 0.10714285714285714,
+     "render": false
+    },
+    "TP-p10-t121": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TP-p16-t221": {
+     "exact": false,
+     "ned": 0.11049723756906077,
+     "render": false
+    },
+    "TP-p17-t233": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TP-p18-t245": {
+     "exact": false,
+     "ned": 0.08333333333333333,
+     "render": false
+    },
+    "TP-p18-t248": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "TP-p24-t315": {
+     "exact": false,
+     "ned": 0.03389830508474576,
+     "render": false
+    },
+    "IFK-p17-51": {
+     "exact": false,
+     "ned": 0.2608695652173913,
+     "render": false
+    },
+    "IFK-p23-116": {
+     "exact": false,
+     "ned": 0.43478260869565216,
+     "render": false
+    },
+    "ITK-p12-329": {
+     "exact": true,
+     "ned": 0.0,
+     "render": true
+    },
+    "ITK-p18-377": {
+     "exact": false,
+     "ned": 0.5454545454545454,
+     "render": false
+    }
+   }
+  },
+  "latency_median_s": null,
+  "latency_mean_display_s": null,
+  "latency_max_s": null,
+  "peak_gb": null,
+  "load_s": null
+ }
+]

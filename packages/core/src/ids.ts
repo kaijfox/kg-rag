@@ -5,6 +5,16 @@
  * base32 is RFC 4648, lowercase alphabet, no padding; 20 chars = 100 bits.
  * Time-ordered IDs (sessions, searches, events, runs) come from IdGen as prefix + 26-char ULID.
  *
+ * Addressing modes (labels per prefix, see the glossary in scratch/sprint-1/lifecycle.md):
+ *   content-addressed: ch_, nd_, bd_, mp_, qs_ (hash of the content or output itself)
+ *   input-addressed:   pa_, dv_ (hash of a recipe plus its inputs; the output is not re-checked against the id)
+ *   spec hash:         rc_, es_ (hash of the canonical spec itself, not of a recipe applied to inputs)
+ *   reserved:          rl_, sm_ (formula not fixed; v0 writes none)
+ *   time-ordered:      se_, sr_, ev_, dr_, er_ (IdGen ULID, not derived from content)
+ *
+ * "Recipe" is the plan (RecipeSpec; for a pipeline, a machine recipe: machine name, version, typed settings and a
+ * topology pin). "Derivation" is a recipe applied to specific inputs.
+ *
  * Golden vectors: packages/testkit/golden/ids.json (computed by an independent Python
  * implementation of these formulas, see packages/testkit/golden/README.md).
  */
@@ -14,18 +24,18 @@ import { KgError } from './errors';
 
 export type Brand<T, B extends string> = T & { readonly __brand: B };
 
-// content-addressed
-export type ChunkId = Brand<string, 'ChunkId'>; // ch_
-export type DerivedItemId = Brand<string, 'DerivedItemId'>; // rl_ (relation) | sm_ (summary); reserved, v0 writes none
+// addressing modes per prefix: see header
+export type ChunkId = Brand<string, 'ChunkId'>; // ch_ content-addressed
+export type DerivedItemId = Brand<string, 'DerivedItemId'>; // rl_ (relation) | sm_ (summary); reserved, v0 writes none (reserved)
 export type ItemId = ChunkId | DerivedItemId;
-export type NodeId = Brand<string, 'NodeId'>; // nd_
-export type RecipeId = Brand<string, 'RecipeId'>; // rc_
-export type BuildId = Brand<string, 'BuildId'>; // bd_
-export type MappingId = Brand<string, 'MappingId'>; // mp_
-export type DocVersionId = Brand<string, 'DocVersionId'>; // dv_
-export type ArtifactId = Brand<string, 'ArtifactId'>; // pa_
-export type SpaceId = Brand<string, 'SpaceId'>; // es_
-export type EvalSetId = Brand<string, 'EvalSetId'>; // qs_
+export type NodeId = Brand<string, 'NodeId'>; // nd_ content-addressed
+export type RecipeId = Brand<string, 'RecipeId'>; // rc_ spec hash
+export type BuildId = Brand<string, 'BuildId'>; // bd_ content-addressed over its members
+export type MappingId = Brand<string, 'MappingId'>; // mp_ content-addressed
+export type DocVersionId = Brand<string, 'DocVersionId'>; // dv_ input-addressed (derivation: chunk recipe applied to an artifact)
+export type ArtifactId = Brand<string, 'ArtifactId'>; // pa_ input-addressed (derivation: parse recipe applied to a source)
+export type SpaceId = Brand<string, 'SpaceId'>; // es_ spec hash
+export type EvalSetId = Brand<string, 'EvalSetId'>; // qs_ content-addressed
 // names
 export type DocKey = Brand<string, 'DocKey'>; // stable document name, e.g. "ThermoPlischke"
 // time-ordered (IdGen)
@@ -190,6 +200,9 @@ export function assignChunkIds<T extends { sectionPath: readonly string[]; text:
 }
 
 export const recipeId = (r: RecipeSpec): RecipeId => hashId('rc_', 'recipe/1', [canonicalJson(r as Json)]) as RecipeId;
+
+/** 0.6.1: two recipes are equal when their canonical JSON is (the same condition as having the same recipe id). */
+export const recipesEqual = (a: RecipeSpec, b: RecipeSpec): boolean => canonicalJson(a as Json) === canonicalJson(b as Json);
 
 export const nodeId = (name: string): NodeId => {
   const n = normName(name);

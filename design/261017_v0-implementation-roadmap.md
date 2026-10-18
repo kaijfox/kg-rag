@@ -10,7 +10,7 @@ Part 1 describes the workflow, which stays the same every sprint. Part 2 describ
 
 - **Contracts first, then fan-out.** Parallel agents work independently only to the extent that the interfaces between them allow. Time spent on module boundaries and interfaces pays back in every later phase.
 - **Agents propose and leave boundaries in place.** Once the contracts are committed, implementers work inside them. When a contract proves wrong, the implementer files a change proposal and, where possible, keeps working against the current version.
-- **Model matches task.** The cheapest capable model (Haiku where possible) handles well-specified work. Stronger models handle design, prompt design and review.
+- **Model matches task.** All sub-agents run on Haiku. The lead session does design, prompt design and every review, and does small edits and drafts directly.
 - **Stack: TypeScript.** Docling runs as a Python sidecar behind a parser interface. Phase 0 decides the other tool choices.
 
 ### The loop
@@ -19,7 +19,7 @@ Each sprint runs through **plan → build → review → retro → design feedba
 
 - **Plan.** The sprint goal and work packages come from the design doc plus the accepted feedback from earlier sprints.
 - **Build.** Agents work in parallel inside their contracts.
-- **Review.** Each phase has its own review criteria (Part 2). An agent other than the author reviews, on a stronger model than the implementers.
+- **Review.** Each phase has its own review criteria (Part 2). The lead session reviews; the author of a package never reviews it.
 - **Retro.** A short written look at how the sprint went. Each sprint lists its own guiding questions (Part 2). The common ones concern where agents got stuck or had to read sibling code, which contracts held, and which model assignments worked.
 - **Design feedback.** The next section describes it.
 
