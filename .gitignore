@@ -1,0 +1,3 @@
+node_modules/
+*.kg.sqlite*
+.DS_Store

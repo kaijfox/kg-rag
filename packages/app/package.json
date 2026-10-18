@@ -1,0 +1,17 @@
+{
+  "name": "@kg/app",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Composition root. Phase 1: walking skeleton wiring fakes and skeleton implementations end to end.",
+  "exports": { ".": "./src/index.ts" },
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json",
+    "skeleton": "tsx scripts/skeleton.ts"
+  },
+  "dependencies": {
+    "@kg/core": "workspace:*",
+    "@kg/testkit": "workspace:*"
+  }
+}

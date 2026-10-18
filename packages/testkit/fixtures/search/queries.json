@@ -1,0 +1,50 @@
+{
+  "about": "Search fixture over the mini-corpus with HashEmbedder(4096) and HASH_SPACE (document = headings joined by ' > ' + newline + text; query = text). Default search recipe (vector-knn pool 100, truncate). Expectations are chunk labels (mini-corpus/labels.json). Each 'why' is the hand reasoning; oracle.py re-derives every ranking independently and checks that no query token shares a hash bucket with another corpus token (except where noted). The store holds v1 and v2; 'build' says which build is searched.",
+  "queries": [
+    {
+      "id": "s1", "query": "Boltzmann formula tombstone microstates", "k": 3, "build": "v1",
+      "expectedTop": ["entropy/2.1-d0", "entropy/2.1-d1", "entropy/2.1-x"], "expectedCount": 3,
+      "why": "All four query words occur once in paragraph D, which appears twice in section 2.1 (occurrence 0 and 1): identical text and headings give identical vectors, an exact tie broken by chunk ID (d0 = ch_k6yc... < d1 = ch_mc7o...). X has three of the words (boltzmann twice, no tombstone) but is ~4x longer, so it ranks third (0.094 vs 0.234). Tests the tie-break rule and occurrence-distinct IDs."
+    },
+    {
+      "id": "s2", "query": "der Waals", "k": 3, "build": "v1",
+      "expectedTop": ["gas/1-cd", "entropy/2.2-h1", "gas/pre"], "expectedCount": 3,
+      "why": "Only gas/1-cd (the van der Waals paragraph P1d) contains 'der' and 'waals'. Every other chunk scores exactly 0 (no shared component; all vector components are non-negative), so ranks 2 and 3 are the two smallest chunk IDs of the v1 build: entropy/2.2-h1 (ch_aeem...) then gas/pre (ch_gtgj...). A wrong tie-break or a truncation off by one fails here."
+    },
+    {
+      "id": "s3", "query": "barometer kilopascals", "k": 3, "build": "v1",
+      "expectedTop": ["gas/1.1", "entropy/2.2-h1", "gas/pre"], "expectedCount": 3,
+      "why": "Both words occur only in P2b, inside the gas/1.1 chunk (with the formula and the table). Ranks 2-3 are zero-score ties ordered by ID as in s2."
+    },
+    {
+      "id": "s4", "query": "definition", "k": 3, "build": "v1",
+      "expectedTop": ["entropy/2.1-d0", "entropy/2.1-d1", "entropy/2.1-x"], "expectedCount": 3,
+      "why": "'definition' occurs in no chunk text, only in the heading '2.1 Definition'. It reaches the embedding only through the document template's {headings}, so the three chunks of section 2.1 are the only non-zero scores: the two short D chunks tie (by ID), the long X chunk is third. An ingest that embeds raw text without conditioning returns zero scores for all chunks and fails."
+    },
+    {
+      "id": "s5", "query": "entropy", "k": 50, "build": "v1",
+      "expectedTop": ["entropy/2.2-list", "entropy/2.1-d0", "entropy/2.1-d1"], "expectedCount": 17,
+      "why": "k exceeds the build (17 chunks in v1), so all 17 come back, ranked. 'entropy' appears in every entropy-doc chunk through the headings ('Entropy > 2 Entropy ...') and in many texts; the short list chunk (3 occurrences in ~250 chars of headings+text) has the highest count-to-norm ratio, then the tied D chunks. No v2-only chunk may appear."
+    },
+    {
+      "id": "s6", "query": "refrigerator Carnot efficiency cold reservoir", "k": 3, "build": "v1",
+      "expectedTop": ["entropy/3-a1"], "expectedCount": 3,
+      "why": "All five words occur in A1 (cold 4x, Carnot 2x, efficiency 2x, reservoir 2x, refrigerator 1x); score 0.26 against at most 0.04 elsewhere. Only rank 1 is asserted: 'carnot' and 'reservoir' share hash buckets with 'dilute' and 'square', which gives small non-zero scores to other chunks."
+    },
+    {
+      "id": "s7", "query": "refrigerator Carnot efficiency cold reservoir", "k": 3, "build": "v2",
+      "expectedTop": ["entropy/v2/3-a1"], "expectedCount": 3, "mustNotAppear": ["entropy/3-a1"],
+      "why": "Same query on the v2 build. The v1 chunk entropy/3-a1 is still in the store (never deleted) and would score highest, but it is not in the v2 build; the edited v2 paragraph (refrigerator replaced by heat pump in one sentence) wins. KNN over stale chunks fails here."
+    },
+    {
+      "id": "s8", "query": "Avogadro", "k": 3, "build": "v2",
+      "expectedTop": ["gas/v2/1-na", "entropy/2.2-h1", "gas/pre"], "expectedCount": 3,
+      "why": "'Avogadro' occurs only in paragraph N, inserted in v2 (chunk gas/v2/1-na). The rest are zero-score ties ordered by ID."
+    },
+    {
+      "id": "s9", "query": "Avogadro", "k": 3, "build": "v1",
+      "expectedTop": ["entropy/2.2-h1", "gas/pre", "gas/1.2-p2"], "expectedCount": 3, "mustNotAppear": ["gas/v2/1-na"],
+      "why": "In v1 no chunk contains 'Avogadro': every score is exactly 0 and the result is the three smallest chunk IDs of the v1 build (ch_aeem... < ch_gtgj... < ch_gwn2...). The v2-only chunk must not appear."
+    }
+  ]
+}

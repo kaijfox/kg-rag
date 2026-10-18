@@ -1,0 +1,622 @@
+{
+ "format": "kg-parse-artifact/1",
+ "sourceSha256": "c3784d91a0ee6f25cfe892e1dccffeb91bf803ebffac35f0acabaa5508307e35",
+ "sourceName": "entropy.pdf",
+ "recipe": {
+  "kind": "parse",
+  "version": "1",
+  "spec": {
+   "parser": "docling",
+   "doclingVersion": "2.140.0",
+   "options": {
+    "do_ocr": false,
+    "do_table_structure": true,
+    "do_formula_enrichment": false
+   }
+  }
+ },
+ "parser": {
+  "name": "docling",
+  "version": "2.140.0"
+ },
+ "producedAt": "2026-10-17T12:00:00Z",
+ "producedOn": "hand-built",
+ "stats": {
+  "pages": 4,
+  "chars": 5430,
+  "charsPerPage": [],
+  "undecodedFormulas": 0,
+  "elapsedMs": 0
+ },
+ "document": {
+  "schema_name": "DoclingDocument",
+  "version": "1.7.0",
+  "name": "entropy",
+  "origin": {
+   "mimetype": "application/pdf",
+   "binary_hash": 0,
+   "filename": "entropy.pdf"
+  },
+  "furniture": {
+   "self_ref": "#/furniture",
+   "children": [],
+   "content_layer": "furniture",
+   "name": "_root_",
+   "label": "unspecified"
+  },
+  "body": {
+   "self_ref": "#/body",
+   "children": [
+    {
+     "$ref": "#/texts/0"
+    },
+    {
+     "$ref": "#/texts/1"
+    },
+    {
+     "$ref": "#/texts/2"
+    },
+    {
+     "$ref": "#/texts/3"
+    },
+    {
+     "$ref": "#/texts/4"
+    },
+    {
+     "$ref": "#/texts/5"
+    },
+    {
+     "$ref": "#/texts/6"
+    },
+    {
+     "$ref": "#/texts/7"
+    },
+    {
+     "$ref": "#/texts/8"
+    },
+    {
+     "$ref": "#/groups/0"
+    },
+    {
+     "$ref": "#/texts/12"
+    },
+    {
+     "$ref": "#/texts/13"
+    },
+    {
+     "$ref": "#/texts/14"
+    },
+    {
+     "$ref": "#/texts/15"
+    },
+    {
+     "$ref": "#/texts/16"
+    }
+   ],
+   "content_layer": "body",
+   "name": "_root_",
+   "label": "unspecified"
+  },
+  "groups": [
+   {
+    "self_ref": "#/groups/0",
+    "parent": {
+     "$ref": "#/body"
+    },
+    "children": [
+     {
+      "$ref": "#/texts/9"
+     },
+     {
+      "$ref": "#/texts/10"
+     },
+     {
+      "$ref": "#/texts/11"
+     }
+    ],
+    "content_layer": "body",
+    "name": "list",
+    "label": "list"
+   }
+  ],
+  "texts": [
+   {
+    "self_ref": "#/texts/0",
+    "parent": {
+     "$ref": "#/body"
+    },
+    "children": [],
+    "content_layer": "body",
+    "label": "title",
+    "prov": [
+     {
+      "page_no": 1,
+      "bbox": {
+       "l": 50.0,
+       "t": 700.0,
+       "r": 550.0,
+       "b": 650.0,
+       "coord_origin": "BOTTOMLEFT"
+      },
+      "charspan": [
+       0,
+       7
+      ]
+     }
+    ],
+    "orig": "Entropy",
+    "text": "Entropy"
+   },
+   {
+    "self_ref": "#/texts/1",
+    "parent": {
+     "$ref": "#/body"
+    },
+    "children": [],
+    "content_layer": "body",
+    "label": "section_header",
+    "prov": [
+     {
+      "page_no": 1,
+      "bbox": {
+       "l": 50.0,
+       "t": 700.0,
+       "r": 550.0,
+       "b": 650.0,
+       "coord_origin": "BOTTOMLEFT"
+      },
+      "charspan": [
+       0,
+       9
+      ]
+     }
+    ],
+    "orig": "2 Entropy",
+    "text": "2 Entropy",
+    "level": 1
+   },
+   {
+    "self_ref": "#/texts/2",
+    "parent": {
+     "$ref": "#/body"
+    },
+    "children": [],
+    "content_layer": "body",
+    "label": "text",
+    "prov": [
+     {
+      "page_no": 1,
+      "bbox": {
+       "l": 50.0,
+       "t": 700.0,
+       "r": 550.0,
+       "b": 650.0,
+       "coord_origin": "BOTTOMLEFT"
+      },
+      "charspan": [
+       0,
+       106
+      ]
+     }
+    ],
+    "orig": "Entropy is a state function that counts, on a logarithmic scale, the microscopic arrangements of a system.",
+    "text": "Entropy is a state function that counts, on a logarithmic scale, the microscopic arrangements of a system."
+   },
+   {
+    "self_ref": "#/texts/3",
+    "parent": {
+     "$ref": "#/body"
+    },
+    "children": [],
+    "content_layer": "body",
+    "label": "text",
+    "prov": [
+     {
+      "page_no": 1,
+      "bbox": {
+       "l": 50.0,
+       "t": 700.0,
+       "r": 550.0,
+       "b": 650.0,
+       "coord_origin": "BOTTOMLEFT"
+      },
+      "charspan": [
+       0,
+       1086
+      ]
+     }
+    ],
+    "orig": "The second law of thermodynamics states that the entropy of an isolated system never decreases. For a reversible exchange of heat dQ at temperature T the entropy changes by dQ over T, while for an irreversible process the Clausius inequality gives a strictly larger entropy change than the heat exchanged divided by the temperature. Mixing two different gases, letting a gas expand freely into a vacuum, and conducting heat across a finite temperature difference are all irreversible and raise the total entropy. Because entropy is a state function, the change between two equilibrium states can be computed along any convenient reversible path, even when the actual process was irreversible. Equilibrium of an isolated system is reached when the entropy is as large as the constraints allow, and this maximum principle is the starting point for the stability conditions on heat capacities and compressibilities. In statistical mechanics the same quantity reappears as the logarithm of the number of accessible microstates, which connects the thermodynamic arrow of time to probability.",
+    "text": "The second law of thermodynamics states that the entropy of an isolated system never decreases. For a reversible exchange of heat dQ at temperature T the entropy changes by dQ over T, while for an irreversible process the Clausius inequality gives a strictly larger entropy change than the heat exchanged divided by the temperature. Mixing two different gases, letting a gas expand freely into a vacuum, and conducting heat across a finite temperature difference are all irreversible and raise the total entropy. Because entropy is a state function, the change between two equilibrium states can be computed along any convenient reversible path, even when the actual process was irreversible. Equilibrium of an isolated system is reached when the entropy is as large as the constraints allow, and this maximum principle is the starting point for the stability conditions on heat capacities and compressibilities. In statistical mechanics the same quantity reappears as the logarithm of the number of accessible microstates, which connects the thermodynamic arrow of time to probability."
+   },
+   {
+    "self_ref": "#/texts/4",
+    "parent": {
+     "$ref": "#/body"
+    },
+    "children": [],
+    "content_layer": "body",
+    "label": "section_header",
+    "prov": [
+     {
+      "page_no": 2,
+      "bbox": {
+       "l": 50.0,
+       "t": 700.0,
+       "r": 550.0,
+       "b": 650.0,
+       "coord_origin": "BOTTOMLEFT"
+      },
+      "charspan": [
+       0,
+       14
+      ]
+     }
+    ],
+    "orig": "2.1 Definition",
+    "text": "2.1 Definition",
+    "level": 2
+   },
+   {
+    "self_ref": "#/texts/5",
+    "parent": {
+     "$ref": "#/body"
+    },
+    "children": [],
+    "content_layer": "body",
+    "label": "text",
+    "prov": [
+     {
+      "page_no": 2,
+      "bbox": {
+       "l": 50.0,
+       "t": 700.0,
+       "r": 550.0,
+       "b": 650.0,
+       "coord_origin": "BOTTOMLEFT"
+      },
+      "charspan": [
+       0,
+       233
+      ]
+     }
+    ],
+    "orig": "Boltzmann's formula S = k log W relates the entropy to the number W of microstates compatible with the macroscopic state. It is engraved on his tombstone in Vienna and is the bridge between counting configurations and measuring heat.",
+    "text": "Boltzmann's formula S = k log W relates the entropy to the number W of microstates compatible with the macroscopic state. It is engraved on his tombstone in Vienna and is the bridge between counting configurations and measuring heat."
+   },
+   {
+    "self_ref": "#/texts/6",
+    "parent": {
+     "$ref": "#/body"
+    },
+    "children": [],
+    "content_layer": "body",
+    "label": "text",
+    "prov": [
+     {
+      "page_no": 2,
+      "bbox": {
+       "l": 50.0,
+       "t": 700.0,
+       "r": 550.0,
+       "b": 650.0,
+       "coord_origin": "BOTTOMLEFT"
+      },
+      "charspan": [
+       0,
+       880
+      ]
+     }
+    ],
+    "orig": "Gibbs generalized the counting to systems whose microstates have unequal probabilities: the entropy is minus k times the sum over states of p log p. For equal probabilities this reduces to Boltzmann's formula, and for a system in contact with a heat bath it yields the canonical entropy. Shannon later found the same expression as the measure of missing information in a message, so the information entropy of a source and the thermodynamic entropy of a gas share one mathematical form. The Gibbs expression is maximized, subject to fixed average energy, by the Boltzmann distribution, which is one way to derive the canonical ensemble without appealing to a heat bath. Maximum entropy inference uses the same idea for incomplete data in many other fields, such as image reconstruction and ecology, where only a few averages are known and every other assumption should be avoided.",
+    "text": "Gibbs generalized the counting to systems whose microstates have unequal probabilities: the entropy is minus k times the sum over states of p log p. For equal probabilities this reduces to Boltzmann's formula, and for a system in contact with a heat bath it yields the canonical entropy. Shannon later found the same expression as the measure of missing information in a message, so the information entropy of a source and the thermodynamic entropy of a gas share one mathematical form. The Gibbs expression is maximized, subject to fixed average energy, by the Boltzmann distribution, which is one way to derive the canonical ensemble without appealing to a heat bath. Maximum entropy inference uses the same idea for incomplete data in many other fields, such as image reconstruction and ecology, where only a few averages are known and every other assumption should be avoided."
+   },
+   {
+    "self_ref": "#/texts/7",
+    "parent": {
+     "$ref": "#/body"
+    },
+    "children": [],
+    "content_layer": "body",
+    "label": "text",
+    "prov": [
+     {
+      "page_no": 2,
+      "bbox": {
+       "l": 50.0,
+       "t": 700.0,
+       "r": 550.0,
+       "b": 650.0,
+       "coord_origin": "BOTTOMLEFT"
+      },
+      "charspan": [
+       0,
+       233
+      ]
+     }
+    ],
+    "orig": "Boltzmann's formula S = k log W relates the entropy to the number W of microstates compatible with the macroscopic state. It is engraved on his tombstone in Vienna and is the bridge between counting configurations and measuring heat.",
+    "text": "Boltzmann's formula S = k log W relates the entropy to the number W of microstates compatible with the macroscopic state. It is engraved on his tombstone in Vienna and is the bridge between counting configurations and measuring heat."
+   },
+   {
+    "self_ref": "#/texts/8",
+    "parent": {
+     "$ref": "#/body"
+    },
+    "children": [],
+    "content_layer": "body",
+    "label": "section_header",
+    "prov": [
+     {
+      "page_no": 3,
+      "bbox": {
+       "l": 50.0,
+       "t": 700.0,
+       "r": 550.0,
+       "b": 650.0,
+       "coord_origin": "BOTTOMLEFT"
+      },
+      "charspan": [
+       0,
+       13
+      ]
+     }
+    ],
+    "orig": "2.2 Third law",
+    "text": "2.2 Third law",
+    "level": 2
+   },
+   {
+    "self_ref": "#/texts/9",
+    "parent": {
+     "$ref": "#/groups/0"
+    },
+    "children": [],
+    "content_layer": "body",
+    "label": "list_item",
+    "prov": [
+     {
+      "page_no": 3,
+      "bbox": {
+       "l": 50.0,
+       "t": 700.0,
+       "r": 550.0,
+       "b": 650.0,
+       "coord_origin": "BOTTOMLEFT"
+      },
+      "charspan": [
+       0,
+       80
+      ]
+     }
+    ],
+    "orig": "Entropy approaches a constant value as the temperature approaches absolute zero.",
+    "text": "Entropy approaches a constant value as the temperature approaches absolute zero."
+   },
+   {
+    "self_ref": "#/texts/10",
+    "parent": {
+     "$ref": "#/groups/0"
+    },
+    "children": [],
+    "content_layer": "body",
+    "label": "list_item",
+    "prov": [
+     {
+      "page_no": 3,
+      "bbox": {
+       "l": 50.0,
+       "t": 700.0,
+       "r": 550.0,
+       "b": 650.0,
+       "coord_origin": "BOTTOMLEFT"
+      },
+      "charspan": [
+       0,
+       75
+      ]
+     }
+    ],
+    "orig": "Heat capacities and thermal expansion coefficients vanish at absolute zero.",
+    "text": "Heat capacities and thermal expansion coefficients vanish at absolute zero."
+   },
+   {
+    "self_ref": "#/texts/11",
+    "parent": {
+     "$ref": "#/groups/0"
+    },
+    "children": [],
+    "content_layer": "body",
+    "label": "list_item",
+    "prov": [
+     {
+      "page_no": 3,
+      "bbox": {
+       "l": 50.0,
+       "t": 700.0,
+       "r": 550.0,
+       "b": 650.0,
+       "coord_origin": "BOTTOMLEFT"
+      },
+      "charspan": [
+       0,
+       68
+      ]
+     }
+    ],
+    "orig": "Absolute zero cannot be reached in a finite number of cooling steps.",
+    "text": "Absolute zero cannot be reached in a finite number of cooling steps."
+   },
+   {
+    "self_ref": "#/texts/12",
+    "parent": {
+     "$ref": "#/body"
+    },
+    "children": [],
+    "content_layer": "body",
+    "label": "text",
+    "prov": [
+     {
+      "page_no": 3,
+      "bbox": {
+       "l": 50.0,
+       "t": 700.0,
+       "r": 550.0,
+       "b": 650.0,
+       "coord_origin": "BOTTOMLEFT"
+      },
+      "charspan": [
+       0,
+       1600
+      ]
+     }
+    ],
+    "orig": "Residual entropies measured near zero kelvin in joules per mole kelvin for a list of samples: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 259, 260, 261, 262, 263, 264, 265, 266, 267, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 280, 281, 282, 283, 284, 285, 286, 287, 288, 289, 290, 291, 292, 293, 294, 295, 296, 297, 298, 299, 300, 301, 302, 303, 304, 305, 306, 307, 308, 309, 310, 311, 312, 313, 314, 315, 316, 317, 318, 319, 320, 321, 322, 323,",
+    "text": "Residual entropies measured near zero kelvin in joules per mole kelvin for a list of samples: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 259, 260, 261, 262, 263, 264, 265, 266, 267, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 280, 281, 282, 283, 284, 285, 286, 287, 288, 289, 290, 291, 292, 293, 294, 295, 296, 297, 298, 299, 300, 301, 302, 303, 304, 305, 306, 307, 308, 309, 310, 311, 312, 313, 314, 315, 316, 317, 318, 319, 320, 321, 322, 323,"
+   },
+   {
+    "self_ref": "#/texts/13",
+    "parent": {
+     "$ref": "#/body"
+    },
+    "children": [],
+    "content_layer": "furniture",
+    "label": "page_footer",
+    "prov": [
+     {
+      "page_no": 3,
+      "bbox": {
+       "l": 50.0,
+       "t": 700.0,
+       "r": 550.0,
+       "b": 650.0,
+       "coord_origin": "BOTTOMLEFT"
+      },
+      "charspan": [
+       0,
+       1
+      ]
+     }
+    ],
+    "orig": "3",
+    "text": "3"
+   },
+   {
+    "self_ref": "#/texts/14",
+    "parent": {
+     "$ref": "#/body"
+    },
+    "children": [],
+    "content_layer": "body",
+    "label": "section_header",
+    "prov": [
+     {
+      "page_no": 4,
+      "bbox": {
+       "l": 50.0,
+       "t": 700.0,
+       "r": 550.0,
+       "b": 650.0,
+       "coord_origin": "BOTTOMLEFT"
+      },
+      "charspan": [
+       0,
+       14
+      ]
+     }
+    ],
+    "orig": "3 Applications",
+    "text": "3 Applications",
+    "level": 1
+   },
+   {
+    "self_ref": "#/texts/15",
+    "parent": {
+     "$ref": "#/body"
+    },
+    "children": [],
+    "content_layer": "body",
+    "label": "text",
+    "prov": [
+     {
+      "page_no": 4,
+      "bbox": {
+       "l": 50.0,
+       "t": 700.0,
+       "r": 550.0,
+       "b": 650.0,
+       "coord_origin": "BOTTOMLEFT"
+      },
+      "charspan": [
+       0,
+       584
+      ]
+     }
+    ],
+    "orig": "Heat engines and refrigerators are governed by an entropy balance. An engine takes heat from a hot reservoir, rejects part of it to a cold reservoir and converts the difference into work; because the entropy taken from the hot side cannot exceed the entropy given to the cold side, the efficiency is at most one minus the ratio of the cold to the hot temperature, the Carnot efficiency. A heat pump runs the cycle backwards and needs work to move heat from cold to hot. Real machines fall short of the Carnot limit because friction and finite temperature differences generate entropy.",
+    "text": "Heat engines and refrigerators are governed by an entropy balance. An engine takes heat from a hot reservoir, rejects part of it to a cold reservoir and converts the difference into work; because the entropy taken from the hot side cannot exceed the entropy given to the cold side, the efficiency is at most one minus the ratio of the cold to the hot temperature, the Carnot efficiency. A heat pump runs the cycle backwards and needs work to move heat from cold to hot. Real machines fall short of the Carnot limit because friction and finite temperature differences generate entropy."
+   },
+   {
+    "self_ref": "#/texts/16",
+    "parent": {
+     "$ref": "#/body"
+    },
+    "children": [],
+    "content_layer": "body",
+    "label": "text",
+    "prov": [
+     {
+      "page_no": 4,
+      "bbox": {
+       "l": 50.0,
+       "t": 700.0,
+       "r": 550.0,
+       "b": 650.0,
+       "coord_origin": "BOTTOMLEFT"
+      },
+      "charspan": [
+       0,
+       427
+      ]
+     }
+    ],
+    "orig": "In chemistry the direction of a reaction at constant temperature and pressure is decided by the Gibbs free energy, G = H - TS. A reaction proceeds spontaneously when it lowers G, so a reaction that absorbs heat can still run if it increases the entropy enough, as when ice melts above zero degrees Celsius or salt dissolves in water and cools the solution. Entropy therefore decides chemical equilibrium as much as energy does.",
+    "text": "In chemistry the direction of a reaction at constant temperature and pressure is decided by the Gibbs free energy, G = H - TS. A reaction proceeds spontaneously when it lowers G, so a reaction that absorbs heat can still run if it increases the entropy enough, as when ice melts above zero degrees Celsius or salt dissolves in water and cools the solution. Entropy therefore decides chemical equilibrium as much as energy does."
+   }
+  ],
+  "pictures": [],
+  "tables": [],
+  "key_value_items": [],
+  "form_items": [],
+  "pages": {
+   "1": {
+    "size": {
+     "width": 612.0,
+     "height": 792.0
+    },
+    "page_no": 1
+   },
+   "2": {
+    "size": {
+     "width": 612.0,
+     "height": 792.0
+    },
+    "page_no": 2
+   },
+   "3": {
+    "size": {
+     "width": 612.0,
+     "height": 792.0
+    },
+    "page_no": 3
+   },
+   "4": {
+    "size": {
+     "width": 612.0,
+     "height": 792.0
+    },
+    "page_no": 4
+   }
+  }
+ }
+}

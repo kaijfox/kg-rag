@@ -1,0 +1,29 @@
+{
+ "survive": [
+  "gas/pre",
+  "gas/1-e",
+  "gas/1.1",
+  "gas/1.2-p1",
+  "gas/1.2-p2",
+  "gas/1.2-p3",
+  "entropy/2",
+  "entropy/2.1-d0",
+  "entropy/2.1-x",
+  "entropy/2.1-d1",
+  "entropy/2.2-list",
+  "entropy/2.2-h1",
+  "entropy/2.2-h2",
+  "entropy/3-a2"
+ ],
+ "vanish": [
+  "gas/1-ab",
+  "gas/1-cd",
+  "entropy/3-a1"
+ ],
+ "new": [
+  "gas/v2/1-na",
+  "gas/v2/1-bc",
+  "gas/v2/1-d",
+  "entropy/v2/3-a1"
+ ]
+}

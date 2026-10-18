@@ -1,0 +1,22 @@
+{
+  "name": "@kg/core",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Shared contracts: types, branded IDs, ID derivation, scoring, event catalog, schema, ports, runTool, KgApi/TOOLS.",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json",
+    "gen:schemas": "tsx scripts/gen-schemas.ts"
+  },
+  "dependencies": {
+    "zod": "4.1.12"
+  },
+  "devDependencies": {
+    "better-sqlite3": "12.4.1",
+    "@types/better-sqlite3": "7.6.13"
+  }
+}

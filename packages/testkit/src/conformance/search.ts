@@ -1,0 +1,234 @@
+/** searchStepConformance and searchServiceConformance. */
+import { expect } from 'vitest';
+import {
+  TOOLS,
+  isProperlyRanked,
+  runTool,
+  searchResponseSchema,
+  sortCandidates,
+  type BuildId,
+  type EventEnvelope,
+  type RecipeId,
+  type SearchService,
+  type SearchState,
+  type SearchStep,
+  type StepEnv,
+  type StepTrace,
+} from '@kg/core';
+import { InMemoryEventLog } from '../fakes/eventlog';
+import { FixedClock, SeqIds } from '../fakes/infra';
+import { deepFreeze, type Suite } from './harness';
+
+export interface StepHarness {
+  step: SearchStep;
+  state: SearchState;
+  env: StepEnv;
+  /** true for retrieval steps (vector-knn, later graph walk): they must merge, P-2b */
+  retrieval?: boolean;
+}
+
+export function searchStepConformance(make: () => StepHarness | Promise<StepHarness>): Suite {
+  const go = async () => {
+    const h = await make();
+    const before = structuredClone(h.state);
+    const out = await h.step.run(deepFreeze(h.state), h.env);
+    return { h, before, out };
+  };
+  return {
+    name: 'searchStepConformance',
+    cases: [
+      {
+        name: 'does not mutate its input state',
+        async run() {
+          const { h, before } = await go();
+          expect(h.state).toEqual(before);
+        },
+      },
+      {
+        name: 'output candidates are ordered by sortCandidates and unique',
+        async run() {
+          const { out } = await go();
+          expect(out.state.candidates).toEqual(sortCandidates(out.state.candidates));
+          expect(new Set(out.state.candidates.map((c) => c.itemId)).size).toBe(out.state.candidates.length);
+        },
+      },
+      {
+        name: 'trace: considered and output are properly ranked, output is a subset of considered and equals the new candidates',
+        async run() {
+          const { h, out } = await go();
+          const t = out.trace;
+          expect(t.stepType).toBe(h.step.type);
+          expect(isProperlyRanked(t.considered)).toBe(true);
+          expect(isProperlyRanked(t.output)).toBe(true);
+          const considered = new Set(t.considered.map((r) => r.itemId));
+          for (const r of t.output) expect(considered.has(r.itemId)).toBe(true);
+          expect(t.output.map((r) => [r.itemId, r.score])).toEqual(out.state.candidates.map((c) => [c.itemId, c.score]));
+        },
+      },
+      {
+        name: 'considered contains every input candidate (the previous step\'s output)',
+        async run() {
+          const { before, out } = await go();
+          const c = new Set(out.trace.considered.map((r) => r.itemId));
+          for (const x of before.candidates) expect(c.has(x.itemId), `input candidate ${x.itemId} not considered`).toBe(true);
+        },
+      },
+      {
+        name: 'P-2b: a retrieval step merges into existing candidates and re-running it is idempotent',
+        async run() {
+          const h = await make();
+          if (!h.retrieval) return;
+          expect(h.state.candidates.length, 'harness must seed at least one candidate').toBeGreaterThan(0);
+          const once = await h.step.run(structuredClone(h.state), h.env);
+          for (const x of h.state.candidates) {
+            const kept = once.state.candidates.find((c) => c.itemId === x.itemId);
+            expect(kept, `existing candidate ${x.itemId} was dropped`).toBeDefined();
+            expect(kept!.score).toBeGreaterThanOrEqual(x.score);
+          }
+          const twice = await h.step.run(structuredClone(once.state), h.env);
+          expect(twice.state.candidates).toEqual(once.state.candidates);
+        },
+      },
+      {
+        name: 'Rule 1: every candidate has non-empty sourceChunkIds',
+        async run() {
+          const { out } = await go();
+          for (const c of out.state.candidates) expect(c.sourceChunkIds.length).toBeGreaterThan(0);
+        },
+      },
+      {
+        name: 'query, k and buildId pass through unchanged',
+        async run() {
+          const { h, out } = await go();
+          expect([out.state.query, out.state.k, out.state.buildId]).toEqual([h.state.query, h.state.k, h.state.buildId]);
+        },
+      },
+    ],
+  };
+}
+
+export interface SearchServiceHarness {
+  service: SearchService;
+  /** queries that return at least one result */
+  queries: string[];
+  /** the build searches run against by default */
+  buildId: BuildId;
+  /** another build to request explicitly (optional) */
+  otherBuildId?: BuildId;
+  /** search recipe each build's manifest names (optional; checks the recipe comes from the SEARCHED build, M31) */
+  recipeOf?: (b: BuildId) => RecipeId;
+  /** texts the embedder was asked to embed, and the space's query rendering (optional; checks conditioning, M23) */
+  embeddedTexts?: () => readonly string[];
+  renderQuery?: (q: string) => string;
+}
+
+async function runSearch(h: SearchServiceHarness, query: string, k: number, buildId?: BuildId) {
+  const clock = new FixedClock();
+  const ids = new SeqIds();
+  const log = new InMemoryEventLog(clock, ids);
+  const s = log.openSession({ kind: 'test', label: null, meta: {} });
+  const rt = { log, clock, ids, currentBuild: () => h.buildId };
+  const input = buildId ? { query, k, buildId } : { query, k };
+  const resp = await runTool(rt, TOOLS.search, s, input, (ctx, i) => h.service.search(ctx, i));
+  return { resp, events: log.events(s) };
+}
+
+export function searchServiceConformance(make: () => SearchServiceHarness | Promise<SearchServiceHarness>): Suite {
+  return {
+    name: 'searchServiceConformance',
+    cases: [
+      {
+        name: 'event sequence: tool.called, query, search.step x n (n >= 1), search.result, tool.returned',
+        async run() {
+          const h = await make();
+          const { events } = await runSearch(h, h.queries[0]!, 5);
+          const types = events.map((e) => e.type);
+          expect(types[0]).toBe('session.started');
+          expect(types[1]).toBe('tool.called');
+          expect(types[2]).toBe('query');
+          expect(types.at(-2)).toBe('search.result');
+          expect(types.at(-1)).toBe('tool.returned');
+          const steps = types.slice(3, -2);
+          expect(steps.length).toBeGreaterThan(0);
+          expect(steps.every((t) => t === 'search.step')).toBe(true);
+        },
+      },
+      {
+        name: 'every search event carries the response searchId and buildId, and the tool.called parent',
+        async run() {
+          const h = await make();
+          const { resp, events } = await runSearch(h, h.queries[0]!, 5);
+          const parent = events[1]!.id;
+          for (const e of events.filter((x) => x.type === 'query' || x.type === 'search.step' || x.type === 'search.result')) {
+            expect(e.searchId).toBe(resp.searchId);
+            expect(e.buildId).toBe(resp.buildId);
+            expect(e.parentId).toBe(parent);
+          }
+          expect(resp.buildId).toBe(h.buildId);
+        },
+      },
+      {
+        name: 'step traces: contiguous stepIndex from 0, ranked, output within considered; the last output explains the result',
+        async run() {
+          const h = await make();
+          const { resp, events } = await runSearch(h, h.queries[0]!, 3);
+          const traces = events.filter((e): e is EventEnvelope<'search.step'> => e.type === 'search.step').map((e) => e.payload.trace as StepTrace);
+          traces.forEach((t, i) => {
+            expect(t.stepIndex).toBe(i);
+            expect(isProperlyRanked(t.considered)).toBe(true);
+            expect(isProperlyRanked(t.output)).toBe(true);
+            const c = new Set(t.considered.map((r) => r.itemId));
+            for (const r of t.output) expect(c.has(r.itemId)).toBe(true);
+          });
+          expect(traces.at(-1)!.output.slice(0, 3).map((r) => r.itemId)).toEqual(resp.items.map((i) => i.itemId));
+          // each step considers everything the previous step passed on (nothing silently dropped before logging)
+          traces.forEach((t, i) => {
+            if (i === 0) return;
+            const c = new Set(t.considered.map((r) => r.itemId));
+            for (const r of traces[i - 1]!.output) expect(c.has(r.itemId), `step ${i} did not consider ${r.itemId}`).toBe(true);
+          });
+        },
+      },
+      {
+        name: 'the query is embedded through the space query template',
+        async run() {
+          const h = await make();
+          if (!h.embeddedTexts || !h.renderQuery) return;
+          await runSearch(h, h.queries[0]!, 3);
+          expect(h.embeddedTexts()).toContain(h.renderQuery(h.queries[0]!));
+          expect(h.renderQuery(h.queries[0]!)).not.toBe(h.queries[0]); // the harness template must not be the identity
+        },
+      },
+      {
+        name: 'response validates, ranks are 1..n, n <= k, and search.result matches the response',
+        async run() {
+          const h = await make();
+          for (const k of [1, 3]) {
+            const { resp, events } = await runSearch(h, h.queries[0]!, k);
+            expect(searchResponseSchema.safeParse(resp).success).toBe(true);
+            expect(resp.items.length).toBeGreaterThan(0);
+            expect(resp.items.length).toBeLessThanOrEqual(k);
+            const r = events.find((e): e is EventEnvelope<'search.result'> => e.type === 'search.result')!;
+            expect(r.payload.items).toEqual(resp.items.map(({ itemId, kind, rank, score, sourceChunkIds }) => ({ itemId, kind, rank, score, sourceChunkIds })));
+            expect(r.payload.stale).toBe(resp.stale);
+          }
+        },
+      },
+      {
+        name: 'an explicitly requested build is honoured',
+        async run() {
+          const h = await make();
+          if (!h.otherBuildId) return;
+          const { resp, events } = await runSearch(h, h.queries[0]!, 3, h.otherBuildId);
+          expect(resp.buildId).toBe(h.otherBuildId);
+          for (const e of events.filter((x) => x.searchId === resp.searchId)) expect(e.buildId, e.type).toBe(h.otherBuildId);
+          if (h.recipeOf) {
+            const q = events.find((e): e is EventEnvelope<'query'> => e.type === 'query')!;
+            expect(q.payload.searchRecipeId).toBe(h.recipeOf(h.otherBuildId));
+            expect(h.recipeOf(h.otherBuildId)).not.toBe(h.recipeOf(h.buildId)); // the harness must make them differ
+          }
+        },
+      },
+    ],
+  };
+}

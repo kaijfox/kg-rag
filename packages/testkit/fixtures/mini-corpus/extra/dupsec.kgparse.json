@@ -1,0 +1,194 @@
+{
+ "format": "kg-parse-artifact/1",
+ "sourceSha256": "2f7496ee4fda47cf15c88a30627f74e10e7f3f52416535cda0e9c1c2d4c5987e",
+ "sourceName": "dupsec.pdf",
+ "recipe": {
+  "kind": "parse",
+  "version": "1",
+  "spec": {
+   "parser": "docling",
+   "doclingVersion": "2.140.0",
+   "options": {
+    "do_ocr": false,
+    "do_table_structure": true,
+    "do_formula_enrichment": false
+   }
+  }
+ },
+ "parser": {
+  "name": "docling",
+  "version": "2.140.0"
+ },
+ "producedAt": "2026-10-17T12:00:00Z",
+ "producedOn": "hand-built",
+ "stats": {
+  "pages": 1,
+  "chars": 482,
+  "charsPerPage": [],
+  "undecodedFormulas": 0,
+  "elapsedMs": 0
+ },
+ "document": {
+  "schema_name": "DoclingDocument",
+  "version": "1.7.0",
+  "name": "dupsec",
+  "origin": {
+   "mimetype": "application/pdf",
+   "binary_hash": 0,
+   "filename": "dupsec.pdf"
+  },
+  "furniture": {
+   "self_ref": "#/furniture",
+   "children": [],
+   "content_layer": "furniture",
+   "name": "_root_",
+   "label": "unspecified"
+  },
+  "body": {
+   "self_ref": "#/body",
+   "children": [
+    {
+     "$ref": "#/texts/0"
+    },
+    {
+     "$ref": "#/texts/1"
+    },
+    {
+     "$ref": "#/texts/2"
+    },
+    {
+     "$ref": "#/texts/3"
+    }
+   ],
+   "content_layer": "body",
+   "name": "_root_",
+   "label": "unspecified"
+  },
+  "groups": [],
+  "texts": [
+   {
+    "self_ref": "#/texts/0",
+    "parent": {
+     "$ref": "#/body"
+    },
+    "children": [],
+    "content_layer": "body",
+    "label": "section_header",
+    "prov": [
+     {
+      "page_no": 1,
+      "bbox": {
+       "l": 50.0,
+       "t": 700.0,
+       "r": 550.0,
+       "b": 650.0,
+       "coord_origin": "BOTTOMLEFT"
+      },
+      "charspan": [
+       0,
+       7
+      ]
+     }
+    ],
+    "orig": "A Gases",
+    "text": "A Gases",
+    "level": 1
+   },
+   {
+    "self_ref": "#/texts/1",
+    "parent": {
+     "$ref": "#/body"
+    },
+    "children": [],
+    "content_layer": "body",
+    "label": "text",
+    "prov": [
+     {
+      "page_no": 1,
+      "bbox": {
+       "l": 50.0,
+       "t": 700.0,
+       "r": 550.0,
+       "b": 650.0,
+       "coord_origin": "BOTTOMLEFT"
+      },
+      "charspan": [
+       0,
+       233
+      ]
+     }
+    ],
+    "orig": "Boltzmann's formula S = k log W relates the entropy to the number W of microstates compatible with the macroscopic state. It is engraved on his tombstone in Vienna and is the bridge between counting configurations and measuring heat.",
+    "text": "Boltzmann's formula S = k log W relates the entropy to the number W of microstates compatible with the macroscopic state. It is engraved on his tombstone in Vienna and is the bridge between counting configurations and measuring heat."
+   },
+   {
+    "self_ref": "#/texts/2",
+    "parent": {
+     "$ref": "#/body"
+    },
+    "children": [],
+    "content_layer": "body",
+    "label": "section_header",
+    "prov": [
+     {
+      "page_no": 1,
+      "bbox": {
+       "l": 50.0,
+       "t": 700.0,
+       "r": 550.0,
+       "b": 650.0,
+       "coord_origin": "BOTTOMLEFT"
+      },
+      "charspan": [
+       0,
+       9
+      ]
+     }
+    ],
+    "orig": "B Liquids",
+    "text": "B Liquids",
+    "level": 1
+   },
+   {
+    "self_ref": "#/texts/3",
+    "parent": {
+     "$ref": "#/body"
+    },
+    "children": [],
+    "content_layer": "body",
+    "label": "text",
+    "prov": [
+     {
+      "page_no": 1,
+      "bbox": {
+       "l": 50.0,
+       "t": 700.0,
+       "r": 550.0,
+       "b": 650.0,
+       "coord_origin": "BOTTOMLEFT"
+      },
+      "charspan": [
+       0,
+       233
+      ]
+     }
+    ],
+    "orig": "Boltzmann's formula S = k log W relates the entropy to the number W of microstates compatible with the macroscopic state. It is engraved on his tombstone in Vienna and is the bridge between counting configurations and measuring heat.",
+    "text": "Boltzmann's formula S = k log W relates the entropy to the number W of microstates compatible with the macroscopic state. It is engraved on his tombstone in Vienna and is the bridge between counting configurations and measuring heat."
+   }
+  ],
+  "pictures": [],
+  "tables": [],
+  "key_value_items": [],
+  "form_items": [],
+  "pages": {
+   "1": {
+    "size": {
+     "width": 612.0,
+     "height": 792.0
+    },
+    "page_no": 1
+   }
+  }
+ }
+}

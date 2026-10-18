@@ -1,0 +1,15 @@
+{"questionId":"q1","condition":"no-context","score":0,"raw":"{\"score\":0,\"rationale\":\"does not mention Boyle's law\"}"}
+{"questionId":"q1","condition":"gold","score":1,"raw":"{\"score\":1,\"rationale\":\"inverse proportionality stated\"}"}
+{"questionId":"q1","condition":"retrieved","score":1,"raw":"{\"score\":1,\"rationale\":\"inverse proportionality stated\"}"}
+{"questionId":"q2","condition":"no-context","score":0,"raw":"{\"score\":0,\"rationale\":\"names a manometer\"}"}
+{"questionId":"q2","condition":"gold","score":1,"raw":"{\"score\":1,\"rationale\":\"mercury barometer\"}"}
+{"questionId":"q2","condition":"retrieved","score":0.5,"raw":"{\"score\":0.5,\"rationale\":\"barometer named, column height missing\"}"}
+{"questionId":"q3","condition":"no-context","score":0.5,"raw":"{\"score\":0.5,\"rationale\":\"corrections right, distribution missing\"}"}
+{"questionId":"q3","condition":"gold","score":1,"raw":"{\"score\":1,\"rationale\":\"both parts\"}"}
+{"questionId":"q3","condition":"retrieved","score":0.5,"raw":"{\"score\":0.5,\"rationale\":\"Maxwell distribution missing\"}"}
+{"questionId":"q4","condition":"no-context","score":0,"raw":"{\"score\":0,\"rationale\":\"wrong bound\"}"}
+{"questionId":"q4","condition":"gold","score":1,"raw":"{\"score\":1,\"rationale\":\"both parts\"}"}
+{"questionId":"q4","condition":"retrieved","score":1,"raw":"{\"score\":1,\"rationale\":\"both parts\"}"}
+{"questionId":"q5","condition":"no-context","score":0,"raw":"{\"score\":0,\"rationale\":\"generic\"}"}
+{"questionId":"q5","condition":"gold","score":0.5,"raw":"{\"score\":0.5,\"rationale\":\"applications missing\"}"}
+{"questionId":"q5","condition":"retrieved","score":0,"raw":"{\"score\":0,\"rationale\":\"answers about gases\"}"}
