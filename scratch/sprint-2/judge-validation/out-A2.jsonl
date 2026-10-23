@@ -1,0 +1,10 @@
+{"n": "r07", "score": 1, "rationale": "States that the canonical ensemble matches the microcanonical one at large N, though it omits the explicit re-examination of earlier results."}
+{"n": "r14", "score": 0.5, "rationale": "Gives equal T and P, Gibbs minimum and concavity, but does not link the isolated-system entropy maximum to the reservoir stability inequalities and says the link is not derived."}
+{"n": "r08", "score": 1, "rationale": "Identifies intra-group terms, the interparticle term, and the symmetry-derived term proportional to f_{s+1}."}
+{"n": "r28", "score": 0, "rationale": "Answer says the context lacks the information and gives no positive heat capacity or compressibility conditions."}
+{"n": "r19", "score": 0.5, "rationale": "Mentions maximum entropy and Jaynes but frames it as ensemble axioms and never states the information-theory least-bias basis, and it hedges."}
+{"n": "r13", "score": 1, "rationale": "States the factor removes the spurious entropy of mixing for the same ideal gas."}
+{"n": "r02", "score": 1, "rationale": "Covers empirical observations, equilibrium state functions, a logical structure, and reliance on microscopic theory like statistical mechanics."}
+{"n": "r24", "score": 1, "rationale": "States that the canonical and microcanonical ensembles give identical macroscopic results in the large-system limit."}
+{"n": "r03", "score": 1, "rationale": "Covers the missing ergodic proof for nonintegrable systems and the information-theory least-bias approach that severs the link with dynamics."}
+{"n": "r30", "score": 1, "rationale": "States that heat exchange occurs only at the two temperatures of source and sink."}

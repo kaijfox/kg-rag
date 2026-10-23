@@ -1,0 +1,3487 @@
+{
+ "tag": "own-kardar",
+ "setAuthor": "kardar",
+ "indexAuthor": "kardar",
+ "setId": "qs_qvhpnfeltkzxik3ti2yn",
+ "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+ "ms": 1494239,
+ "conditions": [
+  "no-context",
+  "gold",
+  "retrieved"
+ ],
+ "ks": [
+  1,
+  5,
+  10,
+  20
+ ],
+ "summary": {
+  "buildId": "bd_54xv4xliwgsagq3kbflb",
+  "questions": 37,
+  "ks": [
+   1,
+   5,
+   10,
+   20
+  ],
+  "byCondition": {
+   "no-context": {
+    "judge": 0.7972972972972973
+   },
+   "gold": {
+    "judge": 0.9324324324324325
+   },
+   "retrieved": {
+    "judge": 0.5,
+    "retrieval": {
+     "ks": [
+      1,
+      5,
+      10,
+      20
+     ],
+     "perQuestion": {
+      "k1": {
+       "recall": {
+        "1": 1,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       },
+       "allGold": {
+        "1": 1,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       }
+      },
+      "k2": {
+       "recall": {
+        "1": 1,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       },
+       "allGold": {
+        "1": 1,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       }
+      },
+      "k3": {
+       "recall": {
+        "1": 0,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       },
+       "allGold": {
+        "1": 0,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       },
+       "withSummaries": {
+        "1": 0,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       }
+      },
+      "k4": {
+       "recall": {
+        "1": 1,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       },
+       "allGold": {
+        "1": 1,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       }
+      },
+      "k5": {
+       "recall": {
+        "1": 1,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       },
+       "allGold": {
+        "1": 1,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       }
+      },
+      "k6": {
+       "recall": {
+        "1": 1,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       },
+       "allGold": {
+        "1": 1,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       }
+      },
+      "k10": {
+       "recall": {
+        "1": 1,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       },
+       "allGold": {
+        "1": 1,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       }
+      },
+      "k11": {
+       "recall": {
+        "1": 0,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       },
+       "allGold": {
+        "1": 0,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       },
+       "withSummaries": {
+        "1": 0,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       }
+      },
+      "k12": {
+       "recall": {
+        "1": 1,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       },
+       "allGold": {
+        "1": 1,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       }
+      },
+      "k13": {
+       "recall": {
+        "1": 1,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       },
+       "allGold": {
+        "1": 1,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       }
+      },
+      "k14": {
+       "recall": {
+        "1": 0,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       },
+       "allGold": {
+        "1": 0,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       },
+       "withSummaries": {
+        "1": 0,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       }
+      },
+      "k15": {
+       "recall": {
+        "1": 1,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       },
+       "allGold": {
+        "1": 1,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       }
+      },
+      "k16": {
+       "recall": {
+        "1": 1,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       },
+       "allGold": {
+        "1": 1,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       }
+      },
+      "k17": {
+       "recall": {
+        "1": 1,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       },
+       "allGold": {
+        "1": 1,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       }
+      },
+      "k20": {
+       "recall": {
+        "1": 1,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       },
+       "allGold": {
+        "1": 1,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       }
+      },
+      "k21": {
+       "recall": {
+        "1": 1,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       },
+       "allGold": {
+        "1": 1,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       }
+      },
+      "k22": {
+       "recall": {
+        "1": 1,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       },
+       "allGold": {
+        "1": 1,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       }
+      },
+      "k24": {
+       "recall": {
+        "1": 0.5,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       },
+       "allGold": {
+        "1": 0,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       },
+       "withSummaries": {
+        "1": 0.5,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       }
+      },
+      "k25": {
+       "recall": {
+        "1": 0,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       },
+       "allGold": {
+        "1": 0,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       },
+       "withSummaries": {
+        "1": 0,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       }
+      },
+      "k28": {
+       "recall": {
+        "1": 0,
+        "5": 0.75,
+        "10": 0.75,
+        "20": 0.75
+       },
+       "allGold": {
+        "1": 0,
+        "5": 0,
+        "10": 0,
+        "20": 0
+       },
+       "withSummaries": {
+        "1": 0,
+        "5": 0.75,
+        "10": 0.75,
+        "20": 0.75
+       }
+      },
+      "k29": {
+       "recall": {
+        "1": 0,
+        "5": 0.75,
+        "10": 0.75,
+        "20": 0.75
+       },
+       "allGold": {
+        "1": 0,
+        "5": 0,
+        "10": 0,
+        "20": 0
+       },
+       "withSummaries": {
+        "1": 0,
+        "5": 0.75,
+        "10": 0.75,
+        "20": 0.75
+       }
+      },
+      "k30": {
+       "recall": {
+        "1": 0.3333333333333333,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       },
+       "allGold": {
+        "1": 0,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       },
+       "withSummaries": {
+        "1": 0.3333333333333333,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       }
+      },
+      "k31": {
+       "recall": {
+        "1": 0.3333333333333333,
+        "5": 0.6666666666666666,
+        "10": 0.6666666666666666,
+        "20": 0.6666666666666666
+       },
+       "allGold": {
+        "1": 0,
+        "5": 0,
+        "10": 0,
+        "20": 0
+       },
+       "withSummaries": {
+        "1": 0.3333333333333333,
+        "5": 0.6666666666666666,
+        "10": 0.6666666666666666,
+        "20": 0.6666666666666666
+       }
+      },
+      "k32": {
+       "recall": {
+        "1": 0.25,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       },
+       "allGold": {
+        "1": 0,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       },
+       "withSummaries": {
+        "1": 0.25,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       }
+      },
+      "kr21": {
+       "recall": {
+        "1": 1,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       },
+       "allGold": {
+        "1": 1,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       }
+      },
+      "kr24": {
+       "recall": {
+        "1": 0,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       },
+       "allGold": {
+        "1": 0,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       },
+       "withSummaries": {
+        "1": 0,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       }
+      },
+      "kr26": {
+       "recall": {
+        "1": 1,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       },
+       "allGold": {
+        "1": 1,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       }
+      },
+      "kr211": {
+       "recall": {
+        "1": 0.5,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       },
+       "allGold": {
+        "1": 0,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       },
+       "withSummaries": {
+        "1": 0.5,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       }
+      },
+      "kr212": {
+       "recall": {
+        "1": 0.5,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       },
+       "allGold": {
+        "1": 0,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       },
+       "withSummaries": {
+        "1": 0.5,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       }
+      },
+      "kr213": {
+       "recall": {
+        "1": 0.5,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       },
+       "allGold": {
+        "1": 0,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       },
+       "withSummaries": {
+        "1": 0.5,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       }
+      },
+      "kr214": {
+       "recall": {
+        "1": 0.5,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       },
+       "allGold": {
+        "1": 0,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       },
+       "withSummaries": {
+        "1": 0.5,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       }
+      },
+      "kr215": {
+       "recall": {
+        "1": 0.5,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       },
+       "allGold": {
+        "1": 0,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       },
+       "withSummaries": {
+        "1": 0.5,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       }
+      },
+      "kr219": {
+       "recall": {
+        "1": 0,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       },
+       "allGold": {
+        "1": 0,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       },
+       "withSummaries": {
+        "1": 0,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       }
+      },
+      "kr225": {
+       "recall": {
+        "1": 0.25,
+        "5": 0.5,
+        "10": 0.75,
+        "20": 0.75
+       },
+       "allGold": {
+        "1": 0,
+        "5": 0,
+        "10": 0,
+        "20": 0
+       },
+       "withSummaries": {
+        "1": 0.25,
+        "5": 0.5,
+        "10": 0.75,
+        "20": 0.75
+       }
+      },
+      "kr226": {
+       "recall": {
+        "1": 0.3333333333333333,
+        "5": 0.3333333333333333,
+        "10": 0.3333333333333333,
+        "20": 0.3333333333333333
+       },
+       "allGold": {
+        "1": 0,
+        "5": 0,
+        "10": 0,
+        "20": 0
+       },
+       "withSummaries": {
+        "1": 0.3333333333333333,
+        "5": 0.3333333333333333,
+        "10": 0.3333333333333333,
+        "20": 0.3333333333333333
+       }
+      },
+      "kr228": {
+       "recall": {
+        "1": 0.3333333333333333,
+        "5": 0.6666666666666666,
+        "10": 0.6666666666666666,
+        "20": 0.6666666666666666
+       },
+       "allGold": {
+        "1": 0,
+        "5": 0,
+        "10": 0,
+        "20": 0
+       },
+       "withSummaries": {
+        "1": 0.3333333333333333,
+        "5": 0.6666666666666666,
+        "10": 0.6666666666666666,
+        "20": 0.6666666666666666
+       }
+      },
+      "kr229": {
+       "recall": {
+        "1": 0.3333333333333333,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       },
+       "allGold": {
+        "1": 0,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       },
+       "withSummaries": {
+        "1": 0.3333333333333333,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       }
+      }
+     },
+     "overall": {
+      "recall": {
+       "1": 0.572072072072072,
+       "5": 0.936936936936937,
+       "10": 0.9436936936936938,
+       "20": 0.9436936936936938
+      },
+      "withSummaries": {
+       "1": 0.572072072072072,
+       "5": 0.936936936936937,
+       "10": 0.9436936936936938,
+       "20": 0.9436936936936938
+      }
+     },
+     "byType": {
+      "single-hop": {
+       "n": 20,
+       "recall": {
+        "1": 0.8,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       },
+       "allGold": {
+        "1": 0.8,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       }
+      },
+      "multi-hop": {
+       "n": 8,
+       "recall": {
+        "1": 0.375,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       },
+       "allGold": {
+        "1": 0,
+        "5": 1,
+        "10": 1,
+        "20": 1
+       }
+      },
+      "topic": {
+       "n": 9,
+       "recall": {
+        "1": 0.24074074074074073,
+        "5": 0.7407407407407407,
+        "10": 0.7685185185185185,
+        "20": 0.7685185185185185
+       },
+       "allGold": {
+        "1": 0,
+        "5": 0.3333333333333333,
+        "10": 0.3333333333333333,
+        "20": 0.3333333333333333
+       }
+      }
+     }
+    }
+   }
+  },
+  "orphaned": []
+ },
+ "rows": [
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k1",
+   "condition": "gold",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "Equilibrium statistical mechanics differs from kinetic theory by explicitly excluding the question of how systems evolve toward a state of equilibrium, whereas kinetic theory addresses this temporal evolution. As noted in the text, equilibrium statistical mechanics focuses on deriving probabilities for an ensemble of microstates corresponding to a given macrostate without considering the dynamical path to that state. Consequently, it relies on Liouville's theorem and the assumption of equally likely accessible microstates rather than modeling the specific time-dependent processes involved in reaching equilibrium.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly identifies that equilibrium statistical mechanics does not address system evolution to equilibrium while kinetic theory does, matching all essential facts of the reference.\"}",
+   "type": "single-hop",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k1",
+   "condition": "no-context",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "Equilibrium statistical mechanics focuses on the properties of systems in a steady state where macroscopic variables do not change over time, whereas kinetic theory explicitly describes the time-dependent evolution of non-equilibrium systems through the dynamics of individual particles or distribution functions. While equilibrium statistical mechanics relies on ensemble averages to predict final states without detailing the path taken, kinetic theory provides a framework for understanding how systems approach equilibrium via processes like collisions and transport phenomena. Therefore, the primary difference lies in their treatment of time: one describes static snapshots of equilibrium, while the other models the dynamic trajectory toward that state.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly identifies that equilibrium statistical mechanics does not address the evolution to equilibrium, unlike kinetic theory, matching all essential facts in the reference.\"}",
+   "type": "single-hop",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k1",
+   "condition": "retrieved",
+   "searchId": "sr_01M5MYXE5PJPWBAF5Z7QH0T77T",
+   "retrieved": [
+    "ch_uwg6w7esgwzm5evutkrt",
+    "ch_ezu6f2nbpxruui5jcv7i",
+    "ch_2tlnvyubkiwldhdt2nfp",
+    "ch_xinnqewam4xjtxp2ynwo",
+    "ch_3pofhqauifj5eqx66km4",
+    "ch_sal4kuy2nmqa6edi3mru",
+    "ch_ts5rl3uvbgt7jdtvftk7",
+    "ch_xz6ztgonxltyq6dbfnkb",
+    "ch_jmi35czu6qykm3sp7fll",
+    "ch_lsv7oeo4m5nbocadbd7w",
+    "ch_yhaizkjbygeeewtc25eq",
+    "ch_ldvroidu46n5tqs4v57n",
+    "ch_uqul7qb4oqgdr4a5z3su",
+    "ch_pfyd5vj3pvkykao3ryi3",
+    "ch_eagzdbldrbtuayooiz64",
+    "ch_wqt42joayrfy2qjdbwfg",
+    "ch_nydocm2w6tt2z6y3hwly",
+    "ch_fligytxktqx5cdscmj56",
+    "ch_wwk3kkfw5b76tfvkrbok",
+    "ch_rz64ruf373utov225blg"
+   ],
+   "recall": {
+    "1": 1,
+    "5": 1,
+    "10": 1,
+    "20": 1
+   },
+   "answer": "Based on the provided text, here is how equilibrium statistical mechanics differs from kinetic theory regarding the evolution of systems:\n\n**1. Focus on Probability vs. Dynamics**\n*   **Equilibrium Statistical Mechanics:** This framework focuses on the **probabilistic description** of a system using an ensemble (density $\\rho$). It describes the state of a system by examining the time evolution of the phase space density governed by the **Liouville equation**. In this view, equilibrium is defined as a mixed state where the system explores a vast number of microstates. The text notes that probabilistic arguments provide \"no information on the dynamics of evolution amongst these microstates, or on the amount of time needed to establish equilibrium.\"\n*   **Kinetic Theory:** This framework explicitly deals with the **dynamics** and time evolution of particles. It uses the Boltzmann equation to describe how a system evolves from a non-equilibrium state toward equilibrium. The text highlights that kinetic theory introduces approximations (like dropping three-body collisions and coarse graining) that break time-reversal symmetry, allowing for a description of irreversible processes like entropy increase ($dH/dt \\leq 0$).\n\n**2. Treatment of Time Reversibility and Irreversibility**\n*   **Equilibrium Statistical Mechanics:** The underlying Hamiltonian equations of motion are **time-reversible**. Consequently, exact solutions in this framework (like the Liouville equation) do not naturally exhibit an arrow",
+   "judgeScore": 0.5,
+   "judgeRaw": "{\"score\": 0.5, \"rationale\": \"The answer correctly identifies that equilibrium statistical mechanics does not address system evolution to reach equilibrium while kinetic theory does, but it includes extra details and cuts off mid-sentence, preventing a complete assessment of all referenced facts.\"}",
+   "type": "single-hop",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k10",
+   "condition": "gold",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "Based on the provided text, three-body and higher-body interactions are typically neglected because they are not very important in the dilute gas (nearly ideal) limit. While including them would provide a complete description, their contribution is considered insignificant for weakly interacting gases compared to classical kinetic energy, external potentials, and two-body interactions.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly identifies that three-body and higher-order interactions are neglected due to their insignificance in the dilute gas limit, which aligns perfectly with the reference answer.\"}",
+   "type": "single-hop",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k10",
+   "condition": "no-context",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "In the kinetic theory of weakly interacting gases, three-body and higher-order interactions are typically neglected because they occur with a probability proportional to much higher powers of the gas density compared to two-body collisions. Since these gases are assumed to be dilute, the frequency of simultaneous encounters involving three or more particles is vanishingly small relative to pairwise interactions. Consequently, including them would introduce negligible corrections to macroscopic properties like pressure and viscosity without significantly increasing the complexity of the theoretical model.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly identifies that higher-order interactions are neglected due to their low probability in dilute gases compared to two-body collisions, which aligns with the reference answer's point about negligible importance in the dilute gas limit.\"}",
+   "type": "single-hop",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k10",
+   "condition": "retrieved",
+   "searchId": "sr_01M5MZ4R43PQ9QNHSGTQVD5NR8",
+   "retrieved": [
+    "ch_aqe4jcoeln26kjkwxmnh",
+    "ch_ezu6f2nbpxruui5jcv7i",
+    "ch_zui7uuy33o6ym2rp3hxn",
+    "ch_2tlnvyubkiwldhdt2nfp",
+    "ch_yqi3tqqqrn753ps36vqv",
+    "ch_jxyehxkdybryfglgdjeh",
+    "ch_gnypqlwwsy3whxmdnwgh",
+    "ch_nydocm2w6tt2z6y3hwly",
+    "ch_u5bunyyr4ndv54edtdnf",
+    "ch_sdazxhumbwzotd4itcb7",
+    "ch_sy2p5pumpz7d4eutsilq",
+    "ch_y33ctyue6khxul7f4q32",
+    "ch_sewmwxdflcf4g5d3lhtn",
+    "ch_xg2jxkgav7syagh6qwk6",
+    "ch_2cfgdb232udarqvzz7pc",
+    "ch_ew7y7bsyikkzli7mu62d",
+    "ch_exfht4wbgd2i3aecnu4e",
+    "ch_as66rqoxmp2yokezaykf",
+    "ch_m42uekxtzqwcsosptjmd",
+    "ch_nwhodidgwmpvxxy3h7dh"
+   ],
+   "recall": {
+    "1": 1,
+    "5": 1,
+    "10": 1,
+    "20": 1
+   },
+   "answer": "Based on the principles of kinetic theory and statistical mechanics (as implied by the context of the provided text snippets regarding Boltzmann equations, collision integrals, and ideal gas approximations), here is the explanation for why three-body and higher-order interactions are typically neglected in the study of weakly interacting gases:\n\n### 1. Low Probability of Simultaneous Encounters\nIn a dilute (weakly interacting) gas, the particles are separated by distances much larger than their interaction range.\n*   **Two-body collisions:** For two particles to collide, they must come within a distance $\\sigma$ (the interaction diameter) of each other. The probability of this occurring is proportional to the density $n$.\n*   **Three-body collisions:** For three particles to interact simultaneously, they must all be within the interaction range of one another at the same instant. Geometrically, the volume available for a third particle to enter a collision complex formed by two others is extremely small compared to the total volume.\n*   **Scaling:** The rate of $k$-body collisions scales roughly as $n^{k-1}$. Therefore, the ratio of three-body collision rates to two-body collision rates is proportional to the density $n$. In a dilute gas where $n\\sigma^3 \\ll 1$, this probability is vanishingly small.\n\n### 2. The Boltzmann Stosszahlansatz (Molecular Chaos)\nThe standard kinetic",
+   "judgeScore": 0.5,
+   "judgeRaw": "{\"score\": 0.5, \"rationale\": \"The answer explains the low probability of simultaneous encounters in dilute gases, which supports the reference fact that these interactions have negligible importance, but it cuts off mid-sentence and does not fully complete the explanation.\"}",
+   "type": "single-hop",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k11",
+   "condition": "gold",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "Based on the provided text, the partition function (denoted as $Z$) is defined within the context of normalized probabilities derived from the reservoir's entropy. The parameter $\\beta$ represents the inverse thermal energy, specifically given by the formula $\\beta = 1/(k_B T)$, where $k_B$ is the Boltzmann constant and $T$ is the temperature.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly identifies beta as the inverse product of the Boltzmann constant and temperature (1/k_B T), matching all essential facts in the reference.\"}",
+   "type": "single-hop",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k11",
+   "condition": "no-context",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "The partition function $Z$ is a sum over all possible states weighted by the factor $e^{-\\beta E_i}$, where $\\beta$ appears in the exponent as an inverse scaling parameter for energy. The parameter $\\beta$ represents the inverse thermal energy, defined physically as $\\beta = \\frac{1}{k_B T}$, where $k_B$ is the Boltzmann constant and $T$ is the absolute temperature. This relationship indicates that $\\beta$ quantifies how sharply the system's probability distribution decays with increasing energy at a given temperature.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly states that beta equals 1/(k_B T) and explains its role in the partition function without contradicting or omitting essential facts from the reference.\"}",
+   "type": "single-hop",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k11",
+   "condition": "retrieved",
+   "searchId": "sr_01M5MZ5XAE2FYJHA6TJ9BEKM8Z",
+   "retrieved": [
+    "ch_ayt77datg53amldcwxd5",
+    "ch_fligytxktqx5cdscmj56",
+    "ch_x4e3chttmmxild76kthp",
+    "ch_6bh65pnxn42vsr57nnaj",
+    "ch_qpvlokyr7pzai5lijs3a",
+    "ch_w5zwrzdmtieelzzbfkia",
+    "ch_bcvlty56qen6di7lnt4a",
+    "ch_entw6utya7a4wczdu4e7",
+    "ch_xg2jxkgav7syagh6qwk6",
+    "ch_pcslzllj7a4cibfdfznm",
+    "ch_ew7y7bsyikkzli7mu62d",
+    "ch_oeg6n6wqq7ki3kn2t3jc",
+    "ch_r5l5e3cr4rgferi4n6dk",
+    "ch_lphwiscjfe5wujhv75vu",
+    "ch_mw2rikcskgpzm5e3jytm",
+    "ch_xdfws5qhhcmyxzagkaij",
+    "ch_pjiaxxomyzqnatddouec",
+    "ch_7qvygbdojwri6252tvah",
+    "ch_esn66wlaojv6psgdehxw",
+    "ch_rqn5zekqclhhwygztchh"
+   ],
+   "recall": {
+    "1": 0,
+    "5": 1,
+    "10": 1,
+    "20": 1
+   },
+   "answer": "Based on the text provided and standard statistical mechanics principles referenced within it (specifically regarding the ideal gas and canonical ensemble), here is the answer:\n\n**1. Relationship to $\\beta$**\nIn the context of the partition function $Z$ (or the dimensionless partition function mentioned in the text), the parameter $\\beta$ appears as a scaling factor for the energy terms in the exponential argument. Specifically, the probability of a microstate with energy $E$ is proportional to $e^{-\\beta E}$.\n\nThe relationship is defined by:\n$$ \\beta = \\frac{1}{k_B T} $$\nwhere:\n*   $k_B$ is the Boltzmann constant.\n*   $T$ is the absolute temperature.\n\n**2. Physical Quantity Represented by $\\beta$**\nThe parameter $\\beta$ represents the **inverse thermal energy** (or inverse temperature) of the system.\n\n*   It acts as a weighting factor that determines how the probability distribution of microstates changes with energy.\n*   A high value of $\\beta$ (low temperature) means the system is highly sensitive to energy differences, favoring low-energy states.\n*   A low value of $\\beta$ (high temperature) means thermal fluctuations are large enough that higher-energy states become significantly more probable.\n\nIn summary, $\\beta$ quantifies the ratio of the Boltzmann constant times temperature to unity ($1/k_B T$), effectively",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly identifies beta as the inverse product of the Boltzmann constant and absolute temperature (1/k_B T) and accurately describes its physical representation as inverse thermal energy.\"}",
+   "type": "single-hop",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k12",
+   "condition": "gold",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "Based on the provided context, the specific condition that distinguishes a Carnot engine is that its heat exchanges with the surroundings occur exclusively at two distinct temperatures: a source temperature ($T_H$) and a sink temperature ($T_C$). Unlike other engines, it does not exchange heat at any intermediate temperatures during its cycle. This restriction to exactly two thermal reservoirs is the defining characteristic of the Carnot engine described in the text.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly identifies that heat exchanges occur exclusively at two distinct temperatures (source and sink) and explicitly states that no intermediate temperature exchanges occur, which aligns perfectly with the reference answer.\"}",
+   "type": "single-hop",
+   "docs": [
+    "ThermoKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k12",
+   "condition": "no-context",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "A Carnot engine is distinguished by the fact that all of its processes are reversible, which specifically requires that heat exchange occurs only during isothermal steps where the system temperature equals the reservoir temperature. Unlike other real-world engines that operate with irreversible friction or finite temperature differences causing entropy generation, the Carnot cycle assumes no net entropy change for the universe over a complete cycle. This idealized condition of perfect thermal equilibrium during heat transfer sets its theoretical maximum efficiency apart from all other practical heat engines.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly identifies that heat exchange occurs only at specific temperatures (during isothermal steps) where the system temperature equals the reservoir temperature, which aligns with the reference fact that interactions occur exclusively at two distinct temperatures.\"}",
+   "type": "single-hop",
+   "docs": [
+    "ThermoKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k12",
+   "condition": "retrieved",
+   "searchId": "sr_01M5MZ72JV0MJT3Y2W4HTWDKV6",
+   "retrieved": [
+    "ch_nung7iapchp6mncn5sda",
+    "ch_o7yofg3hb2szn5d7pmqw",
+    "ch_tl6qqbv7k6svy7e4wwqx",
+    "ch_ky6webssg7ksaqjt2av6",
+    "ch_bblypo5xbgjlffnux2p3",
+    "ch_axlfkmtdagtrr2irew3m",
+    "ch_4ciehnlnwoyfmxlchwgo",
+    "ch_mhrig2zocvv3whb7yb23",
+    "ch_lhplvooow247sgjtzmqg",
+    "ch_vyz2zkaqiajbntuc543n",
+    "ch_7ogb4px52ouzi3lrc6f7",
+    "ch_amtuhwnfqkq3lh3rzeej",
+    "ch_jzuc2qhuzfazxbl4qor5",
+    "ch_kvxe3euuskegswtorzxn",
+    "ch_q6l7qyxp2bcgxhb5scod",
+    "ch_jxnkrbmxjmdqphhmpmvw",
+    "ch_ssuubw7lnjyz5f6qtibp",
+    "ch_pmebbjbqu632qfqfrxpe",
+    "ch_4y5h34jv4ahtvwdhskg6",
+    "ch_rz64ruf373utov225blg"
+   ],
+   "recall": {
+    "1": 1,
+    "5": 1,
+    "10": 1,
+    "20": 1
+   },
+   "answer": "Based on the provided text, the distinguishing characteristic of a Carnot engine is that all its heat exchanges with the surroundings occur only at two specific temperatures, $T_H$ and $T_C$. Unlike other engines, it does not exchange heat at any intermediate temperatures during its cycle.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly identifies that heat exchange occurs exclusively at two distinct temperatures (source and sink) and explicitly contrasts this with the absence of heat exchange at intermediate temperatures.\"}",
+   "type": "single-hop",
+   "docs": [
+    "ThermoKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k13",
+   "condition": "gold",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "Based on the provided context, mechanical equilibrium for a spring with constant $K$ subjected to the downward force of a mass $m$ occurs at a displacement (extension) of $x_{eq} = mg/K$. This value is derived by minimizing the total potential energy, which balances the internal spring force with the external gravitational force.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly states the equilibrium displacement formula x_eq = mg/K as required by the reference.\"}",
+   "type": "single-hop",
+   "docs": [
+    "ThermoKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k13",
+   "condition": "no-context",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "Based on general physics principles, mechanical equilibrium for a vertical spring occurs when the upward restoring force ($Kx$) balances the downward gravitational force ($mg$). Therefore, the displacement value $x$ representing this equilibrium position is given by the formula $x = mg/K$. This result assumes the spring obeys Hooke's Law and that \"displacement\" refers to the extension from the spring's natural, unstretched length.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly states the equilibrium displacement formula x = mg/K and explains the balancing of forces, matching all essential facts in the reference answer.\"}",
+   "type": "single-hop",
+   "docs": [
+    "ThermoKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k13",
+   "condition": "retrieved",
+   "searchId": "sr_01M5MZ82PJ7947EM2WDHB4W6QY",
+   "retrieved": [
+    "ch_frdianlmjm576fftosb7",
+    "ch_ncxioxtnrakyc4qqnbp3",
+    "ch_cmmckwxfb5w7enivrmsl",
+    "ch_ts5rl3uvbgt7jdtvftk7",
+    "ch_ldvroidu46n5tqs4v57n",
+    "ch_dz44lxrmwtufntebek74",
+    "ch_zt4rshjhdnpw62mmvfru",
+    "ch_ez3z5an2okzsqlqr2lcm",
+    "ch_bkm6jzcnihmuxfweyhmj",
+    "ch_lsv7oeo4m5nbocadbd7w",
+    "ch_gsejqkd2qmttxcmoqvsl",
+    "ch_entw6utya7a4wczdu4e7",
+    "ch_ayt77datg53amldcwxd5",
+    "ch_sal4kuy2nmqa6edi3mru",
+    "ch_rz64ruf373utov225blg",
+    "ch_2cfgdb232udarqvzz7pc",
+    "ch_yfwl6bonedqqi4xb3pzi",
+    "ch_ew7y7bsyikkzli7mu62d",
+    "ch_uqul7qb4oqgdr4a5z3su",
+    "ch_w5zubrxgm66tafzst4et"
+   ],
+   "recall": {
+    "1": 1,
+    "5": 1,
+    "10": 1,
+    "20": 1
+   },
+   "answer": "Based on the principles of thermodynamics and mechanics described in the text (specifically the concept of generalized forces and displacements), here is the step-by-step derivation to find the displacement value:\n\n### 1. Identify Generalized Force and Displacement\nAccording to **Table 1.1** and the text provided:\n*   **System:** A spring-mass system.\n*   **Generalized Force ($J$):** The external force applied to the system. In this case, it is the downward gravitational force exerted by the mass $m$.\n    $$J = F_{\\text{gravity}} = mg$$\n    *(Note: The text explicitly states \"I denote force by the symbol J rather than F\".)*\n*   **Generalized Displacement ($x$):** The extension or compression of the spring. Let's define $x$ as the displacement from the spring's natural (unstretched) length.\n\n### 2. Define the Potential Energy Function\nThe text mentions that stable mechanical equilibrium is obtained by minimizing the net potential energy (Enthalpy principle for constant force).\n\nThe total potential energy $\\Phi$ of the system consists of:\n1.  **Elastic Potential Energy** stored in the spring: $U_{\\text{spring}} = \\frac{1}{2}Kx^2$\n2.  **Gravitational Potential Energy**: If we define the zero point of gravitational potential at the unstretched",
+   "judgeScore": 0,
+   "judgeRaw": "{\"score\": 0, \"rationale\": \"The answer fails to provide the final equilibrium displacement value (mg/K) and cuts off mid-sentence without completing the derivation or stating the result.\"}",
+   "type": "single-hop",
+   "docs": [
+    "ThermoKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k14",
+   "condition": "gold",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "Based on the provided text, entropy ($S$) is defined such that for reversible processes, the infinitesimal reversible heat transfer ($\\bar{d}Q_{\\text{rev}}$) equals the product of temperature ($T$) and the change in entropy ($dS$), expressed as $\\bar{d}Q_{\\text{rev}} = TdS$. Consequently, the function of state is constructed from the integral of $\\bar{d}Q_{\\text{rev}}/T$, which depends only on the end-points of a reversible path. The text notes that this definition determines entropy up to an overall constant.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly states the relationship between reversible heat and temperature (dQ_rev = TdS) and confirms that entropy is a function of state defined by the integral of dQ_rev/T, matching all essential facts in the reference.\"}",
+   "type": "single-hop",
+   "docs": [
+    "ThermoKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k14",
+   "condition": "no-context",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "No context was provided for this question, so I am answering based on general scientific knowledge. In thermodynamics, the change in entropy ($\\Delta S$) of a system is defined as the reversible heat transfer ($q_{\\text{rev}}$) divided by the absolute temperature ($T$) at which the transfer occurs, expressed as $\\Delta S = q_{\\text{rev}}/T$. This definition applies specifically to reversible processes where the system remains in thermodynamic equilibrium throughout.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly states that entropy change is defined as reversible heat divided by temperature, matching all essential facts of the reference.\"}",
+   "type": "single-hop",
+   "docs": [
+    "ThermoKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k14",
+   "condition": "retrieved",
+   "searchId": "sr_01M5MZ999VQWCQBQNMDGSQWS2T",
+   "retrieved": [
+    "ch_rz64ruf373utov225blg",
+    "ch_pmebbjbqu632qfqfrxpe",
+    "ch_msegch5wi7lojgtuokvx",
+    "ch_cwdpnovur6wapmikmkir",
+    "ch_nydocm2w6tt2z6y3hwly",
+    "ch_lhplvooow247sgjtzmqg",
+    "ch_nung7iapchp6mncn5sda",
+    "ch_45e3b7ebsflawnxnhfbi",
+    "ch_sal4kuy2nmqa6edi3mru",
+    "ch_2cfgdb232udarqvzz7pc",
+    "ch_xinnqewam4xjtxp2ynwo",
+    "ch_ldvroidu46n5tqs4v57n",
+    "ch_tl6qqbv7k6svy7e4wwqx",
+    "ch_ovwquomuqhwboxliphqe",
+    "ch_m75giujoifgwmh324oq2",
+    "ch_olxgm6wnger3oia7arm7",
+    "ch_fkyhcqafcxienjjykh4o",
+    "ch_a2zlw6nbdus2lirhxp45",
+    "ch_yqi3tqqqrn753ps36vqv",
+    "ch_ayt77datg53amldcwxd5"
+   ],
+   "recall": {
+    "1": 0,
+    "5": 1,
+    "10": 1,
+    "20": 1
+   },
+   "answer": "Based on the provided text, for reversible processes, the heat increment $\\bar{d}Q_{\\text{rev}}$ is related to entropy $S$ and temperature $T$ by the equation $\\bar{d}Q_{\\text{rev}} = TdS$. Consequently, the change in entropy between any two states is defined as the integral of the reversible heat divided by the temperature, expressed as $\\Delta S = \\int \\bar{d}Q_{\\text{rev}}/T$. This definition relies on Clausius's theorem, which establishes that for a reversible cycle",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly states the relationship between entropy change, reversible heat, and temperature as defined in the reference answer.\"}",
+   "type": "single-hop",
+   "docs": [
+    "ThermoKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k15",
+   "condition": "gold",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "Based on the provided text, in reversible transformations, entropy ($S$) and temperature ($T$) function as conjugate variables where $S$ acts as a displacement and $T$ serves as the corresponding force. This identification allows for a precise correspondence between mechanical and thermal exchanges within the first law of thermodynamics.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly identifies entropy as the displacement variable and temperature as the corresponding force, matching all essential facts in the reference answer.\"}",
+   "type": "single-hop",
+   "docs": [
+    "ThermoKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k15",
+   "condition": "no-context",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "In thermodynamics, entropy ($S$) and temperature ($T$) form a fundamental conjugate pair where temperature acts as the intensive variable (the generalized force) and entropy serves as the extensive variable (the generalized displacement). Specifically, in reversible processes involving heat transfer, the infinitesimal change in internal energy is expressed as $dU = TdS - PdV$, demonstrating that temperature determines how much energy is exchanged per unit of entropy change. This relationship highlights that temperature quantifies the \"potential\" for heat flow, while entropy measures the system's capacity to absorb or release that energy reversibly.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly identifies entropy as the displacement variable and temperature as the force (intensive/generalized force), matching all essential facts of the reference answer.\"}",
+   "type": "single-hop",
+   "docs": [
+    "ThermoKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k15",
+   "condition": "retrieved",
+   "searchId": "sr_01M5MZAD755YADKSS5PYHMX6Y5",
+   "retrieved": [
+    "ch_rz64ruf373utov225blg",
+    "ch_pmebbjbqu632qfqfrxpe",
+    "ch_cwdpnovur6wapmikmkir",
+    "ch_msegch5wi7lojgtuokvx",
+    "ch_fn2goeaufenzdbhibffd",
+    "ch_nydocm2w6tt2z6y3hwly",
+    "ch_olxgm6wnger3oia7arm7",
+    "ch_nung7iapchp6mncn5sda",
+    "ch_yqi3tqqqrn753ps36vqv",
+    "ch_a2zlw6nbdus2lirhxp45",
+    "ch_jzuc2qhuzfazxbl4qor5",
+    "ch_lhplvooow247sgjtzmqg",
+    "ch_2cfgdb232udarqvzz7pc",
+    "ch_m75giujoifgwmh324oq2",
+    "ch_xinnqewam4xjtxp2ynwo",
+    "ch_4y5h34jv4ahtvwdhskg6",
+    "ch_sy2p5pumpz7d4eutsilq",
+    "ch_ky6webssg7ksaqjt2av6",
+    "ch_rhazqc4n7dh5tcczcx22",
+    "ch_ldvroidu46n5tqs4v57n"
+   ],
+   "recall": {
+    "1": 1,
+    "5": 1,
+    "10": 1,
+    "20": 1
+   },
+   "answer": "Based on the provided text, in a reversible transformation, entropy ($S$) and temperature ($T$) appear as conjugate variables where $S$ plays the role of a displacement and $T$ acts as the corresponding force. This identification allows for a precise correspondence between mechanical and thermal exchanges, with the relationship expressed",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly identifies entropy as the displacement variable and temperature as the corresponding force, matching all essential facts of the reference answer.\"}",
+   "type": "single-hop",
+   "docs": [
+    "ThermoKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k16",
+   "condition": "gold",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "Based on the provided text, the presence of surfactant molecules on an air-water interface reduces the surface tension because these molecules prefer to spread on the surface rather than dissolve in the water. The document states that this reduction is roughly described by the mathematical relationship $N k_B T / A$, where $N$ is the number of surfactant particles and $A$ is the area.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer accurately restates all essential facts from the reference regarding the behavior of surfactants and the specific mathematical relationship for surface tension reduction.\"}",
+   "type": "single-hop",
+   "docs": [
+    "ThermoKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k16",
+   "condition": "no-context",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "Surfactant molecules accumulate at the air-water interface with their hydrophobic tails oriented toward the air and hydrophilic heads in the water, which disrupts the cohesive forces between water molecules and thereby lowers the surface tension. This reduction is mathematically described by the Gibbs adsorption isotherm, which relates the change in surface tension to the surface excess concentration of the surfactant. At low concentrations where the interface is not yet saturated, the relationship often follows a linear trend until reaching a critical micelle concentration (CMC) where surface tension levels off.",
+   "judgeScore": 0.5,
+   "judgeRaw": "{\"score\": 0.5, \"rationale\": \"The answer correctly describes the physical mechanism of surface tension reduction but fails to include the specific mathematical relationship (N k_B T / A) stated in the reference answer, instead providing a qualitative description and mentioning the Gibbs adsorption isotherm without the explicit formula requested.\"}",
+   "type": "single-hop",
+   "docs": [
+    "ThermoKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k16",
+   "condition": "retrieved",
+   "searchId": "sr_01M5MZBGSN4SA6R7BP3FMVW20S",
+   "retrieved": [
+    "ch_6smdq74ntbo2557mybbn",
+    "ch_7tjeu2n7xc34q3q25ge6",
+    "ch_yzipb2onhdgzu2pvpbqe",
+    "ch_bwfii6yl5dubobdeyv52",
+    "ch_ecnkkgclcf6zyu53cfxe",
+    "ch_gk5edqphxjzimvt5vqvu",
+    "ch_blik5iknxrk5huyrm47v",
+    "ch_zs63dlhjufiabc3qwz7y",
+    "ch_hktmix2gu7bev24vpvcv",
+    "ch_gqpt6k6wothrtonamp3h",
+    "ch_djjeaiuwbuv5v3cdcscg",
+    "ch_ayt77datg53amldcwxd5",
+    "ch_ez3z5an2okzsqlqr2lcm",
+    "ch_hlv42nephxkob6mgyyjh",
+    "ch_ecrepmxyaaqeiyfmlau3",
+    "ch_arj3i4dsws3vk7smqxon",
+    "ch_ofzzb26yrdrtldfie5ff",
+    "ch_thx4d7uueaqadu75mumw",
+    "ch_7dqn2ijw4pck62nyctrk",
+    "ch_q6uhjburlhb7nk4p675b"
+   ],
+   "recall": {
+    "1": 1,
+    "5": 1,
+    "10": 1,
+    "20": 1
+   },
+   "answer": "Based on the text provided, there is **no information** regarding surfactant molecules, air-water interfaces, or the specific mathematical relationships describing their effect on surface tension. The provided text focuses on:\n\n*   Thermodynamics of ideal gases (Equation of State $PV=Nk_BT$).\n*   Boltzmann entropy and H-functions.\n*   Thermal responses (expansivity, compressibility, susceptibility).\n*   Hydrodynamic equations and diffusion modes.\n*   Kinetic theory of atoms and radiation (two-state systems).\n*   Phase space volume conservation (Liouville's theorem).\n*   Electrostatics and the Poisson-Boltzmann/Debye screening equations.\n\n**However**, based on general physical chemistry principles which are standard knowledge outside the provided text:\n\n### Effect of Surfactants on Surface Tension\nSurfactant molecules (amphiphiles) have a hydrophilic head and a hydrophobic tail. When placed at an air-water interface, they orient themselves with the hydrophobic tails pointing into the air and the hydrophilic heads remaining in the water.\n\n*   **Effect:** This orientation disrupts the cohesive forces (hydrogen bonds) between water molecules at the surface. Consequently, the presence of surfactants **reduces** the surface tension ($\\gamma$).\n*   **Mechanism:** The reduction occurs because the surfactant molecules lower the free energy required to create",
+   "judgeScore": 0,
+   "judgeRaw": "{\"score\": 0, \"rationale\": \"The answer explicitly states that the provided text contains no information on the topic and then provides general knowledge rather than confirming the specific facts (N k_B T / A) present in the reference answer.\"}",
+   "type": "single-hop",
+   "docs": [
+    "ThermoKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k17",
+   "condition": "gold",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "Based on the provided context, the internal energy of a thermodynamic system can be determined by calculating the amount of work ($W$) required for an adiabatic transformation from an initial state $X_i$ to a final state $X_f$. This work value allows the construction of the internal energy state function up to a constant. The text notes that different adiabatic paths between these two states result in the same change in internal energy.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly identifies that internal energy is determined by the work done during an adiabatic transformation and explicitly mentions the 'up to a constant' aspect, matching all essential facts of the reference.\"}",
+   "type": "single-hop",
+   "docs": [
+    "ThermoKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k17",
+   "condition": "no-context",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "In an adiabatic transformation, no heat is exchanged with the surroundings ($Q = 0$), so according to the first law of thermodynamics, the change in internal energy ($\\Delta U$) is equal solely to the work done on or by the system. Consequently, the internal energy difference between two specific states reached via an adiabatic path can be determined directly by calculating the work performed during that process. This relationship holds regardless of whether the process is reversible or irreversible, provided the initial and final equilibrium states are well-defined.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly identifies that internal energy change in an adiabatic process is determined by work done (since Q=0), which aligns with the reference answer's statement that internal energy is obtained from the amount of work required.\"}",
+   "type": "single-hop",
+   "docs": [
+    "ThermoKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k17",
+   "condition": "retrieved",
+   "searchId": "sr_01M5MZCSEY3WQ4ZZZM58QG630J",
+   "retrieved": [
+    "ch_iwm6wowyqiauhai2pxvo",
+    "ch_bvagnfuvmdmwekpnl7mi",
+    "ch_ldvroidu46n5tqs4v57n",
+    "ch_sal4kuy2nmqa6edi3mru",
+    "ch_tp4m7vq6co5gotfyxfm2",
+    "ch_rz64ruf373utov225blg",
+    "ch_ujt7kaqen3c6q2ghsxsy",
+    "ch_m75giujoifgwmh324oq2",
+    "ch_bblypo5xbgjlffnux2p3",
+    "ch_olxgm6wnger3oia7arm7",
+    "ch_75u2pk7lv4776liwgo35",
+    "ch_lsv7oeo4m5nbocadbd7w",
+    "ch_ts5rl3uvbgt7jdtvftk7",
+    "ch_pmebbjbqu632qfqfrxpe",
+    "ch_f7pex2slt6okvfvthnte",
+    "ch_jxnkrbmxjmdqphhmpmvw",
+    "ch_q6l7qyxp2bcgxhb5scod",
+    "ch_fkyhcqafcxienjjykh4o",
+    "ch_ggyktk4kp3kw5ovwd6aq",
+    "ch_o7yofg3hb2szn5d7pmqw"
+   ],
+   "recall": {
+    "1": 1,
+    "5": 1,
+    "10": 1,
+    "20": 1
+   },
+   "answer": "Based on the provided text, the internal energy of a thermodynamic system can be determined from the amount of work required for an adiabatic transformation between an initial state and a final state. Specifically, up to a constant, the change in internal energy is equal to the work needed ($\\Delta E = \\Delta W$) when the process is adiabatic (where heat intake $\\Delta Q = 0$). This relationship holds because, under adiabatic constraints, the work performed depends only on the initial and final states, not on the specific path taken.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly identifies that internal energy is determined by the work required for an adiabatic transformation between two states, up to a constant, matching all essential facts of the reference.\"}",
+   "type": "single-hop",
+   "docs": [
+    "ThermoKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k2",
+   "condition": "gold",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "Based on the provided text, for short-range interactions like van der Waals or Lennard-Jones forces, the characteristic interaction distance $d$ is approximately $10^{-10}$ meters, which corresponds to a typical atomic size. In contrast, when analyzing a neutral plasma with long-range Coulomb interactions, this distance is replaced by the Debye screening length $\\lambda_D$. Therefore, the characteristic interaction distance changes from an atomic-scale value to the larger Debye screening length in the context of a neutral plasma.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly identifies that the Debye screening length replaces the typical interaction distance when analyzing a neutral plasma, aligning with the reference answer.\"}",
+   "type": "single-hop",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k2",
+   "condition": "no-context",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "No context passages were provided for this question. Based on general physics knowledge, in a neutral plasma, the characteristic interaction distance is significantly larger than in systems with only short-range interactions due to long-range Coulomb forces mediated by collective screening effects (Debye shielding). Unlike short-range potentials that decay rapidly, the effective range in a plasma extends over the Debye length, allowing particles to interact across distances much greater than their immediate neighbors.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly identifies that the characteristic interaction distance in a neutral plasma is defined by the Debye screening length (Debye shielding), which aligns with the reference answer's statement that the Debye screening length replaces the typical interaction distance.\"}",
+   "type": "single-hop",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k2",
+   "condition": "retrieved",
+   "searchId": "sr_01M5MYYM0REGS5C0FV71HD6ZM4",
+   "retrieved": [
+    "ch_pjiaxxomyzqnatddouec",
+    "ch_nfqtlecdpkiqqe4indqg",
+    "ch_6bh65pnxn42vsr57nnaj",
+    "ch_uj4lmqcbm2hc76sjozbv",
+    "ch_ggys3wy2geyhr4c32hdi",
+    "ch_sdazxhumbwzotd4itcb7",
+    "ch_ew7y7bsyikkzli7mu62d",
+    "ch_hnbpw44ptwogtu7fymcr",
+    "ch_as66rqoxmp2yokezaykf",
+    "ch_k7e7ainre534tl2ssc5p",
+    "ch_zteemjotir5ctkz65rqt",
+    "ch_6smdq74ntbo2557mybbn",
+    "ch_esn66wlaojv6psgdehxw",
+    "ch_exfht4wbgd2i3aecnu4e",
+    "ch_hlv42nephxkob6mgyyjh",
+    "ch_gk5edqphxjzimvt5vqvu",
+    "ch_nwhodidgwmpvxxy3h7dh",
+    "ch_xg2jxkgav7syagh6qwk6",
+    "ch_oxba6n5g6tzk2risgs5i",
+    "ch_ez3z5an2okzsqlqr2lcm"
+   ],
+   "recall": {
+    "1": 1,
+    "5": 1,
+    "10": 1,
+    "20": 1
+   },
+   "answer": "Based on the text provided and fundamental statistical mechanics principles regarding plasmas, here is the analysis of how the characteristic interaction distance changes.\n\n### Analysis\n\nIn the context of the provided text (which discusses Boltzmann equations, collision terms, and length scales like $d$ or $\\lambda$), the \"characteristic interaction distance\" refers to the effective range over which particles influence one another before their motion becomes dominated by free streaming or long-range collective effects.\n\n1.  **Short-Range Interactions (Neutral Gas):**\n    *   In a neutral gas, interactions are typically modeled as short-range collisions (e.g., hard spheres or Lennard-Jones potentials).\n    *   The characteristic interaction distance is the **collision diameter** ($d$ or $\\sigma$), which is on the order of the atomic size ($\\sim 10^{-10}$ m).\n    *   Particles interact only when they physically overlap or come within this specific range. Between collisions, particles move freely (ballistic motion).\n\n2.  **Neutral Plasma:**\n    *   A plasma consists of charged particles (ions and electrons). The interaction potential between two charges is the Coulomb potential: $V(r) \\propto \\frac{1}{r}$.\n    *   Unlike short-range potentials that drop off exponentially or abruptly at distance $d$, the Coulomb potential decays slowly as a power law ($1/r$).\n    *   Consequently",
+   "judgeScore": 0.5,
+   "judgeRaw": "{\"score\": 0.5, \"rationale\": \"The answer correctly identifies the context of neutral gas vs. plasma but fails to explicitly state that the Debye screening length replaces the interaction distance in a neutral plasma as required by the reference answer.\"}",
+   "type": "single-hop",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k20",
+   "condition": "gold",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "Based on Table 1.1 provided in the context, the conjugate generalized force associated with the displacement (change) in volume for a fluid system is pressure. The table explicitly lists \"pressure\" as the force corresponding to the \"volume\" displacement for a \"Fluid\" system. Therefore, the answer is pressure.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly identifies pressure as the conjugate generalized force for volume change in a fluid system, matching the reference answer.\"}",
+   "type": "single-hop",
+   "docs": [
+    "ThermoKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k20",
+   "condition": "no-context",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "Based on general thermodynamic principles, the conjugate generalized force associated with the change in volume ($dV$) of a fluid system is pressure ($P$). This relationship arises because the mechanical work done by or on the system during a volume change is expressed as $P\\,dV$. Therefore, pressure acts as the intensive variable (force) corresponding to the extensive variable (volume).",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly identifies pressure as the conjugate generalized force for volume change, matching the reference answer's essential fact.\"}",
+   "type": "single-hop",
+   "docs": [
+    "ThermoKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k20",
+   "condition": "retrieved",
+   "searchId": "sr_01M5MZDWWEG6F4DA3E0CQVZ4SH",
+   "retrieved": [
+    "ch_w5zubrxgm66tafzst4et",
+    "ch_cmmckwxfb5w7enivrmsl",
+    "ch_blik5iknxrk5huyrm47v",
+    "ch_hkflgetd2kh2k52evpjc",
+    "ch_ts5rl3uvbgt7jdtvftk7",
+    "ch_7dqn2ijw4pck62nyctrk",
+    "ch_ncxioxtnrakyc4qqnbp3",
+    "ch_ez3z5an2okzsqlqr2lcm",
+    "ch_rz64ruf373utov225blg",
+    "ch_76rpgyw6b34nruts5eem",
+    "ch_gfa23oo2bycp6244jppa",
+    "ch_lsv7oeo4m5nbocadbd7w",
+    "ch_mwtvfp2xbzhqvcrdmwqv",
+    "ch_rhjkaothwfultq4fhtsi",
+    "ch_o6rmbfddbmtts4g3ehoj",
+    "ch_7cwqlaglgrapbhzusjlx",
+    "ch_hktmix2gu7bev24vpvcv",
+    "ch_frdianlmjm576fftosb7",
+    "ch_gsejqkd2qmttxcmoqvsl",
+    "ch_ecnkkgclcf6zyu53cfxe"
+   ],
+   "recall": {
+    "1": 1,
+    "5": 1,
+    "10": 1,
+    "20": 1
+   },
+   "answer": "Based on the thermodynamic principles described in the text (specifically relating to the Gibbs free energy and mechanical work), here is the step-by-step deduction to find the answer:\n\n1.  **Identify the Work Term:** In thermodynamics, the mechanical work done *on* a fluid system due to a change in volume ($dV$) is expressed as $-P dV$, where $P$ is the pressure. Conversely, the work done *by* the system is $P dV$.\n2.  **Identify the Conjugate Variable:** The text discusses \"conjugate coordinates\" and pairs (e.g., force $J$ and displacement $x$, or temperature $T$ and entropy $S$).\n    *   For a change in volume ($dV$), the associated energy term is internal energy ($E$) or enthalpy ($H$).\n    *   The fundamental thermodynamic relation for internal energy is $dE = T dS - P dV + \\mu dN$.\n3.  **Determine the Force:** In this equation, the variable paired with the change in volume ($dV$) is **Pressure ($P$)**.\n    *   Just as force ($J$) is conjugate to displacement ($x$), pressure acts as the generalized force conjugate to the generalized displacement of volume.\n4.  **Context from Text:** The text mentions \"mechanical work",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly identifies pressure as the conjugate generalized force associated with the change in volume, matching the reference answer.\"}",
+   "type": "single-hop",
+   "docs": [
+    "ThermoKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k21",
+   "condition": "gold",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "Based on the provided text, the change in internal energy associated with changes in particle number is expressed as chemical work, given by the term $\\bar{d}W = \\sum_i \\mu_i \\cdot dN_i$. This expression relates the variation in internal energy to the sum of the products of each species' chemical potential ($\\mu_i$) and its corresponding change in particle number ($dN_i$). The text notes that this form applies specifically when mechanical work is absent, making the grand potential the appropriate state function for such equilibrium conditions.",
+   "judgeScore": 0.5,
+   "judgeRaw": "{\"score\": 0.5, \"rationale\": \"The answer correctly identifies the variables (chemical potential and change in particle number) but contradicts the reference answer by using a summation symbol ($\\bar{d}W = \\boldsymbol{\\textstyle\\bigcup}$) instead of the specific notation provided in the reference ($S Lmu$), which constitutes a missing essential fact regarding the specific expression format.\"}",
+   "type": "single-hop",
+   "docs": [
+    "ThermoKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k21",
+   "condition": "no-context",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "Based on general thermodynamic principles, when mechanical work (such as $P\\,dV$) is absent, the change in internal energy ($dU$) due solely to variations in particle number is expressed as the sum of the chemical potentials ($\\mu_i$) multiplied by the changes in the number of particles ($dn_i$) for each species. The mathematical expression is $dU = \\sum_i \\mu_i \\, dn_i$. This relationship holds under conditions where only non-mechanical work (specifically matter transfer) contributes to the energy change.",
+   "judgeScore": 0.5,
+   "judgeRaw": "{\"score\": 0.5, \"rationale\": \"The answer correctly identifies the physical context and the general form of the equation ($dU = \\text{chemical potential} \\times \\text{change in particle number}$), but it fails to include the specific mathematical notation for chemical potentials (S Lmu) and the summation over species found in the reference answer, making a key detail missing.\"}",
+   "type": "single-hop",
+   "docs": [
+    "ThermoKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k21",
+   "condition": "retrieved",
+   "searchId": "sr_01M5MZF6SAJMFQJZY62T06CD79",
+   "retrieved": [
+    "ch_lsv7oeo4m5nbocadbd7w",
+    "ch_xfu7px6rj6u67xhusvd3",
+    "ch_bvagnfuvmdmwekpnl7mi",
+    "ch_fkyhcqafcxienjjykh4o",
+    "ch_ldvroidu46n5tqs4v57n",
+    "ch_gsejqkd2qmttxcmoqvsl",
+    "ch_ts5rl3uvbgt7jdtvftk7",
+    "ch_frdianlmjm576fftosb7",
+    "ch_iwm6wowyqiauhai2pxvo",
+    "ch_rz64ruf373utov225blg",
+    "ch_pfyd5vj3pvkykao3ryi3",
+    "ch_hl7dupxveesbkhodgebc",
+    "ch_qw53l3zno4i55zvda6dm",
+    "ch_sewmwxdflcf4g5d3lhtn",
+    "ch_tp4m7vq6co5gotfyxfm2",
+    "ch_sdazxhumbwzotd4itcb7",
+    "ch_keselpzgithjlueeerd5",
+    "ch_qhdqgbs26avpqedxptbz",
+    "ch_cwdpnovur6wapmikmkir",
+    "ch_ow4zy62cxxcszqwrcmnu"
+   ],
+   "recall": {
+    "1": 1,
+    "5": 1,
+    "10": 1,
+    "20": 1
+   },
+   "answer": "Based on context passage [0], when mechanical work is absent, the change in internal energy associated with variations in particle number is expressed as chemical work given by the formula $\\bar{d}W = \\sum_l \\mu_l \\cdot dN_l$. In this expression, $N_l$ represents the",
+   "judgeScore": 0.5,
+   "judgeRaw": "{\"score\": 0.5, \"rationale\": \"The answer correctly identifies the context and variables but fails to provide the complete mathematical expression or the final term of the formula found in the reference answer.\"}",
+   "type": "single-hop",
+   "docs": [
+    "ThermoKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k22",
+   "condition": "gold",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "Based on the provided context, the mathematical condition for stable equilibrium is that the second-order variation of entropy ($\\delta^2 S$) must be negative ($\\delta^2 S < 0$). This requirement ensures that any small change from the equilibrium state leads to a decrease in entropy. The text notes that this condition applies to the whole system as well as any part of it.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly states that the second-order variation of entropy must be negative for stable equilibrium, which matches the reference answer's requirement for a decrease in total entropy upon perturbation.\"}",
+   "type": "single-hop",
+   "docs": [
+    "ThermoKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k22",
+   "condition": "no-context",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "Based on general thermodynamic principles, a system remains in a state of stable equilibrium when its appropriate thermodynamic potential (such as internal energy, Helmholtz free energy, or Gibbs free energy) is at a local minimum with respect to all possible spontaneous variations. Mathematically, this requires that the first derivative of the potential vanishes (indicating equilibrium) and that the second derivative be positive definite (ensuring stability). Without specific context passages provided, this answer is derived from standard thermodynamic knowledge.",
+   "judgeScore": 0.5,
+   "judgeRaw": "{\"score\": 0.5, \"rationale\": \"The answer correctly identifies the requirement for a minimum in the thermodynamic potential and mentions the second derivative condition, but it fails to explicitly state that the perturbation must result in a decrease in entropy as specified in the reference answer.\"}",
+   "type": "single-hop",
+   "docs": [
+    "ThermoKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k22",
+   "condition": "retrieved",
+   "searchId": "sr_01M5MZG9X02M2TNCA5DZF9AB50",
+   "retrieved": [
+    "ch_a2zlw6nbdus2lirhxp45",
+    "ch_pe6tq2grjitk4xtqwkxt",
+    "ch_gsejqkd2qmttxcmoqvsl",
+    "ch_75u2pk7lv4776liwgo35",
+    "ch_fligytxktqx5cdscmj56",
+    "ch_sal4kuy2nmqa6edi3mru",
+    "ch_m6qasazya6coa6f2knzf",
+    "ch_zjfl2k5quimpjh7aewak",
+    "ch_bkm6jzcnihmuxfweyhmj",
+    "ch_o6rmbfddbmtts4g3ehoj",
+    "ch_2cfgdb232udarqvzz7pc",
+    "ch_6yqt37mauictz4loq67c",
+    "ch_ecrepmxyaaqeiyfmlau3",
+    "ch_vhrfehzpfjlavdgu7qlo",
+    "ch_ezu6f2nbpxruui5jcv7i",
+    "ch_r4jw6fiizobvnisl76w6",
+    "ch_ow4zy62cxxcszqwrcmnu",
+    "ch_gpnyvvsce5bibogeelfv",
+    "ch_mdnis36f5qrzjy6ryrjl",
+    "ch_lsv7oeo4m5nbocadbd7w"
+   ],
+   "recall": {
+    "1": 1,
+    "5": 1,
+    "10": 1,
+    "20": 1
+   },
+   "answer": "Based on the provided text, a thermodynamic system remains in a state of stable equilibrium if any spontaneous change leads to a decrease in entropy (for an isolated system) or an increase in internal energy/enthalpy/free energy depending on the constraints. Mathematically, this requires that the second-order variations of the relevant thermodynamic potential form a definite quadratic expression—specifically, the matrix of second derivatives must be positive definite for stability conditions involving forces and displacements. Consequently, response functions such as heat capacities and compressibilities must be positive, and the system's potential energy surface must be convex at the equilibrium point.",
+   "judgeScore": 0.5,
+   "judgeRaw": "{\"score\": 0.5, \"rationale\": \"The answer includes some correct facts about stability conditions (positive definite second derivatives, convexity) but misses the specific essential fact from the reference regarding the requirement for a 'second-order decrease in total entropy' upon perturbation of extensive coordinates.\"}",
+   "type": "single-hop",
+   "docs": [
+    "ThermoKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k24",
+   "condition": "gold",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "Based on my own knowledge, Joule's free expansion experiment demonstrates that for an ideal gas, an adiabatic process with no work done results in no change in internal energy ($\\Delta U = 0$), implying that internal energy depends solely on temperature. This observation directly supports the derived expression $E = E(T)$ (specifically $E = \\frac{3}{2}Nk_B T$ for a monatomic ideal gas) by confirming that volume and particle number do not explicitly appear in the function defining the internal energy. Consequently, the equation of state $PV \\propto T$ is consistent with this finding, as it allows the derivation that $U$ is independent of $V$.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly identifies that adiabatic expansion (specifically free expansion where work is zero) implies internal energy depends only on temperature, leading to the expression U = f(T), which aligns with all essential facts in the reference answer.\"}",
+   "type": "multi-hop",
+   "docs": [
+    "FoundationsKardar",
+    "ThermoKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k24",
+   "condition": "no-context",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "No context passages were provided, so I will answer based on general thermodynamic knowledge. The statement that adiabatic expansion leaves the temperature of an ideal gas unchanged is actually incorrect; for an ideal gas, adiabatic expansion causes the temperature to decrease because the gas does work at the expense of its internal energy. This behavior is directly related to the derived expression for internal energy $U(T, V, N)$, which for an ideal gas depends only on temperature ($U \\propto T$), meaning any change in volume during an adiabatic process must result in a corresponding change in temperature to satisfy the first law of thermodynamics.",
+   "judgeScore": 0,
+   "judgeRaw": "{\"score\": 0, \"rationale\": \"The answer contradicts the reference answer by stating that adiabatic expansion leaves temperature unchanged (which the answer claims is incorrect) and fails to mention the specific derived expression for internal energy (3Nk_B T/2) provided in the reference.\"}",
+   "type": "multi-hop",
+   "docs": [
+    "FoundationsKardar",
+    "ThermoKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k24",
+   "condition": "retrieved",
+   "searchId": "sr_01M5MZHPA72KTZR3N746H8TBGJ",
+   "retrieved": [
+    "ch_tp4m7vq6co5gotfyxfm2",
+    "ch_qhdqgbs26avpqedxptbz",
+    "ch_ez3z5an2okzsqlqr2lcm",
+    "ch_iwm6wowyqiauhai2pxvo",
+    "ch_2cfgdb232udarqvzz7pc",
+    "ch_yqi3tqqqrn753ps36vqv",
+    "ch_xdfws5qhhcmyxzagkaij",
+    "ch_bvagnfuvmdmwekpnl7mi",
+    "ch_sewmwxdflcf4g5d3lhtn",
+    "ch_ldvroidu46n5tqs4v57n",
+    "ch_bcvlty56qen6di7lnt4a",
+    "ch_to5anwfkfjn2szjtqr3x",
+    "ch_ayt77datg53amldcwxd5",
+    "ch_xfu7px6rj6u67xhusvd3",
+    "ch_bblypo5xbgjlffnux2p3",
+    "ch_dx37tkiopof6pbkhqnqe",
+    "ch_mwtvfp2xbzhqvcrdmwqv",
+    "ch_sal4kuy2nmqa6edi3mru",
+    "ch_zt4rshjhdnpw62mmvfru",
+    "ch_gnypqlwwsy3whxmdnwgh"
+   ],
+   "recall": {
+    "1": 0.5,
+    "5": 1,
+    "10": 1,
+    "20": 1
+   },
+   "answer": "Based on the provided text, the observation that an ideal gas's temperature remains unchanged during an adiabatic expansion (where no work is done and no heat is exchanged) implies that the internal energy does not change when volume changes at constant temperature. This leads to the conclusion that the internal energy of an ideal gas depends only on its temperature, expressed as $E = E(T)$, rather than on volume or particle number directly. Consequently, the derived expression for internal energy takes the simple form $E = \\frac{3}{2}Nk_B T$, which is a function solely of the particle number $N$ and temperature $T$.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly identifies that constant temperature during adiabatic expansion implies internal energy depends only on temperature, leading to the specific expression E = (3/2)Nk_B T.\"}",
+   "type": "multi-hop",
+   "docs": [
+    "FoundationsKardar",
+    "ThermoKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k25",
+   "condition": "gold",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "Based on the provided context, the final evolution equation for the reduced density $f_s$ is derived by combining three evaluated Poisson bracket terms. The first two terms correspond to the time evolution generated by the intra-group interactions ($H_{EU}^{s}$ and $H_{EU}^{N-s}$), while the third term arises from the interparticle interactions contained in $H'$. This final contribution simplifies through integration by parts and symmetry arguments into a sum of $(N-s)$ identical expressions, which is identified as the specific term involving the higher-order density $f_{s+1}$.",
+   "judgeScore": 0.5,
+   "judgeRaw": "{\"score\": 0.5, \"rationale\": \"The answer correctly identifies the three components (intra-group, remaining/intra-group of the rest, and interparticle) but fails to explicitly mention that the third term represents interactions 'between the two groups' as specified in the reference, instead vaguely attributing it to 'interparticle interactions contained in H'' without clarifying the group separation aspect.\"}",
+   "type": "multi-hop",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k25",
+   "condition": "no-context",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "Based on my own knowledge of many-body quantum mechanics (as no context was provided), the final evolution equation for the reduced density $f_s$ typically decomposes into three distinct parts: terms describing interactions within the same group of particles, terms accounting for interparticle correlations between different groups, and a specific contribution arising from the symmetrization of the sum over all particles. This structure ensures that both direct interaction effects and quantum statistical exchange effects are properly captured in the dynamics of the reduced system.",
+   "judgeScore": 0.5,
+   "judgeRaw": "{\"score\": 0.5, \"rationale\": \"The answer correctly identifies the three general categories of terms (intra-group, inter-group correlations, and symmetrization contribution) but fails to include the specific essential fact from the reference that the third term simplifies to an expression proportional to $f_{s+1}$.\"}",
+   "type": "multi-hop",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k25",
+   "condition": "retrieved",
+   "searchId": "sr_01M5MZK0DQBHKQQ20PQZPPNFY5",
+   "retrieved": [
+    "ch_r5l5e3cr4rgferi4n6dk",
+    "ch_sdazxhumbwzotd4itcb7",
+    "ch_qqqmvbf32cm6wmyf5auu",
+    "ch_y5etpzr22xjtrxccpw2h",
+    "ch_2pxyktjgd6aaz6up7pag",
+    "ch_6bh65pnxn42vsr57nnaj",
+    "ch_esn66wlaojv6psgdehxw",
+    "ch_a667xl6kmqli3nkzcaap",
+    "ch_yfwl6bonedqqi4xb3pzi",
+    "ch_aaoxuuoqor4t7ysjgiwa",
+    "ch_hl7dupxveesbkhodgebc",
+    "ch_jxyehxkdybryfglgdjeh",
+    "ch_wqt42joayrfy2qjdbwfg",
+    "ch_aqe4jcoeln26kjkwxmnh",
+    "ch_ew7y7bsyikkzli7mu62d",
+    "ch_mw2rikcskgpzm5e3jytm",
+    "ch_oeg6n6wqq7ki3kn2t3jc",
+    "ch_hktmix2gu7bev24vpvcv",
+    "ch_ayt77datg53amldcwxd5",
+    "ch_wwk3kkfw5b76tfvkrbok"
+   ],
+   "recall": {
+    "1": 0,
+    "5": 1,
+    "10": 1,
+    "20": 1
+   },
+   "answer": "Based on the text provided, there is **no explicit decomposition** of the final evolution equation for the reduced density $f_s$ into separate terms for \"intra-group interactions,\" \"interparticle interactions,\" and a \"symmetrization contribution.\"\n\nThe text describes the derivation process and the resulting equations in the following way:\n\n1.  **Governing Framework:** The evolution of few-body densities ($f_s$) is governed by the **BBGKY hierarchy**.\n2.  **Hamiltonian Components:** The system includes classical kinetic energy, an external potential $U$, and a two-body interaction $V$. The text notes that three- and higher-body interactions are neglected in the dilute gas limit.\n3.  **Derivation Steps Mentioned:**\n    *   Dropping the three-body collision term (Eq. 3.30).\n    *   Implicit coarse graining.\n    *   Replacing the two-body density $f_2$ before collision with a product of one-body densities ($f_1 f_1$) to derive the Boltzmann equation (Eq. 3.41).\n4.  **Resulting Equation:** The text presents the Boltzmann equation (and its generalization for two gases) but does not provide the specific mathematical breakdown of the collision integral or the hierarchy equation into the three specific categories you requested (\"intra-group,\" \"interparticle,\" and \"symmetrizing\").",
+   "judgeScore": 0,
+   "judgeRaw": "{\"score\": 0, \"rationale\": \"The answer explicitly states that the text does not contain the decomposition described in the reference answer, thereby contradicting the reference's assertion that such a decomposition exists.\"}",
+   "type": "multi-hop",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k28",
+   "condition": "gold",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "Physicists construct this framework by treating thermodynamics as a phenomenological description based on empirical observations, which they organize into a coherent logical and mathematical structure using state functions defined for systems in equilibrium. They acknowledge that while these laws provide useful testable relationships, they are ultimately justified only by more fundamental microscopic theories like statistical mechanics, which derive the laws from classical or quantum mechanical equations for particle collections. This approach allows for the idealization of complex systems into manageable models while recognizing that the concept of equilibrium itself can be subjective depending on the observation time scale.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer contains all essential facts from the reference: the use of state functions for equilibrium systems, the construction of a logical structure based on empirical observations, and the reliance on microscopic theories like statistical mechanics for justification.\"}",
+   "type": "topic",
+   "docs": [
+    "ThermoKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k28",
+   "condition": "no-context",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "Physicists construct this framework by defining macroscopic state functions (such as temperature, pressure, and entropy) that summarize empirical observations without detailing underlying atomic behavior. They acknowledge the limitations of purely phenomenological descriptions by deriving these macroscopic laws from statistical mechanics, which bridges the gap between microscopic particle dynamics and observable bulk properties. This approach allows for a logical consistency where macroscopic predictions emerge as statistical averages of vast numbers of microscopic degrees of freedom.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly identifies the use of state functions to summarize empirical observations, acknowledges the limitations of phenomenological descriptions by referencing statistical mechanics, and explains how macroscopic laws emerge from microscopic dynamics, matching all essential facts of the reference.\"}",
+   "type": "topic",
+   "docs": [
+    "ThermoKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k28",
+   "condition": "retrieved",
+   "searchId": "sr_01M5MZM8VPH3H5NRFBBGVJ38YK",
+   "retrieved": [
+    "ch_uwg6w7esgwzm5evutkrt",
+    "ch_jmi35czu6qykm3sp7fll",
+    "ch_s3octhhbjzvx4ukdr5mr",
+    "ch_hoznabamnawpuy4mafug",
+    "ch_uqul7qb4oqgdr4a5z3su",
+    "ch_2tlnvyubkiwldhdt2nfp",
+    "ch_oxba6n5g6tzk2risgs5i",
+    "ch_xdfws5qhhcmyxzagkaij",
+    "ch_ezu6f2nbpxruui5jcv7i",
+    "ch_zui7uuy33o6ym2rp3hxn",
+    "ch_xz6ztgonxltyq6dbfnkb",
+    "ch_nydocm2w6tt2z6y3hwly",
+    "ch_quxatfszsrsnmgehd42n",
+    "ch_4y5h34jv4ahtvwdhskg6",
+    "ch_gqpt6k6wothrtonamp3h",
+    "ch_3pofhqauifj5eqx66km4",
+    "ch_eagzdbldrbtuayooiz64",
+    "ch_g3z36qmj52fcfvfxdsx2",
+    "ch_e2hsjikyu7vdyjhjbifs",
+    "ch_pfyd5vj3pvkykao3ryi3"
+   ],
+   "recall": {
+    "1": 0,
+    "5": 0.75,
+    "10": 0.75,
+    "20": 0.75
+   },
+   "answer": "Based on the provided text, physicists construct a logical framework for macroscopic systems by bridging the gap between microscopic mechanics and macroscopic thermodynamics through a series of specific postulates, ensemble definitions, and statistical arguments. Here is how they reconcile empirical observations with theoretical limitations:\n\n### 1. Defining Macrostates via Microstates\nPhysicists start by defining the fundamental building blocks as **microstates**, which are points in phase space governed by Hamiltonian equations ($H_E$).\n*   **Constraint:** Since energy is conserved, these microstates are confined to a specific surface defined by $H_E = E$.\n*   **Postulate of Equal A Priori Probabilities:** The central assumption is that if there are no other conserved quantities, all points on this energy surface are mutually accessible. Consequently, the equilibrium probability distribution assumes a **uniform density** of microstates across this surface. This replaces an \"objective\" measure with a \"subjective\" one based on the principle that every accessible configuration is equally likely.\n\n### 2. Constructing Ensembles to Match Empirical Conditions\nTo handle different experimental scenarios (empirical observations), physicists construct specific statistical ensembles:\n*   **Microcanonical Ensemble:** Used for isolated systems where energy ($E$) is precisely specified. Here, temperature ($T$) emerges as a derived consequence rather than an input.\n*   **Canonical Ensemble:** Used when a system exchanges heat with a reservoir at constant temperature",
+   "judgeScore": 0.5,
+   "judgeRaw": "{\"score\": 0.5, \"rationale\": \"The answer includes some essential facts about defining macrostates and using ensembles but misses the reference's specific mention of idealizing systems via thermodynamic coordinates (pressure, volume, temperature) and the explicit statement that phenomenological descriptions rely on microscopic theories for full justification.\"}",
+   "type": "topic",
+   "docs": [
+    "ThermoKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k29",
+   "condition": "gold",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "Based on the provided context, kinetic theory bridges microscopic dynamics and macroscopic properties by treating a system as an ensemble of microstates within a high-dimensional phase space. It utilizes phase space density to describe mixed states probabilistically, allowing for the definition of equilibrium through the time evolution of this density rather than tracking individual particle trajectories. This statistical approach enables the derivation of macroscopic state functions from the underlying microscopic interactions and dynamics of particles.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer accurately captures all essential facts from the reference: deriving macroscopic properties from microscopic dynamics, using phase space density to replace specific trajectories via statistical ensembles, and defining equilibrium through the time evolution of this density.\"}",
+   "type": "topic",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k29",
+   "condition": "no-context",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "Kinetic theory bridges microscopic and macroscopic scales by treating a system as an ensemble of particles evolving in phase space, where the probability density function describes the distribution of states. By applying statistical mechanics principles to these ensembles, it derives macroscopic equilibrium properties like temperature and pressure from the average behaviors of individual particle dynamics. This approach connects the chaotic motion of micro-particles to stable thermodynamic observables through the concept of ergodicity and the maximization of entropy within the defined phase space volume.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly identifies the use of statistical ensembles, phase space densities (probability density function), and the derivation of macroscopic properties from microscopic dynamics, aligning with all essential facts in the reference.\"}",
+   "type": "topic",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k29",
+   "condition": "retrieved",
+   "searchId": "sr_01M5MZNHSTYC5AJGPJAF6ZPTE3",
+   "retrieved": [
+    "ch_uwg6w7esgwzm5evutkrt",
+    "ch_2tlnvyubkiwldhdt2nfp",
+    "ch_ezu6f2nbpxruui5jcv7i",
+    "ch_oxba6n5g6tzk2risgs5i",
+    "ch_xz6ztgonxltyq6dbfnkb",
+    "ch_eagzdbldrbtuayooiz64",
+    "ch_4y5h34jv4ahtvwdhskg6",
+    "ch_pfyd5vj3pvkykao3ryi3",
+    "ch_quxatfszsrsnmgehd42n",
+    "ch_6ecze2e5a4byeg3np25p",
+    "ch_fn2goeaufenzdbhibffd",
+    "ch_yvof3duvuugrnc2ox46i",
+    "ch_xinnqewam4xjtxp2ynwo",
+    "ch_s7eflkw2rujnxptpjc6i",
+    "ch_7qvygbdojwri6252tvah",
+    "ch_jxyehxkdybryfglgdjeh",
+    "ch_ew7y7bsyikkzli7mu62d",
+    "ch_uqul7qb4oqgdr4a5z3su",
+    "ch_xdfws5qhhcmyxzagkaij",
+    "ch_hl7dupxveesbkhodgebc"
+   ],
+   "recall": {
+    "1": 0,
+    "5": 0.75,
+    "10": 0.75,
+    "20": 0.75
+   },
+   "answer": "Based on the provided text, kinetic theory bridges microscopic particle dynamics with macroscopic equilibrium properties through a logical progression involving **phase space**, **statistical ensembles**, and **ergodicity**. Here is how that bridge is constructed:\n\n### 1. The Foundation: Phase Space and Microstates\nThe theory begins by defining the state of a system not by bulk variables (like pressure or temperature), but by the precise coordinates and momenta of every particle ($q_i, p_i$).\n*   **Phase Space Density:** The text notes that the \"full phase space density\" contains all information about the system. However, for macroscopic properties, we often only need reduced descriptions, such as the **one-particle distribution** (finding a particle at location $q$ with momentum $p$) or the **two-particle density**.\n*   **Microcanonical Ensemble:** When two isolated systems are brought into contact to exchange energy, the combined system explores a total phase space defined by the fixed total energy $E = E_1 + E_2$. The number of accessible microstates $\\Omega(E)$ determines the probability of finding the system in a specific configuration.\n\n### 2. Statistical Ensembles and the Second Law\nThe connection to macroscopic equilibrium relies on the statistical weight of these states:\n*   **Exponential Likelihood:** For systems with many degrees of freedom ($N \\gg 1$), the number of accessible states at an \"equilibrium",
+   "judgeScore": 0.5,
+   "judgeRaw": "{\"score\": 0.5, \"rationale\": \"The answer correctly identifies phase space density and statistical ensembles as key concepts but fails to mention the specific mechanism of deriving macroscopic laws from the time evolution of individual particles via canonical equations, which is an essential fact in the reference answer.\"}",
+   "type": "topic",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k3",
+   "condition": "gold",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "Based on the provided text, the requirement that the probability density be stationary in time is satisfied when the density is uniform on surfaces of constant energy in phase space. This specific condition corresponds directly to the fundamental postulate of statistical mechanics, which assumes that a macrostate is represented by such a uniform distribution of microstates. Consequently, this stationary state implies replacing an objective measure of probability with a subjective one within the ensemble framework.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer contains all essential facts from the reference answer regarding the uniform distribution on constant energy surfaces and the shift from objective to subjective probability measures.\"}",
+   "type": "single-hop",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k3",
+   "condition": "no-context",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "The requirement that the probability density be stationary in time is a direct consequence of the fundamental postulate of statistical mechanics, which states that for an isolated system in equilibrium, all accessible microstates compatible with fixed macroscopic constraints are equally probable. Since these constraints (such as energy, volume, and particle number) do not change over time for an isolated system, the ensemble average remains constant, implying a time-independent probability density. This stationary condition ensures that the statistical description accurately reflects the stable macroscopic properties observed in equilibrium systems.",
+   "judgeScore": 0.5,
+   "judgeRaw": "{\"score\": 0.5, \"rationale\": \"The answer correctly identifies the fundamental postulate regarding equally probable microstates but fails to include the reference answer's specific claim that this implies a 'subjective measure of probability' instead of an objective one.\"}",
+   "type": "single-hop",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k3",
+   "condition": "retrieved",
+   "searchId": "sr_01M5MYZSRCJ63SMQFP3CYCAC1M",
+   "retrieved": [
+    "ch_3pofhqauifj5eqx66km4",
+    "ch_gqpt6k6wothrtonamp3h",
+    "ch_uwg6w7esgwzm5evutkrt",
+    "ch_xz6ztgonxltyq6dbfnkb",
+    "ch_67vcjr4qafwiflysmruo",
+    "ch_esn66wlaojv6psgdehxw",
+    "ch_kmejmsfg4ce4zqlwlvjg",
+    "ch_wwk3kkfw5b76tfvkrbok",
+    "ch_yfwl6bonedqqi4xb3pzi",
+    "ch_yhaizkjbygeeewtc25eq",
+    "ch_r5l5e3cr4rgferi4n6dk",
+    "ch_fligytxktqx5cdscmj56",
+    "ch_s7eflkw2rujnxptpjc6i",
+    "ch_yeta2wlmi6w3qadkysck",
+    "ch_bkm6jzcnihmuxfweyhmj",
+    "ch_fy5hbe5squifpxmwewg7",
+    "ch_ezu6f2nbpxruui5jcv7i",
+    "ch_hl7dupxveesbkhodgebc",
+    "ch_64zbtlw4tsm5tmba5scx",
+    "ch_quxatfszsrsnmgehd42n"
+   ],
+   "recall": {
+    "1": 0,
+    "5": 1,
+    "10": 1,
+    "20": 1
+   },
+   "answer": "Based on the provided text, the requirement that the probability density be stationary in time ($\\partial \\rho_{eq}/\\partial t = 0$) is achieved by assuming the density is a function only of conserved quantities like energy (and other integrals of motion), which implies it is constant on surfaces of constant energy in phase space. This specific form, where all accessible microstates are equally likely, constitutes the fundamental postulate of statistical mechanics. Consequently, this stationary solution justifies replacing time averages with ensemble averages, provided the system explores its accessible phase space uniformly over time.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly identifies that a stationary probability density implies a uniform distribution on surfaces of constant energy and explicitly states that this constitutes the fundamental postulate of statistical mechanics, matching all essential facts in the reference.\"}",
+   "type": "single-hop",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k30",
+   "condition": "gold",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "Based on the provided context, gravity dominates in \"large\" bodies while surface tension effects become all-important at \"small\" distances; however, the text does not specify the exact length scale where this transition occurs or provide examples of its importance. Regarding surfactants, the passages explain that molecules like those in soap prefer to spread on the air-water surface rather than dissolve in water, which reduces the surface tension and alters the interface's properties.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly identifies the shift from gravity dominance at large scales to surface tension dominance at small scales and accurately describes how surfactants reduce surface tension by spreading on the interface.\"}",
+   "type": "topic",
+   "docs": [
+    "ThermoKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k30",
+   "condition": "no-context",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "At small length scales, surface tension dominates over gravity, causing liquids to form spherical droplets or climb container walls via capillary action rather than spreading out under their own weight. Surfactant molecules accumulate at the air-water interface and reduce surface tension by disrupting cohesive forces between water molecules. This reduction in surface tension allows for phenomena such as enhanced wetting, the formation of stable thin films, and the ability to create structures like foam that would otherwise collapse due to gravity.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly identifies the dominance of surface tension at small scales versus gravity at large scales and accurately describes how surfactants reduce surface tension at the air-water interface to alter physical behaviors like wetting and foam stability.\"}",
+   "type": "topic",
+   "docs": [
+    "ThermoKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k30",
+   "condition": "retrieved",
+   "searchId": "sr_01M5MZPT0FYDHMED2S485QAYKH",
+   "retrieved": [
+    "ch_6smdq74ntbo2557mybbn",
+    "ch_7tjeu2n7xc34q3q25ge6",
+    "ch_yzipb2onhdgzu2pvpbqe",
+    "ch_ecnkkgclcf6zyu53cfxe",
+    "ch_uqul7qb4oqgdr4a5z3su",
+    "ch_xdfws5qhhcmyxzagkaij",
+    "ch_cmmckwxfb5w7enivrmsl",
+    "ch_w5zubrxgm66tafzst4et",
+    "ch_m42uekxtzqwcsosptjmd",
+    "ch_blik5iknxrk5huyrm47v",
+    "ch_ofzzb26yrdrtldfie5ff",
+    "ch_ez3z5an2okzsqlqr2lcm",
+    "ch_gqpt6k6wothrtonamp3h",
+    "ch_uwg6w7esgwzm5evutkrt",
+    "ch_thx4d7uueaqadu75mumw",
+    "ch_3czjgglr2j6tyhh57iq2",
+    "ch_mdnis36f5qrzjy6ryrjl",
+    "ch_hktmix2gu7bev24vpvcv",
+    "ch_5zid4ljwcbx3uqlsva44",
+    "ch_rdhh3cs4syvnszvomjvi"
+   ],
+   "recall": {
+    "1": 0.3333333333333333,
+    "5": 1,
+    "10": 1,
+    "20": 1
+   },
+   "answer": "Based on the text provided, there is **no information** regarding surface tension, gravity, surfactants, or the physical behavior of liquids at small versus large length scales. The text focuses exclusively on:\n\n*   **Statistical Mechanics:** Liouville's theorem, ensembles (microcanonical), phase space density, and the equivalence of ensembles in the thermodynamic limit.\n*   **Hydrodynamics:** Deriving zeroth-order hydrodynamic equations from local equilibrium assumptions, calculating pressure tensors, heat flux, and entropy functions ($H_0$).\n*   **Thermodynamics:** The Gibbs phase rule, constraints on intensive parameters, and chemical potential equality between phases.\n*   **Kinetic Theory:** Boltzmann equation approximations (single collision time), velocity response functions, and one-dimensional gas confinement problems.\n\n**Conclusion:**\nThe provided text does not contain the answer to your question about surface tension or surfactants. To answer that specific question, one would need a text covering **interfacial phenomena**, **capillarity**, or **colloid science**, which are distinct topics from the equilibrium statistical mechanics and hydrodynamics covered in the excerpt you shared.\n\n*(Note: If this is a test of reading comprehension based strictly on the provided text, the correct answer is that the information is not present. If this is a general physics question unrelated to the text, the answer involves the ratio of surface tension forces ($\\gamma/L$)",
+   "judgeScore": 0,
+   "judgeRaw": "{\"score\": 0, \"rationale\": \"The answer explicitly states that the provided text contains no information regarding surface tension, gravity, or surfactants, which directly contradicts the reference answer's factual claims about these topics.\"}",
+   "type": "topic",
+   "docs": [
+    "ThermoKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k31",
+   "condition": "gold",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "Based on the provided text, applying the canonical ensemble to two-level systems and ideal gases yields results that coincide with those derived from a more elaborate microcanonical analysis. Specifically, for two-level systems, the resulting probabilities match previous equations obtained via the microcanonical ensemble. The text concludes that in the large N limit (the thermodynamic limit), both ensembles describe exactly the same physics at macroscopic and microscopic levels.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer accurately captures all essential facts from the reference: the comparison of two-level systems and ideal gases, the agreement with microcanonical results (specifically probabilities for impurities), and the conclusion that both ensembles describe identical physics in the thermodynamic limit.\"}",
+   "type": "topic",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k31",
+   "condition": "no-context",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "Based on general statistical mechanics knowledge, applying the canonical ensemble to systems like two-level impurities and ideal gases demonstrates its relationship to the microcanonical ensemble by showing that both yield identical macroscopic predictions when the system size approaches the thermodynamic limit. In this limit, the probability of finding a subsystem in a specific energy state becomes sharply peaked around the most probable value, effectively making the canonical description equivalent to the microcanonical one for the larger reservoir. This equivalence confirms that the choice of ensemble does not affect observable thermodynamic properties for large systems, provided they are in equilibrium.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly identifies that both ensembles yield identical macroscopic predictions in the thermodynamic limit, matching the essential facts regarding two-level impurities and ideal gases presented in the reference.\"}",
+   "type": "topic",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k31",
+   "condition": "retrieved",
+   "searchId": "sr_01M5MZR2E6K89PW207HV8XAWS1",
+   "retrieved": [
+    "ch_xdfws5qhhcmyxzagkaij",
+    "ch_rhazqc4n7dh5tcczcx22",
+    "ch_jzuc2qhuzfazxbl4qor5",
+    "ch_4y5h34jv4ahtvwdhskg6",
+    "ch_pqtjhxljrutkw4cwbc2s",
+    "ch_fn2goeaufenzdbhibffd",
+    "ch_eagzdbldrbtuayooiz64",
+    "ch_quxatfszsrsnmgehd42n",
+    "ch_yvof3duvuugrnc2ox46i",
+    "ch_xz6ztgonxltyq6dbfnkb",
+    "ch_o6ya3mtwxn4h3eq6illy",
+    "ch_q6l7qyxp2bcgxhb5scod",
+    "ch_xinnqewam4xjtxp2ynwo",
+    "ch_qw7cjnvs7yuzysaqzmsv",
+    "ch_a2r5ghqi5tqsyfalsq6s",
+    "ch_6ecze2e5a4byeg3np25p",
+    "ch_g3z36qmj52fcfvfxdsx2",
+    "ch_gnypqlwwsy3whxmdnwgh",
+    "ch_ssuubw7lnjyz5f6qtibp",
+    "ch_ezu6f2nbpxruui5jcv7i"
+   ],
+   "recall": {
+    "1": 0.3333333333333333,
+    "5": 0.6666666666666666,
+    "10": 0.6666666666666666,
+    "20": 0.6666666666666666
+   },
+   "answer": "Based on the text provided, the application of the canonical ensemble to specific systems like **two-level impurities** and **ideal gases** demonstrates its relationship to the **microcanonical ensemble** through the concept of **equivalence in the thermodynamic limit** ($N \\gg 1$).\n\nHere is how this relationship is demonstrated for each system:\n\n### 1. The General Principle: Equivalence via Probability Concentration\nThe text establishes that while the microcanonical ensemble describes an isolated system with fixed energy $E$, the canonical ensemble describes a system exchanging heat with a reservoir at temperature $T$.\n*   **Microcanonical View:** Energy is strictly fixed; all accessible microstates on the surface $H=E$ are equally probable.\n*   **Canonical View:** Energy fluctuates, and the probability of finding the system with energy $E$ is given by the Boltzmann factor $P(E) \\propto e^{-\\beta E}$.\n\nThe text argues that in the limit of many degrees of freedom ($N \\gg 1$), the probability distribution $P(E)$ becomes **sharply peaked** around a most probable energy $E^*$. Consequently, the mean energy $\\langle E \\rangle$ and the most probable energy $E^*$ become interchangeable. This implies that for large systems, the statistical predictions of the canonical ensemble (fluctuating energy) converge to those of the microcanonical ensemble (fixed energy).\n\n### 2. Application",
+   "judgeScore": 0.5,
+   "judgeRaw": "{\"score\": 0.5, \"rationale\": \"The answer correctly identifies the systems and the concept of equivalence in the thermodynamic limit but fails to explicitly state that the resulting probabilities and thermodynamic quantities match those derived via microcanonical analysis for these specific systems as required by the reference.\"}",
+   "type": "topic",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k32",
+   "condition": "gold",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "The zeroth-order hydrodynamic approximation fails to describe the evolution toward global equilibrium because it predicts that the local entropy remains unchanged along stream-lines, thereby preventing the gas from reaching a true global equilibrium state which requires an increase in entropy. In this simplified model, shear flow and entropy modes persist indefinitely without relaxing, while sound modes exhibit undamped oscillations rather than decaying to equilibrium.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer accurately captures all essential facts from the reference: the failure due to constant local entropy preventing global equilibrium, and the persistence of shear/entropy flows and undamped sound waves.\"}",
+   "type": "topic",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k32",
+   "condition": "no-context",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "The zeroth-order hydrodynamic approximation fails to describe evolution toward global equilibrium because it neglects dissipative processes like viscosity and heat conduction, which are necessary for entropy production. Consequently, in this simplified model, non-dissipative flow modes such as ideal fluid translations (center-of-mass motion) and rotations persist indefinitely without decaying.",
+   "judgeScore": 0.5,
+   "judgeRaw": "{\"score\": 0.5, \"rationale\": \"The answer correctly identifies the failure to reach equilibrium due to neglecting dissipative processes but misses the specific essential facts regarding shear flows, stationary density/temperature variations, and undamped longitudinal sound waves mentioned in the reference.\"}",
+   "type": "topic",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k32",
+   "condition": "retrieved",
+   "searchId": "sr_01M5MZSB04JVZAA29NXV6TWCYG",
+   "retrieved": [
+    "ch_jugraw6rtxctsmyzsudq",
+    "ch_m42uekxtzqwcsosptjmd",
+    "ch_t2xzf2ith7cfethegjzb",
+    "ch_hktmix2gu7bev24vpvcv",
+    "ch_arj3i4dsws3vk7smqxon",
+    "ch_thx4d7uueaqadu75mumw",
+    "ch_as66rqoxmp2yokezaykf",
+    "ch_hlv42nephxkob6mgyyjh",
+    "ch_gk5edqphxjzimvt5vqvu",
+    "ch_ecnkkgclcf6zyu53cfxe",
+    "ch_75425wyzvmotnfdjk6wm",
+    "ch_zjfl2k5quimpjh7aewak",
+    "ch_3czjgglr2j6tyhh57iq2",
+    "ch_wwk3kkfw5b76tfvkrbok",
+    "ch_7nacjwg3pn32kh53upow",
+    "ch_ezu6f2nbpxruui5jcv7i",
+    "ch_nzuiau7p5nbxvnul6k3t",
+    "ch_vhrfehzpfjlavdgu7qlo",
+    "ch_fy5hbe5squifpxmwewg7",
+    "ch_vsxal6v45krdpyrmh3px"
+   ],
+   "recall": {
+    "1": 0.25,
+    "5": 1,
+    "10": 1,
+    "20": 1
+   },
+   "answer": "Based on the text provided, here is the explanation regarding the limitations of the zeroth-order hydrodynamic approximation:\n\n### Why the Zeroth-Order Approximation Fails to Describe Evolution Toward Equilibrium\n\nThe zeroth-order hydrodynamic approximation fails to describe the system's evolution toward global equilibrium because it **lacks dissipative mechanisms**.\n\nIn this simplified model (often referred to as Euler hydrodynamics), the equations of motion are derived assuming local equilibrium without accounting for transport processes like viscosity or thermal conduction. Consequently:\n1.  **No Viscous Forces:** There are no off-diagonal terms in the pressure tensor to oppose shear flows.\n2.  **No Heat Flux:** There is no mechanism (like Fourier's law) to generate a heat flow that smooths out temperature gradients.\n\nBecause these relaxation mechanisms are absent, any initial non-equilibrium state (such as a velocity gradient or a temperature difference) does not decay over time within this approximation. The system remains \"frozen\" in its initial non-equilibrium configuration indefinitely rather than relaxing to a uniform, stationary equilibrium state.\n\n### Specific Flow Modes That Persist Indefinitely\n\nDue to the lack of dissipation in the zeroth-order model, the following modes persist indefinitely:\n\n1.  **Shear Flows:** Any velocity gradient (shearing of the fluid) leads to a persistent flow rather than diffusive relaxation. Without viscosity ($\\mu$), there is no force proportional to $\\",
+   "judgeScore": 0,
+   "judgeRaw": "{\"score\": 0, \"rationale\": \"The answer fails to mention that local entropy remains constant along stream-lines and incorrectly attributes the persistence of modes solely to a lack of dissipative mechanisms rather than the specific undamped oscillations of longitudinal sound waves mentioned in the reference.\"}",
+   "type": "topic",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k4",
+   "condition": "gold",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "In this system with discrete energy levels, microstates are enumerated by counting specific combinations of occupation numbers (0 or 1) for each impurity. This differs from Liouville's theorem, which applies to Hamiltonian evolution in a continuous phase space where states are not discrete. The text notes that while the enumeration of these discrete states is less ambiguous, the dynamics ensuring all such states are equally accessed remains unspecified at this stage.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly identifies that microstates in the system are discrete (counting occupation numbers) while Liouville's theorem applies to continuous phase space, matching all essential facts of the reference answer.\"}",
+   "type": "single-hop",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k4",
+   "condition": "no-context",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "In a system of $N$ impurities with discrete energy levels, the enumeration of microstates involves counting distinct quantum configurations within a fixed Hilbert space, whereas Liouville's theorem applies to continuous classical phase space where microstates are defined by points evolving under Hamiltonian dynamics. The key difference is that the discrete nature of the impurity system precludes the use of continuous phase-space volume conservation, as there is no continuum of states between energy levels to preserve via a flow. Consequently, statistical mechanics for such systems relies on combinatorial counting (e.g., Fermi-Dirac or Bose-Einstein statistics) rather than the classical derivation of entropy based on phase space volume invariance.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly identifies that the impurity system has discrete microstates while Liouville's theorem applies to continuous phase space, matching all essential facts of the reference answer without contradiction.\"}",
+   "type": "single-hop",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k4",
+   "condition": "retrieved",
+   "searchId": "sr_01M5MZ10RHCP2FVS0WFPMHKDH0",
+   "retrieved": [
+    "ch_g3z36qmj52fcfvfxdsx2",
+    "ch_qw7cjnvs7yuzysaqzmsv",
+    "ch_rhazqc4n7dh5tcczcx22",
+    "ch_e2hsjikyu7vdyjhjbifs",
+    "ch_kmejmsfg4ce4zqlwlvjg",
+    "ch_gqpt6k6wothrtonamp3h",
+    "ch_yhaizkjbygeeewtc25eq",
+    "ch_uwg6w7esgwzm5evutkrt",
+    "ch_7dqn2ijw4pck62nyctrk",
+    "ch_3pofhqauifj5eqx66km4",
+    "ch_76iktpldhtaqjgvpac3k",
+    "ch_76rpgyw6b34nruts5eem",
+    "ch_nydocm2w6tt2z6y3hwly",
+    "ch_xinnqewam4xjtxp2ynwo",
+    "ch_yvof3duvuugrnc2ox46i",
+    "ch_xdfws5qhhcmyxzagkaij",
+    "ch_jzuc2qhuzfazxbl4qor5",
+    "ch_xz6ztgonxltyq6dbfnkb",
+    "ch_gnypqlwwsy3whxmdnwgh",
+    "ch_yeta2wlmi6w3qadkysck"
+   ],
+   "recall": {
+    "1": 1,
+    "5": 1,
+    "10": 1,
+    "20": 1
+   },
+   "answer": "Based on the text provided, here is the comparison between the enumeration of microstates for a system of $N$ two-level impurities and the application of Liouville's theorem in continuous phase space:\n\n### 1. System of $N$ Two-Level Impurities (Discrete Systems)\n*   **Nature of States:** The system consists of discrete energy levels (ground state and excited state). As noted in the text, \"Two-level systems have an upper bound on their energy.\"\n*   **Enumeration Method:** Because the particles (impurities) are distinguishable by their locations within the solid matrix, there is **no need for the additional factor of $N!$** to correct for indistinguishability. The number of microstates ($\\Omega$) is calculated based on the specific arrangement of spins or impurities in these discrete levels.\n*   **Entropy Behavior:** The text highlights a unique property where increasing energy leads to a *decrease* in the number of accessible microstates near the maximal energy limit. This results in **negative temperatures**, where adding heat actually cools the system (increases order).\n*   **Phase Space Structure:** The phase space is effectively discrete or restricted to specific surfaces defined by the quantized energy levels, rather than being a continuous volume.\n\n### 2. Application of Liouville's Theorem (Continuous Phase Space)\n*   **Nature of States:** This applies to classical systems where coordinates ($q$",
+   "judgeScore": 0.5,
+   "judgeRaw": "{\"score\": 0.5, \"rationale\": \"The answer correctly identifies the discrete nature of microstates versus continuous phase space but fails to complete the comparison regarding Liouville's theorem and includes extra details about negative temperatures not present in the reference.\"}",
+   "type": "single-hop",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k5",
+   "condition": "gold",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "Based on the provided context, the normalization factor $\\Omega$ (representing the number of accessible microstates) is expressed as the binomial coefficient for choosing $N_1$ excited levels among the available $N$ impurities. This count of excited impurities, $N_1$, is explicitly defined in the text as the ratio of the total energy $E$ to the single-particle energy spacing $\\epsilon$ (where $N_1 = E/\\epsilon$). Therefore, the number of microstates is given by the binomial coefficient $\\binom{N}{N_1}$ where $N_1 = E/\\epsilon$.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly states that the number of accessible microstates is expressed as a binomial coefficient and explicitly defines the count of excited impurities as the ratio of total energy to single-particle energy spacing, matching all essential facts in the reference.\"}",
+   "type": "single-hop",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k5",
+   "condition": "no-context",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "Based on general statistical mechanics principles, the number of accessible microstates $\\Omega$ for a system of $N$ non-interacting impurities with $n$ excited states is expressed using the binomial coefficient as $\\Omega = \\binom{N}{n}$. When the count of excited impurities $n$ is determined by the ratio of the total energy $E$ to the single-particle energy spacing $\\epsilon$ (i.e., $n = E/\\epsilon$), this relationship is substituted directly into the binomial formula. Therefore, the expression becomes $\\Omega = \\binom{N}{E/\\epsilon}$, assuming $E/\\epsilon$ yields an integer value consistent with the discrete nature of the system.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly identifies the binomial coefficient formula, defines the variables (total energy, energy spacing, number of impurities), and explicitly states that the count of excited impurities is the ratio of total energy to energy spacing, matching all essential facts in the reference.\"}",
+   "type": "single-hop",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k5",
+   "condition": "retrieved",
+   "searchId": "sr_01M5MZ2B2BYWQ5RNXJP9F4RKTR",
+   "retrieved": [
+    "ch_qw7cjnvs7yuzysaqzmsv",
+    "ch_e2hsjikyu7vdyjhjbifs",
+    "ch_g3z36qmj52fcfvfxdsx2",
+    "ch_rhazqc4n7dh5tcczcx22",
+    "ch_6ecze2e5a4byeg3np25p",
+    "ch_fn2goeaufenzdbhibffd",
+    "ch_jahilx7zsvy5nn4kp2js",
+    "ch_yvof3duvuugrnc2ox46i",
+    "ch_qw53l3zno4i55zvda6dm",
+    "ch_x4e3chttmmxild76kthp",
+    "ch_eagzdbldrbtuayooiz64",
+    "ch_gnypqlwwsy3whxmdnwgh",
+    "ch_4y5h34jv4ahtvwdhskg6",
+    "ch_derapnb7r22ilgpn4l2j",
+    "ch_kmejmsfg4ce4zqlwlvjg",
+    "ch_xz6ztgonxltyq6dbfnkb",
+    "ch_ggyktk4kp3kw5ovwd6aq",
+    "ch_a2r5ghqi5tqsyfalsq6s",
+    "ch_pfyd5vj3pvkykao3ryi3",
+    "ch_keselpzgithjlueeerd5"
+   ],
+   "recall": {
+    "1": 1,
+    "5": 1,
+    "10": 1,
+    "20": 1
+   },
+   "answer": "Based on context passage [0], the number of accessible microstates (denoted as $\\Omega$) for a system of $N$ impurities with $N_1 = E/\\Delta\\epsilon$ excited impurities is expressed by the binomial coefficient $\\binom{N}{N_1}$. This represents the number of ways to choose which $N_1$ levels out of the available $N$ are in the excited state. The text notes that this formula applies specifically when the defects can be distinguished, such as impurities trapped in a solid matrix where locations distinguish them (passage [11]).",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly states that the number of accessible microstates is given by the binomial coefficient and explicitly defines the number of excited impurities as the total energy divided by the energy spacing, matching all essential facts in the reference.\"}",
+   "type": "single-hop",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k6",
+   "condition": "gold",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "Based on the provided text, the densities of particle pairs ($f_2$) before and after a collision are related by streaming rather than being treated identically. Immediately after a collision, the outgoing particles possess specific momenta ($\\mathbf{p}_1', \\mathbf{p}_2'$) determined by the impact vector $\\mathbf{b}$ and the incoming momenta, which then evolve into the observed distribution as collisions tend to randomize momenta toward isotropy. The text explicitly notes that a naive substitution assuming uncorrelated particles yields zero, highlighting that the pre- and post-collision densities must be handled differently due to this streaming relationship.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly identifies that densities are related by streaming and that incoming momenta correspond to collisions at a specific impact parameter to produce outgoing momenta, matching all essential facts of the reference.\"}",
+   "type": "single-hop",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k6",
+   "condition": "no-context",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "I do not have access to specific context passages regarding this question, so I must rely on general physical principles. Immediately after a collision, the local density of particle pairs typically exhibits a sharp increase due to the conservation of momentum and energy concentrating particles in a smaller volume or creating transient bound states. The subsequent evolution depends heavily on the specific interaction potential and whether the system is isolated or coupled to an environment, which are details not provided here. Without more specific context about the type of collision or system being studied, I cannot describe the precise functional form of this density evolution.",
+   "judgeScore": 0,
+   "judgeRaw": "{\"score\": 0, \"rationale\": \"The answer explicitly states it cannot provide the specific facts requested and relies on general principles rather than the streaming relationship described in the reference.\"}",
+   "type": "single-hop",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "k6",
+   "condition": "retrieved",
+   "searchId": "sr_01M5MZ3KFZEZ1XECNW9RR9XV5C",
+   "retrieved": [
+    "ch_sdazxhumbwzotd4itcb7",
+    "ch_mw2rikcskgpzm5e3jytm",
+    "ch_pcslzllj7a4cibfdfznm",
+    "ch_r5l5e3cr4rgferi4n6dk",
+    "ch_ew7y7bsyikkzli7mu62d",
+    "ch_esn66wlaojv6psgdehxw",
+    "ch_2pxyktjgd6aaz6up7pag",
+    "ch_yfwl6bonedqqi4xb3pzi",
+    "ch_op3rj7ilcalxcxn6ntsl",
+    "ch_6bh65pnxn42vsr57nnaj",
+    "ch_oeg6n6wqq7ki3kn2t3jc",
+    "ch_zt4rshjhdnpw62mmvfru",
+    "ch_rqn5zekqclhhwygztchh",
+    "ch_a667xl6kmqli3nkzcaap",
+    "ch_jxyehxkdybryfglgdjeh",
+    "ch_w5zwrzdmtieelzzbfkia",
+    "ch_hl7dupxveesbkhodgebc",
+    "ch_as66rqoxmp2yokezaykf",
+    "ch_hnbpw44ptwogtu7fymcr",
+    "ch_n5e2r3sx2qilgpssvcvw"
+   ],
+   "recall": {
+    "1": 1,
+    "5": 1,
+    "10": 1,
+    "20": 1
+   },
+   "answer": "Based on the text provided, here is the analysis of how the densities of particle pairs evolve immediately after a collision event:\n\n**1. The Nature of the Collision Term**\nThe evolution of the one-particle distribution function $f_1$ (and by extension, the underlying pair correlations) is governed by the collision term on the right-hand side of the Boltzmann equation (Eq. 3.41). This term represents a sudden alteration in probability due to collisions.\n\n**2. The Mechanism of Evolution**\nAccording to the heuristic explanation in section [15]:\n*   **Removal:** A particle with momentum $\\mathbf{p}_1$ at position $\\mathbf{q}_1$ is removed from this state if it collides with another particle having momentum $\\mathbf{p}_2$. The probability of this specific removal event depends on the differential cross-section, the relative velocity (flux), and the joint probability of finding the two particles ($f_1(\\mathbf{p}_1)f_1(\\mathbf{p}_2)$).\n*   **Addition:** Conversely, a particle suddenly appears in the state $(\\mathbf{p}_1, \\mathbf{q}_1)$ as a result of an inverse collision process. In this scenario, two particles initially having momenta $\\mathbf{p}'_1$ and $\\mathbf{p}'_2$ collide and scatter into the new",
+   "judgeScore": 0.5,
+   "judgeRaw": "{\"score\": 0.5, \"rationale\": \"The answer explains the mechanism of density evolution (removal and addition) but fails to include the essential fact from the reference regarding the relationship between incoming and outgoing momenta via streaming at a specific impact parameter.\"}",
+   "type": "single-hop",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "kr21",
+   "condition": "gold",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "In the thermodynamic limit where $N \\to \\infty^2$, the probability distribution of energy in the canonical ensemble becomes so sharply peaked around the average energy that the two ensembles become essentially indistinguishable. Consequently, for any finite system they are distinct, but this distinction vanishes as the system size approaches infinity.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly states that in the thermodynamic limit, the canonical energy distribution becomes sharply peaked around the average energy, making the ensembles indistinguishable, which matches all essential facts of the reference answer.\"}",
+   "type": "single-hop",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "kr21",
+   "condition": "no-context",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "In the standard thermodynamic limit where the number of particles $N$ approaches infinity (while density remains constant), the canonical and microcanonical ensembles become equivalent, meaning they yield identical macroscopic predictions. The specific phrasing \"infinity squared\" is non-standard in statistical mechanics; typically, equivalence holds simply as $N \\to \\infty$, provided the system size scales proportionally. If you are referring to a scenario where volume or other parameters scale differently than usual, please clarify the scaling conditions, as ensemble equivalence can break down for systems with long-range interactions or specific boundary conditions even in large limits.",
+   "judgeScore": 0.5,
+   "judgeRaw": "{\"score\": 0.5, \"rationale\": \"The answer correctly identifies that the ensembles become equivalent but fails to include the specific essential fact from the reference regarding the probability distribution becoming sharply peaked around the average energy.\"}",
+   "type": "single-hop",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "kr21",
+   "condition": "retrieved",
+   "searchId": "sr_01M5MZTJ1YMYTNJXF4BTFNWDRR",
+   "retrieved": [
+    "ch_jzuc2qhuzfazxbl4qor5",
+    "ch_pqtjhxljrutkw4cwbc2s",
+    "ch_eagzdbldrbtuayooiz64",
+    "ch_4y5h34jv4ahtvwdhskg6",
+    "ch_xinnqewam4xjtxp2ynwo",
+    "ch_xdfws5qhhcmyxzagkaij",
+    "ch_7qvygbdojwri6252tvah",
+    "ch_quxatfszsrsnmgehd42n",
+    "ch_6ecze2e5a4byeg3np25p",
+    "ch_fn2goeaufenzdbhibffd",
+    "ch_m6qasazya6coa6f2knzf",
+    "ch_q6l7qyxp2bcgxhb5scod",
+    "ch_yvof3duvuugrnc2ox46i",
+    "ch_xz6ztgonxltyq6dbfnkb",
+    "ch_derapnb7r22ilgpn4l2j",
+    "ch_x4e3chttmmxild76kthp",
+    "ch_kmejmsfg4ce4zqlwlvjg",
+    "ch_rhazqc4n7dh5tcczcx22",
+    "ch_fkyhcqafcxienjjykh4o",
+    "ch_ssuubw7lnjyz5f6qtibp"
+   ],
+   "recall": {
+    "1": 1,
+    "5": 1,
+    "10": 1,
+    "20": 1
+   },
+   "answer": "Based on the text provided, specifically **Section 14**, here is what happens to the relationship between the canonical and microcanonical ensembles in the thermodynamic limit ($N \\to \\infty$):\n\n**The two ensembles become equivalent.**\n\nIn the thermodynamic limit where $N \\propto N^2$ (approaching infinity), the difference between defining the microcanonical ensemble on a strict energy surface versus a thin shell of thickness $C$ becomes **negligible**.\n\nHere are the specific details from the text supporting this:\n*   **Volume vs. Surface:** The normalization factor for the microcanonical ensemble can be defined as the area of the constant energy surface ($\\Omega$) or the volume of a shell around that surface ($\\Omega'$).\n*   **Exponential Scaling:** Since $\\Omega$ typically depends exponentially on $E$, the ratio between the shell volume and the surface area approaches unity in the limit of large $N$.\n*   **Interchangeability:** The text explicitly states: \"...the difference between the surface and volume of the shell is negligible in the $E \\propto N \\leftrightarrow infinity^2$ limit, and we can use $\\Omega$ and $\\Omega'$ interchangeably.\"\n\nThis mathematical equivalence implies that for macroscopic systems (large $N$), the predictions made by the canonical ensemble (where energy fluctuates) converge to those of the microcanonical ensemble (where energy is fixed). The fluctuations in",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly identifies that the ensembles become equivalent in the thermodynamic limit and explains this via the negligible difference between surface and volume definitions, which aligns with the reference answer's description of the probability becoming sharply peaked.\"}",
+   "type": "single-hop",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "kr211",
+   "condition": "gold",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "Based on the provided context, kinetic theory aims to derive macroscopic laws by starting from the classical equations of motion of particles, effectively addressing how systems evolve. In contrast, equilibrium statistical mechanics focuses on deriving properties of an ensemble at equilibrium using probabilities and Liouville's theorem, explicitly leaving out the question of how systems evolve to reach that state of stability. Therefore, the key difference in their scope is that kinetic theory incorporates the dynamical path to equilibrium, whereas traditional equilibrium statistical methods do not.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly identifies that kinetic theory addresses the dynamical evolution of systems while equilibrium statistical mechanics focuses on probabilities at equilibrium and excludes the path to stability, matching all essential facts in the reference.\"}",
+   "type": "multi-hop",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "kr211",
+   "condition": "no-context",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "Based on general knowledge, kinetic theory bridges microscopic particle dynamics and macroscopic laws by explicitly tracking the evolution of particle distributions over time, thereby accounting for non-equilibrium processes and the paths taken toward stability. In contrast, equilibrium statistical mechanics primarily focuses on deriving macroscopic properties from ensemble averages at thermodynamic equilibrium, often neglecting the specific dynamical history or transient paths required to reach that state.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer accurately reflects the reference by stating that kinetic theory accounts for particle dynamics and paths to stability, while equilibrium statistical mechanics focuses on ensemble averages at equilibrium and neglects the dynamical history.\"}",
+   "type": "multi-hop",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "kr211",
+   "condition": "retrieved",
+   "searchId": "sr_01M5MZXZ7XJE9TTK86G9XZNY6N",
+   "retrieved": [
+    "ch_2tlnvyubkiwldhdt2nfp",
+    "ch_uwg6w7esgwzm5evutkrt",
+    "ch_ezu6f2nbpxruui5jcv7i",
+    "ch_nydocm2w6tt2z6y3hwly",
+    "ch_uqul7qb4oqgdr4a5z3su",
+    "ch_hoznabamnawpuy4mafug",
+    "ch_s3octhhbjzvx4ukdr5mr",
+    "ch_xz6ztgonxltyq6dbfnkb",
+    "ch_64zbtlw4tsm5tmba5scx",
+    "ch_xinnqewam4xjtxp2ynwo",
+    "ch_jmi35czu6qykm3sp7fll",
+    "ch_pfyd5vj3pvkykao3ryi3",
+    "ch_quxatfszsrsnmgehd42n",
+    "ch_zui7uuy33o6ym2rp3hxn",
+    "ch_lsv7oeo4m5nbocadbd7w",
+    "ch_3pofhqauifj5eqx66km4",
+    "ch_4y5h34jv4ahtvwdhskg6",
+    "ch_ow4zy62cxxcszqwrcmnu",
+    "ch_gsejqkd2qmttxcmoqvsl",
+    "ch_ts5rl3uvbgt7jdtvftk7"
+   ],
+   "recall": {
+    "1": 0.5,
+    "5": 1,
+    "10": 1,
+    "20": 1
+   },
+   "answer": "Based on the text provided and fundamental principles of statistical mechanics, here is an analysis of how **kinetic theory** and **equilibrium statistical mechanics** differ in their scope when deriving macroscopic laws from microscopic dynamics:\n\n### 1. Equilibrium Statistical Mechanics (The Scope of States)\nAs described in the provided text (specifically sections [15] and [16]), equilibrium statistical mechanics focuses on the **properties of the system at a specific instant of time** once it has reached a stable state.\n\n*   **Focus:** It deals with \"stationary densities\" ($\\rho_{eq}$) and macrostates defined by intensive parameters (Temperature $T$, Chemical Potential $\\mu$, etc.).\n*   **Neglect of Path:** The text explicitly notes that this framework answers the question of *what* the equilibrium state is, but implicitly assumes the system has already reached it. It does not inherently describe *how* the system got there or the time evolution leading to stability.\n*   **Methodology:** It uses ensembles (Microcanonical, Canonical, Grand Canonical) to calculate probabilities of microstates based on constraints like fixed energy or temperature. It relies on the assumption that time averages are equivalent to ensemble averages (ergodicity), effectively bypassing the dynamic history.\n\n### 2. Kinetic Theory (The Scope of Dynamics and Paths)\nWhile the provided text focuses heavily on equilibrium ensembles, **kinetic theory** addresses the specific gap mentioned",
+   "judgeScore": 0.5,
+   "judgeRaw": "{\"score\": 0.5, \"rationale\": \"The answer correctly identifies that equilibrium statistical mechanics neglects the path to stability but fails to complete the comparison by not defining the scope of kinetic theory regarding the dynamics and paths, cutting off mid-sentence.\"}",
+   "type": "multi-hop",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "kr212",
+   "condition": "gold",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "Based on the provided text, the principle of minimizing enthalpy relates to mechanical equilibrium by formulating the observation that stable equilibrium is achieved when the net potential energy of the system plus the external agent is minimized. In the context of the spring-mass system described, this minimization corresponds to the state where the internally generated force (derived from the spring's potential energy) balances the external force exerted by gravity. Therefore, minimizing enthalpy effectively describes the condition where these opposing forces reach equilibrium under constant external force and no heat exchange.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer accurately restates all essential facts from the reference answer regarding the minimization of net potential energy and the balance between internal and external forces in the spring-mass system.\"}",
+   "type": "multi-hop",
+   "docs": [
+    "ThermoKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "kr212",
+   "condition": "no-context",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "Based on general thermodynamic principles rather than specific provided context, the minimization of enthalpy (H) at constant pressure and entropy corresponds to a state of minimum potential energy. In a mechanical system like a spring-mass setup, this principle manifests as the balance between internal restoring forces (derived from the gradient of the potential energy/enthalpy) and external applied forces. Therefore, the condition where an internally generated force balances an external force is the macroscopic expression of the system having reached a state that minimizes its enthalpy.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly identifies that minimizing enthalpy corresponds to a state where internal forces balance external forces in a mechanical system, matching the essential facts of the reference answer.\"}",
+   "type": "multi-hop",
+   "docs": [
+    "ThermoKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "kr212",
+   "condition": "retrieved",
+   "searchId": "sr_01M5MZZ7VJX40MX3QCRBWXNP87",
+   "retrieved": [
+    "ch_sal4kuy2nmqa6edi3mru",
+    "ch_frdianlmjm576fftosb7",
+    "ch_ldvroidu46n5tqs4v57n",
+    "ch_ts5rl3uvbgt7jdtvftk7",
+    "ch_gsejqkd2qmttxcmoqvsl",
+    "ch_dz44lxrmwtufntebek74",
+    "ch_bkm6jzcnihmuxfweyhmj",
+    "ch_ncxioxtnrakyc4qqnbp3",
+    "ch_olxgm6wnger3oia7arm7",
+    "ch_o6rmbfddbmtts4g3ehoj",
+    "ch_cmmckwxfb5w7enivrmsl",
+    "ch_ayt77datg53amldcwxd5",
+    "ch_lsv7oeo4m5nbocadbd7w",
+    "ch_2cfgdb232udarqvzz7pc",
+    "ch_rz64ruf373utov225blg",
+    "ch_m75giujoifgwmh324oq2",
+    "ch_2tspzrjv5r4v6evsoids",
+    "ch_ujt7kaqen3c6q2ghsxsy",
+    "ch_xinnqewam4xjtxp2ynwo",
+    "ch_a2zlw6nbdus2lirhxp45"
+   ],
+   "recall": {
+    "1": 0.5,
+    "5": 1,
+    "10": 1,
+    "20": 1
+   },
+   "answer": "Based on the text provided and fundamental thermodynamic principles, here is the explanation of how the principle of minimizing enthalpy relates to mechanical equilibrium in a spring-mass system.\n\n### 1. The Mechanical Equilibrium Condition\nIn the context of a spring-mass system (or any system with an internal force like pressure or tension acting against an external constraint):\n*   **Internal Force:** Generated by the system itself (e.g., the restoring force of a compressed spring, $F_{int} = -kx$, or the pressure of a gas).\n*   **External Force:** Applied to the system from the surroundings (e.g., an external weight pressing on a piston or an external tension holding a spring).\n*   **Equilibrium Condition:** Mechanical equilibrium is reached when these forces balance each other:\n    $$F_{int} = F_{ext}$$\n    In thermodynamic terms, this means the generalized force inside the system equals the generalized force outside the system.\n\n### 2. The Role of Enthalpy ($H$)\nEnthalpy is defined as $H = E + PV$, where $E$ is internal energy, $P$ is pressure, and $V$ is volume. It is the appropriate thermodynamic potential for processes occurring at **constant external pressure** (isobaric conditions).\n\nThe differential change in enthalpy is given by:\n$$dH = dE + PdV + VdP",
+   "judgeScore": 0,
+   "judgeRaw": "{\"score\": 0, \"rationale\": \"The answer fails to state the essential fact that minimizing enthalpy leads to a state where the internally generated force balances the external force, instead cutting off mid-sentence without completing the explanation.\"}",
+   "type": "multi-hop",
+   "docs": [
+    "ThermoKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "kr213",
+   "condition": "gold",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "Based on the provided text, the artificiality of tracking identical particles in classical mechanics arises because computers can easily distinguish exchanged particles, requiring an additional postulate for indistinguishability; quantum mechanics resolves this by enforcing proper symmetrization of the wave function, which naturally yields the necessary N! factor. However, this resolution does not guarantee the elimination of degeneracy issues at low temperatures in interacting systems because there is no general proof that the third law (which restricts ground state degeneracy) holds for such systems, and the onset of quantum effects that break classical degeneracy is system-specific rather than universal.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer accurately reflects all essential facts from the reference answer regarding the artificiality of classical tracking, the resolution via symmetrization/N! factor, and the lack of general proof for removing degeneracy in interacting systems at low temperatures.\"}",
+   "type": "multi-hop",
+   "docs": [
+    "FoundationsKardar",
+    "ThermoKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "kr213",
+   "condition": "no-context",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "In quantum mechanics, the requirement that wave functions be symmetric (for bosons) or antisymmetric (for fermions) under particle exchange eliminates the artificial distinction between identical particles by enforcing indistinguishability directly into the state description, thereby resolving the overcounting problem inherent in classical statistical mechanics. However, this resolution does not automatically eliminate degeneracy issues at low temperatures in interacting systems because strong interactions can lead to phenomena like Bose-Einstein condensation or Fermi liquid formation where the simple non-interacting ideal gas models fail, and complex many-body correlations may still result in macroscopic occupation of states or other forms of degeneracy that require more sophisticated treatments beyond mere symmetrization.",
+   "judgeScore": 0.5,
+   "judgeRaw": "{\"score\": 0.5, \"rationale\": \"The answer correctly explains how symmetrization resolves the artificial distinction of identical particles but fails to mention the specific reference fact regarding the lack of a general proof for removing ground state degeneracy in frustrated spins or the uncertainty about when third law predictions become observable.\"}",
+   "type": "multi-hop",
+   "docs": [
+    "FoundationsKardar",
+    "ThermoKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "kr213",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N00M0F50CDHQRDT9V9G5TT",
+   "retrieved": [
+    "ch_pfyd5vj3pvkykao3ryi3",
+    "ch_zui7uuy33o6ym2rp3hxn",
+    "ch_hoznabamnawpuy4mafug",
+    "ch_sy2p5pumpz7d4eutsilq",
+    "ch_nydocm2w6tt2z6y3hwly",
+    "ch_xdfws5qhhcmyxzagkaij",
+    "ch_uwg6w7esgwzm5evutkrt",
+    "ch_k2oxlvszf6heqq736rry",
+    "ch_xz6ztgonxltyq6dbfnkb",
+    "ch_76iktpldhtaqjgvpac3k",
+    "ch_rhazqc4n7dh5tcczcx22",
+    "ch_jsft3xnxiltsqvy6qpem",
+    "ch_eagzdbldrbtuayooiz64",
+    "ch_wqt42joayrfy2qjdbwfg",
+    "ch_jui6cdevdzdzi3v6sjbh",
+    "ch_e2hsjikyu7vdyjhjbifs",
+    "ch_ezu6f2nbpxruui5jcv7i",
+    "ch_3pofhqauifj5eqx66km4",
+    "ch_g3z36qmj52fcfvfxdsx2",
+    "ch_7qvygbdojwri6252tvah"
+   ],
+   "recall": {
+    "1": 0.5,
+    "5": 1,
+    "10": 1,
+    "20": 1
+   },
+   "answer": "Based on the principles of statistical mechanics and quantum theory, here is the analysis regarding symmetrization, identical particles, and low-temperature degeneracy:\n\n### 1. Resolving the Artificial Nature of Tracking Identical Particles\n\nIn **classical statistical mechanics**, particles are treated as distinguishable entities. Even if two particles are physically identical (e.g., two electrons), classical theory assigns them distinct trajectories in phase space ($q_1, p_1$ vs. $q_2, p_2$). Consequently, the microstate where particle A is at position $x$ and particle B is at position $y$ is considered distinct from the state where particle A is at $y$ and particle B is at $x$.\n\nThis leads to an \"artificial\" overcounting of states. For a system of $N$ identical particles, there are $N!$ permutations that correspond to the exact same physical configuration. To correct this, classical statisticians arbitrarily introduce the **Gibbs factor** ($1/N!$) into the partition function to match experimental entropy values (resolving the Gibbs paradox). This is an ad-hoc correction because classical mechanics fundamentally assumes distinguishability.\n\nIn **quantum mechanics**, this issue is resolved naturally through the **symmetrization postulate**:\n*   **Indistinguishability:** Quantum particles of the same type are fundamentally indistinguishable. There is no physical observable that can label which particle is \"",
+   "judgeScore": 0.5,
+   "judgeRaw": "{\"score\": 0.5, \"rationale\": \"The answer correctly explains how symmetrization resolves the artificial tracking of identical particles in classical mechanics but fails to address the second part of the question regarding why this resolution might fail to eliminate degeneracy issues at low temperatures in interacting systems.\"}",
+   "type": "multi-hop",
+   "docs": [
+    "FoundationsKardar",
+    "ThermoKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "kr214",
+   "condition": "gold",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "Based on the provided context passages, which derive stability conditions for systems with constant energy ($E$), volume ($x$), and particle number ($N$), there is no information regarding a scenario where energy and volume fluctuate while particle number remains constant. The text explicitly states that the derived quadratic form (Eq. 1.73) must be positive for all choices of variations, but it does not provide specific inequalities for the case of fluctuating $E$ and $x$. Therefore, the specific inequality required for this particular set of constraints is missing from the given context.",
+   "judgeScore": 0,
+   "judgeRaw": "{\"score\": 0, \"rationale\": \"The answer claims the information is missing from the provided context, whereas the reference answer explicitly states the required inequalities (positive heat capacity and positive compressibility), creating a direct contradiction regarding the existence of the solution.\"}",
+   "type": "multi-hop",
+   "docs": [
+    "ThermoKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "kr214",
+   "condition": "no-context",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "Based on general thermodynamic knowledge (as no specific context was provided), for a system with constant particle number where energy and volume fluctuate, stability requires the Hessian matrix of the entropy expansion to be negative definite. Given that cross-terms cancel out in this canonical-like ensemble, the specific inequality ensuring stability is that the second derivative of entropy with respect to energy must be negative ($\\partial^2 S/\\partial E^2 < 0$) and the second derivative with respect to volume must also be negative ($\\partial^2 S/\\partial V^2 < 0$). This ensures that heat capacity at constant volume is positive and the isothermal compressibility is positive.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly identifies the stability conditions (negative second derivatives of entropy corresponding to positive heat capacity and compressibility) and acknowledges the cancellation of cross-terms as stated in the reference.\"}",
+   "type": "multi-hop",
+   "docs": [
+    "ThermoKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "kr214",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N01ZXX24EWP1ZJDSH3AZDR",
+   "retrieved": [
+    "ch_a2zlw6nbdus2lirhxp45",
+    "ch_pe6tq2grjitk4xtqwkxt",
+    "ch_75u2pk7lv4776liwgo35",
+    "ch_2cfgdb232udarqvzz7pc",
+    "ch_gsejqkd2qmttxcmoqvsl",
+    "ch_sal4kuy2nmqa6edi3mru",
+    "ch_ayt77datg53amldcwxd5",
+    "ch_cwdpnovur6wapmikmkir",
+    "ch_yqi3tqqqrn753ps36vqv",
+    "ch_ow4zy62cxxcszqwrcmnu",
+    "ch_ovwquomuqhwboxliphqe",
+    "ch_o6rmbfddbmtts4g3ehoj",
+    "ch_ts5rl3uvbgt7jdtvftk7",
+    "ch_xinnqewam4xjtxp2ynwo",
+    "ch_bkm6jzcnihmuxfweyhmj",
+    "ch_keselpzgithjlueeerd5",
+    "ch_rz64ruf373utov225blg",
+    "ch_nydocm2w6tt2z6y3hwly",
+    "ch_fligytxktqx5cdscmj56",
+    "ch_ezu6f2nbpxruui5jcv7i"
+   ],
+   "recall": {
+    "1": 0.5,
+    "5": 1,
+    "10": 1,
+    "20": 1
+   },
+   "answer": "Based on the principles of thermodynamics and statistical mechanics described in the provided text (specifically relating to stability conditions and entropy expansions), here is the step-by-step deduction to determine the required inequality:\n\n### 1. The Entropy Expansion\nTo analyze stability, we expand the entropy $S$ as a function of its natural variables. For a system with fixed particle number $N$, but fluctuating energy $E$ and volume $V$, the relevant expansion around an equilibrium state $(E_0, V_0)$ is:\n\n$$ S(E, V) \\approx S(E_0, V_0) + \\left(\\frac{\\partial S}{\\partial E}\\right)_0 (E - E_0) + \\left(\\frac{\\partial S}{\\partial V}\\right)_0 (V - V_0) $$\n$$ + \\frac{1}{2} \\left[ \\left(\\frac{\\partial^2 S}{\\partial E^2}\\right)_0 (E - E_0)^2 + 2\\left(\\frac{\\partial^2 S}{\\partial E \\partial V}\\right)_0 (E - E_0)(V - V_0) + \\left(\\frac{\\partial^2 S}{\\partial V^2}\\right)_0 (V - V_0)^2 \\right] $$\n\n### 2. Applying Thermodynamic Relations\nThe first derivatives relate to intensive variables:",
+   "judgeScore": 0,
+   "judgeRaw": "{\"score\": 0, \"rationale\": \"The answer fails to provide the final conclusion or specific inequalities regarding heat capacity and compressibility, instead cutting off mid-sentence after defining the first derivatives.\"}",
+   "type": "multi-hop",
+   "docs": [
+    "ThermoKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "kr215",
+   "condition": "gold",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "Based on the provided text, the mathematical definition of extensivity relates to the standard Gibbs free energy by establishing that for fixed intensive coordinates, extensive quantities (like internal energy) are proportional to the system size or particle number. However, the text explicitly notes that when chemical work is included via changes in particle number, this term is traditionally treated differently from mechanical work and is not subtracted from the internal energy $E$ in the standard Gibbs free energy definition found in Eq. (1.38). Consequently, under these conditions involving variable particle numbers, the appropriate state function becomes the grand potential rather than the standard Gibbs free energy.",
+   "judgeScore": 0.5,
+   "judgeRaw": "{\"score\": 0.5, \"rationale\": \"The answer correctly identifies that chemical work is treated differently and not subtracted in the standard Gibbs free energy, but it incorrectly states that the standard Gibbs free energy definition found in Eq. (1.38) does not subtract this term, whereas the reference implies the standard expression excludes it by treating it differently, leading to a slight contradiction regarding the specific handling of the term in the 'standard' expression versus the resulting state function.\"}",
+   "type": "multi-hop",
+   "docs": [
+    "ThermoKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "kr215",
+   "condition": "no-context",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "Extensivity implies that thermodynamic potentials, including the standard Gibbs free energy ($G$), are homogeneous functions of degree one with respect to extensive variables like entropy, volume, and particle number. When chemical work is included via changes in particle number ($N_i$), this mathematical definition requires that $G$ scales linearly with the system size, leading to the fundamental relation $dG = -SdT + VdP + \\sum \\mu_i dN_i$. Consequently, at constant temperature and pressure, the change in Gibbs free energy due to adding particles is directly proportional to their chemical potential ($\\mu_i$), preserving the extensive nature of the total free energy.",
+   "judgeScore": 0.5,
+   "judgeRaw": "{\"score\": 0.5, \"rationale\": \"The answer correctly identifies that extensivity implies homogeneity and linear scaling with system size, but it omits the specific reference fact regarding how chemical work is traditionally treated differently from mechanical work in the standard Gibbs free energy expression.\"}",
+   "type": "multi-hop",
+   "docs": [
+    "ThermoKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "kr215",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N03D35BY5GXCVC8EQVGMJ1",
+   "retrieved": [
+    "ch_lsv7oeo4m5nbocadbd7w",
+    "ch_ow4zy62cxxcszqwrcmnu",
+    "ch_gfa23oo2bycp6244jppa",
+    "ch_7cwqlaglgrapbhzusjlx",
+    "ch_hkflgetd2kh2k52evpjc",
+    "ch_o6ya3mtwxn4h3eq6illy",
+    "ch_m75giujoifgwmh324oq2",
+    "ch_mdnis36f5qrzjy6ryrjl",
+    "ch_yqi3tqqqrn753ps36vqv",
+    "ch_gnypqlwwsy3whxmdnwgh",
+    "ch_dx37tkiopof6pbkhqnqe",
+    "ch_keselpzgithjlueeerd5",
+    "ch_75u2pk7lv4776liwgo35",
+    "ch_zs63dlhjufiabc3qwz7y",
+    "ch_ts5rl3uvbgt7jdtvftk7",
+    "ch_y33ctyue6khxul7f4q32",
+    "ch_pfyd5vj3pvkykao3ryi3",
+    "ch_35n7hglia4ppsdxhg3k3",
+    "ch_o6rmbfddbmtts4g3ehoj",
+    "ch_jahilx7zsvy5nn4kp2js"
+   ],
+   "recall": {
+    "1": 0.5,
+    "5": 1,
+    "10": 1,
+    "20": 1
+   },
+   "answer": "Based on the text provided, here is the analysis of how the mathematical definition of extensivity relates to the standard Gibbs free energy when chemical work (changes in particle number) is included:\n\n### 1. The Mathematical Definition of Extensivity\nIn thermodynamics, a quantity $X$ is **extensive** if it scales linearly with the size of the system. Mathematically, for any scaling factor $\\lambda > 0$:\n$$ X(\\lambda E, \\lambda x, \\lambda N) = \\lambda X(E, x, N) $$\nwhere $E$ is energy, $x$ represents other extensive coordinates (like volume), and $N$ is the number of particles.\n\nThe text highlights a specific problem with the standard entropy formula (Eq. 4.45 in the source): it predicts an increase in entropy upon mixing identical gases (the Gibbs Paradox). This violates extensivity because if you double the system size ($\\lambda = 2$), the entropy should simply double, but the uncorrected formula includes a term dependent on the distinguishability of particles that causes non-linear scaling.\n\n### 2. The Role of Chemical Work and Particle Number\nWhen chemical work is included, the particle number $N$ becomes a variable coordinate rather than a fixed constant. The fundamental thermodynamic relation including this work is:\n$$ dE = TdS - PdV + \\mu dN $$\nHere,",
+   "judgeScore": 0.5,
+   "judgeRaw": "{\"score\": 0.5, \"rationale\": \"The answer correctly defines extensivity and the role of particle number changes but fails to state the specific conclusion from the reference regarding how this affects the standard Gibbs free energy expression (i.e., that chemical work is not subtracted).\"}",
+   "type": "multi-hop",
+   "docs": [
+    "ThermoKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "kr219",
+   "condition": "gold",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "Based on the provided context, the assumption that the system's energy is negligible compared to the reservoir allows the derivation of normalized probabilities by simplifying the relationship between the number of accessible reservoir states and the reservoir's entropy (specifically leading to the Boltzmann factor $e^{-\\beta E}$). This mathematical form mirrors the description of independent two-level impurities, where the joint probability factors into a product of individual terms because specifying the energy of one impurity leaves the remaining energy distribution among others unaffected, effectively treating them as statistically independent.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly identifies that negligible system energy links reservoir states to entropy (leading to the Boltzmann factor) and explains that independence in two-level impurities allows joint probabilities to factorize because one impurity's state does not constrain others.\"}",
+   "type": "multi-hop",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "kr219",
+   "condition": "no-context",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "When a system's energy is negligible compared to its reservoir, the total number of microstates of the combined system can be approximated by expanding the reservoir's entropy in a Taylor series, leading to the Boltzmann factor $e^{-\\beta E}$ for the system's normalized probabilities. This exponential form directly implies that for independent two-level impurities, the joint probability distribution factors into a product of individual probabilities because the energy of the combined state is simply the sum of the energies of each impurity, making their statistical weights multiplicative rather than coupled.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly identifies that negligible system energy allows using reservoir entropy (via Taylor expansion) to derive Boltzmann factors for normalized probabilities and explains that independence leads to factorized joint probabilities due to additive energies resulting in multiplicative weights.\"}",
+   "type": "multi-hop",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "kr219",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N04RDV6J1DPYX61WEY86JA",
+   "retrieved": [
+    "ch_qw7cjnvs7yuzysaqzmsv",
+    "ch_rhazqc4n7dh5tcczcx22",
+    "ch_e2hsjikyu7vdyjhjbifs",
+    "ch_x4e3chttmmxild76kthp",
+    "ch_4y5h34jv4ahtvwdhskg6",
+    "ch_q6l7qyxp2bcgxhb5scod",
+    "ch_g3z36qmj52fcfvfxdsx2",
+    "ch_gnypqlwwsy3whxmdnwgh",
+    "ch_nydocm2w6tt2z6y3hwly",
+    "ch_cwdpnovur6wapmikmkir",
+    "ch_fn2goeaufenzdbhibffd",
+    "ch_eagzdbldrbtuayooiz64",
+    "ch_yvof3duvuugrnc2ox46i",
+    "ch_derapnb7r22ilgpn4l2j",
+    "ch_6ecze2e5a4byeg3np25p",
+    "ch_pfyd5vj3pvkykao3ryi3",
+    "ch_jzuc2qhuzfazxbl4qor5",
+    "ch_xinnqewam4xjtxp2ynwo",
+    "ch_ggyktk4kp3kw5ovwd6aq",
+    "ch_kmejmsfg4ce4zqlwlvjg"
+   ],
+   "recall": {
+    "1": 0,
+    "5": 1,
+    "10": 1,
+    "20": 1
+   },
+   "answer": "Based on",
+   "judgeScore": 0,
+   "judgeRaw": "{\"score\": 0, \"rationale\": \"The answer is incomplete as it cuts off after 'Based on', failing to state any essential facts present in the reference answer.\"}",
+   "type": "multi-hop",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "kr225",
+   "condition": "gold",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "Based on the provided context, the derivation starts by considering the microcanonical ensemble where the total energy is fixed, constraining the momenta to lie on a hypersphere in 6N-dimensional phase space. To find the distribution for a single particle, one calculates the unconditional probability by integrating the joint PDF over all other variables, which effectively determines how the remaining energy is shared among the other N-1 particles. In the large N limit and using Stirling's formula, this integration yields a properly normalized Maxwell-Boltzmann distribution that depends on the kinetic energy of the single particle.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly identifies the key steps from the reference: defining the joint probability density in phase space (hypersphere), integrating over other particles' variables, and obtaining the normalized Maxwell-Boltzmann distribution.\"}",
+   "type": "topic",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "kr225",
+   "condition": "no-context",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "I will answer this from general physics knowledge, as no specific context passages were provided. To derive the Maxwell-Boltzmann momentum distribution from the microcanonical ensemble, one considers a system of $N$ particles with fixed total energy and volume, then focuses on the phase space volume available to a single particle while integrating out the degrees of freedom of the remaining $N-1$ particles. By taking the thermodynamic limit ($N \\to \\infty$), the uniform distribution over the constant-energy hypersurface effectively projects onto a Gaussian distribution for the momentum of any individual particle, which is the Maxwell-Boltzmann distribution.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly identifies the essential steps of integrating out other particles and taking the thermodynamic limit to derive the distribution, matching the reference facts.\"}",
+   "type": "topic",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "kr225",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N05YCDYWQ20K6CP00Q9TFY",
+   "retrieved": [
+    "ch_sewmwxdflcf4g5d3lhtn",
+    "ch_a2r5ghqi5tqsyfalsq6s",
+    "ch_xdfws5qhhcmyxzagkaij",
+    "ch_xz6ztgonxltyq6dbfnkb",
+    "ch_oxba6n5g6tzk2risgs5i",
+    "ch_rdhh3cs4syvnszvomjvi",
+    "ch_kmejmsfg4ce4zqlwlvjg",
+    "ch_o6ya3mtwxn4h3eq6illy",
+    "ch_q6l7qyxp2bcgxhb5scod",
+    "ch_quxatfszsrsnmgehd42n",
+    "ch_derapnb7r22ilgpn4l2j",
+    "ch_ew7y7bsyikkzli7mu62d",
+    "ch_4y5h34jv4ahtvwdhskg6",
+    "ch_xfu7px6rj6u67xhusvd3",
+    "ch_imlrmkhdqx3rfw4jnvjs",
+    "ch_6ecze2e5a4byeg3np25p",
+    "ch_eagzdbldrbtuayooiz64",
+    "ch_fn2goeaufenzdbhibffd",
+    "ch_ezu6f2nbpxruui5jcv7i",
+    "ch_jxyehxkdybryfglgdjeh"
+   ],
+   "recall": {
+    "1": 0.25,
+    "5": 0.5,
+    "10": 0.75,
+    "20": 0.75
+   },
+   "answer": "Based on the text provided and standard statistical mechanics principles, here is the step-by-step derivation of the Maxwell-Boltzmann momentum distribution for a single particle starting from the **microcanonical ensemble**.\n\n### 1. The Setup: Microcanonical Ensemble\nConsider an ideal gas consisting of $N$ non-interacting particles in a container of volume $V$.\n*   **Total Energy:** The system has a fixed total energy $E$.\n*   **Kinetic Energy:** Since the particles are non-interacting (ideal gas), the potential energy is zero inside the box. Thus, the total energy is purely kinetic:\n    $$ E = \\sum_{i=1}^{N} \\frac{p_i^2}{2m} $$\n*   **Phase Space Constraint:** In the microcanonical ensemble, all microstates $(\\mathbf{q}_1, \\dots, \\mathbf{q}_N, \\mathbf{p}_1, \\dots, \\mathbf{p}_N)$ that satisfy the energy constraint $H(\\mathbf{p}, \\mathbf{q}) = E$ are equally probable.\n*   **Geometry:** The condition $\\sum \\frac{p_i^2}{2m} = E$ defines a $(3N-1)$ dimensional hypersurface (a \"shell\") in the $6N$-dimensional phase space.\n\n### 2. Probability of Finding a Specific Momentum\nWe",
+   "judgeScore": 0,
+   "judgeRaw": "{\"score\": 0, \"rationale\": \"The answer cuts off mid-sentence and fails to complete the derivation or state the final result, thus missing essential facts present in the reference answer.\"}",
+   "type": "topic",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "kr226",
+   "condition": "gold",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "Based on the provided text, recovering the standard ideal gas properties involves calculating the entropy $S$ as the logarithm of the available phase space volume (derived from the product of the coordinate volume $V^N$ and the momentum surface area). Once the expression for $S$ is obtained using Stirling's approximation, one applies the thermodynamic relation $TdS = dE + PdV - \\mu dN$. Finally, comparing the resulting differential equation with the known forms allows for the identification of the internal energy $E = 3Nk_B T/2$ and the equation of state $PV = Nk_B T$.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly identifies all essential steps from the reference: calculating phase space volume (coordinate and momentum contributions), taking the logarithm for entropy, applying thermodynamic relations, and deriving the internal energy and equation of state.\"}",
+   "type": "topic",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "kr226",
+   "condition": "no-context",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "Based on general statistical mechanics knowledge, recovering the ideal gas equations from the statistical definition of entropy involves starting with the Boltzmann entropy formula $S = k_B \\ln \\Omega$ (or using the Gibbs correction for indistinguishable particles). One must then apply Stirling's approximation to the factorials in the multiplicity function $\\Omega$ and assume a non-interacting system where the partition function factorizes. Finally, by differentiating the resulting entropy expression with respect to temperature and volume while holding other variables constant, one derives the standard ideal gas law ($PV = Nk_BT$) and the internal energy formula ($U = \\frac{3}{2}Nk_BT$ for a monatomic gas).",
+   "judgeScore": 0.5,
+   "judgeRaw": "{\"score\": 0.5, \"rationale\": \"The answer correctly identifies the use of the Boltzmann entropy formula and Stirling's approximation but misses the specific reference fact regarding calculating the volume of accessible phase space involving the momentum sphere surface area.\"}",
+   "type": "topic",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "kr226",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N0787EKVZVZMSY3B86PFK5",
+   "retrieved": [
+    "ch_qhdqgbs26avpqedxptbz",
+    "ch_rz64ruf373utov225blg",
+    "ch_2cfgdb232udarqvzz7pc",
+    "ch_yqi3tqqqrn753ps36vqv",
+    "ch_ayt77datg53amldcwxd5",
+    "ch_a2zlw6nbdus2lirhxp45",
+    "ch_ldvroidu46n5tqs4v57n",
+    "ch_pmebbjbqu632qfqfrxpe",
+    "ch_cwdpnovur6wapmikmkir",
+    "ch_keselpzgithjlueeerd5",
+    "ch_xfu7px6rj6u67xhusvd3",
+    "ch_m75giujoifgwmh324oq2",
+    "ch_gnypqlwwsy3whxmdnwgh",
+    "ch_o6ya3mtwxn4h3eq6illy",
+    "ch_fn2goeaufenzdbhibffd",
+    "ch_nydocm2w6tt2z6y3hwly",
+    "ch_tp4m7vq6co5gotfyxfm2",
+    "ch_sal4kuy2nmqa6edi3mru",
+    "ch_xdfws5qhhcmyxzagkaij",
+    "ch_fkyhcqafcxienjjykh4o"
+   ],
+   "recall": {
+    "1": 0.3333333333333333,
+    "5": 0.3333333333333333,
+    "10": 0.3333333333333333,
+    "20": 0.3333333333333333
+   },
+   "answer": "Based on the text provided, here are the steps required to recover the standard ideal gas equation of state ($PV = Nk_B T$) and internal energy formula ($E = \\frac{3}{2}Nk_B T$) from the statistical mechanical definition of entropy:\n\n### Step 1: Define the Statistical Entropy\nStart with the corrected Boltzmann entropy formula for an ideal gas of $N$ identical particles (accounting for indistinguishability via the $N!$ factor), as referenced in Eq. (4.47) and discussed in point [10]:\n\n$$ S(E, V, N) = k_B \\ln \\Omega(E, V, N) $$\n\nWhere $\\Omega$ is the number of accessible microstates. For a non-relativistic ideal gas, this leads to the Sackur-Tetrode equation form:\n$$ S = Nk_B \\left[ \\ln\\left(\\frac{V}{N} \\left(\\frac{4\\pi m E}{3Nh^2}\\right)^{3/2}\\right) + \\frac{5}{2} \\right] $$\n*(Note: The text implies this form is derived from the phase space volume $V^{N}E^{3N/2}$ divided by $N!$).*\n\n### Step 2: Apply Thermodynamic Relations (The First Law)\nUse the fundamental thermodynamic relation for entropy variations, identified",
+   "judgeScore": 0.5,
+   "judgeRaw": "{\"score\": 0.5, \"rationale\": \"The answer correctly identifies defining entropy and applying thermodynamic relations but fails to mention the specific step of calculating phase space volume using a momentum sphere or neglecting insignificant terms as required by the reference.\"}",
+   "type": "topic",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "kr228",
+   "condition": "gold",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "Based on the provided context, the inclusion of interparticle interactions introduces collision terms to the right-hand side of the evolution equation, which depend on the joint probability distribution of $s+1$ particles ($\\rho_{s+1}$). This creates a hierarchy where the time derivative of the $s$-particle density depends on the $(s+1)$-particle density, causing the equation for $\\rho_s$ to become coupled with equations for higher-order densities. Consequently, without further approximation, this results in a system that is at least as complicated as the original full phase space density equation.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer accurately reflects all essential facts from the reference: the introduction of collision terms dependent on (s+1)-particle densities and the resulting coupled hierarchy of equations.\"}",
+   "type": "topic",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "kr228",
+   "condition": "no-context",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "Without specific context passages provided, I will answer based on general knowledge of statistical mechanics. In a simple fluid-like description (such as the Boltzmann equation), particles are often treated as non-interacting or with mean-field approximations, leading to a closed evolution equation for the one-particle density. The inclusion of explicit interparticle interactions introduces correlations between particle positions, causing the time derivative of the $s$-particle density to depend on the $(s+1)$-particle correlation function (density), thereby transforming the problem into an infinite hierarchy of coupled equations known as the BBGKY hierarchy.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly identifies that interparticle interactions introduce dependencies on higher-order densities (specifically the s+1 particle density) and transforms the equation into a coupled system/hierarchy, matching all essential facts of the reference.\"}",
+   "type": "topic",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "kr228",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N08JKTEDHDZ45QN8F6KWKC",
+   "retrieved": [
+    "ch_2pxyktjgd6aaz6up7pag",
+    "ch_r5l5e3cr4rgferi4n6dk",
+    "ch_6bh65pnxn42vsr57nnaj",
+    "ch_esn66wlaojv6psgdehxw",
+    "ch_qqqmvbf32cm6wmyf5auu",
+    "ch_aqe4jcoeln26kjkwxmnh",
+    "ch_wqt42joayrfy2qjdbwfg",
+    "ch_sdazxhumbwzotd4itcb7",
+    "ch_3czjgglr2j6tyhh57iq2",
+    "ch_as66rqoxmp2yokezaykf",
+    "ch_jxyehxkdybryfglgdjeh",
+    "ch_wwk3kkfw5b76tfvkrbok",
+    "ch_aaoxuuoqor4t7ysjgiwa",
+    "ch_hl7dupxveesbkhodgebc",
+    "ch_5zid4ljwcbx3uqlsva44",
+    "ch_7dqn2ijw4pck62nyctrk",
+    "ch_snajb4vhim3w6syvm3jn",
+    "ch_hnbpw44ptwogtu7fymcr",
+    "ch_dfixe4zx3mviy4r2732i",
+    "ch_hktmix2gu7bev24vpvcv"
+   ],
+   "recall": {
+    "1": 0.3333333333333333,
+    "5": 0.6666666666666666,
+    "10": 0.6666666666666666,
+    "20": 0.6666666666666666
+   },
+   "answer": "Based on the text provided, particularly **Section [17]** regarding the BBGKY hierarchy, here is the explanation of how interparticle interactions transform the time evolution equation:\n\n### The Transformation Mechanism\n\nIn a simple fluid-like description (such as the Vlasov equation or ideal gas dynamics), the time evolution of an $s$-particle density depends **only** on the $s$-particle density itself. This is because the equations assume that particles move independently, governed solely by external fields and their own momentum/position coordinates.\n\nHowever, when **interparticle interactions** are included:\n1.  **Coupling via Correlations:** The motion of any specific particle (or group of $s$ particles) is influenced by the forces exerted by other particles in the system. These forces depend on the positions and momenta of those other particles.\n2.  **Emergence of Higher-Order Densities:** Because the force acting on a subset of $s$ particles depends on the configuration of the remaining $(N-s)$ particles, the time derivative of the $s$-particle density ($\\partial f_s / \\partial t$) becomes mathematically dependent on the **$(s+1)$-particle density** ($f_{s+1}$).\n3.  **The Hierarchy:** This creates a chain of dependencies known as the **BBGKY hierarchy**:\n    *   The equation for $f_1$ (",
+   "judgeScore": 0,
+   "judgeRaw": "{\"score\": 0, \"rationale\": \"The answer is incomplete as it cuts off mid-sentence and fails to explicitly state the key fact that interactions introduce collision terms dependent on higher-order densities, instead focusing on general coupling mechanisms.\"}",
+   "type": "topic",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "kr229",
+   "condition": "gold",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "The zeroth-order hydrodynamic approximation fails to describe the approach to global equilibrium because it predicts that the gas flow is adiabatic, meaning local entropy remains unchanged along stream-lines and never increases as required for reaching true equilibrium. Consequently, specific physical behaviors such as shear flow, entropy modes, and undamped sound oscillations persist indefinitely without relaxing to their equilibrium states. This deficiency arises because the approximation does not account for the dissipative processes necessary to drive the system toward a global equilibrium distribution.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer accurately restates all essential facts from the reference regarding the adiabatic nature of the zeroth-order approximation, the persistence of shear flows and entropy variations, and the undamped oscillation of sound waves.\"}",
+   "type": "topic",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "kr229",
+   "condition": "no-context",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "The zeroth-order hydrodynamic approximation fails to describe the approach to global equilibrium because it neglects dissipative effects like viscosity and heat conduction, which are essential for driving a system toward thermodynamic balance. Consequently, non-equilibrium fluctuations and transport processes that rely on these higher-order corrections persist indefinitely within this simplified framework. This limitation means the model cannot capture the eventual relaxation of gradients or the decay of transient modes observed in real physical systems.",
+   "judgeScore": 0.5,
+   "judgeRaw": "{\"score\": 0.5, \"rationale\": \"The answer correctly identifies the failure to describe equilibrium due to neglecting dissipative effects (viscosity/heat conduction) but misses the specific reference details regarding adiabatic flow, constant entropy along streamlines, and the persistence of shear flows and undamped sound waves.\"}",
+   "type": "topic",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "kr229",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N09TKJFX2DHE5DH9D7J0QA",
+   "retrieved": [
+    "ch_m42uekxtzqwcsosptjmd",
+    "ch_jugraw6rtxctsmyzsudq",
+    "ch_hktmix2gu7bev24vpvcv",
+    "ch_t2xzf2ith7cfethegjzb",
+    "ch_as66rqoxmp2yokezaykf",
+    "ch_nzuiau7p5nbxvnul6k3t",
+    "ch_zjfl2k5quimpjh7aewak",
+    "ch_dz44lxrmwtufntebek74",
+    "ch_arj3i4dsws3vk7smqxon",
+    "ch_2tspzrjv5r4v6evsoids",
+    "ch_3czjgglr2j6tyhh57iq2",
+    "ch_thx4d7uueaqadu75mumw",
+    "ch_ezu6f2nbpxruui5jcv7i",
+    "ch_vsxal6v45krdpyrmh3px",
+    "ch_wwk3kkfw5b76tfvkrbok",
+    "ch_gk5edqphxjzimvt5vqvu",
+    "ch_vhrfehzpfjlavdgu7qlo",
+    "ch_uqul7qb4oqgdr4a5z3su",
+    "ch_7nacjwg3pn32kh53upow",
+    "ch_75425wyzvmotnfdjk6wm"
+   ],
+   "recall": {
+    "1": 0.3333333333333333,
+    "5": 1,
+    "10": 1,
+    "20": 1
+   },
+   "answer": "Based on the provided text, here is the analysis regarding why the zeroth-order hydrodynamic approximation fails to describe the approach to global equilibrium and the behaviors that persist indefinitely.\n\n### 1. Why the Zeroth-Order Approximation Fails\n\nThe zeroth-order hydrodynamic approximation fails to describe the system's approach to global equilibrium because it represents a state of **local thermodynamic equilibrium** where dissipative processes (like viscosity and heat conduction) are neglected or treated as negligible corrections.\n\n*   **Reversibility vs. Irreversibility:** The text highlights that the exact microscopic dynamics (governed by canonical equations) possess **time-reversal symmetry**. Consequently, any solution derived strictly from these reversible laws (which includes the zeroth-order hydrodynamic equations) cannot exhibit irreversible behavior.\n*   **Absence of Dissipation:** In the zeroth-order approximation, the pressure tensor is purely kinetic ($P^{(0)}_{\\alpha\\beta} = m \\langle c_\\alpha c_\\beta \\rangle_0$) and the heat flux is zero ($h^{(0)}_\\alpha = 0$). This implies there are no mechanisms for energy dissipation (viscosity) or entropy production.\n*   **Conservation of Non-Equilibrium Modes:** As noted in section [19], the zeroth-order approximation yields undamped normal modes (specifically sound waves and heat diffusion modes that do not decay). Without the first-order",
+   "judgeScore": 0,
+   "judgeRaw": "{\"score\": 0, \"rationale\": \"The answer fails to mention the specific physical behaviors (shear flows and entropy variations) that persist indefinitely as required by the reference answer, and instead focuses on general concepts like time-reversal symmetry and local thermodynamic equilibrium.\"}",
+   "type": "topic",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "kr24",
+   "condition": "gold",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "Based on the provided text, comparing the derived pressure equation with the standard ideal gas law ($PV = Nk_B T$) leads directly to the identification that $\\beta$ is equal to $1/k_B T$. Therefore, the parameter $\\beta$ in the distribution function $f_1$ is inversely proportional to both the Boltzmann constant and the temperature.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly states that beta equals 1 divided by the product of the Boltzmann constant and temperature, matching all essential facts in the reference.\"}",
+   "type": "single-hop",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "kr24",
+   "condition": "no-context",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "In statistical mechanics, the parameter $\\beta$ in the distribution function $f_1$ (such as the Maxwell-Boltzmann distribution) is defined as the inverse thermal energy. It is directly related to the Boltzmann constant $k_B$ and temperature $T$ by the equation $\\beta = \\frac{1}{k_B T}$. This relationship ensures that the probability of a state decreases exponentially with increasing energy relative to the available thermal energy.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly states the relationship beta = 1/(k_B T) as required by the reference answer.\"}",
+   "type": "single-hop",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "kr24",
+   "condition": "retrieved",
+   "searchId": "sr_01M5MZVP4BQAG5BG19QAP9CGVQ",
+   "retrieved": [
+    "ch_fligytxktqx5cdscmj56",
+    "ch_ayt77datg53amldcwxd5",
+    "ch_sdazxhumbwzotd4itcb7",
+    "ch_bcvlty56qen6di7lnt4a",
+    "ch_6bh65pnxn42vsr57nnaj",
+    "ch_esn66wlaojv6psgdehxw",
+    "ch_r5l5e3cr4rgferi4n6dk",
+    "ch_yfwl6bonedqqi4xb3pzi",
+    "ch_qpvlokyr7pzai5lijs3a",
+    "ch_gk5edqphxjzimvt5vqvu",
+    "ch_7cd64bkmvkvgdehewf3r",
+    "ch_zt4rshjhdnpw62mmvfru",
+    "ch_asukdrgfabhuehfs74zb",
+    "ch_mw2rikcskgpzm5e3jytm",
+    "ch_w5zwrzdmtieelzzbfkia",
+    "ch_oeg6n6wqq7ki3kn2t3jc",
+    "ch_pcslzllj7a4cibfdfznm",
+    "ch_ez3z5an2okzsqlqr2lcm",
+    "ch_ew7y7bsyikkzli7mu62d",
+    "ch_ssuubw7lnjyz5f6qtibp"
+   ],
+   "recall": {
+    "1": 0,
+    "5": 1,
+    "10": 1,
+    "20": 1
+   },
+   "answer": "Based on the text provided, specifically in section **[18]**, the parameter $\\beta$ is related to the Boltzmann constant $k_B$ and temperature $T$ by the following equation:\n\n$$ \\beta = \\frac{1}{k_B T} $$\n\n**Derivation from the text:**\nIn section [18], the text defines the mean momentum as $\\vec{p}_0 = \\langle \\vec{p} \\rangle = m\\alpha/\\beta$. It then states that for a stationary box, this mean momentum is zero. While the explicit equation $\\beta = 1/k_B T$ is not written out in full within the provided snippet, this relationship is the standard definition of $\\beta$ in statistical mechanics (canonical ensemble) referenced by the context of the Gaussian distribution of momenta ($\\langle p_i^2 \\rangle = m/\\beta$) and the ideal gas law discussions found in sections [17] and [18]. The term \"thermal derivative\" mentioned in section [19] further confirms that $\\beta$ is the inverse thermal energy scale.\n\nTherefore, the relationship is:\n$$ \\beta = \\frac{1}{k_B T} $$",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly states that beta equals 1 divided by the product of the Boltzmann constant and temperature, matching the essential fact in the reference answer.\"}",
+   "type": "single-hop",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "kr26",
+   "condition": "gold",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "Based on the provided text, the heat capacity at constant pressure ($C_P$) exceeds that at constant volume ($C_V$) because some of the heat supplied to the system is used to perform work during changes in volume. Consequently, more total heat is required to achieve the same temperature increase at constant pressure compared to constant volume, where no expansion work is done.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly states that heat capacity at constant pressure is larger because some added heat performs work during volume changes, which matches the reference answer's essential facts.\"}",
+   "type": "single-hop",
+   "docs": [
+    "ThermoKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "kr26",
+   "condition": "no-context",
+   "searchId": null,
+   "retrieved": null,
+   "recall": null,
+   "answer": "Based on general thermodynamic principles, the heat capacity at constant pressure ($C_p$) exceeds that at constant volume ($C_v$) because, when a gas is heated at constant pressure, it expands and performs work against its surroundings. This expansion requires additional energy input beyond what is needed solely to raise the temperature (which is the case at constant volume), resulting in a higher total heat capacity.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly states that $C_p$ exceeds $C_v$ because expansion at constant pressure requires additional energy to perform work, which aligns perfectly with the reference answer.\"}",
+   "type": "single-hop",
+   "docs": [
+    "ThermoKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5MYWYDQGAGQ5BFWJHNSV95V",
+   "questionId": "kr26",
+   "condition": "retrieved",
+   "searchId": "sr_01M5MZWR1NQ18Y99C2HQRMKG39",
+   "retrieved": [
+    "ch_mwtvfp2xbzhqvcrdmwqv",
+    "ch_ez3z5an2okzsqlqr2lcm",
+    "ch_2cfgdb232udarqvzz7pc",
+    "ch_bcvlty56qen6di7lnt4a",
+    "ch_tp4m7vq6co5gotfyxfm2",
+    "ch_wpepia6egympjv32362t",
+    "ch_to5anwfkfjn2szjtqr3x",
+    "ch_qhdqgbs26avpqedxptbz",
+    "ch_yqi3tqqqrn753ps36vqv",
+    "ch_exfht4wbgd2i3aecnu4e",
+    "ch_4ciehnlnwoyfmxlchwgo",
+    "ch_6vct5fih2mdv5oysuoe4",
+    "ch_cmmckwxfb5w7enivrmsl",
+    "ch_dzztrnlwvxgbi3ijm45v",
+    "ch_ytrdqxex5ihj4nefgu3j",
+    "ch_olxgm6wnger3oia7arm7",
+    "ch_7cwqlaglgrapbhzusjlx",
+    "ch_y33ctyue6khxul7f4q32",
+    "ch_s7eflkw2rujnxptpjc6i",
+    "ch_ayt77datg53amldcwxd5"
+   ],
+   "recall": {
+    "1": 1,
+    "5": 1,
+    "10": 1,
+    "20": 1
+   },
+   "answer": "Based on thermodynamic principles and the context provided in your text (specifically relating to enthalpy, internal energy, and work), here is the explanation for why the heat capacity at constant pressure ($C_P$) exceeds that at constant volume ($C_V$) for a gas:\n\n### 1. The Fundamental Difference in Work\nThe primary reason lies in how the system handles energy when heated under different constraints:\n\n*   **Constant Volume ($V = \\text{const}$):** When a gas is heated in a rigid container, it cannot expand. Therefore, no mechanical work is done by the gas on its surroundings ($W = 0$). According to the First Law of Thermodynamics ($\\Delta U = Q - W$), all the heat added ($Q$) goes directly into increasing the internal energy ($\\Delta U$) of the gas (which manifests as a rise in temperature).\n    $$C_V = \\left(\\frac{\\partial Q}{\\partial T}\\right)_V = \\left(\\frac{\\partial U}{\\partial T}\\right)_V$$\n\n*   **Constant Pressure ($P = \\text{const}$):** When a gas is heated at constant pressure (e.g., in a piston-cylinder setup), it expands as its temperature rises. To push the piston outward, the gas must perform work against the external pressure ($W = P\\Delta V$). Consequently, the heat added ($Q$) must supply energy",
+   "judgeScore": 0.5,
+   "judgeRaw": "{\"score\": 0.5, \"rationale\": \"The answer correctly identifies that work is performed during expansion at constant pressure, but the provided text cuts off before completing the explanation of how this affects the total heat required compared to constant volume.\"}",
+   "type": "single-hop",
+   "docs": [
+    "ThermoKardar"
+   ]
+  }
+ ]
+}

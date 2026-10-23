@@ -1,0 +1,10 @@
+{"n": "r05", "score": 0, "rationale": "Answer says it lacks context and claims a density increase, never stating the streaming relation between incoming and outgoing momenta."}
+{"n": "r27", "score": 1, "rationale": "States energy change equals sum of chemical potentials times particle number changes, matching the reference."}
+{"n": "r14", "score": 1, "rationale": "Covers equal T and P for isolated systems, concave entropy, and Gibbs potential stability with second-derivative constraints against fluctuations."}
+{"n": "r03", "score": 1, "rationale": "Captures missing ergodic proof for nonintegrable systems and information-theory formulation severing the link to dynamics via least-bias inference."}
+{"n": "r11", "score": 0.5, "rationale": "Gives Lagrange multipliers with normalization and constraints but says nothing about replacing Boltzmann-Shannon entropy with a nonextensive (Tsallis) measure."}
+{"n": "r10", "score": 0, "rationale": "Gives a Gibbs-paradox/dimensionless rationale instead of the Bohr-Sommerfeld semiclassical correspondence."}
+{"n": "r30", "score": 1, "rationale": "States heat exchange occurs only at two temperatures, source and sink, matching the reference."}
+{"n": "r25", "score": 1, "rationale": "Links enthalpy minimization to minimum potential energy and balance of internal restoring force with external force, consistent with the reference."}
+{"n": "r13", "score": 1, "rationale": "States the factor was introduced by Gibbs to remove spurious entropy of mixing for two volumes of the same ideal gas."}
+{"n": "r18", "score": 1, "rationale": "States the chemical work dW = sum of chemical potential times dN, matching the reference."}

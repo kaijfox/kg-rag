@@ -1,0 +1,10 @@
+{"n": "r29", "score": 1, "rationale": "States internal energy depends only on temperature with E = 3Nk_BT/2, matching the reference."}
+{"n": "r07", "score": 1, "rationale": "Says the canonical ensemble is equivalent to the microcanonical one in the large-N limit for these systems, as the reference does."}
+{"n": "r16", "score": 0.5, "rationale": "Gives a three-part decomposition with a symmetrization term but is generic and omits that the third term is proportional to f_{s+1}."}
+{"n": "r19", "score": 0.5, "rationale": "Mentions Jaynes and maximum entropy but frames it as axiomatic ensemble theory without the information-theory least-bias basis."}
+{"n": "r22", "score": 1, "rationale": "Covers intra-group evolution, interaction with the remaining particles, and symmetrization yielding the f_{s+1} term."}
+{"n": "r04", "score": 0, "rationale": "Says it cannot answer and does not mention replacing energy with the Helmholtz free energy."}
+{"n": "r06", "score": 0, "rationale": "Gives 3N-1 dimensions, contradicting the reference value of 6N-1."}
+{"n": "r02", "score": 1, "rationale": "Covers phenomenological empirical basis, state functions defined in equilibrium, testable relationships, and reliance on microscopic theory."}
+{"n": "r08", "score": 1, "rationale": "Identifies the two intra-group terms, the interparticle term from H', and its simplification by symmetry to the f_{s+1} term."}
+{"n": "r15", "score": 1, "rationale": "States that interactions introduce collision terms depending on the s+1 density, creating a coupled hierarchy."}

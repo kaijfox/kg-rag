@@ -1,0 +1,340 @@
+[
+ {
+  "group": {
+   "index": 2,
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_b2nqg2rhnaw34djlyunr"
+   ]
+  },
+  "reason": "wording-copy"
+ },
+ {
+  "group": {
+   "index": 3,
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_4hebrfj4i7uti2qtpytg"
+   ]
+  },
+  "reason": "wording-copy"
+ },
+ {
+  "group": {
+   "index": 7,
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_bkadd25rcchreleknau7"
+   ]
+  },
+  "reason": "wording-copy"
+ },
+ {
+  "group": {
+   "index": 8,
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_fdbuy3wgrvs7hrptvslj"
+   ]
+  },
+  "reason": "wording-copy"
+ },
+ {
+  "group": {
+   "index": 9,
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_7zwxavws6dxvrtq63ur6"
+   ]
+  },
+  "reason": "wording-copy"
+ },
+ {
+  "group": {
+   "index": 10,
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_7lma3lyoho7lssd7khd5"
+   ]
+  },
+  "reason": "wording-copy"
+ },
+ {
+  "group": {
+   "index": 12,
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_zfk3sc4bxwwsj2r7n2nx"
+   ]
+  },
+  "reason": "wording-copy"
+ },
+ {
+  "group": {
+   "index": 14,
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_xp62fz3xhiyps2rusvhc"
+   ]
+  },
+  "reason": "wording-copy"
+ },
+ {
+  "group": {
+   "index": 15,
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_2bwcymi3m4uwfmlfcarr"
+   ]
+  },
+  "reason": "wording-copy"
+ },
+ {
+  "group": {
+   "index": 16,
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_pznz7zrcubgwgfs2zsko"
+   ]
+  },
+  "reason": "wording-copy"
+ },
+ {
+  "group": {
+   "index": 18,
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_eq3xmgfu3f2xgxc5wrto"
+   ]
+  },
+  "reason": "wording-copy"
+ },
+ {
+  "group": {
+   "index": 19,
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_jxgvgnn6vawbjj26prmu"
+   ]
+  },
+  "reason": "wording-copy"
+ },
+ {
+  "group": {
+   "index": 21,
+   "type": "multi-hop",
+   "chunkIds": [
+    "ch_nuzgilfyetd5ulfzvvew",
+    "ch_4jfnggxwdvrrq4zidolo",
+    "ch_wxbiww4ynjvwsryhludx"
+   ]
+  },
+  "reason": "wording-copy"
+ },
+ {
+  "group": {
+   "index": 22,
+   "type": "multi-hop",
+   "chunkIds": [
+    "ch_5qb4ugtonblyldtpulw7",
+    "ch_22ssyoj4g24fzqrpfd5x"
+   ]
+  },
+  "reason": "wording-copy"
+ },
+ {
+  "group": {
+   "index": 23,
+   "type": "multi-hop",
+   "chunkIds": [
+    "ch_eiu4rjpscmohqozlicsk",
+    "ch_rv56eltv2ym5ori7bbas",
+    "ch_66uqbp37gb3t4xz6zjam"
+   ]
+  },
+  "reason": "wording-copy"
+ },
+ {
+  "group": {
+   "index": 24,
+   "type": "multi-hop",
+   "chunkIds": [
+    "ch_4hebrfj4i7uti2qtpytg",
+    "ch_733r7vnzdjgirc37f6xk"
+   ]
+  },
+  "reason": "wording-copy"
+ },
+ {
+  "group": {
+   "index": 26,
+   "type": "multi-hop",
+   "chunkIds": [
+    "ch_cfmvlwkrdkcc7j5dawzq",
+    "ch_n27a2wtd634bv6gqs7oq"
+   ]
+  },
+  "reason": "wording-copy"
+ },
+ {
+  "group": {
+   "index": 27,
+   "type": "multi-hop",
+   "chunkIds": [
+    "ch_kpm7edoqnl7qzlsydijv",
+    "ch_ic4lwxekwbvo6ck44jlk",
+    "ch_iewysbkpgqaeri6nmudm"
+   ]
+  },
+  "reason": "wording-copy"
+ },
+ {
+  "group": {
+   "index": 28,
+   "type": "multi-hop",
+   "chunkIds": [
+    "ch_bkadd25rcchreleknau7",
+    "ch_3yhndsdw3glhekpcgy7u"
+   ]
+  },
+  "reason": "wording-copy"
+ },
+ {
+  "group": {
+   "index": 31,
+   "type": "multi-hop",
+   "chunkIds": [
+    "ch_ibqdnjl4c4xp5djeufqj",
+    "ch_wxbiww4ynjvwsryhludx"
+   ]
+  },
+  "reason": "wording-copy"
+ },
+ {
+  "group": {
+   "index": 35,
+   "type": "multi-hop",
+   "chunkIds": [
+    "ch_wi7ugysqpkv7ffv6bzpa",
+    "ch_lpwhtx36hnhev4ewfhxd",
+    "ch_bpmkglkp6tn63taf6cn6"
+   ]
+  },
+  "reason": "wording-copy"
+ },
+ {
+  "group": {
+   "index": 37,
+   "type": "multi-hop",
+   "chunkIds": [
+    "ch_jizkzzhmjarvx4drur57",
+    "ch_enl7bddiaahy6pmlxq7d"
+   ]
+  },
+  "reason": "wording-copy"
+ },
+ {
+  "group": {
+   "index": 38,
+   "type": "multi-hop",
+   "chunkIds": [
+    "ch_7zwxavws6dxvrtq63ur6",
+    "ch_2vqtecok6gimbudc476p"
+   ]
+  },
+  "reason": "wording-copy"
+ },
+ {
+  "group": {
+   "index": 50,
+   "type": "topic",
+   "chunkIds": [
+    "ch_j46sirqjzm4c4e2t6jxw",
+    "ch_wi7ugysqpkv7ffv6bzpa",
+    "ch_lo3hfzrqj2xdhhb5ccrj"
+   ]
+  },
+  "reason": "generation failed: question 0 uses 1 passages, needs 3"
+ },
+ {
+  "group": {
+   "index": 51,
+   "type": "topic",
+   "chunkIds": [
+    "ch_jizkzzhmjarvx4drur57",
+    "ch_enl7bddiaahy6pmlxq7d",
+    "ch_kpm7edoqnl7qzlsydijv",
+    "ch_htw7obdtbch3w3hmmyuq",
+    "ch_fwynntimvukk6c7wweup"
+   ]
+  },
+  "reason": "generation failed: ollama chat unreachable or timed out at http://localhost:11434: The operation was aborted due to timeout"
+ },
+ {
+  "group": {
+   "index": 52,
+   "type": "topic",
+   "chunkIds": [
+    "ch_2bwcymi3m4uwfmlfcarr",
+    "ch_ajkzqbiha72gitr3tqyf",
+    "ch_atzuh4y7r6rzsmw7fxx7",
+    "ch_6dxe72tu7g6exrtiwjz3"
+   ]
+  },
+  "reason": "generation failed: ollama chat unreachable or timed out at http://localhost:11434: The operation was aborted due to timeout"
+ },
+ {
+  "group": {
+   "index": 53,
+   "type": "topic",
+   "chunkIds": [
+    "ch_eiu4rjpscmohqozlicsk",
+    "ch_fdjgngujjyaa6hueblag",
+    "ch_man7jvkeuu2dvyzssmgv",
+    "ch_tkowzf7c6adzuh542wba"
+   ]
+  },
+  "reason": "generation failed: question 1 uses 2 passages, needs 3"
+ },
+ {
+  "group": {
+   "index": 54,
+   "type": "topic",
+   "chunkIds": [
+    "ch_pznz7zrcubgwgfs2zsko",
+    "ch_rzdmwkvqezdzoc4c4oes",
+    "ch_zfk3sc4bxwwsj2r7n2nx",
+    "ch_qoobiqandjy5pvztzyuj",
+    "ch_7lma3lyoho7lssd7khd5",
+    "ch_hhz6bb2e5prx7mezjnkr"
+   ]
+  },
+  "reason": "generation failed: question 1 uses 2 passages, needs 3"
+ },
+ {
+  "group": {
+   "index": 55,
+   "type": "topic",
+   "chunkIds": [
+    "ch_hurajqohny2xijhewc7v",
+    "ch_e4rd3qwb3c2jaew3iapr",
+    "ch_ptz5xpyr7hyol53gstx2"
+   ]
+  },
+  "reason": "generation failed: question 0 uses 1 passages, needs 3"
+ },
+ {
+  "group": {
+   "index": 56,
+   "type": "topic",
+   "chunkIds": [
+    "ch_joo45sqzt5b4t5qiuoe2",
+    "ch_jxgvgnn6vawbjj26prmu",
+    "ch_rv56eltv2ym5ori7bbas",
+    "ch_x4ja7vzfpd5j5nnb7fr7",
+    "ch_nsvya6fnfcpsx33jt5sf"
+   ]
+  },
+  "reason": "generation failed: question 0 uses 2 passages, needs 3"
+ }
+]

@@ -1,0 +1,362 @@
+{
+ "kardar": {
+  "coverage": {
+   "covered": 10,
+   "total": 12,
+   "items": {
+    "0": {
+     "covered": true,
+     "note": "0.8"
+    },
+    "1": {
+     "covered": false,
+     "note": "wrong/vague: Debye length stated for all long-range interactions, neutral-plasma qualifier lost, refers to \"the equation\""
+    },
+    "2": {
+     "covered": true,
+     "note": "2.7 (borderline: uniform-on-constant-energy-surface part is split into 2.1/2.6)"
+    },
+    "3": {
+     "covered": true,
+     "note": "3.3+3.4"
+    },
+    "4": {
+     "covered": false,
+     "note": "fact split over 4.1/4.2/4.3; binomial relation (4.3) has no referent; depends on undecoded formula"
+    },
+    "5": {
+     "covered": true,
+     "note": "5.8/5.9 (but f_2 rendered \"f squared\")"
+    },
+    "6": {
+     "covered": true,
+     "note": "6.9"
+    },
+    "7": {
+     "covered": true,
+     "note": "7.7"
+    },
+    "8": {
+     "covered": true,
+     "note": "8.9"
+    },
+    "9": {
+     "covered": true,
+     "note": "9.3"
+    },
+    "10": {
+     "covered": true,
+     "note": "10.5"
+    },
+    "11": {
+     "covered": true,
+     "note": "11.3/11.4"
+    }
+   }
+  },
+  "standalone": {
+   "sample": {
+    "0.0": "S",
+    "0.4": "S",
+    "1.0": "S",
+    "1.5": "U",
+    "2.2": "N",
+    "2.7": "S",
+    "3.3": "N",
+    "4.1": "S",
+    "5.1": "U",
+    "5.6": "N",
+    "6.1": "S",
+    "6.5": "N",
+    "7.0": "S",
+    "7.5": "N",
+    "8.2": "S",
+    "8.7": "S",
+    "9.1": "S",
+    "10.0": "S",
+    "10.5": "S",
+    "11.2": "S"
+   },
+   "reasons": {
+    "0.4": "which assumptions/total?",
+    "1.5": "unfaithful: chunk says neutral plasma, relation says all long-range; \"the equation\" dangling",
+    "2.2": "\"the solution\" dangling",
+    "3.3": "which system?",
+    "4.1": "fermion/fixed-density qualifier missing",
+    "5.1": "unfaithful: f_2 (two-particle density) rendered as \"f squared\"",
+    "5.6": "\"the slot\" undefined",
+    "6.5": "which Hamiltonian?",
+    "7.5": "\"a specific formula\" (empty)"
+   },
+   "standalone_faithful": 13,
+   "not_standalone": 5,
+   "unfaithful": 2
+  },
+  "fragmentation": {
+   "distinct": 206,
+   "extra": 24,
+   "groups": [
+    [
+     "Liouville's theorem",
+     "liouville theorem"
+    ],
+    [
+     "microstate",
+     "microstates"
+    ],
+    [
+     "ensemble",
+     "ensembles"
+    ],
+    [
+     "reversible",
+     "reversible process",
+     "reversible processes",
+     "reversible transformation"
+    ],
+    [
+     "temperature",
+     "temperatures",
+     "T"
+    ],
+    [
+     "particle",
+     "particles"
+    ],
+    [
+     "collision",
+     "collisions"
+    ],
+    [
+     "energy",
+     "energy e"
+    ],
+    [
+     "effective range",
+     "interaction range",
+     "d"
+    ],
+    [
+     "SLepsilon",
+     "single-particle level spacing"
+    ],
+    [
+     "Hamiltonian",
+     "heuscript",
+     "heuscriptlparenoripcommaoriqrparenori"
+    ],
+    [
+     "system",
+     "systems"
+    ],
+    [
+     "number of excited impurities",
+     "number of excited levels"
+    ],
+    [
+     "number of impurities",
+     "available impurities"
+    ],
+    [
+     "mass",
+     "mass m"
+    ],
+    [
+     "T H",
+     "source temperature"
+    ],
+    [
+     "T C",
+     "sink temperature"
+    ],
+    [
+     "ground state",
+     "first state"
+    ],
+    [
+     "excited state",
+     "second state"
+    ]
+   ],
+   "duplicate_rate": 0.117
+  },
+  "conflicts": {
+   "count": 1,
+   "per_100": 1.04,
+   "pairs": [
+    {
+     "pair": [
+      "6.0 The s-particle density is properly normalized to unity",
+      "6.1 The s-particle density has a normalization of N!/(N-s)!"
+     ],
+     "note": "direct contradiction produced by extraction: chunk distinguishes rho_s (unity) from the s-particle density"
+    }
+   ],
+   "relations": 96
+  }
+ },
+ "plischke": {
+  "coverage": {
+   "covered": 10,
+   "total": 12,
+   "items": {
+    "0": {
+     "covered": true,
+     "note": "0.10"
+    },
+    "1": {
+     "covered": true,
+     "note": "1.3"
+    },
+    "2": {
+     "covered": true,
+     "note": "2.1-2.3 (severing link with dynamics not stated)"
+    },
+    "3": {
+     "covered": true,
+     "note": "3.5"
+    },
+    "4": {
+     "covered": true,
+     "note": "4.6 (nondegenerate half only via dangling \"Equation (2.74)\" in 4.5)"
+    },
+    "5": {
+     "covered": true,
+     "note": "5.2"
+    },
+    "6": {
+     "covered": false,
+     "note": "split over 6.3/6.4 and phrased as section-number statements (\"Section 2.1 ...\"), no standalone relation"
+    },
+    "7": {
+     "covered": false,
+     "note": "omitted: fluctuation-dissipation theorem not extracted"
+    },
+    "8": {
+     "covered": true,
+     "note": "8.2"
+    },
+    "9": {
+     "covered": true,
+     "note": "9.1/9.2"
+    },
+    "10": {
+     "covered": true,
+     "note": "10.2,10.4,10.5"
+    },
+    "11": {
+     "covered": true,
+     "note": "11.4 (the (V/N)^(1/3) scale is not stated)"
+    }
+   }
+  },
+  "standalone": {
+   "sample": {
+    "0.0": "S",
+    "0.4": "N",
+    "0.8": "N",
+    "1.2": "N",
+    "2.0": "S",
+    "2.5": "S",
+    "3.1": "N",
+    "3.6": "S",
+    "4.1": "N",
+    "4.6": "S",
+    "5.3": "S",
+    "6.1": "S",
+    "6.6": "N",
+    "6.10": "N",
+    "6.15": "N",
+    "7.3": "S",
+    "8.3": "N",
+    "9.1": "S",
+    "10.2": "S",
+    "11.0": "S"
+   },
+   "reasons": {
+    "0.4": "which assumptions/total?",
+    "0.8": "garbled symbols (f1, Q2, ET), undefined",
+    "1.2": "vague \"identification\"",
+    "3.1": "\"Equation (2.100)\" dangling",
+    "4.1": "fermion/fixed-density qualifier missing",
+    "6.6": "\"the chapter\"",
+    "6.10": "section-number reference",
+    "6.15": "section-number reference",
+    "8.3": "\"the uncertainty equation\" dangling, vague"
+   },
+   "standalone_faithful": 11,
+   "not_standalone": 9,
+   "unfaithful": 0
+  },
+  "fragmentation": {
+   "distinct": 188,
+   "extra": 15,
+   "groups": [
+    [
+     "nonextensive measure",
+     "nonextensive measures"
+    ],
+    [
+     "constraint",
+     "constraints"
+    ],
+    [
+     "subsystem",
+     "subsystems"
+    ],
+    [
+     "system",
+     "systems"
+    ],
+    [
+     "two systems",
+     "two subsystems"
+    ],
+    [
+     "macroscopic properties",
+     "macroscopic property"
+    ],
+    [
+     "lagrange multiplier",
+     "lagrange multiplier a"
+    ],
+    [
+     "state k",
+     "state labeled by k"
+    ],
+    [
+     "surface V(E)",
+     "V(E)",
+     "T(E)"
+    ],
+    [
+     "energy",
+     "energy E"
+    ],
+    [
+     "information theory",
+     "information-theoretic approach"
+    ],
+    [
+     "number of possible sequences",
+     "number of sequences"
+    ],
+    [
+     "number of particles",
+     "particle numbers"
+    ],
+    [
+     "volume",
+     "volumes"
+    ]
+   ],
+   "duplicate_rate": 0.08
+  },
+  "conflicts": {
+   "count": 0,
+   "per_100": 0.0,
+   "pairs": [],
+   "relations": 89
+  }
+ }
+}

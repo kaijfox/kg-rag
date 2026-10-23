@@ -1,0 +1,10 @@
+{"n": "r16", "score": 0.5, "rationale": "Three-part decomposition is vaguely present but the answer omits that the third term reduces via symmetry to an expression proportional to f_{s+1} and mischaracterizes the groups."}
+{"n": "r26", "score": 1, "rationale": "Correctly identifies the fluctuation-dissipation theorem."}
+{"n": "r27", "score": 1, "rationale": "States the chemical work as the sum of chemical potentials times particle number changes, matching the reference."}
+{"n": "r25", "score": 0.5, "rationale": "Conveys that enthalpy minimization means internal force balances external force, but omits the system-plus-external-agent potential energy and the constant gravity force on the spring."}
+{"n": "r21", "score": 1, "rationale": "Includes extensivity proportionality and that chemical work is treated differently and not subtracted in the standard Gibbs free energy, with no contradiction."}
+{"n": "r18", "score": 1, "rationale": "Gives dW = sum mu_i dN_i with chemical potentials and particle number changes as in the reference."}
+{"n": "r23", "score": 1, "rationale": "Cites Bohr-Sommerfeld semiclassical theory and W/h^{3N} quantum states per phase space volume, matching the reference."}
+{"n": "r04", "score": 0, "rationale": "Says it cannot answer and omits the replacement of energy by the Helmholtz free energy."}
+{"n": "r10", "score": 0, "rationale": "Gives a different rationale (Gibbs paradox, dimensionless phase space) and omits the Bohr-Sommerfeld correspondence."}
+{"n": "r29", "score": 1, "rationale": "States no change in internal energy implies dependence on T only and gives E = 3Nk_B T/2, matching the reference."}

@@ -1,0 +1,17 @@
+/Users/kaifox/projects/obsidian/kg-rag/packages/app/src/ollamaLlm.ts:30
+        throw new KgError('upstream', `ollama chat unreachable or timed out at ${base}: ${(e as Error).message}`);
+              ^
+
+
+KgError: ollama chat unreachable or timed out at http://localhost:11434: The operation was aborted due to timeout
+    at Object.complete (/Users/kaifox/projects/obsidian/kg-rag/packages/app/src/ollamaLlm.ts:30:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Object.complete (/Users/kaifox/projects/obsidian/kg-rag/packages/core/src/evalTool.ts:71:19)
+    at async answer (/Users/kaifox/projects/obsidian/kg-rag/packages/eval/src/prompts/answer.ts:23:11)
+    at async <anonymous> (/Users/kaifox/projects/obsidian/kg-rag/packages/pipeline/src/actors.ts:18:14) {
+  code: 'upstream',
+  details: undefined
+}
+
+Node.js v22.17.0
+run cross-plischke-on-kardar: 26 questions x 1 conditions in 1241415 ms {"buildId":"bd_54xv4xliwgsagq3kbflb","questions":26,"ks":[1,3,5],"byCondition":{"retrieved":{"judge":0.3076923076923077,"retrieval":{"ks":[1,3,5],"perQuestion":{"p1":{"recall":{"1":0,"3":0,"5":0},"allGold":{"1":0,"3":0,"5":0},"withSummaries":{"1":0,"3":0,"5":0}},"p2":{"recall":{"1":0,"3":0,"5":0},"allGold":{"1":0,"3":0,"5":0},"withSummaries":{"1":0,"3":0,"5":0}},"p4":{"recall":{"1":0,"3":0,"5":0},"allGold":{"1":0,"3":0,"5":0},"withSummaries":{"1":0,"3":0,"5":0}},"p5":{"recall":{"1":0,"3":0,"5":0},"allGold":{"1":0,"3":0,"5":0},"withSummaries":{"1":0,"3":0,"5":0}},"p6":{"recall":{"1":0,"3":0,"5":0},"allGold":{"1":0,"3":0,"5":0},"withSummaries":{"1":0,"3":0,"5":0}},"p7":{"recall":{"1":0,"3":0,"5":0},"allGold":{"1":0,"3":0,"5":0},"withSummaries":{"1":0,"3":0,"5":0}},"p8":{"recall":{"1":0,"3":0

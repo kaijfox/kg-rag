@@ -1,0 +1,26 @@
+groups kardar: 20 single-hop, 40 multi-hop (13 adjacent), 14 topic; pool 193/223 chunks
+group 10/74: 4 questions, 6 dropped, 45 s
+group 20/74: 8 questions, 12 dropped, 85 s
+group 30/74: 12 questions, 18 dropped, 165 s
+group 40/74: 18 questions, 23 dropped, 266 s
+group 50/74: 20 questions, 29 dropped, 360 s
+group 60/74: 23 questions, 35 dropped, 431 s
+group 70/74: 27 questions, 44 dropped, 664 s
+47 groups or drafts dropped {"wording-copy":41,"generation failed: question 0 uses 1 pas":3,"generation failed: question 0 uses 2 pas":2,"generation failed: question 1 uses 2 pas":1} in 736581 ms
+by type { 'single-hop': 8, 'multi-hop': 15, topic: 6 } by doc {
+  FoundationsKardar: 19,
+  ThermoKardar: 9,
+  'FoundationsKardar+ThermoKardar': 1
+} with formula in gold 24
+groups plischke: 20 single-hop, 30 multi-hop (10 adjacent), 7 topic; pool 76/89 chunks
+group 10/57: 5 questions, 5 dropped, 47 s
+group 20/57: 8 questions, 12 dropped, 97 s
+group 30/57: 9 questions, 19 dropped, 171 s
+group 40/57: 14 questions, 23 dropped, 283 s
+group 50/57: 22 questions, 23 dropped, 598 s
+30 groups or drafts dropped {"wording-copy":23,"generation failed: question 0 uses 1 pas":2,"generation failed: ollama chat unreachab":2,"generation failed: question 1 uses 2 pas":2,"generation failed: question 0 uses 2 pas":1} in 7256981 ms
+by type { 'single-hop': 8, 'multi-hop': 14 } by doc {
+  FoundationsPlischke: 12,
+  ThermoPlischke: 9,
+  'FoundationsPlischke+ThermoPlischke': 1
+} with formula in gold 19

@@ -1,0 +1,66 @@
+[
+ {
+  "id": "p8",
+  "type": "single-hop",
+  "original": 0,
+  "paraphrases": [
+   "What particular ensemble describes classical systems when they are isolated from their environment?",
+   "In the context of classical systems that do not interact with their surroundings, which specific ensemble is utilized?",
+   "For a classical system separated from its external world, what is the designated ensemble?"
+  ],
+  "recalls": [
+   0,
+   1,
+   0
+  ],
+  "best": 1
+ },
+ {
+  "id": "p30",
+  "type": "topic",
+  "original": 0.3333333333333333,
+  "paraphrases": [
+   "In what ways do state functions such as internal energy differ from path-dependent quantities like heat and work when comparing reversible and irreversible processes?",
+   "How does the nature of state variables (e.g., internal energy) contrast with that of heat and work specifically regarding the distinction between reversible and irreversible transformations?",
+   "What are the key differences between the definitions of state functions like internal energy and those of heat and work, particularly as they apply to reversible versus irreversible scenarios?"
+  ],
+  "recalls": [
+   0.3333333333333333,
+   0.6666666666666666,
+   0.3333333333333333
+  ],
+  "best": 0.6666666666666666
+ },
+ {
+  "id": "pr25",
+  "type": "single-hop",
+  "original": 0,
+  "paraphrases": [
+   "In statistical mechanics, what is the method for shifting the focus from entropy to temperature as a fundamental variable?",
+   "How does one derive temperature from entropy within the framework of statistical mechanics?",
+   "What is the procedure in statistical mechanics that converts entropy, treated as an independent variable, into temperature?"
+  ],
+  "recalls": [
+   0,
+   0,
+   1
+  ],
+  "best": 1
+ },
+ {
+  "id": "pr222",
+  "type": "multi-hop",
+  "original": 0.5,
+  "paraphrases": [
+   "In what ways does deriving probability distributions for non-extensive energy systems diverge from the conventional microcanonical ensemble method, and which mathematical technique is employed to optimize the generalized entropy formula under multiple constraints?",
+   "How does the process of obtaining probability distributions for systems with non-additive energies contrast with the standard microcanonical ensemble framework, and what specific procedure allows for maximizing generalized entropy when several constraints are present?",
+   "What distinguishes the derivation of probability distributions for non-extensive energy systems from the typical microcanonical ensemble approach, and how is one mathematically maximizes the generalized entropy expression in scenarios involving multiple constraints?"
+  ],
+  "recalls": [
+   0.5,
+   0.5,
+   0.5
+  ],
+  "best": 0.5
+ }
+]

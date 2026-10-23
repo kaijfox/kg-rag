@@ -1,0 +1,814 @@
+[
+ {
+  "questionId": "p1",
+  "chunkId": "ch_5r3o6nyrajf6fb6guqyi",
+  "question": "Under what condition does the product of the statistical weights of two energy-exchanging subsystems reach its maximum value?",
+  "referenceAnswer": "The product is at a maximum when the total entropy reaches its maximum.",
+  "chunkText": "We now consider two systems which are free to exchange energy but which are isolated from the rest of the universe by an ideal insulating surface. The particle numbers Ni, iV2 and volumes V\\, V2 are fixed for each subsystem. The total energy will be constant under our assumptions and we assume further that the two subsystems are sufficiently weakly interacting that we can write\n\n[formula]\n\nwhere E\\ and E^ are the energies of the subsystems. We again assume a tolerance SE chosen suitably so that the statistical weights fl, fii, ^2 are proportional to SE. We then have\n\n[formula]\n\nIf the subsystems are sufficiently large, the product 0,2{ET - E\\)Q,i{E\\) will be a sharply peaked function of E\\. The reason for this is that fii and Q.2 are rapidly increasing functions of E\\ and ET - E\\ respectively. 4 From the definition (2.9) we note that the entropy is a monotonically increasing function of Q, and that the product Q1Q.2 will be at a maximum when the total entropy\n\n[formula]",
+  "relations": [
+   {
+    "text": "Two systems are isolated from the rest of the universe by an ideal insulating surface.",
+    "nodes": [
+     "two systems",
+     "ideal insulating surface",
+     "rest of the universe"
+    ]
+   },
+   {
+    "text": "The two systems are free to exchange energy.",
+    "nodes": [
+     "two systems",
+     "energy"
+    ]
+   },
+   {
+    "text": "The particle numbers for each subsystem are fixed.",
+    "nodes": [
+     "particle numbers",
+     "subsystem"
+    ]
+   },
+   {
+    "text": "The volumes for each subsystem are fixed.",
+    "nodes": [
+     "volumes",
+     "subsystem"
+    ]
+   },
+   {
+    "text": "The total energy is constant under the assumptions.",
+    "nodes": [
+     "total energy",
+     "assumptions"
+    ]
+   },
+   {
+    "text": "The two subsystems are sufficiently weakly interacting.",
+    "nodes": [
+     "two subsystems",
+     "interaction"
+    ]
+   },
+   {
+    "text": "The statistical weights are proportional to the tolerance SE.",
+    "nodes": [
+     "statistical weights",
+     "tolerance SE"
+    ]
+   },
+   {
+    "text": "The product of statistical weights is a sharply peaked function of E1 if the subsystems are sufficiently large.",
+    "nodes": [
+     "product of statistical weights",
+     "E1",
+     "subsystems"
+    ]
+   },
+   {
+    "text": "f1 and Q2 are rapidly increasing functions of E1 and ET - E1 respectively.",
+    "nodes": [
+     "f1",
+     "Q2",
+     "E1",
+     "ET - E1"
+    ]
+   },
+   {
+    "text": "The entropy is a monotonically increasing function of Q.",
+    "nodes": [
+     "entropy",
+     "Q"
+    ]
+   },
+   {
+    "text": "The product Q1Q2 will be at a maximum when the total entropy is at a maximum.",
+    "nodes": [
+     "product Q1Q2",
+     "total entropy"
+    ]
+   }
+  ],
+  "error": null
+ },
+ {
+  "questionId": "p2",
+  "chunkId": "ch_cfmvlwkrdkcc7j5dawzq",
+  "question": "What physical quantity is identified with the parameter A in the context of recovering the canonical distribution?",
+  "referenceAnswer": "The parameter A is identified as the Helmholtz free energy.",
+  "chunkText": "The remaining Lagrange multiplier @ is determined from the condition\n\n[formula]\n\nIf we let / (a; j) be the energy of the state x j , we see that we recover the canonical distribution with the identification\n\n[formula]\n\nwhere A is the Helmholtz free energy. It is easy to see that the second variation of S is negative, indicating that we have found a true maximum of the entropy subject to the constraint. The extension of the method to the grand canonical ensemble is left as an exercise (Problem 2.9).",
+  "relations": [
+   {
+    "text": "The remaining Lagrange multiplier is determined from a specific condition.",
+    "nodes": [
+     "lagrange multiplier",
+     "condition"
+    ]
+   },
+   {
+    "text": "The energy of the state x_j is denoted by / (a; j).",
+    "nodes": [
+     "energy",
+     "state"
+    ]
+   },
+   {
+    "text": "The canonical distribution is recovered with the identification involving the Helmholtz free energy.",
+    "nodes": [
+     "canonical distribution",
+     "helmholtz free energy"
+    ]
+   },
+   {
+    "text": "A is the Helmholtz free energy.",
+    "nodes": [
+     "a",
+     "helmholtz free energy"
+    ]
+   },
+   {
+    "text": "The second variation of S is negative.",
+    "nodes": [
+     "second variation",
+     "s",
+     "negative"
+    ]
+   },
+   {
+    "text": "A negative second variation of S indicates a true maximum of the entropy subject to the constraint.",
+    "nodes": [
+     "second variation",
+     "entropy",
+     "constraint",
+     "maximum"
+    ]
+   }
+  ],
+  "error": null
+ },
+ {
+  "questionId": "p4",
+  "chunkId": "ch_fdbuy3wgrvs7hrptvslj",
+  "question": "How can the foundational basis for equilibrium statistical mechanics be redefined to remove its reliance on dynamical evolution?",
+  "referenceAnswer": "The foundation can be formulated using information theory, where thermodynamic variables are derived from a least-possible-bias estimate based on available information, thereby severing the connection with dynamics and establishing a maximum entropy principle.",
+  "chunkText": "The link provided by the ergodic hypothesis between the time evolution of a dynamical system and the ensemble concept is a weak one. It is therefore of interest to show that it is possible to formulate the foundation of equilibrium statistical mechanics in terms of information theory [142], in which the thermodynamic variables are inferred from a least-possible-bias estimate on the basis of available information. In this way the link with dynamics is severed altogether and the approach leads to a maximum entropy principle that yields results equivalent to the ones found earlier in this chapter.\n\nConsider first the situation in which a state variable x is capable of attaining any one of fi discrete values X{ (i = 1,2,..., fi). Let pi be the associated probability distribution. This distribution must be normalized:\n\n[formula]\n\n»=i\n\nand there may be a number of other constraints of the form\n\n[formula]\n\n» = 1",
+  "relations": [
+   {
+    "text": "The ergodic hypothesis links the time evolution of a dynamical system to the ensemble concept.",
+    "nodes": [
+     "ergodic hypothesis",
+     "time evolution",
+     "dynamical system",
+     "ensemble concept"
+    ]
+   },
+   {
+    "text": "Equilibrium statistical mechanics can be formulated in terms of information theory.",
+    "nodes": [
+     "equilibrium statistical mechanics",
+     "information theory"
+    ]
+   },
+   {
+    "text": "Thermodynamic variables are inferred from a least-possible-bias estimate based on available information.",
+    "nodes": [
+     "thermodynamic variables",
+     "least-possible-bias estimate",
+     "available information"
+    ]
+   },
+   {
+    "text": "The approach leads to a maximum entropy principle.",
+    "nodes": [
+     "approach",
+     "maximum entropy principle"
+    ]
+   },
+   {
+    "text": "The maximum entropy principle yields results equivalent to earlier findings in the chapter.",
+    "nodes": [
+     "maximum entropy principle",
+     "earlier findings"
+    ]
+   },
+   {
+    "text": "A state variable x can attain discrete values X_i.",
+    "nodes": [
+     "state variable",
+     "discrete values"
+    ]
+   },
+   {
+    "text": "The probability distribution p_i is associated with the state variable x.",
+    "nodes": [
+     "probability distribution",
+     "state variable"
+    ]
+   },
+   {
+    "text": "The probability distribution must be normalized.",
+    "nodes": [
+     "probability distribution",
+     "normalization"
+    ]
+   }
+  ],
+  "error": null
+ },
+ {
+  "questionId": "p5",
+  "chunkId": "ch_bfzlmt5iy4qae5fa6tcd",
+  "question": "Which researcher is credited with proposing the most significant alternative to Boltzmann-Shannon entropy specifically to address systems that do not satisfy the extensivity requirement?",
+  "referenceAnswer": "Costantino Tsallis is credited with this attempt.",
+  "chunkText": "Equation (2.100) was derived by Shannon [271] shortly after the second world war and is generally considered to be one of the fundamental results of information theory. Note the key role of the requirement of extensivity in establishing the uniqueness of the Boltzmann-Shannon entropy. As pointed out at the end of section 2.1 not all system are \"normal\" with an extensive energy. It is therefore natural that attempts have been made to replace the Boltzmann-Shannon entropy with a nonextensive measure. The most significant such attempt is that of Costantino Tsallis [305] and there is now a very large literature on the subject 6 .\n\nIt is easy to generalize the Boltzmann-Shannon definition to a continuous probability distribution p(x):\n\n[formula]\n\nConsider the case of N identical particles in a 6N-dimensional phase space. We have seen that according to the semiclassical rules there are\n\n[formula]\n\nstates in the phase space volume d 6N x. Therefore, we find for the entropy\n\n[formula]",
+  "relations": [
+   {
+    "text": "Equation (2.100) was derived by Shannon shortly after the second world war.",
+    "nodes": [
+     "equation (2.100)",
+     "shannon",
+     "second world war"
+    ]
+   },
+   {
+    "text": "Equation (2.100) is generally considered to be one of the fundamental results of information theory.",
+    "nodes": [
+     "equation (2.100)",
+     "information theory",
+     "fundamental results"
+    ]
+   },
+   {
+    "text": "The requirement of extensivity establishes the uniqueness of the Boltzmann-Shannon entropy.",
+    "nodes": [
+     "extensivity",
+     "Boltzmann-Shannon entropy",
+     "uniqueness"
+    ]
+   },
+   {
+    "text": "Not all systems are normal with an extensive energy.",
+    "nodes": [
+     "systems",
+     "extensive energy",
+     "normality"
+    ]
+   },
+   {
+    "text": "Attempts have been made to replace the Boltzmann-Shannon entropy with a nonextensive measure.",
+    "nodes": [
+     "Boltzmann-Shannon entropy",
+     "nonextensive measure",
+     "attempts"
+    ]
+   },
+   {
+    "text": "Costantino Tsallis made the most significant attempt to replace the Boltzmann-Shannon entropy with a nonextensive measure.",
+    "nodes": [
+     "costantino tsallis",
+     "Boltzmann-Shannon entropy",
+     "nonextensive measure"
+    ]
+   },
+   {
+    "text": "There is now a very large literature on the subject of nonextensive measures.",
+    "nodes": [
+     "literature",
+     "nonextensive measures",
+     "subject"
+    ]
+   },
+   {
+    "text": "The Boltzmann-Shannon definition can be generalized to a continuous probability distribution p(x).",
+    "nodes": [
+     "Boltzmann-Shannon definition",
+     "continuous probability distribution",
+     "generalization"
+    ]
+   },
+   {
+    "text": "There are states in the phase space volume d 6N x according to semiclassical rules for N identical particles.",
+    "nodes": [
+     "states",
+     "phase space volume",
+     "semiclassical rules",
+     "identical particles"
+    ]
+   }
+  ],
+  "error": null
+ },
+ {
+  "questionId": "p6",
+  "chunkId": "ch_25fxms7ihs4ujyw2e3hl",
+  "question": "Under what condition involving the thermal wavelength and particle density does a fermion system transition from being nondegenerate to degenerate?",
+  "referenceAnswer": "The system is nondegenerate when the cube of the thermal wavelength is less than the volume per particle, and it becomes degenerate when this inequality is reversed.",
+  "chunkText": "We note that as T -> 0 at fixed density (N)/V the chemical potential n must approach a finite positive limit, the Fermi energy ep. In this limit the occupation number (2.72) is 1 for energies less than tp and 0 otherwise. Conversely, from (2.73) we see that if e - \" M ^> ^ the probability of occupation of any state is small (note that i£k,CT is positive). In this case the system of fermions is nondegenerate and approximately satisfies Boltzmann statistics:\n\n[formula]\n\nProm (2.20) we see that equation (2.74) will be valid for all k if the thermal wavelength (2.21) A satisfies A 3 < V/N. Conversely, if A 3 > V/N the system will be degenerate.",
+  "relations": [
+   {
+    "text": "As temperature approaches zero at fixed density, the chemical potential approaches a finite positive limit called the Fermi energy.",
+    "nodes": [
+     "temperature",
+     "chemical potential",
+     "density",
+     "Fermi energy"
+    ]
+   },
+   {
+    "text": "In the zero temperature limit, the occupation number is one for energies less than the Fermi energy and zero otherwise.",
+    "nodes": [
+     "occupation number",
+     "energy",
+     "Fermi energy"
+    ]
+   },
+   {
+    "text": "If the difference between energy and chemical potential is large and positive, the probability of occupation of any state is small.",
+    "nodes": [
+     "energy",
+     "chemical potential",
+     "probability of occupation"
+    ]
+   },
+   {
+    "text": "When the probability of occupation is small, the system of fermions is nondegenerate.",
+    "nodes": [
+     "fermions",
+     "nondegenerate"
+    ]
+   },
+   {
+    "text": "In the case where the probability of occupation is small, the system approximately satisfies Boltzmann statistics.",
+    "nodes": [
+     "system",
+     "Boltzmann statistics"
+    ]
+   },
+   {
+    "text": "Equation (2.74) is valid for all k if the thermal wavelength cubed is less than volume divided by number of particles.",
+    "nodes": [
+     "thermal wavelength",
+     "volume",
+     "number of particles"
+    ]
+   },
+   {
+    "text": "If the thermal wavelength cubed is greater than volume divided by number of particles, the system will be degenerate.",
+    "nodes": [
+     "thermal wavelength",
+     "volume",
+     "number of particles",
+     "degenerate"
+    ]
+   }
+  ],
+  "error": null
+ },
+ {
+  "questionId": "p7",
+  "chunkId": "ch_pvcztfdicdhklnbnvmme",
+  "question": "What is the geometric dimensionality of the surface that confines the motion of an N-particle system when its energy E is specified?",
+  "referenceAnswer": "The motion is confined to a (6N - 1)-dimensional surface.",
+  "chunkText": "We define a 6iV-dimensional phase space and represent the state of the system, at a particular instant, by a 6iV-dimensional vector x in this space, with components given by the generalized coordinates and momenta qj, pj. If we specify the energy E of the system, the motion of the JV-particle system will be confined to a (6N - l)-dimensional surface given by\n\n[formula]\n\nWe denote this surface by V(E). If a system is in equilibrium its macroscopic properties should be time independent. One way to measure a macroscopic property of the system (e.g., the pressure associated with N particles in a box) is to carry the experiment out over a period of time to < t < to + r during which the phase point covers some part of T(E). If the instantaneous value of the property in question is 4>{x(t)), the measured value will be\n\n1 For a discussion of action-angle variables see e.g. [113]\n\n[formula]",
+  "relations": [
+   {
+    "text": "The state of a system at a particular instant is represented by a vector x in a 6N-dimensional phase space.",
+    "nodes": [
+     "state",
+     "vector x",
+     "phase space"
+    ]
+   },
+   {
+    "text": "The components of the vector x are given by the generalized coordinates and momenta qj, pj.",
+    "nodes": [
+     "components",
+     "generalized coordinates",
+     "momenta"
+    ]
+   },
+   {
+    "text": "Specifying the energy E confines the motion of a JV-particle system to a (6N - 1)-dimensional surface.",
+    "nodes": [
+     "energy E",
+     "motion",
+     "surface V(E)"
+    ]
+   },
+   {
+    "text": "The surface defined by specifying the energy E is denoted by V(E).",
+    "nodes": [
+     "surface",
+     "energy E",
+     "V(E)"
+    ]
+   },
+   {
+    "text": "If a system is in equilibrium, its macroscopic properties are time independent.",
+    "nodes": [
+     "equilibrium",
+     "macroscopic properties",
+     "time"
+    ]
+   },
+   {
+    "text": "The measured value of a macroscopic property is the average of the instantaneous value over a period of time.",
+    "nodes": [
+     "measured value",
+     "macroscopic property",
+     "instantaneous value",
+     "period of time"
+    ]
+   }
+  ],
+  "error": null
+ },
+ {
+  "questionId": "p8",
+  "chunkId": "ch_4jfnggxwdvrrq4zidolo",
+  "question": "Which specific ensemble is introduced for classical systems that are isolated from their surroundings?",
+  "referenceAnswer": "The microcanonical ensemble is defined for a closed classical system.",
+  "chunkText": "In this chapter we develop the foundations of equilibrium statistical mechanics. No attempt will be made to derive the equilibrium theory from the detailed microscopic dynamics. Instead, we will content ourselves with postulating the statistical laws. In Section 2.1 we consider a closed classical system and develop the concept of the microcanonical ensemble. We define the entropy in the thermodynamic limit, and make contact with thermodynamics. In Section 2.2 we extend the formalism to systems in thermal contact with the surroundings and introduce the canonical ensemble. We also discuss fluctuations of thermodynamic variables. The grand canonical ensemble is discussed in Section 2.3 for systems that are free to exchange particles with the outside, and we demonstrate the general relation between fluctuations in particle number and the compressibility. In Section 2.4 we modify the formalism to include quantum systems and introduce the density matrix. An alternative information-theoretic approach is discussed in Section 2.5 and a number of useful thermodynamic variational principles are introduced in Section 2.6.",
+  "relations": [
+   {
+    "text": "The chapter develops the foundations of equilibrium statistical mechanics.",
+    "nodes": [
+     "chapter",
+     "equilibrium statistical mechanics"
+    ]
+   },
+   {
+    "text": "The equilibrium theory is not derived from detailed microscopic dynamics.",
+    "nodes": [
+     "equilibrium theory",
+     "microscopic dynamics"
+    ]
+   },
+   {
+    "text": "Statistical laws are postulated instead of being derived.",
+    "nodes": [
+     "statistical laws",
+     "postulation"
+    ]
+   },
+   {
+    "text": "Section 2.1 considers a closed classical system.",
+    "nodes": [
+     "section 2.1",
+     "closed classical system"
+    ]
+   },
+   {
+    "text": "Section 2.1 develops the concept of the microcanonical ensemble.",
+    "nodes": [
+     "section 2.1",
+     "microcanonical ensemble"
+    ]
+   },
+   {
+    "text": "Entropy is defined in the thermodynamic limit.",
+    "nodes": [
+     "entropy",
+     "thermodynamic limit"
+    ]
+   },
+   {
+    "text": "The chapter makes contact with thermodynamics.",
+    "nodes": [
+     "chapter",
+     "thermodynamics"
+    ]
+   },
+   {
+    "text": "Section 2.2 extends the formalism to systems in thermal contact with the surroundings.",
+    "nodes": [
+     "section 2.2",
+     "systems in thermal contact",
+     "surroundings"
+    ]
+   },
+   {
+    "text": "Section 2.2 introduces the canonical ensemble.",
+    "nodes": [
+     "section 2.2",
+     "canonical ensemble"
+    ]
+   },
+   {
+    "text": "Section 2.2 discusses fluctuations of thermodynamic variables.",
+    "nodes": [
+     "section 2.2",
+     "fluctuations",
+     "thermodynamic variables"
+    ]
+   },
+   {
+    "text": "Section 2.3 discusses the grand canonical ensemble for systems free to exchange particles with the outside.",
+    "nodes": [
+     "section 2.3",
+     "grand canonical ensemble",
+     "systems exchanging particles"
+    ]
+   },
+   {
+    "text": "Section 2.3 demonstrates the relation between fluctuations in particle number and compressibility.",
+    "nodes": [
+     "fluctuations in particle number",
+     "compressibility"
+    ]
+   },
+   {
+    "text": "Section 2.4 modifies the formalism to include quantum systems.",
+    "nodes": [
+     "section 2.4",
+     "formalism",
+     "quantum systems"
+    ]
+   },
+   {
+    "text": "Section 2.4 introduces the density matrix.",
+    "nodes": [
+     "section 2.4",
+     "density matrix"
+    ]
+   },
+   {
+    "text": "Section 2.5 discusses an alternative information-theoretic approach.",
+    "nodes": [
+     "section 2.5",
+     "information-theoretic approach"
+    ]
+   },
+   {
+    "text": "Section 2.6 introduces thermodynamic variational principles.",
+    "nodes": [
+     "section 2.6",
+     "thermodynamic variational principles"
+    ]
+   }
+  ],
+  "error": null
+ },
+ {
+  "questionId": "p9",
+  "chunkId": "ch_w4fe6cyd3bbst5yvwgdl",
+  "question": "What fundamental principle connects the response function C_V,N to the mean-square fluctuation of energy?",
+  "referenceAnswer": "The relationship between the response function C_V,N and the mean-square fluctuation of energy is a specific instance of the fluctuation-dissipation theorem.",
+  "chunkText": "where Cy,N is the heat capacity at constant N and V. The heat capacity is an extensive variable, as is the energy, and the root-mean-square (rms) fluctuation in the energy will thus be proportional to \\/{E). The mean fluctuation is therefore large for a large system, but is a vanishingly small fraction of the total energy in the thermodynamic limit:\n\n[formula]\n\nThe relationship (2.43) between the response function CV,N and the meansquare fluctuation of the energy is a special case of a very general result known as the fluctuation-dissipation theorem (see Chapter 12). We shall encounter a number of such relations.\n\nor",
+  "relations": [
+   {
+    "text": "The heat capacity at constant N and V is an extensive variable.",
+    "nodes": [
+     "heat capacity",
+     "constant N",
+     "constant V",
+     "extensive variable"
+    ]
+   },
+   {
+    "text": "The energy is an extensive variable.",
+    "nodes": [
+     "energy",
+     "extensive variable"
+    ]
+   },
+   {
+    "text": "The root-mean-square fluctuation in the energy is proportional to the square root of the mean energy.",
+    "nodes": [
+     "root-mean-square fluctuation",
+     "energy",
+     "mean energy"
+    ]
+   },
+   {
+    "text": "The mean fluctuation in the energy is large for a large system.",
+    "nodes": [
+     "mean fluctuation",
+     "energy",
+     "large system"
+    ]
+   },
+   {
+    "text": "The mean fluctuation in the energy is a vanishingly small fraction of the total energy in the thermodynamic limit.",
+    "nodes": [
+     "mean fluctuation",
+     "total energy",
+     "thermodynamic limit"
+    ]
+   }
+  ],
+  "error": null
+ },
+ {
+  "questionId": "p10",
+  "chunkId": "ch_mj6jcmhfavmfhkfiqgpu",
+  "question": "Under what condition regarding the relationship between total uncertainty and subsystem uncertainties is the function S considered an extensive variable?",
+  "referenceAnswer": "The function S is considered an extensive variable when the total uncertainty associated with a system composed of independent subsystems equals the sum of the uncertainties of those individual subsystems.",
+  "chunkText": "This is not the only possible measure of uncertainty; any monotonic function S(Zpi) may serve. Consider next a system made up of two independent subsystems. We imagine that we measure the state of subsystem 1 N(l) times and subsystem 2 7V(2) times. The number of possible sequences is now Z = Z(1)Z(2). We next limit the choice of possible functions S by requiring our uncertainty to be the sum of the uncertainties associated with independent subsystems, i.e. we require that S is an extensive variable:\n\n[formula]\n\nThe choice of the function S is now essentially unique. To see this let us differentiate (2.98) two different ways\n\n[formula]\n\nand, if differentiating instead with respect to Z(2) we obtain\n\n[formula]\n\nSince the left side of (2.99) is independent of Z(2), and the right hand side is independent of Z{\\) they must both be equal to a constant. We call this constant K. We now drop the subscripts and find\n\n[formula]\n\nWe integrate this equation to obtain\n\n[formula]",
+  "relations": [
+   {
+    "text": "Any monotonic function S(Zpi) may serve as a measure of uncertainty.",
+    "nodes": [
+     "monotonic function",
+     "uncertainty",
+     "measure"
+    ]
+   },
+   {
+    "text": "The number of possible sequences for two independent subsystems is the product of the number of sequences for each subsystem.",
+    "nodes": [
+     "number of possible sequences",
+     "independent subsystems",
+     "product"
+    ]
+   },
+   {
+    "text": "The uncertainty S is required to be an extensive variable equal to the sum of uncertainties associated with independent subsystems.",
+    "nodes": [
+     "uncertainty",
+     "extensive variable",
+     "sum",
+     "independent subsystems"
+    ]
+   },
+   {
+    "text": "Differentiating the uncertainty equation with respect to the number of sequences for a subsystem yields a constant K.",
+    "nodes": [
+     "differentiation",
+     "uncertainty equation",
+     "constant",
+     "subsystem"
+    ]
+   },
+   {
+    "text": "The constant K is independent of the number of sequences for the subsystems.",
+    "nodes": [
+     "constant",
+     "number of sequences",
+     "independence"
+    ]
+   },
+   {
+    "text": "Integrating the differential equation for uncertainty yields a logarithmic relationship involving the constant K.",
+    "nodes": [
+     "integration",
+     "uncertainty",
+     "logarithmic relationship",
+     "constant"
+    ]
+   }
+  ],
+  "error": null
+ },
+ {
+  "questionId": "p11",
+  "chunkId": "ch_e4m5mw2net6vdyepfdtv",
+  "question": "How is the normalization constant determined when maximizing entropy subject to a single constraint using Lagrange multipliers?",
+  "referenceAnswer": "The Lagrange multiplier is fixed by applying the normalization condition, which then yields the specific probability density expression.",
+  "chunkText": "It is easy to see that if we let\n\n[formula]\n\nwhere Cl(E) is given by (2.10), we get back the expression (2.9) for the entropy of the microcanonical ensemble. To see that the probability density (2.104) maximizes the expression (2.103) subject to the constraint (2.101), we use the method of Lagrange multipliers. Requiring that the functional derivative\n\n[formula]\n\nshould vanish yields\n\n[formula]\n\nThe Lagrange multiplier A is determined by the normalization condition (2.101) from which (2.104) follows. The extension to the case in which there are one or more constraints of the form (2.96) is straightforward. If we wish to constrain the expectation value of the function f{x), we maximize the expression\n\nA fairly complete list of references can be found at http://tsallis.cat.cbpf.br/biblio.htm\n\n[formula]\n\nwhere j3 and A are Lagrange multipliers. This procedure yields\n\n[formula]\n\n[formula]\n\nwe find from the normalizing constraint (2.95),\n\n[formula]",
+  "relations": [
+   {
+    "text": "The probability density given by equation 2.104 maximizes the expression given by equation 2.103 subject to the constraint given by equation 2.101.",
+    "nodes": [
+     "probability density",
+     "expression",
+     "constraint"
+    ]
+   },
+   {
+    "text": "The Lagrange multiplier A is determined by the normalization condition.",
+    "nodes": [
+     "lagrange multiplier a",
+     "normalization condition"
+    ]
+   },
+   {
+    "text": "Equation 2.104 follows from the determination of the lagrange multiplier A by the normalization condition.",
+    "nodes": [
+     "equation 2.104",
+     "lagrange multiplier a",
+     "normalization condition"
+    ]
+   },
+   {
+    "text": "The extension to cases with one or more constraints of the form given by equation 2.96 is straightforward.",
+    "nodes": [
+     "extension",
+     "constraints",
+     "equation 2.96"
+    ]
+   }
+  ],
+  "error": null
+ },
+ {
+  "questionId": "p12",
+  "chunkId": "ch_tj22dx7prtg36f27ad4a",
+  "question": "Under what conditions can mixing occur in a physical system?",
+  "referenceAnswer": "Mixing occurs when an initial compact distribution of points distorts into a convoluted object that permeates the entire surface while maintaining the same volume, a phenomenon proven for systems like hard spheres. In truly isolated systems, mixing is irrelevant, but small amounts of noise in imperfectly insulated systems can distort trajectories sufficiently to effectively produce mixing.",
+  "chunkText": "A hypothesis that leads to statistical mechanics, as we know it, is the mixing hypothesis. Briefly stated, mixing refers to the notion that an initial (compact) distribution of points on T{E) very quickly distorts into a convoluted object which permeates the entire surface while still occupying the same volume (as required by Liouville's theorem). Mixing can be proven to occur, for example, for systems of hard spheres [274] [275]. When one talks about a distribution of points on T(E), one is no longer discussing a single system, and for a truly isolated system, mixing is of course irrelevant. However, the sensitivity of x(i) to minute changes in initial conditions, will allow small amounts of noise in an imperfectly insulated system to distort the trajectory sufficiently that in effect one obtains mixing.",
+  "relations": [
+   {
+    "text": "The mixing hypothesis leads to statistical mechanics.",
+    "nodes": [
+     "mixing hypothesis",
+     "statistical mechanics"
+    ]
+   },
+   {
+    "text": "Mixing refers to the notion that an initial compact distribution of points on T(E) quickly distorts into a convoluted object which permeates the entire surface while occupying the same volume.",
+    "nodes": [
+     "mixing",
+     "initial distribution",
+     "convoluted object",
+     "surface"
+    ]
+   },
+   {
+    "text": "Mixing occurs for systems of hard spheres.",
+    "nodes": [
+     "mixing",
+     "systems of hard spheres"
+    ]
+   },
+   {
+    "text": "A distribution of points on T(E) implies one is no longer discussing a single system.",
+    "nodes": [
+     "distribution of points",
+     "T(E)",
+     "single system"
+    ]
+   },
+   {
+    "text": "Mixing is irrelevant for a truly isolated system.",
+    "nodes": [
+     "mixing",
+     "isolated system"
+    ]
+   },
+   {
+    "text": "Sensitivity of x(i) to minute changes in initial conditions allows small amounts of noise in an imperfectly insulated system to distort the trajectory sufficiently that one obtains mixing.",
+    "nodes": [
+     "sensitivity",
+     "x(i)",
+     "initial conditions",
+     "noise",
+     "imperfectly insulated system",
+     "trajectory",
+     "mixing"
+    ]
+   }
+  ],
+  "error": null
+ },
+ {
+  "questionId": "p13",
+  "chunkId": "ch_733r7vnzdjgirc37f6xk",
+  "question": "Under what condition does a system of noninteracting bosons obey Boltzmann statistics?",
+  "referenceAnswer": "A Bose system obeys Boltzmann statistics to a good approximation when the thermal wavelength is small compared to the typical interparticle separation, which is expressed as $(V/N)^{1/3}$.",
+  "chunkText": "In the case of bosons (integer spin, which we take to be zero) a single particle state can have an arbitrary occupation number. The contribution of the state labeled by k (energy % k 2 /2m) to the grand partition function is\n\n[formula]\n\nThus the term and, as in the case of fermions, the grand partition function is the product of such terms:\n\n[formula]\n\nThe average number of particles occupying the state k is\n\n[formula]\n\nA Bose system, like a Fermi system, obeys Boltzmann statistics to a good approximation if the thermal wavelength (2.21) is small compared to typical interparticle separation (V/N) 1 / 3 . The statistical mechanics of a noninteracting Bose system is discussed in more detail in Section 11.1.",
+  "relations": [
+   {
+    "text": "A single particle state can have an arbitrary occupation number in the case of bosons.",
+    "nodes": [
+     "single particle state",
+     "bosons",
+     "occupation number"
+    ]
+   },
+   {
+    "text": "The contribution of a state labeled by k to the grand partition function depends on the energy of state k.",
+    "nodes": [
+     "state labeled by k",
+     "grand partition function",
+     "energy of state k"
+    ]
+   },
+   {
+    "text": "The grand partition function is the product of contributions from individual states.",
+    "nodes": [
+     "grand partition function",
+     "individual states"
+    ]
+   },
+   {
+    "text": "The average number of particles occupying a state k depends on the energy of state k and temperature.",
+    "nodes": [
+     "average number of particles",
+     "state k",
+     "energy of state k",
+     "temperature"
+    ]
+   },
+   {
+    "text": "A Bose system obeys Boltzmann statistics if the thermal wavelength is small compared to typical interparticle separation.",
+    "nodes": [
+     "Bose system",
+     "Boltzmann statistics",
+     "thermal wavelength",
+     "interparticle separation"
+    ]
+   }
+  ],
+  "error": null
+ }
+]

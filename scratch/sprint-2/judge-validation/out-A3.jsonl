@@ -1,0 +1,10 @@
+{"n": "r17", "score": 0.5, "rationale": "Answer gives the s+1 dependence and coupled hierarchy but omits the incompressible-fluid streaming terms and explicit collision terms from interactions with remaining particles."}
+{"n": "r11", "score": 0.5, "rationale": "Answer correctly gives Lagrange multipliers with normalization and constraints but says nothing about replacing the extensivity requirement with a nonextensive (Tsallis) measure."}
+{"n": "r01", "score": 1, "rationale": "Answer states adiabatic/constant-entropy flow blocks global equilibrium and that shear flows, entropy modes persist while sound modes are undamped, matching the reference."}
+{"n": "r22", "score": 0.5, "rationale": "Answer captures intra-group terms, collision terms and the symmetrization yielding the s+1 density, but omits the separate term for interactions among the remaining particles and muddles the term assignment."}
+{"n": "r06", "score": 0, "rationale": "Answer gives 3N-1 dimensions whereas the reference says 6N-1."}
+{"n": "r05", "score": 0, "rationale": "Answer says it cannot describe the evolution and gives an unrelated claim instead of the streaming relation between pre- and post-collision densities."}
+{"n": "r09", "score": 1, "rationale": "Answer states information theory with a maximum entropy, least-bias estimate severing the link to dynamics, matching the reference."}
+{"n": "r12", "score": 0, "rationale": "Answer claims the conditions are identical and omits concavity of entropy, the Gibbs potential and the second-derivative stability inequalities."}
+{"n": "r20", "score": 1, "rationale": "Answer states pre- and post-collision densities are related by streaming with outgoing momenta determined by incoming momenta and impact vector, matching the reference."}
+{"n": "r15", "score": 1, "rationale": "Answer gives collision terms depending on the s+1 density and the resulting coupled hierarchy, consistent with the reference."}

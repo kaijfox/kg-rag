@@ -1,0 +1,524 @@
+{
+ "id": "qs_sdtjmggdcbza7iiddnm5",
+ "name": "stat-mech-kardar",
+ "genRecipeId": "rc_fc5dtkljfjanlqqy3fnz",
+ "questions": [
+  {
+   "type": "single-hop",
+   "question": "How does equilibrium statistical mechanics differ from kinetic theory regarding the evolution of systems?",
+   "referenceAnswer": "Equilibrium statistical mechanics does not address how various systems evolve to reach a state of equilibrium, unlike kinetic theory.",
+   "goldChunkIds": [
+    "ch_uwg6w7esgwzm5evutkrt"
+   ],
+   "goldText": [
+    "As discussed in chapter 1, equilibrium properties of macroscopic bodies are phenomenologically described by the laws of thermodynamics. The macrostate M depends on a relatively small number of thermodynamic coordinates. To provide a more fundamental derivation of these properties, we can examine the dynamics of the many degrees of freedom comprising a macroscopic body. Description of each microstate SLmu requires an enormous amount of information, and the corresponding time evolution, governed by the Hamiltonian equations discussed in chapter 3, is usually quite complicated. Rather than following the evolution of an individual (pure) microstate, statistical mechanics examines an ensemble of microstates corresponding to a given (mixed) macrostate. It aims to provide the probabilities p M lparenoriSLmurparenori for the equilibrium ensemble. Liouville's theorem justifies the assumption that all accessible microstates are equally likely in an equilibrium ensemble. As explained in chapter 2, such assignment of probabilities is subjective. In this chapter we shall provide unbiased estimates of p M lparenoriSLmurparenori for a number of different equilibrium ensembles. A central conclusion is that in the thermodynamic limit, with large numbers of degrees of freedom, all these ensembles are in fact equivalent. In contrast to kinetic theory, equilibrium statistical mechanics leaves out the question of how various systems evolve to a state of equilibrium."
+   ],
+   "sourceDocKeys": [
+    "FoundationsKardar"
+   ],
+   "id": "k1"
+  },
+  {
+   "type": "single-hop",
+   "question": "How does the characteristic interaction distance change when analyzing a neutral plasma compared to short-range interactions?",
+   "referenceAnswer": "In a neutral plasma, the Debye screening length replaces the typical interaction distance used in the standard equation.",
+   "goldChunkIds": [
+    "ch_pjiaxxomyzqnatddouec"
+   ],
+   "goldText": [
+    "is the typical time over which two particles are within the effective range d of their interaction. For short-range interactions (including van der Waals and Lennard-Jones, despite their power law decaying tails), d ≈ 10 -10 m is of the order of a typical atomic size, resulting in SLtau c ≈10 -12 s. This is usually the shortest time scale in the problem. The analysis is somewhat more complicated for long-range interactions, such as the Coulomb gas in a plasma. For a neutral plasma, the Debye screening length SLlambda replaces d in the above equation, as discussed in the problems.\n\nFig. 3.3 The mean free time between collisions is estimated by requiring that there is only one other particle in the volume swept in time SLtau×.\n\n(c) There are also collision terms on the right-hand side of Eqs. (3.28), which depend on f s+1 , and lead to an inverse time scale\n\n[formula]"
+   ],
+   "sourceDocKeys": [
+    "FoundationsKardar"
+   ],
+   "id": "k2"
+  },
+  {
+   "type": "single-hop",
+   "question": "How does the requirement that the probability density be stationary in time relate to the fundamental postulate of statistical mechanics?",
+   "referenceAnswer": "The condition implies that the macrostate is represented by a uniform distribution of microstates on surfaces of constant energy, which is equivalent to using a subjective measure of probability instead of an objective one.",
+   "goldChunkIds": [
+    "ch_gqpt6k6wothrtonamp3h"
+   ],
+   "goldText": [
+    "A possible solution to the above equation is for SLrho eq to be a function of HEUscript, that is, SLrho eq lparenoripcommaori qrparenori = SLrho ( HEUscriptlparenoripcommaoriqrparenori ) . It is then easy to verify that lbraceoriSLrholparenoriHEUscriptrparenoricommaoriHEUscriptrbraceori = SLrho ′ lparenoriHEUscriptrparenorilbraceoriHEUscriptcommaoriHEUscriptrbraceori = 0. This solution implies that the value of SLrho is constant on surfaces of constant energy HEUscript, in phase space. This is indeed the basic assumption of statistical mechanics. For example, in the microcanonical ensemble, the total energy E of an isolated system is specified. All members of the ensemble must then be located on the surface HEUscriptlparenoripcommaoriqrparenori = E in phase space. Equation (3.9) implies that a uniform density of points on this surface is stationary in time. The assumption of statistical mechanics is that the macrostate is indeed represented by such a uniform density of microstates. This is equivalent to replacing the objective measure of probability in Eq. (3.2) with a subjective one."
+   ],
+   "sourceDocKeys": [
+    "FoundationsKardar"
+   ],
+   "id": "k3"
+  },
+  {
+   "type": "single-hop",
+   "question": "In a system of N impurities with two discrete energy levels, how does the enumeration of microstates differ from the application of Liouville's theorem in continuous phase space?",
+   "referenceAnswer": "The allowed microstates for this system are discrete, whereas Liouville's theorem applies to Hamiltonian evolution in a continuous phase space.",
+   "goldChunkIds": [
+    "ch_g3z36qmj52fcfvfxdsx2"
+   ],
+   "goldText": [
+    "Consider N impurity atoms trapped in a solid matrix. Each impurity can be in one of two states, with energies 0 and SLepsilon, respectively. This example is somewhat different from the situations considered so far, in that the allowed microstates are discrete. Liouville's theorem applies to Hamiltonian evolution in a continuous phase space. Although there is less ambiguity in enumeration of discrete states, the dynamics that ensures that all allowed microstates are equally accessed will remain unspecified for the moment. (An example from quantum mechanical evolution will be presented later on.)\n\nThe microstates of the two-level system are specified by the set of occupation numbers lbraceorin i rbraceori, where n i = 0 or 1 depending on whether the ith impurity is in its ground state or excited. The overall energy is\n\n[formula]"
+   ],
+   "sourceDocKeys": [
+    "FoundationsKardar"
+   ],
+   "id": "k4"
+  },
+  {
+   "type": "single-hop",
+   "question": "How does one express the number of accessible microstates for a system of impurities in terms of the binomial coefficient when the count of excited impurities is determined by the ratio of total energy to the single-particle energy spacing?",
+   "referenceAnswer": "The normalization factor, representing the number of ways to choose the excited levels, is given by the binomial coefficient because the number of excited impurities equals the total energy divided by the energy spacing epsilon.",
+   "goldChunkIds": [
+    "ch_qw7cjnvs7yuzysaqzmsv"
+   ],
+   "goldText": [
+    "where N 1 is the total number of excited impurities. The macrostate is specified by the total energy E, and the number of impurities N. The microcanonical probability is thus\n\n[formula]\n\nAs there are N 1 =E/SLepsilon excited impurities, the normalization UPOmega is the number of ways of choosing N 1 excited levels among the available N, and given by the binomial coefficient\n\nThe entropy\n\n[formula]\n\n[formula]\n\n[formula]\n\ncan be simplified by Stirling's formula in the limit of N 1 commaoriN ≫1 to\n\nThe equilibrium temperature can now be calculated from Eq. (4.7) as\n\n[formula]\n\nAlternatively, the internal energy at a temperature T is given by\n\n[formula]"
+   ],
+   "sourceDocKeys": [
+    "FoundationsKardar"
+   ],
+   "id": "k5"
+  },
+  {
+   "type": "single-hop",
+   "question": "How do the densities of particle pairs evolve immediately after a collision event occurs?",
+   "referenceAnswer": "The densities before and after the collision are related by streaming, where the incoming momenta correspond to particles that collided at a specific impact parameter to produce the outgoing momenta.",
+   "goldChunkIds": [
+    "ch_sdazxhumbwzotd4itcb7"
+   ],
+   "goldText": [
+    "In principle, the integration over a is from -infinity2 to +infinity2, but as the variations of f 2 are only significant over the interaction range d, we can evaluate the above quantities at separations of a few d from the collision point. This is a good compromise, allowing us to evaluate f 2 away from the collisions, but at small enough separations so that we can ignore the difference between !q 1 and !q 2 . This amounts to a coarse graining in space that eliminates variations on scales finer than d. With these provisos, it is tempting to close the equation for f 1 , by using the assumption of uncorrelated particles in Eq. (3.32). Clearly some care is necessary as a naive substitution gives zero! The key observation is that the densities f 2 for situations corresponding to before and after the collision have to be treated differently. For example, soon after opening of the slot separating empty and full gas containers, the momenta of the gas particles are likely to point away from the slot. Collisions will tend to randomize momenta, yielding a more isotropic distribution. However, the densities f 2 before and after the collision are related by streaming, implying that f 2 lparenori!p 1 commaori !q 1 commaori !p 2 commaori !bcommaori+/ trparenori =f 2 lparenori!p 1 ′ commaori !q 1 commaori !p 2 ′ commaori !bcommaori-/ trparenori, where !p 1 ′ and !p 2 ′ are momenta whose collision at an impact vector !b results in production of outgoing particles with momenta !p 1 and !p 2 ."
+   ],
+   "sourceDocKeys": [
+    "FoundationsKardar"
+   ],
+   "id": "k6"
+  },
+  {
+   "type": "single-hop",
+   "question": "Under what conditions does the specified density satisfy the requirement that the streaming terms vanish?",
+   "referenceAnswer": "The condition is satisfied if the particle number and beta are independent of momentum, and alpha equals zero.",
+   "goldChunkIds": [
+    "ch_yfwl6bonedqqi4xb3pzi"
+   ],
+   "goldText": [
+    "We shall refer to the above distribution as describing local equilibrium. While this form is preserved during collisions, it will evolve in time away from collisions, due to the streaming terms, unless lbraceoriHEUscript 1 commaori f 1 rbraceori =0. The latter condition is satisfied for any function f 1 that depends only on HEUscript 1 , or any other quantity that is conserved by it. Clearly, the above density satisfies this requirement as long as NEUscript and SLbeta are independent of !q, and !SLalpha=0.\n\nAccording to Eq. (3.16), the appropriate normalization for f 1 is\n\n[formula]\n\nFor particles in a box of volume V, the potential Ulparenori!q rparenori is zero inside the box, and infinite on the outside. The normalization factor in Eq. (3.53) can be obtained from Eq. (3.54) as\n\n[formula]\n\nHence, the properly normalized Gaussian distribution for momenta is\n\n[formula]\n\n[formula]"
+   ],
+   "sourceDocKeys": [
+    "FoundationsKardar"
+   ],
+   "id": "k7"
+  },
+  {
+   "type": "single-hop",
+   "question": "What physical quantity do the state functions defined by condition (4.6) correspond to?",
+   "referenceAnswer": "The state functions correspond to empirical temperatures.",
+   "goldChunkIds": [
+    "ch_eagzdbldrbtuayooiz64"
+   ],
+   "goldText": [
+    "Although all joint microstates are equally likely, the above results indicate that there is an exponentially larger number of states in the vicinity of lparenoriE ∗ 1 commaori E ∗ 2 rparenori. Originally, the joint system starts in the vicinity of some point lparenoriE 0 1 commaori E 0 2 rparenori. After the exchange of energy takes place, the combined system explores a whole set of new microstates. The probabilistic arguments provide no information on the dynamics of evolution amongst these microstates, or on the amount of time needed to establish equilibrium. However, once sufficient time has elapsed so that the assumption of equal a priori probabilities is again valid, the system is overwhelmingly likely to be at a state with internal energies lparenoriE ∗ 1 commaori E ∗ 2 rparenori. At this equilibrium point, condition (4.6) is satisfied, specifying a relation between two functions of state. These state functions are thus equivalent to empirical temperatures, and, indeed, consistent with the fundamental result of thermodynamics, we have"
+   ],
+   "sourceDocKeys": [
+    "FoundationsKardar"
+   ],
+   "id": "k8"
+  },
+  {
+   "type": "single-hop",
+   "question": "What specific approximation is applied to the integral operator when its characteristic magnitude is noted for a first-order calculation?",
+   "referenceAnswer": "The single collision time approximation.",
+   "goldChunkIds": [
+    "ch_vsxal6v45krdpyrmh3px"
+   ],
+   "goldText": [
+    "The characteristic time scale SLtau U for LEUscript is extrinsic, and can be made much larger than SLtau × . The zeroth-order result is thus exact in the limit lparenoriSLtau × /SLtau U rparenori↔0; and corrections can be constructed in a perturbation series in lparenoriSLtau × /SLtau U rparenori. To this purpose, we set f 1 = f 0 1 lparenori1+grparenori, and linearize the collision operator as\n\n[formula]\n\nWhile linear, the above integral operator is still difficult to manipulate in general. As a first approximation, and noting its characteristic magnitude, we set\n\n[formula]\n\nThis is known as the single collision time approximation, and from the linearized Boltzmann equation LEUscriptlbracketorif 1 rbracketori = -f 0 1 C L lbracketorigrbracketori, we obtain\n\n[formula]\n\nwhere we have kept only the leading term. Thus the first-order solution is given by (using Eq. (3.110))\n\n[formula]"
+   ],
+   "sourceDocKeys": [
+    "FoundationsKardar"
+   ],
+   "id": "k9"
+  },
+  {
+   "type": "single-hop",
+   "question": "In the study of weakly interacting gases using kinetic theory, why are three-body and higher-order interactions typically neglected?",
+   "referenceAnswer": "Three-body and higher-order interactions are generally omitted because they have negligible importance when considering the dilute gas limit.",
+   "goldChunkIds": [
+    "ch_aqe4jcoeln26kjkwxmnh"
+   ],
+   "goldText": [
+    "where SLrho s is a standard unconditional PDF for the coordinates of s particles, and SLrho N ∓ SLrho. While SLrho s is properly normalized to unity when integrated over all its variables, the s-particle density has a normalization of N!/lparenoriN -srparenori!. We shall use the two quantities interchangeably.\n\nThe evolution of the few-body densities is governed by the BBGKY hierarchy of equations attributed to Bogoliubov, Born, Green, Kirkwood, and Yvon. The simplest non-trivial Hamiltonian studied in kinetic theory is\n\n[formula]\n\nThis Hamiltonian provides an adequate description of a weakly interacting gas. In addition to the classical kinetic energy of particles of mass m, it contains an external potential U, and a two-body interaction VEUscript, between the particles. In principle, three- and higher-body interactions should also be included for a complete description, but they are not very important in the dilute gas (nearly ideal) limit."
+   ],
+   "sourceDocKeys": [
+    "FoundationsKardar"
+   ],
+   "id": "k10"
+  },
+  {
+   "type": "single-hop",
+   "question": "How is the partition function related to the parameter beta, and what physical quantity does beta represent in terms of the Boltzmann constant and temperature?",
+   "referenceAnswer": "The parameter beta is equal to the inverse product of the Boltzmann constant and the absolute temperature (1/k_B T).",
+   "goldChunkIds": [
+    "ch_x4e3chttmmxild76kthp"
+   ],
+   "goldText": [
+    "[formula]\n\nThe unconditional probability for microstates of S is now obtained from\n\n[formula]\n\nOnce SLmu S is specified, the above sum is restricted to microstates of the reservoir with energy E Tot -HEUscript S lparenoriSLmu S rparenori. The number of such states is related to the entropy of the reservoir, and leads to\n\n[formula]\n\nSince, by assumption, the energy of the system is insignificant compared with that of the reservoir,\n\n[formula]\n\nDropping the subscript S, the normalized probabilities are given by\n\n[formula]\n\n[formula]\n\nis known as the partition function, and SLbeta ∓ 1/k B T. (Note that probabilities similar to Eq. (4.56) were already obtained in Eqs. (4.25) and (4.39), when considering a portion of the system in equilibrium with the rest of it.)"
+   ],
+   "sourceDocKeys": [
+    "FoundationsKardar"
+   ],
+   "id": "k11"
+  },
+  {
+   "type": "single-hop",
+   "question": "What specific condition regarding heat exchange distinguishes a Carnot engine from other engines operating in a cycle?",
+   "referenceAnswer": "The distinguishing feature is that all heat interactions occur exclusively at two distinct temperatures, corresponding to the source and the sink.",
+   "goldChunkIds": [
+    "ch_nung7iapchp6mncn5sda"
+   ],
+   "goldText": [
+    "A Carnot engine is any engine that is reversible, runs in a cycle, with all of its heat exchanges taking place at a source temperature T H , and a sink temperature T C .\n\nA reversible process is one that can be run backward in time by simply reversing its inputs and outputs. It is the thermodynamic equivalent of frictionless motion in mechanics. Since time reversibility implies equilibrium, a reversible transformation must be quasi-static, but the reverse is not necessarily true (e.g., if there is energy dissipation due to friction). An engine that runs in a cycle\n\ncold returns to its original internal state at the end of the process. The distinguishing characteristic of the Carnot engine is that heat exchanges with the surroundings are carried out only at two temperatures."
+   ],
+   "sourceDocKeys": [
+    "ThermoKardar"
+   ],
+   "id": "k12"
+  },
+  {
+   "type": "single-hop",
+   "question": "What displacement value represents mechanical equilibrium for a spring with constant K subjected to the downward force of a mass m?",
+   "referenceAnswer": "The equilibrium displacement is x_eq = mg/K.",
+   "goldChunkIds": [
+    "ch_frdianlmjm576fftosb7"
+   ],
+   "goldText": [
+    "For example, consider a spring of natural extension L 0 and spring constant K, subject to the force J =mg exerted by a particle of mass m. For an extension x =L!L 0 , the internal potential energy of the spring is Ulparenorixrparenori =Kx 2 /2, while there is a change of !mgx in the potential energy of the particle. Mechanical equilibrium is obtained by minimizing Kx 2 /2!mgx at an extension x eq = mg/K. The spring at any other value of the displacement initially oscillates before coming to rest at x eq due to friction. For a more general potential energy Ulparenorixrparenori, the internally generated force J i =!dU/dx has to be balanced with the external force J at the equilibrium point."
+   ],
+   "sourceDocKeys": [
+    "ThermoKardar"
+   ],
+   "id": "k13"
+  },
+  {
+   "type": "single-hop",
+   "question": "How is the function of state known as entropy defined in terms of reversible heat and temperature?",
+   "referenceAnswer": "Entropy is defined such that the change in entropy dS equals the reversible heat divided by the temperature (dQ_rev / T), allowing the reversible heat to be calculated as TdS.",
+   "goldChunkIds": [
+    "ch_pmebbjbqu632qfqfrxpe"
+   ],
+   "goldText": [
+    "For a reversible cycle ∮ ¯ dQ rev /T =0, since by running the cycle in the opposite direction ¯ dQ rev ∓! ¯ dQ rev , and by the above theorem ¯ dQ rev /T is both non-negative and non-positive, hence zero. This result implies that the integral of ¯ dQ rev /T between any two points A and B is independent of path, since for two paths (1) and (2)\n\n[formula]\n\nUsing Eq. (1.25) we can construct yet another function of state, the entropy S. Since the integral is independent of path, and only depends on the two end-points, we can set\n\n[formula]\n\nFig. 1.14 (a) A reversible cycle. (b) Two reversible paths between A and B. (c) The cycle formed from a generic path between A and B, and a reversible one.\n\nFor reversible processes, we can now compute the heat from ¯ dQ rev = TdS. This allows us to construct adiabatic curves for a general (multivariable) system from the condition of constant S. Note that Eq. (1.26) only defines the entropy up to an overall constant."
+   ],
+   "sourceDocKeys": [
+    "ThermoKardar"
+   ],
+   "id": "k14"
+  },
+  {
+   "type": "single-hop",
+   "question": "In the context of reversible processes, what specific roles do entropy and temperature play regarding conjugate variables?",
+   "referenceAnswer": "Entropy acts as the displacement variable while temperature serves as the corresponding force.",
+   "goldChunkIds": [
+    "ch_rz64ruf373utov225blg"
+   ],
+   "goldText": [
+    "For a reversible (hence quasi-static) transformation, ¯ dQ= TdS and ¯ dW = ∑i J i dx i , and the first law implies\n\n[formula]\n\nWe can see that in this equation S and T appear as conjugate variables, with S playing the role of a displacement, and T as the corresponding force. This identification allows us to make the correspondence between mechanical and thermal exchanges more precise, although we should keep in mind that unlike its mechanical analog, temperature is always positive. While to obtain Eq. (1.27) we had to appeal to reversible transformations, it is important to emphasize that it is a relation between functions of state. Equation (1.27) is likely the most fundamental and useful identity in thermodynamics."
+   ],
+   "sourceDocKeys": [
+    "ThermoKardar"
+   ],
+   "id": "k15"
+  },
+  {
+   "type": "single-hop",
+   "question": "How does the presence of surfactant molecules on an air-water interface affect the surface tension, and what is the mathematical relationship describing this reduction?",
+   "referenceAnswer": "Surfactant molecules prefer to spread on the air-water surface instead of dissolving in water. Their presence reduces the surface tension by an amount approximately equal to N k_B T divided by A, where N represents the number of surfactant particles and A represents the area.",
+   "goldChunkIds": [
+    "ch_6smdq74ntbo2557mybbn"
+   ],
+   "goldText": [
+    "(c) In the realmof \"large\" bodies gravity is the dominant force, while at \"small\" distances surface tension effects are all important. At room temperature, the surface tension of water is SEUscript o ≈ 7×10 !2 N m !1 . Estimate the typical length scale that separates \"large\" and \"small\" behaviors. Give a couple of examples for where this length scale is important.\n\n∗ ∗ ∗ ∗ ∗ ∗ ∗∗\n\nSurfactants: surfactant molecules such as those in soap or shampoo prefer to spread on the air-water surface rather than dissolve in water. To see this, float a hair on the surface of water and gently touch the water in its vicinity with a piece of soap. (This is also why a piece of soap can power a toy paper boat.)\n\n(a) The air-water surface tension SEUscript o (assumed to be temperature-independent) is reduced roughly by N k B T/A, where N is the number of surfactant particles, and A is the area. Explain this result qualitatively."
+   ],
+   "sourceDocKeys": [
+    "ThermoKardar"
+   ],
+   "id": "k16"
+  },
+  {
+   "type": "single-hop",
+   "question": "How is the internal energy of a thermodynamic system determined in relation to an adiabatic transformation between two specific states?",
+   "referenceAnswer": "The internal energy can be obtained from the amount of work required for an adiabatic transformation from an initial state to a final state, up to a constant.",
+   "goldChunkIds": [
+    "ch_iwm6wowyqiauhai2pxvo"
+   ],
+   "goldText": [
+    "Fig. 1.4 The two adiabatic paths for changing macroscopic coordinates between the initial and final point result in the same change in internal energy.\n\nFor a particle moving in a potential, the required work can be used to construct a potential energy landscape. Similarly, for the thermodynamic system we can construct another state function, the internal energy ElparenoriXrparenori. Up to a constant, ElparenoriXrparenori can be obtained from the amount of work UPDeltaW needed for an adiabatic transformation from an initial state X i to a final state X f , using\n\n[formula]"
+   ],
+   "sourceDocKeys": [
+    "ThermoKardar"
+   ],
+   "id": "k17"
+  },
+  {
+   "type": "single-hop",
+   "question": "What specific extensive quantity corresponds to pressure as an intensive indicator of equilibrium, similar to how temperature relates to heat exchange?",
+   "referenceAnswer": "The corresponding displacement is volume, which serves as the extensive variable paired with pressure in thermodynamic systems.",
+   "goldChunkIds": [
+    "ch_cmmckwxfb5w7enivrmsl"
+   ],
+   "goldText": [
+    "Table 1.1 provides some common examples of such conjugate coordinates. Note that pressure P is by convention calculated from the force exerted by the system on the walls, as opposed to the force on a spring, which is exerted in the opposite direction. This is the origin of the negative sign that accompanies hydrostatic work.\n\nThe displacements are usually extensive quantities, that is, proportional to system size, while the forces are intensive and independent of size. The latter are indicators of equilibrium; for example, the pressure is uniform in a gas in equilibrium (in the absence of external potentials) and equal for two equilibrated gases in contact. As discussed in connection with the zeroth law, temperature plays a similar role when heat exchanges are involved. Is there a corresponding displacement, and if so what is it? This question will be answered in the following sections."
+   ],
+   "sourceDocKeys": [
+    "ThermoKardar"
+   ],
+   "id": "k18"
+  },
+  {
+   "type": "single-hop",
+   "question": "Under what specific circumstances does the third law fail to apply according to the provided text?",
+   "referenceAnswer": "The third law is not applicable to glassy phases, which are effectively equilibrium states due to extremely slow dynamics despite not being true equilibrium phases.",
+   "goldChunkIds": [
+    "ch_zui7uuy33o6ym2rp3hxn"
+   ],
+   "goldText": [
+    "The above condition does not hold within the framework of classical statistical mechanics, as there are examples of both non-interacting (such as an ideal gas) and interacting (the frustrated spins in a triangular antiferromagnet) systems with a large number of (degenerate) ground states, and a finite zerotemperature entropy. However, classical mechanics is inapplicable at very low temperatures and energies where quantum effects become important. The third law is then equivalent to a restriction on the degeneracy of ground states of a quantum mechanical system. 3 While this can be proved for a non-interacting system of identical particles (as we shall demonstrate in the final chapter), there is no general proof of its validity with interactions. Unfortunately, the onset of quantum effects (and other possible origins of the breaking of classical degeneracy) is system-specific. Hence it is not a priori clear how low the temperature must be before the predictions of the third law can be observed. Another deficiency of the law is its inapplicability to glassy phases. Glasses result from the freezing of supercooled liquids into configurations with extremely slow dynamics. While not truly equilibrium phases (and hence subject to all the laws of thermodynamics), they are effectively so due to the slowness of the dynamics. A possible test of the applicability of the third law to glasses is discussed in the problems."
+   ],
+   "sourceDocKeys": [
+    "ThermoKardar"
+   ],
+   "id": "k19"
+  },
+  {
+   "type": "single-hop",
+   "question": "What is the conjugate generalized force associated with the change in volume of a fluid system?",
+   "referenceAnswer": "The conjugate generalized force for the volume displacement in a fluid system is pressure.",
+   "goldChunkIds": [
+    "ch_w5zubrxgm66tafzst4et"
+   ],
+   "goldText": [
+    "Generalizing from the above example, one can typically divide the state functions lbraceoriXrbraceori into a set of generalized displacements lbraceorixrbraceori, and their conjugate generalized forces lbraceoriJrbraceori, such that for an infinitesimal quasi-static transformation 2\n\n[formula]\n\n2 I denote force by the symbol J rather than F, to reserve the latter for the free energy. I hope the reader is not confused with currents (sometimes also denoted by J), which rarely appear in this book.\n\nTable 1.1 Generalized forces and displacements\nSystem | Force |  | Displacement | \nWire | tension | F | length | L\nFilm | surface tension | SEUscript | area | A\nFluid | pressure | !P | volume | V\nMagnet | magnetic field | H | magnetization | M\nDielectric | electric field | E | polarization | P\nChemical reaction | chemical potential | SLmu | particle number | N"
+   ],
+   "sourceDocKeys": [
+    "ThermoKardar"
+   ],
+   "id": "k20"
+  },
+  {
+   "type": "single-hop",
+   "question": "What is the mathematical expression for the change in internal energy associated with variations in particle number when mechanical work is absent?",
+   "referenceAnswer": "The change in internal energy due to a change in the number of particles is expressed as dW = S Lmu · dN, where dN represents the variation in particle counts and S Lmu denotes the corresponding chemical potentials.",
+   "goldChunkIds": [
+    "ch_lsv7oeo4m5nbocadbd7w"
+   ],
+   "goldText": [
+    "So far, we have implicitly assumed a constant number of particles in the system. In chemical reactions, and in equilibrium between two phases, the number of particles in a given constituent may change. The change in the number of particles necessarily involves changes in the internal energy, which is expressed in terms of a chemical work ¯ dW = SLmu · dN. Here N = lbraceoriN 1 commaoriN 2 commaori · · · rbraceori lists the number of particles of each species, and SLmu= lbraceoriSLmu 1 commaoriSLmu 2 commaori · · · rbraceori the associated chemical potentials that measure the work necessary to add additional particles to the system. Traditionally, chemical work is treated differently from mechanical work and is not subtracted from E in the Gibbs free energy of Eq. (1.38). For chemical equilibrium in circumstances that involve no mechanical work, the appropriate state function is the grand potential given by\n\n[formula]"
+   ],
+   "sourceDocKeys": [
+    "ThermoKardar"
+   ],
+   "id": "k21"
+  },
+  {
+   "type": "single-hop",
+   "question": "What mathematical condition must be satisfied for a thermodynamic system to remain in a state of stable equilibrium?",
+   "referenceAnswer": "For stable equilibrium, any perturbation in the extensive coordinates must result in a second-order decrease in the total entropy of the system.",
+   "goldChunkIds": [
+    "ch_a2zlw6nbdus2lirhxp45"
+   ],
+   "goldText": [
+    "Note that the overall system is maintained at constant E, x, and N. Since the intensive variables are themselves functions of the extensive coordinates, to first order in the variations of lparenoriEcommaorixcommaoriNrparenori, we have\n\n[formula]\n\nUsing Eq. (1.48), the entropy of the system can be written as\n\n[formula]\n\nSince, by assumption, we are expanding about the equilibrium point, the firstorder changes vanish, and to second order\n\n[formula]\n\n(We have used Eq. (1.67) to note that the second-order contribution of B is the same as A.) Equation (1.69) can be rearranged to\n\n[formula]\n\nThe condition for stable equilibrium is that any change should lead to a decrease in entropy, and hence we must have\n\n[formula]\n\nWe have now removed the subscript A, as Eq. (1.71) must apply to the whole system as well as to any part of it."
+   ],
+   "sourceDocKeys": [
+    "ThermoKardar"
+   ],
+   "id": "k22"
+  },
+  {
+   "type": "multi-hop",
+   "question": "How does the reversibility of a Carnot engine, which allows it to operate as a refrigerator when coupled with a non-Carnot engine, lead to the conclusion that all such reversible engines share a single universal efficiency dependent only on the reservoir temperatures?",
+   "referenceAnswer": "Because a Carnot engine is reversible, it can be run backward to transfer heat between two reservoirs when coupled with any other engine. By analyzing the net effect of these combined operations and applying the principle that heat transfer cannot violate certain thermodynamic constraints, one concludes that all reversible engines must possess the same efficiency determined solely by the temperatures T_H and T_C.",
+   "goldChunkIds": [
+    "ch_ky6webssg7ksaqjt2av6",
+    "ch_o7yofg3hb2szn5d7pmqw"
+   ],
+   "goldText": [
+    "Since a Carnot engine is reversible, it can be run backward as a refrigerator. Use the non-Carnot engine to run the Carnot engine backward. Let us denote the heat exchanges of the non-Carnot and Carnot engines by Q H , Q C , and Q ′ H , Q ′ C , respectively. The net effect of the two engines is to transfer heat equal to Q H !Q ′ H =Q C !Q ′ C from T H to T C . According to Clausius's statement, the quantity of transferred heat cannot be negative, that is, Q H +Q ′ H . Since the same quantity of work W is involved in this process, we conclude that\n\n[formula]\n\nCorollary All reversible (Carnot) engines have the same universal efficiency SLetalparenoriT H commaoriT C rparenori, since each can be used to run any other one backward.",
+    "The adiabatic curves are clearly distinct from the isotherms, and we can select two such curves to intersect our isotherms, thereby completing a Carnot cycle. The assumption of E ∝T is not necessary, and in one of the problems provided at the end of this chapter, you will construct adiabatics for any ElparenoriTrparenori. In fact, a similar construction is possible for any two-parameter system with ElparenoriJcommaori xrparenori.\n\nCarnot's theorem No engine operating between two reservoirs (at temperatures T H and T C ) is more efficient than a Carnot engine operating between them.\n\nFig. 1.10 The Carnot cycle for an ideal gas, with isothermal and adiabatic paths indicated by solid and dashed lines, respectively.\n\nFig. 1.11 A generic engine is used to run a Carnot engine in reverse.\n\nFig. 1.12 Two Carnot engines connected in series are equivalent to a third."
+   ],
+   "sourceDocKeys": [
+    "ThermoKardar"
+   ],
+   "id": "k23"
+  },
+  {
+   "type": "multi-hop",
+   "question": "How does the observation that adiabatic expansion leaves the temperature of an ideal gas unchanged relate to the derived expression for internal energy as a function of particle number, volume, and temperature?",
+   "referenceAnswer": "Because the adiabatic expansion involves no heat transfer and no external work, the internal energy remains constant despite changes in pressure and volume. This implies that internal energy is solely a function of temperature. Consequently, when deriving thermodynamic properties for an ideal gas, the internal energy E must be expressed as 3Nk_B T/2, confirming it depends only on temperature and not on volume.",
+   "goldChunkIds": [
+    "ch_qhdqgbs26avpqedxptbz",
+    "ch_tp4m7vq6co5gotfyxfm2"
+   ],
+   "goldText": [
+    "The integrand is spherically symmetric, and we can change coordinates to R 2 = ∑i x 2 i . Noting that the corresponding volume element in these coordinates is dV d = S d R d-1 dR,\n\n[formula]\n\nwhere we have first made a change of variables to y =R 2 , and then used the integral representation of n! in Eq. (2.63). Equating expressions (4.28) and (4.30) for I d gives the final result for the solid angle,\n\n[formula]\n\nThe volume of the available phase space is thus given by\n\n[formula]\n\nThe entropy is obtained from the logarithm of the above expression. Using Stirling's formula, and neglecting terms of order of 1 or lnE + lnN in the large N limit, results in\n\n[formula]\n\nProperties of the ideal gas can now be recovered from TdS = dE+PdV -SLmudN ,\n\nThe internal energy E = 3Nk B T/2 is only a function of T , and the heat capacity C V =3Nk B /2 is a constant. The equation of state is obtained from\n\n[formula]\n\n[formula]",
+    "The ideal gas: we noted in connection with the zeroth law that the equation of state of the ideal gas takes a particularly simple form, PV ∝T. The internal energy of the ideal gas also takes a very simple form, as observed for example by Joule's free expansion experiment: measurements indicate that if an ideal gas expands adiabatically (but not necessarily quasi-statically), from a volume V i to V f , the initial and final temperatures are the same. As the transformation is adiabatic (UPDeltaQ= 0) and there is no external work done on the system (UPDeltaW = 0), the internal energy of the gas is unchanged. Since the pressure and volume of the gas change in the process, but its temperature does not, we conclude that the internal energy depends only on temperature, that is, ElparenoriVcommaoriT rparenori =ElparenoriT rparenori. This property of the ideal gas is in fact a consequence of the form of its equation of state, as will be proved in one of the problems at the end of this chapter."
+   ],
+   "sourceDocKeys": [
+    "FoundationsKardar",
+    "ThermoKardar"
+   ],
+   "id": "k24"
+  },
+  {
+   "type": "multi-hop",
+   "question": "How does the final evolution equation for the reduced density $f_s$ decompose into terms representing intra-group interactions, interparticle interactions, and a specific contribution derived from symmetrizing the sum over particles?",
+   "referenceAnswer": "The time evolution of $f_s$ decomposes into three distinct parts: the first term arises from interactions within the selected group of particles (intra-group), the second term accounts for interactions among the remaining particles, and the third term represents the effect of interparticle interactions between the two groups. The third term specifically simplifies using the symmetry of the sum over all particles to yield an expression proportional to $f_{s+1}$.",
+   "goldChunkIds": [
+    "ch_qqqmvbf32cm6wmyf5auu",
+    "ch_y5etpzr22xjtrxccpw2h"
+   ],
+   "goldText": [
+    "For evaluating the time evolution of f s , it is convenient to divide the Hamiltonian into\n\n[formula]\n\nwhere HEUscript s and HEUscript N-s include only interactions among each group of particles,\n\n[formula]\n\nwhile the interparticle interactions are contained in\n\n[formula]\n\nFrom Eq. (3.18), the time evolution of f s (or SLrho s ) is obtained as\n\n[formula]\n\nwhere Eq. (3.9) is used for the evolution of SLrho. The three Poisson brackets in Eq. (3.23) will now be evaluated in turn. Since the first s coordinates are not integrated, the order of integrations and differentiations for the Poisson bracket may be reversed in the first term, and\n\n[formula]\n\nWriting the Poisson brackets explicitly, the second term of Eq. (3.23) takes the form\n\n[formula]\n\n(using Eq. (3.21))\n\n[formula]",
+    "The last equality is obtained after performing the integrations by part: the term multiplying SLrho/ !p j has no dependence on !p j , while !p j /m does not depend on !q j . The final term in Eq. (3.23), involving the Poisson bracket with HEUscript ′ , is\n\n[formula]\n\nwhere the sum over all particles has been subdivided into the two groups. (Note that HEUscript ′ in Eq. (3.22) has no dependence on the momenta.) Integration by parts shows that the second term in the above expression is zero. The first term involves the sum of lparenoriN -srparenori expressions that are equal by symmetry and simplifies to\n\n[formula]\n\nNote that the quantity in the above square brackets is SLrho s+1 . Thus, adding up Eqs. (3.24), (3.25), and (3.26),\n\n[formula]\n\nor in terms of the densities f s ,\n\n[formula]"
+   ],
+   "sourceDocKeys": [
+    "FoundationsKardar"
+   ],
+   "id": "k25"
+  },
+  {
+   "type": "multi-hop",
+   "question": "When a thermodynamic system is subjected to work interactions defined by n pairs of conjugate variables, how does the fundamental relation derived from reversible processes determine the total count of independent coordinates required to fully specify the state of that system?",
+   "referenceAnswer": "The fundamental relation for reversible transformations identifies entropy and temperature as a conjugate pair, adding one variable to the set. If there are n methods of doing work represented by n such conjugate pairs, the system requires n plus 1 independent coordinates for its complete description.",
+   "goldChunkIds": [
+    "ch_cwdpnovur6wapmikmkir",
+    "ch_rz64ruf373utov225blg"
+   ],
+   "goldText": [
+    "The number of independent variables necessary to describe a thermodynamic system also follows from Eq. (1.27). If there are n methods of doing work on a system, represented by n conjugate pairs lparenoriJ i commaorix i rparenori, then n+1 independent coordinates are necessary to describe the system. (We shall ignore possible constraints between the mechanical coordinates.) For example, choosing lparenoriEcommaori lbraceorix i rbraceorirparenori as coordinates, it follows from Eq. (1.27) that\n\n[formula]\n\n(x and J are shorthand notations for the parameter sets lbraceorix i rbraceori and lbraceoriJ i rbraceori.)\n\nFig. 1.15 The initially isolated subsystems are allowed to interact, resulting in an increase of entropy.\n\nConsider an irreversible change from A to B. Make a complete cycle by returning from B to A along a reversible path. Then\n\n[formula]",
+    "For a reversible (hence quasi-static) transformation, ¯ dQ= TdS and ¯ dW = ∑i J i dx i , and the first law implies\n\n[formula]\n\nWe can see that in this equation S and T appear as conjugate variables, with S playing the role of a displacement, and T as the corresponding force. This identification allows us to make the correspondence between mechanical and thermal exchanges more precise, although we should keep in mind that unlike its mechanical analog, temperature is always positive. While to obtain Eq. (1.27) we had to appeal to reversible transformations, it is important to emphasize that it is a relation between functions of state. Equation (1.27) is likely the most fundamental and useful identity in thermodynamics."
+   ],
+   "sourceDocKeys": [
+    "ThermoKardar"
+   ],
+   "id": "k26"
+  },
+  {
+   "type": "multi-hop",
+   "question": "How is the heat capacity at constant force, denoted as C_J, related to the enthalpy defined within the ensemble described in Fig. 4.9, and what specific thermodynamic quantity replaces entropy in that relationship?",
+   "referenceAnswer": "The heat capacity at constant force, C_J, is obtained from the enthalpy H using the relation C_J = (∂H/∂T)_J, where the enthalpy is defined as H = E - x·J. In this specific ensemble, the term x·J (representing mechanical work done against an external force J at displacement x) replaces the PV term found in standard Gibbs free energy expressions.",
+   "goldChunkIds": [
+    "ch_gfa23oo2bycp6244jppa",
+    "ch_ssuubw7lnjyz5f6qtibp"
+   ],
+   "goldText": [
+    "(Note that we have explicitly included the particle number N to emphasize that there is no chemical work. Chemical work is considered in the grand canonical ensemble, which is discussed next.)\n\nFig. 4.9 A system in contact with a reservoir at temperature T , and maintained at a fixed force J.\n\nIn this ensemble, the expectation value of the coordinates is obtained from\n\n[formula]\n\nwhich together with the thermodynamic identity x = - G/ J, suggests the identification\n\n[formula]\n\nwhere G=E-TS-x·J is the Gibbs free energy. (The same conclusion can be reached by equating ZEUscript in Eq. (4.86) to the term that maximizes the probability with respect to x.) The enthalpy H ∓E-x ·J is easily obtained in this ensemble from\n\n[formula]\n\nNote that heat capacities at constant force (which include work done against the external forces) are obtained from the enthalpy as C J = H/ T.\n\nThe following examples illustrate the use of the Gibbs canonical ensemble.",
+    "Fig. 4.8 The probability distribution of the internal energy for a system in a canonical ensemble at a temperature T .\n\n[formula]\n\nwhere we have identified the heat capacity with the thermal derivative of the average energy langleSCHEUscriptrangleSC. Equation (4.68) shows that it is justified to treat the mean and most likely energies interchangeably, since the width of the distribution\n\nε\n\nIn thermodynamics, a similar expression was encountered for the energy (Eq. (1.37)),\n\nEquations (4.60) and (4.61) both suggest identifying\n\n[formula]\n\n[formula]"
+   ],
+   "sourceDocKeys": [
+    "FoundationsKardar"
+   ],
+   "id": "k27"
+  },
+  {
+   "type": "topic",
+   "question": "How do physicists construct a logical framework for macroscopic systems using empirical observations and state functions while acknowledging the limitations of phenomenological descriptions compared to microscopic theories?",
+   "referenceAnswer": "Physicists begin by idealizing macroscopic systems and defining their properties through specific thermodynamic coordinates or state functions, such as pressure, volume, and temperature. These functions are strictly defined only when the system reaches a state of equilibrium, where observable properties remain constant over time. Based on empirical observations of these states, a coherent logical structure is built that leads to testable relationships, although this phenomenological approach ultimately relies on more fundamental microscopic theories like statistical mechanics for full justification.",
+   "goldChunkIds": [
+    "ch_jmi35czu6qykm3sp7fll",
+    "ch_jxnkrbmxjmdqphhmpmvw",
+    "ch_s3octhhbjzvx4ukdr5mr",
+    "ch_uqul7qb4oqgdr4a5z3su"
+   ],
+   "goldText": [
+    "Fig. 1.1 Illustration of the zeroth law: systems A and B, which are initially separately in equilibrium with C, are placed in contact with each other.\n\nFinally, the relationship between the state functions is described by the laws of thermodynamics. As a phenomenological description, these laws are based on a number of empirical observations. A coherent logical and mathematical structure is then constructed on the basis of these observations, which leads to a variety of useful concepts, and to testable relationships among various quantities. The laws of thermodynamics can only be justified by a more fundamental (microscopic) theory of nature. For example, statistical mechanics attempts to obtain these laws starting from classical or quantum mechanical equations for the evolution of collections of particles.",
+    "Idealize the system under study as much as possible (as is the case of a point particle). The concept of mechanical work on the system is certainly familiar, yet there appear to be complications due to exchange of heat. The solution is first to examine closed systems, insulated by adiabatic walls that don't allow any exchange of heat with the surroundings. Of course, it is ultimately also necessary to study open systems, which may exchange heat with the outside world through diathermic walls.",
+    "Thermodynamics is a phenomenological description of properties of macroscopic systems in thermal equilibrium.\n\nImagine yourself as a post-Newtonian physicist intent on understanding the behavior of such a simple system as a container of gas. How would you proceed? The prototype of a successful physical theory is classical mechanics, which describes the intricate motions of particles starting from simple basic laws and employing the mathematical machinery of calculus. By analogy, you may proceed as follows:",
+    "As the state of a point particle is quantified by its coordinates (and momenta), properties of the macroscopic system can also be described by a number of thermodynamic coordinates or state functions. The most familiar coordinates are those that relate to mechanical work, such as pressure and volume (for a fluid), surface tension and area (for a film), tension and length (for a wire), electric field and polarization (for a dielectric), etc. As we shall see, there are additional state functions not related to mechanical work. The state functions are well defined only when the system is in equilibrium, that is, when its properties do not change appreciably with time over the intervals of interest (observation times). The dependence on the observation time makes the concept of equilibrium subjective. For example, window glass is in equilibrium as a solid over many decades, but flows like a fluid over time scales of millennia. At the other extreme, it is perfectly legitimate to consider the equilibrium between matter and radiation in the early universe during the first minutes of the Big Bang."
+   ],
+   "sourceDocKeys": [
+    "ThermoKardar"
+   ],
+   "id": "k28"
+  },
+  {
+   "type": "topic",
+   "question": "How does kinetic theory bridge microscopic particle dynamics with macroscopic equilibrium properties using statistical ensembles and phase space densities?",
+   "referenceAnswer": "Kinetic theory aims to derive macroscopic laws from the time evolution of individual particles described by canonical equations. Because a macrostate corresponds to a vast number of microstates, the theory introduces a statistical ensemble where the probability density in phase space replaces the specific trajectory of a pure state. This allows equilibrium to be defined and analyzed through the time evolution of this density rather than the constantly changing positions and momenta of single particles.",
+   "goldChunkIds": [
+    "ch_2tlnvyubkiwldhdt2nfp",
+    "ch_ezu6f2nbpxruui5jcv7i",
+    "ch_oxba6n5g6tzk2risgs5i",
+    "ch_yhaizkjbygeeewtc25eq"
+   ],
+   "goldText": [
+    "Kinetic theory studies the macroscopic properties of large numbers of particles, starting from their (classical) equations of motion.\n\nThermodynamics describes the equilibrium behavior of macroscopic objects in terms of concepts such as work, heat, and entropy. The phenomenological laws of thermodynamics tell us how these quantities are constrained as a system approaches its equilibrium. At the microscopic level, we know that these systems are composed of particles (atoms, molecules), whose interactions and dynamics are reasonably well understood in terms of more fundamental theories. If these microscopic descriptions are complete, we should be able to account for the macroscopic behavior, that is, derive the laws governing the macroscopic state functions in equilibrium. Kinetic theory attempts to achieve this objective. In particular, we shall try to answer the following questions:\n\nHow can we define \"equilibrium\" for a system of moving particles?",
+    "Do all systems naturally evolve towards an equilibrium state?\n\nWhat is the time evolution of a system that is not quite in equilibrium?\n\nThe simplest system to study, the veritable workhorse of thermodynamics, is the dilute (nearly ideal) gas. A typical volume of gas contains of the order of 10 23 particles, and in kinetic theory we try to deduce the macroscopic properties of the gas from the time evolution of the set of atomic coordinates. At any time t, the microstate of a system of N particles is described by specifying the positions !q i lparenoritrparenori, and momenta !p i lparenoritrparenori, of all particles. The microstate thus corresponds to a point SLmulparenoritrparenori, in the 6N-dimensional phase space UPGamma = ∏N i=1 lbraceori!q i commaori !p i rbraceori. The time evolution of this point is governed by the canonical equations",
+    "As formulated within thermodynamics, the macrostate M of an ideal gas in equilibrium is described by a small number of state functions such as E, T, P, and N. The space of macrostates is considerably smaller than the phase space spanned by microstates. Therefore, there must be a very large number of microstates SLmu corresponding to the same macrostate M.\n\nThis many-to-one correspondence suggests the introduction of a statistical ensemble of microstates. Consider NEUscript copies of a particular macrostate, each described by a different representative point SLmulparenoritrparenori in the phase space UPGamma. Let dNEUscriptlparenoripcommaoriqcommaori trparenori equal the number of representative points in an infinitesimal volume dUPGamma = ∏N i=1 d 3 !p i d 3 !q i around the point lparenoripcommaoriqrparenori. A phase space density SLrholparenoripcommaoriqcommaori trparenori is then defined by\n\n[formula]",
+    "When the exact microstate SLmu is specified, the system is said to be in a pure state. On the other hand, when our knowledge of the system is probabilistic, in the sense of its being taken from an ensemble with density SLrholparenoriUPGammarparenori, it is said to belong to a mixed state. It is difficult to describe equilibrium in the context of a pure state, since SLmulparenoritrparenori is constantly changing in time according to Eqs. (3.1). Equilibrium is more conveniently described for mixed states by examining the time evolution of the phase space density SLrholparenoritrparenori, which is governed by the Liouville equation introduced in the next section."
+   ],
+   "sourceDocKeys": [
+    "FoundationsKardar"
+   ],
+   "id": "k29"
+  },
+  {
+   "type": "topic",
+   "question": "How does the dominance of surface tension over gravity change the physical behavior of liquids at small length scales compared to large bodies, and what specific effect do surfactant molecules have on air-water interfaces that alters these properties?",
+   "referenceAnswer": "At small length scales, surface tension effects become all-important because gravity is negligible, whereas in large bodies gravity dominates. Surface tension creates a pressure difference inside spherical drops and determines contact angles for wetting phenomena. Surfactants reduce the air-water surface tension by spreading on the interface rather than dissolving in the water, which further influences these balance forces.",
+   "goldChunkIds": [
+    "ch_6smdq74ntbo2557mybbn",
+    "ch_7tjeu2n7xc34q3q25ge6",
+    "ch_yzipb2onhdgzu2pvpbqe"
+   ],
+   "goldText": [
+    "(c) In the realmof \"large\" bodies gravity is the dominant force, while at \"small\" distances surface tension effects are all important. At room temperature, the surface tension of water is SEUscript o ≈ 7×10 !2 N m !1 . Estimate the typical length scale that separates \"large\" and \"small\" behaviors. Give a couple of examples for where this length scale is important.\n\n∗ ∗ ∗ ∗ ∗ ∗ ∗∗\n\nSurfactants: surfactant molecules such as those in soap or shampoo prefer to spread on the air-water surface rather than dissolve in water. To see this, float a hair on the surface of water and gently touch the water in its vicinity with a piece of soap. (This is also why a piece of soap can power a toy paper boat.)\n\n(a) The air-water surface tension SEUscript o (assumed to be temperature-independent) is reduced roughly by N k B T/A, where N is the number of surfactant particles, and A is the area. Explain this result qualitatively.",
+    "Surface tension: thermodynamic properties of the interface between two phases are described by a state function called the surface tension SEUscript. It is defined in terms of the work required to increase the surface area by an amount dA through ¯ dW = SEUscriptdA.\n\n(a) By considering the work done against surface tension in an infinitesimal change in radius, show that the pressure inside a spherical drop of water of radius R is larger than outside pressure by 2SEUscript/R. What is the air pressure inside a soap bubble of radius R?\n\n(b) A water droplet condenses on a solid surface. There are three surface tensions involved, SEUscript aw , SEUscript sw , and SEUscript sa , where a, s, and w refer to air, solid, and water, respectively. Calculate the angle of contact, and find the condition for the appearance of a water film (complete wetting).",
+    "(b) Place a drop of water on a clean surface. Observe what happens to the air-water surface contact angle as you gently touch the droplet surface with a small piece of soap, and explain the observation."
+   ],
+   "sourceDocKeys": [
+    "ThermoKardar"
+   ],
+   "id": "k30"
+  },
+  {
+   "type": "topic",
+   "question": "How does the application of the canonical ensemble to specific systems like two-level impurities and ideal gases demonstrate its relationship to the microcanonical ensemble in the thermodynamic limit?",
+   "referenceAnswer": "The section re-examines previously analyzed two-level systems and ideal gases using the canonical ensemble framework. For the two-level system, the resulting probabilities and thermodynamic quantities match those derived earlier via a more complex microcanonical analysis, particularly as the number of impurities becomes large. Similarly, the ideal gas analysis yields standard results like the equation of state and internal energy, confirming that both ensembles describe identical physics at macroscopic scales when N is sufficiently large.",
+   "goldChunkIds": [
+    "ch_rhazqc4n7dh5tcczcx22",
+    "ch_xdfws5qhhcmyxzagkaij",
+    "ch_xfu7px6rj6u67xhusvd3"
+   ],
+   "goldText": [
+    "The two examples of Sections 4.3 and 4.4 are now re-examined in the canonical ensemble.\n\n(1) Two-level systems: the N impurities are described by a macrostate M ∓ lparenoriTcommaoriNrparenori. Subject to the Hamiltonian HEUscript = SLepsilon ∑N i=1 n i , the canonical probabilities of the microstates SLmu∓ lbraceorin i rbraceori are given by\n\n[formula]\n\nFrom the partition function,\n\n[formula]\n\nwe obtain the free energy\n\n[formula]\n\nThe entropy is now given by\n\n[formula]\n\n[formula]\n\nThe internal energy,\n\ncan also be obtained from\n\n[formula]\n\nSince the joint probability in Eq. (4.71) is in the form of a product, p= ∏i p i , the excitations of different impurities are independent of each other, with the unconditional probabilities\n\n[formula]",
+    "This result coincides with Eqs. (4.25), obtained through a more elaborate analysis in the microcanonical ensemble. As expected, in the large N limit, the canonical and microcanonical ensembles describe exactly the same physics, both at the macroscopic and microscopic levels.\n\n(2) The ideal gas: for the canonical macrostate M∓lparenoriTcommaoriVcommaoriNrparenori, the joint PDF for the microstates SLmu∓ lbraceori!p i commaori !q i rbraceori is\n\n[formula]\n\nIncluding the modifications to the phase space of identical particles in Eq. (4.51), the dimensionless partition function is computed as\n\n[formula]\n\nwhere\n\n[formula]\n\nis a characteristic length associated with the action h. It shall be demonstrated later on that this length scale controls the onset of quantum mechanical effects in an ideal gas.\n\nThe free energy is given by\n\n[formula]\n\nVarious thermodynamic properties of the ideal gas can now be obtained from dF =-SdT -PdV +SLmudN. For example, from the entropy",
+    "we obtain the internal energy E = 3Nk B T/2. The equation of state is obtained from\n\n[formula]\n\nand the chemical potential is given by\n\n[formula]\n\nAlso, according to Eq. (4.78), the momenta of the N particles are taken from independent Maxwell-Boltzmann distributions, consistent with Eq. (4.39).\n\n[formula]"
+   ],
+   "sourceDocKeys": [
+    "FoundationsKardar"
+   ],
+   "id": "k31"
+  },
+  {
+   "type": "topic",
+   "question": "Why does the zeroth-order hydrodynamic approximation fail to describe the system's evolution toward global equilibrium, and what specific types of flow modes persist indefinitely in this simplified model?",
+   "referenceAnswer": "The zeroth-order approximation fails because it predicts that the local entropy remains constant along stream-lines, preventing the gas from reaching a state of true global equilibrium which requires an increase in entropy. Consequently, shear flows involving velocity gradients and stationary fluid configurations with varying density or temperature persist forever without relaxing. Additionally, longitudinal sound waves exhibit undamped oscillations rather than damping out, leaving these non-equilibrium modes to exist indefinitely.",
+   "goldChunkIds": [
+    "ch_hktmix2gu7bev24vpvcv",
+    "ch_jugraw6rtxctsmyzsudq",
+    "ch_m42uekxtzqwcsosptjmd",
+    "ch_t2xzf2ith7cfethegjzb"
+   ],
+   "goldText": [
+    "As a first approximation, we shall assume that in local equilibrium, the density f 1 at each point in space can be represented as in Eq. (3.56), that is,\n\nThe choice of parameters clearly enforces ∫ d 3 !pf 0 1 = n, and 〈 !p/m 〉0 = !u, as required. Average values are easily calculated from this Gaussian weight; in particular,\n\nleading to\n\n[formula]\n\n[formula]\n\n[formula]\n\nSince the density f 0 1 is even in ! c, all odd expectation values vanish, and in particular\n\n[formula]\n\nThe conservation laws in this approximation take the simple forms\n\n[formula]\n\nIn the above expression, we have introduced the material derivative\n\n[formula]\n\nwhich measures the time variations of any quantity as it moves along the stream-lines set up by the average velocity field !u. By combining the first and third equations, it is easy to get\n\n[formula]",
+    "(c) Finally, the longitudinal velocity (!u < dblbarSC !k) combines with density and temperature variations in eigenmodes of the form\n\nwhere\n\n[formula]\n\n[formula]\n\nis the longitudinal sound velocity. Note that the density and temperature variations in this mode are adiabatic, that is, the local entropy (proportional to ln ( nT -3/2 ) ) is left unchanged.\n\nWe thus find that none of the conserved quantities relaxes to equilibrium in the zeroth-order approximation. Shear flow and entropy modes persist forever, while the two sound modes have undamped oscillations. This is a deficiency of the zeroth-order approximation that is removed by finding a better solution to the Boltzmann equation.",
+    "The quantity ln ( nT -3/2 ) is like a local entropy for the gas (see Eq. (3.67)), which according to the above equation is not changed along stream-lines. The zeroth-order hydrodynamics thus predicts that the gas flow is adiabatic. This prevents the local equilibrium solution of Eq. (3.93) from reaching a true global equilibrium form, which necessitates an increase in entropy.\n\nTo demonstrate that Eqs. (3.97) do not describe a satisfactory approach to equilibrium, examine the evolution of small deformations about a stationary lparenori!u 0 =0rparenori state, in a uniform box lparenori!F =0rparenori, by setting\n\n[formula]\n\nWe shall next expand Eqs. (3.97) to first order in the deviations ( SLnucommaoriSLthetacommaori !u ) . Note that to lowest order, D t = t +Olparenoriurparenori, leading to the linearized zeroth-order hydrodynamic equations\n\nNormal modes of the system are obtained by Fourier transformations,\n\n[formula]\n\n[formula]\n\n[formula]",
+    "where A stands for any of the three fields ( SLnucommaoriSLthetacommaori !u ) . The natural vibration frequencies are solutions to the matrix equation\n\nIt is easy to check that this equation has the following modes, the first three with zero frequency:\n\n(a) Two modes describe shear flows in a uniform (n = n) and isothermal (T =T) fluid, in which the velocity varies along a direction normal to its orientation (e.g., !u= flparenorixcommaori trparenoriˆy). In terms of Fourier modes !k· ˜!u T lparenori!krparenori =0, indicating transverse flows that are not relaxed in this zeroth-order approximation.\n\n(b) A third zero-frequency mode describes a stationary fluid with uniform pressure P = nk B T. While n and T may vary across space, their product is constant, insuring that the fluid will not start moving due to pressure variations. The corresponding eigenvector of Eq. (3.103) is\n\n[formula]"
+   ],
+   "sourceDocKeys": [
+    "FoundationsKardar"
+   ],
+   "id": "k32"
+  }
+ ]
+}

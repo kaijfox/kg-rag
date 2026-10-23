@@ -1,0 +1,901 @@
+[
+ {
+  "questionId": "k1",
+  "chunkId": "ch_uwg6w7esgwzm5evutkrt",
+  "question": "How does equilibrium statistical mechanics differ from kinetic theory regarding the evolution of systems?",
+  "referenceAnswer": "Equilibrium statistical mechanics does not address how various systems evolve to reach a state of equilibrium, unlike kinetic theory.",
+  "chunkText": "As discussed in chapter 1, equilibrium properties of macroscopic bodies are phenomenologically described by the laws of thermodynamics. The macrostate M depends on a relatively small number of thermodynamic coordinates. To provide a more fundamental derivation of these properties, we can examine the dynamics of the many degrees of freedom comprising a macroscopic body. Description of each microstate SLmu requires an enormous amount of information, and the corresponding time evolution, governed by the Hamiltonian equations discussed in chapter 3, is usually quite complicated. Rather than following the evolution of an individual (pure) microstate, statistical mechanics examines an ensemble of microstates corresponding to a given (mixed) macrostate. It aims to provide the probabilities p M lparenoriSLmurparenori for the equilibrium ensemble. Liouville's theorem justifies the assumption that all accessible microstates are equally likely in an equilibrium ensemble. As explained in chapter 2, such assignment of probabilities is subjective. In this chapter we shall provide unbiased estimates of p M lparenoriSLmurparenori for a number of different equilibrium ensembles. A central conclusion is that in the thermodynamic limit, with large numbers of degrees of freedom, all these ensembles are in fact equivalent. In contrast to kinetic theory, equilibrium statistical mechanics leaves out the question of how various systems evolve to a state of equilibrium.",
+  "relations": [
+   {
+    "text": "Equilibrium properties of macroscopic bodies are phenomenologically described by the laws of thermodynamics.",
+    "nodes": [
+     "equilibrium properties",
+     "macroscopic bodies",
+     "laws of thermodynamics"
+    ]
+   },
+   {
+    "text": "The macrostate M depends on a relatively small number of thermodynamic coordinates.",
+    "nodes": [
+     "macrostate",
+     "thermodynamic coordinates"
+    ]
+   },
+   {
+    "text": "Description of each microstate requires an enormous amount of information.",
+    "nodes": [
+     "microstate",
+     "information"
+    ]
+   },
+   {
+    "text": "Time evolution is governed by the Hamiltonian equations.",
+    "nodes": [
+     "time evolution",
+     "Hamiltonian equations"
+    ]
+   },
+   {
+    "text": "Statistical mechanics examines an ensemble of microstates corresponding to a given macrostate.",
+    "nodes": [
+     "statistical mechanics",
+     "ensemble",
+     "microstates",
+     "macrostate"
+    ]
+   },
+   {
+    "text": "Liouville's theorem justifies the assumption that all accessible microstates are equally likely in an equilibrium ensemble.",
+    "nodes": [
+     "Liouville's theorem",
+     "accessible microstates",
+     "equilibrium ensemble"
+    ]
+   },
+   {
+    "text": "Assignment of probabilities is subjective.",
+    "nodes": [
+     "assignment of probabilities",
+     "subjectivity"
+    ]
+   },
+   {
+    "text": "In the thermodynamic limit, all ensembles are equivalent.",
+    "nodes": [
+     "thermodynamic limit",
+     "ensembles",
+     "equivalence"
+    ]
+   },
+   {
+    "text": "Equilibrium statistical mechanics leaves out the question of how various systems evolve to a state of equilibrium.",
+    "nodes": [
+     "equilibrium statistical mechanics",
+     "systems",
+     "evolution to equilibrium"
+    ]
+   }
+  ],
+  "error": null
+ },
+ {
+  "questionId": "k2",
+  "chunkId": "ch_pjiaxxomyzqnatddouec",
+  "question": "How does the characteristic interaction distance change when analyzing a neutral plasma compared to short-range interactions?",
+  "referenceAnswer": "In a neutral plasma, the Debye screening length replaces the typical interaction distance used in the standard equation.",
+  "chunkText": "is the typical time over which two particles are within the effective range d of their interaction. For short-range interactions (including van der Waals and Lennard-Jones, despite their power law decaying tails), d ≈ 10 -10 m is of the order of a typical atomic size, resulting in SLtau c ≈10 -12 s. This is usually the shortest time scale in the problem. The analysis is somewhat more complicated for long-range interactions, such as the Coulomb gas in a plasma. For a neutral plasma, the Debye screening length SLlambda replaces d in the above equation, as discussed in the problems.\n\nFig. 3.3 The mean free time between collisions is estimated by requiring that there is only one other particle in the volume swept in time SLtau×.\n\n(c) There are also collision terms on the right-hand side of Eqs. (3.28), which depend on f s+1 , and lead to an inverse time scale\n\n[formula]",
+  "relations": [
+   {
+    "text": "The typical time over which two particles are within the effective range d of their interaction is denoted as tau_c.",
+    "nodes": [
+     "typical time",
+     "particles",
+     "effective range",
+     "interaction"
+    ]
+   },
+   {
+    "text": "For short-range interactions, the effective range d is of the order of a typical atomic size.",
+    "nodes": [
+     "short-range interactions",
+     "effective range",
+     "atomic size"
+    ]
+   },
+   {
+    "text": "The effective range d for short-range interactions is approximately 10 to the power of negative 10 meters.",
+    "nodes": [
+     "effective range",
+     "meters"
+    ]
+   },
+   {
+    "text": "For short-range interactions, the typical time tau_c is approximately 10 to the power of negative 12 seconds.",
+    "nodes": [
+     "typical time",
+     "seconds"
+    ]
+   },
+   {
+    "text": "The typical time for short-range interactions is usually the shortest time scale in the problem.",
+    "nodes": [
+     "typical time",
+     "time scale",
+     "problem"
+    ]
+   },
+   {
+    "text": "For long-range interactions, the Debye screening length replaces the effective range d in the equation for typical time.",
+    "nodes": [
+     "long-range interactions",
+     "Debye screening length",
+     "effective range",
+     "typical time"
+    ]
+   },
+   {
+    "text": "The mean free time between collisions is estimated by requiring that there is only one other particle in the volume swept in time tau_c times velocity.",
+    "nodes": [
+     "mean free time",
+     "collisions",
+     "particle",
+     "volume",
+     "time",
+     "velocity"
+    ]
+   },
+   {
+    "text": "Collision terms on the right-hand side of Eqs. (3.28) depend on f_s+1 and lead to an inverse time scale.",
+    "nodes": [
+     "collision terms",
+     "equations",
+     "distribution function",
+     "inverse time scale"
+    ]
+   }
+  ],
+  "error": null
+ },
+ {
+  "questionId": "k3",
+  "chunkId": "ch_gqpt6k6wothrtonamp3h",
+  "question": "How does the requirement that the probability density be stationary in time relate to the fundamental postulate of statistical mechanics?",
+  "referenceAnswer": "The condition implies that the macrostate is represented by a uniform distribution of microstates on surfaces of constant energy, which is equivalent to using a subjective measure of probability instead of an objective one.",
+  "chunkText": "A possible solution to the above equation is for SLrho eq to be a function of HEUscript, that is, SLrho eq lparenoripcommaori qrparenori = SLrho ( HEUscriptlparenoripcommaoriqrparenori ) . It is then easy to verify that lbraceoriSLrholparenoriHEUscriptrparenoricommaoriHEUscriptrbraceori = SLrho ′ lparenoriHEUscriptrparenorilbraceoriHEUscriptcommaoriHEUscriptrbraceori = 0. This solution implies that the value of SLrho is constant on surfaces of constant energy HEUscript, in phase space. This is indeed the basic assumption of statistical mechanics. For example, in the microcanonical ensemble, the total energy E of an isolated system is specified. All members of the ensemble must then be located on the surface HEUscriptlparenoripcommaoriqrparenori = E in phase space. Equation (3.9) implies that a uniform density of points on this surface is stationary in time. The assumption of statistical mechanics is that the macrostate is indeed represented by such a uniform density of microstates. This is equivalent to replacing the objective measure of probability in Eq. (3.2) with a subjective one.",
+  "relations": [
+   {
+    "text": "SLrho eq is a function of HEUscript.",
+    "nodes": [
+     "slrho eq",
+     "heuscript"
+    ]
+   },
+   {
+    "text": "The value of SLrho is constant on surfaces of constant energy HEUscript.",
+    "nodes": [
+     "slrho",
+     "heuscript",
+     "phase space"
+    ]
+   },
+   {
+    "text": "The solution implies that the basic assumption of statistical mechanics holds.",
+    "nodes": [
+     "solution",
+     "statistical mechanics"
+    ]
+   },
+   {
+    "text": "In the microcanonical ensemble, the total energy E of an isolated system is specified.",
+    "nodes": [
+     "microcanonical ensemble",
+     "energy e",
+     "isolated system"
+    ]
+   },
+   {
+    "text": "Members of the microcanonical ensemble are located on the surface HEUscriptlparenoripcommaoriqrparenori = E in phase space.",
+    "nodes": [
+     "microcanonical ensemble",
+     "heuscriptlparenoripcommaoriqrparenori",
+     "phase space"
+    ]
+   },
+   {
+    "text": "Equation (3.9) implies that a uniform density of points on the surface is stationary in time.",
+    "nodes": [
+     "equation 3.9",
+     "uniform density",
+     "time"
+    ]
+   },
+   {
+    "text": "The assumption of statistical mechanics represents the macrostate by a uniform density of microstates.",
+    "nodes": [
+     "statistical mechanics",
+     "macrostate",
+     "microstates"
+    ]
+   },
+   {
+    "text": "Replacing the objective measure of probability with a subjective one is equivalent to the assumption of statistical mechanics.",
+    "nodes": [
+     "objective measure of probability",
+     "subjective measure of probability",
+     "statistical mechanics"
+    ]
+   }
+  ],
+  "error": null
+ },
+ {
+  "questionId": "k4",
+  "chunkId": "ch_g3z36qmj52fcfvfxdsx2",
+  "question": "In a system of N impurities with two discrete energy levels, how does the enumeration of microstates differ from the application of Liouville's theorem in continuous phase space?",
+  "referenceAnswer": "The allowed microstates for this system are discrete, whereas Liouville's theorem applies to Hamiltonian evolution in a continuous phase space.",
+  "chunkText": "Consider N impurity atoms trapped in a solid matrix. Each impurity can be in one of two states, with energies 0 and SLepsilon, respectively. This example is somewhat different from the situations considered so far, in that the allowed microstates are discrete. Liouville's theorem applies to Hamiltonian evolution in a continuous phase space. Although there is less ambiguity in enumeration of discrete states, the dynamics that ensures that all allowed microstates are equally accessed will remain unspecified for the moment. (An example from quantum mechanical evolution will be presented later on.)\n\nThe microstates of the two-level system are specified by the set of occupation numbers lbraceorin i rbraceori, where n i = 0 or 1 depending on whether the ith impurity is in its ground state or excited. The overall energy is\n\n[formula]",
+  "relations": [
+   {
+    "text": "Each impurity atom can be in one of two states.",
+    "nodes": [
+     "impurity atom",
+     "two states"
+    ]
+   },
+   {
+    "text": "The first state has an energy of zero.",
+    "nodes": [
+     "first state",
+     "energy",
+     "zero"
+    ]
+   },
+   {
+    "text": "The second state has an energy of SLepsilon.",
+    "nodes": [
+     "second state",
+     "energy",
+     "SLepsilon"
+    ]
+   },
+   {
+    "text": "The allowed microstates for the system are discrete.",
+    "nodes": [
+     "allowed microstates",
+     "discrete"
+    ]
+   },
+   {
+    "text": "Liouville's theorem applies to Hamiltonian evolution in a continuous phase space.",
+    "nodes": [
+     "liouville theorem",
+     "hamiltonian evolution",
+     "continuous phase space"
+    ]
+   },
+   {
+    "text": "The occupation number n_i is zero if the ith impurity is in its ground state.",
+    "nodes": [
+     "occupation number n_i",
+     "ground state",
+     "zero"
+    ]
+   },
+   {
+    "text": "The occupation number n_i is one if the ith impurity is in its excited state.",
+    "nodes": [
+     "occupation number n_i",
+     "excited state",
+     "one"
+    ]
+   }
+  ],
+  "error": null
+ },
+ {
+  "questionId": "k5",
+  "chunkId": "ch_qw7cjnvs7yuzysaqzmsv",
+  "question": "How does one express the number of accessible microstates for a system of impurities in terms of the binomial coefficient when the count of excited impurities is determined by the ratio of total energy to the single-particle energy spacing?",
+  "referenceAnswer": "The normalization factor, representing the number of ways to choose the excited levels, is given by the binomial coefficient because the number of excited impurities equals the total energy divided by the energy spacing epsilon.",
+  "chunkText": "where N 1 is the total number of excited impurities. The macrostate is specified by the total energy E, and the number of impurities N. The microcanonical probability is thus\n\n[formula]\n\nAs there are N 1 =E/SLepsilon excited impurities, the normalization UPOmega is the number of ways of choosing N 1 excited levels among the available N, and given by the binomial coefficient\n\nThe entropy\n\n[formula]\n\n[formula]\n\n[formula]\n\ncan be simplified by Stirling's formula in the limit of N 1 commaoriN ≫1 to\n\nThe equilibrium temperature can now be calculated from Eq. (4.7) as\n\n[formula]\n\nAlternatively, the internal energy at a temperature T is given by\n\n[formula]",
+  "relations": [
+   {
+    "text": "The macrostate is specified by the total energy E and the number of impurities N.",
+    "nodes": [
+     "macrostate",
+     "total energy",
+     "number of impurities"
+    ]
+   },
+   {
+    "text": "The number of excited impurities N1 equals the total energy E divided by the single-particle level spacing epsilon.",
+    "nodes": [
+     "number of excited impurities",
+     "total energy",
+     "single-particle level spacing"
+    ]
+   },
+   {
+    "text": "The normalization UPOmega is the number of ways of choosing N1 excited levels among the available N.",
+    "nodes": [
+     "normalization",
+     "number of excited levels",
+     "available impurities"
+    ]
+   },
+   {
+    "text": "The normalization UPOmega is given by the binomial coefficient.",
+    "nodes": [
+     "normalization",
+     "binomial coefficient"
+    ]
+   },
+   {
+    "text": "The entropy can be simplified by Stirling's formula in the limit of N1 and N being much greater than 1.",
+    "nodes": [
+     "entropy",
+     "Stirling's formula",
+     "number of excited impurities",
+     "number of impurities"
+    ]
+   }
+  ],
+  "error": null
+ },
+ {
+  "questionId": "k6",
+  "chunkId": "ch_sdazxhumbwzotd4itcb7",
+  "question": "How do the densities of particle pairs evolve immediately after a collision event occurs?",
+  "referenceAnswer": "The densities before and after the collision are related by streaming, where the incoming momenta correspond to particles that collided at a specific impact parameter to produce the outgoing momenta.",
+  "chunkText": "In principle, the integration over a is from -infinity2 to +infinity2, but as the variations of f 2 are only significant over the interaction range d, we can evaluate the above quantities at separations of a few d from the collision point. This is a good compromise, allowing us to evaluate f 2 away from the collisions, but at small enough separations so that we can ignore the difference between !q 1 and !q 2 . This amounts to a coarse graining in space that eliminates variations on scales finer than d. With these provisos, it is tempting to close the equation for f 1 , by using the assumption of uncorrelated particles in Eq. (3.32). Clearly some care is necessary as a naive substitution gives zero! The key observation is that the densities f 2 for situations corresponding to before and after the collision have to be treated differently. For example, soon after opening of the slot separating empty and full gas containers, the momenta of the gas particles are likely to point away from the slot. Collisions will tend to randomize momenta, yielding a more isotropic distribution. However, the densities f 2 before and after the collision are related by streaming, implying that f 2 lparenori!p 1 commaori !q 1 commaori !p 2 commaori !bcommaori+/ trparenori =f 2 lparenori!p 1 ′ commaori !q 1 commaori !p 2 ′ commaori !bcommaori-/ trparenori, where !p 1 ′ and !p 2 ′ are momenta whose collision at an impact vector !b results in production of outgoing particles with momenta !p 1 and !p 2 .",
+  "relations": [
+   {
+    "text": "The integration over a is from negative infinity to positive infinity.",
+    "nodes": [
+     "integration",
+     "a",
+     "negative infinity",
+     "positive infinity"
+    ]
+   },
+   {
+    "text": "Variations of f squared are only significant over the interaction range d.",
+    "nodes": [
+     "variations",
+     "f squared",
+     "interaction range",
+     "d"
+    ]
+   },
+   {
+    "text": "Quantities can be evaluated at separations of a few d from the collision point.",
+    "nodes": [
+     "quantities",
+     "separations",
+     "d",
+     "collision point"
+    ]
+   },
+   {
+    "text": "Evaluating f squared away from collisions allows ignoring the difference between q one and q two.",
+    "nodes": [
+     "f squared",
+     "collisions",
+     "q one",
+     "q two"
+    ]
+   },
+   {
+    "text": "The process amounts to a coarse graining in space that eliminates variations on scales finer than d.",
+    "nodes": [
+     "coarse graining",
+     "space",
+     "variations",
+     "d"
+    ]
+   },
+   {
+    "text": "Densities f squared for situations before and after the collision have to be treated differently.",
+    "nodes": [
+     "densities",
+     "f squared",
+     "before collision",
+     "after collision"
+    ]
+   },
+   {
+    "text": "Soon after opening of the slot, momenta of gas particles are likely to point away from the slot.",
+    "nodes": [
+     "momenta",
+     "gas particles",
+     "slot"
+    ]
+   },
+   {
+    "text": "Collisions tend to randomize momenta yielding a more isotropic distribution.",
+    "nodes": [
+     "collisions",
+     "momenta",
+     "isotropic distribution"
+    ]
+   },
+   {
+    "text": "Densities f squared before and after the collision are related by streaming.",
+    "nodes": [
+     "densities",
+     "f squared",
+     "streaming"
+    ]
+   },
+   {
+    "text": "Streaming relates f squared of incoming particles to f squared of outgoing particles via impact vector b.",
+    "nodes": [
+     "streaming",
+     "f squared",
+     "incoming particles",
+     "outgoing particles",
+     "impact vector"
+    ]
+   }
+  ],
+  "error": null
+ },
+ {
+  "questionId": "k10",
+  "chunkId": "ch_aqe4jcoeln26kjkwxmnh",
+  "question": "In the study of weakly interacting gases using kinetic theory, why are three-body and higher-order interactions typically neglected?",
+  "referenceAnswer": "Three-body and higher-order interactions are generally omitted because they have negligible importance when considering the dilute gas limit.",
+  "chunkText": "where SLrho s is a standard unconditional PDF for the coordinates of s particles, and SLrho N ∓ SLrho. While SLrho s is properly normalized to unity when integrated over all its variables, the s-particle density has a normalization of N!/lparenoriN -srparenori!. We shall use the two quantities interchangeably.\n\nThe evolution of the few-body densities is governed by the BBGKY hierarchy of equations attributed to Bogoliubov, Born, Green, Kirkwood, and Yvon. The simplest non-trivial Hamiltonian studied in kinetic theory is\n\n[formula]\n\nThis Hamiltonian provides an adequate description of a weakly interacting gas. In addition to the classical kinetic energy of particles of mass m, it contains an external potential U, and a two-body interaction VEUscript, between the particles. In principle, three- and higher-body interactions should also be included for a complete description, but they are not very important in the dilute gas (nearly ideal) limit.",
+  "relations": [
+   {
+    "text": "The s-particle density is properly normalized to unity when integrated over all its variables.",
+    "nodes": [
+     "s-particle density",
+     "unity",
+     "integration"
+    ]
+   },
+   {
+    "text": "The s-particle density has a normalization of N factorial divided by (N minus s) factorial.",
+    "nodes": [
+     "s-particle density",
+     "N factorial",
+     "N minus s factorial"
+    ]
+   },
+   {
+    "text": "The evolution of the few-body densities is governed by the BBGKY hierarchy of equations.",
+    "nodes": [
+     "few-body densities",
+     "BBGKY hierarchy"
+    ]
+   },
+   {
+    "text": "The BBGKY hierarchy of equations is attributed to Bogoliubov, Born, Green, Kirkwood, and Yvon.",
+    "nodes": [
+     "BBGKY hierarchy",
+     "Bogoliubov",
+     "Born",
+     "Green",
+     "Kirkwood",
+     "Yvon"
+    ]
+   },
+   {
+    "text": "The simplest non-trivial Hamiltonian studied in kinetic theory describes a weakly interacting gas.",
+    "nodes": [
+     "Hamiltonian",
+     "kinetic theory",
+     "weakly interacting gas"
+    ]
+   },
+   {
+    "text": "The Hamiltonian contains the classical kinetic energy of particles of mass m.",
+    "nodes": [
+     "Hamiltonian",
+     "classical kinetic energy",
+     "mass m"
+    ]
+   },
+   {
+    "text": "The Hamiltonian contains an external potential U.",
+    "nodes": [
+     "Hamiltonian",
+     "external potential U"
+    ]
+   },
+   {
+    "text": "The Hamiltonian contains a two-body interaction V between the particles.",
+    "nodes": [
+     "Hamiltonian",
+     "two-body interaction V",
+     "particles"
+    ]
+   },
+   {
+    "text": "Three- and higher-body interactions should be included for a complete description.",
+    "nodes": [
+     "three-body interactions",
+     "higher-body interactions",
+     "complete description"
+    ]
+   },
+   {
+    "text": "Three- and higher-body interactions are not very important in the dilute gas limit.",
+    "nodes": [
+     "three-body interactions",
+     "higher-body interactions",
+     "dilute gas limit"
+    ]
+   }
+  ],
+  "error": null
+ },
+ {
+  "questionId": "k11",
+  "chunkId": "ch_x4e3chttmmxild76kthp",
+  "question": "How is the partition function related to the parameter beta, and what physical quantity does beta represent in terms of the Boltzmann constant and temperature?",
+  "referenceAnswer": "The parameter beta is equal to the inverse product of the Boltzmann constant and the absolute temperature (1/k_B T).",
+  "chunkText": "[formula]\n\nThe unconditional probability for microstates of S is now obtained from\n\n[formula]\n\nOnce SLmu S is specified, the above sum is restricted to microstates of the reservoir with energy E Tot -HEUscript S lparenoriSLmu S rparenori. The number of such states is related to the entropy of the reservoir, and leads to\n\n[formula]\n\nSince, by assumption, the energy of the system is insignificant compared with that of the reservoir,\n\n[formula]\n\nDropping the subscript S, the normalized probabilities are given by\n\n[formula]\n\n[formula]\n\nis known as the partition function, and SLbeta ∓ 1/k B T. (Note that probabilities similar to Eq. (4.56) were already obtained in Eqs. (4.25) and (4.39), when considering a portion of the system in equilibrium with the rest of it.)",
+  "relations": [
+   {
+    "text": "The unconditional probability for microstates of a system S is obtained from a sum over reservoir microstates.",
+    "nodes": [
+     "unconditional probability",
+     "microstates",
+     "system",
+     "reservoir"
+    ]
+   },
+   {
+    "text": "The sum is restricted to reservoir microstates with energy equal to the total energy minus the system energy.",
+    "nodes": [
+     "sum",
+     "reservoir microstates",
+     "total energy",
+     "system energy"
+    ]
+   },
+   {
+    "text": "The number of accessible reservoir states is related to the entropy of the reservoir.",
+    "nodes": [
+     "number of states",
+     "reservoir",
+     "entropy"
+    ]
+   },
+   {
+    "text": "The probability distribution leads to an expression involving the partition function.",
+    "nodes": [
+     "probability distribution",
+     "partition function"
+    ]
+   },
+   {
+    "text": "The energy of the system is insignificant compared with that of the reservoir.",
+    "nodes": [
+     "system energy",
+     "reservoir energy"
+    ]
+   },
+   {
+    "text": "Dropping the subscript S yields normalized probabilities given by a specific formula.",
+    "nodes": [
+     "normalized probabilities",
+     "formula"
+    ]
+   },
+   {
+    "text": "The partition function is defined as a sum over states weighted by the Boltzmann factor.",
+    "nodes": [
+     "partition function",
+     "states",
+     "Boltzmann factor"
+    ]
+   },
+   {
+    "text": "The parameter beta is equal to one divided by the product of Boltzmann constant and temperature.",
+    "nodes": [
+     "beta",
+     "Boltzmann constant",
+     "temperature"
+    ]
+   }
+  ],
+  "error": null
+ },
+ {
+  "questionId": "k12",
+  "chunkId": "ch_nung7iapchp6mncn5sda",
+  "question": "What specific condition regarding heat exchange distinguishes a Carnot engine from other engines operating in a cycle?",
+  "referenceAnswer": "The distinguishing feature is that all heat interactions occur exclusively at two distinct temperatures, corresponding to the source and the sink.",
+  "chunkText": "A Carnot engine is any engine that is reversible, runs in a cycle, with all of its heat exchanges taking place at a source temperature T H , and a sink temperature T C .\n\nA reversible process is one that can be run backward in time by simply reversing its inputs and outputs. It is the thermodynamic equivalent of frictionless motion in mechanics. Since time reversibility implies equilibrium, a reversible transformation must be quasi-static, but the reverse is not necessarily true (e.g., if there is energy dissipation due to friction). An engine that runs in a cycle\n\ncold returns to its original internal state at the end of the process. The distinguishing characteristic of the Carnot engine is that heat exchanges with the surroundings are carried out only at two temperatures.",
+  "relations": [
+   {
+    "text": "A Carnot engine is any engine that is reversible.",
+    "nodes": [
+     "carnot engine",
+     "engine",
+     "reversible"
+    ]
+   },
+   {
+    "text": "A Carnot engine runs in a cycle.",
+    "nodes": [
+     "carnot engine",
+     "cycle"
+    ]
+   },
+   {
+    "text": "All heat exchanges of a Carnot engine take place at a source temperature T H.",
+    "nodes": [
+     "heat exchanges",
+     "source temperature",
+     "T H"
+    ]
+   },
+   {
+    "text": "All heat exchanges of a Carnot engine take place at a sink temperature T C.",
+    "nodes": [
+     "heat exchanges",
+     "sink temperature",
+     "T C"
+    ]
+   },
+   {
+    "text": "A reversible process is one that can be run backward in time by simply reversing its inputs and outputs.",
+    "nodes": [
+     "reversible process",
+     "time",
+     "inputs",
+     "outputs"
+    ]
+   },
+   {
+    "text": "A reversible process is the thermodynamic equivalent of frictionless motion in mechanics.",
+    "nodes": [
+     "reversible process",
+     "frictionless motion",
+     "mechanics"
+    ]
+   },
+   {
+    "text": "Time reversibility implies equilibrium.",
+    "nodes": [
+     "time reversibility",
+     "equilibrium"
+    ]
+   },
+   {
+    "text": "A reversible transformation must be quasi-static.",
+    "nodes": [
+     "reversible transformation",
+     "quasi-static"
+    ]
+   },
+   {
+    "text": "An engine that runs in a cycle returns to its original internal state at the end of the process.",
+    "nodes": [
+     "engine",
+     "cycle",
+     "internal state",
+     "process"
+    ]
+   },
+   {
+    "text": "The distinguishing characteristic of the Carnot engine is that heat exchanges with the surroundings are carried out only at two temperatures.",
+    "nodes": [
+     "carnot engine",
+     "heat exchanges",
+     "surroundings",
+     "temperatures"
+    ]
+   }
+  ],
+  "error": null
+ },
+ {
+  "questionId": "k13",
+  "chunkId": "ch_frdianlmjm576fftosb7",
+  "question": "What displacement value represents mechanical equilibrium for a spring with constant K subjected to the downward force of a mass m?",
+  "referenceAnswer": "The equilibrium displacement is x_eq = mg/K.",
+  "chunkText": "For example, consider a spring of natural extension L 0 and spring constant K, subject to the force J =mg exerted by a particle of mass m. For an extension x =L!L 0 , the internal potential energy of the spring is Ulparenorixrparenori =Kx 2 /2, while there is a change of !mgx in the potential energy of the particle. Mechanical equilibrium is obtained by minimizing Kx 2 /2!mgx at an extension x eq = mg/K. The spring at any other value of the displacement initially oscillates before coming to rest at x eq due to friction. For a more general potential energy Ulparenorixrparenori, the internally generated force J i =!dU/dx has to be balanced with the external force J at the equilibrium point.",
+  "relations": [
+   {
+    "text": "The internal potential energy of a spring is equal to one-half the spring constant times the extension squared.",
+    "nodes": [
+     "internal potential energy",
+     "spring constant",
+     "extension"
+    ]
+   },
+   {
+    "text": "The change in potential energy of a particle subject to gravity is equal to negative mass times gravitational acceleration times extension.",
+    "nodes": [
+     "change in potential energy",
+     "mass",
+     "gravitational acceleration",
+     "extension"
+    ]
+   },
+   {
+    "text": "Mechanical equilibrium occurs at an extension where the derivative of the internal potential energy minus the external potential energy change equals zero.",
+    "nodes": [
+     "mechanical equilibrium",
+     "internal potential energy",
+     "external potential energy",
+     "extension"
+    ]
+   },
+   {
+    "text": "The equilibrium extension is equal to mass times gravitational acceleration divided by the spring constant.",
+    "nodes": [
+     "equilibrium extension",
+     "mass",
+     "gravitational acceleration",
+     "spring constant"
+    ]
+   },
+   {
+    "text": "An internally generated force is equal to negative one-half the derivative of the potential energy with respect to displacement.",
+    "nodes": [
+     "internally generated force",
+     "potential energy",
+     "displacement"
+    ]
+   },
+   {
+    "text": "Mechanical equilibrium requires the internally generated force to be balanced by the external force.",
+    "nodes": [
+     "mechanical equilibrium",
+     "internally generated force",
+     "external force"
+    ]
+   }
+  ],
+  "error": null
+ },
+ {
+  "questionId": "k14",
+  "chunkId": "ch_pmebbjbqu632qfqfrxpe",
+  "question": "How is the function of state known as entropy defined in terms of reversible heat and temperature?",
+  "referenceAnswer": "Entropy is defined such that the change in entropy dS equals the reversible heat divided by the temperature (dQ_rev / T), allowing the reversible heat to be calculated as TdS.",
+  "chunkText": "For a reversible cycle ∮ ¯ dQ rev /T =0, since by running the cycle in the opposite direction ¯ dQ rev ∓! ¯ dQ rev , and by the above theorem ¯ dQ rev /T is both non-negative and non-positive, hence zero. This result implies that the integral of ¯ dQ rev /T between any two points A and B is independent of path, since for two paths (1) and (2)\n\n[formula]\n\nUsing Eq. (1.25) we can construct yet another function of state, the entropy S. Since the integral is independent of path, and only depends on the two end-points, we can set\n\n[formula]\n\nFig. 1.14 (a) A reversible cycle. (b) Two reversible paths between A and B. (c) The cycle formed from a generic path between A and B, and a reversible one.\n\nFor reversible processes, we can now compute the heat from ¯ dQ rev = TdS. This allows us to construct adiabatic curves for a general (multivariable) system from the condition of constant S. Note that Eq. (1.26) only defines the entropy up to an overall constant.",
+  "relations": [
+   {
+    "text": "For a reversible cycle, the integral of dQ_rev divided by T equals zero.",
+    "nodes": [
+     "reversible cycle",
+     "dQ_rev",
+     "T",
+     "integral"
+    ]
+   },
+   {
+    "text": "Running a reversible cycle in the opposite direction reverses the sign of dQ_rev.",
+    "nodes": [
+     "reversible cycle",
+     "opposite direction",
+     "dQ_rev"
+    ]
+   },
+   {
+    "text": "The integral of dQ_rev divided by T is both non-negative and non-positive for a reversible cycle.",
+    "nodes": [
+     "integral",
+     "dQ_rev",
+     "T",
+     "reversible cycle"
+    ]
+   },
+   {
+    "text": "The integral of dQ_rev divided by T between any two points is independent of path.",
+    "nodes": [
+     "integral",
+     "dQ_rev",
+     "T",
+     "path",
+     "points"
+    ]
+   },
+   {
+    "text": "The integral of dQ_rev divided by T depends only on the two end-points.",
+    "nodes": [
+     "integral",
+     "dQ_rev",
+     "T",
+     "end-points"
+    ]
+   },
+   {
+    "text": "For reversible processes, dQ_rev equals T times dS.",
+    "nodes": [
+     "reversible processes",
+     "dQ_rev",
+     "T",
+     "dS"
+    ]
+   },
+   {
+    "text": "Adiabatic curves can be constructed from the condition of constant entropy S.",
+    "nodes": [
+     "adiabatic curves",
+     "entropy",
+     "constant S"
+    ]
+   },
+   {
+    "text": "Equation 1.26 defines the entropy up to an overall constant.",
+    "nodes": [
+     "equation 1.26",
+     "entropy",
+     "overall constant"
+    ]
+   }
+  ],
+  "error": null
+ },
+ {
+  "questionId": "k15",
+  "chunkId": "ch_rz64ruf373utov225blg",
+  "question": "In the context of reversible processes, what specific roles do entropy and temperature play regarding conjugate variables?",
+  "referenceAnswer": "Entropy acts as the displacement variable while temperature serves as the corresponding force.",
+  "chunkText": "For a reversible (hence quasi-static) transformation, ¯ dQ= TdS and ¯ dW = ∑i J i dx i , and the first law implies\n\n[formula]\n\nWe can see that in this equation S and T appear as conjugate variables, with S playing the role of a displacement, and T as the corresponding force. This identification allows us to make the correspondence between mechanical and thermal exchanges more precise, although we should keep in mind that unlike its mechanical analog, temperature is always positive. While to obtain Eq. (1.27) we had to appeal to reversible transformations, it is important to emphasize that it is a relation between functions of state. Equation (1.27) is likely the most fundamental and useful identity in thermodynamics.",
+  "relations": [
+   {
+    "text": "For a reversible transformation, the heat transfer dQ equals temperature T times entropy change dS.",
+    "nodes": [
+     "heat transfer",
+     "temperature",
+     "entropy"
+    ]
+   },
+   {
+    "text": "For a reversible transformation, the work done dW equals the sum of generalized forces Ji times generalized displacements dxi.",
+    "nodes": [
+     "work",
+     "generalized force",
+     "generalized displacement"
+    ]
+   },
+   {
+    "text": "In the first law equation for reversible processes, entropy S and temperature T appear as conjugate variables.",
+    "nodes": [
+     "entropy",
+     "temperature",
+     "conjugate variables"
+    ]
+   },
+   {
+    "text": "In the thermodynamic relation, entropy plays the role of a displacement variable.",
+    "nodes": [
+     "entropy",
+     "displacement"
+    ]
+   },
+   {
+    "text": "In the thermodynamic relation, temperature plays the role of a force variable.",
+    "nodes": [
+     "temperature",
+     "force"
+    ]
+   },
+   {
+    "text": "Temperature is always positive unlike mechanical analogs.",
+    "nodes": [
+     "temperature",
+     "mechanical analog"
+    ]
+   },
+   {
+    "text": "The relation between entropy and temperature holds for functions of state regardless of reversibility.",
+    "nodes": [
+     "entropy",
+     "temperature",
+     "functions of state"
+    ]
+   }
+  ],
+  "error": null
+ }
+]

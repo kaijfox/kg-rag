@@ -1,0 +1,10 @@
+{"n": "r01", "score": 1, "rationale": "Answer gives adiabatic/constant-entropy flow preventing entropy increase, persistent shear and entropy modes, and undamped sound waves, matching the reference."}
+{"n": "r17", "score": 1, "rationale": "Answer states that interactions make the s-particle density depend on the (s+1)-particle density, forming a coupled hierarchy, matching the reference."}
+{"n": "r21", "score": 1, "rationale": "Answer states extensive quantities scale with size and that chemical work is treated differently from mechanical work and not subtracted in the Gibbs free energy, as in the reference."}
+{"n": "r28", "score": 0, "rationale": "Answer says the context lacks the information and gives no positive heat capacity or compressibility conditions."}
+{"n": "r23", "score": 1, "rationale": "Answer cites the Bohr-Sommerfeld link and W/h^{3N} quantum states per phase-space volume, matching the reference."}
+{"n": "r26", "score": 1, "rationale": "Answer identifies the fluctuation-dissipation theorem as in the reference."}
+{"n": "r12", "score": 0.5, "rationale": "Answer captures equal temperature and pressure from entropy maximization but omits concavity, the Gibbs potential and the second-derivative stability inequalities."}
+{"n": "r24", "score": 0.5, "rationale": "Answer states the ensembles agree in the thermodynamic limit but does not mention the re-examined two-level and ideal gas results matching the earlier microcanonical ones."}
+{"n": "r09", "score": 1, "rationale": "Answer gives the information-theory, least-bias, maximum entropy formulation severing the link with dynamics, as in the reference."}
+{"n": "r20", "score": 1, "rationale": "Answer states pre- and post-collision densities are related by streaming with outgoing momenta determined by incoming momenta and impact parameter, matching the reference."}

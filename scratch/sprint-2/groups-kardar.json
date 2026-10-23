@@ -1,0 +1,504 @@
+{
+ "seed": 17,
+ "author": "kardar",
+ "groups": [
+  {
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_uwg6w7esgwzm5evutkrt"
+   ]
+  },
+  {
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_lphwiscjfe5wujhv75vu"
+   ]
+  },
+  {
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_keselpzgithjlueeerd5"
+   ]
+  },
+  {
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_xpm7f2f7i6kgkmgfz52b"
+   ]
+  },
+  {
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_l5dilgrdzficeirdhezz"
+   ]
+  },
+  {
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_pjiaxxomyzqnatddouec"
+   ]
+  },
+  {
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_gqpt6k6wothrtonamp3h"
+   ]
+  },
+  {
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_g3z36qmj52fcfvfxdsx2"
+   ]
+  },
+  {
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_qw7cjnvs7yuzysaqzmsv"
+   ]
+  },
+  {
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_sdazxhumbwzotd4itcb7"
+   ]
+  },
+  {
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_xdfws5qhhcmyxzagkaij"
+   ]
+  },
+  {
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_yfwl6bonedqqi4xb3pzi"
+   ]
+  },
+  {
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_ezu6f2nbpxruui5jcv7i"
+   ]
+  },
+  {
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_qqqmvbf32cm6wmyf5auu"
+   ]
+  },
+  {
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_eagzdbldrbtuayooiz64"
+   ]
+  },
+  {
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_vsxal6v45krdpyrmh3px"
+   ]
+  },
+  {
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_aqe4jcoeln26kjkwxmnh"
+   ]
+  },
+  {
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_yxhuf3bbe6skgms4llod"
+   ]
+  },
+  {
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_x4e3chttmmxild76kthp"
+   ]
+  },
+  {
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_thx4d7uueaqadu75mumw"
+   ]
+  },
+  {
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_cwdpnovur6wapmikmkir"
+   ]
+  },
+  {
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_olxgm6wnger3oia7arm7"
+   ]
+  },
+  {
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_nung7iapchp6mncn5sda"
+   ]
+  },
+  {
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_frdianlmjm576fftosb7"
+   ]
+  },
+  {
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_tp4m7vq6co5gotfyxfm2"
+   ]
+  },
+  {
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_pmebbjbqu632qfqfrxpe"
+   ]
+  },
+  {
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_bblypo5xbgjlffnux2p3"
+   ]
+  },
+  {
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_rz64ruf373utov225blg"
+   ]
+  },
+  {
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_6smdq74ntbo2557mybbn"
+   ]
+  },
+  {
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_iwm6wowyqiauhai2pxvo"
+   ]
+  },
+  {
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_cmmckwxfb5w7enivrmsl"
+   ]
+  },
+  {
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_amtuhwnfqkq3lh3rzeej"
+   ]
+  },
+  {
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_zui7uuy33o6ym2rp3hxn"
+   ]
+  },
+  {
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_w5zubrxgm66tafzst4et"
+   ]
+  },
+  {
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_lsv7oeo4m5nbocadbd7w"
+   ]
+  },
+  {
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_a2zlw6nbdus2lirhxp45"
+   ]
+  },
+  {
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_2tspzrjv5r4v6evsoids"
+   ]
+  },
+  {
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_s3octhhbjzvx4ukdr5mr"
+   ]
+  },
+  {
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_ky6webssg7ksaqjt2av6"
+   ]
+  },
+  {
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_ujt7kaqen3c6q2ghsxsy"
+   ]
+  },
+  {
+   "type": "multi-hop",
+   "chunkIds": [
+    "ch_3pofhqauifj5eqx66km4",
+    "ch_yxhuf3bbe6skgms4llod"
+   ],
+   "link": "similar"
+  },
+  {
+   "type": "multi-hop",
+   "chunkIds": [
+    "ch_7cwqlaglgrapbhzusjlx",
+    "ch_m75giujoifgwmh324oq2",
+    "ch_yqi3tqqqrn753ps36vqv"
+   ],
+   "link": "similar"
+  },
+  {
+   "type": "multi-hop",
+   "chunkIds": [
+    "ch_ew7y7bsyikkzli7mu62d",
+    "ch_fligytxktqx5cdscmj56"
+   ],
+   "link": "adjacent"
+  },
+  {
+   "type": "multi-hop",
+   "chunkIds": [
+    "ch_7qvygbdojwri6252tvah",
+    "ch_x4e3chttmmxild76kthp",
+    "ch_xdfws5qhhcmyxzagkaij"
+   ],
+   "link": "similar"
+  },
+  {
+   "type": "multi-hop",
+   "chunkIds": [
+    "ch_dz44lxrmwtufntebek74",
+    "ch_frdianlmjm576fftosb7"
+   ],
+   "link": "similar"
+  },
+  {
+   "type": "multi-hop",
+   "chunkIds": [
+    "ch_o7yofg3hb2szn5d7pmqw",
+    "ch_ky6webssg7ksaqjt2av6"
+   ],
+   "link": "adjacent"
+  },
+  {
+   "type": "multi-hop",
+   "chunkIds": [
+    "ch_sdazxhumbwzotd4itcb7",
+    "ch_yfwl6bonedqqi4xb3pzi"
+   ],
+   "link": "similar"
+  },
+  {
+   "type": "multi-hop",
+   "chunkIds": [
+    "ch_vsxal6v45krdpyrmh3px",
+    "ch_3czjgglr2j6tyhh57iq2",
+    "ch_as66rqoxmp2yokezaykf"
+   ],
+   "link": "similar"
+  },
+  {
+   "type": "multi-hop",
+   "chunkIds": [
+    "ch_uqul7qb4oqgdr4a5z3su",
+    "ch_jmi35czu6qykm3sp7fll"
+   ],
+   "link": "adjacent"
+  },
+  {
+   "type": "multi-hop",
+   "chunkIds": [
+    "ch_bwfii6yl5dubobdeyv52",
+    "ch_aaoxuuoqor4t7ysjgiwa",
+    "ch_4mpetp4gnntbthrovxrz"
+   ],
+   "link": "similar"
+  },
+  {
+   "type": "multi-hop",
+   "chunkIds": [
+    "ch_tp4m7vq6co5gotfyxfm2",
+    "ch_qhdqgbs26avpqedxptbz"
+   ],
+   "link": "similar"
+  },
+  {
+   "type": "multi-hop",
+   "chunkIds": [
+    "ch_76dyjolg4r64dxihb6zs",
+    "ch_nwhodidgwmpvxxy3h7dh"
+   ],
+   "link": "adjacent"
+  },
+  {
+   "type": "multi-hop",
+   "chunkIds": [
+    "ch_76iktpldhtaqjgvpac3k",
+    "ch_xinnqewam4xjtxp2ynwo"
+   ],
+   "link": "similar"
+  },
+  {
+   "type": "multi-hop",
+   "chunkIds": [
+    "ch_mhrig2zocvv3whb7yb23",
+    "ch_to5anwfkfjn2szjtqr3x"
+   ],
+   "link": "similar"
+  },
+  {
+   "type": "multi-hop",
+   "chunkIds": [
+    "ch_qqqmvbf32cm6wmyf5auu",
+    "ch_y5etpzr22xjtrxccpw2h"
+   ],
+   "link": "adjacent"
+  },
+  {
+   "type": "multi-hop",
+   "chunkIds": [
+    "ch_keselpzgithjlueeerd5",
+    "ch_fn2goeaufenzdbhibffd",
+    "ch_6ecze2e5a4byeg3np25p"
+   ],
+   "link": "similar"
+  },
+  {
+   "type": "multi-hop",
+   "chunkIds": [
+    "ch_76rpgyw6b34nruts5eem",
+    "ch_gqpt6k6wothrtonamp3h"
+   ],
+   "link": "similar"
+  },
+  {
+   "type": "multi-hop",
+   "chunkIds": [
+    "ch_rz64ruf373utov225blg",
+    "ch_cwdpnovur6wapmikmkir"
+   ],
+   "link": "adjacent"
+  },
+  {
+   "type": "multi-hop",
+   "chunkIds": [
+    "ch_ssuubw7lnjyz5f6qtibp",
+    "ch_gfa23oo2bycp6244jppa"
+   ],
+   "link": "similar"
+  },
+  {
+   "type": "multi-hop",
+   "chunkIds": [
+    "ch_hnbpw44ptwogtu7fymcr",
+    "ch_uj4lmqcbm2hc76sjozbv",
+    "ch_2pxyktjgd6aaz6up7pag"
+   ],
+   "link": "similar"
+  },
+  {
+   "type": "topic",
+   "chunkIds": [
+    "ch_s3octhhbjzvx4ukdr5mr",
+    "ch_jxnkrbmxjmdqphhmpmvw",
+    "ch_uqul7qb4oqgdr4a5z3su",
+    "ch_jmi35czu6qykm3sp7fll"
+   ]
+  },
+  {
+   "type": "topic",
+   "chunkIds": [
+    "ch_2tlnvyubkiwldhdt2nfp",
+    "ch_ezu6f2nbpxruui5jcv7i",
+    "ch_hl7dupxveesbkhodgebc",
+    "ch_oxba6n5g6tzk2risgs5i",
+    "ch_qintyur6onqdhdq2dwz7",
+    "ch_yhaizkjbygeeewtc25eq"
+   ]
+  },
+  {
+   "type": "topic",
+   "chunkIds": [
+    "ch_jxyehxkdybryfglgdjeh",
+    "ch_aqe4jcoeln26kjkwxmnh",
+    "ch_qqqmvbf32cm6wmyf5auu",
+    "ch_y5etpzr22xjtrxccpw2h",
+    "ch_2pxyktjgd6aaz6up7pag"
+   ]
+  },
+  {
+   "type": "topic",
+   "chunkIds": [
+    "ch_7tjeu2n7xc34q3q25ge6",
+    "ch_6smdq74ntbo2557mybbn",
+    "ch_yzipb2onhdgzu2pvpbqe"
+   ]
+  },
+  {
+   "type": "topic",
+   "chunkIds": [
+    "ch_rhazqc4n7dh5tcczcx22",
+    "ch_xdfws5qhhcmyxzagkaij",
+    "ch_xfu7px6rj6u67xhusvd3"
+   ]
+  },
+  {
+   "type": "topic",
+   "chunkIds": [
+    "ch_76rpgyw6b34nruts5eem",
+    "ch_7dqn2ijw4pck62nyctrk",
+    "ch_rhjkaothwfultq4fhtsi"
+   ]
+  },
+  {
+   "type": "topic",
+   "chunkIds": [
+    "ch_hktmix2gu7bev24vpvcv",
+    "ch_m42uekxtzqwcsosptjmd",
+    "ch_t2xzf2ith7cfethegjzb",
+    "ch_jugraw6rtxctsmyzsudq"
+   ]
+  },
+  {
+   "type": "topic",
+   "chunkIds": [
+    "ch_wpepia6egympjv32362t",
+    "ch_6vct5fih2mdv5oysuoe4",
+    "ch_nydocm2w6tt2z6y3hwly",
+    "ch_zui7uuy33o6ym2rp3hxn",
+    "ch_jsft3xnxiltsqvy6qpem"
+   ]
+  },
+  {
+   "type": "topic",
+   "chunkIds": [
+    "ch_hkflgetd2kh2k52evpjc",
+    "ch_gfa23oo2bycp6244jppa",
+    "ch_o6ya3mtwxn4h3eq6illy",
+    "ch_jahilx7zsvy5nn4kp2js",
+    "ch_35n7hglia4ppsdxhg3k3"
+   ]
+  },
+  {
+   "type": "topic",
+   "chunkIds": [
+    "ch_a2r5ghqi5tqsyfalsq6s",
+    "ch_rdhh3cs4syvnszvomjvi",
+    "ch_qhdqgbs26avpqedxptbz",
+    "ch_sewmwxdflcf4g5d3lhtn"
+   ]
+  }
+ ]
+}

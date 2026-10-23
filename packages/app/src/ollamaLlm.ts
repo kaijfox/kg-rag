@@ -12,9 +12,8 @@ export function ollamaLlm(o: OllamaLlmOptions = {}): Llm {
   const timeout = o.timeoutMs ?? 300_000;
   return {
     async complete(r: LlmRequest): Promise<LlmResponse> {
-      let res: Response;
-      try {
-        res = await fetch(`${base}/api/chat`, {
+      const send = () =>
+        fetch(`${base}/api/chat`, {
           method: 'POST',
           signal: AbortSignal.timeout(timeout),
           body: JSON.stringify({
@@ -26,6 +25,10 @@ export function ollamaLlm(o: OllamaLlmOptions = {}): Llm {
             messages: [{ role: 'system', content: r.system }, ...r.messages],
           }),
         });
+      let res: Response;
+      try {
+        // one retry: a long run on a laptop sometimes loses one call to a stall or sleep
+        res = await send().catch(() => send());
       } catch (e) {
         throw new KgError('upstream', `ollama chat unreachable or timed out at ${base}: ${(e as Error).message}`);
       }

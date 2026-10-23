@@ -1,0 +1,1794 @@
+{
+ "tag": "cross-kardar-on-plischke",
+ "setAuthor": "kardar",
+ "indexAuthor": "plischke",
+ "setId": "qs_qvhpnfeltkzxik3ti2yn",
+ "runId": "er_01M5N7HF6TDB87JEXBX7Y1FE4A",
+ "ms": 2486422,
+ "conditions": [
+  "retrieved"
+ ],
+ "ks": [
+  1,
+  3,
+  5
+ ],
+ "summary": {
+  "buildId": "bd_kixjonpuruzwuth7mto2",
+  "questions": 37,
+  "ks": [
+   1,
+   3,
+   5
+  ],
+  "byCondition": {
+   "retrieved": {
+    "judge": 0.24324324324324326,
+    "retrieval": {
+     "ks": [
+      1,
+      3,
+      5
+     ],
+     "perQuestion": {
+      "k1": {
+       "recall": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "allGold": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "withSummaries": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       }
+      },
+      "k2": {
+       "recall": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "allGold": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "withSummaries": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       }
+      },
+      "k3": {
+       "recall": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "allGold": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "withSummaries": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       }
+      },
+      "k4": {
+       "recall": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "allGold": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "withSummaries": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       }
+      },
+      "k5": {
+       "recall": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "allGold": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "withSummaries": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       }
+      },
+      "k6": {
+       "recall": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "allGold": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "withSummaries": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       }
+      },
+      "k10": {
+       "recall": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "allGold": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "withSummaries": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       }
+      },
+      "k11": {
+       "recall": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "allGold": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "withSummaries": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       }
+      },
+      "k12": {
+       "recall": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "allGold": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "withSummaries": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       }
+      },
+      "k13": {
+       "recall": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "allGold": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "withSummaries": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       }
+      },
+      "k14": {
+       "recall": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "allGold": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "withSummaries": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       }
+      },
+      "k15": {
+       "recall": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "allGold": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "withSummaries": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       }
+      },
+      "k16": {
+       "recall": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "allGold": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "withSummaries": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       }
+      },
+      "k17": {
+       "recall": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "allGold": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "withSummaries": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       }
+      },
+      "k20": {
+       "recall": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "allGold": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "withSummaries": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       }
+      },
+      "k21": {
+       "recall": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "allGold": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "withSummaries": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       }
+      },
+      "k22": {
+       "recall": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "allGold": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "withSummaries": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       }
+      },
+      "k24": {
+       "recall": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "allGold": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "withSummaries": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       }
+      },
+      "k25": {
+       "recall": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "allGold": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "withSummaries": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       }
+      },
+      "k28": {
+       "recall": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "allGold": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "withSummaries": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       }
+      },
+      "k29": {
+       "recall": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "allGold": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "withSummaries": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       }
+      },
+      "k30": {
+       "recall": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "allGold": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "withSummaries": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       }
+      },
+      "k31": {
+       "recall": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "allGold": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "withSummaries": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       }
+      },
+      "k32": {
+       "recall": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "allGold": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "withSummaries": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       }
+      },
+      "kr21": {
+       "recall": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "allGold": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "withSummaries": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       }
+      },
+      "kr24": {
+       "recall": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "allGold": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "withSummaries": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       }
+      },
+      "kr26": {
+       "recall": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "allGold": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "withSummaries": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       }
+      },
+      "kr211": {
+       "recall": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "allGold": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "withSummaries": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       }
+      },
+      "kr212": {
+       "recall": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "allGold": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "withSummaries": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       }
+      },
+      "kr213": {
+       "recall": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "allGold": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "withSummaries": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       }
+      },
+      "kr214": {
+       "recall": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "allGold": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "withSummaries": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       }
+      },
+      "kr215": {
+       "recall": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "allGold": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "withSummaries": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       }
+      },
+      "kr219": {
+       "recall": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "allGold": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "withSummaries": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       }
+      },
+      "kr225": {
+       "recall": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "allGold": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "withSummaries": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       }
+      },
+      "kr226": {
+       "recall": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "allGold": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "withSummaries": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       }
+      },
+      "kr228": {
+       "recall": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "allGold": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "withSummaries": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       }
+      },
+      "kr229": {
+       "recall": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "allGold": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "withSummaries": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       }
+      }
+     },
+     "overall": {
+      "recall": {
+       "1": 0,
+       "3": 0,
+       "5": 0
+      },
+      "withSummaries": {
+       "1": 0,
+       "3": 0,
+       "5": 0
+      }
+     },
+     "byType": {
+      "single-hop": {
+       "n": 20,
+       "recall": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "allGold": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       }
+      },
+      "multi-hop": {
+       "n": 8,
+       "recall": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "allGold": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       }
+      },
+      "topic": {
+       "n": 9,
+       "recall": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "allGold": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       }
+      }
+     }
+    }
+   }
+  },
+  "orphaned": [
+   {
+    "questionId": "k1",
+    "missing": [
+     "ch_uwg6w7esgwzm5evutkrt"
+    ],
+    "allMissing": true
+   },
+   {
+    "questionId": "k2",
+    "missing": [
+     "ch_pjiaxxomyzqnatddouec"
+    ],
+    "allMissing": true
+   },
+   {
+    "questionId": "k3",
+    "missing": [
+     "ch_gqpt6k6wothrtonamp3h"
+    ],
+    "allMissing": true
+   },
+   {
+    "questionId": "k4",
+    "missing": [
+     "ch_g3z36qmj52fcfvfxdsx2"
+    ],
+    "allMissing": true
+   },
+   {
+    "questionId": "k5",
+    "missing": [
+     "ch_qw7cjnvs7yuzysaqzmsv"
+    ],
+    "allMissing": true
+   },
+   {
+    "questionId": "k6",
+    "missing": [
+     "ch_sdazxhumbwzotd4itcb7"
+    ],
+    "allMissing": true
+   },
+   {
+    "questionId": "k10",
+    "missing": [
+     "ch_aqe4jcoeln26kjkwxmnh"
+    ],
+    "allMissing": true
+   },
+   {
+    "questionId": "k11",
+    "missing": [
+     "ch_x4e3chttmmxild76kthp"
+    ],
+    "allMissing": true
+   },
+   {
+    "questionId": "k12",
+    "missing": [
+     "ch_nung7iapchp6mncn5sda"
+    ],
+    "allMissing": true
+   },
+   {
+    "questionId": "k13",
+    "missing": [
+     "ch_frdianlmjm576fftosb7"
+    ],
+    "allMissing": true
+   },
+   {
+    "questionId": "k14",
+    "missing": [
+     "ch_pmebbjbqu632qfqfrxpe"
+    ],
+    "allMissing": true
+   },
+   {
+    "questionId": "k15",
+    "missing": [
+     "ch_rz64ruf373utov225blg"
+    ],
+    "allMissing": true
+   },
+   {
+    "questionId": "k16",
+    "missing": [
+     "ch_6smdq74ntbo2557mybbn"
+    ],
+    "allMissing": true
+   },
+   {
+    "questionId": "k17",
+    "missing": [
+     "ch_iwm6wowyqiauhai2pxvo"
+    ],
+    "allMissing": true
+   },
+   {
+    "questionId": "k20",
+    "missing": [
+     "ch_w5zubrxgm66tafzst4et"
+    ],
+    "allMissing": true
+   },
+   {
+    "questionId": "k21",
+    "missing": [
+     "ch_lsv7oeo4m5nbocadbd7w"
+    ],
+    "allMissing": true
+   },
+   {
+    "questionId": "k22",
+    "missing": [
+     "ch_a2zlw6nbdus2lirhxp45"
+    ],
+    "allMissing": true
+   },
+   {
+    "questionId": "k24",
+    "missing": [
+     "ch_qhdqgbs26avpqedxptbz",
+     "ch_tp4m7vq6co5gotfyxfm2"
+    ],
+    "allMissing": true
+   },
+   {
+    "questionId": "k25",
+    "missing": [
+     "ch_qqqmvbf32cm6wmyf5auu",
+     "ch_y5etpzr22xjtrxccpw2h"
+    ],
+    "allMissing": true
+   },
+   {
+    "questionId": "k28",
+    "missing": [
+     "ch_jmi35czu6qykm3sp7fll",
+     "ch_jxnkrbmxjmdqphhmpmvw",
+     "ch_s3octhhbjzvx4ukdr5mr",
+     "ch_uqul7qb4oqgdr4a5z3su"
+    ],
+    "allMissing": true
+   },
+   {
+    "questionId": "k29",
+    "missing": [
+     "ch_2tlnvyubkiwldhdt2nfp",
+     "ch_ezu6f2nbpxruui5jcv7i",
+     "ch_oxba6n5g6tzk2risgs5i",
+     "ch_yhaizkjbygeeewtc25eq"
+    ],
+    "allMissing": true
+   },
+   {
+    "questionId": "k30",
+    "missing": [
+     "ch_6smdq74ntbo2557mybbn",
+     "ch_7tjeu2n7xc34q3q25ge6",
+     "ch_yzipb2onhdgzu2pvpbqe"
+    ],
+    "allMissing": true
+   },
+   {
+    "questionId": "k31",
+    "missing": [
+     "ch_rhazqc4n7dh5tcczcx22",
+     "ch_xdfws5qhhcmyxzagkaij",
+     "ch_xfu7px6rj6u67xhusvd3"
+    ],
+    "allMissing": true
+   },
+   {
+    "questionId": "k32",
+    "missing": [
+     "ch_hktmix2gu7bev24vpvcv",
+     "ch_jugraw6rtxctsmyzsudq",
+     "ch_m42uekxtzqwcsosptjmd",
+     "ch_t2xzf2ith7cfethegjzb"
+    ],
+    "allMissing": true
+   },
+   {
+    "questionId": "kr21",
+    "missing": [
+     "ch_jzuc2qhuzfazxbl4qor5"
+    ],
+    "allMissing": true
+   },
+   {
+    "questionId": "kr24",
+    "missing": [
+     "ch_ayt77datg53amldcwxd5"
+    ],
+    "allMissing": true
+   },
+   {
+    "questionId": "kr26",
+    "missing": [
+     "ch_mwtvfp2xbzhqvcrdmwqv"
+    ],
+    "allMissing": true
+   },
+   {
+    "questionId": "kr211",
+    "missing": [
+     "ch_2tlnvyubkiwldhdt2nfp",
+     "ch_uwg6w7esgwzm5evutkrt"
+    ],
+    "allMissing": true
+   },
+   {
+    "questionId": "kr212",
+    "missing": [
+     "ch_frdianlmjm576fftosb7",
+     "ch_sal4kuy2nmqa6edi3mru"
+    ],
+    "allMissing": true
+   },
+   {
+    "questionId": "kr213",
+    "missing": [
+     "ch_pfyd5vj3pvkykao3ryi3",
+     "ch_zui7uuy33o6ym2rp3hxn"
+    ],
+    "allMissing": true
+   },
+   {
+    "questionId": "kr214",
+    "missing": [
+     "ch_a2zlw6nbdus2lirhxp45",
+     "ch_pe6tq2grjitk4xtqwkxt"
+    ],
+    "allMissing": true
+   },
+   {
+    "questionId": "kr215",
+    "missing": [
+     "ch_lsv7oeo4m5nbocadbd7w",
+     "ch_ow4zy62cxxcszqwrcmnu"
+    ],
+    "allMissing": true
+   },
+   {
+    "questionId": "kr219",
+    "missing": [
+     "ch_e2hsjikyu7vdyjhjbifs",
+     "ch_rhazqc4n7dh5tcczcx22",
+     "ch_x4e3chttmmxild76kthp"
+    ],
+    "allMissing": true
+   },
+   {
+    "questionId": "kr225",
+    "missing": [
+     "ch_a2r5ghqi5tqsyfalsq6s",
+     "ch_qhdqgbs26avpqedxptbz",
+     "ch_rdhh3cs4syvnszvomjvi",
+     "ch_sewmwxdflcf4g5d3lhtn"
+    ],
+    "allMissing": true
+   },
+   {
+    "questionId": "kr226",
+    "missing": [
+     "ch_a2r5ghqi5tqsyfalsq6s",
+     "ch_qhdqgbs26avpqedxptbz",
+     "ch_rdhh3cs4syvnszvomjvi"
+    ],
+    "allMissing": true
+   },
+   {
+    "questionId": "kr228",
+    "missing": [
+     "ch_2pxyktjgd6aaz6up7pag",
+     "ch_qqqmvbf32cm6wmyf5auu",
+     "ch_y5etpzr22xjtrxccpw2h"
+    ],
+    "allMissing": true
+   },
+   {
+    "questionId": "kr229",
+    "missing": [
+     "ch_hktmix2gu7bev24vpvcv",
+     "ch_jugraw6rtxctsmyzsudq",
+     "ch_m42uekxtzqwcsosptjmd"
+    ],
+    "allMissing": true
+   }
+  ]
+ },
+ "rows": [
+  {
+   "runId": "er_01M5N7HF6TDB87JEXBX7Y1FE4A",
+   "questionId": "k1",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N7HF7548GHQA3V3N0PE17N",
+   "retrieved": [
+    "ch_4jfnggxwdvrrq4zidolo",
+    "ch_fdbuy3wgrvs7hrptvslj",
+    "ch_2bwcymi3m4uwfmlfcarr",
+    "ch_jizkzzhmjarvx4drur57",
+    "ch_ajkzqbiha72gitr3tqyf"
+   ],
+   "recall": null,
+   "answer": "Based on the provided context, there is no information describing how equilibrium statistical mechanics differs from kinetic theory regarding the evolution of systems. The text focuses exclusively on developing the foundations of equilibrium statistical mechanics through postulated statistical laws and information-theoretic approaches like the maximum entropy principle, without mentioning or comparing these methods to kinetic theory.",
+   "judgeScore": 0,
+   "judgeRaw": "{\"score\": 0, \"rationale\": \"The answer claims there is no information in the text to address the difference, whereas the reference answer explicitly states the difference (that equilibrium statistical mechanics does not address evolution while kinetic theory does), thus contradicting the reference.\"}",
+   "type": "single-hop",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5N7HF6TDB87JEXBX7Y1FE4A",
+   "questionId": "k10",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N7TVZH91EREDQ3AT7EGZYB",
+   "retrieved": [
+    "ch_wrei6jdlyy33tfyvvoi5",
+    "ch_44zlo3f4o52c5dyopusu",
+    "ch_733r7vnzdjgirc37f6xk",
+    "ch_5qaqbpqhpi76p23skwme",
+    "ch_bpmkglkp6tn63taf6cn6"
+   ],
+   "recall": null,
+   "answer": "The provided context passages discuss integrable systems, normal thermodynamic systems, Bose/Fermi statistics, and the derivation of entropy for an ideal gas, but they do not contain information regarding weakly interacting gases or the specific reasons for neglecting three-body and higher-order interactions in kinetic theory. Therefore, based strictly on the given text, the answer to your question is missing.",
+   "judgeScore": 0,
+   "judgeRaw": "{\"score\": 0, \"rationale\": \"The answer claims the information is missing from the provided text rather than stating the fact that these interactions are neglected due to their negligible importance in dilute gases as per the reference.\"}",
+   "type": "single-hop",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5N7HF6TDB87JEXBX7Y1FE4A",
+   "questionId": "k11",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N7V4N6ESVN9G519KZGF991",
+   "retrieved": [
+    "ch_733r7vnzdjgirc37f6xk",
+    "ch_ic4lwxekwbvo6ck44jlk",
+    "ch_eq3xmgfu3f2xgxc5wrto",
+    "ch_lo3hfzrqj2xdhhb5ccrj",
+    "ch_jizkzzhmjarvx4drur57"
+   ],
+   "recall": null,
+   "answer": "Based on the provided context passages, there is no explicit definition or equation linking the partition function directly to the parameter $\\beta$ or defining $\\beta$ in terms of the Boltzmann constant and temperature. The text discusses canonical partition functions, grand partition functions, and various equations of state, but it does not contain the specific information required to answer your question about the relationship between $\\beta$, $k_B$, and $T$. Therefore, the necessary details are missing from the given passages.",
+   "judgeScore": 0,
+   "judgeRaw": "{\"score\": 0, \"rationale\": \"The answer explicitly states that the information is missing and cannot be derived from the provided context, which contradicts the reference answer's factual definition.\"}",
+   "type": "single-hop",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5N7HF6TDB87JEXBX7Y1FE4A",
+   "questionId": "k12",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N7VECCMNHYN9250X7BHKVA",
+   "retrieved": [
+    "ch_3hhhxulzmswygv6grpoa",
+    "ch_5qb4ugtonblyldtpulw7",
+    "ch_7jyhqbxwwzfxg6ciggng",
+    "ch_ntnjxob4ulbk3pgl2bks",
+    "ch_r2rx2ybgioqq7xy6wuy6"
+   ],
+   "recall": null,
+   "answer": "Based on the provided text, a Carnot engine is distinguished by the fact that all of its steps are reversible. Specifically, during the cycle, it absorbs heat $Q_1$ isothermally while expanding and rejects heat $-Q_2$ to a low-temperature reservoir while work is done on the gas, with the intermediate steps being adiabatic. The text does not provide information distinguishing it from other engines based on specific conditions of heat exchange beyond these reversible, isothermal, and adiabatic processes.",
+   "judgeScore": 0.5,
+   "judgeRaw": "{\"score\": 0.5, \"rationale\": \"The answer correctly identifies the reversible nature of the steps but fails to explicitly state the essential fact that heat interactions occur exclusively at two distinct temperatures, instead claiming the text does not provide this specific distinction.\"}",
+   "type": "single-hop",
+   "docs": [
+    "ThermoKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5N7HF6TDB87JEXBX7Y1FE4A",
+   "questionId": "k13",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N7VS36F968HS0WJJDGRR4A",
+   "retrieved": [
+    "ch_2bwcymi3m4uwfmlfcarr",
+    "ch_ajkzqbiha72gitr3tqyf",
+    "ch_w4fe6cyd3bbst5yvwgdl",
+    "ch_tbq62lz2vrx55qwfzwet",
+    "ch_fdjgngujjyaa6hueblag"
+   ],
+   "recall": null,
+   "answer": "The provided context passages discuss thermodynamic systems, entropy maximization, and fluctuation-dissipation relations but do not contain information about springs, mechanical equilibrium conditions for masses, or Hooke's Law. Therefore, based strictly on the given text, the answer to your specific question is missing.",
+   "judgeScore": 0,
+   "judgeRaw": "{\"score\": 0, \"rationale\": \"The answer explicitly states that the provided text does not contain information about springs or mechanical equilibrium, contradicting the reference answer which provides a specific formula for the displacement.\"}",
+   "type": "single-hop",
+   "docs": [
+    "ThermoKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5N7HF6TDB87JEXBX7Y1FE4A",
+   "questionId": "k14",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N83QX1MQXKMVBV846YRHCM",
+   "retrieved": [
+    "ch_22ssyoj4g24fzqrpfd5x",
+    "ch_xp62fz3xhiyps2rusvhc",
+    "ch_rec7c75omcbfmv3b3riv",
+    "ch_5qb4ugtonblyldtpulw7",
+    "ch_joo45sqzt5b4t5qiuoe2"
+   ],
+   "recall": null,
+   "answer": "Based on the provided context passages, entropy ($S$) is defined as a state function whose differential corresponds to the expression $dQ/T$ for reversible processes. Specifically, for an infinitesimal reversible process at temperature $T$, the heat given to the system satisfies the relation $dQ = TdS$. This definition allows the first law of thermodynamics to be expressed in terms of entropy changes for reversible cycles.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly states that entropy is a state function defined by the relation dQ_rev/T and explicitly provides the formula dQ = TdS, matching all essential facts in the reference.\"}",
+   "type": "single-hop",
+   "docs": [
+    "ThermoKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5N7HF6TDB87JEXBX7Y1FE4A",
+   "questionId": "k15",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N8419Y53A463N4NEGB5CEH",
+   "retrieved": [
+    "ch_22ssyoj4g24fzqrpfd5x",
+    "ch_xp62fz3xhiyps2rusvhc",
+    "ch_rec7c75omcbfmv3b3riv",
+    "ch_5qb4ugtonblyldtpulw7",
+    "ch_joo45sqzt5b4t5qiuoe2"
+   ],
+   "recall": null,
+   "answer": "Based on the provided text, for reversible processes in thermodynamic equilibrium, entropy ($S$) acts as a generalized displacement variable while temperature ($T$) serves as its conjugate 'force'. This relationship is expressed by the equation $dQ = TdS$, where the heat exchanged is the product of these two variables. Consequently, changes in internal energy for reversible processes are directly related to the work done and the change in this entropy-temperature pair.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly identifies entropy as the displacement variable and temperature as the corresponding force, matching all essential facts of the reference answer.\"}",
+   "type": "single-hop",
+   "docs": [
+    "ThermoKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5N7HF6TDB87JEXBX7Y1FE4A",
+   "questionId": "k16",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N84C3MDFKCHD649D7RE19Z",
+   "retrieved": [
+    "ch_tbq62lz2vrx55qwfzwet",
+    "ch_qoobiqandjy5pvztzyuj",
+    "ch_lo3hfzrqj2xdhhb5ccrj",
+    "ch_bpmkglkp6tn63taf6cn6",
+    "ch_zfk3sc4bxwwsj2r7n2nx"
+   ],
+   "recall": null,
+   "answer": "The provided context passages discuss thermodynamic equations of state, Maxwell relations, phase diagrams, and the Clausius-Clapeyron equation, but they do not contain any information regarding surfactant molecules or their effect on surface tension. Therefore, I cannot answer your question based on the given text.",
+   "judgeScore": 0,
+   "judgeRaw": "{\"score\": 0, \"rationale\": \"The answer explicitly states it cannot answer the question and lacks the essential facts about how surfactants reduce surface tension and the specific mathematical relationship provided in the reference.\"}",
+   "type": "single-hop",
+   "docs": [
+    "ThermoKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5N7HF6TDB87JEXBX7Y1FE4A",
+   "questionId": "k17",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N84RGKJVP5M4TGT0EBBC1W",
+   "retrieved": [
+    "ch_jxgvgnn6vawbjj26prmu",
+    "ch_joo45sqzt5b4t5qiuoe2",
+    "ch_ptz5xpyr7hyol53gstx2",
+    "ch_rv56eltv2ym5ori7bbas",
+    "ch_hurajqohny2xijhewc7v"
+   ],
+   "recall": null,
+   "answer": "Based on the provided text, the decrease in internal energy during an adiabatic transformation is equal to the amount of work done by the expanding system. This relationship holds specifically for reversible adiabatic processes, where the decrease in internal energy equals the maximum obtainable work; for irreversible adiabatic processes, the change in internal energy between two specific states remains the same as it would be for a reversible path connecting those endpoints.",
+   "judgeScore": 0.5,
+   "judgeRaw": "{\"score\": 0.5, \"rationale\": \"The answer correctly identifies that internal energy change relates to work in an adiabatic process but adds extra details about reversibility and maximum work that are not present in the reference answer, while omitting the specific phrasing 'up to a constant'.\"}",
+   "type": "single-hop",
+   "docs": [
+    "ThermoKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5N7HF6TDB87JEXBX7Y1FE4A",
+   "questionId": "k2",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N7HQ9Q24VWXQZ603RT7R5K",
+   "retrieved": [
+    "ch_733r7vnzdjgirc37f6xk",
+    "ch_25fxms7ihs4ujyw2e3hl",
+    "ch_44zlo3f4o52c5dyopusu",
+    "ch_zfk3sc4bxwwsj2r7n2nx",
+    "ch_rzdmwkvqezdzoc4c4oes"
+   ],
+   "recall": null,
+   "answer": "The provided context passages discuss Bose and Fermi systems, normal thermodynamic systems (including those affected by gravity or charge), and phase diagrams for fluids and ferromagnets, but they do not contain information regarding neutral plasmas or the specific comparison of characteristic interaction distances between them and short-range interactions. Therefore, based strictly on the given text, the answer to your question is missing.",
+   "judgeScore": 0,
+   "judgeRaw": "{\"score\": 0, \"rationale\": \"The answer claims the information is missing from the provided text, whereas the reference answer explicitly states how the interaction distance changes (Debye screening length replaces it), creating a direct contradiction.\"}",
+   "type": "single-hop",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5N7HF6TDB87JEXBX7Y1FE4A",
+   "questionId": "k20",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N8CYP6CQ8XJBN274CG7F9S",
+   "retrieved": [
+    "ch_fwynntimvukk6c7wweup",
+    "ch_x4ja7vzfpd5j5nnb7fr7",
+    "ch_lpwhtx36hnhev4ewfhxd",
+    "ch_rv56eltv2ym5ori7bbas",
+    "ch_kpm7edoqnl7qzlsydijv"
+   ],
+   "recall": null,
+   "answer": "Based on the provided context passages, the specific value or explicit statement identifying the conjugate generalized force for volume change is not directly stated. However, Passage [2] establishes that for a single-component PVT system, the internal energy differential relates entropy (S), volume (V), and intensive variables including pressure (P) via the Gibbs-Duhem equation, implying that pressure is the intensive variable conjugate to the extensive variable volume. Therefore, while the text does not explicitly name it in a single sentence, standard thermodynamic relations derived from the equations shown indicate that pressure is the conjugate generalized force associated with volume changes.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly identifies pressure as the conjugate generalized force for volume change, consistent with the reference answer.\"}",
+   "type": "single-hop",
+   "docs": [
+    "ThermoKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5N7HF6TDB87JEXBX7Y1FE4A",
+   "questionId": "k21",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N8DDTWM7ZDTA7RRTVMW4X2",
+   "retrieved": [
+    "ch_jxgvgnn6vawbjj26prmu",
+    "ch_rv56eltv2ym5ori7bbas",
+    "ch_4hebrfj4i7uti2qtpytg",
+    "ch_joo45sqzt5b4t5qiuoe2",
+    "ch_htw7obdtbch3w3hmmyuq"
+   ],
+   "recall": null,
+   "answer": "Based on the provided text, there is no explicit mathematical expression given for the change in internal energy specifically due to variations in particle number when mechanical work is absent. While Passage [0] defines the general differential of internal energy as a function of entropy, generalized displacements, and particle numbers ($E = E(S, \\{x_i\\}, \\{N_j\\})$), and Passage [3] discusses the relationship between internal energy changes and work in adiabatic processes, neither passage isolates the term corresponding solely to particle number variations under zero mechanical work. Therefore, the specific expression requested is not supported by the provided context.",
+   "judgeScore": 0,
+   "judgeRaw": "{\"score\": 0, \"rationale\": \"The answer claims the information is missing and cannot provide the expression, whereas the reference answer explicitly provides a mathematical formula.\"}",
+   "type": "single-hop",
+   "docs": [
+    "ThermoKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5N7HF6TDB87JEXBX7Y1FE4A",
+   "questionId": "k22",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N8DXMKFTP9GTBRAAWWKZFF",
+   "retrieved": [
+    "ch_atzuh4y7r6rzsmw7fxx7",
+    "ch_2bwcymi3m4uwfmlfcarr",
+    "ch_ajkzqbiha72gitr3tqyf",
+    "ch_j46sirqjzm4c4e2t6jxw",
+    "ch_6dxe72tu7g6exrtiwjz3"
+   ],
+   "recall": null,
+   "answer": "Based on my own knowledge, a thermodynamic system remains in a state of stable equilibrium when its entropy is at a maximum (or equivalently, its appropriate thermodynamic potential like the Gibbs free energy is at a minimum) with respect to fluctuations in its extensive variables. Mathematically, this requires that the second derivatives of the relevant potential function be negative definite for entropy (ensuring concavity) or positive definite for potentials like the Gibbs free energy (ensuring convexity). These conditions ensure that any small spontaneous change will result in a restoring force that returns the system to equilibrium.",
+   "judgeScore": 0.5,
+   "judgeRaw": "{\"score\": 0.5, \"rationale\": \"The answer correctly identifies the role of second derivatives and concavity/convexity but fails to explicitly state the essential fact regarding the direction of entropy change (a decrease) upon perturbation as specified in the reference.\"}",
+   "type": "single-hop",
+   "docs": [
+    "ThermoKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5N7HF6TDB87JEXBX7Y1FE4A",
+   "questionId": "k24",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N8P5EXDKFD1W4BKSBCV4HE",
+   "retrieved": [
+    "ch_jxgvgnn6vawbjj26prmu",
+    "ch_bpmkglkp6tn63taf6cn6",
+    "ch_u6q6eyyjkbnxtwrdo2bi",
+    "ch_wi7ugysqpkv7ffv6bzpa",
+    "ch_b2nqg2rhnaw34djlyunr"
+   ],
+   "recall": null,
+   "answer": "The provided context passages discuss the definitions of internal energy, entropy, and thermodynamic potentials for systems like the ideal gas, but they do not contain information regarding adiabatic expansion or its specific effect on the temperature of an ideal gas. Consequently, I cannot answer how that observation relates to the derived expression based solely on these texts; the necessary details about adiabatic processes are missing from the context.",
+   "judgeScore": 0,
+   "judgeRaw": "{\"score\": 0, \"rationale\": \"The answer explicitly states it cannot answer the question due to missing information in the provided context, which contradicts the reference answer that provides a direct explanation of the relationship.\"}",
+   "type": "multi-hop",
+   "docs": [
+    "FoundationsKardar",
+    "ThermoKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5N7HF6TDB87JEXBX7Y1FE4A",
+   "questionId": "k25",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N8PJQQE7NSHQ2T6NVZ5Z9J",
+   "retrieved": [
+    "ch_73r7y42yv4r4pdzfm4ku",
+    "ch_ibqdnjl4c4xp5djeufqj",
+    "ch_4jfnggxwdvrrq4zidolo",
+    "ch_5r3o6nyrajf6fb6guqyi",
+    "ch_jizkzzhmjarvx4drur57"
+   ],
+   "recall": null,
+   "answer": "The provided context passages discuss the foundations of equilibrium statistical mechanics, including the microcanonical, canonical, and grand canonical ensembles, as well as the treatment of quantum statistics for bosons and fermions using Slater determinants and symmetrized states. However, none of the passages contain information regarding a specific \"final evolution equation for the reduced density $f_s$\" or its decomposition into intra-group, interparticle, and symmetrization terms. Therefore, the answer to your specific question cannot be derived from the given text.",
+   "judgeScore": 0,
+   "judgeRaw": "{\"score\": 0, \"rationale\": \"The answer states that the information is missing and cannot be derived, which contradicts the reference answer that provides a detailed description of the decomposition.\"}",
+   "type": "multi-hop",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5N7HF6TDB87JEXBX7Y1FE4A",
+   "questionId": "k28",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N8Q1S8F8ABCYV457ANXM4N",
+   "retrieved": [
+    "ch_j46sirqjzm4c4e2t6jxw",
+    "ch_pvcztfdicdhklnbnvmme",
+    "ch_4jfnggxwdvrrq4zidolo",
+    "ch_ibqdnjl4c4xp5djeufqj",
+    "ch_bkadd25rcchreleknau7"
+   ],
+   "recall": null,
+   "answer": "Based on the provided text, physicists construct this framework by defining thermodynamic variables (such as pressure, volume, and temperature) that describe the bulk behavior of macroscopic systems with many degrees of freedom. They introduce state functions—quantities dependent only on current variables rather than history—to characterize equilibrium states where no macroscopic currents exist. While the text outlines these phenomenological foundations and statistical ensembles, it explicitly notes that a full derivation from microscopic dynamics is often omitted in favor of postulating statistical laws to address foundational difficulties.",
+   "judgeScore": 0.5,
+   "judgeRaw": "{\"score\": 0.5, \"rationale\": \"The answer captures the use of state functions and equilibrium states but misses the specific reference to idealizing systems via thermodynamic coordinates like pressure, volume, and temperature, and instead introduces a detail about omitted derivations that is not present in the reference.\"}",
+   "type": "topic",
+   "docs": [
+    "ThermoKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5N7HF6TDB87JEXBX7Y1FE4A",
+   "questionId": "k29",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N8QJ381RX7X1CA9XM7VSK6",
+   "retrieved": [
+    "ch_4jfnggxwdvrrq4zidolo",
+    "ch_jizkzzhmjarvx4drur57",
+    "ch_fdbuy3wgrvs7hrptvslj",
+    "ch_pvcztfdicdhklnbnvmme",
+    "ch_bkadd25rcchreleknau7"
+   ],
+   "recall": null,
+   "answer": "Based on the provided context, there is no information regarding how \"kinetic theory\" specifically bridges microscopic dynamics with macroscopic properties. The text focuses instead on developing equilibrium statistical mechanics by postulating statistical laws (such as microcanonical, canonical, and grand canonical ensembles) rather than deriving them from detailed microscopic dynamics or using kinetic theory. Additionally, the text notes that the traditional link between time evolution and ensemble concepts via the ergodic hypothesis is weak, suggesting an alternative information-theoretic approach based on maximum entropy principles.",
+   "judgeScore": 0,
+   "judgeRaw": "{\"score\": 0, \"rationale\": \"The answer contradicts the reference by claiming there is no information about kinetic theory bridging microscopic and macroscopic properties, whereas the reference explicitly describes this mechanism.\"}",
+   "type": "topic",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5N7HF6TDB87JEXBX7Y1FE4A",
+   "questionId": "k3",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N7J0FHC9K90QH869QZTQT1",
+   "retrieved": [
+    "ch_tj22dx7prtg36f27ad4a",
+    "ch_4jfnggxwdvrrq4zidolo",
+    "ch_bkadd25rcchreleknau7",
+    "ch_fdbuy3wgrvs7hrptvslj",
+    "ch_jizkzzhmjarvx4drur57"
+   ],
+   "recall": null,
+   "answer": "The provided context passages discuss the mixing hypothesis, ensemble averages, and the formulation of statistical mechanics using information theory, but they do not explicitly address how the requirement for a stationary probability density relates to the fundamental postulate. Therefore, based strictly on the given text, the specific connection between these two concepts is missing.",
+   "judgeScore": 0,
+   "judgeRaw": "{\"score\": 0, \"rationale\": \"The answer states that the information is missing and does not provide the essential fact regarding the relationship between stationary probability density and the fundamental postulate as described in the reference.\"}",
+   "type": "single-hop",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5N7HF6TDB87JEXBX7Y1FE4A",
+   "questionId": "k30",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N8R13RCV5Z4AGCY230Z36R",
+   "retrieved": [
+    "ch_zfk3sc4bxwwsj2r7n2nx",
+    "ch_ajkzqbiha72gitr3tqyf",
+    "ch_j46sirqjzm4c4e2t6jxw",
+    "ch_5qaqbpqhpi76p23skwme",
+    "ch_u6q6eyyjkbnxtwrdo2bi"
+   ],
+   "recall": null,
+   "answer": "The provided context passages discuss general thermodynamic principles, phase diagrams, stability criteria, and state variables but do not contain information regarding the dominance of surface tension over gravity at small scales or the specific effects of surfactant molecules. Therefore, I cannot answer your question based on the given text; details about capillary action scaling laws and surfactant behavior are missing from the source material.",
+   "judgeScore": 0,
+   "judgeRaw": "{\"score\": 0, \"rationale\": \"The answer explicitly states it cannot answer the question because the information is missing from the source text, which contradicts the reference answer that provides specific facts about surface tension dominance and surfactant effects.\"}",
+   "type": "topic",
+   "docs": [
+    "ThermoKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5N7HF6TDB87JEXBX7Y1FE4A",
+   "questionId": "k31",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N8Z9T0YHXV87HZTFHWARW0",
+   "retrieved": [
+    "ch_b2nqg2rhnaw34djlyunr",
+    "ch_wrei6jdlyy33tfyvvoi5",
+    "ch_bpmkglkp6tn63taf6cn6",
+    "ch_4jfnggxwdvrrq4zidolo",
+    "ch_u6q6eyyjkbnxtwrdo2bi"
+   ],
+   "recall": null,
+   "answer": "The provided context passages describe the development of equilibrium statistical mechanics, defining the microcanonical, canonical, and grand canonical ensembles and deriving their relationships to thermodynamics for a classical ideal gas. However, the text does not contain specific information regarding two-level impurities or explicitly detail how the canonical ensemble's application to those systems demonstrates its relationship to the microcanonical ensemble in the thermodynamic limit. Therefore, based strictly on the given passages, the answer to your specific question about two-level impurities is missing.",
+   "judgeScore": 0,
+   "judgeRaw": "{\"score\": 0, \"rationale\": \"The answer claims the information is missing from the text, whereas the reference answer explicitly states that the section does re-examine these systems and confirms their relationship, thus contradicting the reference.\"}",
+   "type": "topic",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5N7HF6TDB87JEXBX7Y1FE4A",
+   "questionId": "k32",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N8ZQ5VZCBQN0T6J5BXW5YV",
+   "retrieved": [
+    "ch_ajkzqbiha72gitr3tqyf",
+    "ch_s3rykjep7uh3wpxgrgwb",
+    "ch_b2nqg2rhnaw34djlyunr",
+    "ch_44zlo3f4o52c5dyopusu",
+    "ch_wmybldqc3jmn5i4s2vio"
+   ],
+   "recall": null,
+   "answer": "The provided context passages discuss thermodynamic stability criteria, the zeroth law of thermodynamics, intensive variables, and the ergodic hypothesis, but they do not contain any information regarding hydrodynamic approximations or the failure of a zeroth-order model to describe evolution toward global equilibrium. Consequently, I cannot answer your question based on the given text as the necessary details about flow modes and hydrodynamic limits are missing.",
+   "judgeScore": 0,
+   "judgeRaw": "{\"score\": 0, \"rationale\": \"The answer explicitly states it cannot answer the question due to missing information in the provided text, which contradicts the reference answer that provides specific reasons for the failure of the approximation.\"}",
+   "type": "topic",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5N7HF6TDB87JEXBX7Y1FE4A",
+   "questionId": "k4",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N7J8G0SNS2DNAECVCQ8PRB",
+   "retrieved": [
+    "ch_ibqdnjl4c4xp5djeufqj",
+    "ch_wxbiww4ynjvwsryhludx",
+    "ch_wrei6jdlyy33tfyvvoi5",
+    "ch_pvcztfdicdhklnbnvmme",
+    "ch_3yhndsdw3glhekpcgy7u"
+   ],
+   "recall": null,
+   "answer": "The provided context passages discuss the general definition of entropy and phase space volume for classical systems of distinguishable or identical particles, but they do not contain specific information about a system with N impurities having two discrete energy levels. Consequently, the text does not support an answer regarding how microstate enumeration differs from Liouville's theorem in that specific quantum-like scenario; the missing details on this particular system are required to answer the question based on the given context.",
+   "judgeScore": 0,
+   "judgeRaw": "{\"score\": 0, \"rationale\": \"The answer claims the information is missing and cannot be answered, whereas the reference answer provides a direct factual comparison between discrete microstates and continuous phase space.\"}",
+   "type": "single-hop",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5N7HF6TDB87JEXBX7Y1FE4A",
+   "questionId": "k5",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N7JH1ZZ69MN6EG39Y1R7SM",
+   "retrieved": [
+    "ch_ibqdnjl4c4xp5djeufqj",
+    "ch_wxbiww4ynjvwsryhludx",
+    "ch_73r7y42yv4r4pdzfm4ku",
+    "ch_733r7vnzdjgirc37f6xk",
+    "ch_mlkvjkfvxvy5kstgblxt"
+   ],
+   "recall": null,
+   "answer": "The provided context passages discuss the general calculation of microstates for distinguishable and identical particles, as well as Bose-Einstein and Fermi-Dirac statistics, but they do not contain specific information regarding a system of impurities or the use of binomial coefficients based on the ratio of total energy to single-particle energy spacing. Therefore, the answer to your specific question cannot be derived from the given text.",
+   "judgeScore": 0,
+   "judgeRaw": "{\"score\": 0, \"rationale\": \"The answer explicitly states that the information required to derive the binomial coefficient expression is missing and cannot be answered, which contradicts the reference answer that provides the specific fact.\"}",
+   "type": "single-hop",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5N7HF6TDB87JEXBX7Y1FE4A",
+   "questionId": "k6",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N7TKR5CTBTY64B0YD68GYK",
+   "retrieved": [
+    "ch_jizkzzhmjarvx4drur57",
+    "ch_enl7bddiaahy6pmlxq7d",
+    "ch_qoobiqandjy5pvztzyuj",
+    "ch_iewysbkpgqaeri6nmudm",
+    "ch_2bwcymi3m4uwfmlfcarr"
+   ],
+   "recall": null,
+   "answer": "The provided context passages discuss statistical mechanics concepts such as partition functions, canonical and grand canonical ensembles, chemical potentials, and phase transitions, but they do not contain information about particle collisions or the evolution of particle pair densities immediately after such events. Therefore, the answer to your specific question cannot be derived from the given text.",
+   "judgeScore": 0,
+   "judgeRaw": "{\"score\": 0, \"rationale\": \"The answer explicitly states that the provided text does not contain information about particle collisions or density evolution, which contradicts the reference answer that describes how these densities evolve.\"}",
+   "type": "single-hop",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5N7HF6TDB87JEXBX7Y1FE4A",
+   "questionId": "kr21",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N901GVDSHQVERQTCA9PQGJ",
+   "retrieved": [
+    "ch_n27a2wtd634bv6gqs7oq",
+    "ch_w4fe6cyd3bbst5yvwgdl",
+    "ch_bpmkglkp6tn63taf6cn6",
+    "ch_wxbiww4ynjvwsryhludx",
+    "ch_iewysbkpgqaeri6nmudm"
+   ],
+   "recall": null,
+   "answer": "Based on the provided text, as the system size $N$ approaches infinity (the thermodynamic limit), the relative fluctuations in energy become vanishingly small compared to the total energy. Consequently, the canonical ensemble, which allows for energy fluctuations, becomes equivalent to the microcanonical ensemble, where the energy is fixed at its most probable value. The text notes that while the mean-square fluctuation grows with system size, it represents a negligible fraction of the total energy in this limit, effectively making the two descriptions indistinguishable.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly states that in the thermodynamic limit, the canonical ensemble becomes equivalent to the microcanonical ensemble due to vanishing relative fluctuations, which aligns with the reference answer's description of them becoming indistinguishable.\"}",
+   "type": "single-hop",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5N7HF6TDB87JEXBX7Y1FE4A",
+   "questionId": "kr211",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N9EFA01WAANX5GGNQ65H09",
+   "retrieved": [
+    "ch_4jfnggxwdvrrq4zidolo",
+    "ch_ajkzqbiha72gitr3tqyf",
+    "ch_j46sirqjzm4c4e2t6jxw",
+    "ch_jizkzzhmjarvx4drur57",
+    "ch_pvcztfdicdhklnbnvmme"
+   ],
+   "recall": null,
+   "answer": "Based on the provided text, there is no information regarding \"kinetic theory\" or its specific differences from equilibrium statistical mechanics. The passages focus exclusively on developing the foundations of equilibrium statistical mechanics by postulating statistical laws rather than deriving them from detailed microscopic dynamics, and they discuss concepts like ensembles, entropy, and phase space without mentioning kinetic theory. Therefore, I cannot answer how the two fields differ in scope using only the given context.",
+   "judgeScore": 0,
+   "judgeRaw": "{\"score\": 0, \"rationale\": \"The answer explicitly states it cannot answer the question due to a lack of information in the provided text, whereas the reference answer provides specific factual differences between the two theories.\"}",
+   "type": "multi-hop",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5N7HF6TDB87JEXBX7Y1FE4A",
+   "questionId": "kr212",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N9ET6FP13MT3NAR1E5K1GY",
+   "retrieved": [
+    "ch_2bwcymi3m4uwfmlfcarr",
+    "ch_ajkzqbiha72gitr3tqyf",
+    "ch_atzuh4y7r6rzsmw7fxx7",
+    "ch_rec7c75omcbfmv3b3riv",
+    "ch_jxgvgnn6vawbjj26prmu"
+   ],
+   "recall": null,
+   "answer": "The provided context passages discuss entropy maximization, Gibbs potential minimization, and Helmholtz free energy but do not contain information regarding enthalpy minimization or a spring-mass system. Therefore, I cannot answer your question based on the given text; you would need to provide context containing those specific details or ask about concepts covered in the passages (such as entropy maximization for isolated systems).",
+   "judgeScore": 0,
+   "judgeRaw": "{\"score\": 0, \"rationale\": \"The answer explicitly states it cannot answer the question and claims the provided text lacks information on enthalpy minimization or spring-mass systems, which contradicts the reference answer that provides a direct explanation of these concepts.\"}",
+   "type": "multi-hop",
+   "docs": [
+    "ThermoKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5N7HF6TDB87JEXBX7Y1FE4A",
+   "questionId": "kr213",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N9F38QP4FTKAN4F7486F4A",
+   "retrieved": [
+    "ch_ewhrulbgg7v4tt7zpglg",
+    "ch_73r7y42yv4r4pdzfm4ku",
+    "ch_wxbiww4ynjvwsryhludx",
+    "ch_jizkzzhmjarvx4drur57",
+    "ch_ibqdnjl4c4xp5djeufqj"
+   ],
+   "recall": null,
+   "answer": "Based on the provided text, the necessity for symmetrizing or antisymmetrizing wave functions resolves the artificial tracking of identical particles by introducing specific combinatorial factors (Bose-Einstein or Fermi-Dirac statistics) that replace the classical $1/N!$ correction used to handle indistinguishability. The text explains that this approach correctly accounts for the non-distinguishability of identical particles and avoids the Gibbs paradox inherent in classical distinguishable particle models. However, the provided context passages do not contain information regarding why this resolution might fail to eliminate degeneracy issues at low temperatures specifically within interacting systems; they only mention that for noninteracting fermion systems, solutions are Slater determinants and for bosons, symmetrized combinations.",
+   "judgeScore": 0.5,
+   "judgeRaw": "{\"score\": 0.5, \"rationale\": \"The answer correctly addresses the first part of the reference regarding how symmetrization resolves artificial tracking but fails to address the second part about why this resolution might fail to eliminate degeneracy issues at low temperatures in interacting systems, instead claiming the information is missing.\"}",
+   "type": "multi-hop",
+   "docs": [
+    "FoundationsKardar",
+    "ThermoKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5N7HF6TDB87JEXBX7Y1FE4A",
+   "questionId": "kr214",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N9FHVR8BRNCT7PA8HDGXA2",
+   "retrieved": [
+    "ch_atzuh4y7r6rzsmw7fxx7",
+    "ch_2bwcymi3m4uwfmlfcarr",
+    "ch_ajkzqbiha72gitr3tqyf",
+    "ch_n27a2wtd634bv6gqs7oq",
+    "ch_5r3o6nyrajf6fb6guqyi"
+   ],
+   "recall": null,
+   "answer": "Based on the provided context passages, there is no explicit statement defining the specific inequality required for a system with constant particle number where only energy and volume fluctuate. While Passage [0] discusses fluctuations in entropy and volume leading to stability conditions involving second derivatives (specifically relating to heat capacity and compressibility), it does not isolate the exact inequality requested under the specific constraint of constant particle number mentioned in your question. Therefore, the precise inequality you are looking for is missing from the provided text.",
+   "judgeScore": 0,
+   "judgeRaw": "{\"score\": 0, \"rationale\": \"The answer explicitly states that the information required to define the specific inequality is missing from the provided context, which contradicts the reference answer that provides the stability conditions.\"}",
+   "type": "multi-hop",
+   "docs": [
+    "ThermoKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5N7HF6TDB87JEXBX7Y1FE4A",
+   "questionId": "kr215",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N9FVNPXKC94FYK927PG7E6",
+   "retrieved": [
+    "ch_wi7ugysqpkv7ffv6bzpa",
+    "ch_x4ja7vzfpd5j5nnb7fr7",
+    "ch_lpwhtx36hnhev4ewfhxd",
+    "ch_jizkzzhmjarvx4drur57",
+    "ch_htw7obdtbch3w3hmmyuq"
+   ],
+   "recall": null,
+   "answer": "Based on the provided context, the text defines extensivity as a property where extensive variables (like internal energy and entropy) scale linearly with system size, leading to the Gibbs-Duhem equation which shows that intensive variables are not all independent. However, the passages do not explicitly derive or state how this specific mathematical definition of extensivity relates directly to the standard Gibbs free energy formula when chemical work is included via changes in particle number; they instead treat the inclusion of particle number as a separate consideration for systems with variable composition (grand canonical ensemble) and define Gibbs free energy primarily for PVT systems. Therefore, the direct relationship between the mathematical definition of extensivity and the modified Gibbs free energy equation under these specific conditions is not detailed in the provided text.",
+   "judgeScore": 0,
+   "judgeRaw": "{\"score\": 0, \"rationale\": \"The answer claims the text does not detail the relationship, whereas the reference answer explicitly states that chemical work is treated differently and not subtracted in the standard Gibbs free energy expression.\"}",
+   "type": "multi-hop",
+   "docs": [
+    "ThermoKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5N7HF6TDB87JEXBX7Y1FE4A",
+   "questionId": "kr219",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N9G92MP0GDHPKZDBDD8PN1",
+   "retrieved": [
+    "ch_wxbiww4ynjvwsryhludx",
+    "ch_mlkvjkfvxvy5kstgblxt",
+    "ch_44zlo3f4o52c5dyopusu",
+    "ch_5r3o6nyrajf6fb6guqyi",
+    "ch_fdbuy3wgrvs7hrptvslj"
+   ],
+   "recall": null,
+   "answer": "The provided context passages discuss the statistical mechanics of distinguishable and identical particles, the definition of entropy via phase space volume, normal thermodynamic systems, and the maximum entropy principle, but they do not contain information regarding energy negligible compared to a reservoir or independent two-level impurities. Consequently, I cannot answer your question based on the given text as the specific details about reservoirs and two-level impurity probabilities are missing from the context.",
+   "judgeScore": 0,
+   "judgeRaw": "{\"score\": 0, \"rationale\": \"The answer explicitly states it cannot answer the question because the information is missing from the provided text, which contradicts the reference answer that provides a direct explanation of the derivation and relationship.\"}",
+   "type": "multi-hop",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5N7HF6TDB87JEXBX7Y1FE4A",
+   "questionId": "kr225",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N9GNNJ9MGYYVAQAK9MMBE4",
+   "retrieved": [
+    "ch_u6q6eyyjkbnxtwrdo2bi",
+    "ch_bpmkglkp6tn63taf6cn6",
+    "ch_3yhndsdw3glhekpcgy7u",
+    "ch_bkadd25rcchreleknau7",
+    "ch_ibqdnjl4c4xp5djeufqj"
+   ],
+   "recall": null,
+   "answer": "The provided context passages discuss the derivation of entropy, temperature, and pressure for an ideal gas using the microcanonical ensemble, but they do not contain the specific steps or formulas required to derive the Maxwell-Boltzmann momentum distribution for a single particle. While the text mentions that the microcanonical ensemble can be extended to quantum systems and relates phase space volume to quantum states, it does not explicitly show how to transition from this description to the single-particle momentum distribution. Therefore, based strictly on the given passages, the answer to your specific question is missing.",
+   "judgeScore": 0,
+   "judgeRaw": "{\"score\": 0, \"rationale\": \"The answer claims the information is missing from the provided context, whereas the reference answer provides a direct description of the derivation steps.\"}",
+   "type": "topic",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5N7HF6TDB87JEXBX7Y1FE4A",
+   "questionId": "kr226",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N9WBGAPCX74K80AN56EADZ",
+   "retrieved": [
+    "ch_wi7ugysqpkv7ffv6bzpa",
+    "ch_u6q6eyyjkbnxtwrdo2bi",
+    "ch_bpmkglkp6tn63taf6cn6",
+    "ch_4jfnggxwdvrrq4zidolo",
+    "ch_atzuh4y7r6rzsmw7fxx7"
+   ],
+   "recall": null,
+   "answer": "Based on the provided text, recovering the standard ideal gas equations requires first calculating the microcanonical entropy for a system of particles. Once this entropy is determined, one applies the statistical definitions relating temperature, pressure, and chemical potential to the derivatives of that entropy (as shown in formula 1.25). Finally, by substituting these relations back into the specific case of a classical ideal gas, the expected results for the equation of state and internal energy are obtained.",
+   "judgeScore": 0.5,
+   "judgeRaw": "{\"score\": 0.5, \"rationale\": \"The answer correctly identifies calculating entropy and applying thermodynamic relations but misses the essential fact regarding the calculation of accessible phase space volume (coordinate contribution and momentum sphere surface area) mentioned in the reference.\"}",
+   "type": "topic",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5N7HF6TDB87JEXBX7Y1FE4A",
+   "questionId": "kr228",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N9WPF1SSKDVKVSXCYY3MTH",
+   "retrieved": [
+    "ch_htw7obdtbch3w3hmmyuq",
+    "ch_jizkzzhmjarvx4drur57",
+    "ch_qoobiqandjy5pvztzyuj",
+    "ch_4jfnggxwdvrrq4zidolo",
+    "ch_ibqdnjl4c4xp5djeufqj"
+   ],
+   "recall": null,
+   "answer": "The provided context passages discuss statistical ensembles (microcanonical, canonical, grand canonical), phase transitions, and the foundations of equilibrium statistical mechanics, but they do not contain information regarding time evolution equations or the specific effects of interparticle interactions on s-particle density functions. Consequently, I cannot answer this question based on the given text; details about the transformation from a simple fluid description to a coupled system involving higher-order densities due to interactions are missing.",
+   "judgeScore": 0,
+   "judgeRaw": "{\"score\": 0, \"rationale\": \"The answer explicitly states that it cannot answer the question because the information is missing, which contradicts the reference answer's detailed explanation of how interparticle interactions transform the time evolution equation.\"}",
+   "type": "topic",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5N7HF6TDB87JEXBX7Y1FE4A",
+   "questionId": "kr229",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N9X1MHD7ZVMCXATR4MDKKC",
+   "retrieved": [
+    "ch_ajkzqbiha72gitr3tqyf",
+    "ch_b2nqg2rhnaw34djlyunr",
+    "ch_s3rykjep7uh3wpxgrgwb",
+    "ch_44zlo3f4o52c5dyopusu",
+    "ch_4jfnggxwdvrrq4zidolo"
+   ],
+   "recall": null,
+   "answer": "The provided context passages discuss the foundations of equilibrium thermodynamics, stability criteria, and statistical mechanics but do not contain any information regarding hydrodynamic approximations or their failure to describe approaches to global equilibrium. Consequently, I cannot answer your question based on these texts; the specific physical behaviors you are asking about are not mentioned in the given material.",
+   "judgeScore": 0,
+   "judgeRaw": "{\"score\": 0, \"rationale\": \"The answer explicitly states it cannot answer the question and claims the information is missing from the text, which contradicts the reference answer that provides a detailed explanation of why the approximation fails.\"}",
+   "type": "topic",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5N7HF6TDB87JEXBX7Y1FE4A",
+   "questionId": "kr24",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N90D8W8Y6XGESC05YCNA4E",
+   "retrieved": [
+    "ch_iewysbkpgqaeri6nmudm",
+    "ch_25fxms7ihs4ujyw2e3hl",
+    "ch_ic4lwxekwbvo6ck44jlk",
+    "ch_733r7vnzdjgirc37f6xk",
+    "ch_5r3o6nyrajf6fb6guqyi"
+   ],
+   "recall": null,
+   "answer": "Based on context passage [0], the parameter $\\beta$ (written as $3 = l/(/cjgT)$ in the text) is defined by the relationship $\\beta = 1/(k_B T)$, where $k_B$ is the Boltzmann constant and $T$ is the temperature. This definition arises from the expansion of the entropy of the large system in the derivation of the canonical distribution. The context does not explicitly define $k_B$, but standard statistical mechanics confirms this inverse proportionality between $\\beta$ and temperature.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly states that beta equals 1 divided by the product of the Boltzmann constant and temperature, matching all essential facts in the reference.\"}",
+   "type": "single-hop",
+   "docs": [
+    "FoundationsKardar"
+   ]
+  },
+  {
+   "runId": "er_01M5N7HF6TDB87JEXBX7Y1FE4A",
+   "questionId": "kr26",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N9E400YRVCFAK70N9FKT96",
+   "retrieved": [
+    "ch_b2nqg2rhnaw34djlyunr",
+    "ch_eq3xmgfu3f2xgxc5wrto",
+    "ch_3hhhxulzmswygv6grpoa",
+    "ch_ptz5xpyr7hyol53gstx2",
+    "ch_wi7ugysqpkv7ffv6bzpa"
+   ],
+   "recall": null,
+   "answer": "Based on my own knowledge, the heat capacity at constant pressure ($C_p$) exceeds that at constant volume ($C_v$) because, during an isobaric expansion, the system must absorb additional heat to perform work against the external pressure as it expands, whereas no such work is done in a constant volume process. This extra energy input required to maintain constant pressure while allowing volume change results in $C_p > C_v$. The provided context passages mention this inequality intuitively but do not explicitly explain the physical reason for it.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly identifies that additional heat is required at constant pressure to perform work during expansion, which matches the essential facts in the reference answer.\"}",
+   "type": "single-hop",
+   "docs": [
+    "ThermoKardar"
+   ]
+  }
+ ]
+}

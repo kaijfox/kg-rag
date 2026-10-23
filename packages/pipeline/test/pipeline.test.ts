@@ -82,6 +82,15 @@ describe('runPipeline', () => {
     await expect(runPipeline(m, { n: 0 }, { run: { ctx, tag: {} }, identity: identity(m) })).rejects.toMatchObject({ message: 'second' });
     expect(events[1]!.payload).toMatchObject({ status: 'failed', state: 'work' });
   });
+  it('records the work state that threw as state, with status failed and the error code', async () => {
+    const { ctx, events } = fakeCtx();
+    const m = withActors(build(), { work: loggedActor<number, number>([], async () => { throw new KgError('precondition', 'no index'); }) });
+    await expect(runPipeline(m, { n: 0 }, { run: { ctx, tag: {} }, identity: identity(m) })).rejects.toMatchObject({ code: 'precondition' });
+    const fin = events.filter((e) => e.type === 'pipeline.finished');
+    expect(fin).toHaveLength(1);
+    expect(fin[0]!.payload).toMatchObject({ status: 'failed', state: 'work', error: { code: 'precondition', message: 'no index' } });
+    expect(fin[0]!.payload.state).not.toBe('failed');
+  });
   it('turns a plain thrown value into an internal error', async () => {
     const { ctx } = fakeCtx();
     const m = withActors(build(), { work: loggedActor<number, number>([], async () => { throw new Error('plain'); }) });

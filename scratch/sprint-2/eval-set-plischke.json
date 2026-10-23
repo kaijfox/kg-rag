@@ -1,0 +1,413 @@
+{
+ "id": "qs_4rot47kbnzjnmrsgj5pu",
+ "name": "stat-mech-plischke",
+ "genRecipeId": "rc_fc5dtkljfjanlqqy3fnz",
+ "questions": [
+  {
+   "type": "single-hop",
+   "question": "Under what condition does the product of the statistical weights of two energy-exchanging subsystems reach its maximum value?",
+   "referenceAnswer": "The product is at a maximum when the total entropy reaches its maximum.",
+   "goldChunkIds": [
+    "ch_5r3o6nyrajf6fb6guqyi"
+   ],
+   "goldText": [
+    "We now consider two systems which are free to exchange energy but which are isolated from the rest of the universe by an ideal insulating surface. The particle numbers Ni, iV2 and volumes V\\, V2 are fixed for each subsystem. The total energy will be constant under our assumptions and we assume further that the two subsystems are sufficiently weakly interacting that we can write\n\n[formula]\n\nwhere E\\ and E^ are the energies of the subsystems. We again assume a tolerance SE chosen suitably so that the statistical weights fl, fii, ^2 are proportional to SE. We then have\n\n[formula]\n\nIf the subsystems are sufficiently large, the product 0,2{ET - E\\)Q,i{E\\) will be a sharply peaked function of E\\. The reason for this is that fii and Q.2 are rapidly increasing functions of E\\ and ET - E\\ respectively. 4 From the definition (2.9) we note that the entropy is a monotonically increasing function of Q, and that the product Q1Q.2 will be at a maximum when the total entropy\n\n[formula]"
+   ],
+   "sourceDocKeys": [
+    "FoundationsPlischke"
+   ],
+   "id": "p1"
+  },
+  {
+   "type": "single-hop",
+   "question": "What physical quantity is identified with the parameter A in the context of recovering the canonical distribution?",
+   "referenceAnswer": "The parameter A is identified as the Helmholtz free energy.",
+   "goldChunkIds": [
+    "ch_cfmvlwkrdkcc7j5dawzq"
+   ],
+   "goldText": [
+    "The remaining Lagrange multiplier @ is determined from the condition\n\n[formula]\n\nIf we let / (a; j) be the energy of the state x j , we see that we recover the canonical distribution with the identification\n\n[formula]\n\nwhere A is the Helmholtz free energy. It is easy to see that the second variation of S is negative, indicating that we have found a true maximum of the entropy subject to the constraint. The extension of the method to the grand canonical ensemble is left as an exercise (Problem 2.9)."
+   ],
+   "sourceDocKeys": [
+    "FoundationsPlischke"
+   ],
+   "id": "p2"
+  },
+  {
+   "type": "single-hop",
+   "question": "How can the foundational basis for equilibrium statistical mechanics be redefined to remove its reliance on dynamical evolution?",
+   "referenceAnswer": "The foundation can be formulated using information theory, where thermodynamic variables are derived from a least-possible-bias estimate based on available information, thereby severing the connection with dynamics and establishing a maximum entropy principle.",
+   "goldChunkIds": [
+    "ch_fdbuy3wgrvs7hrptvslj"
+   ],
+   "goldText": [
+    "The link provided by the ergodic hypothesis between the time evolution of a dynamical system and the ensemble concept is a weak one. It is therefore of interest to show that it is possible to formulate the foundation of equilibrium statistical mechanics in terms of information theory [142], in which the thermodynamic variables are inferred from a least-possible-bias estimate on the basis of available information. In this way the link with dynamics is severed altogether and the approach leads to a maximum entropy principle that yields results equivalent to the ones found earlier in this chapter.\n\nConsider first the situation in which a state variable x is capable of attaining any one of fi discrete values X{ (i = 1,2,..., fi). Let pi be the associated probability distribution. This distribution must be normalized:\n\n[formula]\n\n»=i\n\nand there may be a number of other constraints of the form\n\n[formula]\n\n» = 1"
+   ],
+   "sourceDocKeys": [
+    "FoundationsPlischke"
+   ],
+   "id": "p4"
+  },
+  {
+   "type": "single-hop",
+   "question": "Which researcher is credited with proposing the most significant alternative to Boltzmann-Shannon entropy specifically to address systems that do not satisfy the extensivity requirement?",
+   "referenceAnswer": "Costantino Tsallis is credited with this attempt.",
+   "goldChunkIds": [
+    "ch_bfzlmt5iy4qae5fa6tcd"
+   ],
+   "goldText": [
+    "Equation (2.100) was derived by Shannon [271] shortly after the second world war and is generally considered to be one of the fundamental results of information theory. Note the key role of the requirement of extensivity in establishing the uniqueness of the Boltzmann-Shannon entropy. As pointed out at the end of section 2.1 not all system are \"normal\" with an extensive energy. It is therefore natural that attempts have been made to replace the Boltzmann-Shannon entropy with a nonextensive measure. The most significant such attempt is that of Costantino Tsallis [305] and there is now a very large literature on the subject 6 .\n\nIt is easy to generalize the Boltzmann-Shannon definition to a continuous probability distribution p(x):\n\n[formula]\n\nConsider the case of N identical particles in a 6N-dimensional phase space. We have seen that according to the semiclassical rules there are\n\n[formula]\n\nstates in the phase space volume d 6N x. Therefore, we find for the entropy\n\n[formula]"
+   ],
+   "sourceDocKeys": [
+    "FoundationsPlischke"
+   ],
+   "id": "p5"
+  },
+  {
+   "type": "single-hop",
+   "question": "Under what condition involving the thermal wavelength and particle density does a fermion system transition from being nondegenerate to degenerate?",
+   "referenceAnswer": "The system is nondegenerate when the cube of the thermal wavelength is less than the volume per particle, and it becomes degenerate when this inequality is reversed.",
+   "goldChunkIds": [
+    "ch_25fxms7ihs4ujyw2e3hl"
+   ],
+   "goldText": [
+    "We note that as T -> 0 at fixed density (N)/V the chemical potential n must approach a finite positive limit, the Fermi energy ep. In this limit the occupation number (2.72) is 1 for energies less than tp and 0 otherwise. Conversely, from (2.73) we see that if e - \" M ^> ^ the probability of occupation of any state is small (note that i£k,CT is positive). In this case the system of fermions is nondegenerate and approximately satisfies Boltzmann statistics:\n\n[formula]\n\nProm (2.20) we see that equation (2.74) will be valid for all k if the thermal wavelength (2.21) A satisfies A 3 < V/N. Conversely, if A 3 > V/N the system will be degenerate."
+   ],
+   "sourceDocKeys": [
+    "FoundationsPlischke"
+   ],
+   "id": "p6"
+  },
+  {
+   "type": "single-hop",
+   "question": "What is the geometric dimensionality of the surface that confines the motion of an N-particle system when its energy E is specified?",
+   "referenceAnswer": "The motion is confined to a (6N - 1)-dimensional surface.",
+   "goldChunkIds": [
+    "ch_pvcztfdicdhklnbnvmme"
+   ],
+   "goldText": [
+    "We define a 6iV-dimensional phase space and represent the state of the system, at a particular instant, by a 6iV-dimensional vector x in this space, with components given by the generalized coordinates and momenta qj, pj. If we specify the energy E of the system, the motion of the JV-particle system will be confined to a (6N - l)-dimensional surface given by\n\n[formula]\n\nWe denote this surface by V(E). If a system is in equilibrium its macroscopic properties should be time independent. One way to measure a macroscopic property of the system (e.g., the pressure associated with N particles in a box) is to carry the experiment out over a period of time to < t < to + r during which the phase point covers some part of T(E). If the instantaneous value of the property in question is 4>{x(t)), the measured value will be\n\n1 For a discussion of action-angle variables see e.g. [113]\n\n[formula]"
+   ],
+   "sourceDocKeys": [
+    "FoundationsPlischke"
+   ],
+   "id": "p7"
+  },
+  {
+   "type": "single-hop",
+   "question": "Which specific ensemble is introduced for classical systems that are isolated from their surroundings?",
+   "referenceAnswer": "The microcanonical ensemble is defined for a closed classical system.",
+   "goldChunkIds": [
+    "ch_4jfnggxwdvrrq4zidolo"
+   ],
+   "goldText": [
+    "In this chapter we develop the foundations of equilibrium statistical mechanics. No attempt will be made to derive the equilibrium theory from the detailed microscopic dynamics. Instead, we will content ourselves with postulating the statistical laws. In Section 2.1 we consider a closed classical system and develop the concept of the microcanonical ensemble. We define the entropy in the thermodynamic limit, and make contact with thermodynamics. In Section 2.2 we extend the formalism to systems in thermal contact with the surroundings and introduce the canonical ensemble. We also discuss fluctuations of thermodynamic variables. The grand canonical ensemble is discussed in Section 2.3 for systems that are free to exchange particles with the outside, and we demonstrate the general relation between fluctuations in particle number and the compressibility. In Section 2.4 we modify the formalism to include quantum systems and introduce the density matrix. An alternative information-theoretic approach is discussed in Section 2.5 and a number of useful thermodynamic variational principles are introduced in Section 2.6."
+   ],
+   "sourceDocKeys": [
+    "FoundationsPlischke"
+   ],
+   "id": "p8"
+  },
+  {
+   "type": "single-hop",
+   "question": "What fundamental principle connects the response function C_V,N to the mean-square fluctuation of energy?",
+   "referenceAnswer": "The relationship between the response function C_V,N and the mean-square fluctuation of energy is a specific instance of the fluctuation-dissipation theorem.",
+   "goldChunkIds": [
+    "ch_w4fe6cyd3bbst5yvwgdl"
+   ],
+   "goldText": [
+    "where Cy,N is the heat capacity at constant N and V. The heat capacity is an extensive variable, as is the energy, and the root-mean-square (rms) fluctuation in the energy will thus be proportional to \\/{E). The mean fluctuation is therefore large for a large system, but is a vanishingly small fraction of the total energy in the thermodynamic limit:\n\n[formula]\n\nThe relationship (2.43) between the response function CV,N and the meansquare fluctuation of the energy is a special case of a very general result known as the fluctuation-dissipation theorem (see Chapter 12). We shall encounter a number of such relations.\n\nor"
+   ],
+   "sourceDocKeys": [
+    "FoundationsPlischke"
+   ],
+   "id": "p9"
+  },
+  {
+   "type": "single-hop",
+   "question": "Under what condition regarding the relationship between total uncertainty and subsystem uncertainties is the function S considered an extensive variable?",
+   "referenceAnswer": "The function S is considered an extensive variable when the total uncertainty associated with a system composed of independent subsystems equals the sum of the uncertainties of those individual subsystems.",
+   "goldChunkIds": [
+    "ch_mj6jcmhfavmfhkfiqgpu"
+   ],
+   "goldText": [
+    "This is not the only possible measure of uncertainty; any monotonic function S(Zpi) may serve. Consider next a system made up of two independent subsystems. We imagine that we measure the state of subsystem 1 N(l) times and subsystem 2 7V(2) times. The number of possible sequences is now Z = Z(1)Z(2). We next limit the choice of possible functions S by requiring our uncertainty to be the sum of the uncertainties associated with independent subsystems, i.e. we require that S is an extensive variable:\n\n[formula]\n\nThe choice of the function S is now essentially unique. To see this let us differentiate (2.98) two different ways\n\n[formula]\n\nand, if differentiating instead with respect to Z(2) we obtain\n\n[formula]\n\nSince the left side of (2.99) is independent of Z(2), and the right hand side is independent of Z{\\) they must both be equal to a constant. We call this constant K. We now drop the subscripts and find\n\n[formula]\n\nWe integrate this equation to obtain\n\n[formula]"
+   ],
+   "sourceDocKeys": [
+    "FoundationsPlischke"
+   ],
+   "id": "p10"
+  },
+  {
+   "type": "single-hop",
+   "question": "How is the normalization constant determined when maximizing entropy subject to a single constraint using Lagrange multipliers?",
+   "referenceAnswer": "The Lagrange multiplier is fixed by applying the normalization condition, which then yields the specific probability density expression.",
+   "goldChunkIds": [
+    "ch_e4m5mw2net6vdyepfdtv"
+   ],
+   "goldText": [
+    "It is easy to see that if we let\n\n[formula]\n\nwhere Cl(E) is given by (2.10), we get back the expression (2.9) for the entropy of the microcanonical ensemble. To see that the probability density (2.104) maximizes the expression (2.103) subject to the constraint (2.101), we use the method of Lagrange multipliers. Requiring that the functional derivative\n\n[formula]\n\nshould vanish yields\n\n[formula]\n\nThe Lagrange multiplier A is determined by the normalization condition (2.101) from which (2.104) follows. The extension to the case in which there are one or more constraints of the form (2.96) is straightforward. If we wish to constrain the expectation value of the function f{x), we maximize the expression\n\nA fairly complete list of references can be found at http://tsallis.cat.cbpf.br/biblio.htm\n\n[formula]\n\nwhere j3 and A are Lagrange multipliers. This procedure yields\n\n[formula]\n\n[formula]\n\nwe find from the normalizing constraint (2.95),\n\n[formula]"
+   ],
+   "sourceDocKeys": [
+    "FoundationsPlischke"
+   ],
+   "id": "p11"
+  },
+  {
+   "type": "single-hop",
+   "question": "Under what conditions can mixing occur in a physical system?",
+   "referenceAnswer": "Mixing occurs when an initial compact distribution of points distorts into a convoluted object that permeates the entire surface while maintaining the same volume, a phenomenon proven for systems like hard spheres. In truly isolated systems, mixing is irrelevant, but small amounts of noise in imperfectly insulated systems can distort trajectories sufficiently to effectively produce mixing.",
+   "goldChunkIds": [
+    "ch_tj22dx7prtg36f27ad4a"
+   ],
+   "goldText": [
+    "A hypothesis that leads to statistical mechanics, as we know it, is the mixing hypothesis. Briefly stated, mixing refers to the notion that an initial (compact) distribution of points on T{E) very quickly distorts into a convoluted object which permeates the entire surface while still occupying the same volume (as required by Liouville's theorem). Mixing can be proven to occur, for example, for systems of hard spheres [274] [275]. When one talks about a distribution of points on T(E), one is no longer discussing a single system, and for a truly isolated system, mixing is of course irrelevant. However, the sensitivity of x(i) to minute changes in initial conditions, will allow small amounts of noise in an imperfectly insulated system to distort the trajectory sufficiently that in effect one obtains mixing."
+   ],
+   "sourceDocKeys": [
+    "FoundationsPlischke"
+   ],
+   "id": "p12"
+  },
+  {
+   "type": "single-hop",
+   "question": "Under what condition does a system of noninteracting bosons obey Boltzmann statistics?",
+   "referenceAnswer": "A Bose system obeys Boltzmann statistics to a good approximation when the thermal wavelength is small compared to the typical interparticle separation, which is expressed as $(V/N)^{1/3}$.",
+   "goldChunkIds": [
+    "ch_733r7vnzdjgirc37f6xk"
+   ],
+   "goldText": [
+    "In the case of bosons (integer spin, which we take to be zero) a single particle state can have an arbitrary occupation number. The contribution of the state labeled by k (energy % k 2 /2m) to the grand partition function is\n\n[formula]\n\nThus the term and, as in the case of fermions, the grand partition function is the product of such terms:\n\n[formula]\n\nThe average number of particles occupying the state k is\n\n[formula]\n\nA Bose system, like a Fermi system, obeys Boltzmann statistics to a good approximation if the thermal wavelength (2.21) is small compared to typical interparticle separation (V/N) 1 / 3 . The statistical mechanics of a noninteracting Bose system is discussed in more detail in Section 11.1."
+   ],
+   "sourceDocKeys": [
+    "FoundationsPlischke"
+   ],
+   "id": "p13"
+  },
+  {
+   "type": "single-hop",
+   "question": "What assumption is justified when no information is available to distinguish between allowed states of a system?",
+   "referenceAnswer": "In such cases, one must assume that all allowed states are equally likely.",
+   "goldChunkIds": [
+    "ch_7goibjnqlp3vvtdzjtm7"
+   ],
+   "goldText": [
+    "For example, the energy, pressure, or concentrations of different constituents may have known mean values established by the appropriate contact with the surroundings. In general, nothing else is known about the p / s . In the case of the microcanonical ensemble the only constraints were that the total energy should lie within a tolerance 5E of a prescribed value and that the particle number N and volume V be fixed. We then have no reason to prefer one allowed state over another and have no other choice but to assume that all states are equally likely or pi - 1/fi. Indeed, it is intuitively obvious that any other choice would represent a bias, or additional information about the system."
+   ],
+   "sourceDocKeys": [
+    "FoundationsPlischke"
+   ],
+   "id": "p14"
+  },
+  {
+   "type": "single-hop",
+   "question": "What distinguishes a reversible process from an irreversible one regarding the ability to retrace the thermodynamic path?",
+   "referenceAnswer": "A reversible process follows a path that can be exactly reversed, whereas an irreversible process does not follow the same path when reversed, even if the system returns to its initial state.",
+   "goldChunkIds": [
+    "ch_ptz5xpyr7hyol53gstx2"
+   ],
+   "goldText": [
+    "Before going on to discuss the second law, we pause to introduce some terminology. A thermodynamic transformation or process is any change in the state variables of the system. A spontaneous process is one that takes place without any change in the external constraints on the system, and is due simply to the internal dynamics. An adiabatic process is one in which no heat is exchanged between the system and its surroundings. A process is isothermal if the temperature is held fixed, isobaric if the pressure is fixed, isochoric if the density is constant, and quasistatic if the process is infinitely slow. A reversible process is by nature quasistatic and follows a path in thermodynamic space which can be exactly reversed. If this is not possible, the process is irreversible. An example of a reversible process is the slow adiabatic expansion of a gas against a piston on which a force is exerted externally. This force is infmitesimally less than PA, where P is the pressure of the gas and A the area of the piston. An example of an irreversible process is the free adiabatic expansion of a gas into a vacuum. In this case the initial state of the gas can be recovered if one compresses it and removes excess heat. This is, however, not the same thermodynamic path.\n\n1 The sign convention for the work term is not universally accepted, some authors consider work to be positive if done on the system."
+   ],
+   "sourceDocKeys": [
+    "ThermoPlischke"
+   ],
+   "id": "p17"
+  },
+  {
+   "type": "single-hop",
+   "question": "What mathematical condition must the entropy satisfy to represent a maximum at equilibrium?",
+   "referenceAnswer": "The entropy must be a concave function of the generalized displacements.",
+   "goldChunkIds": [
+    "ch_ajkzqbiha72gitr3tqyf"
+   ],
+   "goldText": [
+    "To this point we have required only that the equilibrium state correspond to a stationary state of the entropy. Requiring this stationary state to be a maximum will provide conditions on the second derivatives of the entropy. These conditions are local in nature. A stronger (global) condition is that the entropy be a concave function of the generalized displacements (see Problem 1.10).\n\nSome of the most useful stability criteria are obtained from the Gibbs potential rather than from the entropy and we proceed to consider a small (but macroscopic) system in contact with a much larger reservoir. This reservoir is assumed to be so large that fluctuations in the small system do not change the temperature or pressure of the reservoir, which we denote by To and PQ. The Gibbs potential, as we have seen in Section 1.3, is a minimum in equilibrium, and for the small system we have\n\n[formula]"
+   ],
+   "sourceDocKeys": [
+    "ThermoPlischke"
+   ],
+   "id": "p18"
+  },
+  {
+   "type": "single-hop",
+   "question": "What type of engine is described as the most efficient device operating between two thermal reservoirs, and what specific characteristic defines its operation?",
+   "referenceAnswer": "The Carnot engine is identified as the most efficient engine operating between two reservoirs; it is defined by having all operational steps that are reversible.",
+   "goldChunkIds": [
+    "ch_3hhhxulzmswygv6grpoa"
+   ],
+   "goldText": [
+    "A corollary of these statements is that the most efficient engine operating between two reservoirs at temperatures Ti and T2 is the Carnot engine. The Carnot engine is an idealized engine in which all the steps are reversible. We show the Carnot cycle for an ideal gas working substance in Figure 1.1. In step AB heat Qi is absorbed by the gas, which expands isothermally and does work in the process. The next step, BC, is adiabatic and further work is done. In step CD heat (-Q2) is given off to the low-temperature reservoir and work is done on the gas. Step DA returns the working substance adiabatically to its original state.\n\nThe efficiency, 77, of the engine is defined to be the ratio of the total work done in one cycle to the heat absorbed from the high-temperature reservoir:\n\n[formula]\n\n2 Readers who are interested in the history of thermodynamics will enjoy the article by M. J. Klein [157] on J. Willard Gibbs.\n\nFigure 1.1: Carnot cycle for an ideal gas working substance."
+   ],
+   "sourceDocKeys": [
+    "ThermoPlischke"
+   ],
+   "id": "p19"
+  },
+  {
+   "type": "single-hop",
+   "question": "How are thermodynamic variables defined for a magnetic solid?",
+   "referenceAnswer": "For a magnetic solid, the appropriate thermodynamic variables are the magnetic field H, the magnetization M, and the temperature T.",
+   "goldChunkIds": [
+    "ch_j46sirqjzm4c4e2t6jxw"
+   ],
+   "goldText": [
+    "A macroscopic system has many degrees of freedom, only a few of which are measurable. Thermodynamics thus concerns itself with the relation between a small number of variables which are sufficient to describe the bulk behavior of the system in question. In the case of a gas or liquid the appropriate variables are the pressure P, volume V, and temperature T. In the case of a magnetic solid the appropriate variables are the magnetic field H, the magnetization M, and the temperature T. In more complicated situations, such as when a liquid is in contact with its vapor, additional variables may be needed: such as the volume of both liquid and gas VL, VG, the interfacial area A, and surface tension a. If the thermodynamic variables are independent of time, the system is said to be in a steady state. If, moreover, there are no macroscopic currents in the system, such as a flow of heat or particles through the material, the system is in equilibrium. Any quantity which, in equilibrium, depends only on the thermodynamic variables, rather than on the history of the sample, is called a state function. In subsequent sections we shall meet a number of such quantities. For a large system, the state variables can normally be taken to be either extensive (i.e., proportional to the size of the system) or intensive (i.e., independent of system size)."
+   ],
+   "sourceDocKeys": [
+    "ThermoPlischke"
+   ],
+   "id": "p21"
+  },
+  {
+   "type": "multi-hop",
+   "question": "When analyzing a system in chemical equilibrium where the particle number fluctuates with temperature changes, how is the condition of equal chemical potentials derived from the maximization of entropy for two subsystems exchanging both energy and particles, and what specific ensemble is constructed when one of these subsystems is significantly larger than the other?",
+   "referenceAnswer": "In a system with variable particle numbers such as chemical equilibrium, the statistical treatment uses a partition function where concentrations adjust. For two systems in contact exchanging energy and particles, equilibrium occurs when temperatures are equal and chemical potentials are also equal, which maximizes total entropy. By letting one subsystem be extremely large, the grand canonical ensemble is constructed.",
+   "goldChunkIds": [
+    "ch_enl7bddiaahy6pmlxq7d",
+    "ch_jizkzzhmjarvx4drur57"
+   ],
+   "goldText": [
+    "Let systems 1 and 2 have energies E\\, E2 and particle numbers iVi, JV2 with\n\n[formula]\n\nThe microcanonical partition function for the composite system is given by\n\n[formula]\n\n[formula]\n\nThe product fti (Ei,Ni)Q2(ET - E\\, NT - N\\) will be sharply peaked near the values of E\\ and N\\ that maximize it. This occurs for values of E\\ and JVi near the ones that maximize the total entropy\n\n[formula]\n\nDifferentiation using (2.17) yields\n\n[formula]\n\nIn addition to the previous condition, that at equilibrium two systems in thermal contact have the same temperature, we now have a second condition, namely that the chemical potentials ^1 , ^2 of the two systems must be equal.\n\nWe can construct the grand canonical ensemble and partition function by using arguments similar to those of the preceding section. We let subsystem 2 be very much larger than subsystem 1. This allows us to expand\n\n[formula]\n\nWe can thus write for the grand canonical probability density,\n\n[formula]",
+    "In a number of instances it is not convenient or possible to fix the number of particles in a system. An example is the case of chemical equilibrium between a number of different species. As an external parameter, such as the temperature, is varied, the concentration of the various constituents will change and we must formulate the statistical treatment in terms of a partition function which allows concentrations to adjust. Moreover, we shall see in Section 2.4 that in quantum statistical mechanics a description in terms of a variable number of particles is usually more practical.\n\nWe proceed, as in Sections 2.2 and 1.6, by considering two systems in contact. They are free to exchange energy and particles, but the total energy and particle number are held fixed, as are the volumes of the two subsystems. We first derive an equilibrium condition and then let one system be extremely large compared to the other to obtain the probability density in phase space for the smaller system."
+   ],
+   "sourceDocKeys": [
+    "FoundationsPlischke"
+   ],
+   "id": "p24"
+  },
+  {
+   "type": "topic",
+   "question": "How do the mathematical conditions derived from maximizing total entropy for isolated systems relate to the requirements for a system to maintain stable equilibrium when interacting with a large thermal and mechanical reservoir?",
+   "referenceAnswer": "The section first establishes that for two isolated systems in contact, equilibrium occurs when pressure and temperature are equalized, which corresponds to a maximum in the total entropy. It then transitions to analyzing stability by requiring this entropy maximum to be global, meaning the entropy must be a concave function of its variables. Finally, these conditions are extended to a small system coupled to a large reservoir using the Gibbs potential, where stability is ensured if the second derivatives of energy with respect to entropy and volume satisfy specific inequalities that prevent spontaneous fluctuations from driving the system away from equilibrium.",
+   "goldChunkIds": [
+    "ch_2bwcymi3m4uwfmlfcarr",
+    "ch_ajkzqbiha72gitr3tqyf",
+    "ch_atzuh4y7r6rzsmw7fxx7"
+   ],
+   "goldText": [
+    "We consider two systems in contact with each other. It is intuitively clear that if heat can flow freely between the two systems and if the volumes of the two systems are not separately fixed, the parameters will evolve so as to equalize the pressure and temperature of the two systems. These conclusions can easily be obtained from the principle of maximum entropy. Suppose that the two systems have volumes Vi, and V2, energies E\\ and E2, and that the number of particles in each, as well as the combined energy and total volume, are fixed. In equilibrium, the total entropy\n\n[formula]\n\nmust be a maximum. Thus\n\n[formula]\n\nwhere we have used the constraint E\\ + E\\ = const., V\\ + V2 = const. We have\n\n[formula]\n\n[formula]\n\nwhich together with (1.67) yield\n\n[formula]\n\n[formula]\n\nor T\\ = T2, Pi = P2, which is the expected result. More generally, one finds that when the conjugate displacements are unconstrained, all generalized forces of two systems in equilibrium must be equal.",
+    "To this point we have required only that the equilibrium state correspond to a stationary state of the entropy. Requiring this stationary state to be a maximum will provide conditions on the second derivatives of the entropy. These conditions are local in nature. A stronger (global) condition is that the entropy be a concave function of the generalized displacements (see Problem 1.10).\n\nSome of the most useful stability criteria are obtained from the Gibbs potential rather than from the entropy and we proceed to consider a small (but macroscopic) system in contact with a much larger reservoir. This reservoir is assumed to be so large that fluctuations in the small system do not change the temperature or pressure of the reservoir, which we denote by To and PQ. The Gibbs potential, as we have seen in Section 1.3, is a minimum in equilibrium, and for the small system we have\n\n[formula]",
+    "Suppose now that there is a fluctuation in the entropy and volume of this system. To second order in the fluctuating quantities,\n\n[formula]\n\nwhich must be greater than zero if the state specified by Po i TD is the state of minimum Gibbs potential. Since dE\\/dSi = T0 and dE\\/dV\\ = -Po we obtain the condition\n\n[formula]\n\nwhere we have dropped the subscripts. The fluctuations in the entropy and volume are independent of each other, and we can guarantee that the expression\n\n(1.74) is positive if we require that E(S, V) satisfies the conditions\n\n[formula]\n\n[formula]\n\nThe first inequality reduces to\n\n[formula]\n\n[formula]\n\nand the final inequality yields\n\n[formula]"
+   ],
+   "sourceDocKeys": [
+    "ThermoPlischke"
+   ],
+   "id": "p29"
+  },
+  {
+   "type": "topic",
+   "question": "How do the definitions of state functions like internal energy contrast with heat and work in the context of reversible versus irreversible processes?",
+   "referenceAnswer": "The first law partitions a system's energy change into heat and work, where only the difference between these two quantities depends on the initial and final states, making internal energy a state function. In contrast, heat and work themselves are path-dependent, meaning their individual values depend on how the process occurs. This distinction is critical when comparing reversible processes, which follow a specific path in thermodynamic space that can be exactly reversed, to irreversible processes like free expansion, which do not.",
+   "goldChunkIds": [
+    "ch_e4rd3qwb3c2jaew3iapr",
+    "ch_hurajqohny2xijhewc7v",
+    "ch_ptz5xpyr7hyol53gstx2"
+   ],
+   "goldText": [
+    "Consider a system whose state can be specified by the values of a set of state variables Xj (e.g., the volume, the number of moles of the different constituents, the magnetization, the electric polarization, etc.) and the temperature. As mentioned earlier, thermodynamics exploits an analogy with mechanics and we write, for the work done during an infinitesimal process,\n\n[formula]\n\nwhere the Xj's can be thought of as generalized forces and the Xj's as generalized displacements.",
+    "The first law of thermodynamics restates the law of conservation of energy. However, it also partitions the change in energy of a system into two pieces, heat and work:\n\n[formula]\n\nIn (1.5) dE is the change in internal energy of the system, dQ the amount of heat added to the system, and dW the amount of work done by the system during an infinitesimal process 1 . Aside from the partitioning of the energy into two parts, the formula distinguishes between the infinitesimals dE and dQ, dW. The difference between the two measurable quantities dQ and dW is found to be the same for any process in which the system evolves between two given states, independently of the path. This indicates that dE is an exact differential or, equivalently, that the internal energy is a state function. The same is not true of the differentials dQ and dW, hence the difference in notation.",
+    "Before going on to discuss the second law, we pause to introduce some terminology. A thermodynamic transformation or process is any change in the state variables of the system. A spontaneous process is one that takes place without any change in the external constraints on the system, and is due simply to the internal dynamics. An adiabatic process is one in which no heat is exchanged between the system and its surroundings. A process is isothermal if the temperature is held fixed, isobaric if the pressure is fixed, isochoric if the density is constant, and quasistatic if the process is infinitely slow. A reversible process is by nature quasistatic and follows a path in thermodynamic space which can be exactly reversed. If this is not possible, the process is irreversible. An example of a reversible process is the slow adiabatic expansion of a gas against a piston on which a force is exerted externally. This force is infmitesimally less than PA, where P is the pressure of the gas and A the area of the piston. An example of an irreversible process is the free adiabatic expansion of a gas into a vacuum. In this case the initial state of the gas can be recovered if one compresses it and removes excess heat. This is, however, not the same thermodynamic path.\n\n1 The sign convention for the work term is not universally accepted, some authors consider work to be positive if done on the system."
+   ],
+   "sourceDocKeys": [
+    "ThermoPlischke"
+   ],
+   "id": "p30"
+  },
+  {
+   "type": "single-hop",
+   "question": "Why did Gibbs introduce the factor involving the product of particle numbers instead of a simple factorial in the context of an ideal gas mixture?",
+   "referenceAnswer": "Gibbs introduced this modification to eliminate the artificial entropy that arises when calculating the mixing of two volumes containing the same type of ideal gas.",
+   "goldChunkIds": [
+    "ch_wrei6jdlyy33tfyvvoi5"
+   ],
+   "goldText": [
+    "2 The result is obvious when the action-angle variables of an integrable system are used. Since phase space volumes are invariant under canonical transformations, the result will hold for any choice of generalized coordinates of an integrable system. In the case of nonintegrable systems (which are the ones we are mainly interested in since we are assuming the mixing hypothesis), the program of semiclassical quantization is remarkably difficult to carry out [34].\n\n3 Historically, the JV! in (2.10) was introduced by Gibbs to remove a spurious entropy of mixing of two volumes of the same ideal gas (see Problem 2.2). If we are dealing with a mixture consisting of Ni particles of type 1, JVj particles of type 2, and so on, we must replace iV! by Ni'.Nzl"
+   ],
+   "sourceDocKeys": [
+    "FoundationsPlischke"
+   ],
+   "id": "pr22"
+  },
+  {
+   "type": "single-hop",
+   "question": "Why was the constant $h^{3N}$ selected instead of another value with dimensions of action cubed?",
+   "referenceAnswer": "The value $h^{3N}$ was chosen to align the classical expression with the Bohr-Sommerfeld semiclassical theory, specifically utilizing the quantization rule where a volume of phase space contains an average of $W/h^{3N}$ quantum states.",
+   "goldChunkIds": [
+    "ch_ibqdnjl4c4xp5djeufqj"
+   ],
+   "goldText": [
+    "where ks is Boltzmann's constant. The factor in front of the integral in (2.8) requires some comment. To make Q(E) dimensionless a constant of dimension [action]~ 3N is required. The particular value chosen is arbitrary in a purely classical context. We have chosen the value h~ 3N to make contact with the Bohr-Sommerfeld semiclassical theory. According to this theory the quantization rule for a single degree of freedom is § pdq - rh, where r is an integer. A volume of phase space W = fw dpdq which is large enough that the discreteness of the levels is unimportant will then on the average contain W/h quantum states. It is intuitively straightforward 2 to make the generalization that a volume\n\n[formula]\n\nwill contain on the average W/h 3N states."
+   ],
+   "sourceDocKeys": [
+    "FoundationsPlischke"
+   ],
+   "id": "pr23"
+  },
+  {
+   "type": "single-hop",
+   "question": "How is the transition from using entropy as an independent variable to using temperature achieved in statistical mechanics?",
+   "referenceAnswer": "The change of independent variable from entropy to temperature is accomplished by replacing energy as the dependent variable with the Helmholtz free energy.",
+   "goldChunkIds": [
+    "ch_ic4lwxekwbvo6ck44jlk"
+   ],
+   "goldText": [
+    "We have is the canonical partition function. The canonical distribution is often a more convenient tool than the micro canonical distribution. In the microcanonical ensemble we were dealing with states with a specified energy E(S, V, N) and T, P, and /x were derived quantities. In the canonical ensemble the system is kept at fixed temperature. We have already seen in Section 1.3 that the change of independent variable from S to T is achieved by replacing the energy E as dependent variable by the Helmholtz free energy A:\n\n[formula]\n\n[formula]\n\nThe statistical mechanical definition of the free energy is\n\n[formula]\n\nWe will now show that the two definitions (2.34) and (2.36) agree in the sense that for a large system the free energy defined by (2.36) is given by\n\n[formula]\n\nwhere (E) and (S) are the most probable values of E and S in the canonical ensemble. To see this, let us rewrite the partition function\n\n[formula]"
+   ],
+   "sourceDocKeys": [
+    "FoundationsPlischke"
+   ],
+   "id": "pr25"
+  },
+  {
+   "type": "multi-hop",
+   "question": "When two isolated subsystems can exchange energy but have fixed particle numbers and volumes, what specific condition regarding their total entropy must be met to maximize the product of their statistical weights, and how does this relate to the assumption that no bias exists in selecting allowed states for a microcanonical ensemble?",
+   "referenceAnswer": "The product of the statistical weights is maximized when the total entropy is at its maximum value. This outcome relies on the principle that, in the absence of additional information or bias, all accessible states within the energy tolerance are assumed to be equally likely.",
+   "goldChunkIds": [
+    "ch_5r3o6nyrajf6fb6guqyi",
+    "ch_7goibjnqlp3vvtdzjtm7"
+   ],
+   "goldText": [
+    "We now consider two systems which are free to exchange energy but which are isolated from the rest of the universe by an ideal insulating surface. The particle numbers Ni, iV2 and volumes V\\, V2 are fixed for each subsystem. The total energy will be constant under our assumptions and we assume further that the two subsystems are sufficiently weakly interacting that we can write\n\n[formula]\n\nwhere E\\ and E^ are the energies of the subsystems. We again assume a tolerance SE chosen suitably so that the statistical weights fl, fii, ^2 are proportional to SE. We then have\n\n[formula]\n\nIf the subsystems are sufficiently large, the product 0,2{ET - E\\)Q,i{E\\) will be a sharply peaked function of E\\. The reason for this is that fii and Q.2 are rapidly increasing functions of E\\ and ET - E\\ respectively. 4 From the definition (2.9) we note that the entropy is a monotonically increasing function of Q, and that the product Q1Q.2 will be at a maximum when the total entropy\n\n[formula]",
+    "For example, the energy, pressure, or concentrations of different constituents may have known mean values established by the appropriate contact with the surroundings. In general, nothing else is known about the p / s . In the case of the microcanonical ensemble the only constraints were that the total energy should lie within a tolerance 5E of a prescribed value and that the particle number N and volume V be fixed. We then have no reason to prefer one allowed state over another and have no other choice but to assume that all states are equally likely or pi - 1/fi. Indeed, it is intuitively obvious that any other choice would represent a bias, or additional information about the system."
+   ],
+   "sourceDocKeys": [
+    "FoundationsPlischke"
+   ],
+   "id": "pr214"
+  },
+  {
+   "type": "multi-hop",
+   "question": "How does the difficulty in proving the ergodic hypothesis for systems with nonintegrable equations of motion relate to the alternative approach of using information theory to establish equilibrium statistical mechanics without relying on time evolution?",
+   "referenceAnswer": "The lack of a proof for the ergodic hypothesis under general conditions, particularly because real systems have nonintegrable equations of motion and little is known about large particle systems, indicates that the link between time evolution and the ensemble concept is weak. Consequently, it becomes possible to formulate the foundation of equilibrium statistical mechanics using information theory, where thermodynamic variables are inferred from a least-possible-bias estimate based on available information, thereby severing the link with dynamics entirely.",
+   "goldChunkIds": [
+    "ch_fdbuy3wgrvs7hrptvslj",
+    "ch_wmybldqc3jmn5i4s2vio"
+   ],
+   "goldText": [
+    "The link provided by the ergodic hypothesis between the time evolution of a dynamical system and the ensemble concept is a weak one. It is therefore of interest to show that it is possible to formulate the foundation of equilibrium statistical mechanics in terms of information theory [142], in which the thermodynamic variables are inferred from a least-possible-bias estimate on the basis of available information. In this way the link with dynamics is severed altogether and the approach leads to a maximum entropy principle that yields results equivalent to the ones found earlier in this chapter.\n\nConsider first the situation in which a state variable x is capable of attaining any one of fi discrete values X{ (i = 1,2,..., fi). Let pi be the associated probability distribution. This distribution must be normalized:\n\n[formula]\n\n»=i\n\nand there may be a number of other constraints of the form\n\n[formula]\n\n» = 1",
+    "There is nothing obvious about this hypothesis. In Problem 2.1 the reader will find one example of a system that satisfies this hypothesis and one that does not. Both examples are trivial in the sense that the equations of motion of the dynamical variables are integrable, whereas in real systems, the equations of motion are invariably nonintegrable and relatively little is known in general about the behavior of large (~ 10 23 particles) systems of equations. Suffice to say that a proof of the ergodic hypothesis under fairly general conditions is lacking. In any case, there is no clear connection between the measuring time and the time it takes for an ergodic system to visit all parts of the surface T(E). Indeed, it may not even be necessary for the measurement to take very long, since the instantaneous measurement of a macroscopic property such as the pressure of particles in a box involves averaging over contributions from all the degrees of freedom of the system."
+   ],
+   "sourceDocKeys": [
+    "FoundationsPlischke"
+   ],
+   "id": "pr217"
+  },
+  {
+   "type": "multi-hop",
+   "question": "How does the derivation of probability distributions for systems with non-extensive energy differ from the standard microcanonical ensemble approach, and what specific mathematical procedure is used to maximize the generalized entropy expression when multiple constraints are involved?",
+   "referenceAnswer": "The Boltzmann-Shannon entropy relies on the requirement of extensivity to establish uniqueness, but systems with non-extensive energy require replacing this with a nonextensive measure, such as that proposed by Tsallis. To find the probability distribution for these generalized cases, one maximizes the corresponding entropy expression subject to normalization and other constraints using the method of Lagrange multipliers.",
+   "goldChunkIds": [
+    "ch_bfzlmt5iy4qae5fa6tcd",
+    "ch_e4m5mw2net6vdyepfdtv"
+   ],
+   "goldText": [
+    "Equation (2.100) was derived by Shannon [271] shortly after the second world war and is generally considered to be one of the fundamental results of information theory. Note the key role of the requirement of extensivity in establishing the uniqueness of the Boltzmann-Shannon entropy. As pointed out at the end of section 2.1 not all system are \"normal\" with an extensive energy. It is therefore natural that attempts have been made to replace the Boltzmann-Shannon entropy with a nonextensive measure. The most significant such attempt is that of Costantino Tsallis [305] and there is now a very large literature on the subject 6 .\n\nIt is easy to generalize the Boltzmann-Shannon definition to a continuous probability distribution p(x):\n\n[formula]\n\nConsider the case of N identical particles in a 6N-dimensional phase space. We have seen that according to the semiclassical rules there are\n\n[formula]\n\nstates in the phase space volume d 6N x. Therefore, we find for the entropy\n\n[formula]",
+    "It is easy to see that if we let\n\n[formula]\n\nwhere Cl(E) is given by (2.10), we get back the expression (2.9) for the entropy of the microcanonical ensemble. To see that the probability density (2.104) maximizes the expression (2.103) subject to the constraint (2.101), we use the method of Lagrange multipliers. Requiring that the functional derivative\n\n[formula]\n\nshould vanish yields\n\n[formula]\n\nThe Lagrange multiplier A is determined by the normalization condition (2.101) from which (2.104) follows. The extension to the case in which there are one or more constraints of the form (2.96) is straightforward. If we wish to constrain the expectation value of the function f{x), we maximize the expression\n\nA fairly complete list of references can be found at http://tsallis.cat.cbpf.br/biblio.htm\n\n[formula]\n\nwhere j3 and A are Lagrange multipliers. This procedure yields\n\n[formula]\n\n[formula]\n\nwe find from the normalizing constraint (2.95),\n\n[formula]"
+   ],
+   "sourceDocKeys": [
+    "FoundationsPlischke"
+   ],
+   "id": "pr222"
+  }
+ ]
+}

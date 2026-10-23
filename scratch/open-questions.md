@@ -122,3 +122,17 @@ Recommendation: (a). Blocks: nothing before the baseline.
 
 ## Resolved 2026-10-23
 Q12 approve all (applied to design/). Q13 option (a), with a required decoded-formula follow-up build. Q14 moot (committed). Q15 option (a), clarified: each arXiv paper is its own corpus, used as a review-plus-cited-works pair with validated equations.
+
+## Sprint 2 questions for the user (2026-10-23)
+
+## Q16. Which model writes the multi-hop and topic questions? (2026-10-23, question review)
+Question: the local model produced 12 usable multi-hop and 11 usable topic questions (of 40 and 14 drafted); the multi-hop pre-check and the topic-level gap rest on those. Should a stronger model write them?
+Options: (a) a Claude model writes multi-hop and topic questions (a few hundred calls, small cost), with the same review; (b) keep the local model and run more rounds (about 12 minutes per round, yield about 30%); (c) leave it, and accept that multi-hop cannot be tested at this stage.
+Implications: (a) departs from the 2026-10-17 decision to use local models for all calls (Q3 in the old list), but it is the design doc's own recommendation for question quality and costs little; it makes the multi-hop pre-check meaningful. (b) is free but slow and may not reach useful numbers. (c) leaves the graph-walk and decomposition pre-checks unmeasured.
+Recommendation: (a), for question generation only; answering and judging stay local. Blocks: a meaningful multi-hop pre-check; nothing else.
+
+## Q17. What is the first expansion? (2026-10-23, Phase 4 result; roadmap escalation point "results that leave the first expansion ambiguous")
+Question: the baseline results do not single out an expensive layer (`scratch/sprint-2/results.md`). Which order do you want?
+Options: (a) harder test first (Q16 plus the arXiv review-and-cited-works corpus, Q15), then decide; meanwhile try adjacent-chunk or section expansion with an oracle pre-check; (b) start the relation layer now (extraction fixes first, since 40% of sampled relations are not standalone); (c) community summaries now, aimed at topic-level questions.
+Implications: (a) costs about a sprint of test work before a layer, but every later layer gets a test that can show a difference; the baseline is already close to the ceiling on the current one. (b) is the longest track and is blocked on extraction quality, but it unlocks graph walk and equivalence. (c) targets the one measured gap (n = 11), needs relation or chunk clustering first and an LLM summariser.
+Recommendation: (a). Blocks: the Sprint 3 plan.

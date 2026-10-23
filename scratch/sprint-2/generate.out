@@ -1,0 +1,25 @@
+group 10/70: 6 questions, 4 dropped, 45 s
+group 20/70: 11 questions, 9 dropped, 84 s
+group 30/70: 17 questions, 13 dropped, 123 s
+group 40/70: 22 questions, 18 dropped, 163 s
+group 50/70: 23 questions, 26 dropped, 249 s
+group 60/70: 27 questions, 31 dropped, 323 s
+group 70/70: 32 questions, 36 dropped, 434 s
+36 groups or drafts dropped {"wording-copy":35,"generation failed: question 0 uses 2 pas":1} in 433914 ms
+by type { 'single-hop': 22, 'multi-hop': 5, topic: 5 } by doc {
+  FoundationsKardar: 16,
+  ThermoKardar: 15,
+  'FoundationsKardar+ThermoKardar': 1
+} with formula in gold 21
+group 10/67: 7 questions, 3 dropped, 41 s
+group 20/67: 14 questions, 6 dropped, 82 s
+group 30/67: 18 questions, 12 dropped, 125 s
+group 40/67: 21 questions, 19 dropped, 163 s
+group 50/67: 24 questions, 25 dropped, 244 s
+group 60/67: 27 questions, 31 dropped, 317 s
+35 groups or drafts dropped {"wording-copy":34,"generation failed: question 0 uses 2 pas":1} in 399300 ms
+by type { 'single-hop': 21, 'multi-hop': 6, topic: 3 } by doc {
+  FoundationsPlischke: 16,
+  ThermoPlischke: 12,
+  'FoundationsPlischke+ThermoPlischke': 2
+} with formula in gold 24

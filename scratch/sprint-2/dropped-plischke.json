@@ -1,0 +1,383 @@
+[
+ {
+  "group": {
+   "index": 4,
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_enl7bddiaahy6pmlxq7d"
+   ]
+  },
+  "reason": "wording-copy"
+ },
+ {
+  "group": {
+   "index": 5,
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_ewhrulbgg7v4tt7zpglg"
+   ]
+  },
+  "reason": "wording-copy"
+ },
+ {
+  "group": {
+   "index": 6,
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_nuzgilfyetd5ulfzvvew"
+   ]
+  },
+  "reason": "wording-copy"
+ },
+ {
+  "group": {
+   "index": 15,
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_b2nqg2rhnaw34djlyunr"
+   ]
+  },
+  "reason": "wording-copy"
+ },
+ {
+  "group": {
+   "index": 17,
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_p7va5ffou2cohq3ywv2u"
+   ]
+  },
+  "reason": "wording-copy"
+ },
+ {
+  "group": {
+   "index": 19,
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_u6q6eyyjkbnxtwrdo2bi"
+   ]
+  },
+  "reason": "wording-copy"
+ },
+ {
+  "group": {
+   "index": 20,
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_66uqbp37gb3t4xz6zjam"
+   ]
+  },
+  "reason": "wording-copy"
+ },
+ {
+  "group": {
+   "index": 21,
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_x4ja7vzfpd5j5nnb7fr7"
+   ]
+  },
+  "reason": "wording-copy"
+ },
+ {
+  "group": {
+   "index": 22,
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_rzdmwkvqezdzoc4c4oes"
+   ]
+  },
+  "reason": "wording-copy"
+ },
+ {
+  "group": {
+   "index": 25,
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_s3rykjep7uh3wpxgrgwb"
+   ]
+  },
+  "reason": "wording-copy"
+ },
+ {
+  "group": {
+   "index": 26,
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_man7jvkeuu2dvyzssmgv"
+   ]
+  },
+  "reason": "wording-copy"
+ },
+ {
+  "group": {
+   "index": 27,
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_eiu4rjpscmohqozlicsk"
+   ]
+  },
+  "reason": "wording-copy"
+ },
+ {
+  "group": {
+   "index": 30,
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_2bwcymi3m4uwfmlfcarr"
+   ]
+  },
+  "reason": "wording-copy"
+ },
+ {
+  "group": {
+   "index": 32,
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_5qaqbpqhpi76p23skwme"
+   ]
+  },
+  "reason": "wording-copy"
+ },
+ {
+  "group": {
+   "index": 34,
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_joo45sqzt5b4t5qiuoe2"
+   ]
+  },
+  "reason": "wording-copy"
+ },
+ {
+  "group": {
+   "index": 35,
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_22ssyoj4g24fzqrpfd5x"
+   ]
+  },
+  "reason": "wording-copy"
+ },
+ {
+  "group": {
+   "index": 37,
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_jxgvgnn6vawbjj26prmu"
+   ]
+  },
+  "reason": "wording-copy"
+ },
+ {
+  "group": {
+   "index": 38,
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_5qb4ugtonblyldtpulw7"
+   ]
+  },
+  "reason": "wording-copy"
+ },
+ {
+  "group": {
+   "index": 39,
+   "type": "single-hop",
+   "chunkIds": [
+    "ch_lpwhtx36hnhev4ewfhxd"
+   ]
+  },
+  "reason": "wording-copy"
+ },
+ {
+  "group": {
+   "index": 40,
+   "type": "multi-hop",
+   "chunkIds": [
+    "ch_hhz6bb2e5prx7mezjnkr",
+    "ch_lpwhtx36hnhev4ewfhxd"
+   ]
+  },
+  "reason": "wording-copy"
+ },
+ {
+  "group": {
+   "index": 43,
+   "type": "multi-hop",
+   "chunkIds": [
+    "ch_rzdmwkvqezdzoc4c4oes",
+    "ch_j46sirqjzm4c4e2t6jxw",
+    "ch_fdjgngujjyaa6hueblag"
+   ]
+  },
+  "reason": "wording-copy"
+ },
+ {
+  "group": {
+   "index": 46,
+   "type": "multi-hop",
+   "chunkIds": [
+    "ch_atzuh4y7r6rzsmw7fxx7",
+    "ch_5r3o6nyrajf6fb6guqyi"
+   ]
+  },
+  "reason": "wording-copy"
+ },
+ {
+  "group": {
+   "index": 47,
+   "type": "multi-hop",
+   "chunkIds": [
+    "ch_bkadd25rcchreleknau7",
+    "ch_fdbuy3wgrvs7hrptvslj",
+    "ch_7goibjnqlp3vvtdzjtm7"
+   ]
+  },
+  "reason": "wording-copy"
+ },
+ {
+  "group": {
+   "index": 48,
+   "type": "multi-hop",
+   "chunkIds": [
+    "ch_eiu4rjpscmohqozlicsk",
+    "ch_fdjgngujjyaa6hueblag"
+   ]
+  },
+  "reason": "wording-copy"
+ },
+ {
+  "group": {
+   "index": 49,
+   "type": "multi-hop",
+   "chunkIds": [
+    "ch_hurajqohny2xijhewc7v",
+    "ch_rv56eltv2ym5ori7bbas",
+    "ch_22ssyoj4g24fzqrpfd5x"
+   ]
+  },
+  "reason": "wording-copy"
+ },
+ {
+  "group": {
+   "index": 52,
+   "type": "multi-hop",
+   "chunkIds": [
+    "ch_wxbiww4ynjvwsryhludx",
+    "ch_ewhrulbgg7v4tt7zpglg"
+   ]
+  },
+  "reason": "wording-copy"
+ },
+ {
+  "group": {
+   "index": 54,
+   "type": "multi-hop",
+   "chunkIds": [
+    "ch_cfmvlwkrdkcc7j5dawzq",
+    "ch_nuzgilfyetd5ulfzvvew"
+   ]
+  },
+  "reason": "wording-copy"
+ },
+ {
+  "group": {
+   "index": 55,
+   "type": "multi-hop",
+   "chunkIds": [
+    "ch_mgr6r2463uftgmjyunh5",
+    "ch_73r7y42yv4r4pdzfm4ku",
+    "ch_iewysbkpgqaeri6nmudm"
+   ]
+  },
+  "reason": "wording-copy"
+ },
+ {
+  "group": {
+   "index": 56,
+   "type": "multi-hop",
+   "chunkIds": [
+    "ch_4hebrfj4i7uti2qtpytg",
+    "ch_733r7vnzdjgirc37f6xk"
+   ]
+  },
+  "reason": "wording-copy"
+ },
+ {
+  "group": {
+   "index": 57,
+   "type": "multi-hop",
+   "chunkIds": [
+    "ch_wi7ugysqpkv7ffv6bzpa",
+    "ch_lo3hfzrqj2xdhhb5ccrj"
+   ]
+  },
+  "reason": "wording-copy"
+ },
+ {
+  "group": {
+   "index": 58,
+   "type": "multi-hop",
+   "chunkIds": [
+    "ch_snoakkj2scda45nmwlqc",
+    "ch_n27a2wtd634bv6gqs7oq"
+   ]
+  },
+  "reason": "wording-copy"
+ },
+ {
+  "group": {
+   "index": 60,
+   "type": "topic",
+   "chunkIds": [
+    "ch_joo45sqzt5b4t5qiuoe2",
+    "ch_jxgvgnn6vawbjj26prmu",
+    "ch_rv56eltv2ym5ori7bbas",
+    "ch_x4ja7vzfpd5j5nnb7fr7",
+    "ch_nsvya6fnfcpsx33jt5sf"
+   ]
+  },
+  "reason": "wording-copy"
+ },
+ {
+  "group": {
+   "index": 63,
+   "type": "topic",
+   "chunkIds": [
+    "ch_j46sirqjzm4c4e2t6jxw",
+    "ch_wi7ugysqpkv7ffv6bzpa",
+    "ch_lo3hfzrqj2xdhhb5ccrj"
+   ]
+  },
+  "reason": "generation failed: question 0 uses 2 passages, needs 3"
+ },
+ {
+  "group": {
+   "index": 64,
+   "type": "topic",
+   "chunkIds": [
+    "ch_jizkzzhmjarvx4drur57",
+    "ch_enl7bddiaahy6pmlxq7d",
+    "ch_kpm7edoqnl7qzlsydijv",
+    "ch_htw7obdtbch3w3hmmyuq",
+    "ch_fwynntimvukk6c7wweup"
+   ]
+  },
+  "reason": "wording-copy"
+ },
+ {
+  "group": {
+   "index": 65,
+   "type": "topic",
+   "chunkIds": [
+    "ch_pznz7zrcubgwgfs2zsko",
+    "ch_rzdmwkvqezdzoc4c4oes",
+    "ch_zfk3sc4bxwwsj2r7n2nx",
+    "ch_qoobiqandjy5pvztzyuj",
+    "ch_7lma3lyoho7lssd7khd5",
+    "ch_hhz6bb2e5prx7mezjnkr"
+   ]
+  },
+  "reason": "wording-copy"
+ }
+]

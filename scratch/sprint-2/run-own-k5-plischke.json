@@ -1,0 +1,1187 @@
+{
+ "tag": "own-k5-plischke",
+ "setAuthor": "plischke",
+ "indexAuthor": "plischke",
+ "setId": "qs_4rot47kbnzjnmrsgj5pu",
+ "runId": "er_01M5N1NRYH78R5GNFKZZAWD32Z",
+ "ms": 285014,
+ "conditions": [
+  "retrieved"
+ ],
+ "ks": [
+  1,
+  3,
+  5
+ ],
+ "summary": {
+  "buildId": "bd_kixjonpuruzwuth7mto2",
+  "questions": 26,
+  "ks": [
+   1,
+   3,
+   5
+  ],
+  "byCondition": {
+   "retrieved": {
+    "judge": 0.9038461538461539,
+    "retrieval": {
+     "ks": [
+      1,
+      3,
+      5
+     ],
+     "perQuestion": {
+      "p1": {
+       "recall": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       }
+      },
+      "p2": {
+       "recall": {
+        "1": 0,
+        "3": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 0,
+        "3": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 0,
+        "3": 1,
+        "5": 1
+       }
+      },
+      "p4": {
+       "recall": {
+        "1": 0,
+        "3": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 0,
+        "3": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 0,
+        "3": 1,
+        "5": 1
+       }
+      },
+      "p5": {
+       "recall": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       }
+      },
+      "p6": {
+       "recall": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       }
+      },
+      "p7": {
+       "recall": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       }
+      },
+      "p8": {
+       "recall": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "allGold": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "withSummaries": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       }
+      },
+      "p9": {
+       "recall": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       }
+      },
+      "p10": {
+       "recall": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       }
+      },
+      "p11": {
+       "recall": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       }
+      },
+      "p12": {
+       "recall": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       }
+      },
+      "p13": {
+       "recall": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       }
+      },
+      "p14": {
+       "recall": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       }
+      },
+      "p17": {
+       "recall": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       }
+      },
+      "p18": {
+       "recall": {
+        "1": 0,
+        "3": 0,
+        "5": 1
+       },
+       "allGold": {
+        "1": 0,
+        "3": 0,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 0,
+        "3": 0,
+        "5": 1
+       }
+      },
+      "p19": {
+       "recall": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       }
+      },
+      "p21": {
+       "recall": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       }
+      },
+      "p24": {
+       "recall": {
+        "1": 0.5,
+        "3": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 0,
+        "3": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 0.5,
+        "3": 1,
+        "5": 1
+       }
+      },
+      "p29": {
+       "recall": {
+        "1": 0.3333333333333333,
+        "3": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 0,
+        "3": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 0.3333333333333333,
+        "3": 1,
+        "5": 1
+       }
+      },
+      "p30": {
+       "recall": {
+        "1": 0.3333333333333333,
+        "3": 0.3333333333333333,
+        "5": 0.3333333333333333
+       },
+       "allGold": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "withSummaries": {
+        "1": 0.3333333333333333,
+        "3": 0.3333333333333333,
+        "5": 0.3333333333333333
+       }
+      },
+      "pr22": {
+       "recall": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       }
+      },
+      "pr23": {
+       "recall": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       }
+      },
+      "pr25": {
+       "recall": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "allGold": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "withSummaries": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       }
+      },
+      "pr214": {
+       "recall": {
+        "1": 0.5,
+        "3": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 0,
+        "3": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 0.5,
+        "3": 1,
+        "5": 1
+       }
+      },
+      "pr217": {
+       "recall": {
+        "1": 0.5,
+        "3": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 0,
+        "3": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 0.5,
+        "3": 1,
+        "5": 1
+       }
+      },
+      "pr222": {
+       "recall": {
+        "1": 0.5,
+        "3": 0.5,
+        "5": 0.5
+       },
+       "allGold": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "withSummaries": {
+        "1": 0.5,
+        "3": 0.5,
+        "5": 0.5
+       }
+      }
+     },
+     "overall": {
+      "recall": {
+       "1": 0.6794871794871795,
+       "3": 0.8397435897435896,
+       "5": 0.8782051282051282
+      },
+      "withSummaries": {
+       "1": 0.6794871794871795,
+       "3": 0.8397435897435896,
+       "5": 0.8782051282051282
+      }
+     },
+     "byType": {
+      "single-hop": {
+       "n": 20,
+       "recall": {
+        "1": 0.75,
+        "3": 0.85,
+        "5": 0.9
+       },
+       "allGold": {
+        "1": 0.75,
+        "3": 0.85,
+        "5": 0.9
+       }
+      },
+      "multi-hop": {
+       "n": 4,
+       "recall": {
+        "1": 0.5,
+        "3": 0.875,
+        "5": 0.875
+       },
+       "allGold": {
+        "1": 0,
+        "3": 0.75,
+        "5": 0.75
+       }
+      },
+      "topic": {
+       "n": 2,
+       "recall": {
+        "1": 0.3333333333333333,
+        "3": 0.6666666666666666,
+        "5": 0.6666666666666666
+       },
+       "allGold": {
+        "1": 0,
+        "3": 0.5,
+        "5": 0.5
+       }
+      }
+     }
+    }
+   }
+  },
+  "orphaned": []
+ },
+ "rows": [
+  {
+   "runId": "er_01M5N1NRYH78R5GNFKZZAWD32Z",
+   "questionId": "p1",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N1NRYND0VE2C2ETJYDWHEB",
+   "retrieved": [
+    "ch_5r3o6nyrajf6fb6guqyi",
+    "ch_2bwcymi3m4uwfmlfcarr",
+    "ch_iewysbkpgqaeri6nmudm",
+    "ch_fdbuy3wgrvs7hrptvslj",
+    "ch_mj6jcmhfavmfhkfiqgpu"
+   ],
+   "recall": {
+    "1": 1,
+    "3": 1,
+    "5": 1
+   },
+   "answer": "Based on the provided context, the product of the statistical weights ($\\Omega_1 \\Omega_2$) of two energy-exchanging subsystems reaches its maximum when the total entropy ($S = S_1 + S_2$) is at a maximum. This condition occurs when the systems are in equilibrium, which implies that their temperatures are equal ($T_1 = T_2$). The text notes that for sufficiently large subsystems, this product forms a sharply peaked function of energy distribution around this equilibrium point.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly states that the product reaches its maximum when total entropy is at its maximum, which aligns perfectly with the reference answer.\"}",
+   "type": "single-hop",
+   "docs": [
+    "FoundationsPlischke"
+   ]
+  },
+  {
+   "runId": "er_01M5N1NRYH78R5GNFKZZAWD32Z",
+   "questionId": "p10",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N1R7E83XXQ9VNK5YGWV8HD",
+   "retrieved": [
+    "ch_mj6jcmhfavmfhkfiqgpu",
+    "ch_wi7ugysqpkv7ffv6bzpa",
+    "ch_pzrqymkzhakidymyvap6",
+    "ch_mlkvjkfvxvy5kstgblxt",
+    "ch_bpmkglkp6tn63taf6cn6"
+   ],
+   "recall": {
+    "1": 1,
+    "3": 1,
+    "5": 1
+   },
+   "answer": "Based on the provided text, the function $S$ is considered an extensive variable when the total uncertainty of a system composed of independent subsystems is required to be the sum of the uncertainties associated with each individual subsystem. This additivity requirement essentially uniquely determines the form of the function $S$.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly states that S is extensive when the total uncertainty equals the sum of the subsystem uncertainties, matching all essential facts in the reference.\"}",
+   "type": "single-hop",
+   "docs": [
+    "FoundationsPlischke"
+   ]
+  },
+  {
+   "runId": "er_01M5N1NRYH78R5GNFKZZAWD32Z",
+   "questionId": "p11",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N1RG30S76KY8KHXQRKQ2E4",
+   "retrieved": [
+    "ch_e4m5mw2net6vdyepfdtv",
+    "ch_cfmvlwkrdkcc7j5dawzq",
+    "ch_fdbuy3wgrvs7hrptvslj",
+    "ch_snoakkj2scda45nmwlqc",
+    "ch_mj6jcmhfavmfhkfiqgpu"
+   ],
+   "recall": {
+    "1": 1,
+    "3": 1,
+    "5": 1
+   },
+   "answer": "Based on the provided text, the normalization constant (referred to as $\\lambda$ or $A$ in the context of the specific formula) is determined by applying the normalization condition that requires the sum of probabilities to equal one. The text explicitly states that this multiplier is found \"from the normalizing constraint\" after taking the functional derivative with respect to the probability distribution and setting it to zero. Consequently, substituting this determined constant back into the general expression yields the final probability distribution for the ensemble.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly identifies that the normalization condition is used to determine the constant (Lagrange multiplier), which aligns with the reference answer's statement.\"}",
+   "type": "single-hop",
+   "docs": [
+    "FoundationsPlischke"
+   ]
+  },
+  {
+   "runId": "er_01M5N1NRYH78R5GNFKZZAWD32Z",
+   "questionId": "p12",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N1RTTM99P2511CWH97VEN5",
+   "retrieved": [
+    "ch_tj22dx7prtg36f27ad4a",
+    "ch_hhz6bb2e5prx7mezjnkr",
+    "ch_2bwcymi3m4uwfmlfcarr",
+    "ch_wrei6jdlyy33tfyvvoi5",
+    "ch_7lma3lyoho7lssd7khd5"
+   ],
+   "recall": {
+    "1": 1,
+    "3": 1,
+    "5": 1
+   },
+   "answer": "Based on the provided text, mixing occurs when an initial compact distribution of points in phase space distorts into a convoluted object that permeates the entire surface while maintaining its volume, as required by Liouville's theorem. This phenomenon can be proven for systems like hard spheres and effectively happens in imperfectly isolated systems where sensitivity to initial conditions allows small amounts of noise to distort trajectories sufficiently. The text notes that mixing is irrelevant for truly isolated single systems but applies when discussing distributions of points representing ensembles rather than individual systems.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer contains all essential facts from the reference, including the description of the distortion of point distributions, the volume maintenance, the example of hard spheres, and the distinction between isolated systems (irrelevant) and imperfectly insulated systems (noise/distortion), while adding accurate context about Liouville's theorem and ensembles.\"}",
+   "type": "single-hop",
+   "docs": [
+    "FoundationsPlischke"
+   ]
+  },
+  {
+   "runId": "er_01M5N1NRYH78R5GNFKZZAWD32Z",
+   "questionId": "p13",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N1S6W82QDT3BD92E8C2YFJ",
+   "retrieved": [
+    "ch_733r7vnzdjgirc37f6xk",
+    "ch_73r7y42yv4r4pdzfm4ku",
+    "ch_25fxms7ihs4ujyw2e3hl",
+    "ch_ibqdnjl4c4xp5djeufqj",
+    "ch_ewhrulbgg7v4tt7zpglg"
+   ],
+   "recall": {
+    "1": 1,
+    "3": 1,
+    "5": 1
+   },
+   "answer": "Based on the provided text, a Bose system obeys Boltzmann statistics to a good approximation when the thermal wavelength is small compared to the typical interparticle separation (V/N)^(1/3). This condition ensures that the probability of occupation for any state is small, making the system nondegenerate.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly states the essential fact regarding the thermal wavelength being small compared to the interparticle separation (V/N)^(1/3), matching the reference answer without contradiction.\"}",
+   "type": "single-hop",
+   "docs": [
+    "FoundationsPlischke"
+   ]
+  },
+  {
+   "runId": "er_01M5N1NRYH78R5GNFKZZAWD32Z",
+   "questionId": "p14",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N1SFXSY1XKM2WWVS5F98MS",
+   "retrieved": [
+    "ch_7goibjnqlp3vvtdzjtm7",
+    "ch_fdbuy3wgrvs7hrptvslj",
+    "ch_pzrqymkzhakidymyvap6",
+    "ch_wxbiww4ynjvwsryhludx",
+    "ch_mj6jcmhfavmfhkfiqgpu"
+   ],
+   "recall": {
+    "1": 1,
+    "3": 1,
+    "5": 1
+   },
+   "answer": "Based on the provided text, when no additional information is known about a system beyond its constraints (such as fixed energy, particle number, and volume), it is justified to assume that all allowed states are equally likely. The passage explicitly states that any other choice would represent an unwarranted bias or imply extra information not possessed by the observer. This principle of assigning equal probability to accessible states forms the basis for deriving the microcanonical ensemble and subsequent entropy calculations.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly identifies that all allowed states are equally likely when no information is available, matching the reference answer's essential fact.\"}",
+   "type": "single-hop",
+   "docs": [
+    "FoundationsPlischke"
+   ]
+  },
+  {
+   "runId": "er_01M5N1NRYH78R5GNFKZZAWD32Z",
+   "questionId": "p17",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N1SSS6KNT6WXB3EPVS100P",
+   "retrieved": [
+    "ch_ptz5xpyr7hyol53gstx2",
+    "ch_joo45sqzt5b4t5qiuoe2",
+    "ch_rec7c75omcbfmv3b3riv",
+    "ch_22ssyoj4g24fzqrpfd5x",
+    "ch_xp62fz3xhiyps2rusvhc"
+   ],
+   "recall": {
+    "1": 1,
+    "3": 1,
+    "5": 1
+   },
+   "answer": "Based on the provided text, a reversible process is defined as being quasistatic and following a path in thermodynamic space that can be exactly reversed. In contrast, an irreversible process cannot be retraced along the same path; while the initial state might be recovered through external intervention (like compression), it does not follow the identical thermodynamic trajectory as the original process.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly states that a reversible process can be exactly reversed along its path, while an irreversible process cannot be retraced along the same path, matching all essential facts of the reference.\"}",
+   "type": "single-hop",
+   "docs": [
+    "ThermoPlischke"
+   ]
+  },
+  {
+   "runId": "er_01M5N1NRYH78R5GNFKZZAWD32Z",
+   "questionId": "p18",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N1T3XWWET7A6JJ37SYJ76G",
+   "retrieved": [
+    "ch_2bwcymi3m4uwfmlfcarr",
+    "ch_atzuh4y7r6rzsmw7fxx7",
+    "ch_fdbuy3wgrvs7hrptvslj",
+    "ch_ajkzqbiha72gitr3tqyf",
+    "ch_cfmvlwkrdkcc7j5dawzq"
+   ],
+   "recall": {
+    "1": 0,
+    "3": 0,
+    "5": 1
+   },
+   "answer": "Based on the provided text, for the entropy to represent a maximum at equilibrium, it must be a concave function of the generalized displacements. Additionally, the second variation of the entropy must be negative to confirm that a true maximum has been found under the given constraints. These conditions ensure that the total entropy is maximized when systems are in equilibrium.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly states the essential fact from the reference (entropy must be a concave function) and adds consistent additional detail without contradiction.\"}",
+   "type": "single-hop",
+   "docs": [
+    "ThermoPlischke"
+   ]
+  },
+  {
+   "runId": "er_01M5N1NRYH78R5GNFKZZAWD32Z",
+   "questionId": "p19",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N1TCYZ5548RXE4HDJXHC87",
+   "retrieved": [
+    "ch_3hhhxulzmswygv6grpoa",
+    "ch_7jyhqbxwwzfxg6ciggng",
+    "ch_ntnjxob4ulbk3pgl2bks",
+    "ch_r2rx2ybgioqq7xy6wuy6",
+    "ch_5qb4ugtonblyldtpulw7"
+   ],
+   "recall": {
+    "1": 1,
+    "3": 1,
+    "5": 1
+   },
+   "answer": "Based on the provided text, the Carnot engine is described as the most efficient device operating between two thermal reservoirs. Its defining characteristic is that it is an idealized engine in which all steps of the cycle are reversible.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly identifies the Carnot engine and its defining characteristic of reversible steps, matching all essential facts in the reference.\"}",
+   "type": "single-hop",
+   "docs": [
+    "ThermoPlischke"
+   ]
+  },
+  {
+   "runId": "er_01M5N1NRYH78R5GNFKZZAWD32Z",
+   "questionId": "p2",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N1P4TBD220KRB23ZK56TXV",
+   "retrieved": [
+    "ch_iewysbkpgqaeri6nmudm",
+    "ch_ic4lwxekwbvo6ck44jlk",
+    "ch_cfmvlwkrdkcc7j5dawzq",
+    "ch_u6q6eyyjkbnxtwrdo2bi",
+    "ch_ibqdnjl4c4xp5djeufqj"
+   ],
+   "recall": {
+    "1": 0,
+    "3": 1,
+    "5": 1
+   },
+   "answer": "Based on the provided text, specifically passage [2], the parameter $\\lambda$ (referred to as $A$ in your question) is identified with the **Helmholtz free energy**. The text explicitly states that the canonical distribution is recovered \"with the identification\" where $\\lambda$ equals the Helmholtz free energy.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly identifies the parameter as the Helmholtz free energy, matching the reference answer.\"}",
+   "type": "single-hop",
+   "docs": [
+    "FoundationsPlischke"
+   ]
+  },
+  {
+   "runId": "er_01M5N1NRYH78R5GNFKZZAWD32Z",
+   "questionId": "p21",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N1TMX0VWV5FPV997J86ZTJ",
+   "retrieved": [
+    "ch_j46sirqjzm4c4e2t6jxw",
+    "ch_eiu4rjpscmohqozlicsk",
+    "ch_fdjgngujjyaa6hueblag",
+    "ch_rzdmwkvqezdzoc4c4oes",
+    "ch_man7jvkeuu2dvyzssmgv"
+   ],
+   "recall": {
+    "1": 1,
+    "3": 1,
+    "5": 1
+   },
+   "answer": "Based on the provided text, for a magnetic solid the appropriate thermodynamic variables are the magnetic field $H$, the magnetization $M$, and the temperature $T$. The text notes that while some conventions define work using $M$ as the variable conjugate to $H$, a more rigorous treatment considering energy stored in the field identifies $B$ (magnetic induction) as the variable conjugate to $H$. Consequently, the correct thermodynamic stability requirements involve these specific variables rather than assuming $M$ is always the sole conjugate partner.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly identifies the essential facts (magnetic field H, magnetization M, and temperature T) as the thermodynamic variables for a magnetic solid, matching the reference answer.\"}",
+   "type": "single-hop",
+   "docs": [
+    "ThermoPlischke"
+   ]
+  },
+  {
+   "runId": "er_01M5N1NRYH78R5GNFKZZAWD32Z",
+   "questionId": "p24",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N1V0CG68BG67VPMQJY6C1B",
+   "retrieved": [
+    "ch_jizkzzhmjarvx4drur57",
+    "ch_enl7bddiaahy6pmlxq7d",
+    "ch_2bwcymi3m4uwfmlfcarr",
+    "ch_atzuh4y7r6rzsmw7fxx7",
+    "ch_5r3o6nyrajf6fb6guqyi"
+   ],
+   "recall": {
+    "1": 0.5,
+    "3": 1,
+    "5": 1
+   },
+   "answer": "Based on the provided text, the condition of equal chemical potentials ($\\mu_1 = \\mu_2$) is derived by maximizing the total entropy of two systems in contact that are free to exchange both energy and particles, which leads to the requirement that their chemical potentials must be identical at equilibrium. When one subsystem is significantly larger than the other, this framework allows for the construction of the grand canonical ensemble and its corresponding partition function.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly identifies that equal chemical potentials are derived from maximizing total entropy for systems exchanging energy and particles, and states that the grand canonical ensemble is constructed when one subsystem is significantly larger.\"}",
+   "type": "multi-hop",
+   "docs": [
+    "FoundationsPlischke"
+   ]
+  },
+  {
+   "runId": "er_01M5N1NRYH78R5GNFKZZAWD32Z",
+   "questionId": "p29",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N1VBNEZ2746QFXMYENST82",
+   "retrieved": [
+    "ch_ajkzqbiha72gitr3tqyf",
+    "ch_2bwcymi3m4uwfmlfcarr",
+    "ch_atzuh4y7r6rzsmw7fxx7",
+    "ch_bpmkglkp6tn63taf6cn6",
+    "ch_5r3o6nyrajf6fb6guqyi"
+   ],
+   "recall": {
+    "1": 0.3333333333333333,
+    "3": 1,
+    "5": 1
+   },
+   "answer": "Based on the provided text, maximizing the total entropy for two isolated systems leads to the equality of their intensive parameters (temperature and pressure), whereas maintaining stable equilibrium in contact with a large reservoir requires the system's Gibbs potential to be at a minimum. This stability condition imposes specific constraints on the second derivatives of the entropy, requiring it to be a concave function of generalized displacements such that fluctuations result in a positive definite expression for the change in Gibbs potential. The text does not explicitly derive the mathematical link between these two scenarios but implies they represent different boundary conditions (isolated vs. reservoir) leading to equilibrium and stability criteria respectively.",
+   "judgeScore": 0.5,
+   "judgeRaw": "{\"score\": 0.5, \"rationale\": \"The answer correctly identifies that entropy maximization leads to equalized intensive parameters and mentions the role of Gibbs potential and second derivatives for stability, but it incorrectly states that the text does not explicitly derive the link when the reference implies a direct extension of these conditions, and it omits the specific detail about energy derivatives mentioned in the reference.\"}",
+   "type": "topic",
+   "docs": [
+    "ThermoPlischke"
+   ]
+  },
+  {
+   "runId": "er_01M5N1NRYH78R5GNFKZZAWD32Z",
+   "questionId": "p30",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N1VSMBVDNM7NT4HCRE10H8",
+   "retrieved": [
+    "ch_ptz5xpyr7hyol53gstx2",
+    "ch_joo45sqzt5b4t5qiuoe2",
+    "ch_22ssyoj4g24fzqrpfd5x",
+    "ch_jxgvgnn6vawbjj26prmu",
+    "ch_xp62fz3xhiyps2rusvhc"
+   ],
+   "recall": {
+    "1": 0.3333333333333333,
+    "3": 0.3333333333333333,
+    "5": 0.3333333333333333
+   },
+   "answer": "Based on the provided text, state functions like internal energy ($E$) and entropy ($S$) depend only on the initial and final states of a system, meaning their changes are identical for both reversible and irreversible processes connecting the same endpoints. In contrast, heat ($Q$) and work are path-dependent quantities; while the total change in internal energy remains constant between two states, the specific amounts of heat exchanged and work performed differ depending on whether the process is reversible or irreversible. For instance, the text notes that for an adiabatic process, the decrease in internal energy equals the maximum work obtainable only if the process is reversible, whereas irreversible processes involve additional entropy generation ($dS > 0$) not accounted for by heat transfer alone.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly identifies that state functions depend only on initial and final states while heat and work are path-dependent, aligning with the reference answer's core facts.\"}",
+   "type": "topic",
+   "docs": [
+    "ThermoPlischke"
+   ]
+  },
+  {
+   "runId": "er_01M5N1NRYH78R5GNFKZZAWD32Z",
+   "questionId": "p4",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N1PDG109MNFJDSDC0X0NP4",
+   "retrieved": [
+    "ch_4jfnggxwdvrrq4zidolo",
+    "ch_fdbuy3wgrvs7hrptvslj",
+    "ch_jizkzzhmjarvx4drur57",
+    "ch_tj22dx7prtg36f27ad4a",
+    "ch_bkadd25rcchreleknau7"
+   ],
+   "recall": {
+    "1": 0,
+    "3": 1,
+    "5": 1
+   },
+   "answer": "Based on the provided text, the reliance on dynamical evolution can be removed by formulating the foundations of equilibrium statistical mechanics in terms of information theory. This approach uses a maximum entropy principle to infer thermodynamic variables from a least-bias estimate based on available information, thereby severing the link with dynamics while yielding equivalent results to traditional methods.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer accurately restates all essential facts from the reference, including the use of information theory, the maximum entropy principle, least-bias estimates, and the severing of the connection with dynamics.\"}",
+   "type": "single-hop",
+   "docs": [
+    "FoundationsPlischke"
+   ]
+  },
+  {
+   "runId": "er_01M5N1NRYH78R5GNFKZZAWD32Z",
+   "questionId": "p5",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N1PQ8RN7A2MM70YY8QKJ09",
+   "retrieved": [
+    "ch_bfzlmt5iy4qae5fa6tcd",
+    "ch_nuzgilfyetd5ulfzvvew",
+    "ch_fdbuy3wgrvs7hrptvslj",
+    "ch_4jfnggxwdvrrq4zidolo",
+    "ch_mj6jcmhfavmfhkfiqgpu"
+   ],
+   "recall": {
+    "1": 1,
+    "3": 1,
+    "5": 1
+   },
+   "answer": "Based on the provided text, Costantino Tsallis is credited with making the most significant attempt to replace the Boltzmann-Shannon entropy with a nonextensive measure. This alternative was proposed specifically to address systems where the energy is not extensive, as noted in the discussion following Equation (2.100). The text highlights that this development has led to a very large literature on the subject.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly identifies Costantino Tsallis and accurately reflects the reference's core fact regarding the proposal of an alternative entropy for non-extensive systems.\"}",
+   "type": "single-hop",
+   "docs": [
+    "FoundationsPlischke"
+   ]
+  },
+  {
+   "runId": "er_01M5N1NRYH78R5GNFKZZAWD32Z",
+   "questionId": "p6",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N1Q1NN407TKDJTT5BCV8T0",
+   "retrieved": [
+    "ch_25fxms7ihs4ujyw2e3hl",
+    "ch_4hebrfj4i7uti2qtpytg",
+    "ch_733r7vnzdjgirc37f6xk",
+    "ch_73r7y42yv4r4pdzfm4ku",
+    "ch_u6q6eyyjkbnxtwrdo2bi"
+   ],
+   "recall": {
+    "1": 1,
+    "3": 1,
+    "5": 1
+   },
+   "answer": "Based on context passage [0], a fermion system transitions from being nondegenerate (approximately satisfying Boltzmann statistics) to degenerate when the cube of the thermal wavelength ($\\lambda^3$) becomes greater than the inverse particle density ($V/N$). Conversely, the system remains nondegenerate if $\\lambda^3 < V/N$. Therefore, the condition for degeneracy is $\\lambda^3 > V/N$.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly states that the transition to degeneracy occurs when the cube of the thermal wavelength exceeds the volume per particle (V/N), which aligns perfectly with the reference answer's condition.\"}",
+   "type": "single-hop",
+   "docs": [
+    "FoundationsPlischke"
+   ]
+  },
+  {
+   "runId": "er_01M5N1NRYH78R5GNFKZZAWD32Z",
+   "questionId": "p7",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N1QBKNA39F4KEN9WJR2TRH",
+   "retrieved": [
+    "ch_pvcztfdicdhklnbnvmme",
+    "ch_bpmkglkp6tn63taf6cn6",
+    "ch_ibqdnjl4c4xp5djeufqj",
+    "ch_5r3o6nyrajf6fb6guqyi",
+    "ch_liwdsteos6zb34ot3h6e"
+   ],
+   "recall": {
+    "1": 1,
+    "3": 1,
+    "5": 1
+   },
+   "answer": "Based on the provided text, specifying the energy $E$ of an $N$-particle system confines its motion to a $(6N - 1)$-dimensional surface. This surface, denoted as $\\Gamma(E)$, exists within the defined $6N$-dimensional phase space and represents the set of all possible states consistent with that specific energy level.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly states that the motion is confined to a (6N - 1)-dimensional surface, matching the essential fact in the reference answer.\"}",
+   "type": "single-hop",
+   "docs": [
+    "FoundationsPlischke"
+   ]
+  },
+  {
+   "runId": "er_01M5N1NRYH78R5GNFKZZAWD32Z",
+   "questionId": "p8",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N1QNE3T4JN1NMVB39RS8RB",
+   "retrieved": [
+    "ch_3yhndsdw3glhekpcgy7u",
+    "ch_wxbiww4ynjvwsryhludx",
+    "ch_liwdsteos6zb34ot3h6e",
+    "ch_ibqdnjl4c4xp5djeufqj",
+    "ch_wrei6jdlyy33tfyvvoi5"
+   ],
+   "recall": {
+    "1": 0,
+    "3": 0,
+    "5": 0
+   },
+   "answer": "Based on the provided text, the **microcanonical ensemble** is the specific ensemble introduced for a closed (isolated) classical system of energy E. The document explicitly states that this ensemble corresponds to equation (2.6), which describes such a system where the integral is carried out over the entire phase space with a constant energy constraint.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly identifies the microcanonical ensemble for isolated (closed) classical systems, matching all essential facts in the reference answer.\"}",
+   "type": "single-hop",
+   "docs": [
+    "FoundationsPlischke"
+   ]
+  },
+  {
+   "runId": "er_01M5N1NRYH78R5GNFKZZAWD32Z",
+   "questionId": "p9",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N1QXYGEZWYXSN236WXR5JA",
+   "retrieved": [
+    "ch_w4fe6cyd3bbst5yvwgdl",
+    "ch_fwynntimvukk6c7wweup",
+    "ch_n27a2wtd634bv6gqs7oq",
+    "ch_eq3xmgfu3f2xgxc5wrto",
+    "ch_htw7obdtbch3w3hmmyuq"
+   ],
+   "recall": {
+    "1": 1,
+    "3": 1,
+    "5": 1
+   },
+   "answer": "Based on the provided text, the fundamental principle connecting the response function $C_{V,N}$ to the mean-square fluctuation of energy is the **fluctuation-dissipation theorem**. The document explicitly states that Equation (2.43), which relates these two quantities, is a special case of this general result where fluctuations in a thermodynamic variable are proportional to a specific response function.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly identifies the fluctuation-dissipation theorem as the fundamental principle connecting the response function and energy fluctuations, matching the reference answer.\"}",
+   "type": "single-hop",
+   "docs": [
+    "FoundationsPlischke"
+   ]
+  },
+  {
+   "runId": "er_01M5N1NRYH78R5GNFKZZAWD32Z",
+   "questionId": "pr214",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N1XAG3YGC62KX0R4D1BEF5",
+   "retrieved": [
+    "ch_7goibjnqlp3vvtdzjtm7",
+    "ch_5r3o6nyrajf6fb6guqyi",
+    "ch_wxbiww4ynjvwsryhludx",
+    "ch_mlkvjkfvxvy5kstgblxt",
+    "ch_3yhndsdw3glhekpcgy7u"
+   ],
+   "recall": {
+    "1": 0.5,
+    "3": 1,
+    "5": 1
+   },
+   "answer": "Based on the provided text, when two isolated subsystems exchange energy with fixed particle numbers and volumes, the product of their statistical weights is maximized when the total entropy of the combined system reaches its maximum value. This condition implies that the subsystems are in thermal equilibrium, where the probability distribution assumes all accessible states within the energy tolerance are equally likely ($p_i = 1/\\Omega$). This assumption of equal likelihood directly reflects the principle that no bias or additional information exists regarding the specific microstate of the system, which is the foundational postulate of the microcanonical ensemble.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly states that the product of statistical weights is maximized when total entropy is at its maximum and accurately links this to the assumption of equal likelihood for accessible states (no bias) in the microcanonical ensemble.\"}",
+   "type": "multi-hop",
+   "docs": [
+    "FoundationsPlischke"
+   ]
+  },
+  {
+   "runId": "er_01M5N1NRYH78R5GNFKZZAWD32Z",
+   "questionId": "pr217",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N1XP5V0W705S5ASWPTHJG0",
+   "retrieved": [
+    "ch_fdbuy3wgrvs7hrptvslj",
+    "ch_wmybldqc3jmn5i4s2vio",
+    "ch_n5axd3pzoltd3eoikypc",
+    "ch_4jfnggxwdvrrq4zidolo",
+    "ch_nuzgilfyetd5ulfzvvew"
+   ],
+   "recall": {
+    "1": 0.5,
+    "3": 1,
+    "5": 1
+   },
+   "answer": "The text notes that while real systems have nonintegrable equations of motion, a rigorous proof of the ergodic hypothesis under general conditions is lacking, and there is no clear connection between measurement times and the time required for an ergodic system to visit all phase space regions. Consequently, researchers find it of interest to formulate equilibrium statistical mechanics using information theory instead, which severs the link with dynamics altogether by inferring thermodynamic variables from a least-bias estimate based on available information. This alternative approach leads to a maximum entropy principle that yields results equivalent to those derived via traditional dynamical assumptions without needing to prove ergodicity.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer accurately reflects all essential facts from the reference: the lack of proof for nonintegrable systems, the weak link between time evolution and ensembles, the use of information theory/least-bias estimates to sever the dynamic link, and the resulting equivalence to traditional methods.\"}",
+   "type": "multi-hop",
+   "docs": [
+    "FoundationsPlischke"
+   ]
+  },
+  {
+   "runId": "er_01M5N1NRYH78R5GNFKZZAWD32Z",
+   "questionId": "pr22",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N1W74NNTJJTEN4ZF4P2H6V",
+   "retrieved": [
+    "ch_wrei6jdlyy33tfyvvoi5",
+    "ch_htw7obdtbch3w3hmmyuq",
+    "ch_jizkzzhmjarvx4drur57",
+    "ch_ewhrulbgg7v4tt7zpglg",
+    "ch_7lma3lyoho7lssd7khd5"
+   ],
+   "recall": {
+    "1": 1,
+    "3": 1,
+    "5": 1
+   },
+   "answer": "Based on context passage [0], the text discusses the historical introduction of the $N!$ factor by Gibbs to remove a \"spurious entropy of mixing\" for two volumes of the same ideal gas. However, the provided passages do not explicitly explain why Gibbs used the product of particle numbers ($N_1! N_2! \\dots$) specifically for mixtures instead of a simple factorial; they only state that this replacement is necessary when dealing with a mixture consisting of particles of different types. Therefore, while the text confirms the factor was introduced to fix an entropy issue in ideal gases, it does not contain the specific reasoning regarding the product form for mixtures.",
+   "judgeScore": 0.5,
+   "judgeRaw": "{\"score\": 0.5, \"rationale\": \"The answer correctly identifies the reference fact regarding the elimination of artificial/spurious entropy but fails to address the specific question about why a product of particle numbers is used instead of a simple factorial, stating that this specific reasoning is missing from the source text.\"}",
+   "type": "single-hop",
+   "docs": [
+    "FoundationsPlischke"
+   ]
+  },
+  {
+   "runId": "er_01M5N1NRYH78R5GNFKZZAWD32Z",
+   "questionId": "pr222",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N1Y2XEQTQ3X4NFCK1NAA3V",
+   "retrieved": [
+    "ch_e4m5mw2net6vdyepfdtv",
+    "ch_3yhndsdw3glhekpcgy7u",
+    "ch_4jfnggxwdvrrq4zidolo",
+    "ch_nuzgilfyetd5ulfzvvew",
+    "ch_7goibjnqlp3vvtdzjtm7"
+   ],
+   "recall": {
+    "1": 0.5,
+    "3": 0.5,
+    "5": 0.5
+   },
+   "answer": "Based on the provided text, there is no information regarding \"non-extensive energy\" or how its derivation differs from the standard microcanonical ensemble; the passages only discuss standard ensembles (microcanonical, canonical, grand canonical) and a general information-theoretic approach. However, the text does state that when multiple constraints are involved, the specific mathematical procedure used to maximize the generalized entropy expression is the **method of Lagrange multipliers**, which involves setting the functional derivative of the entropy with respect to the probability distribution to zero while incorporating normalization and constraint conditions.",
+   "judgeScore": 0.5,
+   "judgeRaw": "{\"score\": 0.5, \"rationale\": \"The answer correctly identifies the method of Lagrange multipliers but fails to address the first part of the question regarding how the derivation differs for non-extensive energy systems, as it claims the text lacks this information.\"}",
+   "type": "multi-hop",
+   "docs": [
+    "FoundationsPlischke"
+   ]
+  },
+  {
+   "runId": "er_01M5N1NRYH78R5GNFKZZAWD32Z",
+   "questionId": "pr23",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N1WM2DDKHV4HAEGA815DN3",
+   "retrieved": [
+    "ch_ibqdnjl4c4xp5djeufqj",
+    "ch_wrei6jdlyy33tfyvvoi5",
+    "ch_bpmkglkp6tn63taf6cn6",
+    "ch_wxbiww4ynjvwsryhludx",
+    "ch_kpm7edoqnl7qzlsydijv"
+   ],
+   "recall": {
+    "1": 1,
+    "3": 1,
+    "5": 1
+   },
+   "answer": "The constant $h^{3N}$ was selected specifically to align the classical phase space volume calculation with the Bohr-Sommerfeld semiclassical theory, where the quantization rule for a single degree of freedom is $\\oint p dq = nh$. This choice ensures that a large volume of phase space contains an average number of quantum states equal to $W/h^{3N}$, thereby providing a consistent bridge between classical statistical mechanics and quantum mechanics. While any value with dimensions of action$^{3N}$ would be arbitrary in a purely classical context, this particular value is required to make the resulting state count dimensionless and physically meaningful in the semiclassical limit.",
+   "judgeScore": 1,
+   "judgeRaw": "{\"score\": 1, \"rationale\": \"The answer correctly identifies the alignment with Bohr-Sommerfeld theory, the specific quantization rule ($\\frac{W}{h^{3N}}$), and the necessity of making the state count dimensionless, matching all essential facts in the reference.\"}",
+   "type": "single-hop",
+   "docs": [
+    "FoundationsPlischke"
+   ]
+  },
+  {
+   "runId": "er_01M5N1NRYH78R5GNFKZZAWD32Z",
+   "questionId": "pr25",
+   "condition": "retrieved",
+   "searchId": "sr_01M5N1X139JS6P4XAS30A9CJ9C",
+   "retrieved": [
+    "ch_wi7ugysqpkv7ffv6bzpa",
+    "ch_fdbuy3wgrvs7hrptvslj",
+    "ch_4jfnggxwdvrrq4zidolo",
+    "ch_2vqtecok6gimbudc476p",
+    "ch_nuzgilfyetd5ulfzvvew"
+   ],
+   "recall": {
+    "1": 0,
+    "3": 0,
+    "5": 0
+   },
+   "answer": "The provided context passages do not contain information explaining how the transition from using entropy as an independent variable to using temperature is achieved in statistical mechanics. The text discusses definitions of entropy for different ensembles, the maximum entropy principle, and variational principles involving free energy, but it does not describe the specific method or derivation for switching between these variables.",
+   "judgeScore": 0,
+   "judgeRaw": "{\"score\": 0, \"rationale\": \"The answer claims the information is missing in the context, whereas the reference answer provides a specific factual explanation of how the transition is achieved.\"}",
+   "type": "single-hop",
+   "docs": [
+    "FoundationsPlischke"
+   ]
+  }
+ ]
+}

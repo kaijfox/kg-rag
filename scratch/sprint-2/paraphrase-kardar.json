@@ -1,0 +1,98 @@
+[
+ {
+  "id": "k28",
+  "type": "topic",
+  "original": 0.75,
+  "paraphrases": [
+   "In what ways do physicists build a logical structure for large-scale systems based on experimental data and state variables, while recognizing that phenomenological models differ from microscopic theories?",
+   "How is a coherent framework for macroscopic physics developed through empirical evidence and state functions, given the inherent constraints of phenomenological approaches when contrasted with microscopic explanations?",
+   "What methods allow physicists to establish a logical basis for macroscopic systems using observations and state functions, while accepting that phenomenological descriptions have limitations compared to those found in microscopic theories?"
+  ],
+  "recalls": [
+   0.75,
+   0.5,
+   0.75
+  ],
+  "best": 0.75
+ },
+ {
+  "id": "k29",
+  "type": "topic",
+  "original": 0.75,
+  "paraphrases": [
+   "In what way do statistical ensembles and phase space densities allow kinetic theory to connect the behavior of individual particles with macroscopic equilibrium states?",
+   "How does kinetic theory utilize concepts like statistical ensembles and phase space densities to link microscopic particle movements with large-scale equilibrium properties?",
+   "By employing statistical ensembles and phase space densities, how is the relationship between micro-level particle dynamics and macro-level equilibrium characteristics established within kinetic theory?"
+  ],
+  "recalls": [
+   0.75,
+   0.75,
+   0.75
+  ],
+  "best": 0.75
+ },
+ {
+  "id": "k31",
+  "type": "topic",
+  "original": 0.6666666666666666,
+  "paraphrases": [
+   "In what way do examples such as two-level impurities and ideal gases illustrate how the canonical ensemble converges to the microcanonical ensemble when considering the thermodynamic limit?",
+   "How does examining specific systems like ideal gases and two-level impurities reveal the connection between the canonical and microcanonical ensembles in the context of the thermodynamic limit?",
+   "Can you explain how applying the canonical ensemble to cases like two-level impurities and ideal gases shows its equivalence to the microcanonical ensemble as the system approaches the thermodynamic limit?"
+  ],
+  "recalls": [
+   0.6666666666666666,
+   0.6666666666666666,
+   0.6666666666666666
+  ],
+  "best": 0.6666666666666666
+ },
+ {
+  "id": "kr225",
+  "type": "topic",
+  "original": 0.5,
+  "paraphrases": [
+   "Starting with the microcanonical ensemble definition of an ideal gas, what is the derivation process for obtaining the Maxwell-Boltzmann momentum distribution of a single particle?",
+   "Can you explain how to arrive at the single-particle Maxwell-Boltzmann momentum distribution by beginning with the microcanonical ensemble formulation of an ideal gas?",
+   "Derive the Maxwell-Boltzmann momentum distribution for one particle in an ideal gas, assuming we start from the description provided by the microcanonical ensemble."
+  ],
+  "recalls": [
+   0.5,
+   0.5,
+   0.5
+  ],
+  "best": 0.5
+ },
+ {
+  "id": "kr226",
+  "type": "topic",
+  "original": 0.3333333333333333,
+  "paraphrases": [
+   "How can one derive the classical ideal gas law and its internal energy expression starting from the statistical mechanical formulation of entropy?",
+   "What is the procedure for obtaining the standard ideal gas equation of state and the formula for internal energy using statistical mechanics definitions of entropy?",
+   "Can you outline the derivation steps that lead from the statistical definition of entropy to the ideal gas equation of state and the corresponding internal energy relation?"
+  ],
+  "recalls": [
+   0.3333333333333333,
+   0.3333333333333333,
+   0.3333333333333333
+  ],
+  "best": 0.3333333333333333
+ },
+ {
+  "id": "kr228",
+  "type": "topic",
+  "original": 0.6666666666666666,
+  "paraphrases": [
+   "In what way does introducing interparticle forces convert the time evolution of an s-particle density from a standalone fluid equation into a set of coupled equations dependent on higher-order densities?",
+   "How does the addition of interaction terms alter the dynamics of the s-particle density, shifting the description from a simple fluid model to a system where higher-order densities become interdependent?",
+   "What is the mechanism by which accounting for particle interactions modifies the time-evolution equation for an s-particle density, resulting in a coupled hierarchy involving densities of higher order?"
+  ],
+  "recalls": [
+   0.3333333333333333,
+   0.3333333333333333,
+   0.6666666666666666
+  ],
+  "best": 0.6666666666666666
+ }
+]
