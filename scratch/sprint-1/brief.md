@@ -15,7 +15,7 @@
 - Defaults: undecoded formulas (Q13), local Ollama (qwen3.5) for all model calls.
 - Deferred: delta-encoded `considered` in the log, relation `position` column, summary storage, parser quality gate, Kardar glyph cleanup, PROV export, derived item identity (AM-7).
 
-## Waits on the user (`../open-questions.md`)
+## Waits on the user: nothing. Q12-Q15 answered 2026-10-23 (see `../open-questions.md`, `../decision-log.md`). Original list:
 - Q12 approve amendments AM-1 to AM-6, AM-8 (`proposed-amendments.md`).
 - Q13 freeze the baseline on the undecoded parse recipe.
 - Q14 commit the Sprint 1 state.

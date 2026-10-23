@@ -10,7 +10,7 @@ Part 1 describes the workflow, which stays the same every sprint. Part 2 describ
 
 - **Contracts first, then fan-out.** Parallel agents work independently only to the extent that the interfaces between them allow. Time spent on module boundaries and interfaces pays back in every later phase.
 - **Agents propose and leave boundaries in place.** Once the contracts are committed, implementers work inside them. When a contract proves wrong, the implementer files a change proposal and, where possible, keeps working against the current version.
-- **Model matches task.** All sub-agents run on Haiku. The lead session does design, prompt design and every review, and does small edits and drafts directly.
+- **Model matches task.** Implementers are Haiku or Sonnet, chosen per package card; reviews and mutation testing are done by a stronger model than the author. The lead session does design, prompt design and every review, and does small edits and drafts directly.
 - **Stack: TypeScript.** Docling runs as a Python sidecar behind a parser interface. Phase 0 decides the other tool choices.
 
 ### The loop
@@ -138,7 +138,7 @@ The eval harness builds against fixtures until real ingest and search exist. The
 - *Mechanical:* tests pass, types check, and the package contains all of its own edits.
 - *Contract:* a reviewer reads the diff against the contract for behavior beyond the spec, silent deviations, and undocumented assumptions.
 - *Design rules:* where relevant, the reviewer audits the six rules in the design doc (*e.g.* whether every derived item cites source chunks, and whether any item undergoes editing or deletion instead of mapping).
-- *Eval design:* the reviewer samples the generated questions and reads them for leakage of passage wording, answerability from the gold evidence, and correct type tags. The reviewer validates the judging procedure against hand-scored examples before anyone trusts its numbers.
+- *Eval design:* the reviewer samples the generated questions and reads them for leakage of passage wording, answerability from the gold evidence, and correct type tags. The reviewer validates the judging procedure against a sample scored independently by a stronger model than the judge (about 30 answers, limits stated) before anyone trusts its numbers.
 - *Spike:* the reviewer checks the formula spike's gold set, and confirms the recommendation follows from the numbers against the pre-set rule.
 
 **Retro questions:** The retro considers where agents had to read sibling code or request contract changes, and which packages the low-cost models handled well or badly.
@@ -156,7 +156,7 @@ The packages merge, and the full test suites run against real implementations in
 
 ### Phase 4: Baseline measurement
 
-The phase ingests a real corpus, generates and pins the eval set, runs recall@k and the three answer-quality conditions, and computes the pre-check measurements in the design doc's failure-mode table. The paired-author stat-mech documents allow both own-corpus questions and cross-corpus ones, with questions written from one author's text and answered against the other's index. The output is the evidence for choosing the first expansion.
+The phase ingests a real corpus, generates and pins the eval set, runs recall@k and the three answer-quality conditions, and computes the pre-check measurements in the design doc's failure-mode table. The paired-author stat-mech documents allow both own-corpus questions and cross-corpus ones, with questions written from one author's text and answered against the other's index. The baseline uses the undecoded parse recipe (formulas as placeholders). A second build on a decoded-formula parse recipe, run against the same questions where chunk IDs allow and with regenerated questions otherwise, is a required follow-up to the baseline and not optional; its scope is set after the baseline and uses the arXiv corpora's LaTeX references to measure decoding accuracy. The output is the evidence for choosing the first expansion.
 
 **Review criteria:**
 - The reviewer re-validates the eval set and the judge on the real corpus, as in Phase 2.

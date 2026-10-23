@@ -249,3 +249,9 @@ Basis: `design-feedback.md` (22 entries triaged, originals archived in `sprint-1
 - Log size: record the failing state (done in `pipeline/src/run.ts`); delta-encode `considered` only if the Phase 4 run shows the size matters. Kind: evidence-resolvable.
 - Flat heading levels are not improved for the baseline; empty headings are dropped (L2, skeleton reading); `pool < k` becomes a settings check. Kind: arbitrary.
 - Judge acceptance thresholds (kappa >= 0.6 with bootstrap lower bound > 0.4, per-condition bias <= 0.15, no ref 0 / judge 1, at most 1 parse failure of 30) from `judge-validation/plan.md` are adopted as pre-registered before any scoring. Kind: evidence-resolvable.
+
+## 2026-10-23: user decisions at the start of Sprint 2
+- Q12: user approved AM-1 to AM-6 and AM-8 as drafted; applied to `design/260916_initial-roadmap.md` (Amendments, Tentative Defaults superseded) and `design/261017_v0-implementation-roadmap.md` (Principles, Phase 2, Phase 4). AM-7 stays held. Kind: user.
+- Q13: baseline and chunker freeze on the undecoded parse recipe (option a). A decoded-formula (GLM-OCR) build and its comparison is a required, non-optional follow-up to the baseline (written into Phase 4 of the roadmap); its accuracy measurement uses the arXiv corpora. Kind: user.
+- Q14: moot, committed as 1433618. Kind: user.
+- Q15: arXiv papers after the baseline, option (a). Each paper is its own corpus (the two are on unrelated topics). Their purpose is a second paired-views test: a review or tutorial section with clear citations paired with the cited works, with validated equations from the review's LaTeX source. First step: check the cited works are downloadable. Kind: user.

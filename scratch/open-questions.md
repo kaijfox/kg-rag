@@ -119,3 +119,6 @@ Question: the design lists second-corpus question generators as use-case-trigger
 Options: (a) after the baseline, as a formula experiment (first look at the papers, check the cited works are downloadable); (b) inside the baseline, which delays question generation; (c) no.
 Implications: (a) keeps the baseline comparable and uses the same tools (the LaTeX source gives exact references for decoding quality at scale, replacing the 33 hand references). (b) mixes two corpora before the first measurement. Tagging formula questions in the stat-mech set is cheap and goes ahead under any option.
 Recommendation: (a). Blocks: nothing before the baseline.
+
+## Resolved 2026-10-23
+Q12 approve all (applied to design/). Q13 option (a), with a required decoded-formula follow-up build. Q14 moot (committed). Q15 option (a), clarified: each arXiv paper is its own corpus, used as a review-plus-cited-works pair with validated equations.
