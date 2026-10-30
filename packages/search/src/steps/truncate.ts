@@ -1,4 +1,4 @@
-import { sortCandidates, toRankedRefs, type SearchStep } from '@kg/core';
+import { defineSearchModule, sortCandidates, type SearchStep } from '@kg/core';
 
 export interface TruncateParams {
   /** default: the request's k */
@@ -6,22 +6,12 @@ export interface TruncateParams {
 }
 
 /** Keeps the top k candidates by the core ordering. Pools and everything else pass through unchanged. */
-export function truncate(p: TruncateParams): SearchStep {
-  return {
-    type: 'truncate',
-    async run(state) {
-      const k = p.k ?? state.k;
-      const input = sortCandidates(state.candidates);
-      const kept = input.slice(0, k);
-      return {
-        state: { ...state, queries: [...state.queries], seeds: [...state.seeds], notes: { ...state.notes }, pools: { ...state.pools }, candidates: kept },
-        trace: {
-          stepType: 'truncate',
-          params: { k },
-          considered: toRankedRefs(input),
-          output: toRankedRefs(kept),
-        },
-      };
-    },
-  };
-}
+export const truncateModule = defineSearchModule<TruncateParams>(
+  { name: 'truncate', version: '1', reads: ['candidates'], writes: ['candidates'] },
+  async (state, _env, p) => {
+    const k = p.k ?? state.k;
+    return { patch: { candidates: sortCandidates(state.candidates).slice(0, k) }, trace: { params: { k } } };
+  },
+);
+
+export const truncate = (p: TruncateParams): SearchStep => truncateModule.make(p);

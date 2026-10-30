@@ -27,3 +27,8 @@ A search modules and wiring (search); B derive and resolve kernels (core, new fi
 
 ## Phase 3 reminder
 Project-history fixture: `scratch/decision-log.md` (one chunk per dated entry), rule-based supersession from the wording, a `current_state` machine; report kernel files touched (target zero).
+
+## Update 13:57: first code landed (before the stop)
+- `packages/core/src/module.ts` (new, additive, exported from core): `defineSearchModule`, `checkWiring`, `assertWiring`, `modulesOf`, slot and descriptor types. Tests in `packages/core/test/module.test.ts` (6, passing); core typechecks.
+- `truncate` in `packages/search/src/steps/truncate.ts` now runs on `defineSearchModule` (14 lines of logic, down from about 40). Parity evidence: search package 92 of 92 tests pass unchanged, including the shared conformance suite, and app tests pass. This is the first confirmation that runner-built `considered` and `output` equal the hand-built ones for a cut step.
+- Not done: port `vectorKnn` (the `into` pool path is the part to check), register modules and call `assertWiring` where machines load, add `modules` to the recipe, delete `pins.json`, full `pnpm check`, everything from the work-package list.

@@ -29,3 +29,4 @@ export * from './ports/log';
 export * from './ports/llm';
 export * from './ports/search';
 export * from './ports/ingest';
+export * from './module';
