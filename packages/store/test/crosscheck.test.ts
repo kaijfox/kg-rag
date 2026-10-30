@@ -8,7 +8,8 @@ import { describe, expect, it } from 'vitest';
 import { DEFAULT_CHUNK_RECIPE, asDocKey, docVersionId, recipeId, renderQuery, type ChunkId, type CorpusStore, type DerivationRun, type ItemId, type KnnQuery, type Mapping, type RunId, type SpaceId } from '@kg/core';
 import { FixedClock, HASH_SPACE, InMemoryCorpusStore, loadMiniCorpus, searchQueries } from '@kg/testkit';
 import { artifactFor, draftsFor } from '@kg/testkit/conformance';
-import { openDatabase, SqliteCorpusStore } from '../src/index';
+import { openDatabase } from '@kg/sqlite';
+import { SqliteCorpusStore } from '../src/index';
 import { codeOf, populate } from './helpers';
 
 const sqliteStore = () => new SqliteCorpusStore(openDatabase(':memory:'), new FixedClock());

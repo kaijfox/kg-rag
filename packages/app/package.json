@@ -3,21 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Composition root. src/skeleton holds the walking skeleton (a test oracle); src/compose.ts wires the real packages.",
+  "description": "Composition root: src/compose.ts wires the real packages; scripts/ hold the entry points and experiment drivers.",
   "exports": {
     ".": "./src/index.ts"
   },
   "scripts": {
     "test": "vitest run",
     "typecheck": "tsc -p tsconfig.json",
-    "skeleton": "tsx scripts/skeleton.ts",
     "integrate": "tsx scripts/integrate.ts",
-    "serve-mcp": "tsx scripts/serve-mcp.ts",
-    "serve-viewer": "tsx scripts/serve-viewer.ts"
+    "kg": "tsx src/cli.ts"
   },
   "dependencies": {
     "@kg/core": "workspace:*",
-    "@kg/testkit": "workspace:*",
     "@kg/api": "workspace:*",
     "@kg/chunk": "workspace:*",
     "@kg/embed": "workspace:*",
@@ -29,7 +26,11 @@
     "@kg/pipeline": "workspace:*",
     "@kg/search": "workspace:*",
     "@kg/store": "workspace:*",
+    "@kg/sqlite": "workspace:*",
     "@kg/viewer": "workspace:*",
     "@modelcontextprotocol/sdk": "1.32.0"
+  },
+  "devDependencies": {
+    "@kg/testkit": "workspace:*"
   }
 }

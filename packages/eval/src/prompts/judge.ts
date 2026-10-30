@@ -46,7 +46,7 @@ export function judgeRecipe(): MachineRecipeSpec<'eval-judge', { model: string; 
       machine: 'judge',
       settings: { model: JUDGE_SETTINGS.model, temperature: JUDGE_SETTINGS.temperature, maxTokens: JUDGE_SETTINGS.maxTokens, retryBudget: JUDGE_SETTINGS.retryBudget },
       topology: topologyOf(judgeMachine),
-      promptDigest: promptDigest(),
+      promptDigest: promptDigest(['judge.md']),
     },
   };
 }

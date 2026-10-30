@@ -116,12 +116,20 @@ describe('the whole run is one eval-run pipeline', () => {
     expect(sessionEvents(e.log)[3]!.payload).toMatchObject({ pipeline: 'eval-run', status: 'failed', state: 'failed', error: { code: 'precondition' } });
   });
 
-  it('a failing work state is named in pipeline.finished', async () => {
+  it('a refused run is named in pipeline.finished', async () => {
+    const e = await env();
+    await expect(runEval(e.deps, e.set, { conditions: ['no-context'], ks: [1], buildId: 'bd_zzzzzzzzzzzzzzzzzzzz' as never })).rejects.toMatchObject({ code: 'not_found' });
+    const fin = sessionEvents(e.log).find((x) => x.type === 'pipeline.finished')!;
+    expect(fin.payload).toMatchObject({ pipeline: 'eval-run', status: 'failed', error: { code: 'not_found' } });
+  });
+
+  it('a question whose answerer fails is recorded in the summary and the run completes', async () => {
     const e = await env();
     const deps = { ...e.deps, answerer: { complete: async () => { throw new KgError('upstream', 'answerer down'); } } };
-    await expect(runEval(deps, e.set, { conditions: ['no-context'], ks: [1], buildId: e.mc.builds.v1, allowStale: true })).rejects.toMatchObject({ code: 'upstream' });
+    const r = await runEval(deps, e.set, { conditions: ['no-context'], ks: [1], buildId: e.mc.builds.v1, allowStale: true });
+    expect(r.summary).toBeTruthy();
     const fin = sessionEvents(e.log).find((x) => x.type === 'pipeline.finished')!;
-    expect(fin.payload).toMatchObject({ pipeline: 'eval-run', status: 'failed', state: 'question', error: { code: 'upstream' } });
+    expect(fin.payload).toMatchObject({ pipeline: 'eval-run', status: 'done' });
   });
 
   it('an unknown build is not_found and writes no run', async () => {

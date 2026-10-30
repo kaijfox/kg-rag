@@ -4,7 +4,8 @@ import { join } from 'node:path';
 import { afterAll, describe, expect, it } from 'vitest';
 import { DEFAULT_CHUNK_RECIPE } from '@kg/core';
 import { FixedClock } from '@kg/testkit';
-import { openDatabase, SqliteCorpusStore, SqliteEvalRepo } from '../src/index';
+import { openDatabase } from '@kg/sqlite';
+import { SqliteCorpusStore, SqliteEvalRepo } from '../src/index';
 import { codeOf, populate } from './helpers';
 
 const dir = mkdtempSync(join(tmpdir(), 'kg-store-lock-'));

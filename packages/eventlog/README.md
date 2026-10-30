@@ -1,10 +1,10 @@
 # @kg/eventlog
 
 SQLite implementation of the core event log ports: `SqliteEventLog` implements `EventLog` (writes) and
-`LogReader` (reads). It owns the `sessions`, `events` and `session_notes` tables and runs core's `schemaSql()`
-on construction (idempotent), so it can share one database file with `@kg/store`.
+`LogReader` (reads). It owns the `sessions`, `events` and `session_notes` tables. Its constructor calls `@kg/sqlite`'s
+`prepare` (pragmas, sqlite-vec, migrations), so it can share one database file with `@kg/store`.
 
-Usage: `new SqliteEventLog(db, clock, ids)` with a better-sqlite3 handle opened by the app or the store.
+Usage: `new SqliteEventLog(db, clock, ids)` with a handle from `@kg/sqlite`'s `openDatabase`.
 
 ## Behaviour
 
@@ -19,9 +19,8 @@ Usage: `new SqliteEventLog(db, clock, ids)` with a better-sqlite3 handle opened 
 
 ## Assumptions and known gaps
 
-- The constructor sets `journal_mode = WAL`, `foreign_keys = ON` and `busy_timeout` (5 s) on the handle, so a
-  reader can run while another process writes. It runs the schema DDL only when `db_meta` lacks the current
-  `schema_version`; opening a file that already has the schema takes no write lock.
+- The constructor calls `@kg/sqlite`'s `prepare`: WAL, `foreign_keys = ON`, `busy_timeout` (5 s), and migrations up to
+  the current `user_version`. A file already at the current version is only read, so opening it takes no write lock.
 - `openSession` and `append` use `BEGIN IMMEDIATE`: processes sharing one file queue on the write lock instead of
   failing with a stale snapshot, so no append is lost and seqs stay unique and contiguous. A lock held past the
   timeout raises `KgError('upstream')` (no `unavailable` code exists), never a raw SQLite error.

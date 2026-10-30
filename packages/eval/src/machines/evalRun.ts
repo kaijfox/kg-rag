@@ -26,6 +26,14 @@ export interface RunInput {
   searchRecipes: Record<string, RecipeId> | undefined;
 }
 
+/** A question whose model call failed. It is recorded in the summary and the run goes on without it. */
+export interface QuestionFailure {
+  questionId: string;
+  condition: string;
+  code: string;
+  message: string;
+}
+
 export interface RunContext {
   input: RunInput;
   build: BuildId | null;
@@ -33,6 +41,7 @@ export interface RunContext {
   runId: EvalRunId | null;
   index: number;
   outcomes: Outcome[];
+  failures: QuestionFailure[];
   summary: Json | null;
   error: KgError | null;
 }
@@ -73,7 +82,7 @@ const complete = loggedActor(['eval.run.completed'], async ({ ctx, runId, build,
 /**
  * One eval run, whole: check the build, pin the run, run each question under each condition (the child), summarize,
  * complete. The pure steps (opening, checkingBuild, summarizing) are routing states; a refusal is a `failed` with the
- * error. A failed question fails the run.
+ * error. A question that fails is recorded in `failures` and the run goes on; the summary says how many failed.
  */
 export const evalRunMachine = setup({
   types: {
@@ -92,7 +101,7 @@ export const evalRunMachine = setup({
   },
 }).createMachine({
   id: 'eval-run',
-  context: ({ input }) => ({ input, build: null, items: [], runId: null, index: 0, outcomes: [], summary: null, error: null }),
+  context: ({ input }) => ({ input, build: null, items: [], runId: null, index: 0, outcomes: [], failures: [], summary: null, error: null }),
   initial: 'opening',
   output: ({ context }) => ({ runId: context.runId, summary: context.summary, error: context.error }),
   states: {
@@ -161,8 +170,15 @@ export const evalRunMachine = setup({
         onDone: [
           {
             guard: 'questionFailed',
-            target: '#failed',
-            actions: assign({ error: ({ event }) => (event.output as { error: KgError | null }).error! }),
+            target: 'nextQuestion',
+            actions: assign({
+              index: ({ context }) => context.index + 1,
+              failures: ({ context, event }) => {
+                const item = context.items[context.index]!;
+                const e = (event.output as { error: KgError }).error;
+                return [...context.failures, { questionId: item.question.id, condition: item.condition, code: e.code, message: e.message }];
+              },
+            }),
           },
           {
             target: 'nextQuestion',
@@ -180,7 +196,8 @@ export const evalRunMachine = setup({
       always: {
         target: 'completing',
         actions: assign({
-          summary: ({ context }) => summarize(context.input.set, context.input.ks, context.input.conditions, context.outcomes, context.build!, context.input.deps),
+          summary: ({ context }) =>
+            summarize(context.input.set, context.input.ks, context.input.conditions, context.outcomes, context.failures, context.build!, context.input.deps),
         }),
       },
     },

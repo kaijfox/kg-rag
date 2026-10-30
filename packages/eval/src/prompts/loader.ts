@@ -1,4 +1,4 @@
-import { readdirSync, readFileSync } from 'node:fs';
+import { readFileSync } from 'node:fs';
 import { KgError, sha256hex } from '@kg/core';
 
 export interface Prompt {
@@ -8,13 +8,6 @@ export interface Prompt {
 
 const DIR = new URL('./', import.meta.url);
 const SPLIT = '\n=== user ===\n';
-
-/** Prompt file names (without .md) in this directory; the lead writes the files, the loader only reads them. */
-export function promptFiles(): string[] {
-  return readdirSync(DIR)
-    .filter((f) => f.endsWith('.md'))
-    .sort();
-}
 
 const cache = new Map<string, string>();
 function read(name: string): string {
@@ -43,9 +36,12 @@ export function fill(template: string, values: Record<string, string>): string {
   });
 }
 
-/** sha256 over every prompt file in this directory, sorted by file name, each as name, NUL, content, NUL. */
-export function promptDigest(): string {
-  const parts = promptFiles().map((f) => `${f}\u0000${read(f)}\u0000`);
+/**
+ * sha256 over the named prompt files (sorted by name, each as name, NUL, content, NUL). A machine's recipe lists only
+ * the files that machine loads, so editing another machine's prompt leaves this digest, and the recipe id, unchanged.
+ */
+export function promptDigest(files: readonly string[]): string {
+  const parts = [...files].sort().map((f) => `${f}\u0000${read(f)}\u0000`);
   return sha256hex(parts.join(''));
 }
 

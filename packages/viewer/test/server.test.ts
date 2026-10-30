@@ -9,7 +9,8 @@ import {
   machineMapFixture,
   type LogFixture,
 } from '@kg/testkit';
-import { createViewerServer, renderTimeline, type ViewerOptions } from '../src/index';
+import { createViewerServer, type ViewerOptions } from '../src/index';
+import { renderTimeline, textOf } from '../web/render.js';
 
 const servers: Server[] = [];
 afterEach(async () => {
@@ -148,8 +149,7 @@ describe('items', () => {
       return item ? { label: mc.labelOf(id), text: item.text } : null;
     };
     const envs = logFixture('session-agent');
-    const html = renderTimeline(envs, itemInfo);
-    const visible = html.replace(/<[^>]*>/g, ' ');
+    const visible = renderTimeline(envs, itemInfo).map((row) => textOf(row)).join(' ');
     const ids = new Set<string>();
     for (const e of envs) if (e.type === 'search.result') for (const i of (e.payload as { items: { itemId: string }[] }).items) ids.add(i.itemId);
     expect(ids.size).toBeGreaterThan(0);

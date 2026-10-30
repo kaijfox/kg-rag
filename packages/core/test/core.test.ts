@@ -9,7 +9,6 @@ import {
   EVENT_TYPES,
   KgError,
   PAYLOADS,
-  SCHEMA_VERSION,
   TOOLS,
   TOOL_NAMES,
   buildId,
@@ -54,10 +53,9 @@ describe('schema.sql', () => {
     db.exec(schemaSql());
     return db;
   };
-  it('applies cleanly and idempotently, and records the schema version', () => {
+  it('applies cleanly and idempotently', () => {
     const db = open();
     db.exec(schemaSql());
-    expect(db.prepare("select value from db_meta where key='schema_version'").get()).toEqual({ value: String(SCHEMA_VERSION) });
     const tables = (db.prepare("select name from sqlite_master where type='table' order by name").all() as { name: string }[]).map((r) => r.name);
     for (const t of ['items', 'chunks', 'doc_version_chunks', 'embeddings', 'builds', 'build_items', 'build_labels', 'mappings', 'derivation_runs', 'nodes', 'relation_nodes', 'summary_members', 'events', 'sessions', 'session_notes', 'eval_runs', 'eval_results'])
       expect(tables).toContain(t);

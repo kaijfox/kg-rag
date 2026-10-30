@@ -52,7 +52,8 @@ import {
   type SpaceId,
   type StaleReport,
 } from '@kg/core';
-import { type Db, Sql, encodeVector, guard, invalid, notFound, prepareSchema } from './db';
+import { type Db, Sql, guard, prepare } from '@kg/sqlite';
+import { encodeVector, invalid, notFound } from './values';
 
 const json = (v: unknown): string => canonicalJson(v as Json);
 const parse = <T>(s: string): T => JSON.parse(s) as T;
@@ -62,9 +63,9 @@ const sameList = (a: readonly string[], b: readonly string[]): boolean => a.leng
 export class SqliteCorpusStore implements CorpusStore {
   private readonly sql: Sql;
 
-  /** Applies the shared schema (idempotent) and loads sqlite-vec. */
+  /** Configures the connection, loads sqlite-vec and migrates the file to the current schema (idempotent). */
   constructor(db: Db, private readonly clock: Clock) {
-    prepareSchema(db);
+    prepare(db);
     this.sql = new Sql(db);
   }
 

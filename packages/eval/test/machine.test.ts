@@ -9,6 +9,7 @@ import { promptDigest, evalGenerateMachine, evalQuestionMachine, evalRunMachine,
 import type { RunInput } from '../src/machines/evalRun';
 import type { Outcome, QuestionInput } from '../src/machines/evalQuestion';
 import type { GenerationGroup } from '../src/machines/evalGenerate';
+import { GENERATE_PROMPTS } from '../src/prompts/generate';
 
 const PINS = JSON.parse(readFileSync(new URL('../src/machines/pins.json', import.meta.url), 'utf8')) as Record<string, { topology: string; promptDigest?: string }>;
 const MACHINES = [
@@ -33,8 +34,8 @@ describe('pins and diagrams', () => {
   }
 
   it('the prompt-bearing machines pin the digest of the prompt files', () => {
-    expect(PINS['judge@1']!.promptDigest).toBe(promptDigest());
-    expect(PINS['eval-generate@1']!.promptDigest).toBe(promptDigest());
+    expect(PINS['judge@1']!.promptDigest).toBe(promptDigest(['judge.md']));
+    expect(PINS['eval-generate@1']!.promptDigest).toBe(promptDigest(GENERATE_PROMPTS));
   });
 });
 
@@ -189,9 +190,16 @@ describe('run path', () => {
     expect(r.output!.error!.code).toBe('invalid_input');
   });
 
-  it('a failed question fails the run and nothing is completed', async () => {
-    const { r } = await run({ actors: { question: scripted([{ outcome: null, error: new KgError('upstream', 'judge down') }]) } });
-    expect(path(r.visited)).toEqual(['checkingBuild', 'pinning', 'nextQuestion', 'question', 'failed']);
-    expect(r.output!.error!.code).toBe('upstream');
+  it('a failed question is recorded in the summary and the run goes on to completion', async () => {
+    const failed = { outcome: null, error: new KgError('upstream', 'judge down') };
+    const { r } = await run({ actors: { question: scripted([failed, { outcome, error: null }, { outcome, error: null }]) } });
+    expect(path(r.visited)).toContain('summarizing');
+    expect(path(r.visited).at(-1)).toBe('done');
+    expect(r.output!.error).toBeNull();
+    const summary = r.output!.summary as unknown as { failures: { code: string; condition: string }[]; byCondition: Record<string, { failed: number; scored: number }> };
+    expect(summary.failures).toHaveLength(1);
+    expect(summary.failures[0]!.code).toBe('upstream');
+    const failedCondition = summary.failures[0]!.condition;
+    expect(summary.byCondition[failedCondition]!.failed).toBe(1);
   });
 });

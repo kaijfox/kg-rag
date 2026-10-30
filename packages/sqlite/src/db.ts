@@ -1,26 +1,62 @@
 /**
- * SQLite connection helpers shared by the corpus store and the eval repo: opening a file, loading the vector
- * extension, applying the shared schema, mapping SQLite errors to KgError codes, and a small prepared-statement cache.
+ * The SQLite layer shared by the corpus store, the eval repo and the event log: opening a file (WAL, foreign keys,
+ * busy timeout, sqlite-vec), the migrations that create the schema, mapping SQLite errors to KgError codes, and a
+ * small prepared-statement cache.
+ *
+ * Schema versioning uses PRAGMA user_version: MIGRATIONS[i] brings a file from version i to i + 1, and the list is
+ * append-only. A file written before the list existed has user_version 0 and runs migration 1, which is idempotent
+ * (every statement in schema.sql is IF NOT EXISTS), so it upgrades in place.
  */
 import Database from 'better-sqlite3';
 import * as sqliteVec from 'sqlite-vec';
-import { KgError, SCHEMA_VERSION, schemaSql } from '@kg/core';
+import { KgError, schemaSql } from '@kg/core';
 
 export type Db = Database.Database;
 export type SqlValue = string | number | bigint | Buffer | null;
 export type Row = Record<string, unknown>;
+export type Statement = Database.Statement;
 
 /** How long a connection waits for another writer's lock before the call fails with an `upstream` error. */
 export const BUSY_TIMEOUT_MS = 5000;
 
-/** Opens one database file with WAL, foreign keys on and sqlite-vec loaded. Use ':memory:' for tests. */
+type Migration = (db: Db) => void;
+
+const MIGRATIONS: readonly Migration[] = [
+  (db) => db.exec(schemaSql()), // 1: the v0 schema (schema.sql)
+];
+
+/** The schema version this build writes. Stored only in PRAGMA user_version. */
+export const SCHEMA_VERSION = MIGRATIONS.length;
+
+/** Opens one database file, configured and migrated. Use ':memory:' for tests. */
 export function openDatabase(path: string): Db {
   const db = new Database(path);
-  db.pragma('journal_mode = WAL');
-  db.pragma('foreign_keys = ON');
-  db.pragma(`busy_timeout = ${BUSY_TIMEOUT_MS}`);
-  loadVec(db);
+  prepare(db);
   return db;
+}
+
+/** Sets the connection pragmas, loads sqlite-vec and brings the file to SCHEMA_VERSION. Idempotent. */
+export function prepare(db: Db): void {
+  guard(() => {
+    db.pragma('journal_mode = WAL');
+    db.pragma('foreign_keys = ON');
+    db.pragma(`busy_timeout = ${BUSY_TIMEOUT_MS}`);
+    loadVec(db);
+    migrate(db);
+  });
+}
+
+/** Brings the file to SCHEMA_VERSION in one immediate transaction. A file already current is only read. */
+export function migrate(db: Db): void {
+  const from = db.pragma('user_version', { simple: true }) as number;
+  if (from === SCHEMA_VERSION) return;
+  if (from > SCHEMA_VERSION) {
+    throw new KgError('precondition', `database schema version ${from} is newer than this build (${SCHEMA_VERSION})`);
+  }
+  db.transaction(() => {
+    for (let v = from; v < SCHEMA_VERSION; v++) MIGRATIONS[v]!(db);
+    db.pragma(`user_version = ${SCHEMA_VERSION}`);
+  }).immediate();
 }
 
 /** Loads sqlite-vec unless this connection already has it. */
@@ -30,27 +66,6 @@ export function loadVec(db: Db): void {
   } catch {
     sqliteVec.load(db);
   }
-}
-
-/**
- * Loads the vector extension and applies the shared schema text (idempotent; the eventlog runs it too). When the
- * file already carries the current schema version nothing is written, so opening for reading never needs the write lock.
- */
-export function prepareSchema(db: Db): void {
-  loadVec(db);
-  if (guard(() => schemaCurrent(db))) {
-    db.pragma('foreign_keys = ON');
-    return;
-  }
-  guard(() => db.exec(schemaSql()));
-}
-
-/** True when db_meta exists and holds this build's schema version. Reads only. */
-export function schemaCurrent(db: Db): boolean {
-  const meta = db.prepare("SELECT 1 FROM sqlite_master WHERE type = 'table' AND name = 'db_meta'").get();
-  if (!meta) return false;
-  const row = db.prepare("SELECT value FROM db_meta WHERE key = 'schema_version'").get() as { value: string } | undefined;
-  return row?.value === String(SCHEMA_VERSION);
 }
 
 /** Runs fn and converts SQLite errors into KgError codes; other errors pass through unchanged. */
@@ -115,13 +130,3 @@ export class Sql {
     return this.db.transaction(fn).immediate();
   }
 }
-
-/** Float32 little-endian, the vector BLOB format (explicit byte order, independent of the host). */
-export function encodeVector(v: Float32Array): Buffer {
-  const out = Buffer.alloc(v.length * 4);
-  for (let i = 0; i < v.length; i++) out.writeFloatLE(v[i]!, i * 4);
-  return out;
-}
-
-export const invalid = (msg: string): KgError => new KgError('invalid_input', msg);
-export const notFound = (msg: string): KgError => new KgError('not_found', msg);

@@ -1,12 +1,11 @@
--- kg-rag SQLite schema, version 1. One file per database. Applied idempotently by `store` and `eventlog`
--- (both run this whole text; every statement is IF NOT EXISTS). Owner per table: S = store, L = eventlog.
+-- kg-rag SQLite schema, migration 1. One file per database. Applied by `@kg/sqlite` (PRAGMA user_version
+-- records the version; every statement is IF NOT EXISTS, so re-running is harmless). Owner per table: S = store, L = eventlog.
 -- Mutable rows: db_meta (current_build pointer and schema_version) and documents.current_version. Everything
 -- else is insert-only, enforced by the triggers at the end (Rules 2 and 3; append-only log).
 
 PRAGMA foreign_keys = ON;
 
 CREATE TABLE IF NOT EXISTS db_meta (key TEXT PRIMARY KEY, value TEXT NOT NULL);                       -- S
-INSERT OR IGNORE INTO db_meta (key, value) VALUES ('schema_version', '1');
 
 CREATE TABLE IF NOT EXISTS recipes (                                                                   -- S
   recipe_id TEXT PRIMARY KEY, kind TEXT NOT NULL, version TEXT NOT NULL, spec TEXT NOT NULL);           -- spec = canonical JSON of RecipeSpec

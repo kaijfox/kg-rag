@@ -1,0 +1,4 @@
+#!/bin/sh
+# Runs the kg command line from any directory inside the repository: ./kg search "entropy"
+HERE="$(cd "$(dirname "$0")" && pwd)"
+exec "$HERE/node_modules/.bin/tsx" "$HERE/packages/app/src/cli.ts" "$@"

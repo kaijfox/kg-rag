@@ -1,7 +1,7 @@
 # @kg/ingest (WP7, Haiku)
 
 Contract: `@kg/core` CONTRACT_VERSION 0.6.1. You need this card, `core`, `@kg/pipeline` (README and `src`), `testkit`, and
-`.claude/skills/xstate/SKILL.md` (XState v5 only); nothing else. Do not read `packages/app/src/skeleton`.
+`.claude/skills/xstate/SKILL.md` (XState v5 only); nothing else.
 
 Ingest is a state machine: a parent machine for the whole request and a child machine per document. Pausing and resuming are not
 supported and not needed: a run either finishes or fails, and the single commit transaction keeps a failure from leaving partial state.

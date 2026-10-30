@@ -12,11 +12,12 @@
   },
   "dependencies": {
     "@kg/core": "workspace:*",
-    "better-sqlite3": "12.4.1"
+    "@kg/sqlite": "workspace:*"
   },
   "devDependencies": {
     "@kg/testkit": "workspace:*",
     "vitest": "3.2.4",
+    "better-sqlite3": "12.4.1",
     "@types/better-sqlite3": "7.6.13"
   }
 }

@@ -1,7 +1,5 @@
 import {
   KgError,
-  SCHEMA_VERSION,
-  schemaSql,
   validateEventDraft,
   type BuildId,
   type Clock,
@@ -19,10 +17,7 @@ import {
   type SessionNote,
   type SessionSummary,
 } from '@kg/core';
-import type Database from 'better-sqlite3';
-
-/** How long a connection waits for another writer's lock before the call fails with an `upstream` error. */
-const BUSY_TIMEOUT_MS = 5000;
+import { guard, prepare, type Db, type Statement } from '@kg/sqlite';
 
 interface EventRow {
   event_id: string;
@@ -62,27 +57,22 @@ const SESSION_SUMMARY_SQL = `SELECT s.session_id, s.kind, s.label, s.started_at,
 
 /** SQLite-backed EventLog and LogReader. Reads and writes the sessions, events and session_notes tables. */
 export class SqliteEventLog implements EventLog, LogReader {
-  private readonly insertSession: Database.Statement;
-  private readonly insertEvent: Database.Statement;
-  private readonly insertNote: Database.Statement;
-  private readonly sessionExists: Database.Statement;
-  private readonly maxSeq: Database.Statement;
-  private readonly eventById: Database.Statement;
-  private readonly notesOf: Database.Statement;
+  private readonly insertSession: Statement;
+  private readonly insertEvent: Statement;
+  private readonly insertNote: Statement;
+  private readonly sessionExists: Statement;
+  private readonly maxSeq: Statement;
+  private readonly eventById: Statement;
+  private readonly notesOf: Statement;
   private readonly appendTx: (d: EventDraft) => EventEnvelope;
   private readonly openTx: (kind: SessionKind, label: string | null, meta: { [k: string]: Json }) => SessionId;
 
   constructor(
-    private readonly db: Database.Database,
+    private readonly db: Db,
     private readonly clock: Clock,
     private readonly ids: IdGen,
   ) {
-    guardBusy(() => {
-      db.pragma('journal_mode = WAL');
-      db.pragma('foreign_keys = ON');
-      db.pragma(`busy_timeout = ${BUSY_TIMEOUT_MS}`);
-      if (!schemaCurrent(db)) db.exec(schemaSql());
-    });
+    prepare(db);
     this.insertSession = db.prepare('INSERT INTO sessions (session_id, kind, label, meta, started_at) VALUES (?, ?, ?, ?, ?)');
     this.insertEvent = db.prepare(
       `INSERT INTO events (event_id, session_id, seq, ts, type, schema_version, build_id, search_id, parent_id, payload)
@@ -124,12 +114,12 @@ export class SqliteEventLog implements EventLog, LogReader {
   }
 
   openSession(s: { kind: SessionKind; label: string | null; meta: { [k: string]: Json } }): SessionId {
-    return guardBusy(() => this.openTx(s.kind, s.label, s.meta));
+    return guard(() => this.openTx(s.kind, s.label, s.meta));
   }
 
   append(e: EventDraft): EventEnvelope {
     const d = validateEventDraft(e);
-    return guardBusy(() => this.appendTx(d));
+    return guard(() => this.appendTx(d));
   }
 
   sessions(f: SessionFilter = {}): SessionSummary[] {
@@ -178,7 +168,7 @@ export class SqliteEventLog implements EventLog, LogReader {
     if (!this.sessionExists.get(sessionId)) throw new KgError('not_found', `session ${sessionId}`);
     if (text.trim() === '') throw new KgError('invalid_input', 'empty note');
     const ts = this.clock.now();
-    const info = guardBusy(() => this.insertNote.run(sessionId, ts, text));
+    const info = guard(() => this.insertNote.run(sessionId, ts, text));
     return { noteId: Number(info.lastInsertRowid), sessionId, ts, text };
   }
 
@@ -186,26 +176,6 @@ export class SqliteEventLog implements EventLog, LogReader {
     const row = this.eventById.get(id) as EventRow | undefined;
     if (!row) throw new KgError('internal', `event ${id} vanished after insert`);
     return toEvent(row);
-  }
-}
-
-/** True when db_meta exists and holds this build's schema version. Reads only, so opening needs no write lock. */
-function schemaCurrent(db: Database.Database): boolean {
-  if (!db.prepare("SELECT 1 FROM sqlite_master WHERE type = 'table' AND name = 'db_meta'").get()) return false;
-  const row = db.prepare("SELECT value FROM db_meta WHERE key = 'schema_version'").get() as { value: string } | undefined;
-  return row?.value === String(SCHEMA_VERSION);
-}
-
-/** Maps a lock timeout from another process to a KgError; everything else passes through. */
-function guardBusy<T>(fn: () => T): T {
-  try {
-    return fn();
-  } catch (e) {
-    const code = (e as { code?: unknown } | null)?.code;
-    if (e instanceof Error && typeof code === 'string' && /^SQLITE_(BUSY|LOCKED)/.test(code)) {
-      throw new KgError('upstream', `database is busy: ${e.message}`);
-    }
-    throw e;
   }
 }
 

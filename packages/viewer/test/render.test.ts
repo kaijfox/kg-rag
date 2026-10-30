@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { validateMachineMap, type EventEnvelope, type MachineMap } from '@kg/core';
-import { logFixture, machineMapFixture, machineRunFixture } from '@kg/testkit';
-import { diagramOf, escapeHtml, mermaidOf, nextOf, orderSessions, pathOverlay, pickRun, renderTimeline, runsOf } from '../src/index';
+import { logFixture, machineMapFixture } from '@kg/testkit';
+import { diagramOf, eventTree, orderSessions, pickRun, renderTimeline, runsOf, textOf, type Tree } from '../web/render.js';
 
 const env = (type: string, seq: number, payload: unknown, extra: Partial<EventEnvelope> = {}): EventEnvelope =>
   ({ id: `ev_${seq}`, sessionId: 'se_test', seq, ts: '2026-10-17T12:00:00.000Z', schemaVersion: 1, type, buildId: null, searchId: null, parentId: null, payload, ...extra }) as EventEnvelope;
@@ -12,155 +12,97 @@ const finished = (state: string, status: 'done' | 'failed' = 'done') =>
 const step = (state: string, i: number) =>
   env('search.step', 2 + i, { trace: { stepIndex: i, state, stepType: state, params: {}, considered: [], output: [], durationMs: 1 } }, { searchId: 'sr_1' as never, buildId: 'bd_1' as never });
 
+/** Every tag name in a tree; the page builds only these, so a log value can never add one. */
+const tags = (t: Tree): string[] => [t.tag, ...t.kids.flatMap((k) => (typeof k === 'object' && k !== null && 'tag' in k ? tags(k) : []))];
+const findRow = (rows: Tree[], needle: string) => rows.find((r) => textOf(r).includes(needle))!;
+
 const search = machineMapFixture();
 
 describe('renderTimeline', () => {
-  it('renders the agent session as one line per event and shows the failed call error code', () => {
+  it('renders the agent session as one row per event and shows the failed call error code', () => {
     const envs = logFixture('session-agent');
-    const html = renderTimeline(envs);
-    const lines = html.split('\n');
-    expect(lines.length).toBe(envs.length);
-    expect(lines.every((l) => l.startsWith('<div class="ev ') && l.endsWith('</div>'))).toBe(true);
-    const failed = lines.find((l) => l.includes('tool.failed'))!;
-    expect(failed).toContain('not_found');
-    const steps = lines.filter((l) => l.includes('search.step'));
+    const rows = renderTimeline(envs);
+    expect(rows.length).toBe(envs.length);
+    expect(rows.every((r) => r.tag === 'div' && r.cls?.startsWith('ev '))).toBe(true);
+    expect(textOf(findRow(rows, 'tool.failed')!)).toContain('not_found');
+    const steps = rows.filter((r) => r.cls?.includes('search.step'));
     expect(steps.length).toBe(6);
-    expect(steps[0]).toContain('<span class="state">retrieve</span>');
-    expect(steps[1]).toContain('<span class="state">cut</span>');
+    expect(textOf(steps[0]!)).toContain('retrieve');
+    expect(textOf(steps[1]!)).toContain('cut');
   });
 
-  it('escapes payload text', () => {
-    const q = env('query', 3, { query: '<img src=x onerror=alert(1)>', k: 3, searchRecipeId: 'rc_x' }, { searchId: 'sr_1' as never, buildId: 'bd_1' as never });
-    const line = renderTimeline([q]);
-    expect(line).not.toContain('<img');
-    expect(line).toContain('&lt;img');
-    expect(escapeHtml(`a&b<"'>`)).toBe('a&amp;b&lt;&quot;&#39;&gt;');
+  it('keeps log text as text: markup in payloads never adds an element', () => {
+    const q = eventTree(env('query', 3, { query: '<img src=x onerror=alert(1)>', k: 3, searchRecipeId: 'rc_x' }));
+    expect(textOf(q)).toContain('<img src=x onerror=alert(1)>');
+    expect(tags(q).every((t) => ['div', 'span', 'b', 'details', 'summary', 'pre'].includes(t))).toBe(true);
+    expect(tags(q)).not.toContain('img');
   });
 
-  it('escapes strings that arrive in numeric fields', () => {
+  it('a string in a numeric field is shown as text and adds no element', () => {
     const X = '<img src=x onerror=alert(1)>';
-    const q = (type: string, payload: unknown, extra: Partial<EventEnvelope> = {}) => renderTimeline([env(type, 1, payload, extra)]);
     const trace = { stepIndex: X, state: 'retrieve', stepType: 't', params: {}, considered: [{ itemId: 'ch_a', score: 0.1, rank: X, queryId: 'q0' }], output: [{ itemId: 'ch_a', score: 0.1, rank: X, queryId: 'q0' }], pools: { side: [{ itemId: 'ch_a', score: 0.1, rank: X, queryId: 'q0' }] }, durationMs: X };
-    const lines = [
-      q('query', { query: 'q', k: X }),
-      q('search.step', { trace }),
-      q('search.result', { items: [{ rank: X, score: X, itemId: 'ch_a' }], stale: false }),
-      q('ingest.parsed', { docKey: 'd', origin: 'parsed', stats: { pages: X } }),
-      q('ingest.chunked', { docKey: 'd', chunkCount: X, inserted: X, reused: X, dropped: X }),
-      q('ingest.embedded', { docKey: 'd', embedded: X, skipped: X }),
-      q('build.created', { buildId: 'bd_1', itemCount: X, revert: false }),
-      q('feedback', { overall: X, items: [], note: null }),
-      q('outcome', { success: X, note: '' }),
-      q('llm.called', { purpose: 'p', model: 'm', inputTokens: X, outputTokens: X, durationMs: X }),
-      renderTimeline([env('query', X as never, { query: 'q', k: 1 })]),
+    const rows = [
+      eventTree(env('query', 1, { query: 'q', k: X })),
+      eventTree(env('search.step', 2, { trace })),
+      eventTree(env('search.result', 3, { items: [{ rank: X, score: X, itemId: 'ch_a' }], stale: false })),
+      eventTree(env('ingest.chunked', 4, { docKey: 'd', chunkCount: X, inserted: X, reused: X, dropped: X })),
+      eventTree(env('llm.called', 5, { purpose: 'p', model: 'm', inputTokens: X, outputTokens: X, durationMs: X })),
+      eventTree(env('tool.returned', 6, { tool: 't', durationMs: X, summary: {} })),
     ];
-    for (const l of lines) {
-      expect(l).not.toContain('<img');
-      expect(l).toContain('&lt;img');
-    }
-    expect(q('tool.returned', { tool: 't', durationMs: X, summary: {} })).not.toContain('<img');
+    for (const r of rows) expect(tags(r)).not.toContain('img');
+    expect(textOf(rows[0]!)).toContain(X);
+    expect(textOf(rows[2]!)).toContain(X);
+    expect(textOf(rows[3]!)).toContain(X);
+    expect(textOf(rows[4]!)).toContain(X);
   });
 
   it('shows the state beside each step and the pools when a step has them', () => {
     const withPools = env(
       'search.step',
       4,
-      {
-        trace: {
-          stepIndex: 0,
-          state: 'retrieve',
-          stepType: 'vector-knn',
-          params: {},
-          considered: [],
-          output: [],
-          pools: { side: [{ itemId: 'ch_a', score: 0.5, rank: 1, queryId: 'q0' }] },
-          durationMs: 1,
-        },
-      },
+      { trace: { stepIndex: 0, state: 'retrieve', stepType: 'vector-knn', params: {}, considered: [], output: [], pools: { side: [{ itemId: 'ch_a', score: 0.5, rank: 1, queryId: 'q0' }] }, durationMs: 1 } },
       { searchId: 'sr_1' as never, buildId: 'bd_1' as never },
     );
-    const line = renderTimeline([withPools], (id) => ({ label: `L:${id}`, text: '' }));
-    expect(line).toContain('pools: side (1)');
-    expect(line).toContain('L:ch_a');
-    expect(renderTimeline([step('cut', 0)]).includes('<span class="state">cut</span>')).toBe(true);
+    const row = renderTimeline([withPools], (id) => ({ label: `L:${id}`, text: '' }))[0]!;
+    const text = textOf(row);
+    expect(text).toContain('pools: side (1)');
+    expect(text).toContain('L:ch_a');
+    expect(textOf(renderTimeline([step('cut', 0)])[0]!)).toContain('cut');
   });
 });
 
-describe('mermaidOf', () => {
-  it('draws the machine as stateDiagram-v2 without overlay classes', () => {
-    const text = mermaidOf(search);
+describe('diagramOf', () => {
+  const agent = logFixture('session-agent');
+  const runs = runsOf(agent);
+
+  it('draws only the states the run logged, each with its visit count, and no states it did not reach', () => {
+    const prefix = runs[1]!.events.slice(0, 2);
+    const text = diagramOf(search, prefix)!;
     expect(text.split('\n')[0]).toBe('stateDiagram-v2');
-    expect(text).toContain('state "vector-knn retrieval" as n0');
-    expect(text).toContain('    [*] --> n0');
-    expect(text).toContain('    n0 --> n1 : done');
-    expect(text).toContain('    n3 --> [*]');
-    expect(text).not.toContain('classDef');
-    expect(text).not.toContain('linkStyle');
-  });
-});
-
-describe('pathOverlay', () => {
-  it('marks a recorded search run: routing states are filled in between logged states', () => {
-    const run = machineRunFixture();
-    expect(runsOf(run).length).toBe(1);
-    const o = pathOverlay(search, run);
-    expect(o.visits).toEqual({ retrieve: 1, cut: 1 });
-    expect(o.moves).toEqual([
-      { from: 'retrieve', to: 'check', count: 1 },
-      { from: 'check', to: 'cut', count: 1 },
-      { from: 'cut', to: 'done', count: 1 },
-    ]);
-    expect(o.final).toBe('done');
-    expect(o.stop).toBeNull();
+    expect(text.match(/state "/g)?.length).toBe(1);
+    expect(text).toContain('state "vector-knn retrieval (x1)" as n0');
+    expect(text).not.toContain('cut');
+    expect(text.split('\n').filter((l) => l.includes('-->') && !l.includes('[*]'))).toEqual([]);
+    expect(text).not.toContain('next');
   });
 
-  it('follows a loop: a state visited twice, its routing state twice, the exit once', () => {
-    const run = [started(), step('retrieve', 0), step('retrieve', 1), step('cut', 2), finished('done')];
-    const o = pathOverlay(search, run);
-    expect(o.visits).toEqual({ retrieve: 2, cut: 1 });
-    expect(o.moves).toEqual([
-      { from: 'retrieve', to: 'check', count: 2 },
-      { from: 'check', to: 'retrieve', count: 1 },
-      { from: 'check', to: 'cut', count: 1 },
-      { from: 'cut', to: 'done', count: 1 },
-    ]);
-    expect(o.final).toBe('done');
-    const text = mermaidOf(search, { ...o, next: [] });
-    expect(text).toContain('state "vector-knn retrieval (2 rounds)" as n0');
-    expect(text).toContain('class n0 visited');
-    expect(text).toContain('class n1 visited');
-    expect(text).toContain('class n4 unvisited');
-    expect(text).toContain('class n3 visited,final');
-    // traversed moves carry a count; stateDiagram-v2 has no linkStyle (Mermaid draws it as states)
-    const edge = (from: string, to: string) => text.split('\n').find((l) => l.startsWith(`    ${from} --> ${to} :`)) ?? '';
-    expect(edge('n0', 'n1')).toMatch(/ x2$/);
-    expect(edge('n1', 'n0')).toMatch(/ x1$/);
-    expect(edge('n1', 'n2')).toMatch(/ x1$/);
-    expect(edge('n2', 'n3')).toMatch(/ x1$/);
-    expect(edge('n0', 'n4')).not.toMatch(/ x\d+$/);
-    expect(edge('n2', 'n4')).not.toMatch(/ x\d+$/);
+  it('draws a finished run with its edges between drawn states and the final state', () => {
+    const text = diagramOf(search, runs[0]!.events)!;
+    expect(text).toContain('state "vector-knn retrieval (x1)" as n0');
+    const final = /state "done \(x1\)" as (n\d+)/.exec(text)?.[1];
+    expect(final).toBeDefined();
+    expect(text).toContain(`class ${final} visited,final`);
+    expect(text).toContain(`${final} --> [*]`);
+    expect(text).toContain('[*] --> n0');
     expect(text).not.toContain('linkStyle');
   });
 
-  it('a failed run marks the state of pipeline.finished as the stop, and walks the error edge', () => {
-    const o = pathOverlay(search, [started(), step('retrieve', 0), finished('failed', 'failed')]);
-    expect(o.stop).toBe('failed');
-    expect(o.final).toBe('failed');
-    expect(o.visits).toEqual({ retrieve: 1 });
-    expect(o.moves).toEqual([{ from: 'retrieve', to: 'failed', count: 1 }]);
+  it('marks the state of a failed run as the stop state', () => {
+    const text = diagramOf(search, [started(), step('retrieve', 0), finished('retrieve', 'failed')])!;
+    expect(text).toContain('class n0 visited,stop');
   });
 
-  it('a failed run that stopped in a work state marks it and leaves final empty', () => {
-    const o = pathOverlay(search, [started(), step('retrieve', 0), finished('cut', 'failed')]);
-    expect(o.stop).toBe('cut');
-    expect(o.final).toBeNull();
-    expect(o.moves).toEqual([
-      { from: 'retrieve', to: 'check', count: 1 },
-      { from: 'check', to: 'cut', count: 1 },
-    ]);
-  });
-
-  it('works for an ingest run whose events map to states by their logs', () => {
+  it('draws an ingest run whose events map to states by their logs', () => {
     const ingest: MachineMap = {
       machine: 'ingest-demo',
       version: '1',
@@ -183,58 +125,28 @@ describe('pathOverlay', () => {
       env('ingest.chunked', 4, { docKey: 'entropy', docVersionId: 'dv_x', chunkCount: 1, inserted: 1, reused: 0, dropped: 0 }),
       env('pipeline.finished', 5, { pipeline: 'ingest', status: 'done', state: 'done' }),
     ];
-    const o = pathOverlay(ingest, run);
-    expect(o.visits).toEqual({ parse: 1, chunk: 1 });
-    expect(o.moves).toEqual([
-      { from: 'parse', to: 'chunk', count: 1 },
-      { from: 'chunk', to: 'done', count: 1 },
-    ]);
-    expect(o.final).toBe('done');
-  });
-});
-
-describe('live runs', () => {
-  const agent = logFixture('session-agent');
-  const runs = runsOf(agent);
-
-  it('nextOf names the successors of the last logged state until pipeline.finished arrives', () => {
-    expect(runs.length).toBe(3);
-    const second = runs[1]!.events;
-    // second = [pipeline.started, step retrieve, step cut, pipeline.finished, ...]
-    expect(nextOf(search, second.slice(0, 2))).toEqual(['retrieve', 'cut']);
-    expect(nextOf(search, second.slice(0, 3))).toEqual(['done']);
-    expect(nextOf(search, second)).toEqual([]);
-    expect(nextOf(search, [started()])).toEqual(['retrieve']);
+    const text = diagramOf(ingest, run)!;
+    expect(text).toContain('state "parse (x1)" as n0');
+    expect(text).toContain('state "chunk (x1)" as n1');
+    expect(text).toContain('state "done (x1)" as n2');
+    expect(text).toContain('n0 --> n1 : done');
+    expect(text).toContain('n1 --> n2 : done');
+    expect(text).toContain('class n2 visited,final');
   });
 
-  it('diagramOf draws the live prefix with visits, the next states and no finish', () => {
-    const prefix = runs[1]!.events.slice(0, 2);
-    const text = diagramOf(search, prefix)!;
-    expect(text).toContain('state "vector-knn retrieval (x1)" as n0');
-    expect(text).toContain('class n0 visited,next');
-    expect(text).toContain('class n2 unvisited,next');
-    expect(text).not.toContain('class n3 visited,final');
-  });
-
-  it('diagramOf draws a finished agent run with its path and final state', () => {
-    const text = diagramOf(search, runs[0]!.events)!;
-    expect(text).toContain('state "vector-knn retrieval (x1)" as n0');
-    expect(text).toContain('class n3 visited,final');
-    expect(text).not.toContain('linkStyle');
-  });
-
-  it('falls back to the flat timeline: no pipeline.started, another version, an unknown state', () => {
+  it('falls back to the flat timeline: no pipeline.started, another version, an unknown state, nothing logged', () => {
     const live = logFixture('session-live-partial');
     const liveRuns = runsOf(live);
     expect(liveRuns.length).toBe(2);
     const liveSearch = live.filter((e) => e.searchId === 'sr_00000000000000000000000007');
     expect(diagramOf(search, liveSearch)).not.toBeNull();
     expect(diagramOf(search, liveSearch.filter((e) => e.type !== 'pipeline.started'))).toBeNull();
-    expect(diagramOf(search, runs[0]!.events.slice(0, 2))).not.toBeNull();
     expect(diagramOf({ ...search, version: '2' }, runs[0]!.events)).toBeNull();
     expect(diagramOf(null, runs[0]!.events)).toBeNull();
     expect(diagramOf(search, [started(), step('nowhere', 0)])).toBeNull();
+    expect(diagramOf(search, [started()])).toBeNull();
   });
+
 });
 
 describe('session order and run following', () => {
@@ -258,3 +170,4 @@ describe('session order and run following', () => {
     expect(pickRun([], '1', true)).toBeNull();
   });
 });
+

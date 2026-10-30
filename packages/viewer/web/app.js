@@ -1,5 +1,19 @@
 import { diagramOf, orderSessions, pickRun, renderTimeline, runsOf } from './render.js';
 
+/** Turns a render tree into DOM nodes. Text becomes text nodes, so log content is never parsed as markup. */
+function build(k) {
+  if (k === null || k === undefined || k === false) return null;
+  if (typeof k === 'string') return document.createTextNode(k);
+  const el = document.createElement(k.tag);
+  if (k.cls) el.className = k.cls;
+  for (const [key, v] of Object.entries(k.data ?? {})) el.dataset[key] = v;
+  for (const c of k.kids) {
+    const n = build(c);
+    if (n) el.append(n);
+  }
+  return el;
+}
+
 const POLL_MS = 1000;
 const SESSIONS_MS = 5000;
 
@@ -19,6 +33,7 @@ const st = {
   items: new Map(),
   machines: new Map(),
   diagram: null,
+  drawn: 0,
   pullTimer: null,
   busy: false,
 };
@@ -90,6 +105,8 @@ function selectSession(sessionId) {
   st.followRun = true;
   st.selectedState = null;
   st.diagram = null;
+  st.drawn = 0;
+  $('timeline').replaceChildren();
   $('item-detail').hidden = true;
   $('visit').replaceChildren();
   if (decodeURIComponent(location.hash.slice(1)) !== sessionId) location.hash = enc(sessionId);
@@ -113,9 +130,11 @@ async function pull() {
       st.events.push(...got);
       if (got.length) st.lastSeq = got[got.length - 1].seq;
     } while (got.length === 1000);
-    await loadItems();
+    // a newly fetched label can change rows already drawn, so those are redrawn; otherwise only new rows are added
+    const newLabels = await loadItems();
     await loadMachines();
-    draw();
+    drawTimeline(newLabels > 0);
+    drawRun();
     status(`${st.events.length} events · ${new Date().toLocaleTimeString()}`);
     const row = document.querySelector(`#sessions [aria-current="true"] .meta`);
     if (row) row.textContent = row.textContent.replace(/· \d+ events/, `· ${Math.max(st.events.length, Number(/· (\d+) events/.exec(row.textContent)?.[1] ?? 0))} events`);
@@ -148,6 +167,7 @@ function itemIdsOf(events) {
   return ids;
 }
 
+/** Fetches the labels of items not yet known; returns how many were fetched. */
 async function loadItems() {
   const missing = [...itemIdsOf(st.events)].filter((id) => !st.items.has(id));
   await Promise.all(
@@ -160,6 +180,7 @@ async function loadItems() {
       }
     }),
   );
+  return missing.length;
 }
 
 const itemInfo = (id) => st.items.get(id) ?? null;
@@ -182,9 +203,14 @@ async function loadMachines() {
 
 // ---------------------------------------------------------------- drawing
 
-async function draw() {
-  $('timeline').innerHTML = renderTimeline(st.events, itemInfo);
-  drawRun();
+function drawTimeline(redraw) {
+  const box = $('timeline');
+  if (redraw) {
+    box.replaceChildren();
+    st.drawn = 0;
+  }
+  box.append(...renderTimeline(st.events.slice(st.drawn), itemInfo).map(build).filter(Boolean));
+  st.drawn = st.events.length;
 }
 
 async function drawRun() {

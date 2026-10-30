@@ -1,7 +1,8 @@
 import { describe, expect, it } from 'vitest';
 import { buildId, type BuildManifest, type ItemId } from '@kg/core';
 import { FixedClock } from '@kg/testkit';
-import { openDatabase, SqliteCorpusStore } from '../src/index';
+import { openDatabase } from '@kg/sqlite';
+import { SqliteCorpusStore } from '../src/index';
 import { codeOf, populate } from './helpers';
 
 describe('build identity on SQLite (buildId from core)', () => {

@@ -1,15 +1,16 @@
 /** SqliteEvalRepo: the EvalRepo port over the eval tables of the shared schema (insert-only, enforced by triggers). */
 import { canonicalJson, KgError, type EvalRepo, type EvalResultRecord, type EvalRunId, type EvalRunRecord, type ItemId, type Json, type SearchId, type SessionId, type BuildId, type EvalSetId } from '@kg/core';
-import { type Db, Sql, guard, notFound, prepareSchema } from './db';
+import { type Db, Sql, guard, prepare } from '@kg/sqlite';
+import { notFound } from './values';
 
 const json = (v: unknown): string => canonicalJson(v as Json);
 
 export class SqliteEvalRepo implements EvalRepo {
   private readonly sql: Sql;
 
-  /** Applies the shared schema (idempotent) and loads sqlite-vec. */
+  /** Configures the connection, loads sqlite-vec and migrates the file to the current schema (idempotent). */
   constructor(db: Db) {
-    prepareSchema(db);
+    prepare(db);
     this.sql = new Sql(db);
   }
 

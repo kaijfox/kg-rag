@@ -1,10 +1,9 @@
 # @kg/store
 
-SQLite implementation of the core `CorpusStore` and `EvalRepo` ports, plus `openDatabase`.
+SQLite implementation of the core `CorpusStore` and `EvalRepo` ports. The connection and schema live in `@kg/sqlite`.
 
-- `openDatabase(path)` opens one file (WAL, foreign keys on, sqlite-vec loaded). Use `':memory:'` in tests.
-- `new SqliteCorpusStore(db, clock)` and `new SqliteEvalRepo(db)` apply the shared schema text on construction only
-  when `db_meta` lacks the current `schema_version`, so opening a file that already has the schema (a viewer, a
+- `new SqliteCorpusStore(db, clock)` and `new SqliteEvalRepo(db)` take a handle from `@kg/sqlite`'s `openDatabase`, and
+  call its `prepare` on construction. That migrates a file only when its version is behind, so opening a file that already has the schema (a viewer, a
   reader) takes no write lock.
 - Every store transaction is `BEGIN IMMEDIATE` (nested calls are savepoints), so processes sharing the file queue on
   the write lock. A lock held past `busy_timeout` (5 s) raises `KgError('upstream')`.

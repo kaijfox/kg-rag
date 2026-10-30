@@ -72,18 +72,22 @@ importers:
       '@kg/search':
         specifier: workspace:*
         version: link:../search
+      '@kg/sqlite':
+        specifier: workspace:*
+        version: link:../sqlite
       '@kg/store':
         specifier: workspace:*
         version: link:../store
-      '@kg/testkit':
-        specifier: workspace:*
-        version: link:../testkit
       '@kg/viewer':
         specifier: workspace:*
         version: link:../viewer
       '@modelcontextprotocol/sdk':
         specifier: 1.32.0
         version: 1.32.0(zod@4.1.12)
+    devDependencies:
+      '@kg/testkit':
+        specifier: workspace:*
+        version: link:../testkit
 
   packages/chunk:
     dependencies:
@@ -145,9 +149,9 @@ importers:
       '@kg/core':
         specifier: workspace:*
         version: link:../core
-      better-sqlite3:
-        specifier: 12.4.1
-        version: 12.4.1
+      '@kg/sqlite':
+        specifier: workspace:*
+        version: link:../sqlite
     devDependencies:
       '@kg/testkit':
         specifier: workspace:*
@@ -155,6 +159,9 @@ importers:
       '@types/better-sqlite3':
         specifier: 7.6.13
         version: 7.6.13
+      better-sqlite3:
+        specifier: 12.4.1
+        version: 12.4.1
       vitest:
         specifier: 3.2.4
         version: 3.2.4(@types/node@22.20.5)(tsx@4.21.0)
@@ -236,7 +243,7 @@ importers:
         specifier: 3.2.4
         version: 3.2.4(@types/node@22.20.5)(tsx@4.21.0)
 
-  packages/store:
+  packages/sqlite:
     dependencies:
       '@kg/core':
         specifier: workspace:*
@@ -254,6 +261,22 @@ importers:
       '@types/better-sqlite3':
         specifier: 7.6.13
         version: 7.6.13
+      vitest:
+        specifier: 3.2.4
+        version: 3.2.4(@types/node@22.20.5)(tsx@4.21.0)
+
+  packages/store:
+    dependencies:
+      '@kg/core':
+        specifier: workspace:*
+        version: link:../core
+      '@kg/sqlite':
+        specifier: workspace:*
+        version: link:../sqlite
+    devDependencies:
+      '@kg/testkit':
+        specifier: workspace:*
+        version: link:../testkit
       vitest:
         specifier: 3.2.4
         version: 3.2.4(@types/node@22.20.5)(tsx@4.21.0)

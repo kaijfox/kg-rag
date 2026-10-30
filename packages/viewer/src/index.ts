@@ -3,4 +3,3 @@
  * the pure rendering functions live in web/render.js so the browser and the tests run the same code.
  */
 export { createViewerServer, type ViewerOptions } from './server';
-export { diagramOf, escapeHtml, mermaidOf, nextOf, orderSessions, pathOverlay, pickRun, renderTimeline, runsOf } from '../web/render.js';

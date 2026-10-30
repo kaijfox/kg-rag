@@ -1,7 +1,7 @@
 # @kg/eval (WP11a metrics and runner machines: Haiku; WP11b generation and judge machines and parsers: Haiku; the prompt files are written by the lead)
 
 Contract: `@kg/core` CONTRACT_VERSION 0.6.1. You need this card, `core`, `@kg/pipeline` (README and `src`), `testkit`, and
-`.claude/skills/xstate/SKILL.md` (XState v5 only); nothing else. Do not read `packages/app/src/skeleton`.
+`.claude/skills/xstate/SKILL.md` (XState v5 only); nothing else.
 Two owned subdirectories: `src/metrics` + `src/runner` (11a) and `src/prompts` (11b). Their boundary is the
 core types `QuestionDraft` and `JudgeVerdict`.
 

@@ -3,7 +3,8 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { afterAll, describe, expect, it } from 'vitest';
 import { FixedClock } from '@kg/testkit';
-import { openDatabase, SqliteCorpusStore } from '../src/index';
+import { openDatabase } from '@kg/sqlite';
+import { SqliteCorpusStore } from '../src/index';
 import { populate } from './helpers';
 
 describe('insert-only triggers on the store tables', () => {

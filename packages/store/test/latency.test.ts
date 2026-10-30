@@ -3,7 +3,8 @@
  */
 import { it } from 'vitest';
 import { FixedClock } from '@kg/testkit';
-import { openDatabase, SqliteCorpusStore } from '../src/index';
+import { openDatabase } from '@kg/sqlite';
+import { SqliteCorpusStore } from '../src/index';
 import { populate, prng, randomVector } from './helpers';
 
 it('reports knn latency on 20,000 x 384 (printed, not asserted)', () => {

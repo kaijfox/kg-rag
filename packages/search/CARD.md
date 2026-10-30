@@ -1,7 +1,7 @@
 # @kg/search (WP8, Haiku)
 
 Contract: `@kg/core` CONTRACT_VERSION 0.6.1. You need this card, `core`, `@kg/pipeline` (its README and `src`),
-`testkit`, and `.claude/skills/xstate/SKILL.md` (XState v5 only); nothing else. Do not read `packages/app/src/skeleton`.
+`testkit`, and `.claude/skills/xstate/SKILL.md` (XState v5 only); nothing else.
 
 A search is a state machine. v0 has exactly one search machine, `similarity` (retrieve, then cut). The package holds the
 search service, the machine, the two step implementations the machine calls, and the machine's pin and diagram.

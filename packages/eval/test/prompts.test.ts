@@ -21,6 +21,7 @@ import {
 import { evalGenerateMachine, reusesWording } from '../src/machines/evalGenerate';
 import { RETRY_INSTRUCTION } from '../src/machines/retry';
 import { judgeMachine } from '../src/machines/judge';
+import { GENERATE_PROMPTS } from '../src/prompts/generate';
 
 /** Replies in order, one per call; the requests are kept for inspection. */
 class SequenceLlm implements Llm {
@@ -221,7 +222,8 @@ describe('judge', () => {
     const r = judgeRecipe();
     expect(r.kind).toBe('eval-judge');
     expect(r.spec.topology).toBe(topologyOf(judgeMachine));
-    expect(r.spec.promptDigest).toBe(promptDigest());
+    expect(r.spec.promptDigest).toBe(promptDigest(['judge.md']));
+    expect(r.spec.promptDigest).not.toBe(promptDigest(GENERATE_PROMPTS));
     expect(r.spec.settings).toMatchObject({ model: JUDGE_SETTINGS.model, retryBudget: JUDGE_SETTINGS.retryBudget });
   });
 
@@ -242,8 +244,10 @@ describe('answer', () => {
 });
 
 describe('the prompt files', () => {
-  it('the digest is a sha256 hex string over the prompt directory', () => {
-    expect(promptDigest()).toMatch(/^[0-9a-f]{64}$/);
+  it('the digest is a sha256 hex string over the named files, and depends on those files only', () => {
+    expect(promptDigest(['judge.md'])).toMatch(/^[0-9a-f]{64}$/);
+    expect(promptDigest(['judge.md', 'answer.md'])).not.toBe(promptDigest(['judge.md']));
+    expect(promptDigest(['answer.md', 'judge.md'])).toBe(promptDigest(['judge.md', 'answer.md']));
   });
 });
 

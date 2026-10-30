@@ -40,6 +40,8 @@ const PROMPT_FOR: Record<GenerationGroup['type'], string> = {
   'multi-hop': 'generate-multi-hop.md',
   topic: 'generate-topic.md',
 };
+/** The prompt files the eval-generate machine loads; its recipe's promptDigest covers exactly these. */
+export const GENERATE_PROMPTS: readonly string[] = Object.values(PROMPT_FOR);
 
 /** The request for one group: the passages numbered from 0, the section for topic groups, the count from the mix. */
 export function generationRequest(group: GenerationGroup, settings: GenerateSettings): LlmRequest {
@@ -129,7 +131,7 @@ export function generateRecipe(settings: GenerateSettings = GENERATE_SETTINGS): 
   return {
     kind: 'eval-generate',
     version: '1',
-    spec: { machine: 'eval-generate', settings, topology: topologyOf(evalGenerateMachine), promptDigest: promptDigest() },
+    spec: { machine: 'eval-generate', settings, topology: topologyOf(evalGenerateMachine), promptDigest: promptDigest(GENERATE_PROMPTS) },
   };
 }
 

@@ -53,8 +53,8 @@ Evaluation of retrieval and answers, in two halves that meet at the core types `
   way out. Generation and judging run without a pipeline bracket: they take no tool context.
 - The judge is not validated against hand-scored examples. The judge fixture is scripted; no real-model verdicts were
   checked. Numbers from a real judge are not trusted yet (card: validate first).
-- Caching and the Ollama client are not in this package: the composition root passes an `Llm` (for example a `ReplayLlm`
-  over a recorded log for reruns).
+- No replay cache exists. Reruns call the local model again. The cache is deferred until debugging needs it (sprint 3
+  decision): `ReplayLlm` in testkit is a test fake that answers from a list, not a cache. The Ollama client is in the composition root.
 - Cross-corpus questions (gold chunks of another database) have no recall here; only answers and judgements are scored.
 - `search.step` events of the nested retrieval come from the search package; the runner does not log them itself.
 

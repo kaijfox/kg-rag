@@ -19,7 +19,7 @@ stateDiagram-v2
   pinning --> failed : error
   nextQuestion --> question : always [hasItem]
   nextQuestion --> summarizing : always
-  question --> failed : done [questionFailed]
+  question --> nextQuestion : done [questionFailed]
   question --> nextQuestion : done
   question --> failed : error
   summarizing --> completing : always

@@ -9,9 +9,9 @@ inserted, so `seq` was renumbered after each insertion; no other field changed. 
 `session-live-partial` is cut off before its end, so it has no `pipeline.finished` and is left as it was. The ingest
 runs in `session-agent` are not bracketed by `pipeline.started`/`pipeline.finished`: only searches were added.
 
-Recorded by `packages/app/scripts/record-log-fixtures.ts` from a deterministic skeleton run (FixedClock
-start 2026-10-17T12:00:00Z step 250 ms, SeqIds, HashEmbedder(4096), mini-corpus v1 artifacts). They are
-inputs for viewer and analysis tests; nothing asserts that a later run reproduces them byte for byte.
+Originally recorded from a deterministic skeleton run (FixedClock start 2026-10-17T12:00:00Z step 250 ms, SeqIds,
+HashEmbedder(4096), mini-corpus v1 artifacts). The recorder and the skeleton were removed in sprint 3, so these files are
+hand-maintained. They are inputs for viewer and analysis tests; nothing regenerates or asserts them byte for byte.
 
 - `session-agent.jsonl` (57 events): seq 2-14 ingest of both documents (started/parsed/chunked/embedded per
   document, completed x2, build.created); three searches, each tool.called, query, pipeline.started, search.step x2

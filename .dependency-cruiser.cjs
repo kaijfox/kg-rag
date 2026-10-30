@@ -2,7 +2,8 @@
  * Star dependency rule (architecture-proposal.md section 1, as amended by state-machine-revision.md section 5):
  * every package imports only @kg/core (plus third-party libraries); tests may also import @kg/testkit; testkit
  * imports only core; core imports no package. Only @kg/app (the composition root) may import sibling packages,
- * with one exception: the shared pipeline toolkit @kg/pipeline may also be imported by search, ingest and eval.
+ * with two exceptions: the shared pipeline toolkit @kg/pipeline may also be imported by search, ingest and eval, and the
+ * shared SQLite layer @kg/sqlite may also be imported by store and eventlog.
  * @kg/pipeline itself imports only core (and, in its tests, testkit). XState (xstate, @xstate/*, @statelyai/*)
  * is imported only by @kg/pipeline, except that @kg/app may list @statelyai/inspect as a devDependency only.
  */
@@ -10,10 +11,17 @@ module.exports = {
   forbidden: [
     {
       name: 'star-rule',
-      comment: 'A package may import only itself, core, (in tests) testkit and pipeline. Only app may import other siblings. pipeline importers are narrowed by pipeline-kit-importers.',
+      comment: 'A package may import only itself, core, (in tests) testkit, pipeline and sqlite. Only app may import other siblings. pipeline and sqlite importers are narrowed by their own rules.',
       severity: 'error',
       from: { path: '^packages/([^/]+)/', pathNot: '^packages/(app|core)/' },
-      to: { path: '^packages/', pathNot: ['^packages/$1/', '^packages/core/', '^packages/testkit/', '^packages/pipeline/'] },
+      to: { path: '^packages/', pathNot: ['^packages/$1/', '^packages/core/', '^packages/testkit/', '^packages/pipeline/', '^packages/sqlite/'] },
+    },
+    {
+      name: 'sqlite-importers',
+      comment: '@kg/sqlite may be imported only by store, eventlog and app (and by itself).',
+      severity: 'error',
+      from: { path: '^packages/', pathNot: '^packages/(store|eventlog|app|sqlite)/' },
+      to: { path: '^packages/sqlite/' },
     },
     {
       name: 'pipeline-kit-importers',

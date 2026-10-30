@@ -1,6 +1,6 @@
 # @kg/viewer (WP12, Haiku)
 
-Contract: `@kg/core` CONTRACT_VERSION 0.6.1. You need this card, `core`, and `testkit`; nothing else. Do not read `packages/app/src/skeleton`.
+Contract: `@kg/core` CONTRACT_VERSION 0.6.1. You need this card, `core`, and `testkit`; nothing else.
 
 ## Implements
 `createViewerServer(reader: LogReader, o?: { port?: number; itemInfo?: (itemId: string) => { label: string; text: string } | null; machines?: (machine: string, version: string) => MachineMap | null }): http.Server`

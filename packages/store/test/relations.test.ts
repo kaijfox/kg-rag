@@ -1,7 +1,8 @@
 import { describe, expect, it } from 'vitest';
 import { nodeId, recipeId, type DerivedItemId, type Node, type NodeRef, type Relation, type RunId } from '@kg/core';
 import { FixedClock } from '@kg/testkit';
-import { openDatabase, SqliteCorpusStore } from '../src/index';
+import { openDatabase } from '@kg/sqlite';
+import { SqliteCorpusStore } from '../src/index';
 import { codeOf, populate } from './helpers';
 
 const NAMES = ['zebra', 'apple', 'mango', 'kiwi'];
