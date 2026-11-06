@@ -57,7 +57,11 @@ export class ArtifactStore {
       }
       for (const n of names) {
         const a = await readArtifactFile(join(dir, n));
-        if (a.sourceSha256 === sha && canonicalJson(a.recipe as Json) === want) return a;
+        if (a.sourceSha256 === sha && canonicalJson(a.recipe as Json) === want) {
+          // keep a copy: a rebuild must not depend on a directory that may go away
+          if (dir !== this.o.dir) await this.put(a);
+          return a;
+        }
       }
     }
     return null;

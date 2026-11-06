@@ -50,6 +50,8 @@ async function loadSessions() {
     d.onclick = () => open(s.sessionId);
     box.append(d);
   }
+  // open the most recent session at first, so a running one can be watched without a click
+  if (current === null && list.length) open(list[0].sessionId);
 }
 async function open(id) { current = id; lastSeq = 0; visited = new Set(); $('view').textContent = ''; machines = await get('/api/machines'); await poll(); loadSessions(); }
 
@@ -59,12 +61,12 @@ function ranks(slot) {
   if (slot.n > 8) ul.append(el('li', 'muted', `… ${slot.n} in all`));
   return ul;
 }
-function machineBar(name) {
+function machineBar(name, searchId) {
   const m = machines.find((x) => x.name === name); if (!m) return null;
-  const bar = el('div', 'machine'); let at = m.start; const seen = new Set();
+  const bar = el('div', 'machine'); bar.dataset.search = searchId || ''; let at = m.start; const seen = new Set();
   while (at && !seen.has(at)) {
     seen.add(at); const s = m.states[at];
-    bar.append(el('span', 'box' + (visited.has(name + ':' + at) ? ' hit' : ''), `${at}: ${s.module}`));
+    const box = el('span', 'box', `${at}: ${s.module}`); box.dataset.state = at; bar.append(box);
     const n = s.next; at = n === null ? null : typeof n === 'string' ? n : n.then;
     if (at) bar.append(el('span', 'muted', '→'));
   }
@@ -78,9 +80,10 @@ function render(e) {
   const p = e.payload || {}; const card = el('div', 'ev');
   const head = el('div', 'head'); head.append(el('span', 'tag', e.type), el('span', 'muted', e.ts.slice(11, 19) + (e.searchId ? ' · ' + e.searchId.slice(0, 12) : '')));
   card.append(head);
-  if (e.type === 'search.started') { card.classList.add('search'); head.append(el('strong', '', p.query)); head.append(el('span', 'muted', `k=${p.k} · ${p.machine}`)); const bar = machineBar(p.machine); if (bar) card.append(bar); }
+  if (e.type === 'search.started') { card.classList.add('search'); head.append(el('strong', '', p.query)); head.append(el('span', 'muted', `k=${p.k} · ${p.machine}`)); const bar = machineBar(p.machine, e.searchId); if (bar) card.append(bar); }
   else if (e.type === 'step') {
-    visited.add(p.machine + ':' + p.state);
+    // mark the step on the machine drawn for this search
+    document.querySelectorAll('.machine[data-search="' + (e.searchId || '') + '"] .box[data-state="' + p.state + '"]').forEach((b) => b.classList.add('hit'));
     head.append(el('strong', '', `${p.state} · ${p.module}`), el('span', 'muted', `${p.ms} ms`));
     const rin = p.received && (p.received.candidates || p.received.results), rout = p.returned && (p.returned.candidates || p.returned.results);
     if (rin) { const d = el('details'); d.append(el('summary', '', `received ${rin.n} candidates`), ranks(rin)); card.append(d); }

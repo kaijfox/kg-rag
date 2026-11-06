@@ -69,3 +69,41 @@ same retry-with-corrective-instruction behaviour for malformed judge replies.
 
 **D11. Formula decoding leaves the core.** The default parse recipe never used it. The `[formula]` placeholder view of
 a chunk (used in embeddings) stays, because the baseline's embeddings depend on it.
+
+## Decisions made while building
+
+**D12. The module context carries no model client of its own.** `ctx.services` is an opaque bag; the modules package
+defines what it expects (`ModuleServices`). Search runs put the embedder, the index's embedding space and a cached,
+logged model client there. Build runs add the artifact store, adapters and confirmed corrections. Keeps the kernel free
+of any module's needs.
+
+**D13. A parsed document found in an extra directory is copied into the database's `artifacts/`.** A rebuild starts from
+kept sources, so it must not depend on a directory that may go away.
+
+**D14. Evaluation source imports the kernel only.** The first draft of D1 allowed it to import modules; it did not need to.
+Its tests build an index with modules, which the dependency rules allow.
+
+**D15. `chunk` drafts of non-PDF sources go through `assignChunkIds`.** Adapters hand over text pieces with a section path
+and meta; the segment module assigns IDs with the same formula as the chunker, so a document of any kind has the same ID rule.
+
+**D16. Fact extraction is off by default.** `extract.enabled` in `kg.json` turns it on. With it off, the build machine
+still runs the step and logs that it was skipped, so the machine's shape does not depend on configuration.
+
+**D17. The `replaces` rule runs on chunk meta, not on facts.** Dated-log entries carry `entryKey`, `date` and `title`. A
+fact is hidden by `drop-replaced` when every chunk it cites has been replaced by a later current chunk. Item-level
+`replaces` links are supported by the store and the drop step but nothing writes them yet.
+
+**D18. Evaluation conditions name search machines.** `retrieved` uses the database's default machine; any other name that is
+a registered machine runs that machine. This replaces the first build's per-condition search recipe ids.
+
+**D19. A question or condition that fails is recorded and the run goes on.** Failed ones are left out of the means and
+counted. The first build ended the whole run at the first failed model call.
+
+**D20. The viewer reads a fresh index handle for record text.** A rebuild swaps the index file under a running viewer, so it
+opens the current file for each records request instead of holding one.
+
+**D21. Not carried over from the first build, on purpose:** the diagram library and path-overlay code in the viewer (a
+machine is drawn as its list of steps, with the steps a run visited highlighted); formula decoding, which stays in the
+Python sidecar's CLI but is no longer in the TypeScript side; the oracle copy of the system; the testkit and its conformance
+suites (replaced by tests that run the real code on small fixtures); the `design/` amendments about builds, topology pins
+and machines (see `proposed-amendments.md`).

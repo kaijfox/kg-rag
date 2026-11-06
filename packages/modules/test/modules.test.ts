@@ -1,4 +1,4 @@
-import { copyFileSync, existsSync, readFileSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { describe, expect, it } from 'vitest';
 import { Kg, KgError } from '@kg/kernel';
@@ -36,6 +36,7 @@ describe('ingest of a real PDF through a kept parsed document', () => {
     const first = await ingest(kg, { artifactDirs: [join(ROOT, 'test/corpa/stat-mech/artifacts')] });
     expect(first.documents).toEqual([{ docKey: 'ThermoPlischke', chunks: 39, unchanged: false }]);
     expect(first.stats).toMatchObject({ currentChunks: 39, embeddings: 39, staleItems: 0 });
+    expect(readdirSync(join(dir, 'artifacts'))).toHaveLength(1); // the parsed document was copied into the database
     const s = kg.openSession('test');
     const r = await kg.search({ query: 'entropy and the second law of thermodynamics', k: 3, sessionId: s });
     expect(r.items).toHaveLength(3);
