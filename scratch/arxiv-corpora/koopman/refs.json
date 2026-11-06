@@ -1,0 +1,3865 @@
+[
+ {
+  "key": "ablowitz1974inverse",
+  "title": "The inverse scattering transform-Fourier analysis for nonlinear problems",
+  "year": "1974",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "ist",
+  "title": "Solitons and the inverse scattering transform",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "abraham2017conf",
+  "title": "Model-based control using Koopman operators",
+  "year": null,
+  "arxiv": "1709.01568",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "abraham2019ieee",
+  "title": "Active learning of dynamics for data-driven control using Koopman operators",
+  "year": "2019",
+  "arxiv": "1906.05194",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "marsdenmtaa",
+  "title": "Manifolds, Tensor Analysis, and Applications",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "agrawal2016book",
+  "title": "On-chip implementation of ECoG signal data decoding in brain-computer interface",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "albarakati2021",
+  "title": "Model and data reduction for data assimilation: Particle filters employing projected forecasts and data with application to a shallow water model",
+  "year": "2021",
+  "arxiv": "2101.09252",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "alfatlawi2019arxiv",
+  "title": "An incremental approach to online dynamic mode decomposition for time-varying systems with applications to EEG data modeling",
+  "year": "2020",
+  "arxiv": "1908.01047",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "allgower2004nonlinear",
+  "title": "Nonlinear model predictive control: From theory to application",
+  "year": "2004",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "amini2019ifac",
+  "title": "Carleman state feedback control design of a class of nonlinear control systems",
+  "year": "2019",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "Ansari2016ieee",
+  "title": "Sequential action control: Closed form optimal control for nonlinear and nonsmooth systems",
+  "year": "2016",
+  "arxiv": "1708.09347",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "antoniou1997",
+  "title": "Resonances and the extension of dynamics to rigged Hilbert space",
+  "year": "1997",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "antoniou1997a",
+  "title": "Generalized spectral decomposition and intrinsic irreversibility of the Arnold Cat Map",
+  "year": "1997",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "apte2008",
+  "title": "Data assimilation: Mathematical and statistical perspectives",
+  "year": "2008",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "arbabi2018cdc",
+  "title": "A data-driven Koopman model predictive control framework for nonlinear partial differential equations",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "arbabi2017",
+  "title": "Ergodic Theory",
+  "year": "2017",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "arnold1998",
+  "title": "Random Dynamical Systems",
+  "year": null,
+  "arxiv": "math/0608162",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "askham2017arxiv",
+  "title": "Variable projection methods for an optimized dynamic mode decomposition",
+  "year": "2018",
+  "arxiv": "1704.02343",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "assani2004",
+  "title": "Spectral characterization of Wiener\\textendashWintner dynamical systems",
+  "year": "2004",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "azencot2020forecasting",
+  "title": "Forecasting sequential data using consistent koopman autoencoders",
+  "year": null,
+  "arxiv": "2003.02236",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "azencot2019consistent",
+  "title": "Consistent dynamic mode decomposition",
+  "year": "2019",
+  "arxiv": "1905.09736",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "baddoo2021kernel",
+  "title": "Kernel learning for robust dynamic mode decomposition: Linear and nonlinear disambiguation optimization (LANDO)",
+  "year": "2021",
+  "arxiv": "2106.01510",
+  "how": "bib",
+  "tex": "source"
+ },
+ {
+  "key": "bagheri2013jfm",
+  "title": "Koopman-mode decomposition of the cylinder wake",
+  "year": "2013",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "bagheri2014",
+  "title": "Effects of weak noise on oscillating flows: Linking quality factor, Floquet modes, and Koopman spectrum",
+  "year": "2014",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "bai2017aiaa",
+  "title": "Dynamic mode decomposition for compressive system identification",
+  "year": "2020",
+  "arxiv": "1710.07737",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "balabane2020koopman",
+  "title": "Koopman operator for Burgers's equation",
+  "year": "2021",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "banks1992infinite",
+  "title": "Infinite-dimensional Carleman linearization, the Lie series and optimal control of non-linear partial differential equations",
+  "year": "1992",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "bar2019learning",
+  "title": "Learning data-driven discretizations for partial differential equations",
+  "year": "2019",
+  "arxiv": "1808.04930",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "basley2013space",
+  "title": "Space-time aspects of a three-dimensional multi-modulated open cavity flow",
+  "year": "2013",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "basley2011experimental",
+  "title": "Experimental investigation of global structures in an incompressible cavity flow using time-resolved PIV",
+  "year": "2011",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "battaglia2018relational",
+  "title": "Relational inductive biases, deep learning, and graph networks",
+  "year": "2018",
+  "arxiv": "1806.01261",
+  "how": "bib",
+  "tex": "source"
+ },
+ {
+  "key": "beetham2020formulating",
+  "title": "Formulating turbulence closures using sparse regression with embedded form invariance",
+  "year": "2020",
+  "arxiv": "2003.12884",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "beetham2021sparse",
+  "title": "Sparse identification of multiphase turbulence closures for coupled fluid--particle flows",
+  "year": "2021",
+  "arxiv": "2004.08997",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "bellani2011experimental",
+  "title": "Experimental studies of complex flows through image-based techniques",
+  "year": "2011",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "benner2020operator",
+  "title": "Operator inference for non-intrusive model reduction of systems with non-polynomial nonlinear terms",
+  "year": "2020",
+  "arxiv": "2002.09726",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "Benner2015siamreview",
+  "title": "A survey of projection-based model reduction methods for parametric dynamical systems",
+  "year": "2015",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "benner2018reduced",
+  "title": "On reduced input-output dynamic mode decomposition",
+  "year": "2018",
+  "arxiv": "1712.08447",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "benosman2017ifac",
+  "title": "Koopman-operator observer-based estimation of pedestrian crowd flows",
+  "year": "2017",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "berger2014ieee",
+  "title": "Estimation of perturbations in robotic behavior using dynamic mode decomposition",
+  "year": "2015",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "birkhoff1931pnas",
+  "title": "Proof of the ergodic theorem",
+  "year": "1931",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "birkhoff1932pnas",
+  "title": "Recent contributions to the ergodic theory",
+  "year": "1932",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "bistrian2016ijnme",
+  "title": "Randomized dynamic mode decomposition for non-intrusive reduced order modelling",
+  "year": "2016",
+  "arxiv": "1611.04884",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "bistrian2015ijnmf",
+  "title": "An improved algorithm for the shallow water equations model reduction: Dynamic mode decomposition vs POD",
+  "year": "2015",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "bittracher2015",
+  "title": "Pseudogenerators of Spatial Transfer Operators",
+  "year": "2015",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "bollt2021",
+  "title": "Geometric Considerations of a Good Dictionary for Koopman Analysis of Dynamical Systems: Cardinality",
+  "year": "2021",
+  "arxiv": "1912.09570",
+  "how": "bib",
+  "tex": "source"
+ },
+ {
+  "key": "bollt2018",
+  "title": "On Matching",
+  "year": "2018",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "bollt2013",
+  "title": "Applied and Computational Measurable Dynamics",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "arima",
+  "title": "\\textslTime series analysis: Forecasting and control, 3rd Ed.",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "boyce2017elementary",
+  "title": "Elementary differential equations",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "breiman2001statistical",
+  "title": "Statistical modeling: The two cultures (with comments and a rejoinder by the author)",
+  "year": "2001",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "Brenner2019prf",
+  "title": "Perspective on machine learning for advancing fluid mechanics",
+  "year": "2019",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "bright2013pof",
+  "title": "Compressive sensing and machine learning strategies for characterizing the flow around a cylinder with limited pressure measurements",
+  "year": "2013",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "broad2017proc",
+  "title": "Learning models for shared control of human-machine systems with unknown dynamics",
+  "year": "2017",
+  "arxiv": "1808.08268",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "brockett1976automatica",
+  "title": "Volterra series and geometric control theory",
+  "year": "1976",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "brockett2007ams",
+  "title": "Optimal control of the Liouville equation",
+  "year": "2007",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "broomhead1989prsla",
+  "title": "Time-series analysis",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "bruder2020arxiv",
+  "title": "Koopman-based Control of a Soft Continuum Manipulator Under Variable Loading Conditions",
+  "year": "2021",
+  "arxiv": "2002.01407",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "bruder2020arxiva",
+  "title": "Advantages of bilinear Koopman realizations for the modeling and control of systems with unknown dynamics",
+  "year": "2020",
+  "arxiv": "2010.09961",
+  "how": "bib",
+  "tex": "source"
+ },
+ {
+  "key": "bruder2019proc",
+  "title": "Modeling and control of soft robots using the Koopman operator and model predictive control",
+  "year": null,
+  "arxiv": "1902.02827",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "brunton2016b",
+  "title": "Extracting spatial\\textendash temporal coherent patterns in large-scale neural recordings using dynamic mode decomposition",
+  "year": "2016",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "brunton2017natcomm",
+  "title": "Chaos as an intermittently forced linear system",
+  "year": "2017",
+  "arxiv": "1608.05306",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "brunton2016plosone",
+  "title": "Koopman invariant subspaces and finite linear representations of nonlinear dynamical systems for control",
+  "year": "2016",
+  "arxiv": "1510.03007",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "brunton2019data",
+  "title": "Data-driven science and engineering: Machine learning, dynamical systems, and control",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "Brunton2020arfm",
+  "title": "Machine learning for fluid mechanics",
+  "year": "2020",
+  "arxiv": "1905.11075",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "brunton2016pnas",
+  "title": "Discovering governing equations from data by sparse identification of nonlinear dynamical systems",
+  "year": "2016",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "brunton2015jcd",
+  "title": "Compressed sensing and dynamic mode decomposition",
+  "year": "2015",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "brunton2014siads",
+  "title": "Compressive sensing and low-rank libraries for classification of bifurcation regimes in nonlinear dynamical systems",
+  "year": "2014",
+  "arxiv": "1312.4221",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "budisic2009cdc",
+  "title": "An approximate parametrization of the ergodic partition using time averaged observables",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "budisic2012physd",
+  "title": "Geometry of the ergodic quotient reveals coherent structures in flows",
+  "year": "2012",
+  "arxiv": "1204.2050",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "budisic2012chaos",
+  "title": "Applied Koopmanism",
+  "year": "2012",
+  "arxiv": "1206.3164",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "burgers",
+  "title": "A mathematical model illustrating the theory of turbulence",
+  "year": "1948",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "manohar2020kernel",
+  "title": "Kernel analog forecasting: Multiscale test problems",
+  "year": "2021",
+  "arxiv": "2005.06623",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "camacho2013model",
+  "title": "Model predictive control",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "candes2006bieeetit",
+  "title": "Robust uncertainty principles: exact signal reconstruction from highly incomplete frequency information",
+  "year": "2006",
+  "arxiv": "math/0409186",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "caraballo2017",
+  "title": "Applied Nonautonomous and Random Dynamical Systems: Applied Dynamical Systems",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "carleman1932am",
+  "title": "Application de la th\\'eorie des \\'equations int\\'egrales lin\\'eaires aux syst\\`emes d'\\'equations diff\\'erentielles non lin\\'eaires",
+  "year": "1932",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "carleman1933theorie",
+  "title": "Sur la th\\'eorie de l'\\'equation int\\'egrodiff\\'erentielle de boltzmann",
+  "year": "1933",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "carleman1933systemes",
+  "title": "Sur les systemes lineaires aux d\\'eriv\\'ees partielles du premier ordrea deux variables",
+  "year": "1933",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "champion2019discovery",
+  "title": "Discovery of nonlinear multiscale systems: Sampling strategies and embeddings",
+  "year": "2019",
+  "arxiv": "1805.07411",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "Chekroun2014",
+  "title": "Rough parameter dependence in climate models and the role of Ruelle-Pollicott resonances",
+  "year": "2014",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "Chekroun2020",
+  "title": "Ruelle\\textendashPollicott Resonances of Stochastic Systems in Reduced State Space. Part I: Theory",
+  "year": "2020",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "chen2012jns",
+  "title": "Variants of dynamic mode decomposition: Boundary condition, Koopman, and Fourier analyses",
+  "year": "2012",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "chicone1999evolution",
+  "title": "Evolution semigroups in dynamical systems and differential equations",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "coifman2008mmas",
+  "title": "Diffusion maps, reduction coordinates, and low dimensional representation of stochastic systems",
+  "year": "2008",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "coifman2006acha",
+  "title": "Diffusion maps",
+  "year": "2006",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "coifman2005pnas",
+  "title": "Geometric diffusions as a tool for harmonic analysis and structure definition of data: Diffusion maps",
+  "year": "2005",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "cole51",
+  "title": "On a quasi-linear parabolic equation occurring in aerodynamics",
+  "year": "1951",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "colonius2000book",
+  "title": "The Dynamics of Control",
+  "year": null,
+  "arxiv": "2507.04181",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "cornfeld1982",
+  "title": "Ergodic Theory",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "cranmer2020lagrangian",
+  "title": "Lagrangian neural networks",
+  "year": "2020",
+  "arxiv": "2003.04630",
+  "how": "bib",
+  "tex": "source"
+ },
+ {
+  "key": "cranmer2019learning",
+  "title": "Learning symbolic physics with graph networks",
+  "year": "2019",
+  "arxiv": "1909.05862",
+  "how": "bib",
+  "tex": "source"
+ },
+ {
+  "key": "crnjaric-zic2020",
+  "title": "Koopman Operator Spectrum for Random Dynamical Systems",
+  "year": "2020",
+  "arxiv": "1711.03146",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "chaosbook",
+  "title": "Chaos: Classical and Quantum",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "mozyrska2006",
+  "title": "Dualities for linear control differential systems with infinite matrices",
+  "year": "2006",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "mozyrska2008",
+  "title": "Carleman linearization of linearly observable polynomial systems",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "das2017arxiv",
+  "title": "Delay-coordinate maps and the spectra of Koopman operators",
+  "year": "2019",
+  "arxiv": "1706.08544",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "das2020a",
+  "title": "Koopman spectra in reproducing kernel Hilbert spaces",
+  "year": "2020",
+  "arxiv": "1801.07799",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "das2021",
+  "title": "Reproducing kernel Hilbert space compactification of unitary evolution groups",
+  "year": "2021",
+  "arxiv": "1808.01515",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "dawson2016ef",
+  "title": "Characterizing and correcting for the effect of sensor noise in the dynamic mode decomposition",
+  "year": "2016",
+  "arxiv": "1507.02264",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "dellnitz2001",
+  "title": "The algorithms behind GAIO-set oriented numerical methods for dynamical systems",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "dellnitz1997",
+  "title": "A subdivision algorithm for the computation of unstable manifolds and global attractors",
+  "year": "1997",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "dellnitz1997a",
+  "title": "Exploring invariant sets and invariant measures",
+  "year": "1997",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "dellnitz1999",
+  "title": "On the approximation of complicated dynamical behavior",
+  "year": "1999",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "Demo18pydmd",
+  "title": "PyDMD: Python dynamic mode decomposition",
+  "year": "2018",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "dietrich2020koopman",
+  "title": "On the koopman operator of algorithms",
+  "year": "2020",
+  "arxiv": "1907.10807",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "dogra2020optimizing",
+  "title": "Optimizing neural networks via Koopman operator theory",
+  "year": "2020",
+  "arxiv": "2006.02361",
+  "how": "bib",
+  "tex": "source"
+ },
+ {
+  "key": "donoho201750",
+  "title": "50 years of data science",
+  "year": "2017",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "donoho2006ieeetit",
+  "title": "Compressed sensing",
+  "year": "2006",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "drmac2016siam",
+  "title": "A new selection operator for the discrete empirical interpolation method---improved a priori error bound and extensions",
+  "year": "2016",
+  "arxiv": "1505.00370",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "drmac2018",
+  "title": "Data driven modal decompositions: Analysis and enhancements",
+  "year": "2018",
+  "arxiv": "1708.02685",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "drmac2019",
+  "title": "Data Driven Koopman Spectral Analysis in Vandermonde--Cauchy Form via the DFT: Numerical Method and Theoretical Insights",
+  "year": "2019",
+  "arxiv": "1808.09557",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "drmac2020",
+  "title": "On Least Squares Problems with Certain Vandermonde--Khatri--Rao Structure with Applications to DMD",
+  "year": "2020",
+  "arxiv": "1811.12562",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "duke2012experimental",
+  "title": "Experimental investigation of nonlinear instabilities in annular liquid sheets",
+  "year": "2012",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "duke2012error",
+  "title": "An error analysis of the dynamic mode decomposition",
+  "year": "2012",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "dunne2015ef",
+  "title": "Dynamic stall on a pitching and surging airfoil",
+  "year": "2015",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "Duraisamy2019arfm",
+  "title": "Turbulence modeling in the age of data",
+  "year": "2019",
+  "arxiv": "1804.00183",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "dylewsky2019",
+  "title": "Dynamic mode decomposition for multiscale nonlinear physics",
+  "year": "2019",
+  "arxiv": "1903.12480",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "eckmann1985",
+  "title": "Ergodic theory of chaos and strange attractors",
+  "year": "1985",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "eisner2015",
+  "title": "Operator Theoretic Aspects of Ergodic Theory",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "eivazi2021recurrent",
+  "title": "Recurrent neural networks and koopman-based frameworks for temporal predictions in a low-order model of turbulence",
+  "year": "2021",
+  "arxiv": "2005.02762",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "eldering2018",
+  "title": "Global linearization and fiber bundle structure of invariant manifolds",
+  "year": "2018",
+  "arxiv": "1711.03646",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "eren2017jgcd",
+  "title": "Model predictive control in aerospace systems: Current state and opportunities",
+  "year": "2017",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "erichson2016jrtp",
+  "title": "Compressed dynamic mode decomposition for real-time object detection",
+  "year": "2016",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "erichsonrandomized",
+  "title": "Randomized cp tensor decomposition",
+  "year": "2020",
+  "arxiv": "1703.09074",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "erichson2017arxiv",
+  "title": "Randomized dynamic mode decomposition",
+  "year": "2019",
+  "arxiv": "1702.02912",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "erichson2016arxiva",
+  "title": "Randomized matrix decompositions using R",
+  "year": "2019",
+  "arxiv": "1608.02148",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "evensen2009data",
+  "title": "Data assimilation: the ensemble Kalman filter",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "everson1995karhunen",
+  "title": "Karhunen--Loeve procedure for gappy data",
+  "year": "1995",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "Farazmand2012chaos",
+  "title": "Computing Lagrangian coherent structures from their variational theory",
+  "year": "2012",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "folkestad2020arxiv",
+  "title": "Episodic koopman learning of nonlinear robot dynamics with application to fast multirotor landing",
+  "year": "2020",
+  "arxiv": "2004.01708",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "fontanini2016be",
+  "title": "A methodology for optimal placement of sensors in enclosed environments: A dynamical systems approach",
+  "year": "2016",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "froyland2003",
+  "title": "Detecting and locating near-optimal almost-invariant sets and cycles",
+  "year": "2003",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "froyland2014",
+  "title": "Detecting isolated spectrum of transfer and Koopman operators with Fourier analytic tools",
+  "year": "2014",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "froyland2016",
+  "title": "A trajectory-free framework for analysing multiscale systems",
+  "year": "2016",
+  "arxiv": "1412.7268",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "froyland2013",
+  "title": "Estimating Long-Term Behavior of Flows without Trajectory Integration: The Infinitesimal Generator Approach",
+  "year": "2013",
+  "arxiv": "1101.4166",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "Froyland2010b",
+  "title": "Escape rates and Perron-Frobenius operators: Open and closed dynamical systems",
+  "year": "2010",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "fujii2019dynamic",
+  "title": "Dynamic mode decomposition in vector-valued reproducing kernel hilbert spaces for extracting dynamical structure among observables",
+  "year": "2019",
+  "arxiv": "1808.10551",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "mamakoukas2020arxivb",
+  "title": "Learning data-driven stable Koopman operators",
+  "year": "2020",
+  "arxiv": "2005.04291",
+  "how": "bib",
+  "tex": "source"
+ },
+ {
+  "key": "mamakoukas2019proc",
+  "title": "Local Koopman operators for data-driven control of robotic systems",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "garcia1989model",
+  "title": "Model predictive control: theory and practice---a survey",
+  "year": "1989",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "garriga2010model",
+  "title": "Model predictive control tuning methods: A review",
+  "year": "2010",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "gaspard1998",
+  "title": "Chaos, Scattering and Statistical Mechanics",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "gaspard1995",
+  "title": "Spectral signature of the pitchfork bifurcation: Liouville equation approach",
+  "year": "1995",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "Gelss2019mindy",
+  "title": "Multidimensional approximation of nonlinear dynamical systems",
+  "year": "2019",
+  "arxiv": "1809.02448",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "giannakis2019",
+  "title": "Data-driven spectral decomposition and forecasting of ergodic dynamical systems",
+  "year": "2019",
+  "arxiv": "1507.02338",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "giannakis2020a",
+  "title": "Delay-coordinate maps, coherence, and approximate spectra of evolution operators",
+  "year": "2020",
+  "arxiv": "2007.02195",
+  "how": "bib",
+  "tex": "source"
+ },
+ {
+  "key": "giannakis2020",
+  "title": "Extraction and prediction of coherent patterns in incompressible flows through space\\textendashtime Koopman analysis",
+  "year": "2020",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "gin2019deep",
+  "title": "Deep learning models for global coordinate transformations that linearise PDEs",
+  "year": "2020",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "gin2020deepgreen",
+  "title": "DeepGreen: Deep learning of Green's functions for nonlinear boundary value problems",
+  "year": "2020",
+  "arxiv": "2101.07206",
+  "how": "bib",
+  "tex": "source"
+ },
+ {
+  "key": "goswami2017cdc",
+  "title": "Global bilinearization and controllability of control-affine nonlinear systems: A Koopman spectral approach",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "govindarajan2019",
+  "title": "On the Approximation of Koopman Spectra for Measure Preserving Transformations",
+  "year": "2019",
+  "arxiv": "1803.03920",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "goza2018modal",
+  "title": "Modal decomposition of fluid--structure interaction with application to flag flapping",
+  "year": "2018",
+  "arxiv": "1711.03040",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "grilli:2012",
+  "title": "Analysis of unsteady behaviour in shockwave turbulent boundary layer interaction",
+  "year": "2012",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "grosek2014arxiv",
+  "title": "Dynamic mode decomposition for real-time background/foreground separation in video",
+  "year": "2014",
+  "arxiv": "1404.7592",
+  "how": "bib",
+  "tex": "source"
+ },
+ {
+  "key": "guckenheimer1986",
+  "title": "Nonlinear Oscillations, Dynamical Systems, and Bifurcations of Vector Fields",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "gueniat2015pof",
+  "title": "A dynamic mode decomposition approach for large and arbitrarily sampled systems",
+  "year": "2015",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "halko2011siamreview",
+  "title": "Finding structure with randomness: Probabilistic algorithms for constructing approximate matrix decompositions",
+  "year": "2011",
+  "arxiv": "0909.4061",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "Haller2002pof",
+  "title": "Lagrangian coherent structures from approximate velocity data",
+  "year": "2002",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "Haller2015arfm",
+  "title": "Lagrangian coherent structures",
+  "year": "2015",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "halmos1944a",
+  "title": "Approximation Theories for Measure Preserving Transformations",
+  "year": "1944",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "han2020arxiv",
+  "title": "Deep learning of Koopman representation for control",
+  "year": "2020",
+  "arxiv": "2010.07546",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "hanke2018arxiv",
+  "title": "Koopman operator based finite-set model predictive control for electrical drives",
+  "year": "2018",
+  "arxiv": "1804.00854",
+  "how": "bib",
+  "tex": "source"
+ },
+ {
+  "key": "haseli2020b",
+  "title": "Efficient Identification of Linear Evolutions in Nonlinear Vector Fields: Koopman Invariant Subspaces",
+  "year": "2020",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "hasnain2019arxivb",
+  "title": "Steady state programming of controlled nonlinear systems via deep dynamic mode decomposition",
+  "year": "2020",
+  "arxiv": "1909.13385",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "hasnain2019arxiv",
+  "title": "Optimal reporter placement in sparsely measured genetic networks using the Koopman operator",
+  "year": "2019",
+  "arxiv": "1906.00944",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "hemati2017aiaa",
+  "title": "Dynamic mode shaping for fluid flow control: New strategies for transient growth suppression",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "hemati2017tcfd",
+  "title": "De-biasing the dynamic mode decomposition for applied Koopman spectral analysis",
+  "year": "2017",
+  "arxiv": "1502.03854",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "hemati2014pof",
+  "title": "Dynamic mode decomposition for large and streaming datasets",
+  "year": "2014",
+  "arxiv": "1406.7187",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "hermann1977ieee",
+  "title": "Nonlinear controllability and observability",
+  "year": "1977",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "Herrmann2020arxiv",
+  "title": "Data-driven resolvent analysis",
+  "year": "2021",
+  "arxiv": "2010.02181",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "hey2009fourth",
+  "title": "The fourth paradigm: data-intensive scientific discovery",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "hirsh2019",
+  "title": "Centering data improves the dynamic mode decomposition",
+  "year": "2020",
+  "arxiv": "1906.05973",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "ho1965aac",
+  "title": "Effective construction of linear state-variable models from input/output data",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "hof1998",
+  "title": "Zero-dimensional singular continuous spectrum for smooth differential equations on the torus",
+  "year": "1998",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "hogg2019plosone",
+  "title": "Koopman mode analysis of agent-based models of logistics processes",
+  "year": "2019",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "HLBR_turb",
+  "title": "Turbulence, coherent structures, dynamical systems and symmetry",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "hopf50",
+  "title": "The partial differential equation $u_t + uu_x = \\mu u_xx$",
+  "year": "1950",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "huang2018cdc",
+  "title": "Feedback stabilization using Koopman operator",
+  "year": null,
+  "arxiv": "1810.00089",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "huang2019arxiv",
+  "title": "Data-driven nonlinear stabilization using Koopman operator",
+  "year": "2020",
+  "arxiv": "1901.07678",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "huang2013analysis",
+  "title": "Analysis of self-excited combustion instabilities using decomposition techniques",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "hunt1982ieee",
+  "title": "Sufficient conditions for controllability",
+  "year": "1982",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "iungo2015jp",
+  "title": "Data-driven reduced order model for prediction of wind turbine wakes",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "morton2019neurips",
+  "title": "Deep dynamical modeling and control of unsteady fluid flows",
+  "year": null,
+  "arxiv": "1805.07472",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "witten",
+  "title": "\\textslAn Introduction to Statistical Learning",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "pcr",
+  "title": "\\textslA note on the Use of Principal Components in Regression",
+  "year": "1982",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "Jovanovic2020",
+  "title": "From bypass transition to flow control and data-driven turbulence modeling: An input-output viewpoint",
+  "year": "2021",
+  "arxiv": "2003.10104",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "Jovanovic2005",
+  "title": "Componentwise energy amplification in channel flows",
+  "year": "2005",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "jovanovic2014pof",
+  "title": "Sparsity-promoting dynamic mode decomposition",
+  "year": "2014",
+  "arxiv": "1309.4165",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "juang1994book",
+  "title": "Applied System Identification",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "juang1985jgcd",
+  "title": "An eigensystem realization algorithm for modal parameter identification and model reduction",
+  "year": "1985",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "juang1991nasatm",
+  "title": "Identification of observer/Kalman filter Markov parameters: Theory and experiments",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "kachurovskii1996",
+  "title": "Rates of convergence in ergodic theorems",
+  "year": "1996",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "kakubr2018arxiv",
+  "title": "Discovering conservation laws from data for control",
+  "year": null,
+  "arxiv": "1811.00961",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "kaiser2017arxivb",
+  "title": "Sparse identification of nonlinear dynamics for model predictive control in the low-data limit",
+  "year": "2018",
+  "arxiv": "1711.05501",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "Kaiser2020chapter",
+  "title": "Data-driven approximations of dynamical systems operators for control",
+  "year": null,
+  "arxiv": "1902.10239",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "kaiser2017arxiv",
+  "title": "Data-driven discovery of Koopman eigenfunctions for control",
+  "year": "2021",
+  "arxiv": "1707.01146",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "kaiser2018jcp",
+  "title": "Sparsity enabled cluster reduced-order models for control",
+  "year": "2018",
+  "arxiv": "1701.00038",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "kalman1960general",
+  "title": "On the general theory of control systems",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "kalman1963mathematical",
+  "title": "Mathematical description of linear dynamical systems",
+  "year": "1963",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "Kamb2020siads",
+  "title": "Time-delay observables for Koopman: Theory and applications",
+  "year": "2020",
+  "arxiv": "1810.01479",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "kaptanoglu2020pop",
+  "title": "Characterizing magnetized plasmas with dynamic mode decomposition",
+  "year": "2020",
+  "arxiv": "1911.06938",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "katayama.2005",
+  "title": "Subspace Methods for System Identification",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "katok1967",
+  "title": "Approximations In Ergodic Theory",
+  "year": "1967",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "kawahara2016neurips",
+  "title": "Dynamic mode decomposition with reproducing kernels for Koopman spectral analysis",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "khalil1996book",
+  "title": "Noninear Systems",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "kloeden_rasmussen_2011",
+  "title": "Nonautonomous Dynamical Systems",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "klus2018tensor",
+  "title": "Tensor-based dynamic mode decomposition",
+  "year": "2018",
+  "arxiv": "1606.06625",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "klus2015numerical",
+  "title": "On the numerical approximation of the Perron-Frobenius and Koopman operator",
+  "year": "2016",
+  "arxiv": "1512.05997",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "klus2020kernel",
+  "title": "Kernel-based approximation of the koopman generator and schr\\\"odinger operator",
+  "year": "2020",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "klus2017data",
+  "title": "Data-driven model reduction and transfer operator approximation",
+  "year": "2018",
+  "arxiv": "1703.10112",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "klus2020",
+  "title": "Data-driven approximation of the Koopman generator: Model reduction, system identification, and control",
+  "year": "2020",
+  "arxiv": "1909.10638",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "klus2020eigendecompositions",
+  "title": "Eigendecompositions of transfer operators in reproducing kernel hilbert spaces",
+  "year": "2020",
+  "arxiv": "1712.01572",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "knill1998",
+  "title": "Singular continuous spectrum and quantitative rates of weak mixing",
+  "year": "1998",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "kochkov2021machine",
+  "title": "Machine learning accelerated computational fluid dynamics",
+  "year": "2021",
+  "arxiv": "2102.01010",
+  "how": "bib",
+  "tex": "source"
+ },
+ {
+  "key": "koltai2019",
+  "title": "Fr\\'echet differentiable drift dependence of Perron\\textendashFrobenius and Koopman operators for non-deterministic dynamics",
+  "year": "2019",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "koopman1931pnas",
+  "title": "Hamiltonian systems and transformation in Hilbert space",
+  "year": "1931",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "koopman1932pnas",
+  "title": "Dynamical systems of continuous spectra",
+  "year": "1932",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "korda2016arxiv",
+  "title": "Linear predictors for nonlinear dynamical systems: Koopman operator meets model predictive control",
+  "year": "2018",
+  "arxiv": "1611.03537",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "korda2017arxiv",
+  "title": "On convergence of extended dynamic mode decomposition to the Koopman operator",
+  "year": "2018",
+  "arxiv": "1703.04680",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "korda2020ieee",
+  "title": "Optimal construction of Koopman eigenfunctions for prediction and control",
+  "year": "2020",
+  "arxiv": "1810.08733",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "korda2020",
+  "title": "Data-driven spectral analysis of the Koopman operator",
+  "year": "2020",
+  "arxiv": "1710.06532",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "korda2018arxiv",
+  "title": "Power grid transient stabilization using Koopman model predictive control",
+  "year": "2018",
+  "arxiv": "1803.10744",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "kowalski1991nonlinear",
+  "title": "Nonlinear dynamical systems and Carleman linearization",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "kramer2015arxiv",
+  "title": "Sparse sensing and DMD based identification of flow regimes and bifurcations in complex flows",
+  "year": "2017",
+  "arxiv": "1510.02831",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "krener1974",
+  "title": "Linearization and bilinearization of control systems",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "Kutz2017jfm",
+  "title": "Deep learning in fluid dynamics",
+  "year": "2017",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "kutz2016book",
+  "title": "Dynamic Mode Decomposition: Data-Driven Modeling of Complex Systems",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "kutz2016siads",
+  "title": "Multi-resolution dynamic mode decomposition",
+  "year": "2016",
+  "arxiv": "1506.00564",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "kutz2018",
+  "title": "Applied Koopman Theory for Partial Differential Equations and Data-Driven Modeling of Spatio-Temporal Systems",
+  "year": "2018",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "kvalheim2021a",
+  "title": "Generic Properties of Koopman Eigenfunctions for Stable Fixed Points and Periodic Orbits",
+  "year": "2021",
+  "arxiv": "2010.04008",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "kvalheim2021",
+  "title": "Existence and uniqueness of global Koopman eigenfunctions for stable fixed points and periodic orbits",
+  "year": "2021",
+  "arxiv": "1911.11996",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "kwee2001",
+  "title": "Optimal control using the transport equation: the Liouville machine",
+  "year": "2001",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "lan2013physd",
+  "title": "Linearization in the large of nonlinear systems and Koopman operator spectrum",
+  "year": "2013",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "lange2020fourier",
+  "title": "From Fourier to Koopman: Spectral methods for long-term time series prediction.",
+  "year": "2021",
+  "arxiv": "2004.00574",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "lasota1994",
+  "title": "Chaos, Fractals",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "law2015data",
+  "title": "Data assimilation",
+  "year": "2015",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "lax2002",
+  "title": "Functional Analysis",
+  "year": null,
+  "arxiv": "1003.1117",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "lax1968integrals",
+  "title": "Integrals of nonlinear equations of evolution and solitary waves",
+  "year": "1968",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "lax1971",
+  "title": "Approximation of measure preserving transformations",
+  "year": "1971",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "lee2011springer",
+  "title": "Model predictive control: Review of the three decades of development",
+  "year": "2011",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "lee2020model",
+  "title": "Model reduction of dynamical systems on nonlinear manifolds using deep convolutional autoencoders",
+  "year": "2020",
+  "arxiv": "1812.08373",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "levnajic2010",
+  "title": "Ergodic theory and visualization. I. Mesochronic plots for visualization of ergodic partition and invariant sets",
+  "year": "2010",
+  "arxiv": "0805.4221",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "levnajic2015",
+  "title": "Ergodic theory and visualization. II. Fourier mesochronic plots visualize (quasi)periodic sets",
+  "year": "2015",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "li2017chaos",
+  "title": "Extended dynamic mode decomposition with dictionary learning: A data-driven adaptive spectral decomposition of the Koopman operator",
+  "year": "2017",
+  "arxiv": "1707.00225",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "li1976",
+  "title": "Finite approximation for the Frobenius-Perron operator. A solution to Ulam's conjecture",
+  "year": "1976",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "li2019arxiv",
+  "title": "Learning compositional Koopman operators for model-based control",
+  "year": "2019",
+  "arxiv": "1910.08264",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "li2020fourier",
+  "title": "Fourier neural operator for parametric partial differential equations",
+  "year": "2020",
+  "arxiv": "2010.08895",
+  "how": "bib",
+  "tex": "source"
+ },
+ {
+  "key": "li2020multipole",
+  "title": "Multipole graph neural operator for parametric partial differential equations",
+  "year": "2020",
+  "arxiv": "2006.09535",
+  "how": "bib",
+  "tex": "source"
+ },
+ {
+  "key": "li2020neural",
+  "title": "Neural operator: Graph kernel network for partial differential equations",
+  "year": "2020",
+  "arxiv": "2003.03485",
+  "how": "bib",
+  "tex": "source"
+ },
+ {
+  "key": "ling2018ieee",
+  "title": "Koopman operator approach for instability detection and mitigation in signalized traffic",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "Ling2016jfm",
+  "title": "Reynolds averaged turbulence modelling using deep neural networks with embedded invariance",
+  "year": "2016",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "liu2017arxiv",
+  "title": "Decomposition of nonlinear dynamical systems using Koopman gramians",
+  "year": "2018",
+  "arxiv": "1710.01719",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "ljung1999book",
+  "title": "System Identification: Theory for the User",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "loparo1978tac",
+  "title": "Estimating the domain of attraction of nonlinear feedback systems",
+  "year": "1978",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "eof1",
+  "title": "\\textslEmpirical orthogonal functions and statistical weather prediction",
+  "year": "1956",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "lu2021learning",
+  "title": "Learning nonlinear operators via deeponet based on the universal approximation theorem of operators",
+  "year": "2021",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "lusch2017arxiv",
+  "title": "Deep learning for universal linear embeddings of nonlinear dynamics",
+  "year": "2018",
+  "arxiv": "1712.09707",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "lusseyran2011flow",
+  "title": "Flow coherent structures and frequency signature: application of the dynamic modes decomposition to open cavity flow",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "Luzzatto2005",
+  "title": "The Lorenz Attractor is Mixing",
+  "year": "2005",
+  "arxiv": "math/0410231",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "ma2011tcfd",
+  "title": "Reduced order models for control of fluids using the eigensystem realization algorithm",
+  "year": "2011",
+  "arxiv": "0907.1907",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "macesic2020",
+  "title": "Koopman Operator Theory for Nonautonomous and Stochastic Systems",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "macesic2018siads",
+  "title": "Koopman operator family spectrum for nonautonomous systems",
+  "year": "2018",
+  "arxiv": "1703.07324",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "madrid2005",
+  "title": "The role of the rigged Hilbert space in quantum mechanics",
+  "year": "2005",
+  "arxiv": "quant-ph/0502053",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "madrid2002a",
+  "title": "Rigged Hilbert Space Treatment of Continuous Spectrum",
+  "year": "2002",
+  "arxiv": "quant-ph/0109154",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "majda2012nonlinearity",
+  "title": "Physics constrained nonlinear regression models for time series",
+  "year": "2012",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "majda2014pnas",
+  "title": "Conceptual dynamical models for turbulence",
+  "year": "2014",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "mamakoukas2020arxiv",
+  "title": "Derivative-based koopman operators for real-time control of robotic systems",
+  "year": "2021",
+  "arxiv": "2010.05778",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "mann2016qf",
+  "title": "Dynamic mode decomposition for financial trading strategies",
+  "year": "2016",
+  "arxiv": "1508.04487",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "manohar2017csm",
+  "title": "Data-driven sparse sensor placement",
+  "year": "2018",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "manohar2017arxiv",
+  "title": "Optimized sampling for multiscale dynamics",
+  "year": "2019",
+  "arxiv": "1712.05085",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "manohar2018arxivb",
+  "title": "Optimal sensor and actuator placement using balanced model reduction",
+  "year": "2018",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "manojlovic2020applications",
+  "title": "Applications of koopman mode analysis to neural networks",
+  "year": "2020",
+  "arxiv": "2006.11765",
+  "how": "bib",
+  "tex": "source"
+ },
+ {
+  "key": "mardt2020deep",
+  "title": "Deep learning markov and koopman models with physical constraints",
+  "year": null,
+  "arxiv": "1912.07392",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "mardt2017arxiv",
+  "title": "VAMPnets: Deep learning of molecular kinetics",
+  "year": "2018",
+  "arxiv": "1710.06012",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "markus1960",
+  "title": "Global stability criteria for differential systems",
+  "year": "1960",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "marrouch2020data",
+  "title": "Data-driven koopman operator approach for computational neuroscience",
+  "year": "2020",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "massa2012dynamic",
+  "title": "Dynamic mode decomposition analysis of detonation waves",
+  "year": "2012",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "Maulik2019jfm",
+  "title": "Subgrid modelling for two-dimensional turbulence using neural networks",
+  "year": "2019",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "mauroy2020tac",
+  "title": "Koopman-based lifting techniques for nonlinear systems identification",
+  "year": "2020",
+  "arxiv": "1709.02003",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "mauroy2017arxiv",
+  "title": "Koopman-based lifting techniques for nonlinear systems identification",
+  "year": "2019",
+  "arxiv": "1709.02003",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "mauroy2012",
+  "title": "On the use of Fourier averages to compute the global isochrons of (quasi)periodic dynamics",
+  "year": "2012",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "mauroy2013cdc",
+  "title": "A spectral operator-theoretic framework for global stability",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "mauroy2016ieeetac",
+  "title": "Global stability analysis using the eigenfunctions of the Koopman operator",
+  "year": "2016",
+  "arxiv": "1408.1379",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "mauroy2013",
+  "title": "Isostables, isochrons, and Koopman spectrum for the action-angle representation of stable fixed point dynamics",
+  "year": "2013",
+  "arxiv": "1302.0032",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "mauroy2020book",
+  "title": "The Koopman Operator in Systems and Control: Concepts, Methodologies, and Applications",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "mayne1997proc",
+  "title": "Nonlinear model predictive control: An assessment",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "McKeon2010b",
+  "title": "A critical-layer framework for turbulent pipe flow",
+  "year": "2010",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "mehta2018",
+  "title": "A New Transformative Framework for Data Assimilation and Calibration of Physical Ionosphere-Thermosphere Models",
+  "year": "2018",
+  "arxiv": "1804.04088",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "meiss2007",
+  "title": "Differential Dynamical Systems",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "mesbahi2019",
+  "title": "On Modal Properties of the Koopman Operator for Nonlinear Systems with Symmetry",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "mezic2005nd",
+  "title": "Spectral properties of dynamical systems, model reduction and decompositions",
+  "year": "2005",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "mezic2013arfm",
+  "title": "Analysis of fluid flows via spectral properties of the Koopman operator",
+  "year": "2013",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "mezic2019",
+  "title": "Spectrum of the Koopman Operator",
+  "year": "2019",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "mezic2020",
+  "title": "On Numerical Approximations of the Koopman Operator",
+  "year": "2020",
+  "arxiv": "2009.05883",
+  "how": "bib",
+  "tex": "source"
+ },
+ {
+  "key": "mezic2004physicad",
+  "title": "Comparison of systems with complex behavior",
+  "year": "2004",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "mezic2004b",
+  "title": "Uncertainty analysis of complex dynamical systems",
+  "year": "2004",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "mezic2008c",
+  "title": "Uncertainty propagation in dynamical systems",
+  "year": "2008",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "mezic1999chaos",
+  "title": "A method for visualization of invariant sets of dynamical systems based on the ergodic partition",
+  "year": "1999",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "mizuno2011investigation",
+  "title": "Investigation of wall-bounded turbulent flow using dynamic mode decomposition",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "moeck2013tomographic",
+  "title": "Tomographic reconstruction of heat release rate perturbations induced by helical modes in turbulent swirl flames",
+  "year": "2013",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "mohr2014arxiv",
+  "title": "Construction of eigenfunctions for scalar-type operators via Laplace averages with connections to the Koopman operator",
+  "year": "2014",
+  "arxiv": "1403.6559",
+  "how": "bib",
+  "tex": "source"
+ },
+ {
+  "key": "mohr2016a",
+  "title": "Koopman principle eigenfunctions and linearization of diffeomorphisms",
+  "year": "2016",
+  "arxiv": "1611.01209",
+  "how": "bib",
+  "tex": "source"
+ },
+ {
+  "key": "moore2015pnas",
+  "title": "Ergodic theorem, ergodic theory, and statistical mechanics",
+  "year": "2015",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "moore1967",
+  "title": "Optimal linear control systems with input derivative constraints",
+  "year": "1967",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "morari1999model",
+  "title": "Model predictive control: past, present and future",
+  "year": "1999",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "mukherjee2015",
+  "title": "Laplacian graph based approach for uncertainty quantification of large scale dynamical systems",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "muld2012flow",
+  "title": "Flow structures around a high-speed train extracted using proper orthogonal decomposition and dynamic mode decomposition",
+  "year": "2012",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "muld2012mode",
+  "title": "Mode decomposition on surface-mounted cube",
+  "year": "2012",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "nadkarni1979",
+  "title": "On Spectra of Non-Singular Transformations and Flows",
+  "year": "1979",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "nadler2006acha",
+  "title": "Diffusion maps, spectral clustering and reaction coordinates of dynamical systems",
+  "year": "2006",
+  "arxiv": "math/0503445",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "nakao2020",
+  "title": "Spectral analysis of the Koopman operator for partial differential equations",
+  "year": "2020",
+  "arxiv": "2004.10074",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "nandanoori2020",
+  "title": "Data-Driven Operator Theoretic Methods for Global Phase Space Learning",
+  "year": null,
+  "arxiv": "1910.03011",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "narasingam2019",
+  "title": "Koopman Lyapunov\u2010based model predictive control of nonlinear chemical process systems",
+  "year": "2019",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "netto2018tps",
+  "title": "A robust data-driven Koopman Kalman filter for power systems dynamic state estimation",
+  "year": "2018",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "neumann1932pnas",
+  "title": "Proof of the quasi-ergodic hypothesis",
+  "year": "1932",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "vonneumann1932a",
+  "title": "Zur Operatorenmethode in der klassischen Mechanik",
+  "year": "1932",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "Noack2016jfm",
+  "title": "Recursive dynamic mode decomposition of a transient cylinder wake",
+  "year": "2016",
+  "arxiv": "1511.06876",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "noe2013variational",
+  "title": "A variational approach to modeling slow processes in stochastic dynamical systems",
+  "year": "2013",
+  "arxiv": "1211.7103",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "Noe2019science",
+  "title": "Boltzmann generators: Sampling equilibrium states of many-body systems with deep learning",
+  "year": "2019",
+  "arxiv": "1812.01729",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "noether1918invariante",
+  "title": "Invariante variationsprobleme nachr. d. k\\\"onig. gesellsch. d. wiss. zu g\\\"ottingen, math-phys. klasse 1918: 235-257",
+  "year": "1918",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "nonomura2018dynamic",
+  "title": "Dynamic mode decomposition using a kalman filter for parameter estimation",
+  "year": "2018",
+  "arxiv": "1804.00143",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "nonomura2019extended",
+  "title": "Extended-kalman-filter-based dynamic mode decomposition for simultaneous system identification and denoising",
+  "year": "2019",
+  "arxiv": "1805.01985",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "nuske2019tensorbased",
+  "title": "Tensor based EDMD for the Koopman analysis of high-dimensional systems",
+  "year": "2019",
+  "arxiv": "1908.04741",
+  "how": "bib",
+  "tex": "source"
+ },
+ {
+  "key": "nuske2014jctc",
+  "title": "Variational approach to molecular kinetics",
+  "year": "2014",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "nuske2016variational",
+  "title": "Variational tensor approach for approximating the rare-event kinetics of macromolecular systems",
+  "year": "2016",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "Oppenheim2014",
+  "title": "Discrete-Time Signal Processing",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "ostoich2013interaction",
+  "title": "Interaction of a Mach 2.25 turbulent boundary layer with a fluttering panel using direct numerical simulation",
+  "year": "2013",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "otto2017arxiv",
+  "title": "Linearly-recurrent autoencoder networks for learning dynamics",
+  "year": "2019",
+  "arxiv": "1712.01378",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "otto2021koopman",
+  "title": "Koopman operators for estimation and control of dynamical systems",
+  "year": "2021",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "page2018a",
+  "title": "Koopman analysis of Burgers equation",
+  "year": "2018",
+  "arxiv": "1712.06369",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "page2019",
+  "title": "Koopman mode expansions between simple invariant solutions",
+  "year": "2019",
+  "arxiv": "1811.05907",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "pan2011dynamical",
+  "title": "Dynamical mode decomposition of Gurney flap wake flow",
+  "year": "2011",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "Pan2020arxiv",
+  "title": "Sparsity-promoting algorithms for the discovery of informative Koopman-invariant subspaces",
+  "year": "2021",
+  "arxiv": "2002.10637",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "parker2019koopman",
+  "title": "Koopman analysis of isolated fronts and solitons",
+  "year": "2020",
+  "arxiv": "1903.04247",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "peherstorfer2016data",
+  "title": "Data-driven operator inference for nonintrusive projection-based model reduction",
+  "year": "2016",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "peitz2018arxiv",
+  "title": "Controlling nonlinear PDEs using low-dimensional bilinear approximations obtained from data",
+  "year": "2018",
+  "arxiv": "1801.06419",
+  "how": "bib",
+  "tex": "source"
+ },
+ {
+  "key": "peitz2017arxiv",
+  "title": "Koopman operator-based model reduction for switched-system control of PDEs",
+  "year": "2019",
+  "arxiv": "1710.06759",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "peitz2018feedback",
+  "title": "Feedback control of nonlinear PDEs using data-efficient reduced order models based on the Koopman operator",
+  "year": "2020",
+  "arxiv": "1806.09898",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "peitz2020arxiv",
+  "title": "Data-driven model predictive control using interpolated Koopman generators",
+  "year": "2020",
+  "arxiv": "2003.07094",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "pendergrass2016arxiv",
+  "title": "Streaming GPU singular value and dynamic mode decompositions",
+  "year": "2016",
+  "arxiv": "1612.07875",
+  "how": "bib",
+  "tex": "source"
+ },
+ {
+  "key": "eof2",
+  "title": "\\textslRandom forcing and forecasting using Principal Oscillation Pattern analysis",
+  "year": "1989",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "eof3",
+  "title": "\\textslPrediction of Ni\\~no 3 sea-surface temperatures using linear inverse modeling",
+  "year": "1993",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "perko2009",
+  "title": "Differential Equations and Dynamical Systems",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "phan1993jota",
+  "title": "Linear system identification via an asymptotically stable observer",
+  "year": "1993",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "phan1992jas",
+  "title": "Identification of linear-multivariable systems by identification of observers with assigned real eigenvalues",
+  "year": "1992",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "pikovsky1995",
+  "title": "Singular continuous spectra in dissipative dynamics",
+  "year": "1995",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "Pollicott1985",
+  "title": "On the rate of mixing of Axiom A flows",
+  "year": "1985",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "proctor2014epj",
+  "title": "Exploiting sparsity and equation-free architectures in complex systems (invited review)",
+  "year": "2014",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "proctor2016siads",
+  "title": "Dynamic mode decomposition with control",
+  "year": "2016",
+  "arxiv": "1409.6358",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "proctor2017siads",
+  "title": "Generalizing Koopman theory to allow for inputs and control",
+  "year": "2018",
+  "arxiv": "1602.07647",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "proctor2015ih",
+  "title": "Discovering dynamic patterns from infectious disease data using dynamic mode decomposition",
+  "year": "2015",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "qian2020lift",
+  "title": "Lift \\& learn: Physics-informed machine learning for large-scale nonlinear dynamical systems",
+  "year": "2020",
+  "arxiv": "1912.08177",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "qin20061502",
+  "title": "An overview of subspace identification",
+  "year": "2006",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "qin1997proc",
+  "title": "An overview of industrial model predictive control technology",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "queffelec2010",
+  "title": "Substitution Dynamical Systems - Spectral Analysis",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "rackauckas2020universal",
+  "title": "Universal differential equations for scientific machine learning",
+  "year": "2020",
+  "arxiv": "2001.04385",
+  "how": "bib",
+  "tex": "source"
+ },
+ {
+  "key": "raghu2017pmlr",
+  "title": "On the expressive power of deep neural networks",
+  "year": "2017",
+  "arxiv": "1606.05336",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "Raissi2019jcp",
+  "title": "Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations",
+  "year": "2019",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "raissi2020science",
+  "title": "Hidden fluid mechanics: Learning velocity and pressure fields from flow visualizations",
+  "year": "2020",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "redman2021koopman",
+  "title": "On koopman mode decomposition and tensor component analysis",
+  "year": "2021",
+  "arxiv": "2101.00555",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "reed1978",
+  "title": "Methods of Modern Mathematical Physics. IV. Analysis of Operators",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "reed1980",
+  "title": "Methods of Modern Mathematical Physics. I",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "rokhlin1966",
+  "title": "Selected topics from the metric theory of dynamical systems",
+  "year": "1966",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "rosenfeld2021",
+  "title": "Dynamic Mode Decomposition for Continuous Time Systems with the Liouville Operator",
+  "year": "2021",
+  "arxiv": "1910.03977",
+  "how": "bib",
+  "tex": "source"
+ },
+ {
+  "key": "rosenfeld2021a",
+  "title": "Theoretical Foundations for the Dynamic Mode Decomposition of High Order Dynamical Systems",
+  "year": "2021",
+  "arxiv": "2101.02646",
+  "how": "bib",
+  "tex": "source"
+ },
+ {
+  "key": "rowley2009jfm",
+  "title": "Spectral analysis of nonlinear flows",
+  "year": "2009",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "roy2015pre",
+  "title": "Deconvolution of reacting-flow dynamics using proper orthogonal and dynamic mode decompositions",
+  "year": "2015",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "Ruelle1986",
+  "title": "Resonances of chaotic dynamical systems",
+  "year": "1986",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "salova2019",
+  "title": "Koopman operator and its approximations for systems with symmetries",
+  "year": "2019",
+  "arxiv": "1904.11472",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "sanchez2020learning",
+  "title": "Learning to simulate complex physics with graph networks",
+  "year": null,
+  "arxiv": "2002.09405",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "sapsis2013pnas",
+  "title": "Statistically accurate low-order models for uncertainty quantification in turbulent dynamical systems",
+  "year": "2013",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "sarkar2013mixed",
+  "title": "Mixed convective flow stability of nanofluids past a square cylinder by dynamic mode decomposition",
+  "year": "2013",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "sashidhar2021bagging",
+  "title": "Bagging, optimized dynamic mode decomposition (bop-dmd) for robust, stable forecasting with spatial and temporal uncertainty-quantification",
+  "year": "2021",
+  "arxiv": "2107.10878",
+  "how": "bib",
+  "tex": "source"
+ },
+ {
+  "key": "sayadi2016tcfd",
+  "title": "Parallel data-driven decomposition algorithm for large-scale datasets: with application to transitional boundary layers",
+  "year": "2016",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "sayadi2014reduced",
+  "title": "Reduced-order representation of near-wall structures in the late transitional boundary layer",
+  "year": "2014",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "Scherl2020prf",
+  "title": "Robust principal component analysis for particle image velocimetry",
+  "year": "2020",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "schmid2011tcfd",
+  "title": "Applications of the dynamic mode decomposition",
+  "year": "2011",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "schmid2009dynamic",
+  "title": "Dynamic mode decomposition of experimental data",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "schmid2010jfm",
+  "title": "Dynamic mode decomposition of numerical and experimental data",
+  "year": "2010",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "schmid2008aps",
+  "title": "Dynamic mode decomposition of numerical and experimental data",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "schmid:2012",
+  "title": "Decomposition of time-resolved tomographic PIV",
+  "year": "2012",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "Schmidt2009science",
+  "title": "Distilling free-form natural laws from experimental data",
+  "year": "2009",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "schmidt2020guide",
+  "title": "Guide to spectral proper orthogonal decomposition",
+  "year": "2020",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "sechi2021",
+  "title": "Estimation of the Koopman Generator by Newton's Extrapolation",
+  "year": "2021",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "seena2011dynamic",
+  "title": "Dynamic mode decomposition of turbulent cavity flows for self-sustained oscillations",
+  "year": "2011",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "semeraro2012analysis",
+  "title": "Analysis of time-resolved PIV measurements of a confined turbulent jet using POD and Koopman modes",
+  "year": "2012",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "Shadden2005pd",
+  "title": "Definition and properties of Lagrangian coherent structures from finite-time Lyapunov exponents in two-dimensional aperiodic flows",
+  "year": "2005",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "sharma2016prf",
+  "title": "Correspondence between Koopman mode decomposition, resolvent mode decomposition, and invariant solutions of the Navier-Stokes equations",
+  "year": "2016",
+  "arxiv": "1603.08378",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "sharma2017ibpsa",
+  "title": "Transfer operator theoretic framework for monitoring building indoor environment in uncertain operating conditions",
+  "year": null,
+  "arxiv": "1807.04781",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "sharma2018arxiv_a",
+  "title": "A transfer operator methodology for optimal sensor placement accounting for uncertainty",
+  "year": "2019",
+  "arxiv": "1812.10541",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "sinha2020a",
+  "title": "On Robust Computation of Koopman Operator and Prediction in Random Dynamical Systems",
+  "year": "2020",
+  "arxiv": "1803.08562",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "sinha2020arxiv",
+  "title": "Data driven online learning of power system dynamics",
+  "year": "2020",
+  "arxiv": "2003.05068",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "sinha2020",
+  "title": "Koopman operator methods for global phase space exploration of equivariant dynamical systems",
+  "year": "2020",
+  "arxiv": "2003.04870",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "sinha2016jmaa",
+  "title": "Operator theoretic framework for optimal placement of sensors and actuators for control of nonequilibrium dynamics",
+  "year": "2016",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "slipantschuk2020",
+  "title": "Dynamic mode decomposition for analytic maps",
+  "year": "2020",
+  "arxiv": "1905.09266",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "son_narasingam2020",
+  "title": "Handling plant-model mismatch in Koopman Lyapunov-based model predictive control via offset-free control framework",
+  "year": "2020",
+  "arxiv": "2010.07239",
+  "how": "bib",
+  "tex": "source"
+ },
+ {
+  "key": "song2013global",
+  "title": "Global and Koopman modes analysis of sound generation in mixing layers",
+  "year": "2013",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "sootla2016acc",
+  "title": "Properties of isostables and basins of attraction of monotone systems",
+  "year": null,
+  "arxiv": "1510.01153",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "sootla2018",
+  "title": "Operator-Theoretic Characterization of Eventually Monotone Systems",
+  "year": "2018",
+  "arxiv": "1510.01149",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "steeb1980non",
+  "title": "Non-linear autonomous systems of differential equations and Carleman linearization procedure",
+  "year": "1980",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "stewart1993early",
+  "title": "On the early history of the singular value decomposition",
+  "year": "1993",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "Stoica2005",
+  "title": "Spectral Analysis of Signals",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "streif2013",
+  "title": "Estimation of consistent parameter sets for continuous-time nonlinear systems using occupation measures and LMI relaxations",
+  "year": null,
+  "arxiv": "1303.4615",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "strichartz1990",
+  "title": "Fourier asymptotics of fractal measures",
+  "year": "1990",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "Strogatz2018book",
+  "title": "Nonlinear dynamics and chaos with student solutions manual: With applications to physics, biology, chemistry, and engineering",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "suchanecki1996",
+  "title": "Rigged Hilbert spaces for chaotic dynamical systems",
+  "year": "1996",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "surana2016cdc",
+  "title": null,
+  "year": null,
+  "arxiv": null,
+  "how": null
+ },
+ {
+  "key": "surana2016linear",
+  "title": "Linear observer synthesis for nonlinear systems using Koopman operator framework",
+  "year": "2016",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "surana2017cdc",
+  "title": "Koopman operator framework for constrained state estimation",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "susuki2011c",
+  "title": "Nonlinear Koopman Modes and Coherency Identification of Coupled Swing Dynamics",
+  "year": "2011",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "susuki2012nonlinear",
+  "title": "Nonlinear Koopman modes and a precursor to power system swing instabilities",
+  "year": "2012",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "susuki2015",
+  "title": "A prony approximation of Koopman Mode Decomposition",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "susuki2020",
+  "title": "Invariant Sets in Quasiperiodically Forced Dynamical Systems",
+  "year": "2020",
+  "arxiv": "1808.08340",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "susuki2011jns",
+  "title": "Coherent swing instability of power grids",
+  "year": "2011",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "stanton2016pre",
+  "title": "Spectral decomposition of nonlinear systems with memory",
+  "year": "2016",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "svoronos1994discretization",
+  "title": "Discretization of nonlinear control systems via the Carleman linearization",
+  "year": "1994",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "taira2017",
+  "title": "Modal Analysis of Fluid Flows: An Overview",
+  "year": "2017",
+  "arxiv": "1702.01453",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "taira2020",
+  "title": "Modal Analysis of Fluid Flows: Applications and Outlook",
+  "year": "2020",
+  "arxiv": "1903.05750",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "takeishi2017jcai",
+  "title": "Bayesian dynamic mode decomposition",
+  "year": "2017",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "Takeishi2017neurips",
+  "title": "Learning Koopman invariant subspaces for dynamic mode decomposition",
+  "year": null,
+  "arxiv": "1710.04340",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "takeishi2017",
+  "title": "Subspace dynamic mode decomposition for stochastic Koopman analysis",
+  "year": "2017",
+  "arxiv": "1705.04908",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "takens1981lnm",
+  "title": "Detecting strange attractors in turbulence",
+  "year": "1981",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "tallapragada2013set",
+  "title": "A set oriented definition of finite-time lyapunov exponents and coherent sets",
+  "year": "2013",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "tang2012dynamic",
+  "title": "Dynamic mode decomposition of hairpin vortices generated by a hemisphere protuberance",
+  "year": "2012",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "tasaki1993",
+  "title": "Deterministic diffusion, De Rham equation and fractal eigenvectors",
+  "year": "1993",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "taylor2017arxiv",
+  "title": "Dynamic mode decomposition for plasma diagnostics and validation",
+  "year": "2018",
+  "arxiv": "1702.06871",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "tibshirani1996lasso",
+  "title": "Regression shrinkage and selection via the lasso",
+  "year": "1996",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "tirunagari2017mva",
+  "title": "Movement correction in DCE-MRI through windowed and reconstruction dynamic mode decomposition",
+  "year": "2017",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "Towne2018jfm",
+  "title": "Spectral proper orthogonal decomposition and its relationship to dynamic mode decomposition and resolvent analysis",
+  "year": "2018",
+  "arxiv": "1708.04393",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "trefethen1993science",
+  "title": "Hydrodynamic stability without eigenvalues",
+  "year": "1993",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "tu2011koopman",
+  "title": "Koopman spectral analysis of separated flow over a finite-thickness flat plate with elliptical leading edge",
+  "year": "2011",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "tu2014ef",
+  "title": "Spectral analysis of fluid flows using sub-Nyquist-rate PIV data",
+  "year": "2014",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "tu2014jcd",
+  "title": "On dynamic mode decomposition: theory and applications",
+  "year": "2014",
+  "arxiv": "1312.0041",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "tukey1962future",
+  "title": "The future of data analysis",
+  "year": "1962",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "ulam1960problems",
+  "title": "Problems in Modern Mathematics",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "vaidya2006ccc",
+  "title": "Duality in stability theory: Lyapunov function and Lyapunov measure",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "vaidya2007cdc",
+  "title": "Observability gramian for nonlinear systems",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "vaidya2012jmaa",
+  "title": "Actuator and sensor placement in linear advection PDE with building system application",
+  "year": "2012",
+  "arxiv": "1409.2015",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "vanoverschee199475",
+  "title": "N4SID: Subspace algorithms for the identification of combined deterministic-stochastic systems",
+  "year": "1994",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "van.1996",
+  "title": "Subspace Identification for Linear Systems: Theory - Implementation - Applications",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "wang2021learning",
+  "title": "Learning the solution operator of parametric partial differential equations with physics-informed deeponets",
+  "year": "2021",
+  "arxiv": "2103.10974",
+  "how": "bib",
+  "tex": "source"
+ },
+ {
+  "key": "wehmeyer2017arxiv",
+  "title": "Time-lagged autoencoders: Deep learning of slow collective variables for molecular kinetics",
+  "year": "2018",
+  "arxiv": "1710.11239",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "wiener1941",
+  "title": "Harmonic analysis and ergodic theory",
+  "year": "1941",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "wiggins2003",
+  "title": "Introduction to Applied Nonlinear Dynamical Systems and Chaos",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "williams2016ifac",
+  "title": "Extending data-driven Koopman analysis to actuated systems",
+  "year": "2016",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "williams2015jnls",
+  "title": "A data-driven approximation of the Koopman operator: extending dynamic mode decomposition",
+  "year": "2015",
+  "arxiv": "1408.4408",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "williams2015jcd",
+  "title": "A kernel approach to data-driven Koopman spectral analysis",
+  "year": "2015",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "wilson2019",
+  "title": "Isostable reduction of oscillators with piecewise smooth dynamics and complex Floquet multipliers",
+  "year": "2019",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "wilson2020a",
+  "title": "A data-driven phase and isostable reduced modeling framework for oscillatory dynamical systems",
+  "year": "2020",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "wilson2020",
+  "title": "Phase-amplitude reduction far beyond the weakly perturbed paradigm",
+  "year": "2020",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "wilson2016",
+  "title": "Isostable reduction of periodic orbits",
+  "year": "2016",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "wright2009ieeetpami",
+  "title": "Robust face recognition via sparse representation",
+  "year": "2009",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "wu2020variational",
+  "title": "Variational approach for learning markov processes from time series data",
+  "year": "2020",
+  "arxiv": "1707.04659",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "wu2017variational",
+  "title": "Variational koopman models: slow collective variables and molecular kinetics from short off-equilibrium simulations",
+  "year": "2017",
+  "arxiv": "1610.06773",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "yeung2017arxiv",
+  "title": "Learning deep neural network representations for Koopman operators of nonlinear dynamical systems",
+  "year": "2017",
+  "arxiv": "1708.06850",
+  "how": "bib",
+  "tex": "source"
+ },
+ {
+  "key": "yeung2018acc",
+  "title": "A Koopman operator approach for computing and balancing gramians for discrete time nonlinear systems",
+  "year": null,
+  "arxiv": "1709.08712",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "you2018ifac",
+  "title": "Deep Koopman synthesis for cyber-resilient market-based frequency regulation",
+  "year": "2018",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "liu2018acc",
+  "title": "Decomposition of nonlinear dynamical systems using Koopman gramians",
+  "year": null,
+  "arxiv": "1710.01719",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "zaks2017",
+  "title": "Anomalous Transport in Steady Plane Viscous Flows: Simple Models",
+  "year": null,
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "zaslavsky1991",
+  "title": "Lagrangian turbulence and anomalous transport",
+  "year": "1991",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "zaslavsky2002",
+  "title": "Chaos, fractional kinetics, and anomalous transport",
+  "year": "2002",
+  "arxiv": null,
+  "how": null,
+  "ax_done": true
+ },
+ {
+  "key": "zhang2019",
+  "title": "Online Dynamic Mode Decomposition for Time-Varying Systems",
+  "year": "2019",
+  "arxiv": "1707.02876",
+  "how": "arxiv-api",
+  "ax_done": true,
+  "tex": "source"
+ },
+ {
+  "key": "zhen2021",
+  "title": "Singular Values of Hankel Matrix: Implication to the Convergence of Hankel Dynamic Mode Decomposition",
+  "year": "2021",
+  "arxiv": "2107.01948",
+  "how": "bib",
+  "tex": "source"
+ }
+]

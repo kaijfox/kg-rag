@@ -1,0 +1,494 @@
+<title>Lean Retrieval Engine</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Bricolage+Grotesque:wght@600;700&display=swap">
+<style>
+/* Layout: single reading column (68ch) with wider figures; one teal accent for "shared/kept", one amber for "problem/changed". */
+:root{
+  --bg:#f5f7f8; --fg:#1b2428; --muted:#56646b; --rule:#d5dde0; --panel:#ffffff;
+  --accent:#0b6a68; --accent-soft:#dcefee; --warn:#a85a00; --warn-soft:#fbead3;
+  --f-display:'Bricolage Grotesque','IBM Plex Sans',system-ui,sans-serif;
+  --f-body:'IBM Plex Sans',system-ui,-apple-system,sans-serif;
+  --f-mono:'IBM Plex Mono',ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#111a1d; --fg:#e4ebed; --muted:#9db0b6; --rule:#2a3a3f; --panel:#18252a;
+  --accent:#4cc3bf; --accent-soft:#16373a; --warn:#f0a350; --warn-soft:#3a2a12; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#111a1d; --fg:#e4ebed; --muted:#9db0b6; --rule:#2a3a3f; --panel:#18252a;
+  --accent:#4cc3bf; --accent-soft:#16373a; --warn:#f0a350; --warn-soft:#3a2a12; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:16px/1.6 var(--f-body);padding-block:32px 72px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:880px;margin-inline:auto}
+.col{max-width:68ch}
+h1,h2,h3{font-family:var(--f-display);line-height:1.15;text-wrap:balance;margin:0}
+h1{font-size:clamp(2rem,5vw,3rem);letter-spacing:-.02em}
+h2{font-size:1.55rem;margin-top:56px;padding-top:20px;border-top:1px solid var(--rule)}
+h3{font-size:1.1rem;margin-top:28px}
+p{margin:12px 0}
+.kicker{font:500 .78rem var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.lede{font-size:1.15rem;color:var(--fg)}
+ul{padding-left:1.2em;margin:10px 0} li{margin:6px 0}
+code,.mono{font-family:var(--f-mono);font-size:.88em}
+.summary{background:var(--panel);border:1px solid var(--rule);border-radius:6px;padding:18px 22px;margin-top:24px}
+.summary p{margin:8px 0}
+dl.terms{display:grid;grid-template-columns:max-content 1fr;gap:10px 22px;margin:16px 0}
+dl.terms dt{font-weight:600;color:var(--accent)} dl.terms dd{margin:0;min-width:0}
+@media(max-width:560px){dl.terms{grid-template-columns:1fr;gap:2px}dl.terms dd{margin-bottom:10px}}
+figure{margin:28px 0}
+figcaption{font-size:.88rem;color:var(--muted);margin-top:10px;max-width:68ch}
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:.93rem;min-width:560px}
+th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--rule)}
+th{font:500 .75rem var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+td.n{font-family:var(--f-mono);white-space:nowrap}
+.bars{display:grid;grid-template-columns:minmax(120px,210px) 1fr 56px;gap:8px 12px;align-items:center;font-size:.93rem}
+.bars .t{height:18px;background:var(--rule);border-radius:2px;position:relative}
+.bars .t i{position:absolute;inset:0 auto 0 0;background:var(--accent);border-radius:2px}
+.bars .t i.w{background:var(--warn)}
+.bars .t i.q{background:var(--muted)}
+.bars .v{font-family:var(--f-mono);text-align:right}
+.bars .grp{grid-column:1/-1;font:500 .75rem var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-top:10px}
+.probe{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:700px){.probe{grid-template-columns:1fr}}
+.card{background:var(--panel);border:1px solid var(--rule);border-radius:6px;padding:14px 16px;min-width:0}
+.card.bad{border-color:var(--warn)} .card.good{border-color:var(--accent)}
+.card h4{margin:0 0 6px;font:500 .75rem var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.card.bad h4{color:var(--warn)} .card.good h4{color:var(--accent)}
+.card p{margin:6px 0;font-size:.93rem}
+.card .q{font-family:var(--f-mono);font-size:.82rem;background:var(--bg);padding:8px;border-radius:4px;word-break:break-word}
+.callout{border-left:3px solid var(--warn);background:var(--warn-soft);padding:10px 16px;margin:20px 0;max-width:68ch}
+.callout p{margin:6px 0}
+svg{max-width:100%;height:auto;display:block}
+svg text{font-family:var(--f-body);font-size:12.5px;fill:var(--fg)}
+svg .lab{font-size:13px;font-weight:600}
+svg .sm{font-size:11.5px;fill:var(--muted)}
+svg .shared{fill:var(--accent-soft);stroke:var(--accent);stroke-width:1.5}
+svg .own{fill:var(--panel);stroke:var(--fg);stroke-width:1.2}
+svg .plan{fill:var(--warn-soft);stroke:var(--warn);stroke-width:1.5;stroke-dasharray:5 3}
+svg .rec{fill:var(--panel);stroke:var(--fg);stroke-width:1.2}
+svg .recplan{fill:var(--warn-soft);stroke:var(--warn);stroke-width:1.5;stroke-dasharray:5 3}
+svg .add{fill:var(--warn-soft);stroke:var(--warn);stroke-width:1.6}
+svg .kern{fill:var(--panel);stroke:var(--muted);stroke-width:1.2}
+svg .arr{stroke:var(--fg);stroke-width:1.4;fill:none}
+svg .loop{stroke:var(--warn);stroke-width:1.5;fill:none;stroke-dasharray:5 3}
+table.cost td,table.cost th{padding:8px 10px}
+.lv{display:inline-block;min-width:3.2em;text-align:center;font:500 .72rem var(--f-mono);padding:2px 6px;border-radius:3px;letter-spacing:.03em}
+.lv.l{background:var(--accent-soft);color:var(--accent)}
+.lv.m{background:var(--rule);color:var(--fg)}
+.lv.h{background:var(--warn-soft);color:var(--warn)}
+ol{padding-left:1.3em;margin:10px 0} ol li{margin:6px 0}
+.foot{font-size:.85rem;color:var(--muted);margin-top:56px;border-top:1px solid var(--rule);padding-top:16px}
+</style>
+
+<div class="wrap">
+<p class="kicker">Proposal · 6 November 2026</p>
+<h1>A leaner engine for retrieval over knowledge graphs</h1>
+<p class="lede col">Coding and research agents need background knowledge that no single passage supplies. A first build produced a sound way to measure retrieval and no improvement in retrieval. This report assesses that build against a small reference system, nano-graphrag, and proposes a smaller engine made of interchangeable parts.</p>
+
+<div class="summary col">
+<p><strong>Finding.</strong> The foundation (content-derived chunks with source links) and the measurement rig worked. The richer record types (facts, summaries, links) are designed but unbuilt. The packaging around all of it did not work: 17 software packages, a workflow engine wrapped around every pipeline, and a PDF-processing effort that is not the project's subject.</p>
+<p><strong>Comparison.</strong> nano-graphrag was cloned and read. Its data model suits whole-corpus synthesis and has no place for qualified facts, undoable merges or revision. The first build’s design has the reverse profile, and most of it is unbuilt.</p>
+<p><strong>Proposal.</strong> Start from GraphRAG’s shape (chunks, extracted facts, a graph, optional summaries, query modes) instead of the first build’s model. Section 10 ties each design choice to a finding. A fact is a standalone sentence that cites its chunks. An index is rebuilt on upgrade and never versioned, and the log, evaluation results and confirmed corrections live in a separate durable store. Each way of answering is a state machine over small modules. The cost table in section 9 takes the first design’s 25 tables to 17 and postpones the most expensive demands until a measurement asks for them.</p>
+<p><strong>Decision requested.</strong> Approval to adopt this design (a simplified model in GraphRAG’s shape, modules wired by state machines, PDF parsing behind an adapter, and the staged build order) before choosing the first retrieval improvement (section 11).</p>
+</div>
+
+<h2>1. The need</h2>
+<div class="col">
+<p>Agents that write code or research need background knowledge from two sources: papers and textbook chapters on one sub-domain, and the working history of a project. The questions they ask are often answered by no single passage. Two examples show the pattern.</p>
+<ul>
+<li><strong>Combining facts.</strong> “Which method handles case X?” may need a fact from one paper and a condition from another.</li>
+<li><strong>Change over time.</strong> A project note from 1 October says the store is JSON files. A note from 17 October says it is SQLite, replacing the JSON files. A correct answer to “what is the store?” is SQLite, and a system must know that the second note supersedes the first. This example recurs below.</li>
+</ul>
+<p>The system must also be improvable. Retrieval will fail in places that cannot be predicted. Each failure therefore has to be traced to a stage (extraction, merging, retrieval, answering) so that one stage can change without rebuilding the rest.</p>
+<p>Published graph-based systems each fit part of this. GraphRAG extracts entities and relationships from text, groups them into communities and pre-writes a summary of each, which suits whole-corpus questions. LightRAG and nano-graphrag are lighter versions. HippoRAG ranks passages by walking a graph, which suits multi-hop questions. All four report only end-to-end answer quality, so a failure cannot be attributed to a stage. None, by their published descriptions, tracks which fact is current after a revision. Their ideas (fact extraction, graph walks) transfer. Their fixed pipelines do not.</p>
+</div>
+
+<h2>2. Terms used in this report</h2>
+<dl class="terms col">
+<dt>Chunk</dt><dd>A passage of source text. Its ID is computed from its content, so unchanged text keeps its ID when a document is loaded again.</dd>
+<dt>Derived item</dt><dd>Anything produced from chunks by a model or a program. A fact is a standalone sentence that cites its chunks and lists the names it mentions. A summary cites many chunks. Each derived item lists the chunks it came from.</dd>
+<dt>Module</dt><dd>A function with a name, a version, and a declaration of which intermediate results of one request it needs and which it adds (for example “candidate chunks”). A module does one job: embed a query, find nearest chunks, cut a list to k.</dd>
+<dt>State machine</dt><dd>A fixed set of states and allowed moves between them. Here each state calls one module, and the machine chooses the next state. A loop is a move back to an earlier state.</dd>
+<dt>Kernel</dt><dd>The fixed foundation under every state machine: the data store, the runner that executes machines and records which module versions ran, and the log of every step. Evaluation and viewing tools are clients of it and are not part of it.</dd>
+<dt>Index</dt><dd>The data derived from source documents: chunks, derived items, links and embeddings. An index can be rebuilt from the source files.</dd>
+<dt>History</dt><dd>The durable record of use: event log, agent feedback, evaluation results and corrections that a person confirmed. A rebuild leaves it untouched.</dd>
+<dt>Snapshot</dt><dd>In the first build only, a fixed record of which chunks and derived items are current at a moment, so that two versions of the index can be compared on identical questions.</dd>
+</dl>
+
+<h2>3. What the first build produced</h2>
+<div class="col">
+<p>The first build (four work periods, called sprints in the project files) deliberately added no knowledge graph, so that a baseline and a measurement existed before any layer, and each layer could be compared against them. It built plain similarity search over chunks, wrapped in four supports:</p>
+<ul>
+<li>content-derived chunk IDs and snapshots, so results stay comparable across re-loads;</li>
+<li>a log of every search step, recording which candidates were considered and how they ranked;</li>
+<li>a rule, audited in the database, that every derived item cites its source chunks;</li>
+<li>an evaluation harness. A local language model writes questions with known supporting passages; a second pass scores recall (were the supporting passages retrieved) and answer quality on a 0 to 1 scale judged by a model. On a 30-answer sample the judge agreed with a stronger model at kappa 0.74 (1 is perfect agreement, 0 is chance).</li>
+</ul>
+<p>The test corpus was two statistical-mechanics textbooks by different authors. 113 drafted questions were reviewed by a model against a fixed rubric, leaving 63. Of these, 40 were single-hop (one passage suffices), 12 multi-hop (several passages are needed) and 11 topic-level (a whole section is needed).</p>
+</div>
+
+<figure>
+<div class="bars" role="img" aria-label="Share of questions with all supporting passages in the top five results: single-hop 95 percent, multi-hop 92 percent, topic-level 36 percent.">
+<div class="grp">Share of questions with all supporting passages in the top 5 results</div>
+<div>Single-hop (40)</div><div class="t"><i style="width:95%"></i></div><div class="v">95%</div>
+<div>Multi-hop (12)</div><div class="t"><i class="q" style="width:92%"></i></div><div class="v">92%</div>
+<div>Topic-level (11)</div><div class="t"><i class="w" style="width:36%"></i></div><div class="v">36%</div>
+</div>
+<figcaption>Plain similarity search, local embedding model. The multi-hop bar is grey because the 12 surviving questions combine passages that similarity search already places together. That figure is not evidence about hard multi-hop questions.</figcaption>
+</figure>
+
+<div class="col">
+<h3>Results</h3>
+<ul>
+<li><strong>The baseline is strong.</strong> For single-hop questions the right passage ranks first in 31 of 40 cases and within the top 20 in all of them.</li>
+<li><strong>The test is too easy to rank improvements.</strong> Answers written with no retrieved context already score 0.73 to 0.80. Perfect context adds only about 0.2. A layer that helps by less than that cannot show.</li>
+<li><strong>Topic-level questions are the one visible weakness.</strong> The sample is 11 questions, so the figure is indicative.</li>
+<li><strong>Multi-hop retrieval is untested.</strong> The 12 multi-hop questions that survived review are easy, and no hard one survived.</li>
+<li><strong>A fact-extraction trial was promising but unfinished.</strong> On 24 passages, the needed fact appeared as an extracted fact in 20 (83%). Of 40 sampled facts, 24 (60%) read as clean sentences that make sense alone, without references such as “the chapter” or “Equation 2.100”.</li>
+<li><strong>A cheap candidate exists.</strong> For 14 of 63 questions the supporting passages are adjacent in the source, so pulling in neighbouring chunks needs no extraction.</li>
+</ul>
+<p>The open problem is that the rig is expensive to extend.</p>
+</div>
+
+<h2>4. What went wrong</h2>
+<div class="col"><p>Three whole-codebase reviews at the end of the build, each covering a different slice, found the same thing: the code around the data model is over-built.</p></div>
+<figure>
+<div class="scroll"><table>
+<thead><tr><th>Symptom</th><th>Evidence</th></tr></thead>
+<tbody>
+<tr><td>Workflow engine around work that runs in a line</td><td>Every pipeline (search, ingest, evaluation, question generation) is a state machine with a stored checksum of its sequence of steps, and a change to the sequence without a version bump is refused. None uses a loop. The three-step search machine takes 114 lines to order three function calls. A cosmetic rename changed the identity of every saved index.</td></tr>
+<tr><td>Test scaffolding larger than the product</td><td>The shared test-support package has 4,514 lines, more than any package except the core data types (2,774).</td></tr>
+<tr><td>Space reserved for layers nobody scheduled</td><td>6 of 25 database tables hold no rows. The function that assigns an ID to a derived item deliberately throws an error, so the first extraction layer cannot yet store anything.</td></tr>
+<tr><td>Effort on PDF processing</td><td>Parsing, chunking and ingest total about 1,350 lines of TypeScript plus 591 lines of Python. Decoding formulas into LaTeX touches five packages and has never been used in a measured run. 46 of 63 questions do have a formula in their supporting text, so the need is real; the placement in the core is the issue.</td></tr>
+<tr><td>A diagram feature larger than its subject</td><td>The log viewer vendors a 5.5 MB library to draw a four-box search machine.</td></tr>
+<tr><td>Hard to point at a new corpus</td><td>Until a command line was added late, indexing a new document required writing a script.</td></tr>
+<tr><td>Repeated model calls with no cache</td><td>Re-running an evaluation takes 25 minutes to 2 hours, and one failed model call ended a whole run.</td></tr>
+</tbody></table></div>
+<figcaption>Sources: the three end-of-build reviews and the baseline-measurement results in the project's working notes.</figcaption>
+</figure>
+
+<div class="col"><p>Two things worked and are the reason the project is worth keeping. A database audit of source links found zero violations across the 312 chunks of the first run on the real textbooks. For derived items the audit passed vacuously, because none had been written. And the step-level log let reviewers see why individual queries failed, which none of the four published systems offers.</p></div>
+
+<h2>5. The two data models</h2>
+<div class="col">
+<p>nano-graphrag is a minimal reimplementation of GraphRAG, written to be modified. The project cloned it and read its storage code. This section covers only what each system stores. Section 6 covers what each does with it. The first build’s model is shown as designed in the original design document. Its tables exist in the database, but no code writes to most of them, and the diagram marks which.</p>
+</div>
+
+<figure>
+<svg viewBox="0 0 900 372" role="img" aria-label="Stored records in nano-graphrag. Documents are split into chunks. Entity nodes and relationship edges each carry a joined string of chunk IDs. Entity nodes have a vector and belong to community reports.">
+<defs><marker id="ah2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+<g style="color:var(--fg)">
+<text class="lab" x="0" y="14">nano-graphrag: stored records</text>
+<rect class="rec" x="20" y="30" width="170" height="44" rx="4"/><text class="lab" x="32" y="49">Document</text><text class="sm" x="32" y="66">full text</text>
+<rect class="rec" x="20" y="130" width="200" height="76" rx="4"/><text class="lab" x="32" y="149">Chunk</text><text class="sm" x="32" y="167">text · position in document</text><text class="sm" x="32" y="184">token count · document</text>
+<line class="arr" x1="105" y1="74" x2="105" y2="128" marker-end="url(#ah2)"/><text class="sm" x="113" y="106">split into</text>
+
+<rect class="rec" x="330" y="96" width="270" height="116" rx="4"/><text class="lab" x="342" y="115">Entity node</text><text class="sm" x="342" y="133">key: upper-cased name</text><text class="sm" x="342" y="150">type: one label from a fixed list</text><text class="sm" x="342" y="167">description: merged text from all chunks</text><text class="sm" x="342" y="184">chunk IDs: one joined string</text><text class="sm" x="342" y="201">cluster memberships: level and cluster</text>
+<line class="arr" x1="330" y1="150" x2="222" y2="150" marker-end="url(#ah2)"/><text class="sm" x="276" y="143" text-anchor="middle">cites</text>
+
+<rect class="rec" x="330" y="270" width="270" height="72" rx="4"/><text class="lab" x="342" y="289">Relationship edge</text><text class="sm" x="342" y="307">joins exactly two entity nodes</text><text class="sm" x="342" y="324">description · weight · chunk IDs (string)</text>
+<line class="arr" x1="465" y1="270" x2="465" y2="214" marker-end="url(#ah2)"/><text class="sm" x="473" y="246">endpoints</text>
+<path class="arr" d="M330,306 H120 V208" marker-end="url(#ah2)"/><text class="sm" x="225" y="299" text-anchor="middle">cites</text>
+
+<rect class="rec" x="700" y="96" width="190" height="52" rx="4"/><text class="lab" x="712" y="115">Entity vector</text><text class="sm" x="712" y="133">vector of name + description</text>
+<line class="arr" x1="600" y1="122" x2="698" y2="122" marker-end="url(#ah2)"/><text class="sm" x="649" y="115" text-anchor="middle">embedded</text>
+
+<rect class="rec" x="700" y="200" width="190" height="142" rx="4"/><text class="lab" x="712" y="219">Community report</text><text class="sm" x="712" y="237">level · title · summary text</text><text class="sm" x="712" y="254">findings · rating</text><text class="sm" x="712" y="271">member entities and edges</text><text class="sm" x="712" y="288">chunk IDs</text><text class="sm" x="712" y="305">sub-communities</text><text class="sm" x="712" y="322">occurrence count</text>
+<path class="arr" d="M600,190 H650 V250 H698" marker-end="url(#ah2)"/><text class="sm" x="644" y="226" text-anchor="end">member of</text>
+</g></svg>
+<figcaption>Solid boxes are stored records. Provenance is a joined string of chunk IDs on each node and edge, so a lookup from chunk to entity scans the graph. Chunks are also embedded, but only for the plain-search mode.</figcaption>
+</figure>
+
+<figure>
+<svg viewBox="0 0 900 478" role="img" aria-label="Stored records in the first build's design. Documents have versions that contain chunks. Chunks are items. Items cite chunks through a source-link table, carry embeddings, and are listed in snapshots. Nodes, mentions, equivalence links, summary membership and derivation runs are designed but not written by any code.">
+<defs><marker id="ah3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+<g style="color:var(--fg)">
+<text class="lab" x="0" y="14">First build’s design: stored records</text>
+<rect class="rec" x="20" y="30" width="150" height="46" rx="4"/><text class="lab" x="32" y="49">Document</text><text class="sm" x="32" y="66">source file</text>
+<rect class="rec" x="210" y="30" width="170" height="46" rx="4"/><text class="lab" x="222" y="49">Document version</text><text class="sm" x="222" y="66">one parse of the file</text>
+<rect class="rec" x="420" y="30" width="170" height="46" rx="4"/><text class="lab" x="432" y="49">Chunk</text><text class="sm" x="432" y="66">ID from its content</text>
+<line class="arr" x1="170" y1="53" x2="208" y2="53" marker-end="url(#ah3)"/><line class="arr" x1="380" y1="53" x2="418" y2="53" marker-end="url(#ah3)"/>
+<text class="sm" x="189" y="46" text-anchor="middle">has</text><text class="sm" x="399" y="46" text-anchor="middle">holds</text>
+
+<rect class="rec" x="420" y="130" width="260" height="76" rx="4"/><text class="lab" x="432" y="149">Item</text><text class="sm" x="432" y="167">kind: chunk · relation · summary</text><text class="sm" x="432" y="184">text · made by (module, version, settings)</text><text class="sm" x="432" y="201" style="fill:var(--warn)">only kind “chunk” is written today</text>
+<line class="arr" x1="470" y1="78" x2="470" y2="128" marker-end="url(#ah3)"/><text class="sm" x="462" y="108" text-anchor="end">is also an item</text>
+<line class="arr" x1="560" y1="128" x2="560" y2="78" marker-end="url(#ah3)"/><text class="sm" x="568" y="108">cites (many to many)</text>
+
+<rect class="rec" x="740" y="130" width="150" height="52" rx="4"/><text class="lab" x="752" y="149">Embedding</text><text class="sm" x="752" y="167">per item, per model</text>
+<line class="arr" x1="680" y1="156" x2="738" y2="156" marker-end="url(#ah3)"/><text class="sm" x="709" y="149" text-anchor="middle">has</text>
+
+<rect class="rec" x="20" y="130" width="200" height="52" rx="4"/><text class="lab" x="32" y="149">Snapshot</text><text class="sm" x="32" y="167">current items and versions</text>
+<line class="arr" x1="220" y1="156" x2="418" y2="156" marker-end="url(#ah3)"/><text class="sm" x="319" y="149" text-anchor="middle">lists</text>
+
+<rect class="recplan" x="420" y="290" width="260" height="60" rx="4"/><text class="lab" x="432" y="309">Node</text><text class="sm" x="432" y="327">ID from normalised name · no content</text><text class="sm" x="432" y="343">not embedded or described</text>
+<line class="arr" x1="520" y1="208" x2="520" y2="288" marker-end="url(#ah3)" style="color:var(--warn)"/><text class="sm" x="528" y="240" style="fill:var(--warn)">mentions</text><text class="sm" x="528" y="256" style="fill:var(--warn)">(name as written, role)</text>
+
+<rect class="recplan" x="20" y="290" width="230" height="50" rx="4"/><text class="lab" x="32" y="309">Summary membership</text><text class="sm" x="32" y="327">summary item → member items</text>
+<path class="loop" d="M135,290 V236 H440 V208" marker-end="url(#ah3)"/><text class="sm" x="150" y="230">members</text>
+
+<rect class="recplan" x="710" y="270" width="180" height="96" rx="4"/><text class="lab" x="722" y="289">Equivalence link</text><text class="sm" x="722" y="307">same-as · duplicate-of</text><text class="sm" x="722" y="323">refined-by · superseded-by</text><text class="sm" x="722" y="340">between two nodes or two</text><text class="sm" x="722" y="356">items; names its run</text>
+<line class="loop" x1="710" y1="318" x2="682" y2="318" marker-end="url(#ah3)"/>
+<path class="loop" d="M800,268 V228 H660 V208" marker-end="url(#ah3)"/>
+
+<rect class="recplan" x="710" y="404" width="180" height="54" rx="4"/><text class="lab" x="722" y="423">Derivation run</text><text class="sm" x="722" y="441">made by · state it saw</text>
+<line class="loop" x1="800" y1="404" x2="800" y2="368" marker-end="url(#ah3)"/><text class="sm" x="808" y="390">judged in</text>
+
+<rect class="rec" x="20" y="410" width="22" height="14" rx="2"/><text class="sm" x="50" y="422">stored and written by code</text>
+<rect class="recplan" x="250" y="410" width="22" height="14" rx="2"/><text class="sm" x="280" y="422">table exists, nothing writes it</text>
+</g></svg>
+<figcaption>Content, nodes, equivalence and provenance are separate records. A node holds no text, and an equivalence link never edits the records it joins. Source links are a table searchable in both directions. Embeddings sit apart from the items they describe, so several embedding methods can coexist.</figcaption>
+</figure>
+
+<figure>
+<div class="scroll"><table>
+<thead><tr><th>What is stored</th><th>nano-graphrag</th><th>First build’s design</th></tr></thead>
+<tbody>
+<tr><td>Record types</td><td>Document, chunk, entity node, relationship edge, entity vector, community report</td><td>Document, version, chunk, item, source link, embedding, snapshot (written). Node, mention, equivalence link, summary membership, derivation run (not written)</td></tr>
+<tr><td>Entity</td><td>A node that holds a type label, a merged description and a vector</td><td>A node that holds only a name-derived ID</td></tr>
+<tr><td>Fact</td><td>An edge between exactly two entities, with one description</td><td>An item whose text is a standalone fact, joined to any number of nodes</td></tr>
+<tr><td>Same-thing record</td><td>None. The entity key is the name</td><td>An equivalence link with a kind and a record of what made it</td></tr>
+<tr><td>Provenance</td><td>Chunk IDs joined into one string on each node and edge</td><td>A source-link table, searchable both ways, covering every derived item</td></tr>
+<tr><td>Summary</td><td>A community report holding levels, members and text</td><td>A summary item plus a flat list of member items</td></tr>
+<tr><td>Identity</td><td>Content hash for documents and chunks; upper-cased name for entities</td><td>Content hash for chunks; maker, inputs and text for derived items</td></tr>
+<tr><td>Versions</td><td>None</td><td>Document versions and snapshots</td></tr>
+<tr><td>Embeddings</td><td>Entity vectors, and chunk vectors for plain search only. Reports are not embedded</td><td>Any item, kept apart and keyed by embedding method</td></tr>
+</tbody></table></div>
+</figure>
+
+<div class="col">
+<h3>Strengths and weaknesses of the structures</h3>
+<p><strong>nano-graphrag.</strong> The entity record is a ready anchor: a name, a merged description and a vector in one place. The community record, with its level and member lists, is a ready unit for whole-corpus summaries. Six record types make the whole model easy to hold in mind. The weaknesses are structural. A fact has room for two entities and one description, so conditions and qualifiers must be written into the text. Provenance is a string, so no record says which chunks support a fact without parsing it. Nothing records how two entities came to share a record. Nothing records a version. An entity has one type label from a list written for news text. A community report refers to entities and says nothing about concepts.</p>
+<p><strong>First build.</strong> The strengths are a separate, content-free node, so a name stays a handle and nothing else; a fact joined to any number of nodes that keeps the name as written; equivalence held in its own records, which never touch the records they join; queryable provenance; snapshots; and embeddings apart from content. The weaknesses are these. A node with no content cannot anchor retrieval the way an entity does, and the model holds no place for an entity’s attributes. A summary has a flat member list and no level or cluster structure. The model has twelve record types, and five are empty. None of it has been tested against the questions it was designed for.</p>
+</div>
+
+<h2>6. What each system does with its data</h2>
+<div class="col"><p>The operations decide what the stored records are used for. The table lists the main operations of each system. For the first build, “built” means code runs it.</p></div>
+<figure>
+<div class="scroll"><table>
+<thead><tr><th>Operation</th><th>nano-graphrag</th><th>First build</th></tr></thead>
+<tbody>
+<tr><td>Add new text</td><td>Split into chunks, extract entities and pairs with a model, merge them into the graph, re-cluster, regenerate every community report</td><td>Parse, chunk, embed, write chunks and a new snapshot. Unchanged chunks keep their IDs (built). Extraction would run on new chunks only (designed)</td></tr>
+<tr><td>Same thing under two names</td><td>Entities with the same upper-cased name merge. Descriptions are concatenated and summarised by a model when long. Cannot be undone</td><td>Embedding similarity proposes, a model verifies, and the result is stored as an equivalence link (designed)</td></tr>
+<tr><td>A later text revises an earlier one</td><td>Merges into the existing records and adds the edge weights</td><td>A new chunk gets a new ID. A superseded-by link may relate the facts (designed)</td></tr>
+<tr><td>Build summaries</td><td>Cluster the graph into levels, write one report per community bottom-up, rebuild all on every insert</td><td>A whole-collection step that records the state it saw (designed, not built)</td></tr>
+<tr><td>Answer a query</td><td>Three modes chosen by an if-chain. <em>Local:</em> find entities, take their neighbours, rank chunks by neighbour count, add reports, fill a token budget. <em>Global:</em> ask a model about each report in turn, then combine. <em>Plain:</em> nearest chunks</td><td>One machine: embed the query, find nearest chunks, keep the top k (built)</td></tr>
+<tr><td>Diagnose a failure</td><td>A flag returns the assembled context</td><td>A log of each step’s candidates and ranks, plus an evaluation pinned to chunk IDs (built)</td></tr>
+</tbody></table></div>
+</figure>
+
+<figure>
+<div class="probe">
+<div class="card"><h4>Insert 1</h4><p>“Decision 1 Oct: the project store is JSON files.”</p><p>Node <span class="mono">STORE</span> is created, type DECISION.</p></div>
+<div class="card bad"><h4>Insert 2 (replaces insert 1)</h4><p>“Decision 17 Oct: the store is better-sqlite3, replacing JSON files.”</p><p>Node <span class="mono">STORE</span> now reads:</p><p class="q">The store is JSON files (decided 2026-10-01).&lt;SEP&gt;The store is better-sqlite3, replacing JSON files (decided 2026-10-17).</p><p>Its type has changed from DECISION to TECHNOLOGY. The edge to “JSON files” keeps full weight.</p></div>
+<div class="card good"><h4>Records needed instead</h4><p>Two separate facts, each citing its source chunk.</p><p>A link: <span class="mono">17 Oct fact replaces 1 Oct fact</span>, naming the model or rule that judged it.</p><p>A query for the current store follows the link and returns the newer fact. The original stays recoverable.</p></div>
+</div>
+<figcaption>The revision operation, run on nano-graphrag (commit acb35c0) with a scripted stand-in for the language model, so that only its storage behaviour was tested. The facts are joined alphabetically, not by time, and nothing marks either as current. The probe says nothing about extraction quality. Also observed: an insert that extracts nothing deletes the community reports and skips saving the document.</figcaption>
+</figure>
+<div class="col"><p>An earlier project note put the first build at seven times nano-graphrag’s size, using the README’s figure of about 1,100 lines for the core. The cloned package is 4,548 lines of source including 520 of prompts. The first build is 8,151 lines of source, a ratio of 1.8, and also contains parsing, an evaluation harness, a log viewer and an agent tool server. Size is not the difficulty. The ceremony around the code is.</p></div>
+
+<h2>7. How each model supports the extensions in the original design</h2>
+<div class="col"><p>The original design planned layers above plain similarity search: extracted facts and a graph, graph walks, merging of duplicates, summaries of communities, reranking and query decomposition, and, for project histories, supersession. Each cell separates what the model stores from what an operation does with it.</p></div>
+<figure>
+<div class="scroll"><table>
+<thead><tr><th>Extension</th><th>nano-graphrag</th><th>First build’s design</th></tr></thead>
+<tbody>
+<tr><td>Extracted facts</td><td><strong>Stored:</strong> a pair edge, qualifiers inside the text. <strong>Operation:</strong> model extraction with a second pass (built)</td><td><strong>Stored:</strong> a standalone fact joined to any number of nodes, cited. <strong>Operation:</strong> an extractor module (not built; no storage interface yet)</td></tr>
+<tr><td>Entity-centred retrieval</td><td><strong>Stored:</strong> entity with embedded description. <strong>Operation:</strong> entity search, then neighbours (built)</td><td><strong>Stored:</strong> content-free node. <strong>Operation:</strong> needs a node-embedding method (planned)</td></tr>
+<tr><td>Graph walk</td><td><strong>Stored:</strong> graph of entities. <strong>Operation:</strong> one-hop expansion ranked by counts, not a walk</td><td><strong>Stored:</strong> facts joined through nodes. <strong>Operation:</strong> a walk module over a read-only view (not built)</td></tr>
+<tr><td>Merging duplicates</td><td><strong>Stored:</strong> no merge record. <strong>Operation:</strong> exact-name merge</td><td><strong>Stored:</strong> equivalence link. <strong>Operation:</strong> propose, then verify (not built)</td></tr>
+<tr><td>Supersession</td><td><strong>Stored:</strong> nothing. <strong>Operation:</strong> none</td><td><strong>Stored:</strong> a superseded-by link kind. <strong>Operation:</strong> a rule or model resolver (not built)</td></tr>
+<tr><td>Summaries and whole-document synthesis</td><td><strong>Stored:</strong> community report with levels. <strong>Operation:</strong> clustering and report writing (built)</td><td><strong>Stored:</strong> summary item with a flat member list. <strong>Operation:</strong> none built; no clustering designed</td></tr>
+<tr><td>Concept frameworks and ontologies</td><td><strong>Stored:</strong> a flat type label. <strong>Operation:</strong> none</td><td><strong>Stored:</strong> a refined-by link between nodes or items. <strong>Operation:</strong> none; untested</td></tr>
+<tr><td>Reranking, query decomposition, critique loops</td><td>Operations only: a new function and an edit to the query-mode chain</td><td>Operations only: a new search step and sequence</td></tr>
+<tr><td>Changing corpus</td><td><strong>Stored:</strong> no record of the state a result saw. <strong>Operation:</strong> rebuild all reports</td><td><strong>Stored:</strong> whole-collection results name the state they saw. <strong>Operation:</strong> per-chunk results update incrementally</td></tr>
+</tbody></table></div>
+</figure>
+
+<div class="col">
+<h3>Where extracted relationships fit</h3>
+<p>Extracted relationships were central to the original design, and the first build stopped short of them. In the first build’s design an extractor reads one chunk and returns a self-contained fact together with the names it mentions. The fact is both what is embedded and what an agent reads, so it states its own qualifiers (“In rats, lesions of dorsolateral striatum kept responding sensitive to devaluation after extended training”). The design assigns it an ID from the extractor’s version, its source chunks and its text, and refuses it if it cites no chunk. The text enters the ID because models give different facts from the same input, and a new fact should become a new record. The graph is the set of facts joined through shared names. A graph walk then reads three things from a read-only view: the facts that mention a name, the names a fact mentions, and the facts citing a chunk.</p>
+<p>In nano-graphrag the same sentence becomes entities and a pair edge, and the qualifiers survive only if the description carries them. Its merged descriptions then mix facts from many chunks.</p>
+<p>The open work is the extractor itself (40% of sampled facts were not clean standalone sentences), the node-embedding scheme, and the stored-fact interface.</p>
+<h3>Verdict</h3>
+<p>The two models are strong in different places. nano-graphrag fits synthesis: entities as anchors, communities and reports as retrieval units. The first build’s design fits precision, change and diagnosis: qualified facts, links instead of overwrites, and traceable steps. Neither supports concept frameworks, and the first build’s refinement links are only a candidate. The first build was also not set up to test synthesis questions, since its 11 topic-level questions and the absence of summaries as derived items give almost no evidence either way. The proposal in section 10 takes nano-graphrag’s shape as the starting point and adds the first build’s strengths only where the project needs them. Community detection and report writing become whole-collection modules, and nano-graphrag’s three query modes become machines.</p>
+</div>
+
+<h2>8. Assessment of the two hypotheses</h2>
+<div class="col">
+<p><strong>The core model was clunky: partly.</strong> The record model passed its audits where it was built, and most of it is not yet built. What is clunky is the wrapping: a package, a versioned interface agreement and a state machine for each step, including steps nobody swaps.</p>
+<p><strong>The scope was too broad: yes.</strong> The system took on PDF-to-text conversion, formula recognition, machine diagrams and a second, throwaway implementation of the whole system kept only for cross-checking. Docling, an existing PDF parser, already does the parsing. The system needs only to accept its output.</p>
+<p><strong>nano-graphrag’s modularity is right in kind and misplaced in level.</strong> It makes storage and models swappable, which this project has fixed and need not abstract. It leaves the algorithms fixed, and the algorithms are what this project needs to vary.</p>
+</div>
+
+<h2>9. What the project demands, and what each demand costs</h2>
+<div class="col">
+<p>Each demand in the original design is weighed on three axes. <strong>Concept</strong> counts the new ideas a person must hold. <strong>Database</strong> counts the tables and constraints added. <strong>Algorithm</strong> counts the code, with extra weight for model dependence and order dependence. The ratings are the author’s judgement from the first build’s records and reviews.</p>
+</div>
+<figure>
+<div class="scroll"><table class="cost">
+<thead><tr><th>Demand</th><th>Concept</th><th>Database</th><th>Algorithm</th><th>Proposed handling, and what it gives up</th></tr></thead>
+<tbody>
+<tr><td>Similarity search over chunks</td><td><span class="lv l">Low</span></td><td><span class="lv l">Low</span></td><td><span class="lv l">Low</span></td><td>Retained. Three tables.</td></tr>
+<tr><td>Every derived record cites its chunks</td><td><span class="lv l">Low</span></td><td><span class="lv l">Low</span></td><td><span class="lv l">Low</span></td><td>Retained. One source-link table, and the runner rejects a record with no sources.</td></tr>
+<tr><td>Chunk IDs that survive re-ingest</td><td><span class="lv l">Low</span></td><td><span class="lv m">Med</span></td><td><span class="lv m">Med</span></td><td>Content-derived IDs are retained. The three document-version tables fold into columns. Chunk-boundary rules produced the most defects in the first build.</td></tr>
+<tr><td>Qualified multi-entity facts</td><td><span class="lv m">Med</span></td><td><span class="lv l">Low</span></td><td><span class="lv h">High</span></td><td>A fact (a standalone sentence plus the names it mentions) is the one kind of extracted record, with no relation types. Extraction quality carries the cost: 60% of sampled facts were clean in the pilot.</td></tr>
+<tr><td>Multi-hop retrieval</td><td><span class="lv m">Med</span></td><td><span class="lv l">Low</span></td><td><span class="lv m">Med</span></td><td>One-hop expansion through shared names, as in nano-graphrag’s local mode. An entity’s description is computed from its facts and not stored. A ranking walk waits for a measurement that shows room to gain.</td></tr>
+<tr><td>Merging names and duplicate facts</td><td><span class="lv h">High</span></td><td><span class="lv m">Med</span></td><td><span class="lv h">High</span></td><td>Verified merging is deferred. Plain “alias of” links apply at query time, and deleting a link undoes the merge. The pilot found about 10% duplicate names and one conflicting pair in 185 facts.</td></tr>
+<tr><td>Revision and supersession</td><td><span class="lv m">Med</span></td><td><span class="lv l">Low</span></td><td><span class="lv l">Low</span></td><td>A “replaces” link, created from the source’s own wording and dates by a rule, with no model. Queries drop replaced facts. Replacements that the source never states go undetected.</td></tr>
+<tr><td>Topic and whole-section questions</td><td><span class="lv h">High</span></td><td><span class="lv m">Med</span></td><td><span class="lv h">High</span></td><td>Adjacent-chunk expansion comes first (no model; 14 of 63 questions). One summary per document section follows, since headings give the units. Community clustering applies only to sources without structure.</td></tr>
+<tr><td>Concept frameworks</td><td><span class="lv h">High</span></td><td><span class="lv m">Med</span></td><td><span class="lv h">High</span></td><td>Deferred. Neither design scopes them. The cheapest probe is a model-proposed taxonomy, reviewed by a person and stored as links of a new kind.</td></tr>
+<tr><td>Upgrading after a better pipeline</td><td><span class="lv l">Low</span></td><td><span class="lv l">Low</span></td><td><span class="lv m">Med</span></td><td>One <code>rebuild</code> command builds a fresh index from the source files, reusing cached model calls and replaying confirmed corrections, then swaps it in. In-place upgrade, versions inside one store and past states (except archived files) are given up. This replaces six tables of snapshot and checksum machinery.</td></tr>
+<tr><td>Diagnosing failures</td><td><span class="lv l">Low</span></td><td><span class="lv m">Med</span></td><td><span class="lv m">Med</span></td><td>Retained: the step log and the evaluation pinned to chunk IDs, which are the reason the project exists.</td></tr>
+<tr><td>Incremental updates</td><td><span class="lv m">Med</span></td><td><span class="lv l">Low</span></td><td><span class="lv m">Med</span></td><td>Per-chunk modules run on new chunks only. Set-wide modules (summaries, clustering) recompute, as in nano-graphrag.</td></tr>
+<tr><td>New use cases and retrieval methods</td><td><span class="lv m">Med</span></td><td><span class="lv l">Low</span></td><td><span class="lv m">Med</span></td><td>Modules wired by state machines (section 10).</td></tr>
+<tr><td>PDF parsing and formula decoding</td><td><span class="lv l">Low</span></td><td><span class="lv l">Low</span></td><td><span class="lv h">High</span></td><td>Delegated to docling behind an adapter. Formula decoding becomes an adapter option.</td></tr>
+</tbody></table></div>
+<figcaption>Ratings are relative within this project. The six tables for snapshots and step-sequence checksums are builds, build_items, build_labels, build_runs, recipes and derivation_runs.</figcaption>
+</figure>
+<div class="col">
+<p>The cheap demands (provenance, content-derived IDs, step logs) carry most of the value. The expensive demands (verified merging, communities, concept frameworks) all need a model to judge many items against one another, and a measurement can postpone each. The first build paid for several of them in its schema before any measurement asked.</p>
+</div>
+
+<h2>10. Proposal: a flexible GraphRAG on a small engine</h2>
+<div class="col">
+<p>The data model grows from the baseline one record at a time, and amber marks what each figure adds.</p>
+<h3>Baseline: documents, chunks, embeddings</h3>
+<p>Baseline search is strong (the right passage is in the top five for 38 of 40 single-hop questions), so these three records stay. A chunk’s ID is computed from its text, so re-loading unchanged text changes nothing and evaluation questions pinned to chunk IDs stay valid.</p>
+</div>
+<figure><svg viewBox="0 0 900 130" role="img" aria-label="Baseline records: a document is split into chunks, and chunks are embedded."><defs><marker id="a1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs><g style="color:var(--fg)"><rect class="rec" x="20" y="30" width="180" height="56" rx="4"/><text class="lab" x="32" y="50">Document</text><text class="sm" x="32" y="68">a source file</text><rect class="rec" x="270" y="30" width="270" height="88" rx="4"/><text class="lab" x="282" y="50">Chunk</text><text class="sm" x="282" y="68">a passage of a document</text><text class="sm" x="282" y="85">ID computed from its text:</text><text class="sm" x="282" y="102">unchanged text keeps its ID</text><rect class="rec" x="640" y="30" width="240" height="56" rx="4"/><text class="lab" x="652" y="50">Embedding</text><text class="sm" x="652" y="68">vector for similarity search</text><path class="arr" d="M200,58 H268" marker-end="url(#a1)"/><text class="sm" x="234" y="50" text-anchor="middle">split into</text><path class="arr" d="M540,58 H638" marker-end="url(#a1)"/><text class="sm" x="589" y="50" text-anchor="middle">embedded as</text></g></svg><figcaption>The first build already stores these three records.</figcaption></figure>
+<div class="col">
+<h3>Derived items: facts and summaries</h3>
+<p>Topic-level questions (36% have all supporting passages in the top five) and multi-hop questions need information that no single chunk holds. nano-graphrag derives it as entity descriptions and pairwise edges, which merge text from many chunks and lose qualifiers such as species or conditions. A derived item is instead a fact, one standalone sentence that carries its own qualifiers, or a summary. Each item cites its source chunks, so any answer traces back to text, and facts are embedded and searched like chunks.</p>
+</div>
+<figure><svg viewBox="0 0 900 280" role="img" aria-label="A derived item cites chunks and is embedded."><defs><marker id="a2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs><g style="color:var(--fg)"><rect class="rec" x="20" y="30" width="180" height="56" rx="4"/><text class="lab" x="32" y="50">Document</text><text class="sm" x="32" y="68">a source file</text><rect class="rec" x="270" y="30" width="270" height="88" rx="4"/><text class="lab" x="282" y="50">Chunk</text><text class="sm" x="282" y="68">a passage of a document</text><text class="sm" x="282" y="85">ID computed from its text:</text><text class="sm" x="282" y="102">unchanged text keeps its ID</text><rect class="rec" x="640" y="30" width="240" height="56" rx="4"/><text class="lab" x="652" y="50">Embedding</text><text class="sm" x="652" y="68">vector for similarity search</text><path class="arr" d="M200,58 H268" marker-end="url(#a2)"/><text class="sm" x="234" y="50" text-anchor="middle">split into</text><path class="arr" d="M540,58 H638" marker-end="url(#a2)"/><text class="sm" x="589" y="50" text-anchor="middle">embedded as</text><rect class="add" x="270" y="170" width="270" height="88" rx="4"/><text class="lab" x="282" y="190">Derived item</text><text class="sm" x="282" y="208">a fact: one standalone sentence</text><text class="sm" x="282" y="225">that states its own qualifiers,</text><text class="sm" x="282" y="242">or a summary of many chunks</text><path class="arr" d="M405,170 V120" marker-end="url(#a2)"/><text class="sm" x="397" y="150" text-anchor="end">cites 1 or more chunks</text><path class="arr" d="M520,170 V148 H700 V88" marker-end="url(#a2)"/><text class="sm" x="610" y="141" text-anchor="middle">embedded as</text></g></svg><figcaption>A derived item cites one or more chunks and has its own embedding.</figcaption></figure>
+<div class="col">
+<h3>Mentions: connecting facts through names</h3>
+<p>Multi-hop answers join facts that share an entity, while nano-graphrag ties a fact to exactly two entities and keeps one merged description per entity. Here a fact lists any number of names it refers to. Facts that mention the same name are connected, and these connections form the graph. An entity has no record of its own. It is a name plus the facts that mention it, so no merged description needs repair.</p>
+</div>
+<figure><svg viewBox="0 0 900 280" role="img" aria-label="A fact lists the names it mentions."><defs><marker id="a3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs><g style="color:var(--fg)"><rect class="rec" x="20" y="30" width="180" height="56" rx="4"/><text class="lab" x="32" y="50">Document</text><text class="sm" x="32" y="68">a source file</text><rect class="rec" x="270" y="30" width="270" height="88" rx="4"/><text class="lab" x="282" y="50">Chunk</text><text class="sm" x="282" y="68">a passage of a document</text><text class="sm" x="282" y="85">ID computed from its text:</text><text class="sm" x="282" y="102">unchanged text keeps its ID</text><rect class="rec" x="640" y="30" width="240" height="56" rx="4"/><text class="lab" x="652" y="50">Embedding</text><text class="sm" x="652" y="68">vector for similarity search</text><path class="arr" d="M200,58 H268" marker-end="url(#a3)"/><text class="sm" x="234" y="50" text-anchor="middle">split into</text><path class="arr" d="M540,58 H638" marker-end="url(#a3)"/><text class="sm" x="589" y="50" text-anchor="middle">embedded as</text><rect class="rec" x="270" y="170" width="270" height="88" rx="4"/><text class="lab" x="282" y="190">Derived item</text><text class="sm" x="282" y="208">a fact: one standalone sentence</text><text class="sm" x="282" y="225">that states its own qualifiers,</text><text class="sm" x="282" y="242">or a summary of many chunks</text><path class="arr" d="M405,170 V120" marker-end="url(#a3)"/><text class="sm" x="397" y="150" text-anchor="end">cites 1 or more chunks</text><path class="arr" d="M520,170 V148 H700 V88" marker-end="url(#a3)"/><text class="sm" x="610" y="141" text-anchor="middle">embedded as</text><rect class="add" x="640" y="190" width="240" height="70" rx="4"/><text class="lab" x="652" y="210">Mention</text><text class="sm" x="652" y="228">a name that a fact refers to,</text><text class="sm" x="652" y="245">as written in the fact</text><path class="arr" d="M540,225 H638" marker-end="url(#a3)"/><text class="sm" x="589" y="217" text-anchor="middle">refers to</text></g></svg><figcaption>A fact refers to any number of names.</figcaption></figure>
+<div class="col">
+<h3>Links and version stamps</h3>
+<p>nano-graphrag overwrites an earlier source when a later one replaces it, and nothing marks which is current. The extraction pilot also found about 10% duplicate names. A link relates two records and edits neither. A “replaces” link marks the newer fact, which current-state queries follow. An “alias of” link says two names mean one thing, and deleting it undoes the merge. A link exists only when the source’s own wording or a checked judgement supports it.</p>
+<p>Each derived item and link records the module and version that made it, because a better extractor will arrive and a rebuild must know which records it changes.</p>
+</div>
+<figure><svg viewBox="0 0 900 450" role="img" aria-label="A link relates two derived items or two names. Each derived item and link records the module that made it."><defs><marker id="a4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs><g style="color:var(--fg)"><rect class="rec" x="20" y="30" width="180" height="56" rx="4"/><text class="lab" x="32" y="50">Document</text><text class="sm" x="32" y="68">a source file</text><rect class="rec" x="270" y="30" width="270" height="88" rx="4"/><text class="lab" x="282" y="50">Chunk</text><text class="sm" x="282" y="68">a passage of a document</text><text class="sm" x="282" y="85">ID computed from its text:</text><text class="sm" x="282" y="102">unchanged text keeps its ID</text><rect class="rec" x="640" y="30" width="240" height="56" rx="4"/><text class="lab" x="652" y="50">Embedding</text><text class="sm" x="652" y="68">vector for similarity search</text><path class="arr" d="M200,58 H268" marker-end="url(#a4)"/><text class="sm" x="234" y="50" text-anchor="middle">split into</text><path class="arr" d="M540,58 H638" marker-end="url(#a4)"/><text class="sm" x="589" y="50" text-anchor="middle">embedded as</text><rect class="rec" x="270" y="170" width="270" height="105" rx="4"/><text class="lab" x="282" y="190">Derived item</text><text class="sm" x="282" y="208">a fact: one standalone sentence</text><text class="sm" x="282" y="225">that states its own qualifiers,</text><text class="sm" x="282" y="242">or a summary of many chunks</text><text class="sm" x="282" y="259" style="fill:var(--warn);font-weight:600">made by: module and version</text><path class="arr" d="M405,170 V120" marker-end="url(#a4)"/><text class="sm" x="397" y="150" text-anchor="end">cites 1 or more chunks</text><path class="arr" d="M520,170 V148 H700 V88" marker-end="url(#a4)"/><text class="sm" x="610" y="141" text-anchor="middle">embedded as</text><rect class="rec" x="640" y="190" width="240" height="70" rx="4"/><text class="lab" x="652" y="210">Mention</text><text class="sm" x="652" y="228">a name that a fact refers to,</text><text class="sm" x="652" y="245">as written in the fact</text><path class="arr" d="M540,225 H638" marker-end="url(#a4)"/><text class="sm" x="589" y="217" text-anchor="middle">refers to</text><rect class="add" x="640" y="310" width="240" height="123" rx="4"/><text class="lab" x="652" y="330">Link</text><text class="sm" x="652" y="348">relates two records,</text><text class="sm" x="652" y="365">editing neither</text><text class="sm" x="652" y="382">kind: replaces (newer over older)</text><text class="sm" x="652" y="399">or alias of (two names, one thing)</text><text class="sm" x="652" y="416" style="fill:var(--warn);font-weight:600">made by: module and version</text><path class="arr" d="M640,360 H405 V280" marker-end="url(#a4)"/><text class="sm" x="522" y="352" text-anchor="middle">joins two items or two names</text></g></svg><figcaption>A link relates two items or two names. Items and links record which module version made them.</figcaption></figure>
+<div class="col">
+<h3>Three stores and rebuild</h3>
+<p>A better extraction prompt changes every fact that the old prompt produced. The first design handled that by keeping old and new results side by side, at the cost of six extra tables for snapshots and checksums. The proposal discards the old index and rebuilds it from the source documents, which costs rebuild time and no versioning machinery. Developers still compare two pipelines by building two indexes and matching records by source chunk. A rebuild would erase three things, so each stays outside the index.</p>
+<ul>
+<li>The event log, feedback, evaluation results and corrections that a person confirmed live in a durable store, the <strong>history</strong>, keyed to chunk IDs and names.</li>
+<li>Model calls take minutes and vary between runs (evaluation runs took 25 minutes to 2 hours), so a <strong>cache</strong> of model responses makes a rebuild fast and repeatable.</li>
+<li>A rebuild starts from the original documents and their parsed form, which stay as <strong>source files</strong>.</li>
+</ul>
+<p>The <strong>index</strong> holds everything else. A <code>rebuild</code> command builds a new index and swaps it in, and gives it an ID that events and evaluation results record, so results from different indexes stay distinguishable.</p>
+</div>
+<figure>
+<svg viewBox="0 0 900 332" role="img" aria-label="A rebuild reads the source files, the cache and the confirmed corrections in the history, and writes a new index that is then swapped in. Events and results in the history record the index ID. A development-only tool compares two indexes.">
+<defs><marker id="ah6" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+<g style="color:var(--fg)">
+<text class="lab" x="0" y="14">Stores and rebuild</text>
+<rect class="rec" x="20" y="34" width="250" height="62" rx="4"/><text class="lab" x="32" y="54">Source files (kept)</text><text class="sm" x="32" y="72">original documents</text><text class="sm" x="32" y="88">parsed artifacts</text>
+<rect class="rec" x="20" y="116" width="250" height="62" rx="4" style="stroke-dasharray:2 3"/><text class="lab" x="32" y="136">Model-call cache (optional)</text><text class="sm" x="32" y="154">responses only · pruned to a size cap</text>
+<rect class="rec" x="20" y="198" width="250" height="88" rx="4"/><text class="lab" x="32" y="218">History (durable)</text><text class="sm" x="32" y="236">event log · feedback · evaluation results</text><text class="sm" x="32" y="253">confirmed corrections: aliases, links</text><text class="sm" x="32" y="270">keyed by chunk ID and name</text>
+
+<rect class="shared" x="340" y="92" width="210" height="116" rx="4"/><text class="lab" x="352" y="112">rebuild</text><text class="sm" x="352" y="130">ingest · chunk · embed</text><text class="sm" x="352" y="147">derive with current modules</text><text class="sm" x="352" y="164">reuse the cache,</text><text class="sm" x="352" y="181">replay confirmed corrections</text>
+<path class="arr" d="M270,65 H305 V122 H338" marker-end="url(#ah6)"/>
+<line class="arr" x1="270" y1="147" x2="338" y2="147" marker-start="url(#ah6)" marker-end="url(#ah6)"/>
+<path class="arr" d="M270,228 H305 V178 H338" marker-end="url(#ah6)"/>
+
+<rect class="rec" x="660" y="92" width="220" height="116" rx="4"/><text class="lab" x="672" y="112">Index (disposable)</text><text class="sm" x="672" y="130">documents · chunks · derived items</text><text class="sm" x="672" y="147">mentions · links · embeddings</text><text class="sm" x="672" y="164">module versions · index ID</text>
+<line class="arr" x1="550" y1="150" x2="658" y2="150" marker-end="url(#ah6)"/><text class="sm" x="604" y="143" text-anchor="middle">new file,</text><text class="sm" x="604" y="167" text-anchor="middle">then swap</text>
+
+<path class="loop" d="M700,208 V304 H145 V288" marker-end="url(#ah6)" style="color:var(--fg)"/><text class="sm" x="420" y="297" text-anchor="middle">events and results record the index ID</text>
+
+<rect class="plan" x="730" y="236" width="150" height="56" rx="4"/><text class="sm" x="740" y="254" style="fill:var(--fg);font-weight:600">Development only</text><text class="sm" x="740" y="270">compare two indexes</text><text class="sm" x="740" y="284">by source chunk</text>
+<line class="loop" x1="805" y1="208" x2="805" y2="234" marker-end="url(#ah6)"/>
+</g></svg>
+<figcaption>Arrows show what a rebuild reads and writes. The dashed arrow shows which index each logged event and result belongs to.</figcaption>
+</figure>
+<div class="col">
+<p>The cache keys each response by a hash of model, prompt and input, and covers calls that take minutes (extraction, summaries, answering, judging). An extraction response is 2 to 4 KB and a chunk needs one to three calls, so 10,000 chunks fit in under 100 MB compressed. The estimate is unmeasured. The cache is pruned to a size cap, and losing it only slows a rebuild.</p>
+<p>Two rules of the original design change form. The stale-build check becomes a query for facts that cite no current chunk, where a chunk is current if it belongs to its document’s latest ingest. Each logged event records the index ID in place of a build.</p>
+<h3>Engine: modules and state machines</h3>
+<p>The first build packaged every step with its own interface agreement and state machine, which cost more than the data justified. nano-graphrag errs the other way: algorithms are welded to storage and query modes are chosen by an if-chain. A <strong>module</strong> is one function that declares which intermediate results of a request it needs and which it adds. A <strong>state machine</strong> is a short list of module calls with routes between them, checked when it loads. The <strong>kernel</strong> writes each result, stamps it with the module’s name and version, rejects a fact that cites no chunk, and logs every step.</p>
+<p>Each row of the figure needs the records from one step above: chunk search needs the baseline, “facts and neighbours” needs facts and mentions, and “current state” needs links. A whole-corpus mode like GraphRAG’s would add modules that pick summaries and ask a model about each, with no change to the kernel.</p>
+</div>
+<figure><svg viewBox="0 0 940 402" role="img" aria-label="Three state machines built from modules, above the tools and the kernel."><defs><marker id="e1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs><g style="color:var(--fg)"><text class="lab" x="0" y="32">Chunk search</text><text class="sm" x="0" y="50">uses the baseline records</text><rect class="shared" x="190" y="10" width="128" height="52" rx="4"/><text class="lab" style="font-size:12.5px" x="202" y="30">embed query</text><text class="sm" x="202" y="48">query → vector</text><line class="arr" x1="318" y1="36" x2="338" y2="36" marker-end="url(#e1)"/><rect class="own" x="340" y="10" width="128" height="52" rx="4"/><text class="lab" style="font-size:12.5px" x="352" y="30">nearest chunks</text><text class="sm" x="352" y="48">most similar passages</text><line class="arr" x1="468" y1="36" x2="488" y2="36" marker-end="url(#e1)"/><rect class="shared" x="490" y="10" width="128" height="52" rx="4"/><text class="lab" style="font-size:12.5px" x="502" y="30">keep top k</text><text class="sm" x="502" y="48">cut the list to k</text><text class="lab" x="0" y="112">Facts and neighbours</text><text class="sm" x="0" y="130">uses facts and mentions</text><rect class="shared" x="190" y="90" width="128" height="52" rx="4"/><text class="lab" style="font-size:12.5px" x="202" y="110">embed query</text><text class="sm" x="202" y="128">query → vector</text><line class="arr" x1="318" y1="116" x2="338" y2="116" marker-end="url(#e1)"/><rect class="shared" x="340" y="90" width="128" height="52" rx="4"/><text class="lab" style="font-size:12.5px" x="352" y="110">nearest facts</text><text class="sm" x="352" y="128">most similar facts</text><line class="arr" x1="468" y1="116" x2="488" y2="116" marker-end="url(#e1)"/><rect class="own" x="490" y="90" width="128" height="52" rx="4"/><text class="lab" style="font-size:12.5px" x="502" y="110">expand by names</text><text class="sm" x="502" y="128">facts sharing a name</text><line class="arr" x1="618" y1="116" x2="638" y2="116" marker-end="url(#e1)"/><rect class="own" x="640" y="90" width="128" height="52" rx="4"/><text class="lab" style="font-size:12.5px" x="652" y="110">cite chunks</text><text class="sm" x="652" y="128">swap facts for chunks</text><line class="arr" x1="768" y1="116" x2="788" y2="116" marker-end="url(#e1)"/><rect class="shared" x="790" y="90" width="128" height="52" rx="4"/><text class="lab" style="font-size:12.5px" x="802" y="110">keep top k</text><text class="sm" x="802" y="128">cut the list to k</text><text class="lab" x="0" y="192">Current state of X</text><text class="sm" x="0" y="210">uses “replaces” links</text><rect class="shared" x="190" y="170" width="128" height="52" rx="4"/><text class="lab" style="font-size:12.5px" x="202" y="190">embed query</text><text class="sm" x="202" y="208">query → vector</text><line class="arr" x1="318" y1="196" x2="338" y2="196" marker-end="url(#e1)"/><rect class="shared" x="340" y="170" width="128" height="52" rx="4"/><text class="lab" style="font-size:12.5px" x="352" y="190">nearest facts</text><text class="sm" x="352" y="208">most similar facts</text><line class="arr" x1="468" y1="196" x2="488" y2="196" marker-end="url(#e1)"/><rect class="own" x="490" y="170" width="128" height="52" rx="4"/><text class="lab" style="font-size:12.5px" x="502" y="190">drop replaced</text><text class="sm" x="502" y="208">uses “replaces” links</text><line class="arr" x1="618" y1="196" x2="638" y2="196" marker-end="url(#e1)"/><rect class="shared" x="640" y="170" width="128" height="52" rx="4"/><text class="lab" style="font-size:12.5px" x="652" y="190">keep top k</text><text class="sm" x="652" y="208">cut the list to k</text><rect class="kern" x="0" y="250" width="940" height="38" rx="4" style="stroke-dasharray:2 3"/><text class="lab" x="14" y="274">Tools</text><text class="sm" x="70" y="274">evaluation harness · log viewer · agent tool server · command line. They use the kernel and are not part of it.</text><rect class="kern" x="0" y="298" width="940" height="62" rx="4"/><text class="lab" x="14" y="320">Kernel</text><text class="sm" x="84" y="320">stores the records · runs each state machine · stamps every result with the module name and version</text><text class="sm" x="84" y="340">rejects a fact that cites no chunk · logs every step</text><rect class="shared" x="0" y="376" width="22" height="14" rx="2"/><text class="sm" x="30" y="388">module used by more than one machine</text><rect class="own" x="330" y="376" width="22" height="14" rx="2"/><text class="sm" x="360" y="388">module used by one machine</text></g></svg><figcaption>A new way of answering is a new sequence of modules plus, at most, two new modules.</figcaption></figure>
+<div class="col">
+<p>nano-graphrag’s extraction prompt with its second pass, its community detection and its report prompts can port as modules, and its storage code does not. Algorithms read the index through a narrow view: facts that mention a name, names in a fact, and facts that cite a chunk. The same evaluation questions can then run through nano-graphrag’s modes and the new machines. PDF parsing and formula decoding took five packages and lie outside the project’s subject, so an adapter turns source files into documents, with docling as one adapter and formula decoding as one of its options.</p>
+</div>
+
+<h2>11. Build order, evidence and decision</h2>
+<div class="col"><p>Each stage ends with a measurement against the baseline on the 63 pinned questions. Stages 3 and 4 also need the harder question set that the first build lacked.</p></div>
+<figure>
+<svg viewBox="0 0 900 310" role="img" aria-label="Build order in four stages with gates, a parallel project-history track, and a deferred list.">
+<defs><marker id="ah5" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+<g style="color:var(--fg)">
+<rect class="own" x="10" y="14" width="190" height="86" rx="4"/><text class="lab" x="22" y="34">1 Engine and model</text><text class="sm" x="22" y="54">port the baseline, split the</text><text class="sm" x="22" y="70">stores, add rebuild</text>
+<rect class="own" x="240" y="14" width="190" height="86" rx="4"/><text class="lab" x="252" y="34">2 Adjacent chunks</text><text class="sm" x="252" y="54">search step that pulls in</text><text class="sm" x="252" y="70">neighbouring chunks</text>
+<rect class="own" x="470" y="14" width="190" height="86" rx="4"/><text class="lab" x="482" y="34">3 Facts</text><text class="sm" x="482" y="54">extractor, mentions,</text><text class="sm" x="482" y="70">one-hop expansion</text>
+<rect class="own" x="700" y="14" width="190" height="86" rx="4"/><text class="lab" x="712" y="34">4 Section summaries</text><text class="sm" x="712" y="54">one summary per heading,</text><text class="sm" x="712" y="70">then a whole-section machine</text>
+<line class="arr" x1="200" y1="57" x2="238" y2="57" marker-end="url(#ah5)"/><line class="arr" x1="430" y1="57" x2="468" y2="57" marker-end="url(#ah5)"/><line class="arr" x1="660" y1="57" x2="698" y2="57" marker-end="url(#ah5)"/>
+<g style="fill:var(--warn)">
+<text class="sm" x="10" y="122" style="fill:var(--warn)">Gate: same ranked chunks as today,</text><text class="sm" x="10" y="138" style="fill:var(--warn)">before and after a rebuild</text>
+<text class="sm" x="240" y="122" style="fill:var(--warn)">Gate: topic-level recall</text><text class="sm" x="240" y="138" style="fill:var(--warn)">against the 36% baseline</text>
+<text class="sm" x="470" y="122" style="fill:var(--warn)">Gate: multi-hop gain on the</text><text class="sm" x="470" y="138" style="fill:var(--warn)">harder set; share of clean facts</text>
+<text class="sm" x="700" y="122" style="fill:var(--warn)">Gate: topic-level answer</text><text class="sm" x="700" y="138" style="fill:var(--warn)">quality against perfect context</text>
+</g>
+<rect class="own" x="240" y="168" width="420" height="58" rx="4"/><text class="lab" x="252" y="188">Parallel: project history</text><text class="sm" x="252" y="206">adapter · replaces pointer · current-state machine</text><text class="sm" x="252" y="222" style="fill:var(--warn)">Gate: no kernel edits; 10 fixture questions answered</text>
+<path class="arr" d="M185,102 V197 H238" marker-end="url(#ah5)"/>
+<rect class="plan" x="10" y="250" width="880" height="48" rx="4"/><text class="lab" x="22" y="270">Only if a gate shows room to gain</text><text class="sm" x="22" y="288">verified alias merging · community clustering · ranking walk · index-wide manifest hashes · formula decoding</text>
+</g></svg>
+<figcaption>Stage 1 yields no retrieval gain. Stage 2 uses no model. Stage 3 depends on extraction quality, the least certain part.</figcaption>
+</figure>
+<div class="col">
+<p><strong>Evidence.</strong> A 138-line module layer exists in the repository. One search step moved onto it and shrank from about 40 lines to 17, with all 92 search tests passing unchanged. The adjacent-chunk signature (14 of 63 questions) and the extraction pilot (83% fact coverage, 60% clean facts) come from the baseline measurements. The simplified data model is neither built nor tested.</p>
+<p><strong>Risks.</strong> The simplified model may prove too thin, for example if links must record the state they were computed from. Schema migrations make adding a table routine. Extraction quality may block stage 3, in which case stages 2 and 4 proceed. A rebuild needs the source files, and without a warm cache it takes hours on a large corpus with a local model. Intermediate results shared across unlike modules are hard to type. A small fixed vocabulary, extended only when a second module needs an addition, limits that cost.</p>
+<p><strong>Decision requested.</strong> Approval of five points: the three changes and the simplified data model; a rebuildable index with a durable history and an optional cache; modules wired by state machines under a small kernel; PDF parsing behind an adapter; and the build order. The proposal drops the snapshot manifests that the original design placed in v0, which is a scope change. Stage 1 costs one work period and yields no retrieval gain.</p>
+</div>
+
+<h2>Appendix</h2>
+<div class="col">
+<h3>Where the first design’s 25 tables go</h3>
+</div>
+<figure>
+<div class="scroll"><table>
+<thead><tr><th>First design’s tables</th><th>Count</th><th>In the proposal</th></tr></thead>
+<tbody>
+<tr><td>Sessions, events, session notes, evaluation runs, evaluation results</td><td class="n">5</td><td>Move to the history</td></tr>
+<tr><td>Documents, chunks, source links, embedding methods, embeddings, metadata</td><td class="n">6</td><td>Stay in the index</td></tr>
+<tr><td>Items, relation-nodes, recipes, mappings</td><td class="n">4</td><td>Become derived items, mentions, module-version columns, links</td></tr>
+<tr><td>Document versions, version chunks, parse artifacts</td><td class="n">3</td><td>Become columns on documents and chunks, and source files</td></tr>
+<tr><td>Nodes, summary membership, derivation runs, builds, build items, build labels, build runs</td><td class="n">7</td><td>Removed for now. Schema migrations make adding one back routine</td></tr>
+<tr><td>New: confirmed corrections (history), cached responses (cache)</td><td class="n">0</td><td>2 tables</td></tr>
+<tr><td><strong>Total</strong></td><td class="n">25</td><td class="n">17: index 10, history 6, cache 1</td></tr>
+</tbody></table></div>
+</figure>
+<div class="col">
+<h3>Names in the project’s earlier documents</h3>
+</div>
+<div class="scroll"><table>
+<thead><tr><th>This report</th><th>Earlier documents</th></tr></thead>
+<tbody>
+<tr><td>Snapshot</td><td>Build</td></tr>
+<tr><td>Derived item</td><td>Item (kinds: chunk, relation, summary)</td></tr>
+<tr><td>Module version and settings</td><td>Recipe</td></tr>
+<tr><td>Link that marks duplicates or replacement</td><td>Mapping</td></tr>
+<tr><td>Extracted fact</td><td>Relation</td></tr>
+<tr><td>Working state of a request</td><td>Search state</td></tr>
+<tr><td>Module name and version on a derived item</td><td>Recipe (without the step-sequence checksum)</td></tr>
+<tr><td>Index and history</td><td>The one database file</td></tr>
+</tbody></table></div>
+<div class="col">
+<h3>Method and limits</h3>
+<ul>
+<li>Baseline figures come from the project’s measurement notes (<code>scratch/sprint-2/results.md</code>), on two textbooks, one local embedding model and a local answering model. Questions were reviewed by a model, not a person. The judge was validated against a stronger model, not a person.</li>
+<li>The Low, Med and High ratings in section 9 are the author’s judgement from the first build’s records and reviews. The simplified data model in section 10 has not been built or tested.</li>
+<li>The model-call cache size in section 10 is an estimate from typical response sizes and has not been measured.</li>
+<li>Line counts were taken on 6 November 2026 with <code>wc -l</code> over source and test directories. The first build’s count excludes the Python parser sidecar (591 lines) and the log viewer’s web files.</li>
+<li>The nano-graphrag probe is reproducible from <code>scratch/nano-probe/revision.py</code> (nano-graphrag installed from the cloned repository). The community-report and early-return behaviours were confirmed by running it. The fact about its clustering code rests on reading the source.</li>
+</ul>
+</div>
+<p class="foot">Prepared from the project’s design documents, sprint notes and reviews, and a clone of nano-graphrag. Opinions on direction are the author’s recommendation and are not yet approved.</p>
+</div>

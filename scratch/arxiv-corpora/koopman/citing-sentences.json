@@ -1,0 +1,4140 @@
+{
+ "Introduction|None": [
+  {
+   "sentence": "Koopman analysis has recently gained renewed interest {with the pioneering work of Mezi\\'{c} and collaborators}~\\cite{mezic2004physicad,mezic2005nd,rowley2009jfm,budisic2012chaos,budisic2012physd,mezic2013arfm} { and its strong connections to data-driven modeling~\\cite{schmid2010jfm,rowley2009jfm,kutz2016book}}. {This review provides} an overview of modern Koopman theory for dynamical systems, including an in-depth analysis of leading computational algorithms, such as the dynamic mode decomposition (DMD) {of Schmid~\\cite{schmid2010jfm}}.",
+   "papers": [
+    {
+     "key": "budisic2012chaos",
+     "title": "Applied Koopmanism",
+     "arxiv": "1206.3164",
+     "tex": "source"
+    },
+    {
+     "key": "budisic2012physd",
+     "title": "Geometry of the ergodic quotient reveals coherent structures in flows",
+     "arxiv": "1204.2050",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "For example, level sets of Koopman eigenfunctions form invariant partitions of the state-space of a dynamical system~\\cite{budisic2012physd}; in particular, eigenfunctions of the Koopman operator may be used to analyze the ergodic partition~\\cite{mezic1999chaos,budisic2009cdc,rokhlin1966}.",
+   "papers": [
+    {
+     "key": "budisic2012physd",
+     "title": "Geometry of the ergodic quotient reveals coherent structures in flows",
+     "arxiv": "1204.2050",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "When a polynomial basis is chosen to represent the Koopman operator, then it is closely related to Carleman linearization~\\cite{carleman1932am,carleman1933theorie,carleman1933systemes}, which has been used extensively in nonlinear control~\\cite{steeb1980non,kowalski1991nonlinear,banks1992infinite,svoronos1994discretization}. {This review complements several other excellent reviews published in the last ten years~\\cite{budisic2012physd,mezic2013arfm,taira2017,taira2020,otto2021koopman}, and a detailed comparison is given in \\Cref{sec:organization}.} ",
+   "papers": [
+    {
+     "key": "budisic2012physd",
+     "title": "Geometry of the ergodic quotient reveals coherent structures in flows",
+     "arxiv": "1204.2050",
+     "tex": "source"
+    },
+    {
+     "key": "taira2017",
+     "title": "Modal Analysis of Fluid Flows: An Overview",
+     "arxiv": "1702.01453",
+     "tex": "source"
+    },
+    {
+     "key": "taira2020",
+     "title": "Modal Analysis of Fluid Flows: Applications and Outlook",
+     "arxiv": "1903.05750",
+     "tex": "source"
+    }
+   ]
+  }
+ ],
+ "Introduction|An illustrative example: The Duffing oscillator": [
+  {
+   "sentence": "Mezi\\'{c} recently conducted an in-depth study of these subtleties that appear even in simpler systems, such as the nonlinear pendulum~\\cite{mezic2019}, which we summarize in \\ref{sec:koopman-spectrum}. } There is no homeomorphic coordinate transformation that captures the global dynamics of this system with a linear operator, since any such linear operator has either one fixed point at the origin, or a subspace of infinitely many fixed points~\\cite{brunton2016plosone}, but never three isolated fixed points.",
+   "papers": [
+    {
+     "key": "brunton2016plosone",
+     "title": "Koopman invariant subspaces and finite linear representations of nonlinear dynamical systems for control",
+     "arxiv": "1510.03007",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "This interpretation may lead to seemingly unintuitive results, as even the most obvious observables, such as $g(\\bx) = \\bx$, may require different expansions in different areas of the state space, as recently explored by Page and Kerswell~\\cite{page2019}.",
+   "papers": [
+    {
+     "key": "page2019",
+     "title": "Koopman mode expansions between simple invariant solutions",
+     "arxiv": "1811.05907",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Rescaling space and time to make dynamics approximately periodic is the approach taken in~\\cite{lusch2017arxiv,lange2020fourier}; { Giannakis also performed a nonlinear time transformation to study mixing systems~\\cite{giannakis2019}, while Bollt and coauthors studied the finite-time blowup in the context of Koopman theory~\\cite{bollt2018}}. ",
+   "papers": [
+    {
+     "key": "lusch2017arxiv",
+     "title": "Deep learning for universal linear embeddings of nonlinear dynamics",
+     "arxiv": "1712.09707",
+     "tex": "source"
+    },
+    {
+     "key": "lange2020fourier",
+     "title": "From Fourier to Koopman: Spectral methods for long-term time series prediction.",
+     "arxiv": "2004.00574",
+     "tex": "source"
+    },
+    {
+     "key": "giannakis2019",
+     "title": "Data-driven spectral decomposition and forecasting of ergodic dynamical systems",
+     "arxiv": "1507.02338",
+     "tex": "source"
+    }
+   ]
+  }
+ ],
+ "Introduction|Dynamics in the big data era": [
+  {
+   "sentence": "In the modern era, it is increasingly common to build the dynamical models from the data directly using machine learning~\\cite{Schmidt2009science,battaglia2018relational,Raissi2019jcp,Noe2019science,raissi2020science,bar2019learning,cranmer2019learning,sanchez2020learning,lee2020model,lu2021learning,li2020fourier,li2020multipole,li2020neural,rackauckas2020universal,cranmer2020lagrangian,wang2021learning}.",
+   "papers": [
+    {
+     "key": "battaglia2018relational",
+     "title": "Relational inductive biases, deep learning, and graph networks",
+     "arxiv": "1806.01261",
+     "tex": "source"
+    },
+    {
+     "key": "Noe2019science",
+     "title": "Boltzmann generators: Sampling equilibrium states of many-body systems with deep learning",
+     "arxiv": "1812.01729",
+     "tex": "source"
+    },
+    {
+     "key": "bar2019learning",
+     "title": "Learning data-driven discretizations for partial differential equations",
+     "arxiv": "1808.04930",
+     "tex": "source"
+    },
+    {
+     "key": "cranmer2019learning",
+     "title": "Learning symbolic physics with graph networks",
+     "arxiv": "1909.05862",
+     "tex": "source"
+    },
+    {
+     "key": "sanchez2020learning",
+     "title": "Learning to simulate complex physics with graph networks",
+     "arxiv": "2002.09405",
+     "tex": "source"
+    },
+    {
+     "key": "lee2020model",
+     "title": "Model reduction of dynamical systems on nonlinear manifolds using deep convolutional autoencoders",
+     "arxiv": "1812.08373",
+     "tex": "source"
+    },
+    {
+     "key": "li2020fourier",
+     "title": "Fourier neural operator for parametric partial differential equations",
+     "arxiv": "2010.08895",
+     "tex": "source"
+    },
+    {
+     "key": "li2020multipole",
+     "title": "Multipole graph neural operator for parametric partial differential equations",
+     "arxiv": "2006.09535",
+     "tex": "source"
+    },
+    {
+     "key": "li2020neural",
+     "title": "Neural operator: Graph kernel network for partial differential equations",
+     "arxiv": "2003.03485",
+     "tex": "source"
+    },
+    {
+     "key": "rackauckas2020universal",
+     "title": "Universal differential equations for scientific machine learning",
+     "arxiv": "2001.04385",
+     "tex": "source"
+    },
+    {
+     "key": "cranmer2020lagrangian",
+     "title": "Lagrangian neural networks",
+     "arxiv": "2003.04630",
+     "tex": "source"
+    },
+    {
+     "key": "wang2021learning",
+     "title": "Learning the solution operator of parametric partial differential equations with physics-informed deeponets",
+     "arxiv": "2103.10974",
+     "tex": "source"
+    }
+   ]
+  }
+ ],
+ "Introduction|Koopman objectives and applications": [
+  {
+   "sentence": "Integrating uncertainty quantification into {the transfer operator framework has been connected early with the modern applications of Koopman analysis~\\cite{mezic2004b,mezic2008c,mezic2004b} and remains a topic of ongoing research~\\cite{mukherjee2015,streif2013}.} \\paragraph{Understanding} Beyond the practical goals value of prediction and control, dynamical systems provide a compelling framework with which to understand and model complex systems.",
+   "papers": [
+    {
+     "key": "streif2013",
+     "title": "Estimation of consistent parameter sets for continuous-time nonlinear systems using occupation measures and LMI relaxations",
+     "arxiv": "1303.4615",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Some of these applications include fluid dynamics~\\cite{schmid2010jfm,rowley2009jfm,mezic2013arfm}, epidemiology~\\cite{proctor2015ih}, neuroscience~\\cite{brunton2016b,alfatlawi2019arxiv}, plasma physics~\\cite{taylor2017arxiv,kaptanoglu2020pop}, finance~\\cite{mann2016qf}, robotics~\\cite{berger2014ieee,abraham2019ieee,bruder2019proc,bruder2020arxiv}, and the power grid~\\cite{susuki2011jns,susuki2011c}; a number of these are shown in \\cref{fig:Overview} and will be explored more in \\cref{Sec:DMD}.",
+   "papers": [
+    {
+     "key": "alfatlawi2019arxiv",
+     "title": "An incremental approach to online dynamic mode decomposition for time-varying systems with applications to EEG data modeling",
+     "arxiv": "1908.01047",
+     "tex": "source"
+    },
+    {
+     "key": "taylor2017arxiv",
+     "title": "Dynamic mode decomposition for plasma diagnostics and validation",
+     "arxiv": "1702.06871",
+     "tex": "source"
+    },
+    {
+     "key": "kaptanoglu2020pop",
+     "title": "Characterizing magnetized plasmas with dynamic mode decomposition",
+     "arxiv": "1911.06938",
+     "tex": "source"
+    },
+    {
+     "key": "mann2016qf",
+     "title": "Dynamic mode decomposition for financial trading strategies",
+     "arxiv": "1508.04487",
+     "tex": "source"
+    },
+    {
+     "key": "abraham2019ieee",
+     "title": "Active learning of dynamics for data-driven control using Koopman operators",
+     "arxiv": "1906.05194",
+     "tex": "source"
+    },
+    {
+     "key": "bruder2019proc",
+     "title": "Modeling and control of soft robots using the Koopman operator and model predictive control",
+     "arxiv": "1902.02827",
+     "tex": "source"
+    },
+    {
+     "key": "bruder2020arxiv",
+     "title": "Koopman-based Control of a Soft Continuum Manipulator Under Variable Loading Conditions",
+     "arxiv": "2002.01407",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Figures reproduced with permission from: (a) top~\\cite{schmid2010jfm}, bottom~\\cite{rowley2009jfm}; (b) \\cite{proctor2015ih}; (c) \\cite{kaptanoglu2020pop}; (d) \\cite{erichson2016jrtp}; (e) \\cite{brunton2016b}; (f) from Emw \\url{https://commons.wikimedia.org/wiki/File:Protein_PCMT1_PDB_1i1n.png}; (g) from Henk Monster \\url{https://commons.wikimedia.org/wiki/File:Power_grid_masts_besides_the_new_Waalbridge_Nijmegen_-_panoramio.jpg}; (h) from Daderot \\url{https://commons.wikimedia.org/wiki/File:Minsky's_robot_arm,_late_1960s,_view_2_-_MIT_Museum_-_DSC03759.JPG}. } \\label{fig:Overview} \\end{figure",
+   "papers": [
+    {
+     "key": "kaptanoglu2020pop",
+     "title": "Characterizing magnetized plasmas with dynamic mode decomposition",
+     "arxiv": "1911.06938",
+     "tex": "source"
+    }
+   ]
+  }
+ ],
+ "Introduction|Organization and goals of review": [
+  {
+   "sentence": "Finally, it is our goal to highlight connections with existing and emerging methods from other fields, including geometric and probabilistic dynamical systems, computational science and engineering, and machine learning. { There have been several excellent reviews focusing on Koopman operator theory and related methodologies published during the past ten years~\\cite{budisic2012physd,mezic2013arfm,taira2017,taira2020,otto2021koopman}.",
+   "papers": [
+    {
+     "key": "budisic2012physd",
+     "title": "Geometry of the ergodic quotient reveals coherent structures in flows",
+     "arxiv": "1204.2050",
+     "tex": "source"
+    },
+    {
+     "key": "taira2017",
+     "title": "Modal Analysis of Fluid Flows: An Overview",
+     "arxiv": "1702.01453",
+     "tex": "source"
+    },
+    {
+     "key": "taira2020",
+     "title": "Modal Analysis of Fluid Flows: Applications and Outlook",
+     "arxiv": "1903.05750",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "This review is similar in spirit to~\\cite{budisic2012physd}, but surveys the considerable body of literature published in the decade since~\\cite{budisic2012physd}.",
+   "papers": [
+    {
+     "key": "budisic2012physd",
+     "title": "Geometry of the ergodic quotient reveals coherent structures in flows",
+     "arxiv": "1204.2050",
+     "tex": "source"
+    },
+    {
+     "key": "budisic2012physd",
+     "title": "Geometry of the ergodic quotient reveals coherent structures in flows",
+     "arxiv": "1204.2050",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "The review by Mezi\\'{c}~\\cite{mezic2013arfm} and the two broader reviews that surveyed Koopman and DMD techniques~\\cite{taira2017,taira2020} focused on developments associated with fluid dynamics; while the original applications of Koopman and DMD were to problems of fluid motion, these techniques were shown to be useful in a broader range of fields which we highlight here.",
+   "papers": [
+    {
+     "key": "taira2017",
+     "title": "Modal Analysis of Fluid Flows: An Overview",
+     "arxiv": "1702.01453",
+     "tex": "source"
+    },
+    {
+     "key": "taira2020",
+     "title": "Modal Analysis of Fluid Flows: Applications and Outlook",
+     "arxiv": "1903.05750",
+     "tex": "source"
+    }
+   ]
+  }
+ ],
+ "A practical introduction to the Koopman operator framework|Eigenfunctions and the spectrum of eigenvalues": [
+  {
+   "sentence": "Thus, depending on the dynamical system, there may be a finite set of \\emph{generator} eigenfunction elements that may be used to construct all other eigenfunctions. { Cardinality of the set of eigenfunctions and the relationships between them are further explored in~\\cite{bollt2021}.} The corresponding Koopman eigenvalues form a multiplicative lattice, or an additive lattice for Lie eigenvalues due to \\eqref{eq:koopman-to-lie-eigenfunctions}.",
+   "papers": [
+    {
+     "key": "bollt2021",
+     "title": "Geometric Considerations of a Good Dictionary for Koopman Analysis of Dynamical Systems: Cardinality",
+     "arxiv": "1912.09570",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Level sets of \\(\\abs{\\bxi^{\\top} \\bx}\\) are called \\emph{isostables}~\\cite{mauroy2013}.",
+   "papers": [
+    {
+     "key": "mauroy2013",
+     "title": "Isostables, isochrons, and Koopman spectrum for the action-angle representation of stable fixed point dynamics",
+     "arxiv": "1302.0032",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Level sets of the argument (angle) provide a cyclic foliation of the domain, acting as \\emph{isochrons}~\\cite{mauroy2013}, i.e., collections of initial conditions that converge to the origin with a common phase.",
+   "papers": [
+    {
+     "key": "mauroy2013",
+     "title": "Isostables, isochrons, and Koopman spectrum for the action-angle representation of stable fixed point dynamics",
+     "arxiv": "1302.0032",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "More generally, Yosida's theorem~\\cite{budisic2012chaos} implies that in Banach spaces the limit not only exists, but that \\(g \\mapsto \\tilde{g}_{\\omega}\\) is a projection onto the eigenspace associated with the eigenvalue \\(e^{i\\omega}\\).",
+   "papers": [
+    {
+     "key": "budisic2012chaos",
+     "title": "Applied Koopmanism",
+     "arxiv": "1206.3164",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Said another way, eigenfunctions associated with eigenvalues on the unit circle \\(\\abs{\\lambda} = 1\\) can be computationally approximated through~\\eqref{eq:harmonic-average}, as employed in~\\cite{mezic2004physicad,mezic2005nd,budisic2012physd,levnajic2015}.",
+   "papers": [
+    {
+     "key": "budisic2012physd",
+     "title": "Geometry of the ergodic quotient reveals coherent structures in flows",
+     "arxiv": "1204.2050",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "This approach can, in principle, be extended to compute eigenfunctions associated with other eigenvalues as well, with conditions and restrictions given in~\\cite{mohr2014arxiv,mohr2016a}. {Recently, \\cite{das2020a} also provided an extension and reframing of such results to RKHS, including both theoretical and computational results.",
+   "papers": [
+    {
+     "key": "mohr2014arxiv",
+     "title": "Construction of eigenfunctions for scalar-type operators via Laplace averages with connections to the Koopman operator",
+     "arxiv": "1403.6559",
+     "tex": "source"
+    },
+    {
+     "key": "mohr2016a",
+     "title": "Koopman principle eigenfunctions and linearization of diffeomorphisms",
+     "arxiv": "1611.01209",
+     "tex": "source"
+    },
+    {
+     "key": "das2020a",
+     "title": "Koopman spectra in reproducing kernel Hilbert spaces",
+     "arxiv": "1801.07799",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "The existence and uniqueness of \\(C^{k}\\)-regular eigenfunctions was established in~\\cite{kvalheim2021}, which has further implications on the use of such eigenfunctions in conjugacy arguments (see later \\Cref{sec:eigenfunctions-as-coordinates}).} Instead of the iteration~\\eqref{eq:harmonic-average} that requires simulating the evolution \\(g_{t}\\), in certain cases it is possible to solve for eigenfunctions directly.",
+   "papers": [
+    {
+     "key": "kvalheim2021",
+     "title": "Existence and uniqueness of global Koopman eigenfunctions for stable fixed points and periodic orbits",
+     "arxiv": "1911.11996",
+     "tex": "source"
+    }
+   ]
+  }
+ ],
+ "A practical introduction to the Koopman operator framework|Koopman mode decomposition and finite representations": [
+  {
+   "sentence": "Koopman eigenfunctions are often more challenging to compute than Koopman modes, motivating advanced techniques, such as the extended DMD algorithm~\\cite{williams2015jnls} in~\\Cref{Sec:EDMD}.} \\subsubsection{Invariant eigenspaces and finite-dimensional models} Instead of capturing the evolution of all measurement functions in a Hilbert space, applied Koopman analysis approximates the evolution on an invariant subspace spanned by a finite set of measurement functions.",
+   "papers": [
+    {
+     "key": "williams2015jnls",
+     "title": "A data-driven approximation of the Koopman operator: extending dynamic mode decomposition",
+     "arxiv": "1408.4408",
+     "tex": "source"
+    }
+   ]
+  }
+ ],
+ "A practical introduction to the Koopman operator framework|Example of a simple Koopman embedding": [
+  {
+   "sentence": "\\subsection{Example of a simple Koopman embedding}\\label{Sec:SlowManifold} Here, we consider an example system with a single fixed point from Tu et al.~\\cite{tu2014jcd} that is explored in more detail in Brunton et al.~\\cite{brunton2016plosone}, given by: \\begin{subequations} \\begin{align} \\dot x_1 &= \\mu x_1\\\\ \\dot x_2 &= \\lambda(x_2-x_1^2).",
+   "papers": [
+    {
+     "key": "tu2014jcd",
+     "title": "On dynamic mode decomposition: theory and applications",
+     "arxiv": "1312.0041",
+     "tex": "source"
+    },
+    {
+     "key": "brunton2016plosone",
+     "title": "Koopman invariant subspaces and finite linear representations of nonlinear dynamical systems for control",
+     "arxiv": "1510.03007",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "\\textit{Reproduced from Brunton et al.~\\cite{brunton2016plosone}.}}\\label{Fig:quad_manifold} \\end{center} \\vspace{-.1in} \\end{figure} The left eigenvectors of the Koopman operator yield Koopman eigenfunctions.",
+   "papers": [
+    {
+     "key": "brunton2016plosone",
+     "title": "Koopman invariant subspaces and finite linear representations of nonlinear dynamical systems for control",
+     "arxiv": "1510.03007",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "As such, they may be regarded as intrinsic coordinates~\\cite{williams2015jnls} on the Koopman-invariant subspace. ",
+   "papers": [
+    {
+     "key": "williams2015jnls",
+     "title": "A data-driven approximation of the Koopman operator: extending dynamic mode decomposition",
+     "arxiv": "1408.4408",
+     "tex": "source"
+    }
+   ]
+  }
+ ],
+ "Dynamic mode decomposition|None": [
+  {
+   "sentence": "\\section{Dynamic mode decomposition}\\label{Sec:DMD} Dynamic mode decomposition, originally introduced by Schmid~\\cite{schmid2008aps,schmid2010jfm} in the fluid dynamics community, has rapidly become the standard algorithm to approximate the Koopman operator from data~\\cite{rowley2009jfm,tu2014jcd,kutz2016book}.",
+   "papers": [
+    {
+     "key": "tu2014jcd",
+     "title": "On dynamic mode decomposition: theory and applications",
+     "arxiv": "1312.0041",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "The DMD algorithm approximates the best-fit linear {matrix} operator that advances high-dimensional measurements of a system forward in time~\\cite{tu2014jcd}.",
+   "papers": [
+    {
+     "key": "tu2014jcd",
+     "title": "On dynamic mode decomposition: theory and applications",
+     "arxiv": "1312.0041",
+     "tex": "source"
+    }
+   ]
+  }
+ ],
+ "Dynamic mode decomposition|The DMD algorithm": [
+  {
+   "sentence": "Here we present the \\emph{exact} DMD algorithm of Tu et al.~\\cite{tu2014jcd}, which works for irregularly spaced data and data concatenated from multiple different time series.",
+   "papers": [
+    {
+     "key": "tu2014jcd",
+     "title": "On dynamic mode decomposition: theory and applications",
+     "arxiv": "1312.0041",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "The columns of $\\mathbf{U}$ are known as POD modes~\\cite{taira2017,taira2020}. {Because $\\bA$ is an approximate representation of the Koopman operator restricted to a finite-dimensional subspace of linear measurements, we are often interested in the eigenvectors $\\bPhi$ and eigenvalues $\\bLambda$ of $\\bA$: \\begin{align} \\bA \\bPhi = \\bPhi \\bLambda.",
+   "papers": [
+    {
+     "key": "taira2017",
+     "title": "Modal Analysis of Fluid Flows: An Overview",
+     "arxiv": "1702.01453",
+     "tex": "source"
+    },
+    {
+     "key": "taira2020",
+     "title": "Modal Analysis of Fluid Flows: Applications and Outlook",
+     "arxiv": "1903.05750",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "\\end{align} Tu et al.~\\cite{tu2014jcd} proved that these DMD modes are eigenvectors of the full $\\bA$ matrix under certain conditions.",
+   "papers": [
+    {
+     "key": "tu2014jcd",
+     "title": "On dynamic mode decomposition: theory and applications",
+     "arxiv": "1312.0041",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "\\end{align} } The amplitudes in $\\bb$ are {often} given by \\begin{align} \\bb = \\bPhi^{\\dagger}\\bx_1,\\label{Eq:DMDModeAmplitude} \\end{align} {using the first snapshot to determine the mixture of DMD mode amplitudes; note that this first snapshot $\\bx_1$ from DMD is equivalent to the initial condition used to evaluate the Koopman eigenfunction in \\eqref{Eq:KoopmanModeDecomposition}.} Alternative approaches to compute $\\bb$~\\cite{chen2012jns,jovanovic2014pof,askham2017arxiv} will be discussed in \\cref{Sec:DMD:AlternativeOpt}.",
+   "papers": [
+    {
+     "key": "jovanovic2014pof",
+     "title": "Sparsity-promoting dynamic mode decomposition",
+     "arxiv": "1309.4165",
+     "tex": "source"
+    },
+    {
+     "key": "askham2017arxiv",
+     "title": "Variable projection methods for an optimized dynamic mode decomposition",
+     "arxiv": "1704.02343",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Bagheri~\\cite{bagheri2014} showed that DMD is particularly sensitive to the effects of noisy data, and it has been shown that significant and systematic biases are introduced to the eigenvalue distribution~\\cite{duke2012error,bagheri2013jfm,dawson2016ef,hemati2017tcfd}.",
+   "papers": [
+    {
+     "key": "dawson2016ef",
+     "title": "Characterizing and correcting for the effect of sensor noise in the dynamic mode decomposition",
+     "arxiv": "1507.02264",
+     "tex": "source"
+    },
+    {
+     "key": "hemati2017tcfd",
+     "title": "De-biasing the dynamic mode decomposition for applied Koopman spectral analysis",
+     "arxiv": "1502.03854",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Although increased sampling decreases the variance of the eigenvalue distribution, it does not remove the bias~\\cite{hemati2017tcfd}.",
+   "papers": [
+    {
+     "key": "hemati2017tcfd",
+     "title": "De-biasing the dynamic mode decomposition for applied Koopman spectral analysis",
+     "arxiv": "1502.03854",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "These algorithms include the total least-squares DMD~\\cite{hemati2017tcfd}, forward-backward DMD~\\cite{dawson2016ef}, variable projection~\\cite{askham2017arxiv}, and robust principal component analysis~\\cite{Scherl2020prf}.",
+   "papers": [
+    {
+     "key": "hemati2017tcfd",
+     "title": "De-biasing the dynamic mode decomposition for applied Koopman spectral analysis",
+     "arxiv": "1502.03854",
+     "tex": "source"
+    },
+    {
+     "key": "dawson2016ef",
+     "title": "Characterizing and correcting for the effect of sensor noise in the dynamic mode decomposition",
+     "arxiv": "1507.02264",
+     "tex": "source"
+    },
+    {
+     "key": "askham2017arxiv",
+     "title": "Variable projection methods for an optimized dynamic mode decomposition",
+     "arxiv": "1704.02343",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "One of the simplest ways to remove the systematic bias of the DMD algorithm is by computing it both forward and backward in time and averaging the equivalent {matrices}, as proposed by Dawson et al.~\\cite{dawson2016ef}.",
+   "papers": [
+    {
+     "key": "dawson2016ef",
+     "title": "Characterizing and correcting for the effect of sensor noise in the dynamic mode decomposition",
+     "arxiv": "1507.02264",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "An improved optimization framework was developed by Azencot et al.~\\cite{azencot2019consistent} which proposes \\begin{equation} \\bA = \\argmin_{\\bA_1, \\bA_2} \\frac{1}{2} \\left( \\|\\bX' - \\bA_1 \\bX\\|_F + \\|\\bX - \\bA_2 \\bX'\\|_F \\right) \\,\\,\\, \\mbox{s.t.} \\,\\,\\, \\bA_1\\bA_2={\\bf I}, \\,\\, \\bA_2\\bA_1={\\bf I}, \\label{eq:fb2} \\end{equation} to circumvent some of the difficulties of the optimization in \\eqref{eq:fb1}.",
+   "papers": [
+    {
+     "key": "azencot2019consistent",
+     "title": "Consistent dynamic mode decomposition",
+     "arxiv": "1905.09736",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Hemati et al.~\\cite{hemati2017tcfd} formulate another DMD algorithm, replacing the original least-squares regression with a total least-squares regression to account for the possibility of noisy measurements and disturbances to the state.",
+   "papers": [
+    {
+     "key": "hemati2017tcfd",
+     "title": "De-biasing the dynamic mode decomposition for applied Koopman spectral analysis",
+     "arxiv": "1502.03854",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "The subspace DMD algorithm of Takeishi et al.~\\cite{takeishi2017} compensates for measurement noise by computing an orthogonal projection of future snapshots onto the space of previous snapshots and then constructing a linear model.",
+   "papers": [
+    {
+     "key": "takeishi2017",
+     "title": "Subspace dynamic mode decomposition for stochastic Koopman analysis",
+     "arxiv": "1705.04908",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Jovanovi\\'c et al.~\\cite{jovanovic2014pof} developed the first algorithm to improve the estimate of the modal amplitudes by promoting sparsity.",
+   "papers": [
+    {
+     "key": "jovanovic2014pof",
+     "title": "Sparsity-promoting dynamic mode decomposition",
+     "arxiv": "1309.4165",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "More recently, Askham and Kutz~\\cite{askham2017arxiv} introduced the {\\em optimized DMD} algorithm, which uses a variable projection method for nonlinear least squares to compute the DMD for unevenly timed samples, significantly mitigating the bias due to noise.",
+   "papers": [
+    {
+     "key": "askham2017arxiv",
+     "title": "Variable projection methods for an optimized dynamic mode decomposition",
+     "arxiv": "1704.02343",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "The disadvantage of optimized DMD is that one must solve a nonlinear optimization problem. {{However, by using statistical bagging methods, the optimized DMD algorithm can be stabilized and the {\\em boosted optimized DMD} (BOP-DMD) method can not only improve performance of the decomposition, but also produce UQ metrics for the DMD eigenvalues and DMD eigenmodes~\\cite{sashidhar2021bagging}.",
+   "papers": [
+    {
+     "key": "sashidhar2021bagging",
+     "title": "Bagging, optimized dynamic mode decomposition (bop-dmd) for robust, stable forecasting with spatial and temporal uncertainty-quantification",
+     "arxiv": "2107.10878",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "However, DMD is fundamentally unable to capture a linear dynamical system model with essential nonlinear features, such as multiple fixed points, unstable periodic orbits, or chaos~\\cite{brunton2016plosone}.",
+   "papers": [
+    {
+     "key": "brunton2016plosone",
+     "title": "Koopman invariant subspaces and finite linear representations of nonlinear dynamical systems for control",
+     "arxiv": "1510.03007",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "In this case, the recent linear and nonlinear disambiguation optimization (LANDO) algorithm~\\cite{baddoo2021kernel} leverages kernel methods to identify an implicit model for the full nonlinear dynamics, where it is then possible to extract a low-rank DMD approximation for the linear portion linearized about some specified operating condition.",
+   "papers": [
+    {
+     "key": "baddoo2021kernel",
+     "title": "Kernel learning for robust dynamic mode decomposition: Linear and nonlinear disambiguation optimization (LANDO)",
+     "arxiv": "2106.01510",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "This work is part of a much larger effort to use kernels for learning dynamical systems and Koopman representations~\\cite{williams2015jcd,fujii2019dynamic,das2020a,klus2020eigendecompositions,klus2020kernel,manohar2020kernel,baddoo2021kernel}. } \\subsubsection{Krylov subspace perspective}\\label{Sec:DMD:Krylov} In the original formulation~\\cite{schmid2010jfm,rowley2009jfm}, the matrices $\\bX$ and $\\bX'$ were formed from sequential snapshots, evenly spaced in time: \\begin{subequations}\\label{Eq:DMD:SnapshotsSequential} \\begin{align} \\bX &= \\begin{bmatrix} \\vline & \\vline & & \\vline \\\\ \\bx_1 & \\b",
+   "papers": [
+    {
+     "key": "fujii2019dynamic",
+     "title": "Dynamic mode decomposition in vector-valued reproducing kernel hilbert spaces for extracting dynamical structure among observables",
+     "arxiv": "1808.10551",
+     "tex": "source"
+    },
+    {
+     "key": "das2020a",
+     "title": "Koopman spectra in reproducing kernel Hilbert spaces",
+     "arxiv": "1801.07799",
+     "tex": "source"
+    },
+    {
+     "key": "klus2020eigendecompositions",
+     "title": "Eigendecompositions of transfer operators in reproducing kernel hilbert spaces",
+     "arxiv": "1712.01572",
+     "tex": "source"
+    },
+    {
+     "key": "manohar2020kernel",
+     "title": "Kernel analog forecasting: Multiscale test problems",
+     "arxiv": "2005.06623",
+     "tex": "source"
+    },
+    {
+     "key": "baddoo2021kernel",
+     "title": "Kernel learning for robust dynamic mode decomposition: Linear and nonlinear disambiguation optimization (LANDO)",
+     "arxiv": "2106.01510",
+     "tex": "source"
+    }
+   ]
+  }
+ ],
+ "Dynamic mode decomposition|Methodological extensions": [
+  {
+   "sentence": "Proctor et al.~\\cite{proctor2016siads} introduced the DMD with control (DMDc) algorithm to disambiguate the natural unforced dynamics and the effect of forcing or actuation given by the variable $\\bu$.",
+   "papers": [
+    {
+     "key": "proctor2016siads",
+     "title": "Dynamic mode decomposition with control",
+     "arxiv": "1409.6358",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "DMDc will be explored extensively in \\cref{Sec:Control:DMDc}. {An input--output DMD~\\cite{benner2018reduced} has also been formulated recently that fits into broader reduced-order modeling efforts~\\cite{Benner2015siamreview,peherstorfer2016data,qian2020lift,benner2020operator}.} \\subsubsection{Compression and randomized linear algebra} The DMD algorithm is fundamentally based on the assumption that there are dominant low-dimensional patterns even in high-dimensional data, such as fluid flow fields.",
+   "papers": [
+    {
+     "key": "benner2018reduced",
+     "title": "On reduced input-output dynamic mode decomposition",
+     "arxiv": "1712.08447",
+     "tex": "source"
+    },
+    {
+     "key": "qian2020lift",
+     "title": "Lift \\& learn: Physics-informed machine learning for large-scale nonlinear dynamical systems",
+     "arxiv": "1912.08177",
+     "tex": "source"
+    },
+    {
+     "key": "benner2020operator",
+     "title": "Operator inference for non-intrusive model reduction of systems with non-polynomial nonlinear terms",
+     "arxiv": "2002.09726",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Randomized algorithms~\\cite{halko2011siamreview} are designed to exploit these patterns to accelerate numerical linear algebra.",
+   "papers": [
+    {
+     "key": "halko2011siamreview",
+     "title": "Finding structure with randomness: Probabilistic algorithms for constructing approximate matrix decompositions",
+     "arxiv": "0909.4061",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "In the randomized DMD algorithm~\\cite{bistrian2016ijnme,erichson2017arxiv} data is randomly project into a lower-dimensional subspace where computations may be performed more efficiently.",
+   "papers": [
+    {
+     "key": "bistrian2016ijnme",
+     "title": "Randomized dynamic mode decomposition for non-intrusive reduced order modelling",
+     "arxiv": "1611.04884",
+     "tex": "source"
+    },
+    {
+     "key": "erichson2017arxiv",
+     "title": "Randomized dynamic mode decomposition",
+     "arxiv": "1702.02912",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "In 2014, Jovanovic et al.~\\cite{jovanovic2014pof} used sparsity promoting optimization to identify the fewest DMD modes required to describe a data set; the alternative, testing and comparing all subsets of DMD modes, is computationally intractable.",
+   "papers": [
+    {
+     "key": "jovanovic2014pof",
+     "title": "Sparsity-promoting dynamic mode decomposition",
+     "arxiv": "1309.4165",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Finally, libraries of DMD modes have also been used to identify dynamical regimes~\\cite{kramer2015arxiv}, based on the sparse representation for classification~\\cite{wright2009ieeetpami}, which was used earlier to identify dynamical regimes using libraries of POD modes~\\cite{bright2013pof,brunton2014siads}.",
+   "papers": [
+    {
+     "key": "kramer2015arxiv",
+     "title": "Sparse sensing and DMD based identification of flow regimes and bifurcations in complex flows",
+     "arxiv": "1510.02831",
+     "tex": "source"
+    },
+    {
+     "key": "brunton2014siads",
+     "title": "Compressive sensing and low-rank libraries for classification of bifurcation regimes in nonlinear dynamical systems",
+     "arxiv": "1312.4221",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "\\subsubsection{Nonlinear measurements and latent variables} The connection between DMD and the Koopman operator~\\cite{rowley2009jfm,tu2014jcd,kutz2016book} has motivated several extensions for strongly nonlinear systems.",
+   "papers": [
+    {
+     "key": "tu2014jcd",
+     "title": "On dynamic mode decomposition: theory and applications",
+     "arxiv": "1312.0041",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "In Williams et al.~\\cite{williams2015jnls,williams2015jcd}, DMD measurements were augmented to include nonlinear measurements of the system, enriching the basis used to represent the Koopman operator.",
+   "papers": [
+    {
+     "key": "williams2015jnls",
+     "title": "A data-driven approximation of the Koopman operator: extending dynamic mode decomposition",
+     "arxiv": "1408.4408",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "This paradox was first explored by Tu et al.~\\cite{tu2014jcd}, where it was discovered that a solution is to stack delayed measurements into a larger matrix to augment the rank of the data and extract phase information.",
+   "papers": [
+    {
+     "key": "tu2014jcd",
+     "title": "On dynamic mode decomposition: theory and applications",
+     "arxiv": "1312.0041",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "The connections between delay DMD and Koopman were subsequently investigated~\\cite{brunton2017natcomm,arbabi2017,das2017arxiv,Kamb2020siads}.",
+   "papers": [
+    {
+     "key": "brunton2017natcomm",
+     "title": "Chaos as an intermittently forced linear system",
+     "arxiv": "1608.05306",
+     "tex": "source"
+    },
+    {
+     "key": "das2017arxiv",
+     "title": "Delay-coordinate maps and the spectra of Koopman operators",
+     "arxiv": "1706.08544",
+     "tex": "source"
+    },
+    {
+     "key": "Kamb2020siads",
+     "title": "Time-delay observables for Koopman: Theory and applications",
+     "arxiv": "1810.01479",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "To address this challenge, the multiresolution DMD (mrDMD) algorithm was introduced~\\cite{kutz2016siads}, which effectively decomposes the dynamics into different timescales, isolating transient and intermittent patterns.",
+   "papers": [
+    {
+     "key": "kutz2016siads",
+     "title": "Multi-resolution dynamic mode decomposition",
+     "arxiv": "1506.00564",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Multiresolution DMD modes were recently shown to be advantageous for sparse sensor placement by Manohar et al.~\\cite{manohar2017arxiv}.",
+   "papers": [
+    {
+     "key": "manohar2017arxiv",
+     "title": "Optimized sampling for multiscale dynamics",
+     "arxiv": "1712.05085",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Several algorithms exist for streaming DMD, based on the incremental SVD~\\cite{hemati2014pof}, a streaming method of snapshots SVD~\\cite{pendergrass2016arxiv}, and rank-one updates to the DMD matrix~\\cite{zhang2019}.",
+   "papers": [
+    {
+     "key": "hemati2014pof",
+     "title": "Dynamic mode decomposition for large and streaming datasets",
+     "arxiv": "1406.7187",
+     "tex": "source"
+    },
+    {
+     "key": "pendergrass2016arxiv",
+     "title": "Streaming GPU singular value and dynamic mode decompositions",
+     "arxiv": "1612.07875",
+     "tex": "source"
+    },
+    {
+     "key": "zhang2019",
+     "title": "Online Dynamic Mode Decomposition for Time-Varying Systems",
+     "arxiv": "1707.02876",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Several parallelized codes are available, based on the QR~\\cite{sayadi2016tcfd} and SVD~\\cite{erichson2017arxiv,erichson2016arxiva,erichsonrandomized}. {\\subsubsection{Tensor formulations} Most data used to compute DMD has additional spatial structure that is discarded when the data is reshaped into column vectors.",
+   "papers": [
+    {
+     "key": "erichson2017arxiv",
+     "title": "Randomized dynamic mode decomposition",
+     "arxiv": "1702.02912",
+     "tex": "source"
+    },
+    {
+     "key": "erichson2016arxiva",
+     "title": "Randomized matrix decompositions using R",
+     "arxiv": "1608.02148",
+     "tex": "source"
+    },
+    {
+     "key": "erichsonrandomized",
+     "title": "Randomized cp tensor decomposition",
+     "arxiv": "1703.09074",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "The tensor DMD extension of Klus et al.~\\cite{klus2018tensor} performs DMD on a tensorial, rather than vectorized, representation of the data, retaining this additional structure.",
+   "papers": [
+    {
+     "key": "klus2018tensor",
+     "title": "Tensor-based dynamic mode decomposition",
+     "arxiv": "1606.06625",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Extensions to this approach have been introduced based on reproducing kernel Hilbert spaces~\\cite{fujii2019dynamic} and the extended DMD~\\cite{nuske2019tensorbased}, and additional connections have recently been made between the Koopman mode decomposition and tensor factorizations~\\cite{redman2021koopman}.",
+   "papers": [
+    {
+     "key": "fujii2019dynamic",
+     "title": "Dynamic mode decomposition in vector-valued reproducing kernel hilbert spaces for extracting dynamical structure among observables",
+     "arxiv": "1808.10551",
+     "tex": "source"
+    },
+    {
+     "key": "nuske2019tensorbased",
+     "title": "Tensor based EDMD for the Koopman analysis of high-dimensional systems",
+     "arxiv": "1908.04741",
+     "tex": "source"
+    },
+    {
+     "key": "redman2021koopman",
+     "title": "On koopman mode decomposition and tensor component analysis",
+     "arxiv": "2101.00555",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Tensor approaches to related methods, such as the sparse identification of nonlinear dynamics~\\cite{brunton2016pnas}, have also been developed recently~\\cite{Gelss2019mindy}. } ",
+   "papers": [
+    {
+     "key": "Gelss2019mindy",
+     "title": "Multidimensional approximation of nonlinear dynamical systems",
+     "arxiv": "1809.02448",
+     "tex": "source"
+    }
+   ]
+  }
+ ],
+ "Dynamic mode decomposition|Domain applications": [
+  {
+   "sentence": "In addition, DMD has been used for robotics~\\cite{berger2014ieee,abraham2019ieee,bruder2019proc,mamakoukas2019proc}, finance~\\cite{mann2016qf}, power grids~\\cite{sinha2020arxiv,susuki2011c,susuki2011jns,susuki2012nonlinear,korda2018arxiv}, and plasma physics~\\cite{taylor2017arxiv,kaptanoglu2020pop}.",
+   "papers": [
+    {
+     "key": "abraham2019ieee",
+     "title": "Active learning of dynamics for data-driven control using Koopman operators",
+     "arxiv": "1906.05194",
+     "tex": "source"
+    },
+    {
+     "key": "bruder2019proc",
+     "title": "Modeling and control of soft robots using the Koopman operator and model predictive control",
+     "arxiv": "1902.02827",
+     "tex": "source"
+    },
+    {
+     "key": "mann2016qf",
+     "title": "Dynamic mode decomposition for financial trading strategies",
+     "arxiv": "1508.04487",
+     "tex": "source"
+    },
+    {
+     "key": "sinha2020arxiv",
+     "title": "Data driven online learning of power system dynamics",
+     "arxiv": "2003.05068",
+     "tex": "source"
+    },
+    {
+     "key": "korda2018arxiv",
+     "title": "Power grid transient stabilization using Koopman model predictive control",
+     "arxiv": "1803.10744",
+     "tex": "source"
+    },
+    {
+     "key": "taylor2017arxiv",
+     "title": "Dynamic mode decomposition for plasma diagnostics and validation",
+     "arxiv": "1702.06871",
+     "tex": "source"
+    },
+    {
+     "key": "kaptanoglu2020pop",
+     "title": "Characterizing magnetized plasmas with dynamic mode decomposition",
+     "arxiv": "1911.06938",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Other problems include identifying hairpin vortices~\\cite{tang2012dynamic}, decomposing the flow past a surface mounted cube~\\cite{muld2012mode}, modeling shallow water equations~\\cite{bistrian2015ijnmf}, studying nano fluids past a square cylinder~\\cite{sarkar2013mixed}{, fluid-structure interaction~\\cite{goza2018modal}} , and measuring the growth rate of instabilities in annular liquid sheets~\\cite{duke2012experimental}. {A modified \\emph{recursive} DMD algorithm was also formulated by Noack et al.~\\cite{Noack2016jfm} to provide an orthogonal basis for empirical Galerkin models in fluids.",
+   "papers": [
+    {
+     "key": "goza2018modal",
+     "title": "Modal decomposition of fluid--structure interaction with application to flag flapping",
+     "arxiv": "1711.03040",
+     "tex": "source"
+    },
+    {
+     "key": "Noack2016jfm",
+     "title": "Recursive dynamic mode decomposition of a transient cylinder wake",
+     "arxiv": "1511.06876",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "The use of DMD in fluids fits into a broader effort to leverage machine learning for improved models and controllers~\\cite{Brenner2019prf,bar2019learning,Brunton2020arfm, sanchez2020learning,li2020fourier,kochkov2021machine}, especially for turbulence closure modeling~\\cite{Ling2016jfm,Kutz2017jfm,Duraisamy2019arfm,Maulik2019jfm,beetham2020formulating,beetham2021sparse}.} It is interesting to note that the noise effects that were carefully analyzed by Bagheri~\\cite{bagheri2014} explain the eigenvalue spectrum observed earlier by Schmid et al.~\\cite{schmid2011tcfd} for a turbulent jet.",
+   "papers": [
+    {
+     "key": "bar2019learning",
+     "title": "Learning data-driven discretizations for partial differential equations",
+     "arxiv": "1808.04930",
+     "tex": "source"
+    },
+    {
+     "key": "Brunton2020arfm",
+     "title": "Machine learning for fluid mechanics",
+     "arxiv": "1905.11075",
+     "tex": "source"
+    },
+    {
+     "key": "sanchez2020learning",
+     "title": "Learning to simulate complex physics with graph networks",
+     "arxiv": "2002.09405",
+     "tex": "source"
+    },
+    {
+     "key": "li2020fourier",
+     "title": "Fourier neural operator for parametric partial differential equations",
+     "arxiv": "2010.08895",
+     "tex": "source"
+    },
+    {
+     "key": "kochkov2021machine",
+     "title": "Machine learning accelerated computational fluid dynamics",
+     "arxiv": "2102.01010",
+     "tex": "source"
+    },
+    {
+     "key": "Duraisamy2019arfm",
+     "title": "Turbulence modeling in the age of data",
+     "arxiv": "1804.00183",
+     "tex": "source"
+    },
+    {
+     "key": "beetham2020formulating",
+     "title": "Formulating turbulence closures using sparse regression with embedded form invariance",
+     "arxiv": "2003.12884",
+     "tex": "source"
+    },
+    {
+     "key": "beetham2021sparse",
+     "title": "Sparse identification of multiphase turbulence closures for coupled fluid--particle flows",
+     "arxiv": "2004.08997",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "The application of DMD to disease systems also motivated the DMD with control algorithm~\\cite{proctor2016siads}, since it is infeasible to stop vaccinations in order to identify the unforced dynamics.",
+   "papers": [
+    {
+     "key": "proctor2016siads",
+     "title": "Dynamic mode decomposition with control",
+     "arxiv": "1409.6358",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Since then, several works have applied DMD to neural recordings or suggested possible implementation in hardware~\\cite{agrawal2016book,broad2017proc,tirunagari2017mva,marrouch2020data}.",
+   "papers": [
+    {
+     "key": "broad2017proc",
+     "title": "Learning models for shared control of human-machine systems with unknown dynamics",
+     "arxiv": "1808.08268",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "DMD provides a flexible approach for video separation, as the background may be approximated by a DMD mode with zero eigenvalue~\\cite{grosek2014arxiv,erichson2016jrtp,pendergrass2016arxiv}, as illustrated in \\cref{Fig:ErichsonVideo}.",
+   "papers": [
+    {
+     "key": "grosek2014arxiv",
+     "title": "Dynamic mode decomposition for real-time background/foreground separation in video",
+     "arxiv": "1404.7592",
+     "tex": "source"
+    },
+    {
+     "key": "pendergrass2016arxiv",
+     "title": "Streaming GPU singular value and dynamic mode decompositions",
+     "arxiv": "1612.07875",
+     "tex": "source"
+    }
+   ]
+  }
+ ],
+ "Dynamic mode decomposition|Connections to other methods": [
+  {
+   "sentence": "Tu et al.~\\cite{tu2014jcd} established a connection between DMD and the eigensystem realization algorithm (ERA)~\\cite{juang1985jgcd}.",
+   "papers": [
+    {
+     "key": "tu2014jcd",
+     "title": "On dynamic mode decomposition: theory and applications",
+     "arxiv": "1312.0041",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Subsequently, DMD with control~\\cite{proctor2016siads} was also linked to ERA and the observer Kalman identification methods (OKID)~\\cite{phan1992jas,phan1993jota}.",
+   "papers": [
+    {
+     "key": "proctor2016siads",
+     "title": "Dynamic mode decomposition with control",
+     "arxiv": "1409.6358",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "There are important contrasts regarding the projection scaling between all of these methods~\\cite{proctor2016siads}, but the overall viewpoint is similar among these diverse methods. {Recently, DMD has also been combined with an extended Kalman filter to simultaneously de-noise and estimate parameters~\\cite{nonomura2018dynamic,nonomura2019extended}.",
+   "papers": [
+    {
+     "key": "proctor2016siads",
+     "title": "Dynamic mode decomposition with control",
+     "arxiv": "1409.6358",
+     "tex": "source"
+    },
+    {
+     "key": "nonomura2018dynamic",
+     "title": "Dynamic mode decomposition using a kalman filter for parameter estimation",
+     "arxiv": "1804.00143",
+     "tex": "source"
+    },
+    {
+     "key": "nonomura2019extended",
+     "title": "Extended-kalman-filter-based dynamic mode decomposition for simultaneous system identification and denoising",
+     "arxiv": "1805.01985",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "DMD- and POD-based data-driven model reduction was successfully combined with model-based Kalman filters to yield state and uncertainty estimates~\\cite{iungo2015jp,mehta2018}.",
+   "papers": [
+    {
+     "key": "mehta2018",
+     "title": "A New Transformative Framework for Data Assimilation and Calibration of Physical Ionosphere-Thermosphere Models",
+     "arxiv": "1804.04088",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Furthermore, such models were shown to be highly effective even for model dimensions out of reach of classical particle filtering techniques~\\cite{albarakati2021}. } {It is important to note that these subspace system identification approaches are designed to model linear systems, and it is unclear how to interpret the results when they are applied to nonlinear systems.",
+   "papers": [
+    {
+     "key": "albarakati2021",
+     "title": "Model and data reduction for data assimilation: Particle filters employing projected forecasts and data with application to a shallow water model",
+     "arxiv": "2101.09252",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Moreover, if the mean of the data matrix $\\bX$ is subtracted, then the companion matrix DMD formulation from \\cref{Sec:DMD:Krylov} has been shown to be equivalent to a Fourier decomposition of the vector field in time~\\cite{chen2012jns,hirsh2019}.",
+   "papers": [
+    {
+     "key": "hirsh2019",
+     "title": "Centering data improves the dynamic mode decomposition",
+     "arxiv": "1906.05973",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "LIMs are essentially identical to the DMD architecture under certain assumptions~\\cite{tu2014jcd}.",
+   "papers": [
+    {
+     "key": "tu2014jcd",
+     "title": "On dynamic mode decomposition: theory and applications",
+     "arxiv": "1312.0041",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "\\subsubsection{Resolvent analysis} DMD and Koopman operator theory have also been connected to the resolvent analysis from fluid mechanics~\\cite{sharma2016prf,Herrmann2020arxiv}.",
+   "papers": [
+    {
+     "key": "sharma2016prf",
+     "title": "Correspondence between Koopman mode decomposition, resolvent mode decomposition, and invariant solutions of the Navier-Stokes equations",
+     "arxiv": "1603.08378",
+     "tex": "source"
+    },
+    {
+     "key": "Herrmann2020arxiv",
+     "title": "Data-driven resolvent analysis",
+     "arxiv": "2010.02181",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Resolvent analysis seeks to find the most receptive states of a dynamical system that will be most amplified by forcing, along with the corresponding most responsive forcings~\\cite{trefethen1993science,Jovanovic2005,McKeon2010b,Jovanovic2020}.",
+   "papers": [
+    {
+     "key": "Jovanovic2020",
+     "title": "From bypass transition to flow control and data-driven turbulence modeling: An input-output viewpoint",
+     "arxiv": "2003.10104",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Sharma, Mezi\\'c, and McKeon~\\cite{sharma2016prf} established several important connections between DMD, Koopman theory, and the resolvent operator, including a generalization of DMD to enforce symmetries and traveling wave structures.",
+   "papers": [
+    {
+     "key": "sharma2016prf",
+     "title": "Correspondence between Koopman mode decomposition, resolvent mode decomposition, and invariant solutions of the Navier-Stokes equations",
+     "arxiv": "1603.08378",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Herrmann et al.~\\cite{Herrmann2020arxiv} have recently developed a purely data-driven resolvent algorithm, based on DMD, that bypasses knowledge of the governing equations. {DMD and resolvent analysis are also both closely related to the spectral POD~\\cite{Towne2018jfm,schmidt2020guide,taira2017}, which is related to the classical POD of Lumley and provides time-harmonic modes at a set of discrete frequencies. } ",
+   "papers": [
+    {
+     "key": "Herrmann2020arxiv",
+     "title": "Data-driven resolvent analysis",
+     "arxiv": "2010.02181",
+     "tex": "source"
+    },
+    {
+     "key": "Towne2018jfm",
+     "title": "Spectral proper orthogonal decomposition and its relationship to dynamic mode decomposition and resolvent analysis",
+     "arxiv": "1708.04393",
+     "tex": "source"
+    },
+    {
+     "key": "taira2017",
+     "title": "Modal Analysis of Fluid Flows: An Overview",
+     "arxiv": "1702.01453",
+     "tex": "source"
+    }
+   ]
+  }
+ ],
+ "Koopman operator and modern nonlinear dynamics|Eigenfunctions as nonlinear coordinate changes": [
+  {
+   "sentence": "Although H--G establishes that \\eqref{eq:hartman-grobman-conjugacy} holds only in some neighborhood of the origin, \\cite{lan2013physd} show that trajectories emanating from the boundary of that neighborhood (backward-in-time) can be used to extend the definition of eigenfunctions \\(h_{k}\\) up to the edge of the basin of attraction or up to the end of the interval of existence of trajectories, therefore proving an extension of the Hartman--Grobman theorem to the entire basin of attraction. {Additional results by Eldering, Kvalheim, and Revzen further extend these results to normally-attracting ",
+   "papers": [
+    {
+     "key": "eldering2018",
+     "title": "Global linearization and fiber bundle structure of invariant manifolds",
+     "arxiv": "1711.03646",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "\\textit{Reproduced with permission, from Mauroy et al. 2013 Physica D~\\cite{mauroy2013}.}} \\label{fig:mauroy2013-isostables} \\vspace{-.1in} \\end{figure} In this context, Mauroy et al.~\\cite{mauroy2012,mauroy2013} demonstrate that the coordinate transformations \\(h_{k}\\) can be numerically computed by forward integration of a trajectory and a Laplace average of an observable \\begin{equation} \\label{eq:laplace-average} \\tilde{g}_{\\lambda}(\\bx) \\coloneqq \\lim_{T\\to\\infty} \\frac{1}{T}\\int_{0}^{T} g_{t}(\\bx) e^{\\bar{\\lambda} t} dt, \\end{equation} which is an extension of the harmonic Fourier averag",
+   "papers": [
+    {
+     "key": "mauroy2013",
+     "title": "Isostables, isochrons, and Koopman spectrum for the action-angle representation of stable fixed point dynamics",
+     "arxiv": "1302.0032",
+     "tex": "source"
+    },
+    {
+     "key": "mauroy2013",
+     "title": "Isostables, isochrons, and Koopman spectrum for the action-angle representation of stable fixed point dynamics",
+     "arxiv": "1302.0032",
+     "tex": "source"
+    },
+    {
+     "key": "kvalheim2021",
+     "title": "Existence and uniqueness of global Koopman eigenfunctions for stable fixed points and periodic orbits",
+     "arxiv": "1911.11996",
+     "tex": "source"
+    },
+    {
+     "key": "kvalheim2021a",
+     "title": "Generic Properties of Koopman Eigenfunctions for Stable Fixed Points and Periodic Orbits",
+     "arxiv": "2010.04008",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Further theoretical developments have led to extensions to nonlinear stability analysis and optimal control of dynamical systems~\\cite{sootla2018,mauroy2017arxiv,mauroy2016ieeetac,sootla2016acc,mauroy2013cdc}.",
+   "papers": [
+    {
+     "key": "sootla2018",
+     "title": "Operator-Theoretic Characterization of Eventually Monotone Systems",
+     "arxiv": "1510.01149",
+     "tex": "source"
+    },
+    {
+     "key": "mauroy2017arxiv",
+     "title": "Koopman-based lifting techniques for nonlinear systems identification",
+     "arxiv": "1709.02003",
+     "tex": "source"
+    },
+    {
+     "key": "mauroy2016ieeetac",
+     "title": "Global stability analysis using the eigenfunctions of the Koopman operator",
+     "arxiv": "1408.1379",
+     "tex": "source"
+    },
+    {
+     "key": "sootla2016acc",
+     "title": "Properties of isostables and basins of attraction of monotone systems",
+     "arxiv": "1510.01153",
+     "tex": "source"
+    }
+   ]
+  }
+ ],
+ "Koopman operator and modern nonlinear dynamics|Phase portrait and symmetries": [
+  {
+   "sentence": "This approach was applied to visualize the phase portrait~\\cite{mezic1999chaos,levnajic2010,budisic2012physd}, where it is possible to assign pseudocolors to trajectories, generating visually appealing and detailed figures as in \\cref{fig:ergodic-partition}.",
+   "papers": [
+    {
+     "key": "levnajic2010",
+     "title": "Ergodic theory and visualization. I. Mesochronic plots for visualization of ergodic partition and invariant sets",
+     "arxiv": "0805.4221",
+     "tex": "source"
+    },
+    {
+     "key": "budisic2012physd",
+     "title": "Geometry of the ergodic quotient reveals coherent structures in flows",
+     "arxiv": "1204.2050",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "\\textit{Reproduced with permission, from Levnaji\\'c and Mezi\\'c 2010 Chaos~\\cite{levnajic2010}}. (\\subref{fig:quotient-coordinates}) Sketch of ordering of orbits by ergodic quotient trajectories.",
+   "papers": [
+    {
+     "key": "levnajic2010",
+     "title": "Ergodic theory and visualization. I. Mesochronic plots for visualization of ergodic partition and invariant sets",
+     "arxiv": "0805.4221",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Mezi\\'c 2012 Physica D~\\cite{budisic2012physd}}.} \\vspace{-.1in} \\end{figure} Using the embedding function \\eqref{eq:erg-quot-embedding} it is further possible to treat the ergodic quotient as a geometric object and compute its local coordinates.",
+   "papers": [
+    {
+     "key": "budisic2012physd",
+     "title": "Geometry of the ergodic quotient reveals coherent structures in flows",
+     "arxiv": "1204.2050",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Reference~\\cite{nandanoori2020} gives further theoretical backing to this process, as well an incremental and a non-incremental version of the data-driven DMD procedure built in this fashion.",
+   "papers": [
+    {
+     "key": "nandanoori2020",
+     "title": "Data-Driven Operator Theoretic Methods for Global Phase Space Learning",
+     "arxiv": "1910.03011",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "For practical purposes, the assumption that \\(A\\) and \\(B\\) are truly dynamically separate is not needed; rather, it is simply sufficient to choose pairs of DMD trajectory samples in a trajectory from two disjoint sets in order to construct such restricted approximations that can be stitched~\\cite{sinha2020}.",
+   "papers": [
+    {
+     "key": "sinha2020",
+     "title": "Koopman operator methods for global phase space exploration of equivariant dynamical systems",
+     "arxiv": "2003.04870",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Although symmetry-based arguments have long been used to simplify dynamical systems, especially in classification of bifurcations, explicit connections with the Koopman operator framework are fairly recent~\\cite{kakubr2018arxiv,salova2019,mesbahi2019,sinha2020}.",
+   "papers": [
+    {
+     "key": "kakubr2018arxiv",
+     "title": "Discovering conservation laws from data for control",
+     "arxiv": "1811.00961",
+     "tex": "source"
+    },
+    {
+     "key": "salova2019",
+     "title": "Koopman operator and its approximations for systems with symmetries",
+     "arxiv": "1904.11472",
+     "tex": "source"
+    },
+    {
+     "key": "sinha2020",
+     "title": "Koopman operator methods for global phase space exploration of equivariant dynamical systems",
+     "arxiv": "2003.04870",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "The following two theorems appear as Thm.\\ III.1 and its corrolary in~\\cite{salova2019}, and Thm.\\ 1 and Prop.\\ 2 in \\cite{sinha2020}.",
+   "papers": [
+    {
+     "key": "salova2019",
+     "title": "Koopman operator and its approximations for systems with symmetries",
+     "arxiv": "1904.11472",
+     "tex": "source"
+    },
+    {
+     "key": "sinha2020",
+     "title": "Koopman operator methods for global phase space exploration of equivariant dynamical systems",
+     "arxiv": "2003.04870",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "These matrices are conjugate (similar) \\begin{equation} \\label{eq:koopman-symmetry-conjugation} \\mathbf{K}_{A} = \\bT_{\\gamma}^{-1} \\mathbf{K}_{B} \\bT_{\\gamma} \\end{equation} where the conjugating matrix \\(\\bT\\) is the group action on the space of observables, as Sinha et al.~\\cite{sinha2020} show.",
+   "papers": [
+    {
+     "key": "sinha2020",
+     "title": "Koopman operator methods for global phase space exploration of equivariant dynamical systems",
+     "arxiv": "2003.04870",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "\\textit{Reproduced with permission, from Sinha et al.~\\cite{sinha2020}.}} \\vspace{-.15in} \\end{figure} Even in the case that the full Koopman operator approximation may be directly computed, converting it to a block-diagonal form simplifies the task of computing its spectral properties as eigendecomposition may be performed on individual blocks instead of the entire operator. {Commutativity of two linear operators, the full Koopman operator and the multiplication by its approximate matrix representation, implies that they preserve each others eigenspaces}, further implying that even when the s",
+   "papers": [
+    {
+     "key": "sinha2020",
+     "title": "Koopman operator methods for global phase space exploration of equivariant dynamical systems",
+     "arxiv": "2003.04870",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "In~\\cite{salova2019}, this idea is taken as a starting point for a practical block-diagonalization of matrices appearing in DMD.",
+   "papers": [
+    {
+     "key": "salova2019",
+     "title": "Koopman operator and its approximations for systems with symmetries",
+     "arxiv": "1904.11472",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "\\textit{Reproduced with permission, from Salova et al. 2019 Chaos~\\cite{salova2019}}.} \\vspace{-.2in} \\end{figure} Generalization of this procedure to arbitrary finite groups is used as a preconditioning step in a modified eDMD (see \\cref{Sec:EDMD}) procedure in \\cite{salova2019}, resulting in a block-diagonalized form of the associated DMD matrix that approximates the Koopman operator.",
+   "papers": [
+    {
+     "key": "salova2019",
+     "title": "Koopman operator and its approximations for systems with symmetries",
+     "arxiv": "1904.11472",
+     "tex": "source"
+    },
+    {
+     "key": "salova2019",
+     "title": "Koopman operator and its approximations for systems with symmetries",
+     "arxiv": "1904.11472",
+     "tex": "source"
+    }
+   ]
+  }
+ ],
+ "Koopman operator and modern nonlinear dynamics|Adjoint: The Perron--Frobenius operator": [
+  {
+   "sentence": "Several papers~\\cite{koltai2019,klus2017data,klus2015numerical,bittracher2015,govindarajan2019} have treated both transfer operators, that is Koopman and Perron--Frobenius operators, using the same formalism, especially in the context of volume-preserving invertible dynamics and in the context of stochastic differential equations. } { An early, but still used, technique to approximate the Perron--Frobenius operator by a stochastic matrix is termed \\emph{Ulam's method} after a conjecture by S.~Ulam~\\cite[\\S IV.4]{ulam1960problems}, ultimately proved to be correct by Y.~Li~\\cite{li1976}.} First,",
+   "papers": [
+    {
+     "key": "klus2017data",
+     "title": "Data-driven model reduction and transfer operator approximation",
+     "arxiv": "1703.10112",
+     "tex": "source"
+    },
+    {
+     "key": "klus2015numerical",
+     "title": "On the numerical approximation of the Perron-Frobenius and Koopman operator",
+     "arxiv": "1512.05997",
+     "tex": "source"
+    },
+    {
+     "key": "govindarajan2019",
+     "title": "On the Approximation of Koopman Spectra for Measure Preserving Transformations",
+     "arxiv": "1803.03920",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "While this approach dates back to the classical theory of measure-preserving transformations in~\\cite{halmos1944a,katok1967,lax1971} and \\cite[P.IV]{cornfeld1982}, it has been computationally revisited recently by~\\cite{govindarajan2019} to approximate the continuous spectrum of Koopman and Perron--Frobenious operators and compute their spectral projectors.} Eigenfunctions of the PF operator correspond to complex-valued distributions of points in state space that evolve according to the associated eigenvalue \\begin{equation} \\label{eq:evolution-pf} \\pf^{t} \\rho = \\lambda^{t} \\rho.",
+   "papers": [
+    {
+     "key": "govindarajan2019",
+     "title": "On the Approximation of Koopman Spectra for Measure Preserving Transformations",
+     "arxiv": "1803.03920",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Approximating \\(\\mathcal{A}\\) instead of \\(\\pf\\) leads to so-called \\emph{simulation-free} numerical techniques that can be interpreted either as finite-volume methods for the advection of PDEs, or as spectral collocation methods~\\cite{froyland2013,bittracher2015}.",
+   "papers": [
+    {
+     "key": "froyland2013",
+     "title": "Estimating Long-Term Behavior of Flows without Trajectory Integration: The Infinitesimal Generator Approach",
+     "arxiv": "1101.4166",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "For example, approximation of invariant sets via Koopman eigenfunctions in \\cite{budisic2012physd,levnajic2010,levnajic2015} relies on long-duration trajectories, while Ulam's approximation of PF typically requires short bursts of trajectories but seeded densely in the domain. ",
+   "papers": [
+    {
+     "key": "budisic2012physd",
+     "title": "Geometry of the ergodic quotient reveals coherent structures in flows",
+     "arxiv": "1204.2050",
+     "tex": "source"
+    },
+    {
+     "key": "levnajic2010",
+     "title": "Ergodic theory and visualization. I. Mesochronic plots for visualization of ergodic partition and invariant sets",
+     "arxiv": "0805.4221",
+     "tex": "source"
+    }
+   ]
+  }
+ ],
+ "Koopman operator and modern nonlinear dynamics|Spectrum beyond eigenvalues": [
+  {
+   "sentence": "Standard textbooks on functional analysis commonly provide an introductory treatment of these concepts; however, among them we highlight~\\cite{reed1978,reed1980,lax2002}, which include examples relating to the Koopman operator. {In linear algebra, that is for operators induced by matrix multiplication, the \\emph{spectrum} \\(\\sigma(\\bT)\\) is synonymous with the set of eigenvalues \\(\\lambda\\), that is scalars \\(\\lambda\\) such that \\begin{equation} \\label{eq:eigenvalue} \\bT \\bxi = \\lambda \\bxi, \\text{ or } (\\bT - \\lambda \\mathbf{I}) \\bxi = 0, \\end{equation} for some vector \\(\\bxi \\in \\mathcal{G}\\",
+   "papers": [
+    {
+     "key": "lax2002",
+     "title": "Functional Analysis",
+     "arxiv": "1003.1117",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Then, the classical spectral resolution theorem (due to Hilbert, Stone, and Hellinger) applies to \\(\\koop\\)~\\cite{mezic2004physicad,mezic2005nd,lax2002} as \\begin{equation} \\label{eq:spectral-decomposition} \\begin{aligned}[t] \\koop^{n} g = \\int_{-\\pi}^{\\pi} e^{in\\omega} d[\\mathbb{E}(\\omega) g] = \\underbrace{\\sum_{k} e^{in\\omega_{k}} \\mathbb{P}_{k} g}_{\\text{atomic}} + \\underbrace{\\int_{-\\pi}^{\\pi} e^{in\\omega} d[\\mathbb{E}_{c}(\\omega) g]}_{\\text{continuous}}, \\end{aligned} \\end{equation} where the operator-valued \\emph{spectral measure} \\(\\mathbb{E}\\) forms a partition of unity and can be sepa",
+   "papers": [
+    {
+     "key": "lax2002",
+     "title": "Functional Analysis",
+     "arxiv": "1003.1117",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "In~\\cite{korda2020} the Fourier coefficients (or trigonometric moments), computed by ergodic averages~\\eqref{eq:correlation-fourier-spectrum}, are used to formulate the moment problem for the density~\\(d\\sigma_{g}/d\\theta\\), which is solved using a variational approach based on the Christoffel--Darboux kernel.",
+   "papers": [
+    {
+     "key": "korda2020",
+     "title": "Data-driven spectral analysis of the Koopman operator",
+     "arxiv": "1710.06532",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Constructions involved relate to the HAVOK algorithm~\\cite{brunton2017natcomm,arbabi2017} (see \\cref{Sec:HAVOK}) due to the correlation function that connects time-delayed samples of the observable.",
+   "papers": [
+    {
+     "key": "brunton2017natcomm",
+     "title": "Chaos as an intermittently forced linear system",
+     "arxiv": "1608.05306",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "\\Cref{fig:koopman-continuous-spectral-measure} demonstrates this approach on an example of the Lorenz'63 dynamical system that is known to be mixing on the attractor~\\cite{Luzzatto2005} by computing its spectral density and a spectral projection for a spectral interval containing significant dynamical content.",
+   "papers": [
+    {
+     "key": "Luzzatto2005",
+     "title": "The Lorenz Attractor is Mixing",
+     "arxiv": "math/0410231",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Anal.~\\cite{korda2020}.}} \\label{fig:koopman-continuous-spectral-measure} \\vspace{-.25in} \\end{figure} \\subsubsection{Removing the continuous spectrum by ``rigging''} To illustrate that existence of the continuous spectrum (as defined by non-surjectivity of \\(\\koop - \\lambda \\mathcal{I}\\)) is not necessarily connected with irregular behavior, \\cite{mezic2019} studies in detail the pendulum \\begin{equation} \\label{eq:physical-pendulum} \\dot \\alpha = v, \\quad \\dot v = -\\sin\\theta \\end{equation} which can be converted to action-angle variables with \\(I \\geq 0 \\) representing the conserved quantit",
+   "papers": [
+    {
+     "key": "korda2020",
+     "title": "Data-driven spectral analysis of the Koopman operator",
+     "arxiv": "1710.06532",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "\\end{equation} { This example has also been revisited in~\\cite{bollt2021}.} The example above illustrates how a \\emph{rigged}\\footnote{This metaphor is intended to evoke a utilitarian \\emph{rigging of a ship}, rather than a nefarious \\emph{rigging of a match}.}, or \\emph{equipped} Hilbert space can convert a continuous spectrum (containing no eigenvalues) to a continuum of eigenvalues~\\cite{antoniou1997a,suchanecki1996,tasaki1993,madrid2002a}.",
+   "papers": [
+    {
+     "key": "bollt2021",
+     "title": "Geometric Considerations of a Good Dictionary for Koopman Analysis of Dynamical Systems: Cardinality",
+     "arxiv": "1912.09570",
+     "tex": "source"
+    },
+    {
+     "key": "madrid2002a",
+     "title": "Rigged Hilbert Space Treatment of Continuous Spectrum",
+     "arxiv": "quant-ph/0109154",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "By enlarging the domain of the Koopman operator, surjectivity of \\((\\koop-\\lambda \\mathcal{I})\\) can be mostly restored, resulting in shrinking of the continuous spectrum to a set of discrete values~\\cite{slipantschuk2020}.",
+   "papers": [
+    {
+     "key": "slipantschuk2020",
+     "title": "Dynamic mode decomposition for analytic maps",
+     "arxiv": "1905.09266",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "While the rigged Hilbert space framework has existed since the 1950s and Gelfand, the approach has been used to analyze the Koopman and Perron--Frobenius operators only since the 1990s, and for quantum theory a decade later \\cite{madrid2005,madrid2002a}.",
+   "papers": [
+    {
+     "key": "madrid2005",
+     "title": "The role of the rigged Hilbert space in quantum mechanics",
+     "arxiv": "quant-ph/0502053",
+     "tex": "source"
+    },
+    {
+     "key": "madrid2002a",
+     "title": "Rigged Hilbert Space Treatment of Continuous Spectrum",
+     "arxiv": "quant-ph/0109154",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Only in the past two years have the modern numerical approaches such as DMD, started to connect to this theory \\cite{mezic2019,slipantschuk2020}, so we expect the growth of interest in this area in the coming years. ",
+   "papers": [
+    {
+     "key": "slipantschuk2020",
+     "title": "Dynamic mode decomposition for analytic maps",
+     "arxiv": "1905.09266",
+     "tex": "source"
+    }
+   ]
+  }
+ ],
+ "Koopman operator and modern nonlinear dynamics|Koopman operators for nonautonomous and stochastic dynamics": [
+  {
+   "sentence": "The first systematic treatment of multiresolution analysis in the context of DMD presented the basic sliding strategy of computing DMD in several passes over the same set of snapshots~\\cite{kutz2016book,kutz2016siads}.",
+   "papers": [
+    {
+     "key": "kutz2016siads",
+     "title": "Multi-resolution dynamic mode decomposition",
+     "arxiv": "1506.00564",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Several additional strategies for sampling the data and moving the window were discussed, including connections to classical signal processing techniques, such as the Gabor transform~\\cite{kutz2016siads,brunton2016b}.",
+   "papers": [
+    {
+     "key": "kutz2016siads",
+     "title": "Multi-resolution dynamic mode decomposition",
+     "arxiv": "1506.00564",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "The overlap between consecutive windows can be exploited to compute a more accurate global reconstruction~\\cite{dylewsky2019}, and to reduce the computational effort required to compute the DMD~\\cite{zhang2019}.",
+   "papers": [
+    {
+     "key": "dylewsky2019",
+     "title": "Dynamic mode decomposition for multiscale nonlinear physics",
+     "arxiv": "1903.12480",
+     "tex": "source"
+    },
+    {
+     "key": "zhang2019",
+     "title": "Online Dynamic Mode Decomposition for Time-Varying Systems",
+     "arxiv": "1707.02876",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Sliding window strategies have been found useful even in autonomous systems~\\cite{chen2012jns}; for example, analytic solutions of autonomous dynamics that follow heteroclinic connections between an unstable and a stable fixed point were analyzed, where a well-tuned sliding window is able to discern the difference in DMD spectra near each of the fixed points~\\cite{page2019}.",
+   "papers": [
+    {
+     "key": "page2019",
+     "title": "Koopman mode expansions between simple invariant solutions",
+     "arxiv": "1811.05907",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "To illustrate the \\emph{process} formulation of nonautonomous systems~\\cite{kloeden_rasmussen_2011,caraballo2017,macesic2018siads}, consider the simple nonautonomous ODE \\begin{align} \\label{eq:nonautonomous-example} \\dot x(t) &= \\cos(t) x, \\ x(t_{0}) = x_{0} \\\\ \\shortintertext{solved by} x(t) &= \\flow_{t_{0}}^{t}(x_{0}) = x_{0} e^{\\sin(t_{0}) - \\sin(t)}.",
+   "papers": [
+    {
+     "key": "macesic2018siads",
+     "title": "Koopman operator family spectrum for nonautonomous systems",
+     "arxiv": "1703.07324",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "\\end{equation} The Koopman operator can now naturally be formed as a composition operator with this two-parameter flow map~\\cite{macesic2018siads} \\begin{equation} \\label{eq:cocycle-koopman} \\koop^{t}_{t_{0}} g = g \\circ \\flow^{t}_{\\tau}.",
+   "papers": [
+    {
+     "key": "macesic2018siads",
+     "title": "Koopman operator family spectrum for nonautonomous systems",
+     "arxiv": "1703.07324",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "However,~\\cite{macesic2018siads} demonstrate that a sliding-window approach may make large mistakes, especially when the window overlaps the region of rapid change in system parameters; the same source describes an algorithm that is able to detect the local error of a DMD approximation and adjust accordingly, which is particularly effective for so-called hybrid systems, in which the time dependency of the equations is discontinuous.",
+   "papers": [
+    {
+     "key": "macesic2018siads",
+     "title": "Koopman operator family spectrum for nonautonomous systems",
+     "arxiv": "1703.07324",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Furthermore, \\cite{macesic2018siads} find that methods based on Krylov subspaces, e.g., snapshot-based DMD algorithms, result in substantial errors in the real parts of eigenvalues when the time-dependence of eigenvalues is pronounced, and suggest that the problem can be mitigated by a guided selection of observables.",
+   "papers": [
+    {
+     "key": "macesic2018siads",
+     "title": "Koopman operator family spectrum for nonautonomous systems",
+     "arxiv": "1703.07324",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Assuming that the driving dynamics evolves on a compact state space, or otherwise is measurable with a well-defined invariant measure, is sufficient to justify computation of eigenfunctions using ergodic averages~\\eqref{eq:harmonic-average} for time-periodic systems and for systems driven by quasiperiodic dynamics~\\cite{budisic2012physd,susuki2020}.",
+   "papers": [
+    {
+     "key": "budisic2012physd",
+     "title": "Geometry of the ergodic quotient reveals coherent structures in flows",
+     "arxiv": "1204.2050",
+     "tex": "source"
+    },
+    {
+     "key": "susuki2020",
+     "title": "Invariant Sets in Quasiperiodically Forced Dynamical Systems",
+     "arxiv": "1808.08340",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Depending on the properties of the driving system, this framework can encompass not only systems such as \\eqref{eq:nonautonomous-example-skew}, but also so-called \\emph{random dynamical systems} (RDS)~\\cite{arnold1998,caraballo2017} for which the driving system on \\(\\mathcal{Y}\\) is simply assumed to be a measure-preserving dynamical system~\\cite{macesic2020, crnjaric-zic2020}.",
+   "papers": [
+    {
+     "key": "arnold1998",
+     "title": "Random Dynamical Systems",
+     "arxiv": "math/0608162",
+     "tex": "source"
+    },
+    {
+     "key": "crnjaric-zic2020",
+     "title": "Koopman Operator Spectrum for Random Dynamical Systems",
+     "arxiv": "1711.03146",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "While several special cases have been discussed in recent literature~\\cite{crnjaric-zic2020}, we focus here on the case of Markovian RDS.",
+   "papers": [
+    {
+     "key": "crnjaric-zic2020",
+     "title": "Koopman Operator Spectrum for Random Dynamical Systems",
+     "arxiv": "1711.03146",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "\\end{equation} It is then possible to define a \\emph{stochastic} Koopman operator by computing the expectation of the skew-Koopman operator~\\eqref{eq:skew-koopman} (with continuous time domain) over the invariant probability of the driving flow~\\cite{arnold1998,mezic2004physicad}: \\begin{equation} \\label{eq:stochastic-koopman} [\\koop^{t}_{S} g](\\bx) \\coloneqq \\mathbb{E}_{\\by}\\{ g( \\bF^{t}_{\\by}(\\bx) ) \\}.",
+   "papers": [
+    {
+     "key": "arnold1998",
+     "title": "Random Dynamical Systems",
+     "arxiv": "math/0608162",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "\\end{equation} {The generator-based approach to the Koopman operator for SDEs has been pursued in~\\cite{klus2020}, which includes several applications and discusses the model-predictive control (MPC) framework based on the Koopman generator.} Several DMD algorithms have been adapted to the RDS setting for the Koopman operator~\\cite{crnjaric-zic2020, takeishi2017}, with convergence assurances.",
+   "papers": [
+    {
+     "key": "klus2020",
+     "title": "Data-driven approximation of the Koopman generator: Model reduction, system identification, and control",
+     "arxiv": "1909.10638",
+     "tex": "source"
+    },
+    {
+     "key": "crnjaric-zic2020",
+     "title": "Koopman Operator Spectrum for Random Dynamical Systems",
+     "arxiv": "1711.03146",
+     "tex": "source"
+    },
+    {
+     "key": "takeishi2017",
+     "title": "Subspace dynamic mode decomposition for stochastic Koopman analysis",
+     "arxiv": "1705.04908",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "An explicit optimization-based approximation of the Koopman operator in the RDS context has been given in~\\cite{sinha2020a}.",
+   "papers": [
+    {
+     "key": "sinha2020a",
+     "title": "On Robust Computation of Koopman Operator and Prediction in Random Dynamical Systems",
+     "arxiv": "1803.08562",
+     "tex": "source"
+    }
+   ]
+  }
+ ],
+ "Koopman operator and modern nonlinear dynamics|Partial differential equations": [
+  {
+   "sentence": "To demonstrate the construction of a specific and exact Koopman operator, we consider Burgers' equation with diffusive regularization and its associated Koopman embedding~\\cite{kutz2018,page2019,page2018a,balabane2020koopman}.",
+   "papers": [
+    {
+     "key": "page2019",
+     "title": "Koopman mode expansions between simple invariant solutions",
+     "arxiv": "1811.05907",
+     "tex": "source"
+    },
+    {
+     "key": "page2018a",
+     "title": "Koopman analysis of Burgers equation",
+     "arxiv": "1712.06369",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "As such, Burgers' equation allows one to build explicit representations of Koopman operators that characterize its nonlinear evolution~\\cite{kutz2018,page2018a}.",
+   "papers": [
+    {
+     "key": "page2018a",
+     "title": "Koopman analysis of Burgers equation",
+     "arxiv": "1712.06369",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Parker and Page~\\cite{parker2019koopman} recently developed a detailed analysis of fronts and solitons in a variety of systems and explicitly connected their findings to the IST.",
+   "papers": [
+    {
+     "key": "parker2019koopman",
+     "title": "Koopman analysis of isolated fronts and solitons",
+     "arxiv": "1903.04247",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "DMD provides an efficient algorithm to do so~\\cite{kutz2018,page2019,page2018a,balabane2020koopman}.",
+   "papers": [
+    {
+     "key": "page2019",
+     "title": "Koopman mode expansions between simple invariant solutions",
+     "arxiv": "1811.05907",
+     "tex": "source"
+    },
+    {
+     "key": "page2018a",
+     "title": "Koopman analysis of Burgers equation",
+     "arxiv": "1712.06369",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "And more recently, Nakao and Mezic~\\cite{nakao2020} introduce the concept of Koopman eigenfunctionals of PDEs and use the notion of conjugacy to develop spectral expansion of the Koopman operator.",
+   "papers": [
+    {
+     "key": "nakao2020",
+     "title": "Spectral analysis of the Koopman operator for partial differential equations",
+     "arxiv": "2004.10074",
+     "tex": "source"
+    }
+   ]
+  }
+ ],
+ "Data-driven observable selection and embeddings|None": [
+  {
+   "sentence": "It is thus common to augment DMD with nonlinear functions of the measurements~\\cite{williams2015jnls}, although there is no guarantee that these functions will form a closed subspace under the Koopman operator~\\cite{brunton2016plosone}.",
+   "papers": [
+    {
+     "key": "williams2015jnls",
+     "title": "A data-driven approximation of the Koopman operator: extending dynamic mode decomposition",
+     "arxiv": "1408.4408",
+     "tex": "source"
+    },
+    {
+     "key": "brunton2016plosone",
+     "title": "Koopman invariant subspaces and finite linear representations of nonlinear dynamical systems for control",
+     "arxiv": "1510.03007",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "In this section, we cover several leading approaches to identify and represent Koopman embeddings from data, including the extended dynamic mode decomposition~\\cite{williams2015jnls} and methods to directly identify eigenfunctions~\\cite{kaiser2017arxiv}, the use of time-delay coordinates~\\cite{brunton2017natcomm}, as well as machine learning approaches such as diffusion maps~\\cite{giannakis2019} and deep neural networks~\\cite{wehmeyer2017arxiv,mardt2017arxiv,Takeishi2017neurips,yeung2017arxiv,otto2017arxiv,lusch2017arxiv}. {The convergence and robustness of these data-driven approximation algo",
+   "papers": [
+    {
+     "key": "williams2015jnls",
+     "title": "A data-driven approximation of the Koopman operator: extending dynamic mode decomposition",
+     "arxiv": "1408.4408",
+     "tex": "source"
+    },
+    {
+     "key": "kaiser2017arxiv",
+     "title": "Data-driven discovery of Koopman eigenfunctions for control",
+     "arxiv": "1707.01146",
+     "tex": "source"
+    },
+    {
+     "key": "brunton2017natcomm",
+     "title": "Chaos as an intermittently forced linear system",
+     "arxiv": "1608.05306",
+     "tex": "source"
+    },
+    {
+     "key": "giannakis2019",
+     "title": "Data-driven spectral decomposition and forecasting of ergodic dynamical systems",
+     "arxiv": "1507.02338",
+     "tex": "source"
+    },
+    {
+     "key": "wehmeyer2017arxiv",
+     "title": "Time-lagged autoencoders: Deep learning of slow collective variables for molecular kinetics",
+     "arxiv": "1710.11239",
+     "tex": "source"
+    },
+    {
+     "key": "mardt2017arxiv",
+     "title": "VAMPnets: Deep learning of molecular kinetics",
+     "arxiv": "1710.06012",
+     "tex": "source"
+    },
+    {
+     "key": "Takeishi2017neurips",
+     "title": "Learning Koopman invariant subspaces for dynamic mode decomposition",
+     "arxiv": "1710.04340",
+     "tex": "source"
+    },
+    {
+     "key": "yeung2017arxiv",
+     "title": "Learning deep neural network representations for Koopman operators of nonlinear dynamical systems",
+     "arxiv": "1708.06850",
+     "tex": "source"
+    },
+    {
+     "key": "otto2017arxiv",
+     "title": "Linearly-recurrent autoencoder networks for learning dynamics",
+     "arxiv": "1712.01378",
+     "tex": "source"
+    },
+    {
+     "key": "lusch2017arxiv",
+     "title": "Deep learning for universal linear embeddings of nonlinear dynamics",
+     "arxiv": "1712.09707",
+     "tex": "source"
+    }
+   ]
+  }
+ ],
+ "Data-driven observable selection and embeddings|Extended DMD": [
+  {
+   "sentence": "\\subsection{Extended DMD}\\label{Sec:EDMD} Although DMD~\\cite{schmid2010jfm} has become a standard numerical approach to approximate the Koopman operator~\\cite{rowley2009jfm,tu2014jcd,kutz2016book}, it is based on linear measurements of the system and is unable to identify nonlinear changes of coordinates necessary to approximate the Koopman operator for strongly nonlinear systems.",
+   "papers": [
+    {
+     "key": "tu2014jcd",
+     "title": "On dynamic mode decomposition: theory and applications",
+     "arxiv": "1312.0041",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "The extended dynamic mode decomposition (eDMD)~\\cite{williams2015jnls,williams2015jcd,klus2015numerical} was introduced by Williams et al. to address this issue, so that the best-fit linear DMD regression is performed on an augmented vector containing nonlinear measurements of the state.",
+   "papers": [
+    {
+     "key": "williams2015jnls",
+     "title": "A data-driven approximation of the Koopman operator: extending dynamic mode decomposition",
+     "arxiv": "1408.4408",
+     "tex": "source"
+    },
+    {
+     "key": "klus2015numerical",
+     "title": "On the numerical approximation of the Perron-Frobenius and Koopman operator",
+     "arxiv": "1512.05997",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "The eDMD approach was recently shown to be equivalent to the earlier variational approach of conformation dynamics (VAC)~\\cite{noe2013variational,nuske2014jctc,nuske2016variational,wu2017variational,wu2020variational} from the molecular dynamics literature, as explored in the excellent review by Klus et al.~\\cite{klus2017data}.",
+   "papers": [
+    {
+     "key": "noe2013variational",
+     "title": "A variational approach to modeling slow processes in stochastic dynamical systems",
+     "arxiv": "1211.7103",
+     "tex": "source"
+    },
+    {
+     "key": "wu2017variational",
+     "title": "Variational koopman models: slow collective variables and molecular kinetics from short off-equilibrium simulations",
+     "arxiv": "1610.06773",
+     "tex": "source"
+    },
+    {
+     "key": "wu2020variational",
+     "title": "Variational approach for learning markov processes from time series data",
+     "arxiv": "1707.04659",
+     "tex": "source"
+    },
+    {
+     "key": "klus2017data",
+     "title": "Data-driven model reduction and transfer operator approximation",
+     "arxiv": "1703.10112",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "\\end{align} Because the augmented vector $\\bz$ may be significantly larger than the state $\\bx$, it is typically necessary to employ kernel methods to compute this regression~\\cite{williams2015jcd}. {The use of kernel methods to approximate the Koopman operator with DMD has become an important research topic in recent years~\\cite{williams2015jcd,fujii2019dynamic,das2020a,klus2020eigendecompositions,klus2020kernel,manohar2020kernel,baddoo2021kernel}.} In principle, the functions $\\{g_k\\}_{k=1}^p$ form an enriched basis in which to approximate the Koopman operator.",
+   "papers": [
+    {
+     "key": "fujii2019dynamic",
+     "title": "Dynamic mode decomposition in vector-valued reproducing kernel hilbert spaces for extracting dynamical structure among observables",
+     "arxiv": "1808.10551",
+     "tex": "source"
+    },
+    {
+     "key": "das2020a",
+     "title": "Koopman spectra in reproducing kernel Hilbert spaces",
+     "arxiv": "1801.07799",
+     "tex": "source"
+    },
+    {
+     "key": "klus2020eigendecompositions",
+     "title": "Eigendecompositions of transfer operators in reproducing kernel hilbert spaces",
+     "arxiv": "1712.01572",
+     "tex": "source"
+    },
+    {
+     "key": "manohar2020kernel",
+     "title": "Kernel analog forecasting: Multiscale test problems",
+     "arxiv": "2005.06623",
+     "tex": "source"
+    },
+    {
+     "key": "baddoo2021kernel",
+     "title": "Kernel learning for robust dynamic mode decomposition: Linear and nonlinear disambiguation optimization (LANDO)",
+     "arxiv": "2106.01510",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "In the limit of infinite data, the extended DMD {matrix} converges to the Koopman operator projected onto the subspace spanned by these functions~\\cite{korda2017arxiv}.",
+   "papers": [
+    {
+     "key": "korda2017arxiv",
+     "title": "On convergence of extended dynamic mode decomposition to the Koopman operator",
+     "arxiv": "1703.04680",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "However, if these functions do not span a Koopman invariant subspace, then the projected operator will have spurious eigenvalues and eigenvectors that differ from the true Koopman operator~\\cite{brunton2016plosone}.",
+   "papers": [
+    {
+     "key": "brunton2016plosone",
+     "title": "Koopman invariant subspaces and finite linear representations of nonlinear dynamical systems for control",
+     "arxiv": "1510.03007",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "\\end{equation} If we seek a \\emph{least-squares} fit to~\\eqref{Eq:DiscreteEDMD}, this reduces to extended DMD~\\cite{williams2015jcd,williams2015jnls}: \\begin{equation}\\label{Eqn:KoopmanEfunLSR} \\lambda\\bxi^T = \\bxi^T\\bZ'\\bZ^{\\dagger}.",
+   "papers": [
+    {
+     "key": "williams2015jnls",
+     "title": "A data-driven approximation of the Koopman operator: extending dynamic mode decomposition",
+     "arxiv": "1408.4408",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "It is essential to confirm that predicted eigenfunctions actually behave linearly on trajectories, by comparing them with the predicted dynamics ${\\varphi(\\bx_{k+1}) = \\lambda \\varphi(\\bx_k)}$, as the regression above will result in spurious eigenvalues and eigenvectors unless the basis elements $g_k$ span a Koopman invariant subspace~\\cite{brunton2016plosone}.",
+   "papers": [
+    {
+     "key": "brunton2016plosone",
+     "title": "Koopman invariant subspaces and finite linear representations of nonlinear dynamical systems for control",
+     "arxiv": "1510.03007",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "However, it was shown that including the state $\\bx$ in eDMD results in closure issues for systems with multiple fixed points, periodic orbits, or other attractors, because these systems cannot be topologically conjugate to a finite-dimensional linear eDMD system with a single fixed point~\\cite{brunton2016plosone}.",
+   "papers": [
+    {
+     "key": "brunton2016plosone",
+     "title": "Koopman invariant subspaces and finite linear representations of nonlinear dynamical systems for control",
+     "arxiv": "1510.03007",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "This principle of parsimony may also be used to identify Koopman eigenfunctions by selecting only the few most important terms in the basis $\\{g_k(\\bx)\\}_{k=1}^p$ needed to approximate $\\varphi$~\\cite{kaiser2017arxiv}.",
+   "papers": [
+    {
+     "key": "kaiser2017arxiv",
+     "title": "Data-driven discovery of Koopman eigenfunctions for control",
+     "arxiv": "1707.01146",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "\\end{align*} The Koopman eigenfunction equation then becomes: \\begin{equation} \\lambda\\bxi^T\\bZ - \\bxi^T\\bGamma = \\mathbf{0}.\\label{Eq:SparseKoopman} \\end{equation} Note that here we use notation where $\\bGamma$ is the transpose of the notation in Kaiser et al.~\\cite{kaiser2017arxiv} to be consistent with the eDMD notation above. ",
+   "papers": [
+    {
+     "key": "kaiser2017arxiv",
+     "title": "Data-driven discovery of Koopman eigenfunctions for control",
+     "arxiv": "1707.01146",
+     "tex": "source"
+    }
+   ]
+  }
+ ],
+ "Data-driven observable selection and embeddings|Time delay coordinates": [
+  {
+   "sentence": "In this case, it is possible to use time-delayed measurements of the system to build an augmented state vector, resulting in an intrinsic coordinate system that forms a Koopman-invariant subspace~\\cite{brunton2017natcomm}.",
+   "papers": [
+    {
+     "key": "brunton2017natcomm",
+     "title": "Chaos as an intermittently forced linear system",
+     "arxiv": "1608.05306",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "This architecture is called the Hankel alternative view of Koopman (HAVOK) analysis, from~\\cite{brunton2017natcomm}.",
+   "papers": [
+    {
+     "key": "brunton2017natcomm",
+     "title": "Chaos as an intermittently forced linear system",
+     "arxiv": "1608.05306",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "\\textit{Figure modified from Brunton et al.~\\cite{brunton2017natcomm}.}}\\label{Fig:HAVOK} \\end{center} \\end{figure} Because the columns of $\\mathbf{H}$, and hence $\\mathbf{U}$, form a Koopman-invariant subspace, it is possible to perform DMD on the two matrices formed from the first $p-1$ and last $p-1$ columns of $\\mathbf{H}$.",
+   "papers": [
+    {
+     "key": "brunton2017natcomm",
+     "title": "Chaos as an intermittently forced linear system",
+     "arxiv": "1608.05306",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "This results in a linear regression model on the variables in $\\mathbf{V}$ \\begin{eqnarray} \\frac{d}{dt}\\mathbf{v}(t) = \\mathbf{A}\\mathbf{v}(t).\\label{Eq:HAVOK1} \\end{eqnarray} Champion et al.~\\cite{champion2019discovery} showed that this linear system captures the dynamics of weakly nonlinear systems.",
+   "papers": [
+    {
+     "key": "champion2019discovery",
+     "title": "Discovery of nonlinear multiscale systems: Sampling strategies and embeddings",
+     "arxiv": "1805.07411",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "A linear model, however detailed, cannot capture multiple fixed points or the unpredictable behavior characteristic of chaos with a positive Lyapunov exponent~\\cite{brunton2016plosone}.",
+   "papers": [
+    {
+     "key": "brunton2016plosone",
+     "title": "Koopman invariant subspaces and finite linear representations of nonlinear dynamical systems for control",
+     "arxiv": "1510.03007",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Instead of constructing a closed linear model for the first $r$ variables in $\\mathbf{V}$, we build a linear model on the first $r-1$ variables and impose the last variable, $v_r$, as a forcing term~\\cite{brunton2017natcomm}: \\begin{eqnarray} \\frac{d}{dt}\\mathbf{v}(t) = \\mathbf{A}\\mathbf{v}(t) + \\mathbf{B}{v}_r(t),\\label{Eq:ChaosModel} \\end{eqnarray} where $\\mathbf{v}=\\begin{bmatrix}v_1 & v_2 & \\cdots & v_{r-1}\\end{bmatrix}^T$ is a vector of the first ${r-1}$ eigen-time-delay coordinates.",
+   "papers": [
+    {
+     "key": "brunton2017natcomm",
+     "title": "Chaos as an intermittently forced linear system",
+     "arxiv": "1608.05306",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "In all of the chaotic examples explored~\\cite{brunton2017natcomm}, the linear model on the first $r-1$ terms is accurate, while no linear model represents $v_r$.",
+   "papers": [
+    {
+     "key": "brunton2017natcomm",
+     "title": "Chaos as an intermittently forced linear system",
+     "arxiv": "1608.05306",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Modern Koopman operator theory has provided a valuable new perspective for how to interpret the results of these classical Hankel-based approaches when applied to nonlinear systems. } Computing DMD on a Hankel matrix was first introduced by Tu et al.~\\cite{tu2014jcd} and was used by B.",
+   "papers": [
+    {
+     "key": "tu2014jcd",
+     "title": "On dynamic mode decomposition: theory and applications",
+     "arxiv": "1312.0041",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "The connection between the Hankel matrix and the Koopman operator, along with the linear regression models in \\eqref{Eq:ChaosModel}, was established by Brunton et al.~\\cite{brunton2017natcomm} in the Hankel alternative view of Koopman (HAVOK) framework.",
+   "papers": [
+    {
+     "key": "brunton2017natcomm",
+     "title": "Chaos as an intermittently forced linear system",
+     "arxiv": "1608.05306",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Several subsequent works have provided additional theoretical foundations for this approach~\\cite{arbabi2017,das2017arxiv,Kamb2020siads,champion2019discovery,hirsh2019}.",
+   "papers": [
+    {
+     "key": "das2017arxiv",
+     "title": "Delay-coordinate maps and the spectra of Koopman operators",
+     "arxiv": "1706.08544",
+     "tex": "source"
+    },
+    {
+     "key": "Kamb2020siads",
+     "title": "Time-delay observables for Koopman: Theory and applications",
+     "arxiv": "1810.01479",
+     "tex": "source"
+    },
+    {
+     "key": "champion2019discovery",
+     "title": "Discovery of nonlinear multiscale systems: Sampling strategies and embeddings",
+     "arxiv": "1805.07411",
+     "tex": "source"
+    },
+    {
+     "key": "hirsh2019",
+     "title": "Centering data improves the dynamic mode decomposition",
+     "arxiv": "1906.05973",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Hirsh et al.~\\cite{hirsh2019} established connections between HAVOK and the Frenet-Serret frame from differential geometry, motivating a more accurate computational modeling approach.",
+   "papers": [
+    {
+     "key": "hirsh2019",
+     "title": "Centering data improves the dynamic mode decomposition",
+     "arxiv": "1906.05973",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "The HAVOK approach is also often referred to as delay-DMD~\\cite{tu2014jcd} or Hankel-DMD~\\cite{arbabi2017}.",
+   "papers": [
+    {
+     "key": "tu2014jcd",
+     "title": "On dynamic mode decomposition: theory and applications",
+     "arxiv": "1312.0041",
+     "tex": "source"
+    }
+   ]
+  }
+ ],
+ "Data-driven observable selection and embeddings|Diffusion maps for Koopman embeddings": [
+  {
+   "sentence": "\\subsection{Diffusion maps for Koopman embeddings}\\label{Sec:Diffusion} Diffusion maps are a recently developed nonlinear dimensionality-reduction technique for embedding high-dimensional data on nonlinear manifolds~\\cite{coifman2005pnas,coifman2006acha,coifman2008mmas,nadler2006acha}.",
+   "papers": [
+    {
+     "key": "nadler2006acha",
+     "title": "Diffusion maps, spectral clustering and reaction coordinates of dynamical systems",
+     "arxiv": "math/0503445",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "The methodology can also be used for forecasting~\\cite{manohar2020kernel}, for example leveraging time-delay embeddings to provide a nonparametric forecasting method for data generated by ergodic dynamical systems~\\cite{giannakis2019}.",
+   "papers": [
+    {
+     "key": "manohar2020kernel",
+     "title": "Kernel analog forecasting: Multiscale test problems",
+     "arxiv": "2005.06623",
+     "tex": "source"
+    },
+    {
+     "key": "giannakis2019",
+     "title": "Data-driven spectral decomposition and forecasting of ergodic dynamical systems",
+     "arxiv": "1507.02338",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Giannakis~\\cite{giannakis2019} establishes in such a representation a correspondence between Koopman operators and Laplace-Beltrami operators constructed from data in Takens delay-coordinate space, using this correspondence to provide an interpretation of diffusion-mapped delay coordinates for ergodic systems. ",
+   "papers": [
+    {
+     "key": "giannakis2019",
+     "title": "Data-driven spectral decomposition and forecasting of ergodic dynamical systems",
+     "arxiv": "1507.02338",
+     "tex": "source"
+    }
+   ]
+  }
+ ],
+ "Data-driven observable selection and embeddings|Neural networks for Koopman embeddings": [
+  {
+   "sentence": "Deep learning is well-suited for representing such arbitrarily complex functions, and has recently shown tremendous promise for discovering and representing Koopman embeddings and Koopman forecasts~\\cite{wehmeyer2017arxiv,mardt2017arxiv,Takeishi2017neurips,yeung2017arxiv,otto2017arxiv,li2017chaos,lusch2017arxiv,mardt2020deep,azencot2020forecasting,lange2020fourier,eivazi2021recurrent}. {In addition to leveraging neural networks to learn Koopman embeddings, Koopman theory is also being applied to understand neural networks~\\cite{manojlovic2020applications,dogra2020optimizing}, and algorithms mo",
+   "papers": [
+    {
+     "key": "wehmeyer2017arxiv",
+     "title": "Time-lagged autoencoders: Deep learning of slow collective variables for molecular kinetics",
+     "arxiv": "1710.11239",
+     "tex": "source"
+    },
+    {
+     "key": "mardt2017arxiv",
+     "title": "VAMPnets: Deep learning of molecular kinetics",
+     "arxiv": "1710.06012",
+     "tex": "source"
+    },
+    {
+     "key": "Takeishi2017neurips",
+     "title": "Learning Koopman invariant subspaces for dynamic mode decomposition",
+     "arxiv": "1710.04340",
+     "tex": "source"
+    },
+    {
+     "key": "yeung2017arxiv",
+     "title": "Learning deep neural network representations for Koopman operators of nonlinear dynamical systems",
+     "arxiv": "1708.06850",
+     "tex": "source"
+    },
+    {
+     "key": "otto2017arxiv",
+     "title": "Linearly-recurrent autoencoder networks for learning dynamics",
+     "arxiv": "1712.01378",
+     "tex": "source"
+    },
+    {
+     "key": "li2017chaos",
+     "title": "Extended dynamic mode decomposition with dictionary learning: A data-driven adaptive spectral decomposition of the Koopman operator",
+     "arxiv": "1707.00225",
+     "tex": "source"
+    },
+    {
+     "key": "lusch2017arxiv",
+     "title": "Deep learning for universal linear embeddings of nonlinear dynamics",
+     "arxiv": "1712.09707",
+     "tex": "source"
+    },
+    {
+     "key": "mardt2020deep",
+     "title": "Deep learning markov and koopman models with physical constraints",
+     "arxiv": "1912.07392",
+     "tex": "source"
+    },
+    {
+     "key": "azencot2020forecasting",
+     "title": "Forecasting sequential data using consistent koopman autoencoders",
+     "arxiv": "2003.02236",
+     "tex": "source"
+    },
+    {
+     "key": "lange2020fourier",
+     "title": "From Fourier to Koopman: Spectral methods for long-term time series prediction.",
+     "arxiv": "2004.00574",
+     "tex": "source"
+    },
+    {
+     "key": "eivazi2021recurrent",
+     "title": "Recurrent neural networks and koopman-based frameworks for temporal predictions in a low-order model of turbulence",
+     "arxiv": "2005.02762",
+     "tex": "source"
+    },
+    {
+     "key": "manojlovic2020applications",
+     "title": "Applications of koopman mode analysis to neural networks",
+     "arxiv": "2006.11765",
+     "tex": "source"
+    },
+    {
+     "key": "dogra2020optimizing",
+     "title": "Optimizing neural networks via Koopman operator theory",
+     "arxiv": "2006.02361",
+     "tex": "source"
+    },
+    {
+     "key": "dietrich2020koopman",
+     "title": "On the koopman operator of algorithms",
+     "arxiv": "1907.10807",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Autoencoders are already widely used to model complex systems, for example in fluid mechanics~\\cite{Brunton2020arfm}, and they may be viewed as nonlinear extensions of the singular value decomposition, which is central to the DMD algorithm.",
+   "papers": [
+    {
+     "key": "Brunton2020arfm",
+     "title": "Machine learning for fluid mechanics",
+     "arxiv": "1905.11075",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Similarly, if the matrix $\\mathbf{K}$ is diagonalized, then the embedding functions $\\boldsymbol{\\varphi}$ correspond to Koopman eigenfunctions~\\cite{lusch2017arxiv,gin2019deep}.",
+   "papers": [
+    {
+     "key": "lusch2017arxiv",
+     "title": "Deep learning for universal linear embeddings of nonlinear dynamics",
+     "arxiv": "1712.09707",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Variational autoencoders are also used for stochastic dynamical systems, such as molecular dynamics, where the map back to physical configuration space from the latent variables is probabilistic~\\cite{wehmeyer2017arxiv,mardt2017arxiv}.",
+   "papers": [
+    {
+     "key": "wehmeyer2017arxiv",
+     "title": "Time-lagged autoencoders: Deep learning of slow collective variables for molecular kinetics",
+     "arxiv": "1710.11239",
+     "tex": "source"
+    },
+    {
+     "key": "mardt2017arxiv",
+     "title": "VAMPnets: Deep learning of molecular kinetics",
+     "arxiv": "1710.06012",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "In contrast, the second paradigm, where measurements are lifted to a higher-dimensional space, is related to many results in machine learning, such as Cover's theorem~\\cite{lange2020fourier}, where nonlinear problems tend to become more linear in higher-dimensional embeddings.",
+   "papers": [
+    {
+     "key": "lange2020fourier",
+     "title": "From Fourier to Koopman: Spectral methods for long-term time series prediction.",
+     "arxiv": "2004.00574",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "\\textit{Right panel reproduced from Lusch et al.~\\cite{lusch2017arxiv}.}} \\label{fig:ContinuousSpectrum} \\vspace{-.2in} \\end{figure} For simple systems with a discrete eigenvalue spectrum, a compact representation may be obtained in terms of a few autoencoder variables.",
+   "papers": [
+    {
+     "key": "lusch2017arxiv",
+     "title": "Deep learning for universal linear embeddings of nonlinear dynamics",
+     "arxiv": "1712.09707",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "In a recent work by Lusch et al.~\\cite{lusch2017arxiv}, an auxiliary network is used to parameterize the continuously varying eigenvalue, enabling a network structure that is both parsimonious and interpretable.",
+   "papers": [
+    {
+     "key": "lusch2017arxiv",
+     "title": "Deep learning for universal linear embeddings of nonlinear dynamics",
+     "arxiv": "1712.09707",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Related work has been developed to identify the analogues of Green's functions for nonlinear systems~\\cite{gin2020deepgreen}. { ",
+   "papers": [
+    {
+     "key": "gin2020deepgreen",
+     "title": "DeepGreen: Deep learning of Green's functions for nonlinear boundary value problems",
+     "arxiv": "2101.07206",
+     "tex": "source"
+    }
+   ]
+  }
+ ],
+ "Data-driven observable selection and embeddings|Convergence of data-driven Koopman approximations": [
+  {
+   "sentence": "Computations involving the companion matrix and its diagonalizing transform, the Vandermonde matrix, are ill-conditioned; an excellent summary of the delicateness of working with companion matrices from the perspective of numerical linear algebra is given in a sequence of papers by Drma\\v{c} et al.~\\cite{drmac2018,drmac2019,drmac2020}.",
+   "papers": [
+    {
+     "key": "drmac2018",
+     "title": "Data driven modal decompositions: Analysis and enhancements",
+     "arxiv": "1708.02685",
+     "tex": "source"
+    },
+    {
+     "key": "drmac2019",
+     "title": "Data Driven Koopman Spectral Analysis in Vandermonde--Cauchy Form via the DFT: Numerical Method and Theoretical Insights",
+     "arxiv": "1808.09557",
+     "tex": "source"
+    },
+    {
+     "key": "drmac2020",
+     "title": "On Least Squares Problems with Certain Vandermonde--Khatri--Rao Structure with Applications to DMD",
+     "arxiv": "1811.12562",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Despite numerical fragility, the Vandermonde matrix interpretation leads to valuable insights into connections between DMD, the discrete Fourier transform~\\cite{chen2012jns}, and Prony analysis~\\cite{susuki2015,zhen2021,arbabi2017}.",
+   "papers": [
+    {
+     "key": "zhen2021",
+     "title": "Singular Values of Hankel Matrix: Implication to the Convergence of Hankel Dynamic Mode Decomposition",
+     "arxiv": "2107.01948",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "The optimized DMD~\\cite{chen2012jns}, and more recently the stabilization of the Vandermonde interpretation of DMD~\\cite{drmac2020,drmac2019}, have made the Arnoldi interpretation a practically viable approach to computing DMD.",
+   "papers": [
+    {
+     "key": "drmac2020",
+     "title": "On Least Squares Problems with Certain Vandermonde--Khatri--Rao Structure with Applications to DMD",
+     "arxiv": "1811.12562",
+     "tex": "source"
+    },
+    {
+     "key": "drmac2019",
+     "title": "Data Driven Koopman Spectral Analysis in Vandermonde--Cauchy Form via the DFT: Numerical Method and Theoretical Insights",
+     "arxiv": "1808.09557",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "The convergence and robustness of DMD-based algorithms has benefited from the interpretation of exact DMD~\\cite{schmid2010jfm,tu2014jcd} as computing spectral data of a low-rank approximation of the Koopman operator via regression on a subspace of observables.",
+   "papers": [
+    {
+     "key": "tu2014jcd",
+     "title": "On dynamic mode decomposition: theory and applications",
+     "arxiv": "1312.0041",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "The extended DMD (eDMD)~\\cite{williams2015jnls} (see ~\\cref{Sec:EDMD}) enables this argument by augmenting the state vector, amounting to the vector-valued observable \\(\\bg(\\bx) = \\bx\\), with nonlinear transformations of the input data, typically chosen from a basis of functions spanning the space of observables.",
+   "papers": [
+    {
+     "key": "williams2015jnls",
+     "title": "A data-driven approximation of the Koopman operator: extending dynamic mode decomposition",
+     "arxiv": "1408.4408",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Initial convergence arguments by Williams et al.~\\cite{williams2015jnls} and Klus et al.~\\cite{klus2015numerical} showed that eDMD is equivalent to a Galerkin projection of the Koopman operator onto a subspace of the \\(L^{2}\\) space with respect to an ergodic measure.",
+   "papers": [
+    {
+     "key": "williams2015jnls",
+     "title": "A data-driven approximation of the Koopman operator: extending dynamic mode decomposition",
+     "arxiv": "1408.4408",
+     "tex": "source"
+    },
+    {
+     "key": "klus2015numerical",
+     "title": "On the numerical approximation of the Perron-Frobenius and Koopman operator",
+     "arxiv": "1512.05997",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "This was further refined and improved upon by Korda and Mezi\\'{c}~\\cite{korda2017arxiv}, showing that the eDMD approximation converges in operator norm to the compression of the Koopman operator to a chosen subspace of observables for ergodic dynamics in the limit of long trajectories.",
+   "papers": [
+    {
+     "key": "korda2017arxiv",
+     "title": "On convergence of extended dynamic mode decomposition to the Koopman operator",
+     "arxiv": "1703.04680",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "While SOT is not enough to guarantee convergence of the spectrum, the eigenvalues of the Koopman operator are among accumulation points of eDMD eigenvalues~\\cite{korda2017arxiv}.",
+   "papers": [
+    {
+     "key": "korda2017arxiv",
+     "title": "On convergence of extended dynamic mode decomposition to the Koopman operator",
+     "arxiv": "1703.04680",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Since many models of physics are stated as differential equations, the generator may have a direct link to the physics or may be more easily exploited for control~\\cite{klus2020,sechi2021,mauroy2020tac}.",
+   "papers": [
+    {
+     "key": "klus2020",
+     "title": "Data-driven approximation of the Koopman generator: Model reduction, system identification, and control",
+     "arxiv": "1909.10638",
+     "tex": "source"
+    },
+    {
+     "key": "mauroy2020tac",
+     "title": "Koopman-based lifting techniques for nonlinear systems identification",
+     "arxiv": "1709.02003",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Additionally, in certain contexts it is possible to establish stronger convergence results when working with the generator instead of the Koopman operator itself~\\cite{rosenfeld2021}.",
+   "papers": [
+    {
+     "key": "rosenfeld2021",
+     "title": "Dynamic Mode Decomposition for Continuous Time Systems with the Liouville Operator",
+     "arxiv": "1910.03977",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Similar arguments apply to the approximation of the Perron--Frobenius operator and its generator~\\cite{froyland2016,froyland2013}, discussed in \\cref{sec:perron-frobenius}.",
+   "papers": [
+    {
+     "key": "froyland2016",
+     "title": "A trajectory-free framework for analysing multiscale systems",
+     "arxiv": "1412.7268",
+     "tex": "source"
+    },
+    {
+     "key": "froyland2013",
+     "title": "Estimating Long-Term Behavior of Flows without Trajectory Integration: The Infinitesimal Generator Approach",
+     "arxiv": "1101.4166",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "One approach is to first approximate the Koopman operator family, and then use a finite-difference approximation to compute the Lie derivative of the Koopman operator~\\cite{giannakis2020a,sechi2021}.",
+   "papers": [
+    {
+     "key": "giannakis2020a",
+     "title": "Delay-coordinate maps, coherence, and approximate spectra of evolution operators",
+     "arxiv": "2007.02195",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Alternatively, the relationship between the Koopman operator and its generator \\begin{equation} \\label{eq:lie-exponential} \\koop{}^{t} = \\exp[t \\gen{}] \\end{equation} can be inverted, and the generator computed by approximating the matrix logarithm of the Koopman operator~\\cite{mauroy2020tac}.",
+   "papers": [
+    {
+     "key": "mauroy2020tac",
+     "title": "Koopman-based lifting techniques for nonlinear systems identification",
+     "arxiv": "1709.02003",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Another approach is to apply the eDMD regression to~\\eqref{eq:Lie-derivative} by computing time derivatives of the basis of observables~\\cite{klus2020,klus2020kernel,rosenfeld2021,rosenfeld2021a}.",
+   "papers": [
+    {
+     "key": "klus2020",
+     "title": "Data-driven approximation of the Koopman generator: Model reduction, system identification, and control",
+     "arxiv": "1909.10638",
+     "tex": "source"
+    },
+    {
+     "key": "rosenfeld2021",
+     "title": "Dynamic Mode Decomposition for Continuous Time Systems with the Liouville Operator",
+     "arxiv": "1910.03977",
+     "tex": "source"
+    },
+    {
+     "key": "rosenfeld2021a",
+     "title": "Theoretical Foundations for the Dynamic Mode Decomposition of High Order Dynamical Systems",
+     "arxiv": "2101.02646",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Finally, Giannakis and Das~\\cite{das2017arxiv,giannakis2019,giannakis2020} approach the problem of approximation of the Koopman and its generator as a manifold-learning problem on a space-time manifold.",
+   "papers": [
+    {
+     "key": "das2017arxiv",
+     "title": "Delay-coordinate maps and the spectra of Koopman operators",
+     "arxiv": "1706.08544",
+     "tex": "source"
+    },
+    {
+     "key": "giannakis2019",
+     "title": "Data-driven spectral decomposition and forecasting of ergodic dynamical systems",
+     "arxiv": "1507.02338",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Temporally, the rate of convergence can be arbitrarily slow; however, in case of regular discrete-time dynamics it scales as \\(\\mathcal{O}(N^{-1})\\) with the number of iterates \\(N\\), and for mixing dynamics \\(\\mathcal{O}(N^{-\\sfrac{1}{2}})\\), with more detailed results available~\\cite{assani2004,kachurovskii1996,mezic2020}.",
+   "papers": [
+    {
+     "key": "mezic2020",
+     "title": "On Numerical Approximations of the Koopman Operator",
+     "arxiv": "2009.05883",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "While it is possible to numerically investigate such convergence starting with an arbitrary continuous observable, as was done in \\cite{levnajic2010,levnajic2015,budisic2012chaos}, pointwise evaluations of functions in \\(L^{p}\\) spaces are ill-defined, and therefore insufficient for theoretical guarantees.",
+   "papers": [
+    {
+     "key": "levnajic2010",
+     "title": "Ergodic theory and visualization. I. Mesochronic plots for visualization of ergodic partition and invariant sets",
+     "arxiv": "0805.4221",
+     "tex": "source"
+    },
+    {
+     "key": "budisic2012chaos",
+     "title": "Applied Koopmanism",
+     "arxiv": "1206.3164",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "In the reproducing-kernel Hilbert space formulation of the Koopman operator~\\cite{das2020a}, harmonic averaging can be used to compute the RKHS norm of the projection that can be used to detect the eigenvalue spectrum.",
+   "papers": [
+    {
+     "key": "das2020a",
+     "title": "Koopman spectra in reproducing kernel Hilbert spaces",
+     "arxiv": "1801.07799",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "The harmonic averaging can, in principle, be established for eigenvalues off the unit circle, although such an algorithm is numerically unfavorable~\\cite{mohr2014arxiv,mohr2016a,kvalheim2021,kvalheim2021a}.",
+   "papers": [
+    {
+     "key": "mohr2014arxiv",
+     "title": "Construction of eigenfunctions for scalar-type operators via Laplace averages with connections to the Koopman operator",
+     "arxiv": "1403.6559",
+     "tex": "source"
+    },
+    {
+     "key": "mohr2016a",
+     "title": "Koopman principle eigenfunctions and linearization of diffeomorphisms",
+     "arxiv": "1611.01209",
+     "tex": "source"
+    },
+    {
+     "key": "kvalheim2021",
+     "title": "Existence and uniqueness of global Koopman eigenfunctions for stable fixed points and periodic orbits",
+     "arxiv": "1911.11996",
+     "tex": "source"
+    },
+    {
+     "key": "kvalheim2021a",
+     "title": "Generic Properties of Koopman Eigenfunctions for Stable Fixed Points and Periodic Orbits",
+     "arxiv": "2010.04008",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Furthermore, successive projections using ergodic averages, termed \\emph{generalized Laplace analysis} (GLA), can be used to incrementally account for all (quasi-)regular components of the evolution of observables~\\cite{mohr2014arxiv}.",
+   "papers": [
+    {
+     "key": "mohr2014arxiv",
+     "title": "Construction of eigenfunctions for scalar-type operators via Laplace averages with connections to the Koopman operator",
+     "arxiv": "1403.6559",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "While the GLA process is ill-conditioned if the infinite ergodic averages are truncated, it is possible to provide an analogous process for the case of finite-length data~\\cite{drmac2019}.",
+   "papers": [
+    {
+     "key": "drmac2019",
+     "title": "Data Driven Koopman Spectral Analysis in Vandermonde--Cauchy Form via the DFT: Numerical Method and Theoretical Insights",
+     "arxiv": "1808.09557",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Approximation of the non-eigenvalue spectrum was studied in the context of the DMD on time delayed observables~\\cite{brunton2017natcomm,arbabi2017}.",
+   "papers": [
+    {
+     "key": "brunton2017natcomm",
+     "title": "Chaos as an intermittently forced linear system",
+     "arxiv": "1608.05306",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "The distribution of eigenvalues of delay DMD~\\cite{arbabi2017} cannot be used to approximate the continuous spectral density, as eigenvalues will form accumulations only around Koopman eigenvalues, but in the limit will distribute uniformly~\\cite{korda2020}.",
+   "papers": [
+    {
+     "key": "korda2020",
+     "title": "Data-driven spectral analysis of the Koopman operator",
+     "arxiv": "1710.06532",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Instead, the approximation of the continuous spectral measure can be posed as a truncated moment problem~\\cite{korda2020}.",
+   "papers": [
+    {
+     "key": "korda2020",
+     "title": "Data-driven spectral analysis of the Koopman operator",
+     "arxiv": "1710.06532",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Additional results concerning convergence of the delay DMD can be found in~\\cite{zhen2021}.",
+   "papers": [
+    {
+     "key": "zhen2021",
+     "title": "Singular Values of Hankel Matrix: Implication to the Convergence of Hankel Dynamic Mode Decomposition",
+     "arxiv": "2107.01948",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "While the non-atomic spectrum does not have eigenfunctions associated with it, it is possible to compute the mode-analogues for the continuous spectrum via spectral projections~\\cite{korda2020}, ultimately leading to approximations of the operator itself.",
+   "papers": [
+    {
+     "key": "korda2020",
+     "title": "Data-driven spectral analysis of the Koopman operator",
+     "arxiv": "1710.06532",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "For measure-preserving dynamics, spectral projectors can be computed using the periodic approximation~\\cite{govindarajan2019}, related to the Ulam approximation already discussed in \\Cref{sec:perron-frobenius}.",
+   "papers": [
+    {
+     "key": "govindarajan2019",
+     "title": "On the Approximation of Koopman Spectra for Measure Preserving Transformations",
+     "arxiv": "1803.03920",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "An alternative interpretation of modes for the non-atomic spectrum is offered by Giannakis~\\cite{giannakis2020a}, which searches for approximately-coherent observables over a chosen window of observation, demonstrating their construction even for systems where no true coherent observables, that is eigenfunctions, exist.",
+   "papers": [
+    {
+     "key": "giannakis2020a",
+     "title": "Delay-coordinate maps, coherence, and approximate spectra of evolution operators",
+     "arxiv": "2007.02195",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "An added benefit of working with RKHS spaces is that the observables do not need to take values from a linear space; for example, angle-valued observables taking values from \\(\\mathbb{S}^{1}\\) or direction-valued observables taking values from projective spaces can be handled in this setting~\\cite{klus2020eigendecompositions,das2020a}.",
+   "papers": [
+    {
+     "key": "klus2020eigendecompositions",
+     "title": "Eigendecompositions of transfer operators in reproducing kernel hilbert spaces",
+     "arxiv": "1712.01572",
+     "tex": "source"
+    },
+    {
+     "key": "das2020a",
+     "title": "Koopman spectra in reproducing kernel Hilbert spaces",
+     "arxiv": "1801.07799",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "More recent results~\\cite{klus2020eigendecompositions} demonstrate decompositions that apply both to Koopman and Perron--Frobenius operators.",
+   "papers": [
+    {
+     "key": "klus2020eigendecompositions",
+     "title": "Eigendecompositions of transfer operators in reproducing kernel hilbert spaces",
+     "arxiv": "1712.01572",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Establishing the existence of the spectrum for Koopman operators on Hardy-type spaces~\\cite{mohr2014arxiv} was the first theoretical step in pursuit of RKHS-based Koopman theory, with a more broad and rigorous theoretical basis presented by Mezi\\'{c} in~\\cite{mezic2019}.",
+   "papers": [
+    {
+     "key": "mohr2014arxiv",
+     "title": "Construction of eigenfunctions for scalar-type operators via Laplace averages with connections to the Koopman operator",
+     "arxiv": "1403.6559",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "As mentioned, computational approximation of harmonic averages is set on a firmer ground in RKHS~\\cite{das2020a}.",
+   "papers": [
+    {
+     "key": "das2020a",
+     "title": "Koopman spectra in reproducing kernel Hilbert spaces",
+     "arxiv": "1801.07799",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "More recent results pursue the convergence of approximations to Koopman operators and its generators in this setting~\\cite{das2021,rosenfeld2021}. } ",
+   "papers": [
+    {
+     "key": "das2021",
+     "title": "Reproducing kernel Hilbert space compactification of unitary evolution groups",
+     "arxiv": "1808.01515",
+     "tex": "source"
+    },
+    {
+     "key": "rosenfeld2021",
+     "title": "Dynamic Mode Decomposition for Continuous Time Systems with the Liouville Operator",
+     "arxiv": "1910.03977",
+     "tex": "source"
+    }
+   ]
+  }
+ ],
+ "Koopman theory for control|None": [
+  {
+   "sentence": "Koopman-based methods provide a linear framework that can exploit mature theoretical and computational methods, with successes already demonstrated in a wide range of challenging applications, including fluid dynamics~\\cite{arbabi2018cdc,peitz2018feedback}, robotics~\\cite{abraham2017conf,abraham2019ieee,bruder2019proc,mamakoukas2019proc}, power grid~\\cite{korda2018arxiv,netto2018tps}, traffic~\\cite{ling2018ieee}, biology~\\cite{hasnain2019arxivb}, logistics~\\cite{hogg2019plosone}, and chemical processes~\\cite{narasingam2019}.",
+   "papers": [
+    {
+     "key": "peitz2018feedback",
+     "title": "Feedback control of nonlinear PDEs using data-efficient reduced order models based on the Koopman operator",
+     "arxiv": "1806.09898",
+     "tex": "source"
+    },
+    {
+     "key": "abraham2017conf",
+     "title": "Model-based control using Koopman operators",
+     "arxiv": "1709.01568",
+     "tex": "source"
+    },
+    {
+     "key": "abraham2019ieee",
+     "title": "Active learning of dynamics for data-driven control using Koopman operators",
+     "arxiv": "1906.05194",
+     "tex": "source"
+    },
+    {
+     "key": "bruder2019proc",
+     "title": "Modeling and control of soft robots using the Koopman operator and model predictive control",
+     "arxiv": "1902.02827",
+     "tex": "source"
+    },
+    {
+     "key": "korda2018arxiv",
+     "title": "Power grid transient stabilization using Koopman model predictive control",
+     "arxiv": "1803.10744",
+     "tex": "source"
+    },
+    {
+     "key": "hasnain2019arxivb",
+     "title": "Steady state programming of controlled nonlinear systems via deep dynamic mode decomposition",
+     "arxiv": "1909.13385",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Further, as the Koopman operator acts on observables, it is amenable to data-driven (model free) approaches which have been extensively developed in recent years~\\cite{proctor2016siads,williams2016ifac,korda2016arxiv,proctor2017siads,surana2016cdc,kaiser2017arxiv,kakubr2018arxiv,peitz2017arxiv,abraham2019ieee}.",
+   "papers": [
+    {
+     "key": "proctor2016siads",
+     "title": "Dynamic mode decomposition with control",
+     "arxiv": "1409.6358",
+     "tex": "source"
+    },
+    {
+     "key": "korda2016arxiv",
+     "title": "Linear predictors for nonlinear dynamical systems: Koopman operator meets model predictive control",
+     "arxiv": "1611.03537",
+     "tex": "source"
+    },
+    {
+     "key": "proctor2017siads",
+     "title": "Generalizing Koopman theory to allow for inputs and control",
+     "arxiv": "1602.07647",
+     "tex": "source"
+    },
+    {
+     "key": "kaiser2017arxiv",
+     "title": "Data-driven discovery of Koopman eigenfunctions for control",
+     "arxiv": "1707.01146",
+     "tex": "source"
+    },
+    {
+     "key": "kakubr2018arxiv",
+     "title": "Discovering conservation laws from data for control",
+     "arxiv": "1811.00961",
+     "tex": "source"
+    },
+    {
+     "key": "peitz2017arxiv",
+     "title": "Koopman operator-based model reduction for switched-system control of PDEs",
+     "arxiv": "1710.06759",
+     "tex": "source"
+    },
+    {
+     "key": "abraham2019ieee",
+     "title": "Active learning of dynamics for data-driven control using Koopman operators",
+     "arxiv": "1906.05194",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "The resulting models have been shown to reveal insights into global stability properties~\\cite{sootla2016acc,mauroy2016ieeetac}, observability/controllability~\\cite{vaidya2007cdc,goswami2017cdc,yeung2018acc}, and sensor/actuator placement ~\\cite{sinha2016jmaa,sharma2018arxiv_a} for the underlying nonlinear system.",
+   "papers": [
+    {
+     "key": "sootla2016acc",
+     "title": "Properties of isostables and basins of attraction of monotone systems",
+     "arxiv": "1510.01153",
+     "tex": "source"
+    },
+    {
+     "key": "mauroy2016ieeetac",
+     "title": "Global stability analysis using the eigenfunctions of the Koopman operator",
+     "arxiv": "1408.1379",
+     "tex": "source"
+    },
+    {
+     "key": "yeung2018acc",
+     "title": "A Koopman operator approach for computing and balancing gramians for discrete time nonlinear systems",
+     "arxiv": "1709.08712",
+     "tex": "source"
+    },
+    {
+     "key": "sharma2018arxiv_a",
+     "title": "A transfer operator methodology for optimal sensor placement accounting for uncertainty",
+     "arxiv": "1812.10541",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "The first Koopman-based control schemes were published more than a decade later, powered by the algorithmic development of DMD~\\cite{proctor2016siads}.",
+   "papers": [
+    {
+     "key": "proctor2016siads",
+     "title": "Dynamic mode decomposition with control",
+     "arxiv": "1409.6358",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "More recently, Koopman models have been increasingly used in combination with LQR~\\cite{brunton2016plosone,mamakoukas2019proc,mamakoukas2020arxiv}, state-dependent LQR~\\cite{kaiser2017arxiv}, and model predictive control (MPC)~\\cite{korda2016arxiv,kaiser2017arxivb}.",
+   "papers": [
+    {
+     "key": "brunton2016plosone",
+     "title": "Koopman invariant subspaces and finite linear representations of nonlinear dynamical systems for control",
+     "arxiv": "1510.03007",
+     "tex": "source"
+    },
+    {
+     "key": "mamakoukas2020arxiv",
+     "title": "Derivative-based koopman operators for real-time control of robotic systems",
+     "arxiv": "2010.05778",
+     "tex": "source"
+    },
+    {
+     "key": "kaiser2017arxiv",
+     "title": "Data-driven discovery of Koopman eigenfunctions for control",
+     "arxiv": "1707.01146",
+     "tex": "source"
+    },
+    {
+     "key": "korda2016arxiv",
+     "title": "Linear predictors for nonlinear dynamical systems: Koopman operator meets model predictive control",
+     "arxiv": "1611.03537",
+     "tex": "source"
+    },
+    {
+     "key": "kaiser2017arxivb",
+     "title": "Sparse identification of nonlinear dynamics for model predictive control in the low-data limit",
+     "arxiv": "1711.05501",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Other directions include optimal control for switching control problems~\\cite{peitz2017arxiv,peitz2018feedback}, Lyapunov-based stabilization~\\cite{huang2018cdc,huang2019arxiv}, eigenstructure assignment~\\cite{hemati2017aiaa}, and, more recently, active learning~\\cite{abraham2019ieee}.",
+   "papers": [
+    {
+     "key": "peitz2017arxiv",
+     "title": "Koopman operator-based model reduction for switched-system control of PDEs",
+     "arxiv": "1710.06759",
+     "tex": "source"
+    },
+    {
+     "key": "peitz2018feedback",
+     "title": "Feedback control of nonlinear PDEs using data-efficient reduced order models based on the Koopman operator",
+     "arxiv": "1806.09898",
+     "tex": "source"
+    },
+    {
+     "key": "huang2018cdc",
+     "title": "Feedback stabilization using Koopman operator",
+     "arxiv": "1810.00089",
+     "tex": "source"
+    },
+    {
+     "key": "huang2019arxiv",
+     "title": "Data-driven nonlinear stabilization using Koopman operator",
+     "arxiv": "1901.07678",
+     "tex": "source"
+    },
+    {
+     "key": "abraham2019ieee",
+     "title": "Active learning of dynamics for data-driven control using Koopman operators",
+     "arxiv": "1906.05194",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "MPC~\\cite{garriga2010model,lee2011springer,mayne1997proc,morari1999model,qin1997proc,garcia1989model,camacho2013model,allgower2004nonlinear,eren2017jgcd} stands out as a main facilitator for the success of Koopman-based control, with applications including power grids~\\cite{korda2018arxiv}, high-dimensional fluid flows~\\cite{arbabi2018cdc,morton2019neurips}, and electrical drives~\\cite{hanke2018arxiv}.",
+   "papers": [
+    {
+     "key": "korda2018arxiv",
+     "title": "Power grid transient stabilization using Koopman model predictive control",
+     "arxiv": "1803.10744",
+     "tex": "source"
+    },
+    {
+     "key": "morton2019neurips",
+     "title": "Deep dynamical modeling and control of unsteady fluid flows",
+     "arxiv": "1805.07472",
+     "tex": "source"
+    },
+    {
+     "key": "hanke2018arxiv",
+     "title": "Koopman operator based finite-set model predictive control for electrical drives",
+     "arxiv": "1804.00854",
+     "tex": "source"
+    }
+   ]
+  }
+ ],
+ "Koopman theory for control|Model-Based Control": [
+  {
+   "sentence": "In order to analyze this from a Koopman perspective, it is convenient to introduce the \\emph{control flow}, which defines~\\eqref{Eq:NonlinearControlSystem} as a single dynamical system (for more details about the dynamical systems perspective of control theory we refer to Colonius et al.~\\cite{colonius2000book}).",
+   "papers": [
+    {
+     "key": "colonius2000book",
+     "title": "The Dynamics of Control",
+     "arxiv": "2507.04181",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "We consider special cases in the discrete-time and continuous-time settings which are modeled within the {\\em Koopman with inputs and control} (KIC) framework~\\cite{proctor2017siads}.",
+   "papers": [
+    {
+     "key": "proctor2017siads",
+     "title": "Generalizing Koopman theory to allow for inputs and control",
+     "arxiv": "1602.07647",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Instead of optimizing the input itself, one may then optimize the switching times between inputs, as in Peitz et al.~\\cite{peitz2017arxiv}.",
+   "papers": [
+    {
+     "key": "peitz2017arxiv",
+     "title": "Koopman operator-based model reduction for switched-system control of PDEs",
+     "arxiv": "1710.06759",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "For a dynamically evolving $\\bu$ it may be possible to approximate the Koopman operator on the extended state using the system identification framework based on the generator formulation~\\cite{mauroy2020tac}.",
+   "papers": [
+    {
+     "key": "mauroy2020tac",
+     "title": "Koopman-based lifting techniques for nonlinear systems identification",
+     "arxiv": "1709.02003",
+     "tex": "source"
+    }
+   ]
+  }
+ ],
+ "Koopman theory for control|Data-Driven Control": [
+  {
+   "sentence": "The {\\em dynamic mode decomposition with control} (DMDc) algorithm by Proctor et al.~\\cite{proctor2016siads} extends DMD to disambiguate between the natural unforced dynamics and the effect of actuation.",
+   "papers": [
+    {
+     "key": "proctor2016siads",
+     "title": "Dynamic mode decomposition with control",
+     "arxiv": "1409.6358",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Originally motivated by intervention efforts in epidemiology~\\cite{proctor2014epj}, DMDc based on linear and nonlinear measurements of the system has since been used with MPC for enhanced control of nonlinear systems by Korda and Mezi\\'c~\\cite{korda2016arxiv} and by Kaiser et al.~\\cite{kaiser2017arxivb}, with the DMDc method performing surprisingly well, even for strongly nonlinear systems.",
+   "papers": [
+    {
+     "key": "korda2016arxiv",
+     "title": "Linear predictors for nonlinear dynamical systems: Koopman operator meets model predictive control",
+     "arxiv": "1611.03537",
+     "tex": "source"
+    },
+    {
+     "key": "kaiser2017arxivb",
+     "title": "Sparse identification of nonlinear dynamics for model predictive control in the low-data limit",
+     "arxiv": "1711.05501",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "DMDc allows for a flexible regression framework, which can accommodate undersampled measurements of an actuated system and identify an accurate and efficient low-order model using compressive system identification~\\cite{bai2017aiaa}, which is closely related to the eigensystem realization algorithm (ERA)~\\cite{juang1985jgcd}.",
+   "papers": [
+    {
+     "key": "bai2017aiaa",
+     "title": "Dynamic mode decomposition for compressive system identification",
+     "arxiv": "1710.07737",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "This approach has been generalized in Korda et al.~\\cite{korda2016arxiv} to identify the system matrices $\\bA$ and $\\bB$ in the higher-dimensional observable space which disambiguates the unforced dynamics and control on observables.",
+   "papers": [
+    {
+     "key": "korda2016arxiv",
+     "title": "Linear predictors for nonlinear dynamical systems: Koopman operator meets model predictive control",
+     "arxiv": "1611.03537",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "As eDMD is known to suffer from overfitting, it is important to regularize the problem based on, for instance, the $L_{1,2}$-norm for group sparsity~\\cite{williams2016ifac} or the $L_1$-norm~\\cite{kaiser2017arxiv}. eDMDc yields a linear model for the controlled dynamics in the space of observables through a nonlinear transformation of the state.",
+   "papers": [
+    {
+     "key": "kaiser2017arxiv",
+     "title": "Data-driven discovery of Koopman eigenfunctions for control",
+     "arxiv": "1707.01146",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "In particular, when combined with MPC for a quadratic cost function, the resulting MPC optimization problem can be shown~\\cite{korda2016arxiv} {to lead to a convex quadratic programming problem, whose computational cost remains comparable to that of linear MPC and is independent of the number of observables}, and to outperform MPC with a model based on a local linearization or Carleman linearization. {The advantage of a linear representation can also represent a restriction for some systems in the sense that only linear control methods can be applied.",
+   "papers": [
+    {
+     "key": "korda2016arxiv",
+     "title": "Linear predictors for nonlinear dynamical systems: Koopman operator meets model predictive control",
+     "arxiv": "1611.03537",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Bruder et al.~\\cite{bruder2020arxiva} have recently demonstrated that the accuracy of approximate bilinear approximations improves with increasing number of basis functions, while that of linear approximations do not necessarily limiting their control performance.",
+   "papers": [
+    {
+     "key": "bruder2020arxiva",
+     "title": "Advantages of bilinear Koopman realizations for the modeling and control of systems with unknown dynamics",
+     "arxiv": "2010.09961",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "It has also been proposed~\\cite{korda2016arxiv,proctor2017siads} to include nonlinear observables of the input, e.g $g(u)=u^2$, or mixed observables of the state and input, e.g $g(x,u)=xu$.",
+   "papers": [
+    {
+     "key": "korda2016arxiv",
+     "title": "Linear predictors for nonlinear dynamical systems: Koopman operator meets model predictive control",
+     "arxiv": "1611.03537",
+     "tex": "source"
+    },
+    {
+     "key": "proctor2017siads",
+     "title": "Generalizing Koopman theory to allow for inputs and control",
+     "arxiv": "1602.07647",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "\\paragraph{Input and output spaces} Within the KIC framework~\\cite{proctor2017siads}, different domain and output spaces of the Koopman operator approximation have been examined.",
+   "papers": [
+    {
+     "key": "proctor2017siads",
+     "title": "Generalizing Koopman theory to allow for inputs and control",
+     "arxiv": "1602.07647",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "They are especially important in real-world applications where limited access to full state measurements are available (see~\\cref{Sec:HAVOK}), and they have demonstrated superior performance for control, compared with models using monomials as observables~\\cite{kaiser2017arxivb}.",
+   "papers": [
+    {
+     "key": "kaiser2017arxivb",
+     "title": "Sparse identification of nonlinear dynamics for model predictive control in the low-data limit",
+     "arxiv": "1711.05501",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Thus, it is recommended to augment $\\bz$ with past inputs, i.e.\\ $\\bz_k\\coloneqq \\bg(\\bx_k,\\bu_{k-1})=[x_k, (x,u)_{k-1}, (x,u)_{k-2}, \\ldots, (x,u)_{k-m}]$, so that the current actuation value $u_k$ appears as a single input to the system~\\cite{korda2016arxiv,Kaiser2020chapter}: \\begin{subequations} \\begin{align} \\bz_{k+1} &= \\hat{\\bA} \\bz_k + \\hat{\\bb}\\, u_k, \\label{Eqn:KoopmanControl:TimeDelayCoordinates:AugmentedState} \\\\ y_k &= \\begin{bmatrix} 1 & 0 & \\ldots & 0\\end{bmatrix}\\bz_k = x_k.",
+   "papers": [
+    {
+     "key": "korda2016arxiv",
+     "title": "Linear predictors for nonlinear dynamical systems: Koopman operator meets model predictive control",
+     "arxiv": "1611.03537",
+     "tex": "source"
+    },
+    {
+     "key": "Kaiser2020chapter",
+     "title": "Data-driven approximations of dynamical systems operators for control",
+     "arxiv": "1902.10239",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "\\label{Eqn:KoopmanControl:TimeDelayCoordinatesMeasurement:AugmentedState} \\end{align} \\end{subequations} This delay observable $\\bz_k=\\bg(\\bx_k,\\bu_{k-1})$ has also been used in eDMDc if only input-output data is available~\\cite{korda2016arxiv}.",
+   "papers": [
+    {
+     "key": "korda2016arxiv",
+     "title": "Linear predictors for nonlinear dynamical systems: Koopman operator meets model predictive control",
+     "arxiv": "1611.03537",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "The dynamics are then modeled as a linear parameter-varying model, so that each discrete input is associated with an autonomous Koopman operator~\\eqref{Eqn:KoopmanControl:DiscreteTimeLPV}, which is approximated using either DMD or eDMD~\\cite{peitz2017arxiv}.",
+   "papers": [
+    {
+     "key": "peitz2017arxiv",
+     "title": "Koopman operator-based model reduction for switched-system control of PDEs",
+     "arxiv": "1710.06759",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Recently, this approach has been extended to continuous control input by interpolating between the finite set of control actions, so that the system dynamics are predicted using interpolated models based on the infinitesimal generator of the Koopman operator, leading to bilinear models~\\cite{peitz2020arxiv} similar to~\\eqref{Eqn:BilinearEquationForObservables}.",
+   "papers": [
+    {
+     "key": "peitz2020arxiv",
+     "title": "Data-driven model predictive control using interpolated Koopman generators",
+     "arxiv": "2003.07094",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "This also alleviates performance issues associated with the time discretization of the models when optimizing their switching times~\\cite{peitz2020arxiv,klus2020}.",
+   "papers": [
+    {
+     "key": "peitz2020arxiv",
+     "title": "Data-driven model predictive control using interpolated Koopman generators",
+     "arxiv": "2003.07094",
+     "tex": "source"
+    },
+    {
+     "key": "klus2020",
+     "title": "Data-driven approximation of the Koopman generator: Model reduction, system identification, and control",
+     "arxiv": "1909.10638",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Due to their flexibility and rich expressivity~\\cite{raghu2017pmlr}, there is increased interest in using neural networks to learn complex Koopman representations (see also \\cref{sec:NNKoop}).",
+   "papers": [
+    {
+     "key": "raghu2017pmlr",
+     "title": "On the expressive power of deep neural networks",
+     "arxiv": "1606.05336",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Building on their work on deep DMD~\\cite{yeung2017arxiv} and Koopman Gramians~\\cite{yeung2018acc}, Liu et al.~\\cite{liu2017arxiv} propose to decompose the space of observables as three independent neural networks, associated with parameters $\\boldsymbol{\\theta}_x$, $\\boldsymbol{\\theta}_{xu}$, and $\\boldsymbol{\\theta}_u$, respectively, to which the input is either the state variable alone, the control variable alone, or both: \\begin{equation}\\label{Eqn:KoopmanControl:DeepDMDc} \\bz_{\\bx,k+1} = \\bK\\bz_k = \\begin{bmatrix} \\bK_x & \\bK_{xu} & \\bK_u \\end{bmatrix} \\begin{bmatrix} \\bz_{\\bx,k}\\\\ \\bz_{\\b",
+   "papers": [
+    {
+     "key": "yeung2017arxiv",
+     "title": "Learning deep neural network representations for Koopman operators of nonlinear dynamical systems",
+     "arxiv": "1708.06850",
+     "tex": "source"
+    },
+    {
+     "key": "yeung2018acc",
+     "title": "A Koopman operator approach for computing and balancing gramians for discrete time nonlinear systems",
+     "arxiv": "1709.08712",
+     "tex": "source"
+    },
+    {
+     "key": "liu2017arxiv",
+     "title": "Decomposition of nonlinear dynamical systems using Koopman gramians",
+     "arxiv": "1710.01719",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "\\end{matrix} \\end{equation} The unknown Koopman matrices $\\bK_{\\bullet}$ and neural network parameters $\\boldsymbol{\\theta}_{\\bullet}$, where $\\bullet = x$, $xu$, or $u$, can then be optimized jointly~\\cite{liu2017arxiv} or separately by switching alternately between model update and parameter update, as in~\\cite{han2020arxiv,li2019arxiv}.",
+   "papers": [
+    {
+     "key": "liu2017arxiv",
+     "title": "Decomposition of nonlinear dynamical systems using Koopman gramians",
+     "arxiv": "1710.01719",
+     "tex": "source"
+    },
+    {
+     "key": "han2020arxiv",
+     "title": "Deep learning of Koopman representation for control",
+     "arxiv": "2010.07546",
+     "tex": "source"
+    },
+    {
+     "key": "li2019arxiv",
+     "title": "Learning compositional Koopman operators for model-based control",
+     "arxiv": "1910.08264",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "In subsequent work~\\cite{you2018ifac,hasnain2019arxivb}, slightly modified approaches are studied while maintaining the tractability of the control synthesis problem.",
+   "papers": [
+    {
+     "key": "hasnain2019arxivb",
+     "title": "Steady state programming of controlled nonlinear systems via deep dynamic mode decomposition",
+     "arxiv": "1909.13385",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Analogous to eDMDc, a multi-layer perceptron neural network can be used solely to lift the state space, while the effect of the control input in the lifted space remains linear~\\cite{han2020arxiv}, i.e.",
+   "papers": [
+    {
+     "key": "han2020arxiv",
+     "title": "Deep learning of Koopman representation for control",
+     "arxiv": "2010.07546",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Autoencoders provide a natural framework for learning Koopman representations~\\cite{lusch2017arxiv} (see also \\cref{sec:NNKoop}) combining the state lifting operation and inverse transformation.",
+   "papers": [
+    {
+     "key": "lusch2017arxiv",
+     "title": "Deep learning for universal linear embeddings of nonlinear dynamics",
+     "arxiv": "1712.09707",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Recently, this approach has been extended for control by incorporating the control term~\\cite{han2020arxiv}, so that only the state is encoded into $\\bz_{\\bx,k}$ and the shifted feature state $\\bz_{\\bx,k+1}$ is decoded.",
+   "papers": [
+    {
+     "key": "han2020arxiv",
+     "title": "Deep learning of Koopman representation for control",
+     "arxiv": "2010.07546",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Graph neural networks (GNN)~\\cite{li2019arxiv} have also been exploited to encode and decode the compositional structure of the system, modeling similar physical interactions with the same parameters, resulting in a block-structured, scalable Koopman matrix.",
+   "papers": [
+    {
+     "key": "li2019arxiv",
+     "title": "Learning compositional Koopman operators for model-based control",
+     "arxiv": "1910.08264",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Koopman eigenfunctions have been used for observer design within the Koopman canonical transform (KCT)~\\cite{surana2016cdc,surana2016linear} and within the Koopman reduced-order nonlinear identification and control (KRONIC) framework~\\cite{kaiser2017arxiv}, which both typically yield a global bilinear representation of the underlying system.",
+   "papers": [
+    {
+     "key": "kaiser2017arxiv",
+     "title": "Data-driven discovery of Koopman eigenfunctions for control",
+     "arxiv": "1707.01146",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "The system~\\eqref{Eqn:KoopmanControl:BilinearSystem} is bilinearizable under certain conditions, e.g. if $\\mathcal{L}_{{\\bf h}_j}\\mathcal{T}(\\bx)$ lies in the span of the set of eigenfunctions for all $j$~\\cite{huang2018cdc}.",
+   "papers": [
+    {
+     "key": "huang2018cdc",
+     "title": "Feedback stabilization using Koopman operator",
+     "arxiv": "1810.00089",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "The control term $\\bB(\\bz)$ can either be determined from the gradient of the identified eigenfunctions for known ${\\bf h}_j(\\bx)$ or identified directly~\\cite{kakubr2018arxiv} for unknown ${\\bf h}_j(\\bx)$ by similarly expanding it in terms of a dictionary.",
+   "papers": [
+    {
+     "key": "kakubr2018arxiv",
+     "title": "Discovering conservation laws from data for control",
+     "arxiv": "1811.00961",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Multiple works have since been published focusing on the direct identification of Koopman eigenfunctions~\\cite{korda2020ieee,haseli2020b,Pan2020arxiv}.",
+   "papers": [
+    {
+     "key": "korda2020ieee",
+     "title": "Optimal construction of Koopman eigenfunctions for prediction and control",
+     "arxiv": "1810.08733",
+     "tex": "source"
+    },
+    {
+     "key": "Pan2020arxiv",
+     "title": "Sparsity-promoting algorithms for the discovery of informative Koopman-invariant subspaces",
+     "arxiv": "2002.10637",
+     "tex": "source"
+    }
+   ]
+  }
+ ],
+ "Koopman theory for control|Koopman-based control strategies": [
+  {
+   "sentence": "While this is problematic from the perspective of finding a linear, closed form approximation to the Koopman operator associated with the underlying nonlinear system~\\cite{brunton2016plosone}, it allows one to easily measure the state given the model output and the cost function associated with the original control problem.",
+   "papers": [
+    {
+     "key": "brunton2016plosone",
+     "title": "Koopman invariant subspaces and finite linear representations of nonlinear dynamical systems for control",
+     "arxiv": "1510.03007",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "If the state is not included, a measurement matrix or function mapping from the nonlinear observables to the state vector needs to estimated along with the system matrices, typically introducing additional errors. {Koopman-based frameworks are amenable to the application of standard linear estimation and control theory and have been increasingly used in combination with optimal control~\\cite{brunton2016plosone,mamakoukas2019proc,abraham2019ieee,kaiser2017arxiv,korda2016arxiv,kakubr2018arxiv,arbabi2018cdc,peitz2017arxiv,abraham2017conf}.} In the simplest case, a linear quadratic regulator may b",
+   "papers": [
+    {
+     "key": "brunton2016plosone",
+     "title": "Koopman invariant subspaces and finite linear representations of nonlinear dynamical systems for control",
+     "arxiv": "1510.03007",
+     "tex": "source"
+    },
+    {
+     "key": "abraham2019ieee",
+     "title": "Active learning of dynamics for data-driven control using Koopman operators",
+     "arxiv": "1906.05194",
+     "tex": "source"
+    },
+    {
+     "key": "kaiser2017arxiv",
+     "title": "Data-driven discovery of Koopman eigenfunctions for control",
+     "arxiv": "1707.01146",
+     "tex": "source"
+    },
+    {
+     "key": "korda2016arxiv",
+     "title": "Linear predictors for nonlinear dynamical systems: Koopman operator meets model predictive control",
+     "arxiv": "1611.03537",
+     "tex": "source"
+    },
+    {
+     "key": "kakubr2018arxiv",
+     "title": "Discovering conservation laws from data for control",
+     "arxiv": "1811.00961",
+     "tex": "source"
+    },
+    {
+     "key": "peitz2017arxiv",
+     "title": "Koopman operator-based model reduction for switched-system control of PDEs",
+     "arxiv": "1710.06759",
+     "tex": "source"
+    },
+    {
+     "key": "abraham2017conf",
+     "title": "Model-based control using Koopman operators",
+     "arxiv": "1709.01568",
+     "tex": "source"
+    },
+    {
+     "key": "mamakoukas2020arxiv",
+     "title": "Derivative-based koopman operators for real-time control of robotic systems",
+     "arxiv": "2010.05778",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Several other approaches build on a global bilinearization~\\cite{surana2016cdc,kaiser2017arxiv,huang2018cdc} of the underlying system in terms of Koopman eigenfunctions (see \\cref{Sec:Control:EigenfunctionSubspace}).",
+   "papers": [
+    {
+     "key": "kaiser2017arxiv",
+     "title": "Data-driven discovery of Koopman eigenfunctions for control",
+     "arxiv": "1707.01146",
+     "tex": "source"
+    },
+    {
+     "key": "huang2018cdc",
+     "title": "Feedback stabilization using Koopman operator",
+     "arxiv": "1810.00089",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Feedback stabilization for nonlinear systems can also be achieved via a control Lyapunov function~\\cite{surana2016cdc} expressed in Koopman eigenfunctions, for which the search can be formulated as a convex optimization~\\cite{huang2018cdc,huang2019arxiv}.",
+   "papers": [
+    {
+     "key": "huang2018cdc",
+     "title": "Feedback stabilization using Koopman operator",
+     "arxiv": "1810.00089",
+     "tex": "source"
+    },
+    {
+     "key": "huang2019arxiv",
+     "title": "Data-driven nonlinear stabilization using Koopman operator",
+     "arxiv": "1901.07678",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Stabilizing solutions have also been determined by constructing a Lyapunov function from stable Koopman models obtained by imposing stability constraints on the Koopman matrix~\\cite{mamakoukas2020arxivb}.",
+   "papers": [
+    {
+     "key": "mamakoukas2020arxivb",
+     "title": "Learning data-driven stable Koopman operators",
+     "arxiv": "2005.04291",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Sequential action control~\\cite{Ansari2016ieee} is an alternative to MPC in experimental robotics~\\cite{abraham2017conf,abraham2019ieee}, which optimizes both the control input and the control duration.",
+   "papers": [
+    {
+     "key": "Ansari2016ieee",
+     "title": "Sequential action control: Closed form optimal control for nonlinear and nonsmooth systems",
+     "arxiv": "1708.09347",
+     "tex": "source"
+    },
+    {
+     "key": "abraham2017conf",
+     "title": "Model-based control using Koopman operators",
+     "arxiv": "1709.01568",
+     "tex": "source"
+    },
+    {
+     "key": "abraham2019ieee",
+     "title": "Active learning of dynamics for data-driven control using Koopman operators",
+     "arxiv": "1906.05194",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "\\textit{Reproduced with permission from Li et al. 2019 ICLR~\\cite{li2019arxiv}}.} \\label{Fig:KoopmanControl:Results:GNN-KO} \\end{figure} Although the predictive power of Koopman models can be sensitive to the particular choice of observables and the training data, in particular receding-horizon methods such as MPC (see \\cref{Sec:MPC}) provide a robust control framework that systematically compensate for model uncertainties by continually updating the optimization problem and taking into account new measurements. {Incorporating Koopman-based models into MPC was first introduced in Korda \\& Mezi",
+   "papers": [
+    {
+     "key": "li2019arxiv",
+     "title": "Learning compositional Koopman operators for model-based control",
+     "arxiv": "1910.08264",
+     "tex": "source"
+    },
+    {
+     "key": "korda2016arxiv",
+     "title": "Linear predictors for nonlinear dynamical systems: Koopman operator meets model predictive control",
+     "arxiv": "1611.03537",
+     "tex": "source"
+    },
+    {
+     "key": "kaiser2017arxiv",
+     "title": "Data-driven discovery of Koopman eigenfunctions for control",
+     "arxiv": "1707.01146",
+     "tex": "source"
+    },
+    {
+     "key": "kakubr2018arxiv",
+     "title": "Discovering conservation laws from data for control",
+     "arxiv": "1811.00961",
+     "tex": "source"
+    },
+    {
+     "key": "peitz2018arxiv",
+     "title": "Controlling nonlinear PDEs using low-dimensional bilinear approximations obtained from data",
+     "arxiv": "1801.06419",
+     "tex": "source"
+    },
+    {
+     "key": "peitz2020arxiv",
+     "title": "Data-driven model predictive control using interpolated Koopman generators",
+     "arxiv": "2003.07094",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Of note are Koopman Lyapunov-based MPC that guarantees closed-loop stability and controller feasability~\\cite{narasingam2019,son_narasingam2020}.",
+   "papers": [
+    {
+     "key": "son_narasingam2020",
+     "title": "Handling plant-model mismatch in Koopman Lyapunov-based model predictive control via offset-free control framework",
+     "arxiv": "2010.07239",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "These have also been combined with MPC with promising results~\\cite{li2019arxiv} (see also \\cref{Fig:KoopmanControl:Results:GNN-KO}).",
+   "papers": [
+    {
+     "key": "li2019arxiv",
+     "title": "Learning compositional Koopman operators for model-based control",
+     "arxiv": "1910.08264",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "In addition to theoretical advances, Koopman-based control has been increasingly applied in real-world problems such as power grids~\\cite{korda2018arxiv,netto2018tps}, high-dimensional fluid flows~\\cite{ma2011tcfd,arbabi2018cdc,peitz2018feedback,peitz2020arxiv}, biological systems~\\cite{hasnain2019arxivb}, chemical processes~\\cite{narasingam2019,son_narasingam2020}, human-machine systems~\\cite{broad2017proc}, and experimental robotic systems~\\cite{abraham2019ieee,bruder2019proc,mamakoukas2019proc,bruder2020arxiv,folkestad2020arxiv}.",
+   "papers": [
+    {
+     "key": "korda2018arxiv",
+     "title": "Power grid transient stabilization using Koopman model predictive control",
+     "arxiv": "1803.10744",
+     "tex": "source"
+    },
+    {
+     "key": "ma2011tcfd",
+     "title": "Reduced order models for control of fluids using the eigensystem realization algorithm",
+     "arxiv": "0907.1907",
+     "tex": "source"
+    },
+    {
+     "key": "peitz2018feedback",
+     "title": "Feedback control of nonlinear PDEs using data-efficient reduced order models based on the Koopman operator",
+     "arxiv": "1806.09898",
+     "tex": "source"
+    },
+    {
+     "key": "peitz2020arxiv",
+     "title": "Data-driven model predictive control using interpolated Koopman generators",
+     "arxiv": "2003.07094",
+     "tex": "source"
+    },
+    {
+     "key": "hasnain2019arxivb",
+     "title": "Steady state programming of controlled nonlinear systems via deep dynamic mode decomposition",
+     "arxiv": "1909.13385",
+     "tex": "source"
+    },
+    {
+     "key": "son_narasingam2020",
+     "title": "Handling plant-model mismatch in Koopman Lyapunov-based model predictive control via offset-free control framework",
+     "arxiv": "2010.07239",
+     "tex": "source"
+    },
+    {
+     "key": "broad2017proc",
+     "title": "Learning models for shared control of human-machine systems with unknown dynamics",
+     "arxiv": "1808.08268",
+     "tex": "source"
+    },
+    {
+     "key": "abraham2019ieee",
+     "title": "Active learning of dynamics for data-driven control using Koopman operators",
+     "arxiv": "1906.05194",
+     "tex": "source"
+    },
+    {
+     "key": "bruder2019proc",
+     "title": "Modeling and control of soft robots using the Koopman operator and model predictive control",
+     "arxiv": "1902.02827",
+     "tex": "source"
+    },
+    {
+     "key": "bruder2020arxiv",
+     "title": "Koopman-based Control of a Soft Continuum Manipulator Under Variable Loading Conditions",
+     "arxiv": "2002.01407",
+     "tex": "source"
+    },
+    {
+     "key": "folkestad2020arxiv",
+     "title": "Episodic koopman learning of nonlinear robot dynamics with application to fast multirotor landing",
+     "arxiv": "2004.01708",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "Here, we illustrate model predictive control (MPC, see \\cref{Sec:MPC} for details) combined with different Koopman-based models for several nonlinear systems including a bilinear DC motor (see also~\\cite{korda2016arxiv}), the forced Duffing oscillator, and the van der Pol oscillator.",
+   "papers": [
+    {
+     "key": "korda2016arxiv",
+     "title": "Linear predictors for nonlinear dynamical systems: Koopman operator meets model predictive control",
+     "arxiv": "1611.03537",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "The observable vector associated with the eDMDc models is defined as $\\bz = [\\bg^m(y,u),\\boldsymbol{\\xi}(y,u)]^T$ (analogous to~\\cite{korda2016arxiv}), so that the output $y$ itself is a coordinate of the observable.",
+   "papers": [
+    {
+     "key": "korda2016arxiv",
+     "title": "Linear predictors for nonlinear dynamical systems: Koopman operator meets model predictive control",
+     "arxiv": "1611.03537",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "By incorporating the output in the model this can be avoided; however, this also restricts the model~\\cite{brunton2016plosone}.",
+   "papers": [
+    {
+     "key": "brunton2016plosone",
+     "title": "Koopman invariant subspaces and finite linear representations of nonlinear dynamical systems for control",
+     "arxiv": "1510.03007",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "For instance, as little as $10$ samples may be sufficient to train a DMDc model that successfully stabilizes an unstable fixed point using MPC (see, e.g., Fig.7 in~\\cite{kaiser2017arxivb}).",
+   "papers": [
+    {
+     "key": "kaiser2017arxivb",
+     "title": "Sparse identification of nonlinear dynamics for model predictive control in the low-data limit",
+     "arxiv": "1711.05501",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "We note that the model based on a local linearization (LMPC) can be used to successfully control the bilinear DC motor without constraint violations or infeasibility issues, in contrast to~\\cite{korda2016arxiv}, by using a smaller prediction horizon for MPC.",
+   "papers": [
+    {
+     "key": "korda2016arxiv",
+     "title": "Linear predictors for nonlinear dynamical systems: Koopman operator meets model predictive control",
+     "arxiv": "1611.03537",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "However, it may be possible to stabilize an unstable fixed point using DMDc in certain cases, despite having limited predictive power~\\cite{kaiser2017arxivb}.",
+   "papers": [
+    {
+     "key": "kaiser2017arxivb",
+     "title": "Sparse identification of nonlinear dynamics for model predictive control in the low-data limit",
+     "arxiv": "1711.05501",
+     "tex": "source"
+    }
+   ]
+  }
+ ],
+ "Koopman theory for control|Stability": [
+  {
+   "sentence": "For instance, building on~\\cite{vaidya2006ccc}, it has been shown~\\cite{mauroy2013,mauroy2013cdc} that Lyapunov's second method implicitly uses an operator-theoretic approach and Lyapunov functions represent special observables advanced through the Koopman operator.",
+   "papers": [
+    {
+     "key": "mauroy2013",
+     "title": "Isostables, isochrons, and Koopman spectrum for the action-angle representation of stable fixed point dynamics",
+     "arxiv": "1302.0032",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "These methods have been extended to characterize the global stability properties of hyperbolic fixed points, limit cycles, and non-analytical eigenfunctions~\\cite{mauroy2016ieeetac}. ",
+   "papers": [
+    {
+     "key": "mauroy2016ieeetac",
+     "title": "Global stability analysis using the eigenfunctions of the Koopman operator",
+     "arxiv": "1408.1379",
+     "tex": "source"
+    }
+   ]
+  }
+ ],
+ "Koopman theory for control|Observability and controllability": [
+  {
+   "sentence": "More recently, a deep learning DMD framework~\\cite{yeung2017arxiv} has been extended to incorporate Koopman Gramians to maximize internal subsystem observability and disturbance rejection from unwanted noise from other subsystems~\\cite{liu2018acc}.",
+   "papers": [
+    {
+     "key": "yeung2017arxiv",
+     "title": "Learning deep neural network representations for Koopman operators of nonlinear dynamical systems",
+     "arxiv": "1708.06850",
+     "tex": "source"
+    },
+    {
+     "key": "liu2018acc",
+     "title": "Decomposition of nonlinear dynamical systems using Koopman gramians",
+     "arxiv": "1710.01719",
+     "tex": "source"
+    }
+   ]
+  }
+ ],
+ "Koopman theory for control|Sensor and actuator placement": [
+  {
+   "sentence": "In this realm, sparse sampling and greedy selection techniques, such as gappy POD~\\cite{everson1995karhunen} and DEIM~\\cite{drmac2016siam}, and more recently sparsity-promoting algorithms, such as compressed sensing~\\cite{candes2006bieeetit,donoho2006ieeetit}, have played an increasingly important role in the context of sensor/actuator selection~\\cite{manohar2017csm}.",
+   "papers": [
+    {
+     "key": "drmac2016siam",
+     "title": "A new selection operator for the discrete empirical interpolation method---improved a priori error bound and extensions",
+     "arxiv": "1505.00370",
+     "tex": "source"
+    },
+    {
+     "key": "candes2006bieeetit",
+     "title": "Robust uncertainty principles: exact signal reconstruction from highly incomplete frequency information",
+     "arxiv": "math/0409186",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "This can be combined with existing heuristic selection/sampling methods which have been demonstrated on a range of practical applications, such as environmental controls in buildings~\\cite{vaidya2012jmaa,fontanini2016be,sharma2017ibpsa}, fluid dynamics~\\cite{kaiser2018jcp,manohar2017arxiv}, and biology~\\cite{hasnain2019arxiv}.",
+   "papers": [
+    {
+     "key": "vaidya2012jmaa",
+     "title": "Actuator and sensor placement in linear advection PDE with building system application",
+     "arxiv": "1409.2015",
+     "tex": "source"
+    },
+    {
+     "key": "sharma2017ibpsa",
+     "title": "Transfer operator theoretic framework for monitoring building indoor environment in uncertain operating conditions",
+     "arxiv": "1807.04781",
+     "tex": "source"
+    },
+    {
+     "key": "kaiser2018jcp",
+     "title": "Sparsity enabled cluster reduced-order models for control",
+     "arxiv": "1701.00038",
+     "tex": "source"
+    },
+    {
+     "key": "manohar2017arxiv",
+     "title": "Optimized sampling for multiscale dynamics",
+     "arxiv": "1712.05085",
+     "tex": "source"
+    },
+    {
+     "key": "hasnain2019arxiv",
+     "title": "Optimal reporter placement in sparsely measured genetic networks using the Koopman operator",
+     "arxiv": "1906.00944",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "In~\\cite{vaidya2012jmaa,sinha2016jmaa}, set-oriented methods have been utilized to approximate the (adjoint) Lie operators, i.e.\\ the domain is discretized into small cells and few cells are selected as sensors/actuators, and the location can be optimized by solving a convex optimization problem.",
+   "papers": [
+    {
+     "key": "vaidya2012jmaa",
+     "title": "Actuator and sensor placement in linear advection PDE with building system application",
+     "arxiv": "1409.2015",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "The framework has been further extended to incorporate uncertainty~\\cite{sharma2017ibpsa}.",
+   "papers": [
+    {
+     "key": "sharma2017ibpsa",
+     "title": "Transfer operator theoretic framework for monitoring building indoor environment in uncertain operating conditions",
+     "arxiv": "1807.04781",
+     "tex": "source"
+    }
+   ]
+  },
+  {
+   "sentence": "More recently, observability Gramians based on the Koopman operator have been used to inform optimal sensor placement in the presence of noisy and temporally sparse data~\\cite{hasnain2019arxivb}.",
+   "papers": [
+    {
+     "key": "hasnain2019arxivb",
+     "title": "Steady state programming of controlled nonlinear systems via deep dynamic mode decomposition",
+     "arxiv": "1909.13385",
+     "tex": "source"
+    }
+   ]
+  }
+ ],
+ "Discussion and outlook|None": [
+  {
+   "sentence": "Identifying measurement subspaces that remain closed under the Koopman operator is an ongoing challenge~\\cite{brunton2016plosone}.",
+   "papers": [
+    {
+     "key": "brunton2016plosone",
+     "title": "Koopman invariant subspaces and finite linear representations of nonlinear dynamical systems for control",
+     "arxiv": "1510.03007",
+     "tex": "source"
+    }
+   ]
+  }
+ ],
+ "Introduction|An overview of Koopman theory": [],
+ "A practical introduction to the Koopman operator framework|Definitions and vocabulary": []
+}
