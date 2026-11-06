@@ -408,7 +408,7 @@ ol{padding-left:1.3em;margin:10px 0} ol li{margin:6px 0}
 <figcaption>Arrows show what a rebuild reads and writes. The dashed arrow shows which index each logged event and result belongs to.</figcaption>
 </figure>
 <div class="col">
-<p>The cache keys each response by a hash of model, prompt and input, and covers calls that take minutes (extraction, summaries, answering, judging). An extraction response is 2 to 4 KB and a chunk needs one to three calls, so 10,000 chunks fit in under 100 MB compressed. The estimate is unmeasured. The cache is pruned to a size cap, and losing it only slows a rebuild.</p>
+<p>The cache keys each response by a hash of model, prompt and input, and covers calls that take minutes (extraction, summaries, answering, judging). In a trial on 39 chunks of a real textbook, the cache held 40 responses in 20 KB, about 0.5 KB per chunk, so 10,000 chunks need about 5 MB. The cache is pruned to a size cap, and losing it only slows a rebuild: the same database rebuilt in 5 seconds from the cache instead of 19 minutes.</p>
 <p>Two rules of the original design change form. The stale-build check becomes a query for facts that cite no current chunk, where a chunk is current if it belongs to its document’s latest ingest. Each logged event records the index ID in place of a build.</p>
 <h3>Engine: modules and state machines</h3>
 <p>The first build packaged every step with its own interface agreement and state machine, which cost more than the data justified. nano-graphrag errs the other way: algorithms are welded to storage and query modes are chosen by an if-chain. A <strong>module</strong> is one function that declares which intermediate results of a request it needs and which it adds. A <strong>state machine</strong> is a short list of module calls with routes between them, checked when it loads. The <strong>kernel</strong> writes each result, stamps it with the module’s name and version, rejects a fact that cites no chunk, and logs every step.</p>
@@ -485,7 +485,7 @@ ol{padding-left:1.3em;margin:10px 0} ol li{margin:6px 0}
 <ul>
 <li>Baseline figures come from the project’s measurement notes (<code>scratch/sprint-2/results.md</code>), on two textbooks, one local embedding model and a local answering model. Questions were reviewed by a model, not a person. The judge was validated against a stronger model, not a person.</li>
 <li>The Low, Med and High ratings in section 9 are the author’s judgement from the first build’s records and reviews. The simplified data model in section 10 has not been built or tested.</li>
-<li>The model-call cache size in section 10 is an estimate from typical response sizes and has not been measured.</li>
+<li>The model-call cache size in section 10 was measured on one document (39 chunks, one call per chunk) and may differ for other corpora and a second extraction pass.</li>
 <li>Line counts were taken on 6 November 2026 with <code>wc -l</code> over source and test directories. The first build’s count excludes the Python parser sidecar (591 lines) and the log viewer’s web files.</li>
 <li>The nano-graphrag probe is reproducible from <code>scratch/nano-probe/revision.py</code> (nano-graphrag installed from the cloned repository). The community-report and early-return behaviours were confirmed by running it. The fact about its clustering code rests on reading the source.</li>
 </ul>

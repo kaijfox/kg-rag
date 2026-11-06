@@ -83,9 +83,12 @@ async function ask(llm: Llm, r: LlmRequest): Promise<{ facts: RawFact[]; reply: 
   return null;
 }
 
+const NAME = 'extract-facts';
+const VERSION = '1';
+
 export const extractFacts: ModuleDef = {
-  name: 'extract-facts',
-  version: '1',
+  name: NAME,
+  version: VERSION,
   needs: ['segmented'],
   adds: ['extracted'],
   scope: 'per-chunk',
@@ -97,7 +100,7 @@ export const extractFacts: ModuleDef = {
     }
     const llm = services(ctx).llm;
     if (!llm) throw new KgError('precondition', 'fact extraction needs a model client');
-    const done = ctx.index.chunksDoneBy('extract-facts@1');
+    const done = ctx.index.chunksDoneBy(`${NAME}@${VERSION}`);
     const todo = ctx.index.currentChunks().filter((c) => !done.has(c.id));
     const items: DerivedItemDraft[] = [];
     const rejected: { chunk: string; text: string; reason: string }[] = [];

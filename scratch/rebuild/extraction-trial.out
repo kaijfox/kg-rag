@@ -1,0 +1,16 @@
+ingest 1122 s: {"documents":1,"currentChunks":39,"facts":234,"summaries":0,"mentions":765,"links":0,"embeddings":273,"staleItems":0}
+39 chunks, 234 facts kept, 67 rejected, 0 chunks with malformed replies skipped
+first rejections by reason (up to 25 logged): {"starts with a pronoun":1,"refers to the document instead of naming the thing":13,"copies the passage verbatim":10,"too short to stand alone":1}
+ - The difference between the two measurable quantities dQ and dW is found to be the same for any process in which the system evolves between two given states.
+ - The fact that the difference between dQ and dW is the same for any process indicates that dE is an exact differential.
+ - The same property of being an exact differential or state function is not true of the differentials dQ and dW.
+ - The difference between the two measurable quantities dQ and dW is independent of the path of the process.
+ - The first law of thermodynamics partitions the change in energy of a system into two pieces, heat and work.
+ - The fact that dE is an exact differential indicates that the internal energy is a state function.
+ - The state variables Xj include the magnetization.
+ - A system's state can be specified by the values of a set of state variables Xj.
+chunk-search           n=6 recall {"1":0.61,"3":0.89,"5":0.89}
+chunk-search-adjacent  n=6 recall {"1":0.61,"3":0.89,"5":0.89}
+facts-and-neighbours   n=6 recall {"1":0.56,"3":0.83,"5":0.83}
+done
+exit 0
