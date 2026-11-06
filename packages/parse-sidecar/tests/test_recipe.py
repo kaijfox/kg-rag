@@ -95,8 +95,8 @@ def test_invalid_page_range_is_recipe_error():
         page_range_of(recipe_with({**recipe_with()["spec"]["options"], "page_range": [4, 2]}))
 
 
-def test_recipe_hash_matches_core_canonical_json_digest():
-    """Vector from core: sha256hex(canonicalJson(recipe)) in packages/core/src/ids.ts, for a recipe with
+def test_recipe_hash_matches_kernel_canonical_json_digest():
+    """Vector from the kernel: sha256hex(canonicalJson(recipe)) in packages/kernel/src/ids.ts, for a recipe with
     non-ASCII text and a formulaDecoding block. The file names of both sides are built from this digest."""
     recipe = {
         "kind": "parse",

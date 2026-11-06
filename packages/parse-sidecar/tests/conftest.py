@@ -12,8 +12,8 @@ import pytest
 
 PKG_ROOT = pathlib.Path(__file__).resolve().parents[1]
 REPO_ROOT = pathlib.Path(__file__).resolve().parents[3]
-TINY_PDF = REPO_ROOT / "packages/testkit/fixtures/parse/tiny.pdf"
-SCHEMA_PATH = REPO_ROOT / "packages/core/schemas/parse-artifact.schema.json"
+TINY_PDF = PKG_ROOT / "tests/fixtures/tiny.pdf"
+SCHEMA_PATH = PKG_ROOT / "tests/fixtures/parse-artifact.schema.json"
 STAT_MECH_DIR = REPO_ROOT / "test/corpa/stat-mech"
 
 GLM_REVISION = "97f587506984cc92fa69b2694b4128e53db6b081"

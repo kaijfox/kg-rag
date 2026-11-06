@@ -2,8 +2,10 @@
 
 Thin Python wrapper around docling (pinned `docling==2.140.0`) that turns a PDF into a
 `kg-parse-artifact/1` envelope (gzipped JSON), and decodes formula blocks of such an artifact with
-GLM-OCR through mlx-vlm. The contract is `packages/core/schemas/parse-artifact.schema.json`.
-The sidecar does not compute kg IDs and does not chunk; it hashes file bytes only.
+GLM-OCR through mlx-vlm. The envelope is read by `packages/modules/src/parse/artifact.ts`, which validates it. The sidecar
+does not compute kg IDs and does not chunk; it hashes file bytes only. A PDF needs this only when no parsed copy of it
+is kept in a database's `artifacts/` folder: the TypeScript side looks there first, and in any extra folders named with
+`--artifacts`, before it runs the sidecar.
 
 ## Setup and commands
 
@@ -31,9 +33,10 @@ uv run pytest                              # no weights needed beyond docling's 
 KG_MLX=1 uv run pytest -k live             # GLM-OCR on the Apple GPU, needs the model in the local HF cache
 ```
 
-- The tests run docling on `packages/testkit/fixtures/parse/tiny.pdf`, which needs docling's layout and
-  TableFormer models in the Hugging Face cache (downloaded on first use if absent, unless
-  `HF_HUB_OFFLINE=1` is set).
+- The fixtures are in `tests/fixtures/`: `tiny.pdf`, and `parse-artifact.schema.json`, the schema an artifact must satisfy
+  (the TypeScript reader in `packages/modules/src/parse/artifact.ts` checks the same shape). `pnpm check` does not run this
+  suite. The tests run docling on the tiny PDF, which needs docling's layout and TableFormer models in the Hugging Face cache
+  (downloaded on first use if absent, unless `HF_HUB_OFFLINE=1` is set). Last run: 37 passed, 1 skipped (the live GLM-OCR test).
 - The formula tests use a stub decoder and a PDF generated in the test itself, so they need no weights.
 - The live test parses pages 2-4 of `test/corpa/stat-mech/ThermoPlischke.pdf` (skipped if the PDF is absent)
   and decodes them. It needs `KG_MLX=1`, the model `mlx-community/GLM-OCR-4bit` at revision

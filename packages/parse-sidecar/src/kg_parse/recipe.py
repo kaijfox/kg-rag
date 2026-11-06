@@ -1,6 +1,6 @@
 """Recipe validation and canonical hashing.
 
-A recipe is a core ParseRecipeSpec: {"kind": "parse", "version": "1", "spec": {...}}. The parse
+A recipe is a parse recipe: {"kind": "parse", "version": "1", "spec": {...}}. The parse
 options map onto docling's PdfPipelineOptions, except `page_range`, which is passed to
 DocumentConverter.convert. `spec.formulaDecoding` is only meaningful for decode-formulas.
 """
