@@ -1,0 +1,22 @@
+{
+  "name": "@kg/kernel",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "The fixed foundation: IDs, the index, history and cache stores, the state-machine runner, and the model and embedding interfaces.",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "better-sqlite3": "12.4.1",
+    "sqlite-vec": "0.1.9"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "7.6.13",
+    "vitest": "3.2.4"
+  }
+}

@@ -24,230 +24,40 @@ importers:
         specifier: 3.2.4
         version: 3.2.4(@types/node@22.20.5)(tsx@4.21.0)
 
-  packages/api:
-    dependencies:
-      '@kg/core':
-        specifier: workspace:*
-        version: link:../core
-    devDependencies:
-      '@kg/testkit':
-        specifier: workspace:*
-        version: link:../testkit
-      vitest:
-        specifier: 3.2.4
-        version: 3.2.4(@types/node@22.20.5)(tsx@4.21.0)
-
   packages/app:
     dependencies:
-      '@kg/api':
-        specifier: workspace:*
-        version: link:../api
-      '@kg/chunk':
-        specifier: workspace:*
-        version: link:../chunk
-      '@kg/core':
-        specifier: workspace:*
-        version: link:../core
-      '@kg/embed':
-        specifier: workspace:*
-        version: link:../embed
       '@kg/eval':
         specifier: workspace:*
         version: link:../eval
-      '@kg/eventlog':
+      '@kg/kernel':
         specifier: workspace:*
-        version: link:../eventlog
-      '@kg/ingest':
+        version: link:../kernel
+      '@kg/modules':
         specifier: workspace:*
-        version: link:../ingest
-      '@kg/mcp':
-        specifier: workspace:*
-        version: link:../mcp
-      '@kg/parse':
-        specifier: workspace:*
-        version: link:../parse
-      '@kg/pipeline':
-        specifier: workspace:*
-        version: link:../pipeline
-      '@kg/search':
-        specifier: workspace:*
-        version: link:../search
-      '@kg/sqlite':
-        specifier: workspace:*
-        version: link:../sqlite
-      '@kg/store':
-        specifier: workspace:*
-        version: link:../store
-      '@kg/viewer':
-        specifier: workspace:*
-        version: link:../viewer
+        version: link:../modules
       '@modelcontextprotocol/sdk':
         specifier: 1.32.0
         version: 1.32.0(zod@4.1.12)
     devDependencies:
-      '@kg/testkit':
-        specifier: workspace:*
-        version: link:../testkit
-
-  packages/chunk:
-    dependencies:
-      '@kg/core':
-        specifier: workspace:*
-        version: link:../core
-    devDependencies:
-      '@kg/testkit':
-        specifier: workspace:*
-        version: link:../testkit
-      vitest:
-        specifier: 3.2.4
-        version: 3.2.4(@types/node@22.20.5)(tsx@4.21.0)
-
-  packages/core:
-    dependencies:
-      zod:
-        specifier: 4.1.12
-        version: 4.1.12
-    devDependencies:
-      '@types/better-sqlite3':
-        specifier: 7.6.13
-        version: 7.6.13
-      better-sqlite3:
-        specifier: 12.4.1
-        version: 12.4.1
-
-  packages/embed:
-    dependencies:
-      '@kg/core':
-        specifier: workspace:*
-        version: link:../core
-    devDependencies:
-      '@kg/testkit':
-        specifier: workspace:*
-        version: link:../testkit
       vitest:
         specifier: 3.2.4
         version: 3.2.4(@types/node@22.20.5)(tsx@4.21.0)
 
   packages/eval:
     dependencies:
-      '@kg/core':
+      '@kg/kernel':
         specifier: workspace:*
-        version: link:../core
-      '@kg/pipeline':
-        specifier: workspace:*
-        version: link:../pipeline
+        version: link:../kernel
     devDependencies:
-      '@kg/testkit':
+      '@kg/modules':
         specifier: workspace:*
-        version: link:../testkit
+        version: link:../modules
       vitest:
         specifier: 3.2.4
         version: 3.2.4(@types/node@22.20.5)(tsx@4.21.0)
 
-  packages/eventlog:
+  packages/kernel:
     dependencies:
-      '@kg/core':
-        specifier: workspace:*
-        version: link:../core
-      '@kg/sqlite':
-        specifier: workspace:*
-        version: link:../sqlite
-    devDependencies:
-      '@kg/testkit':
-        specifier: workspace:*
-        version: link:../testkit
-      '@types/better-sqlite3':
-        specifier: 7.6.13
-        version: 7.6.13
-      better-sqlite3:
-        specifier: 12.4.1
-        version: 12.4.1
-      vitest:
-        specifier: 3.2.4
-        version: 3.2.4(@types/node@22.20.5)(tsx@4.21.0)
-
-  packages/ingest:
-    dependencies:
-      '@kg/core':
-        specifier: workspace:*
-        version: link:../core
-      '@kg/pipeline':
-        specifier: workspace:*
-        version: link:../pipeline
-    devDependencies:
-      '@kg/testkit':
-        specifier: workspace:*
-        version: link:../testkit
-      vitest:
-        specifier: 3.2.4
-        version: 3.2.4(@types/node@22.20.5)(tsx@4.21.0)
-
-  packages/mcp:
-    dependencies:
-      '@kg/core':
-        specifier: workspace:*
-        version: link:../core
-      '@modelcontextprotocol/sdk':
-        specifier: 1.32.0
-        version: 1.32.0(zod@4.1.12)
-    devDependencies:
-      '@kg/testkit':
-        specifier: workspace:*
-        version: link:../testkit
-      vitest:
-        specifier: 3.2.4
-        version: 3.2.4(@types/node@22.20.5)(tsx@4.21.0)
-
-  packages/parse:
-    dependencies:
-      '@kg/core':
-        specifier: workspace:*
-        version: link:../core
-    devDependencies:
-      '@kg/testkit':
-        specifier: workspace:*
-        version: link:../testkit
-      vitest:
-        specifier: 3.2.4
-        version: 3.2.4(@types/node@22.20.5)(tsx@4.21.0)
-
-  packages/pipeline:
-    dependencies:
-      '@kg/core':
-        specifier: workspace:*
-        version: link:../core
-      xstate:
-        specifier: 5.33.2
-        version: 5.33.2
-    devDependencies:
-      '@kg/testkit':
-        specifier: workspace:*
-        version: link:../testkit
-      vitest:
-        specifier: 3.2.4
-        version: 3.2.4(@types/node@22.20.5)(tsx@4.21.0)
-
-  packages/search:
-    dependencies:
-      '@kg/core':
-        specifier: workspace:*
-        version: link:../core
-      '@kg/pipeline':
-        specifier: workspace:*
-        version: link:../pipeline
-    devDependencies:
-      '@kg/testkit':
-        specifier: workspace:*
-        version: link:../testkit
-      vitest:
-        specifier: 3.2.4
-        version: 3.2.4(@types/node@22.20.5)(tsx@4.21.0)
-
-  packages/sqlite:
-    dependencies:
-      '@kg/core':
-        specifier: workspace:*
-        version: link:../core
       better-sqlite3:
         specifier: 12.4.1
         version: 12.4.1
@@ -255,9 +65,6 @@ importers:
         specifier: 0.1.9
         version: 0.1.9
     devDependencies:
-      '@kg/testkit':
-        specifier: workspace:*
-        version: link:../testkit
       '@types/better-sqlite3':
         specifier: 7.6.13
         version: 7.6.13
@@ -265,40 +72,12 @@ importers:
         specifier: 3.2.4
         version: 3.2.4(@types/node@22.20.5)(tsx@4.21.0)
 
-  packages/store:
+  packages/modules:
     dependencies:
-      '@kg/core':
+      '@kg/kernel':
         specifier: workspace:*
-        version: link:../core
-      '@kg/sqlite':
-        specifier: workspace:*
-        version: link:../sqlite
+        version: link:../kernel
     devDependencies:
-      '@kg/testkit':
-        specifier: workspace:*
-        version: link:../testkit
-      vitest:
-        specifier: 3.2.4
-        version: 3.2.4(@types/node@22.20.5)(tsx@4.21.0)
-
-  packages/testkit:
-    dependencies:
-      '@kg/core':
-        specifier: workspace:*
-        version: link:../core
-      vitest:
-        specifier: 3.2.4
-        version: 3.2.4(@types/node@22.20.5)(tsx@4.21.0)
-
-  packages/viewer:
-    dependencies:
-      '@kg/core':
-        specifier: workspace:*
-        version: link:../core
-    devDependencies:
-      '@kg/testkit':
-        specifier: workspace:*
-        version: link:../testkit
       vitest:
         specifier: 3.2.4
         version: 3.2.4(@types/node@22.20.5)(tsx@4.21.0)
@@ -1706,9 +1485,6 @@ packages:
   wrappy@1.0.2:
     resolution: {integrity: sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==}
 
-  xstate@5.33.2:
-    resolution: {integrity: sha512-8tC7yXgeCvpT8gKEeEje6ikJJG1wpnoLiXe+HfECW8m10ubMd3QxKOwWA8KxPJVBcLwfdRoMKYxIBGYKmo37/A==}
-
   zod-to-json-schema@3.25.2:
     resolution: {integrity: sha512-O/PgfnpT1xKSDeQYSCfRI5Gy3hPf91mKVDuYLUHZJMiDFptvP41MSnWofm8dnCm0256ZNfZIM7DSzuSMAFnjHA==}
     peerDependencies:
@@ -2977,8 +2753,6 @@ snapshots:
       stackback: 0.0.2
 
   wrappy@1.0.2: {}
-
-  xstate@5.33.2: {}
 
   zod-to-json-schema@3.25.2(zod@4.1.12):
     dependencies:

@@ -1,0 +1,368 @@
+{
+ "0805.4221": {
+  "arxiv": "0805.4221",
+  "title": "Ergodic theory and visualization. I. Mesochronic plots for visualization of ergodic partition and invariant sets",
+  "tex": 6794019,
+  "pdf": 7255330
+ },
+ "1101.4166": {
+  "arxiv": "1101.4166",
+  "title": "Estimating Long-Term Behavior of Flows without Trajectory Integration: The Infinitesimal Generator Approach",
+  "tex": 2044012,
+  "pdf": 2674040
+ },
+ "1206.3164": {
+  "arxiv": "1206.3164",
+  "title": "Applied Koopmanism",
+  "tex": 8478428,
+  "pdf": 9241827
+ },
+ "1211.7103": {
+  "arxiv": "1211.7103",
+  "title": "A variational approach to modeling slow processes in stochastic dynamical systems",
+  "tex": 544165,
+  "pdf": 374814
+ },
+ "1312.0041": {
+  "arxiv": "1312.0041",
+  "title": "On dynamic mode decomposition: theory and applications",
+  "tex": 1168476,
+  "pdf": 1687738
+ },
+ "1403.6559": {
+  "arxiv": "1403.6559",
+  "title": "Construction of eigenfunctions for scalar-type operators via Laplace averages with connections to the Koopman operator",
+  "tex": 109118,
+  "pdf": 695146
+ },
+ "1408.4408": {
+  "arxiv": "1408.4408",
+  "title": "A data-driven approximation of the Koopman operator: extending dynamic mode decomposition",
+  "tex": 3018287,
+  "pdf": 2778300
+ },
+ "1412.7268": {
+  "arxiv": "1412.7268",
+  "title": "A trajectory-free framework for analysing multiscale systems",
+  "tex": 576341,
+  "pdf": 431928
+ },
+ "1507.02338": {
+  "arxiv": "1507.02338",
+  "title": "Data-driven spectral decomposition and forecasting of ergodic dynamical systems",
+  "tex": 9019338,
+  "pdf": 10459459
+ },
+ "1510.03007": {
+  "arxiv": "1510.03007",
+  "title": "Koopman invariant subspaces and finite linear representations of nonlinear dynamical systems for control",
+  "tex": 755942,
+  "pdf": 1193631
+ },
+ "1512.05997": {
+  "arxiv": "1512.05997",
+  "title": "On the numerical approximation of the Perron-Frobenius and Koopman operator",
+  "tex": 1532909,
+  "pdf": 2046119
+ },
+ "1608.05306": {
+  "arxiv": "1608.05306",
+  "title": "Chaos as an intermittently forced linear system",
+  "tex": 9409667,
+  "pdf": 9796686
+ },
+ "1610.06773": {
+  "arxiv": "1610.06773",
+  "title": "Variational koopman models: slow collective variables and molecular kinetics from short off-equilibrium simulations",
+  "tex": 6200819,
+  "pdf": 7100453
+ },
+ "1611.01209": {
+  "arxiv": "1611.01209",
+  "title": "Koopman principle eigenfunctions and linearization of diffeomorphisms",
+  "tex": 455510,
+  "pdf": 1036241
+ },
+ "1703.04680": {
+  "arxiv": "1703.04680",
+  "title": "On convergence of extended dynamic mode decomposition to the Koopman operator",
+  "tex": 69048,
+  "pdf": 507206
+ },
+ "1703.10112": {
+  "arxiv": "1703.10112",
+  "title": "Data-driven model reduction and transfer operator approximation",
+  "tex": 1237755,
+  "pdf": 1757817
+ },
+ "1706.08544": {
+  "arxiv": "1706.08544",
+  "title": "Delay-coordinate maps and the spectra of Koopman operators",
+  "tex": 1027456,
+  "pdf": 1356052
+ },
+ "1707.00225": {
+  "arxiv": "1707.00225",
+  "title": "Extended dynamic mode decomposition with dictionary learning: A data-driven adaptive spectral decomposition of the Koopman operator",
+  "tex": 139979,
+  "pdf": 619826
+ },
+ "1707.01146": {
+  "arxiv": "1707.01146",
+  "title": "Data-driven discovery of Koopman eigenfunctions for control",
+  "tex": 2449207,
+  "pdf": 2813706
+ },
+ "1707.04659": {
+  "arxiv": "1707.04659",
+  "title": "Variational approach for learning markov processes from time series data",
+  "tex": 4131386,
+  "pdf": 4644775
+ },
+ "1708.02685": {
+  "arxiv": "1708.02685",
+  "title": "Data driven modal decompositions: Analysis and enhancements",
+  "tex": 1341428,
+  "pdf": 1066955
+ },
+ "1708.06850": {
+  "arxiv": "1708.06850",
+  "title": "Learning deep neural network representations for Koopman operators of nonlinear dynamical systems",
+  "tex": 8124027,
+  "pdf": 8485205
+ },
+ "1709.02003": {
+  "arxiv": "1709.02003",
+  "title": "Koopman-based lifting techniques for nonlinear systems identification",
+  "tex": 2774113,
+  "pdf": 1229778
+ },
+ "1710.04340": {
+  "arxiv": "1710.04340",
+  "title": "Learning Koopman invariant subspaces for dynamic mode decomposition",
+  "tex": 871513,
+  "pdf": 1591666
+ },
+ "1710.06012": {
+  "arxiv": "1710.06012",
+  "title": "VAMPnets: Deep learning of molecular kinetics",
+  "tex": 6258018,
+  "pdf": 5955555
+ },
+ "1710.06532": {
+  "arxiv": "1710.06532",
+  "title": "Data-driven spectral analysis of the Koopman operator",
+  "tex": 9221616,
+  "pdf": 8845751
+ },
+ "1710.11239": {
+  "arxiv": "1710.11239",
+  "title": "Time-lagged autoencoders: Deep learning of slow collective variables for molecular kinetics",
+  "tex": 1491389,
+  "pdf": 2174301
+ },
+ "1712.01378": {
+  "arxiv": "1712.01378",
+  "title": "Linearly-recurrent autoencoder networks for learning dynamics",
+  "tex": 2587293,
+  "pdf": 2511654
+ },
+ "1712.01572": {
+  "arxiv": "1712.01572",
+  "title": "Eigendecompositions of transfer operators in reproducing kernel hilbert spaces",
+  "tex": 1811949,
+  "pdf": 2706868
+ },
+ "1712.09707": {
+  "arxiv": "1712.09707",
+  "title": "Deep learning for universal linear embeddings of nonlinear dynamics",
+  "tex": 6520598,
+  "pdf": 7016472
+ },
+ "1801.07799": {
+  "arxiv": "1801.07799",
+  "title": "Koopman spectra in reproducing kernel Hilbert spaces",
+  "tex": 318608,
+  "pdf": 870827
+ },
+ "1803.03920": {
+  "arxiv": "1803.03920",
+  "title": "On the Approximation of Koopman Spectra for Measure Preserving Transformations",
+  "tex": 6060520,
+  "pdf": 10576375
+ },
+ "1805.07411": {
+  "arxiv": "1805.07411",
+  "title": "Discovery of nonlinear multiscale systems: Sampling strategies and embeddings",
+  "tex": 1556955,
+  "pdf": 2059941
+ },
+ "1808.01515": {
+  "arxiv": "1808.01515",
+  "title": "Reproducing kernel Hilbert space compactification of unitary evolution groups",
+  "tex": 5580813,
+  "pdf": 6548932
+ },
+ "1808.09557": {
+  "arxiv": "1808.09557",
+  "title": "Data Driven Koopman Spectral Analysis in Vandermonde--Cauchy Form via the DFT: Numerical Method and Theoretical Insights",
+  "tex": 2382750,
+  "pdf": 2998541
+ },
+ "1808.10551": {
+  "arxiv": "1808.10551",
+  "title": "Dynamic mode decomposition in vector-valued reproducing kernel hilbert spaces for extracting dynamical structure among observables",
+  "tex": 4177223,
+  "pdf": 4902614
+ },
+ "1810.01479": {
+  "arxiv": "1810.01479",
+  "title": "Time-delay observables for Koopman: Theory and applications",
+  "tex": 743005,
+  "pdf": 1183908
+ },
+ "1811.12562": {
+  "arxiv": "1811.12562",
+  "title": "On Least Squares Problems with Certain Vandermonde--Khatri--Rao Structure with Applications to DMD",
+  "tex": 153264,
+  "pdf": 902117
+ },
+ "1901.10416": {
+  "arxiv": "1901.10416",
+  "title": "(review)",
+  "tex": 2485167,
+  "pdf": 3736187
+ },
+ "1905.11075": {
+  "arxiv": "1905.11075",
+  "title": "Machine learning for fluid mechanics",
+  "tex": 8228088,
+  "pdf": 9583412
+ },
+ "1906.05973": {
+  "arxiv": "1906.05973",
+  "title": "Centering data improves the dynamic mode decomposition",
+  "tex": 2660114,
+  "pdf": 2362811
+ },
+ "1907.10807": {
+  "arxiv": "1907.10807",
+  "title": "On the koopman operator of algorithms",
+  "tex": 1892908,
+  "pdf": 2342589
+ },
+ "1909.10638": {
+  "arxiv": "1909.10638",
+  "title": "Data-driven approximation of the Koopman generator: Model reduction, system identification, and control",
+  "tex": 2884744,
+  "pdf": 3219368
+ },
+ "1910.03977": {
+  "arxiv": "1910.03977",
+  "title": "Dynamic Mode Decomposition for Continuous Time Systems with the Liouville Operator",
+  "tex": 1655322,
+  "pdf": 2255533
+ },
+ "1911.11996": {
+  "arxiv": "1911.11996",
+  "title": "Existence and uniqueness of global Koopman eigenfunctions for stable fixed points and periodic orbits",
+  "tex": 53320,
+  "pdf": 872660
+ },
+ "1912.07392": {
+  "arxiv": "1912.07392",
+  "title": "Deep learning markov and koopman models with physical constraints",
+  "tex": 1396772,
+  "pdf": 2021849
+ },
+ "2003.02236": {
+  "arxiv": "2003.02236",
+  "title": "Forecasting sequential data using consistent koopman autoencoders",
+  "tex": 3881946,
+  "pdf": 4213575
+ },
+ "2004.00574": {
+  "arxiv": "2004.00574",
+  "title": "From Fourier to Koopman: Spectral methods for long-term time series prediction.",
+  "tex": 3389671,
+  "pdf": 3281686
+ },
+ "2005.02762": {
+  "arxiv": "2005.02762",
+  "title": "Recurrent neural networks and koopman-based frameworks for temporal predictions in a low-order model of turbulence",
+  "tex": 2331735,
+  "pdf": 1812712
+ },
+ "2005.06623": {
+  "arxiv": "2005.06623",
+  "title": "Kernel analog forecasting: Multiscale test problems",
+  "tex": 4563801,
+  "pdf": 5555712
+ },
+ "2006.02361": {
+  "arxiv": "2006.02361",
+  "title": "Optimizing neural networks via Koopman operator theory",
+  "tex": 5696263,
+  "pdf": 6256481
+ },
+ "2006.11765": {
+  "arxiv": "2006.11765",
+  "title": "Applications of koopman mode analysis to neural networks",
+  "tex": 1843130,
+  "pdf": 1929831
+ },
+ "2007.02195": {
+  "arxiv": "2007.02195",
+  "title": "Delay-coordinate maps, coherence, and approximate spectra of evolution operators",
+  "tex": 5027454,
+  "pdf": 5535455
+ },
+ "2009.05883": {
+  "arxiv": "2009.05883",
+  "title": "On Numerical Approximations of the Koopman Operator",
+  "tex": 26281,
+  "pdf": 326200
+ },
+ "2010.04008": {
+  "arxiv": "2010.04008",
+  "title": "Generic Properties of Koopman Eigenfunctions for Stable Fixed Points and Periodic Orbits",
+  "tex": 42257,
+  "pdf": 168804
+ },
+ "2101.02646": {
+  "arxiv": "2101.02646",
+  "title": "Theoretical Foundations for the Dynamic Mode Decomposition of High Order Dynamical Systems",
+  "tex": 326027,
+  "pdf": 605141
+ },
+ "2101.07206": {
+  "arxiv": "2101.07206",
+  "title": "DeepGreen: Deep learning of Green's functions for nonlinear boundary value problems",
+  "tex": 8436907,
+  "pdf": 7656569
+ },
+ "2102.12086": {
+  "arxiv": "2102.12086",
+  "title": "(review)",
+  "tex": 15670239,
+  "pdf": 18554048
+ },
+ "2106.01510": {
+  "arxiv": "2106.01510",
+  "title": "Kernel learning for robust dynamic mode decomposition: Linear and nonlinear disambiguation optimization (LANDO)",
+  "tex": 17366469,
+  "pdf": 3555239
+ },
+ "2107.01948": {
+  "arxiv": "2107.01948",
+  "title": "Singular Values of Hankel Matrix: Implication to the Convergence of Hankel Dynamic Mode Decomposition",
+  "tex": 1259479,
+  "pdf": 1712358
+ },
+ "math_0503445": {
+  "arxiv": "math/0503445",
+  "title": "Diffusion maps, spectral clustering and reaction coordinates of dynamical systems",
+  "tex": 273992,
+  "pdf": 3221893
+ }
+}

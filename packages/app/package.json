@@ -1,36 +1,24 @@
 {
   "name": "@kg/app",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "type": "module",
-  "description": "Composition root: src/compose.ts wires the real packages; scripts/ hold the entry points and experiment drivers.",
+  "description": "The kg command line, the MCP server and the session viewer.",
   "exports": {
     ".": "./src/index.ts"
   },
   "scripts": {
     "test": "vitest run",
     "typecheck": "tsc -p tsconfig.json",
-    "integrate": "tsx scripts/integrate.ts",
     "kg": "tsx src/cli.ts"
   },
   "dependencies": {
-    "@kg/core": "workspace:*",
-    "@kg/api": "workspace:*",
-    "@kg/chunk": "workspace:*",
-    "@kg/embed": "workspace:*",
+    "@kg/kernel": "workspace:*",
+    "@kg/modules": "workspace:*",
     "@kg/eval": "workspace:*",
-    "@kg/eventlog": "workspace:*",
-    "@kg/ingest": "workspace:*",
-    "@kg/mcp": "workspace:*",
-    "@kg/parse": "workspace:*",
-    "@kg/pipeline": "workspace:*",
-    "@kg/search": "workspace:*",
-    "@kg/store": "workspace:*",
-    "@kg/sqlite": "workspace:*",
-    "@kg/viewer": "workspace:*",
     "@modelcontextprotocol/sdk": "1.32.0"
   },
   "devDependencies": {
-    "@kg/testkit": "workspace:*"
+    "vitest": "3.2.4"
   }
 }

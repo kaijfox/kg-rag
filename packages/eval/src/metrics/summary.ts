@@ -1,5 +1,5 @@
-import type { EvalQuestion, QuestionType } from '@kg/core';
-import { allGoldAtK, mean, recallAtK, type RankedSource } from './recall';
+import type { EvalQuestion, QuestionType, RankedSource } from '../types';
+import { allGoldAtK, mean, recallAtK } from './recall';
 
 export interface PerQuestionMetrics {
   recall: Record<string, number>;

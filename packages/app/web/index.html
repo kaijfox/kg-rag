@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>kg sessions</title>
+<style>
+  :root { --bg:#f5f7f8; --fg:#1b2428; --muted:#56646b; --rule:#d5dde0; --panel:#fff; --accent:#0b6a68; --soft:#dcefee; --warn:#a85a00; --warnsoft:#fbead3; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#111a1d; --fg:#e4ebed; --muted:#9db0b6; --rule:#2a3a3f; --panel:#18252a; --accent:#4cc3bf; --soft:#16373a; --warn:#f0a350; --warnsoft:#3a2a12; } }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 14px/1.5 system-ui, sans-serif; background: var(--bg); color: var(--fg); display: grid; grid-template-columns: 280px 1fr; height: 100vh; }
+  aside { border-right: 1px solid var(--rule); overflow: auto; }
+  main { overflow: auto; padding: 16px 24px 48px; }
+  h1 { font-size: 15px; margin: 12px 14px; }
+  h2 { font-size: 15px; margin: 0 0 8px; }
+  .session { padding: 8px 14px; border-bottom: 1px solid var(--rule); cursor: pointer; }
+  .session:hover, .session.on { background: var(--soft); }
+  .muted { color: var(--muted); font-size: 12px; }
+  .ev { background: var(--panel); border: 1px solid var(--rule); border-radius: 6px; margin: 8px 0; padding: 8px 12px; }
+  .ev.search { border-color: var(--accent); }
+  .ev.bad { border-color: var(--warn); background: var(--warnsoft); }
+  .ev .head { display: flex; gap: 8px; align-items: baseline; flex-wrap: wrap; }
+  .tag { font: 11px ui-monospace, monospace; background: var(--soft); color: var(--accent); padding: 1px 6px; border-radius: 3px; }
+  .ranks { font: 12px ui-monospace, monospace; margin: 4px 0 0; padding: 0; list-style: none; }
+  .ranks li { padding: 1px 0; }
+  .text { white-space: pre-wrap; margin: 2px 0 6px 14px; max-height: 8em; overflow: auto; }
+  details > summary { cursor: pointer; color: var(--muted); }
+  .machine { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: 6px 0; }
+  .box { border: 1px solid var(--rule); border-radius: 4px; padding: 2px 8px; background: var(--panel); font-size: 12px; }
+  .box.hit { border-color: var(--accent); background: var(--soft); }
+  textarea { width: 100%; background: var(--panel); color: var(--fg); border: 1px solid var(--rule); border-radius: 4px; }
+  button { background: var(--accent); color: var(--bg); border: 0; border-radius: 4px; padding: 4px 10px; cursor: pointer; }
+</style>
+</head>
+<body>
+<aside><h1>Sessions</h1><div id="sessions"></div></aside>
+<main><div id="view"><p class="muted">Pick a session. Running sessions update as events arrive.</p></div></main>
+<script>
+const $ = (id) => document.getElementById(id);
+const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text !== undefined) e.textContent = text; return e; };
+const get = (u) => fetch(u).then((r) => r.json());
+let current = null, lastSeq = 0, machines = [], records = new Map(), visited = new Set();
+
+async function loadSessions() {
+  const list = await get('/api/sessions');
+  const box = $('sessions'); box.textContent = '';
+  for (const s of list) {
+    const d = el('div', 'session' + (s.sessionId === current ? ' on' : ''));
+    d.append(el('div', '', `${s.kind}${s.label ? ' · ' + s.label : ''}`), el('div', 'muted', `${s.startedAt.replace('T', ' ').slice(0, 19)} · ${s.events} events`));
+    d.onclick = () => open(s.sessionId);
+    box.append(d);
+  }
+}
+async function open(id) { current = id; lastSeq = 0; visited = new Set(); $('view').textContent = ''; machines = await get('/api/machines'); await poll(); loadSessions(); }
+
+function ranks(slot) {
+  const ul = el('ul', 'ranks');
+  for (const [i, r] of (slot.top || []).slice(0, 8).entries()) ul.append(el('li', '', `${String(i + 1).padStart(2)}  ${r.score.toFixed(3)}  ${r.id}`));
+  if (slot.n > 8) ul.append(el('li', 'muted', `… ${slot.n} in all`));
+  return ul;
+}
+function machineBar(name) {
+  const m = machines.find((x) => x.name === name); if (!m) return null;
+  const bar = el('div', 'machine'); let at = m.start; const seen = new Set();
+  while (at && !seen.has(at)) {
+    seen.add(at); const s = m.states[at];
+    bar.append(el('span', 'box' + (visited.has(name + ':' + at) ? ' hit' : ''), `${at}: ${s.module}`));
+    const n = s.next; at = n === null ? null : typeof n === 'string' ? n : n.then;
+    if (at) bar.append(el('span', 'muted', '→'));
+  }
+  return bar;
+}
+async function addRecords(ids) {
+  const need = ids.filter((i) => !records.has(i)); if (!need.length) return;
+  for (const r of await get('/api/records?ids=' + need.join(','))) records.set(r.id, r);
+}
+function render(e) {
+  const p = e.payload || {}; const card = el('div', 'ev');
+  const head = el('div', 'head'); head.append(el('span', 'tag', e.type), el('span', 'muted', e.ts.slice(11, 19) + (e.searchId ? ' · ' + e.searchId.slice(0, 12) : '')));
+  card.append(head);
+  if (e.type === 'search.started') { card.classList.add('search'); head.append(el('strong', '', p.query)); head.append(el('span', 'muted', `k=${p.k} · ${p.machine}`)); const bar = machineBar(p.machine); if (bar) card.append(bar); }
+  else if (e.type === 'step') {
+    visited.add(p.machine + ':' + p.state);
+    head.append(el('strong', '', `${p.state} · ${p.module}`), el('span', 'muted', `${p.ms} ms`));
+    const rin = p.received && (p.received.candidates || p.received.results), rout = p.returned && (p.returned.candidates || p.returned.results);
+    if (rin) { const d = el('details'); d.append(el('summary', '', `received ${rin.n} candidates`), ranks(rin)); card.append(d); }
+    if (rout && rout.top) { const d = el('details'); d.open = true; d.append(el('summary', '', `returned ${rout.n} candidates`), ranks(rout)); card.append(d); }
+    for (const n of p.notes || []) card.append(el('div', 'muted', n.text));
+  }
+  else if (e.type === 'search.result') {
+    for (const [i, it] of p.items.entries()) {
+      const r = records.get(it.id);
+      card.append(el('div', '', `${i + 1}. ${it.kind} · ${it.score.toFixed(3)}`), el('div', 'text', r ? r.text : it.id));
+    }
+  }
+  else if (e.type === 'feedback') head.append(el('strong', '', `relevance ${p.relevance}`), el('span', 'muted', p.note || ''));
+  else if (/failed$/.test(e.type) || e.type === 'pipeline.failed') { card.classList.add('bad'); head.append(el('strong', '', p.message || p.error || '')); }
+  else if (e.type === 'llm.called') head.append(el('span', 'muted', `${p.purpose} · ${p.model}${p.cached ? ' · cached' : ''} · ${p.ms} ms`));
+  else if (e.type !== 'session.opened') { const d = el('details'); d.append(el('summary', '', 'payload'), el('pre', '', JSON.stringify(p, null, 1))); card.append(d); }
+  return card;
+}
+async function poll() {
+  if (!current) return;
+  const data = await get(`/api/sessions/${encodeURIComponent(current)}/events?after=${lastSeq}`);
+  const ids = data.events.filter((e) => e.type === 'search.result').flatMap((e) => e.payload.items.map((i) => i.id));
+  await addRecords(ids);
+  const view = $('view');
+  if (lastSeq === 0) { view.textContent = ''; const h = el('h2', '', 'Timeline'); view.append(h); const n = el('div'); n.id = 'notes'; view.append(n); const ta = el('textarea'); ta.rows = 2; ta.placeholder = 'Add a note to this session'; const b = el('button', '', 'Add note'); b.onclick = async () => { if (!ta.value.trim()) return; await fetch(`/api/sessions/${encodeURIComponent(current)}/notes`, { method: 'POST', body: JSON.stringify({ text: ta.value }) }); ta.value = ''; lastSeq = 0; poll(); }; view.append(ta, b); const tl = el('div'); tl.id = 'tl'; view.append(tl); }
+  $('notes').textContent = ''; for (const n of data.notes) $('notes').append(el('div', 'muted', `note ${n.ts.slice(0, 19)}: ${n.text}`));
+  for (const e of data.events) { $('tl').append(render(e)); lastSeq = Math.max(lastSeq, e.seq); }
+}
+loadSessions(); setInterval(() => { loadSessions(); poll(); }, 2500);
+</script>
+</body>
+</html>

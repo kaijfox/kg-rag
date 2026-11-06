@@ -1,6 +1,6 @@
 # Proposed amendment: gold evidence as source spans (DRAFT, not applied)
 
-Status: awaiting user approval. `design/` is unchanged. Motivation and scoping: `arxiv-corpora-scoping.md`.
+Status: approved by the user 2026-11-06 and applied to `design/260916_initial-roadmap.md` (Amendments). Code changes below are not started. Motivation and scoping: `arxiv-corpora-scoping.md`.
 
 ## Text to add to Amendments in `design/260916_initial-roadmap.md`
 

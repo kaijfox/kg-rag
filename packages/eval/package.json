@@ -1,8 +1,9 @@
 {
   "name": "@kg/eval",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "type": "module",
+  "description": "Evaluation: question generation, answering, judging and retrieval metrics, as plain functions over the kernel.",
   "exports": {
     ".": "./src/index.ts"
   },
@@ -11,11 +12,10 @@
     "typecheck": "tsc -p tsconfig.json"
   },
   "dependencies": {
-    "@kg/core": "workspace:*",
-    "@kg/pipeline": "workspace:*"
+    "@kg/kernel": "workspace:*"
   },
   "devDependencies": {
-    "@kg/testkit": "workspace:*",
-    "vitest": "3.2.4"
+    "vitest": "3.2.4",
+    "@kg/modules": "workspace:*"
   }
 }

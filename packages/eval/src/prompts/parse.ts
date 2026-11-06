@@ -1,4 +1,5 @@
-import { KgError, type QuestionType } from '@kg/core';
+import { KgError } from '@kg/kernel';
+import type { QuestionType } from '../types';
 
 const isObject = (x: unknown): x is Record<string, unknown> => typeof x === 'object' && x !== null && !Array.isArray(x);
 

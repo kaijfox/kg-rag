@@ -1,0 +1,20 @@
+{
+  "name": "@kg/modules",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "What a use case swaps: the chunker, parser and source adapters, the ingest and search modules, fact extraction, the replacement rule, the machines that wire them, and rebuild.",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@kg/kernel": "workspace:*"
+  },
+  "devDependencies": {
+    "vitest": "3.2.4"
+  }
+}

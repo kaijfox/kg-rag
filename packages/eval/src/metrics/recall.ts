@@ -1,10 +1,5 @@
-import { KgError, type EvalQuestion, type ItemKind } from '@kg/core';
-
-/** A ranked result as the metrics see it: the kind and the source chunks of one item, in rank order. */
-export interface RankedSource {
-  kind: ItemKind;
-  sourceChunkIds: readonly string[];
-}
+import { KgError } from '@kg/kernel';
+import type { EvalQuestion, RankedSource } from '../types';
 
 export interface RecallOptions {
   /** count the sources of summary items too (reported separately; summaries inflate recall) */

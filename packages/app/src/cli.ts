@@ -1,290 +1,266 @@
+#!/usr/bin/env tsx
 /**
- * The command line: one entry point over the composition. Run from the repository root as `./kg <command>`
- * (or `pnpm kg <command>`; pnpm prints its own header on stdout, so use `./kg` for `serve mcp`):
+ * The kg command line. Run from anywhere in the repository as `./kg <command>`. `--db <dir>` (or KG_DB) names the
+ * database directory; the default is ./kg-data.
  *
- *   ingest <file-or-dir>...        ingest PDFs (cached parse artifacts first, then the kg-parse sidecar)
- *   search "<query>" [-k n]        search the current build; prints label, score and the passage
- *   status                         documents, build, counts
- *   serve mcp                      MCP tools over stdio (for an agent client)
- *   serve viewer [--port n]        the read-only viewer at http://127.0.0.1:<port>/
- *   eval generate <out.json>       write an eval set: one question per sampled chunk (needs Ollama)
- *   eval run <set.json>            run an eval set against the current build and print the summary (needs Ollama)
- *
- * Options (every command): --db <file> (default ./kg.sqlite, or KG_DB), --artifacts <dir> (cached parse artifacts,
- * or KG_ARTIFACTS), --sidecar <command|none> (the kg-parse command; default the sidecar's venv, then kg-parse on PATH,
- * or KG_SIDECAR), --embed-digest <hex> (the Ollama digest of the embedding model, or KG_EMBED_DIGEST), --ollama-url.
- * Logs go to stderr; stdout carries only the command's output (and the MCP protocol for `serve mcp`).
+ *   init                         create a database directory
+ *   add <file>...                add source files (--adapter docling-pdf|markdown|decision-log, --doc-key name)
+ *   ingest [file...]             read new and changed sources into the current index
+ *   rebuild [--keep-old] [--redo <module>]   build a new index from the sources and swap it in
+ *   search "<query>" [-k n] [--machine name]
+ *   status | machines | diff <other-index.sqlite>
+ *   correct alias <name> <canonical> | correct replaces <newer-chunk> <older-chunk> | corrections | uncorrect <id>
+ *   feedback <searchId> --relevance 0..1 [--item id] [--note text]
+ *   eval generate <out.json> [--single n] [--multi n] [--topic n] [--seed n] [--min-chars n] [--name text]
+ *   eval run <set.json> [--conditions a,b] [--ks 1,5]
+ *   serve mcp | serve viewer [--port n]
  */
-import { existsSync, readdirSync, readFileSync, statSync, writeFileSync } from 'node:fs';
-import { basename, dirname, extname, join, resolve } from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { existsSync, readFileSync, writeFileSync } from 'node:fs';
+import { join, resolve } from 'node:path';
 import { parseArgs } from 'node:util';
-import { DEFAULT_CONFIG, KgError, evalSetId, type Chunk, type ChunkId, type DatabaseConfig, type EvalQuestion, type EvalSet } from '@kg/core';
-import { describeDropped, generateQuestionsDetailed, generateRecipe, GENERATE_SETTINGS, makeJudge } from '@kg/eval';
-import { compose, type Composition } from './compose';
+import { IndexStore, KgError, normName, type Kg, type SourceEntry } from '@kg/kernel';
+import { ingest, rebuild } from '@kg/modules';
+import { GENERATE_SETTINGS, evalSetId, generateQuestions, pickGroups, runEval, type EvalSet } from '@kg/eval';
+import { diffIndexes } from './diff';
+import { callTool, serveStdio } from './mcp';
+import { openKg, sidecarCommand } from './open';
+import { createViewerServer } from './viewer';
 
-const REPO = resolve(dirname(fileURLToPath(import.meta.url)), '../../..');
-const SIDECAR_VENV = join(REPO, 'packages/parse-sidecar/.venv/bin/kg-parse');
+export interface Io {
+  out(s: string): void;
+  err(s: string): void;
+}
+const stdio: Io = { out: (s) => process.stdout.write(s + '\n'), err: (s) => process.stderr.write(s + '\n') };
 
-const USAGE = `usage: ./kg <command> [options]   (or pnpm kg <command>, from the repository root)
-
-commands:
-  ingest <file-or-dir>...       ingest PDFs (--doc-key only with one file)
-  search <query> [-k n]         search the current build (default k 5)
-  status                        documents, build and counts
-  serve mcp                     MCP tools over stdio
-  serve viewer [--port n]       viewer at http://127.0.0.1:<port>/ (default 4319)
-  eval generate <out.json>      write an eval set (--questions n, default 8; needs Ollama)
-  eval run <set.json>           run an eval set (--conditions retrieved,gold; --ks 1,5; needs Ollama)
-
-options: --db <file> --artifacts <dir> --sidecar <command|none> --embed-digest <hex> --ollama-url <url>
-environment: KG_DB, KG_ARTIFACTS, KG_SIDECAR, KG_EMBED_DIGEST`;
+const USAGE = `usage: kg <command> [options]   (see the header of packages/app/src/cli.ts)
+commands: init add ingest rebuild search status machines diff correct corrections uncorrect feedback eval serve
+options:  --db <dir> --ollama-url <url> --sidecar <command|none> --artifacts <dir,dir>`;
 
 const OPTIONS = {
   db: { type: 'string' },
-  artifacts: { type: 'string' },
-  sidecar: { type: 'string' },
-  'embed-digest': { type: 'string' },
   'ollama-url': { type: 'string' },
+  sidecar: { type: 'string' },
+  artifacts: { type: 'string' },
+  adapter: { type: 'string' },
   'doc-key': { type: 'string' },
   k: { type: 'string', short: 'k' },
-  port: { type: 'string' },
-  questions: { type: 'string' },
+  machine: { type: 'string' },
+  'keep-old': { type: 'boolean' },
+  redo: { type: 'string', multiple: true },
+  relevance: { type: 'string' },
+  item: { type: 'string' },
+  note: { type: 'string' },
+  single: { type: 'string' },
+  multi: { type: 'string' },
+  topic: { type: 'string' },
+  seed: { type: 'string' },
+  'min-chars': { type: 'string' },
+  name: { type: 'string' },
   conditions: { type: 'string' },
   ks: { type: 'string' },
+  port: { type: 'string' },
   help: { type: 'boolean', short: 'h' },
 } as const;
 
-class UsageError extends Error {}
-
-function fail(msg: string): never {
-  throw new UsageError(msg);
-}
-
-/** Opens the composition from the options and environment. */
-function open(values: Record<string, string | boolean | undefined>): Composition {
-  const dbPath = (values.db as string | undefined) ?? process.env.KG_DB ?? resolve('kg.sqlite');
-  const artifactDir = (values.artifacts as string | undefined) ?? process.env.KG_ARTIFACTS;
-  const sidecarOpt = (values.sidecar as string | undefined) ?? process.env.KG_SIDECAR;
-  const sidecar = sidecarCommand(sidecarOpt);
-  const digest = (values['embed-digest'] as string | undefined) ?? process.env.KG_EMBED_DIGEST;
-  const config: DatabaseConfig = digest ? { ...DEFAULT_CONFIG, space: { ...DEFAULT_CONFIG.space, digest } } : DEFAULT_CONFIG;
-  return compose({
-    dbPath,
-    config,
-    ...(artifactDir ? { artifactDir: resolve(artifactDir) } : {}),
-    sidecar,
-    ...(values['ollama-url'] ? { ollamaUrl: values['ollama-url'] as string } : {}),
-  });
-}
-
-/** `none` turns the sidecar off; otherwise the given command, the repository's sidecar venv, or kg-parse on PATH. */
-function sidecarCommand(opt: string | undefined): boolean | string {
-  if (opt === 'none') return false;
-  if (opt) return opt;
-  return existsSync(SIDECAR_VENV) ? SIDECAR_VENV : 'kg-parse';
-}
-
-/** Human label of an item: document, chunk number, pages, section. */
-function labeller(kg: Composition) {
-  return (id: string): string => {
-    const item = kg.store.getItems([id as never])[0] as Chunk | undefined;
-    if (!item) return id;
-    const doc = kg.store.currentDocVersions().find((d) => d.docKey === item.docKey);
-    const n = doc ? doc.chunkIds.indexOf(item.id as ChunkId) : -1;
-    return `${item.docKey}#${n >= 0 ? n : '?'} p${item.pages.join(',')} [${item.sectionPath.join(' > ').slice(0, 60)}]`;
-  };
-}
-
-/** A file name as a document key: letters, digits, dot, dash and underscore; anything else becomes a dash. */
-const docKeyOf = (path: string): string => basename(path, extname(path)).replace(/[^A-Za-z0-9._-]+/g, '-');
-
-/** The PDFs named by the arguments: a file is taken as it is, a directory contributes its PDFs. */
-function pdfsIn(args: string[]): string[] {
-  return args.flatMap((a) => {
-    const p = resolve(a);
-    if (!existsSync(p)) fail(`no such file or directory: ${a}`);
-    if (statSync(p).isDirectory()) return readdirSync(p).filter((f) => f.toLowerCase().endsWith('.pdf')).sort().map((f) => join(p, f));
-    return [p];
-  });
-}
-
-async function ingest(kg: Composition, args: string[], values: Record<string, string | boolean | undefined>): Promise<void> {
-  const files = pdfsIn(args);
-  if (files.length === 0) fail('no PDF files to ingest');
-  if (values['doc-key'] && files.length !== 1) fail('--doc-key needs exactly one file');
-  const sources = files.map((path) => ({ path, docKey: (values['doc-key'] as string | undefined) ?? docKeyOf(path) }));
-  const { sessionId } = await kg.api.openSession({ kind: 'cli', label: 'ingest' });
-  const report = await kg.api.ingest(sessionId, { sources });
-  for (const d of report.docs) {
-    console.log(`${d.docKey}: ${d.unchanged ? 'unchanged' : `${d.inserted} new chunks, ${d.reused} reused`}`);
-  }
-  console.log(`build ${report.buildId}${report.buildChanged ? ' (new)' : ' (unchanged)'}`);
-}
-
-async function search(kg: Composition, query: string, k: number): Promise<void> {
-  const { sessionId } = await kg.api.openSession({ kind: 'cli', label: 'search' });
-  const res = await kg.api.search(sessionId, { query, k });
-  const label = labeller(kg);
-  if (res.stale) console.error('warning: this build cites chunks that are no longer current');
-  if (res.items.length === 0) console.log('no results');
-  for (const item of res.items) {
-    console.log(`\n${item.score.toFixed(3)}  ${label(item.itemId)}`);
-    console.log(item.text.replace(/\s+/g, ' ').trim().slice(0, 400));
-  }
-  console.log(`\nsearch ${res.searchId} on build ${res.buildId}`);
-}
-
-function status(kg: Composition): void {
-  const build = kg.store.currentBuild();
-  const docs = kg.store.currentDocVersions();
-  const count = (sql: string) => (kg.db.prepare(sql).get() as { n: number }).n;
-  console.log(`database     ${kg.db.name}`);
-  console.log(`documents    ${docs.length} (${docs.map((d) => d.docKey).join(', ') || 'none'})`);
-  console.log(`chunks       ${docs.reduce((s, d) => s + d.chunkIds.length, 0)} in the current ingest`);
-  console.log(`build        ${build ?? 'none (ingest a document first)'}`);
-  console.log(`sessions     ${count('SELECT COUNT(*) AS n FROM sessions')}`);
-  console.log(`events       ${count('SELECT COUNT(*) AS n FROM events')}`);
-  console.log(`embedding    ${kg.config.space.model} (digest ${kg.config.space.digest.slice(0, 12)}...)`);
-}
-
-async function serveMcp(kg: Composition): Promise<void> {
-  // stdout is the protocol; the process stays up until the client disconnects
-  await kg.serveMcp();
-}
-
-function serveViewer(kg: Composition, port: number): void {
-  kg.viewer(port);
-  console.log(`viewer on http://127.0.0.1:${port}/ (Ctrl-C to stop)`);
-}
-
-/** One question per sampled substantial chunk, single-hop, as the baseline did. */
-async function evalGenerate(kg: Composition, out: string, nQuestions: number): Promise<void> {
-  const docs = kg.store.currentDocVersions();
-  const chunks = kg.store.getItems(docs.flatMap((d) => d.chunkIds)).filter((i): i is Chunk => i.kind === 'chunk');
-  const good = chunks.filter((c) => c.text.length > 600 && !/\[formula\]\s*$/.test(c.text));
-  if (good.length < nQuestions) fail(`only ${good.length} substantial chunks; ask for fewer questions`);
-  const step = Math.floor(good.length / nQuestions);
-  const groups = Array.from({ length: nQuestions }, (_, i) => ({ type: 'single-hop' as const, chunkIds: [good[i * step]!.id] }));
-  const settings = { ...GENERATE_SETTINGS, mix: { 'single-hop': 1, 'multi-hop': 0, topic: 0 } };
-  const { drafts, dropped, genRecipeId } = await generateQuestionsDetailed(kg.llm, chunks, groups, generateRecipe(settings));
-  console.error(describeDropped(dropped));
-  const questions: EvalQuestion[] = drafts.map((d, i) => ({ ...d, id: `q${i + 1}` }));
-  const set: EvalSet = { id: evalSetId(questions as never), name: basename(out, extname(out)), genRecipeId, questions };
-  writeFileSync(resolve(out), JSON.stringify(set, null, 2) + '\n');
-  console.log(`wrote ${questions.length} questions to ${resolve(out)}`);
-}
-
-async function evalRun(kg: Composition, file: string, conditions: string[], ks: number[]): Promise<void> {
-  const set = JSON.parse(readFileSync(resolve(file), 'utf8')) as EvalSet;
-  const build = kg.store.currentBuild();
-  if (!build) fail('there is no build to evaluate; ingest a document first');
-  const out = await kg.runEval(
-    { rt: kg.runtime, api: kg.api, store: kg.store, answerer: kg.llm, judge: makeJudge(kg.llm), repo: kg.repo },
-    set,
-    { conditions, ks, buildId: build },
-  );
-  console.log(JSON.stringify(out.summary, null, 2));
-  console.log(`eval run ${out.runId}`);
-}
-
-const list = (s: string | undefined, d: string[]) => (s ? s.split(',').map((x) => x.trim()).filter(Boolean) : d);
-const numberOf = (s: string | undefined, d: number, name: string): number => {
-  if (s === undefined) return d;
-  const n = Number(s);
-  if (!Number.isInteger(n) || n <= 0) fail(`${name} must be a positive whole number`);
+const clip = (s: string, n: number) => (s.length > n ? s.slice(0, n - 1).trimEnd() + '…' : s).replace(/\s+/g, ' ');
+const num = (v: string | undefined, d: number): number => {
+  if (v === undefined) return d;
+  const n = Number(v);
+  if (!Number.isFinite(n)) throw new KgError('invalid_input', `${v} is not a number`);
   return n;
 };
 
-/** Rejects a malformed command before the database is opened, so a usage error creates no file. */
-function checkUsage(command: string | undefined, sub: string | undefined, rest: string[]): void {
-  switch (command) {
-    case 'ingest':
-    case 'search':
-      if (command === 'search' && !sub) fail('search needs a query');
-      return;
-    case 'status':
-      return;
-    case 'serve':
-      if (sub !== 'mcp' && sub !== 'viewer') fail('serve needs mcp or viewer');
-      return;
-    case 'eval':
-      if (sub !== 'generate' && sub !== 'run') fail('eval needs generate or run');
-      if (!rest[0]) fail(`eval ${sub} needs a file`);
-      return;
-    default:
-      fail(`unknown command: ${command}`);
-  }
-}
-
-async function main(argv: string[]): Promise<number> {
-  const { values, positionals } = parseArgs({ args: argv, options: OPTIONS, allowPositionals: true });
-  if (values.help || positionals.length === 0) {
-    console.log(USAGE);
-    return values.help ? 0 : 1;
-  }
-  const [command, sub, ...rest] = positionals;
-  checkUsage(command, sub, rest);
-  const kg = open(values);
+export async function main(argv: string[], io: Io = stdio, hooks: { open?: typeof openKg } = {}): Promise<number> {
+  let parsed: ReturnType<typeof parseArgs<{ options: typeof OPTIONS; allowPositionals: true }>>;
   try {
-    switch (command) {
-      case 'ingest':
-        await ingest(kg, [sub, ...rest].filter((x): x is string => x !== undefined), values);
-        return 0;
-      case 'search': {
-        if (!sub) fail('search needs a query');
-        await search(kg, [sub, ...rest].join(' '), numberOf(values.k, 5, '-k'));
-        return 0;
-      }
-      case 'status':
-        status(kg);
-        return 0;
-      case 'serve':
-        if (sub === 'mcp') {
-          await serveMcp(kg);
-          return 0;
-        }
-        if (sub === 'viewer') {
-          serveViewer(kg, numberOf(values.port, 4319, '--port'));
-          return 0;
-        }
-        fail('serve needs mcp or viewer');
-        break;
-      case 'eval':
-        if (sub === 'generate') {
-          if (!rest[0]) fail('eval generate needs an output file');
-          await evalGenerate(kg, rest[0], numberOf(values.questions, 8, '--questions'));
-          return 0;
-        }
-        if (sub === 'run') {
-          if (!rest[0]) fail('eval run needs an eval set file');
-          await evalRun(kg, rest[0], list(values.conditions as string | undefined, ['retrieved', 'gold']), list(values.ks as string | undefined, ['1', '5']).map(Number));
-          return 0;
-        }
-        fail('eval needs generate or run');
-        break;
-      default:
-        fail(`unknown command: ${command}`);
-    }
-  } finally {
-    // a server command keeps running; the others close the database when they finish
-    if (command !== 'serve') kg.close();
+    parsed = parseArgs({ args: argv, options: OPTIONS, allowPositionals: true });
+  } catch (e) {
+    io.err((e as Error).message + '\n' + USAGE);
+    return 2;
   }
-  return 1;
+  const { values: v, positionals: pos } = parsed;
+  const [cmd, ...rest] = pos;
+  if (!cmd || v.help) {
+    io.out(USAGE);
+    return cmd ? 0 : 2;
+  }
+  const db = resolve(v.db ?? process.env.KG_DB ?? 'kg-data');
+  const open = hooks.open ?? openKg;
+  const artifactDirs = (v.artifacts ?? process.env.KG_ARTIFACTS)?.split(',').filter(Boolean);
+  const sidecar = sidecarCommand(v.sidecar ?? process.env.KG_SIDECAR);
+  const base = { db, ollamaUrl: v['ollama-url'], sidecar, artifactDirs };
+  const use = async <T>(fn: (kg: Kg) => Promise<T> | T, create = false): Promise<T> => {
+    const kg = open({ ...base, create });
+    try {
+      return await fn(kg);
+    } finally {
+      kg.close();
+    }
+  };
+  try {
+    switch (cmd) {
+      case 'init':
+        return await use((kg) => (io.out(`database at ${kg.dir}\nadd sources with: kg add <file>...  then: kg ingest`), 0), true);
+
+      case 'add':
+        return await use((kg) => {
+          if (rest.length === 0) throw new KgError('invalid_input', 'add needs at least one file');
+          const sources = [...kg.config.sources];
+          for (const f of rest) {
+            const path = resolve(f);
+            if (!existsSync(path)) throw new KgError('not_found', `no file ${path}`);
+            const entry: SourceEntry = { path, ...(v.adapter ? { adapter: v.adapter } : {}), ...(v['doc-key'] && rest.length === 1 ? { docKey: v['doc-key'] } : {}) };
+            const at = sources.findIndex((s) => s.path === path);
+            if (at >= 0) sources[at] = entry;
+            else sources.push(entry);
+            io.out(`added ${path}`);
+          }
+          kg.saveConfig({ sources });
+          return 0;
+        }, true);
+
+      case 'ingest':
+        return await use(async (kg) => {
+          const only: SourceEntry[] | undefined = rest.length ? rest.map((f) => kg.config.sources.find((s) => s.path === resolve(f)) ?? { path: resolve(f) }) : undefined;
+          const r = await ingest(kg, { sources: only, sidecar, artifactDirs });
+          for (const d of r.documents) io.out(`${d.docKey}: ${d.unchanged ? 'unchanged' : `${d.chunks} chunks`}`);
+          io.out(`embedded ${r.embedded}, facts ${r.facts}, links ${r.links}; index ${r.indexId}`);
+          return 0;
+        });
+
+      case 'rebuild':
+        return await use(async (kg) => {
+          const r = await rebuild(kg, { keepOld: v['keep-old'], redo: v.redo, sidecar, artifactDirs });
+          io.out(`rebuilt ${r.previousIndexId} → ${r.report.indexId}${r.keptOld ? ` (old index kept at ${r.keptOld})` : ''}`);
+          io.out(Object.entries(r.report.stats).map(([k, x]) => `${k} ${x}`).join(', '));
+          return 0;
+        });
+
+      case 'search':
+        return await use(async (kg) => {
+          const q = rest.join(' ');
+          if (!q) throw new KgError('invalid_input', 'search needs a query');
+          const session = kg.openSession('cli', 'search');
+          const r = await kg.search({ query: q, k: num(v.k, 5), machine: v.machine, sessionId: session });
+          io.out(`search ${r.searchId} · ${r.machine} · index ${r.indexId}`);
+          r.items.forEach((i, n) => io.out(`${n + 1}. [${i.kind}] ${i.score.toFixed(3)}  ${i.docKey ?? ''} ${i.sectionPath?.join(' › ') ?? ''}\n   ${clip(i.text, 220)}`));
+          return 0;
+        });
+
+      case 'status':
+        return await use((kg) => {
+          const s = kg.index.stats();
+          io.out(`database   ${kg.dir}\nindex      ${kg.index.indexId}\nsources    ${kg.config.sources.length}\n${Object.entries(s).map(([k, x]) => `${k.padEnd(10)} ${x}`).join('\n')}`);
+          const c = kg.cache.stats();
+          io.out(`history    ${kg.history.sessions(1000).length} sessions, ${kg.history.corrections().length} confirmed corrections\ncache      ${c.entries} responses, ${(c.bytes / 1024).toFixed(0)} KB`);
+          const problems = kg.index.audit();
+          io.out(`audit      ${problems.length ? problems.join('; ') : 'clean'}`);
+          return 0;
+        });
+
+      case 'machines':
+        return await use((kg) => {
+          for (const m of kg.registry.machines.values()) {
+            io.out(`${m.name}@${m.version}: ${m.description ?? ''}`);
+            for (const [id, s] of Object.entries(m.states)) io.out(`  ${id}: ${s.module} → ${s.next === null ? 'finish' : typeof s.next === 'string' ? s.next : `${s.next.guard} ? ${s.next.then} : ${s.next.else ?? 'finish'}`}`);
+          }
+          return 0;
+        });
+
+      case 'diff':
+        return await use((kg) => {
+          if (!rest[0]) throw new KgError('invalid_input', 'diff needs the path of another index file');
+          const other = IndexStore.open(resolve(rest[0]));
+          try {
+            const d = diffIndexes(kg.index, other);
+            io.out(`A ${d.a}\nB ${d.b}\nchunks: ${d.chunks.shared} shared, ${d.chunks.onlyInA} only in A, ${d.chunks.onlyInB} only in B; ${d.unchanged} shared chunks have the same derived items`);
+            for (const [m, c] of Object.entries(d.makers)) io.out(`  ${m}: A ${c.a}, B ${c.b}`);
+            for (const c of d.changed.slice(0, 10)) io.out(`  ${c.chunkId}\n    A: ${c.a.map((t) => clip(t, 80)).join(' | ') || '(none)'}\n    B: ${c.b.map((t) => clip(t, 80)).join(' | ') || '(none)'}`);
+            return 0;
+          } finally {
+            other.close();
+          }
+        });
+
+      case 'correct':
+        return await use((kg) => {
+          const [kind, a, b] = rest;
+          if (kind === 'alias' && a && b) kg.history.addCorrection({ kind: 'alias-of', subject: 'name', fromKey: normName(a), toKey: normName(b), note: v.note ?? null });
+          else if (kind === 'replaces' && a && b) kg.history.addCorrection({ kind: 'replaces', subject: 'chunk', fromKey: a, toKey: b, note: v.note ?? null });
+          else throw new KgError('invalid_input', 'usage: correct alias <name> <canonical> | correct replaces <newer-chunk-id> <older-chunk-id>');
+          io.out('saved; it applies to the current index after the next rebuild');
+          return 0;
+        });
+
+      case 'corrections':
+        return await use((kg) => (kg.history.corrections().forEach((c) => io.out(`${c.id}  ${c.kind}  ${c.fromKey} → ${c.toKey}${c.note ? `  (${c.note})` : ''}`)), 0));
+
+      case 'uncorrect':
+        return await use((kg) => (kg.history.removeCorrection(num(rest[0], NaN)), io.out('removed'), 0));
+
+      case 'feedback':
+        return await use(async (kg) => {
+          const s = kg.openSession('cli', 'feedback');
+          await callTool(kg, s, 'feedback', { searchId: rest[0], relevance: num(v.relevance, NaN), ...(v.item ? { itemId: v.item } : {}), ...(v.note ? { note: v.note } : {}) });
+          io.out('recorded');
+          return 0;
+        });
+
+      case 'eval':
+        return await use(async (kg) => {
+          const [sub, file] = rest;
+          if (!file) throw new KgError('invalid_input', `eval ${sub ?? ''} needs a file`);
+          if (sub === 'generate') {
+            const chunks = kg.index.currentChunks();
+            const groups = pickGroups(chunks, { seed: num(v.seed, 17), single: num(v.single, 8), multi: num(v.multi, 4), topic: num(v.topic, 3), minChars: num(v['min-chars'], 300) });
+            const session = kg.openSession('eval', 'generate');
+            const { drafts, dropped } = await generateQuestions(kg.llmFor(session, kg.services.llm)!, chunks, groups, { ...GENERATE_SETTINGS, model: kg.config.llm.model });
+            const questions = drafts.map((d, i) => ({ ...d, id: `q${i + 1}` }));
+            const set: EvalSet = { id: evalSetId(questions), name: v.name ?? 'generated', genRecipeId: null, questions };
+            writeFileSync(file, JSON.stringify(set, null, 1));
+            io.out(`${questions.length} questions written to ${file}; ${dropped.length} drafts dropped (${[...new Set(dropped.map((d) => d.reason))].join(', ') || 'none'})`);
+            return 0;
+          }
+          if (sub === 'run') {
+            const set = JSON.parse(readFileSync(file, 'utf8')) as EvalSet;
+            const ks = (v.ks ?? '1,5').split(',').map(Number);
+            const { runId, summary } = await runEval(kg, set, { conditions: (v.conditions ?? 'no-context,gold,retrieved').split(','), ks });
+            const s = summary as { byCondition: Record<string, { scored: number; failed: number; judge: number | null; retrieval?: { overall: { recall: Record<string, number> } } }>; orphaned: unknown[] };
+            io.out(`run ${runId} on index ${kg.index.indexId}, ${set.questions.length} questions`);
+            for (const [c, e] of Object.entries(s.byCondition)) io.out(`  ${c.padEnd(22)} judge ${e.judge === null ? '—' : e.judge.toFixed(2)}  scored ${e.scored} failed ${e.failed}${e.retrieval ? '  recall ' + ks.map((k) => `@${k} ${e.retrieval!.overall.recall[String(k)]!.toFixed(2)}`).join(' ') : ''}`);
+            if (s.orphaned.length) io.out(`  ${s.orphaned.length} questions name chunks that are not in this index`);
+            return 0;
+          }
+          throw new KgError('invalid_input', 'usage: eval generate <out.json> | eval run <set.json>');
+        });
+
+      case 'serve': {
+        const kg = open({ ...base, create: false });
+        if (rest[0] === 'mcp') {
+          await serveStdio(kg);
+          return await new Promise<number>(() => undefined);
+        }
+        if (rest[0] === 'viewer') {
+          const server = createViewerServer(kg);
+          const port = num(v.port, 4319);
+          await new Promise<void>((done) => server.listen(port, '127.0.0.1', done));
+          io.out(`viewer at http://127.0.0.1:${port}/ (database ${kg.dir}); Ctrl-C stops it`);
+          return await new Promise<number>(() => undefined);
+        }
+        kg.close();
+        throw new KgError('invalid_input', 'usage: serve mcp | serve viewer');
+      }
+
+      default:
+        io.err(`unknown command ${cmd}\n${USAGE}`);
+        return 2;
+    }
+  } catch (e) {
+    io.err(e instanceof KgError ? `${e.code}: ${e.message}` : e instanceof Error ? (e.stack ?? e.message) : String(e));
+    return 1;
+  }
 }
 
-main(process.argv.slice(2)).then(
-  (code) => {
-    process.exitCode = code;
-  },
-  (e: unknown) => {
-    if (e instanceof UsageError) {
-      console.error(`${e.message}\n\n${USAGE}`);
-      process.exitCode = 2;
-      return;
-    }
-    if (e instanceof KgError) console.error(`error ${e.code}: ${e.message}`);
-    else console.error(e instanceof Error ? e.message : String(e));
-    process.exitCode = 1;
-  },
-);
+if (process.argv[1] && import.meta.url === new URL(`file://${process.argv[1]}`).href) {
+  main(process.argv.slice(2)).then((c) => process.exit(c));
+}

@@ -1,5 +1,6 @@
-/**
- * @kg/app: the composition root. `compose` wires the real packages over one database file; the scripts in
- * scripts/ and the MCP and viewer entry points are the only callers.
- */
-export { compose, CachedParser, machineMaps, ollamaLlm, type Composition, type ComposeOptions } from './compose';
+/** @kg/app: the kg command line, the MCP server and the session viewer. */
+export { main } from './cli';
+export { openKg, sidecarCommand, type AppOptions } from './open';
+export { TOOLS, callTool, createMcpServer, serveStdio } from './mcp';
+export { createViewerServer } from './viewer';
+export { diffIndexes, type IndexDiff } from './diff';
