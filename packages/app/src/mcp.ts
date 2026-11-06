@@ -6,7 +6,7 @@
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
 import { CallToolRequestSchema, ErrorCode, ListToolsRequestSchema, McpError } from '@modelcontextprotocol/sdk/types.js';
-import { KgError, type Json, type Kg } from '@kg/kernel';
+import { KG_VERSION, KgError, type Json, type Kg } from '@kg/kernel';
 
 type Obj = Record<string, unknown>;
 interface Tool {
@@ -14,6 +14,22 @@ interface Tool {
   description: string;
   schema: Json;
   run(kg: Kg, session: string, a: Obj): Promise<Json> | Json;
+}
+
+/** What the server tells an agent client about itself. Clients may add it to the agent's instructions. */
+export const INSTRUCTIONS = `This server searches a knowledge base built from the user's own documents, notes or code documentation.
+Call "search" before answering a question that depends on them.
+The knowledge base is improved from your reports, so after using it:
+- call "report_usage" with the IDs of the results you used;
+- call "feedback" with a relevance from 0 to 1 and a note on what was missing when results were poor or unusually good;
+- call "report_outcome" when you know whether the solution that used a search worked.
+Keep each note to a sentence.`;
+
+/** Chunk metadata an agent can use. Embedding text and other internals stay out of the reply. */
+export function publicMeta(meta: Record<string, unknown> | undefined): Record<string, unknown> {
+  const out: Record<string, unknown> = {};
+  for (const k of ['date', 'title']) if (meta && meta[k] !== undefined) out[k] = meta[k];
+  return out;
 }
 
 const need = (a: Obj, k: string, type: 'string' | 'number' | 'boolean'): void => {
@@ -34,8 +50,8 @@ export const TOOLS: Tool[] = [
       opt(a, 'machine', 'string');
       const k = (a.k as number | undefined) ?? 5;
       if (!Number.isInteger(k) || k < 1 || k > 50) throw new KgError('invalid_input', 'k must be an integer from 1 to 50');
-      const r = await kg.search({ query: a.query as string, k, machine: a.machine as string | undefined, sessionId: session });
-      return { searchId: r.searchId, indexId: r.indexId, machine: r.machine, items: r.items.map((i) => ({ id: i.id, kind: i.kind, score: Math.round(i.score * 1e4) / 1e4, text: i.text, sourceChunkIds: i.sourceChunkIds, docKey: i.docKey ?? null, sectionPath: i.sectionPath ?? [] })) } as unknown as Json;
+      const r = await kg.search({ query: a.query as string, k, machine: a.machine as string | undefined, sessionId: session, shadow: true });
+      return { searchId: r.searchId, indexId: r.indexId, machine: r.machine, items: r.items.map((i) => ({ id: i.id, kind: i.kind, score: Math.round(i.score * 1e4) / 1e4, text: i.text, sourceChunkIds: i.sourceChunkIds, docKey: i.docKey ?? null, sectionPath: i.sectionPath ?? [], ...(Object.keys(publicMeta(i.meta)).length ? { meta: publicMeta(i.meta) } : {}) })) } as unknown as Json;
     },
   },
   {
@@ -45,7 +61,7 @@ export const TOOLS: Tool[] = [
     run(kg, _s, a) {
       if (!Array.isArray(a.ids) || !a.ids.every((x) => typeof x === 'string') || a.ids.length > 50) throw new KgError('invalid_input', 'ids must be up to 50 strings');
       const ids = a.ids as string[];
-      const chunks = kg.index.getChunks(ids.filter((i) => i.startsWith('ch_'))).map((c) => ({ id: c.id, kind: 'chunk', text: c.text, docKey: c.docKey, sectionPath: c.sectionPath }));
+      const chunks = kg.index.getChunks(ids.filter((i) => i.startsWith('ch_'))).map((c) => ({ id: c.id, kind: 'chunk', text: c.text, docKey: c.docKey, sectionPath: c.sectionPath, ...(Object.keys(publicMeta(c.meta)).length ? { meta: publicMeta(c.meta) } : {}) }));
       const items = kg.index.getItems(ids.filter((i) => i.startsWith('it_'))).map((i) => ({ id: i.id, kind: i.kind, text: i.text, sourceChunkIds: i.sourceChunkIds }));
       return [...chunks, ...items] as unknown as Json;
     },
@@ -125,7 +141,7 @@ export async function callTool(kg: Kg, session: string, name: string, args: unkn
 }
 
 export function createMcpServer(kg: Kg, o: { name?: string; version?: string } = {}): McpServer {
-  const mcp = new McpServer({ name: o.name ?? 'kg', version: o.version ?? '0.2.0' });
+  const mcp = new McpServer({ name: o.name ?? 'kg', version: o.version ?? KG_VERSION }, { instructions: INSTRUCTIONS });
   const low = mcp.server;
   low.registerCapabilities({ tools: {} });
   let opened: string | undefined;

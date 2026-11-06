@@ -12,7 +12,8 @@
     "typecheck": "tsc -p tsconfig.json"
   },
   "dependencies": {
-    "@kg/kernel": "workspace:*"
+    "@kg/kernel": "workspace:*",
+    "parse5": "7.3.0"
   },
   "devDependencies": {
     "vitest": "3.2.4"

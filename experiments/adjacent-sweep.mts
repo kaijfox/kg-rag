@@ -2,16 +2,16 @@
  * Sweeps the adjacent-chunk settings (how many best chunks to expand, how far, and how much a neighbour scores relative to
  * its seed) and reports recall and the share of questions with all gold chunks in the top 5, by question type.
  *
- *   node_modules/.bin/tsx scratch/rebuild/adjacent-sweep.mts
+ *   node_modules/.bin/tsx experiments/adjacent-sweep.mts
  */
 import { mkdtempSync, readFileSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
-import { retrievalMetrics, type EvalSet } from '../../packages/eval/src';
-import { ingest } from '../../packages/modules/src';
-import { openKg } from '../../packages/app/src';
+import { retrievalMetrics, type EvalSet } from '../packages/eval/src';
+import { ingest } from '../packages/modules/src';
+import { openKg } from '../packages/app/src';
 
-const ROOT = resolve(import.meta.dirname, '../..');
+const ROOT = resolve(import.meta.dirname, '..');
 const authors: Record<string, string[]> = { kardar: ['FoundationsKardar', 'ThermoKardar'], plischke: ['FoundationsPlischke', 'ThermoPlischke'] };
 const variants = [
   { name: 'baseline', seeds: 0, radius: 0, decay: 0 },
@@ -31,7 +31,7 @@ for (const [author, docs] of Object.entries(authors)) {
       ? { embed: { module: 'embed-query', next: 'nearest' }, nearest: { module: 'nearest-chunks', next: 'cut' }, cut: { module: 'keep-top-k', next: null } }
       : { embed: { module: 'embed-query', next: 'nearest' }, nearest: { module: 'nearest-chunks', next: 'adj' }, adj: { module: 'adjacent-chunks', settings: { seeds: v.seeds, radius: v.radius, decay: v.decay }, next: 'cut' }, cut: { module: 'keep-top-k', next: null } } });
   }
-  const set = JSON.parse(readFileSync(join(ROOT, `scratch/sprint-2/eval-set-${author}.json`), 'utf8')) as EvalSet;
+  const set = JSON.parse(readFileSync(join(ROOT, `test/corpa/stat-mech/eval/eval-set-${author}.json`), 'utf8')) as EvalSet;
   const s = kg.openSession('eval', 'adjacent-sweep');
   for (const [i, v] of variants.entries()) {
     const ranked = new Map<string, { id: string; kind: 'chunk'; sourceChunkIds: string[] }[]>();

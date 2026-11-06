@@ -1,3 +1,5 @@
+> **Archived, 2026-11-06.** This describes the first build, which used seventeen packages, builds, recipes and snapshots. It was replaced by `design/architecture.md`. Kept as history; do not follow it for current work.
+
 # Design: Knowledge-Graph Retrieval
 
 ## Purpose

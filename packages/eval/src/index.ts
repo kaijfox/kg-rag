@@ -9,3 +9,4 @@ export { promptDigest } from './prompts/loader';
 export { retryRequest, askParsed, RETRY_INSTRUCTION } from './ask';
 export { recallAtK, allGoldAtK, coveredAtK, mean } from './metrics/recall';
 export { retrievalMetrics, judgeMeans, type RetrievalMetrics } from './metrics/summary';
+export { loggedSearches, questionsFromLog, labelQuestions, type UnlabelledQuestion } from './fromLog';

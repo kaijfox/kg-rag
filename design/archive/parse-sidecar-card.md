@@ -1,3 +1,5 @@
+> **Archived, 2026-11-06.** A work card from the first build. The sidecar's current description is `packages/parse-sidecar/README.md`.
+
 # parse-sidecar (WP1, Sonnet) — Python, not a pnpm package
 
 Contract: the CLI below plus `packages/core/schemas/parse-artifact.schema.json` (generated from core's zod

@@ -1,3 +1,5 @@
+> **Archived, 2026-11-06.** This describes the first build, which used seventeen packages, builds, recipes and snapshots. It was replaced by `design/architecture.md`. Kept as history; do not follow it for current work.
+
 # v0 Implementation Roadmap
 
 This plan implements v0 of the design in `260916_initial-roadmap.md`. The goal is a faithful implementation of that design. Implementation will likely turn up things that prove easier than expected, affordances worth including, and choices that cause trouble later. The workflow below gives those findings one route back into the design and scope.

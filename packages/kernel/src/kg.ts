@@ -84,9 +84,9 @@ export class Kg {
   }
 
   /** The model client with the cache in front and every call reported to the session's log. */
-  llmFor(sessionId: string, base: Llm | undefined = this.services.llm): Llm | undefined {
+  llmFor(sessionId: string, base: Llm | undefined = this.services.llm, o: { cacheOnly?: boolean } = {}): Llm | undefined {
     if (!base) return undefined;
-    const cached = cachedLlm(base, this.cache);
+    const cached = cachedLlm(base, this.cache, o);
     return observedLlm(cached, (info) => this.history.append(sessionId, 'llm.called', info as unknown as Json, { indexId: this.index.indexId }));
   }
 
@@ -95,7 +95,7 @@ export class Kg {
   }
 
   /** Runs a search machine. Logs the query, every step's received and returned ranks, and the final results. */
-  async search(o: { query: string; k?: number; machine?: string; sessionId: string; extra?: Slots }): Promise<SearchResult> {
+  async search(o: { query: string; k?: number; machine?: string; sessionId: string; extra?: Slots; shadow?: boolean }): Promise<SearchResult> {
     const name = o.machine ?? this.config.searchMachine;
     const def = this.registry.machine(name);
     const searchId = this.history.newSearchId();
@@ -122,7 +122,50 @@ export class Kg {
       { items: items.map((c) => ({ id: c.id, kind: c.kind, score: c.score, sourceChunkIds: c.sourceChunkIds })) },
       tag,
     );
+    if (o.shadow) await this.runShadow(o.sessionId, searchId, name, o.query, k, items);
     return { searchId, machine: name, indexId, items, steps };
+  }
+
+  /**
+   * Runs the configured shadow machine on the same query and logs what it ranked, tagged with the same search ID, without
+   * returning it. Its steps are not logged, only its results. A failure here is logged and never fails the search.
+   */
+  private async runShadow(sessionId: string, searchId: string, chosen: string, query: string, k: number, chosenItems: Candidate[]): Promise<void> {
+    const shadow = this.config.shadowMachine;
+    if (!shadow || shadow === chosen || !this.registry.machines.has(shadow)) return;
+    const tag = { indexId: this.index.indexId, searchId };
+    try {
+      const space = this.index.getSpace(spaceId(this.config.space as unknown as Json))!;
+      const env: RunEnv = {
+        index: this.index,
+        services: { ...this.services, space, llm: this.llmFor(sessionId) },
+        config: this.config,
+        registry: this.registry,
+        now: this.now,
+        mayWrite: false,
+      };
+      const { state } = await runMachine(this.registry.machine(shadow), { query, k }, env);
+      const items = (state.results ?? []) as Candidate[];
+      const chunksOf = (xs: Candidate[]) => new Set(xs.flatMap((c) => c.sourceChunkIds));
+      const mine = chunksOf(chosenItems);
+      const theirs = chunksOf(items);
+      const both = [...mine].filter((c) => theirs.has(c)).length;
+      this.history.append(
+        sessionId,
+        'search.shadow',
+        {
+          machine: shadow,
+          chosen,
+          items: items.map((c) => ({ id: c.id, kind: c.kind, score: c.score, sourceChunkIds: c.sourceChunkIds })),
+          sharedChunks: both,
+          onlyShadow: theirs.size - both,
+          onlyChosen: mine.size - both,
+        },
+        tag,
+      );
+    } catch (e) {
+      this.history.append(sessionId, 'search.shadow.failed', { machine: shadow, error: e instanceof Error ? e.message : String(e) }, tag);
+    }
   }
 
   /** Swaps a freshly built index file in over the current one, and returns the path of the old file when it is kept. */

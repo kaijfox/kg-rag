@@ -3,15 +3,15 @@
  * facts pass the checks, why the rest are rejected, a sample, and whether the facts-and-neighbours machine finds the gold
  * chunks of the pinned questions that name only this document. Needs Ollama with embeddinggemma and qwen3.5.
  *
- *   node_modules/.bin/tsx scratch/rebuild/extraction-trial.mts [directory-to-keep]
+ *   node_modules/.bin/tsx experiments/extraction-trial.mts [directory-to-keep]
  */
 import { mkdirSync, readFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
-import { retrievalMetrics, type EvalSet } from '../../packages/eval/src';
-import { ingest } from '../../packages/modules/src';
-import { openKg } from '../../packages/app/src';
+import { retrievalMetrics, type EvalSet } from '../packages/eval/src';
+import { ingest } from '../packages/modules/src';
+import { openKg } from '../packages/app/src';
 
-const ROOT = resolve(import.meta.dirname, '../..');
+const ROOT = resolve(import.meta.dirname, '..');
 const db = resolve(process.argv[2] ?? join(ROOT, 'kg-data/trial-thermo-plischke'));
 mkdirSync(db, { recursive: true });
 const kg = openKg({ db, create: true });
@@ -27,7 +27,7 @@ console.log('first rejections by reason (up to 25 logged):', JSON.stringify(reas
 const ids = kg.index.currentChunks().slice(5, 9).flatMap((c) => kg.index.itemsByChunk().get(c.id) ?? []).slice(0, 8);
 for (const i of ids) console.log(' -', i.text);
 
-const set = JSON.parse(readFileSync(join(ROOT, 'scratch/sprint-2/eval-set-plischke.json'), 'utf8')) as EvalSet;
+const set = JSON.parse(readFileSync(join(ROOT, 'test/corpa/stat-mech/eval/eval-set-plischke.json'), 'utf8')) as EvalSet;
 const here = new Set(kg.index.currentChunks().map((c) => c.id));
 const qs = set.questions.filter((q) => q.goldChunkIds.every((g) => here.has(g)));
 const session = kg.openSession('eval', 'extraction-trial');

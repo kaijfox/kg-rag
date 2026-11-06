@@ -3,6 +3,7 @@
  * pruning it only slows a rebuild. Pruned least-recently-used first to a size cap.
  */
 import { gunzipSync, gzipSync } from 'node:zlib';
+import { KgError } from './errors';
 import { Sql, openDb } from './sqlite';
 
 const SCHEMA = `
@@ -35,6 +36,31 @@ export class CacheStore {
     const r = this.sql.get<{ n: number; b: number | null }>(`SELECT COUNT(*) AS n, SUM(LENGTH(body)) AS b FROM responses`)!;
     return { entries: r.n, bytes: r.b ?? 0 };
   }
+  /** Writes a consistent single-file copy of the cache, even while it is in use (a plain file copy can miss the write-ahead log). */
+  backupTo(path: string): void {
+    this.sql.db.exec(`VACUUM INTO '${path.replace(/'/g, "''")}'`);
+  }
+
+  /**
+   * Adds the responses of another cache file that this cache lacks. A response already present is kept, so importing the
+   * same file twice changes nothing. Used to bring extraction results from a machine that ran the model.
+   */
+  importFrom(path: string): { added: number; alreadyHad: number } {
+    const quoted = path.replace(/'/g, "''");
+    this.sql.db.exec(`ATTACH DATABASE '${quoted}' AS other`);
+    try {
+      const has = this.sql.get<{ n: number }>(`SELECT COUNT(*) AS n FROM other.sqlite_master WHERE type = 'table' AND name = 'responses'`)!.n;
+      if (!has) throw new KgError('invalid_input', `${path} is not a kg cache file (it has no responses table)`);
+      const total = this.sql.get<{ n: number }>(`SELECT COUNT(*) AS n FROM other.responses`)!.n;
+      const before = this.stats().entries;
+      this.sql.db.exec(`INSERT OR IGNORE INTO responses (key, body, purpose, created_at, used_at) SELECT key, body, purpose, created_at, used_at FROM other.responses`);
+      const added = this.stats().entries - before;
+      return { added, alreadyHad: total - added };
+    } finally {
+      this.sql.db.exec(`DETACH DATABASE other`);
+    }
+  }
+
   /** Deletes least-recently-used entries until the stored size is at most maxBytes. Returns how many were deleted. */
   prune(maxBytes: number): number {
     let deleted = 0;

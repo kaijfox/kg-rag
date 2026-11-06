@@ -1,3 +1,5 @@
+> **Archived, 2026-11-06.** This describes the first build, which used seventeen packages, builds, recipes and snapshots. It was replaced by `design/architecture.md`. Kept as history; do not follow it for current work.
+
 # Proposed amendments to the design documents
 
 `design/` is not edited without the user's approval. These are the places where the rebuilt system departs from

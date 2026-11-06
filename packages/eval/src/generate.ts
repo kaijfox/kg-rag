@@ -17,7 +17,7 @@ export interface GenerateSettings {
 }
 export const GENERATE_SETTINGS: GenerateSettings = { model: 'qwen3.5:latest', temperature: 0.7, mix: { 'single-hop': 1, 'multi-hop': 1, topic: 1 }, retryBudget: 2 };
 
-export type GroupType = Exclude<QuestionType, 'exact-term'>;
+export type GroupType = Exclude<QuestionType, 'exact-term' | 'logged'>;
 export interface Group {
   type: GroupType;
   chunkIds: string[];

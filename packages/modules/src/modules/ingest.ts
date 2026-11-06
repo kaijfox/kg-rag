@@ -1,5 +1,5 @@
 /** Build modules: read sources, segment into chunks, embed, replay confirmed corrections, link replaced entries. */
-import { isAbsolute, join } from 'node:path';
+import { join } from 'node:path';
 import {
   KgError,
   assignChunkIds,
@@ -9,37 +9,74 @@ import {
   type LinkDraft,
   type ModuleDef,
   type SourceEntry,
-  defaultDocKey,
 } from '@kg/kernel';
-import { adapterFor, defaultAdapters, type LoadedDoc } from '../adapters';
+import { defaultAdapters, type LoadedDoc } from '../adapters';
+import { expandSources } from '../adapters/sources';
 import { sectionPack } from '../chunk';
 import { renderChunkView } from '../chunk';
 import { ArtifactStore } from '../parse/artifacts';
 import { findReplacements, type Entry } from '../rules/replaces';
 import { services } from '../services';
 
-/** needs the source list; adds the loaded documents */
+/**
+ * needs the source list; adds the loaded documents and the entries whose path does not exist. A directory entry stands for
+ * the files in it, found again on every run.
+ */
 export const readSources: ModuleDef = {
   name: 'read-sources',
-  version: '1',
+  version: '2',
   needs: ['sources'],
-  adds: ['docs'],
+  adds: ['docs', 'missing'],
   scope: 'per-chunk',
   async run({ state, ctx }) {
     const sv = services(ctx);
     const adapters = sv.adapters ?? defaultAdapters();
-    const artifacts = sv.artifacts ?? new ArtifactStore({ dir: join(sv.baseDir ?? '.', ctx.config.artifactsDir), sidecar: null });
+    const base = sv.baseDir ?? '.';
+    const artifacts = sv.artifacts ?? new ArtifactStore({ dir: join(base, ctx.config.artifactsDir), sidecar: null });
+    const { files, missing } = expandSources(state.sources as SourceEntry[], base);
+    for (const m of missing) ctx.note(`source ${m} does not exist; its documents are kept`);
     const docs: LoadedDoc[] = [];
-    for (const s of state.sources as SourceEntry[]) {
-      const path = isAbsolute(s.path) ? s.path : join(sv.baseDir ?? '.', s.path);
-      const adapterName = s.adapter ?? adapterFor(s.path);
-      const adapter = adapters.get(adapterName);
-      if (!adapter) throw new KgError('invalid_input', `unknown adapter ${adapterName} for ${s.path}`);
-      const docKey = s.docKey ?? defaultDocKey(s.path);
-      docs.push(await adapter.load({ path, docKey, meta: (s.meta ?? {}) as JsonObject }, { parseRecipe: ctx.config.parseRecipe, artifacts }));
-      ctx.note(`read ${s.path}`, { adapter: adapterName, docKey });
+    for (const f of files) {
+      const adapter = adapters.get(f.adapter);
+      if (!adapter) throw new KgError('invalid_input', `unknown adapter ${f.adapter} for ${f.path}`);
+      docs.push(await adapter.load({ path: f.path, docKey: f.docKey, meta: f.meta }, { parseRecipe: ctx.config.parseRecipe, artifacts }));
     }
-    return { patch: { docs } };
+    ctx.note(`read ${docs.length} documents from ${(state.sources as SourceEntry[]).length} sources`);
+    return { patch: { docs, missing } };
+  },
+};
+
+/**
+ * Stops a document from being current when its source is gone: the source entry was removed from kg.json, or the entry is
+ * a directory that no longer holds the file. Only a full ingest (every configured source) retires anything, and a source
+ * whose path is missing keeps its documents. Retiring cuts no data: the chunks stay stored but are not current, so
+ * searches no longer return them, and the document returns if its file does.
+ */
+export const retireMissing: ModuleDef = {
+  name: 'retire-missing',
+  version: '1',
+  needs: ['docs', 'missing', 'sources', 'full'],
+  adds: ['retired'],
+  scope: 'whole-collection',
+  run({ state, ctx }) {
+    if (state.full !== true) return { patch: { retired: [] } };
+    const entries = (state.sources as SourceEntry[]).map((s) => s.path);
+    const missing = new Set(state.missing as string[]);
+    const loaded = new Set((state.docs as LoadedDoc[]).map((d) => d.docKey));
+    const documents: NonNullable<import('@kg/kernel').Writes['documents']> = [];
+    for (const d of ctx.index.listDocuments()) {
+      const source = d.meta.source;
+      if (d.meta.retired === true || typeof source !== 'string') continue;
+      const entryGone = !entries.includes(source);
+      const fileGone = !entryGone && !missing.has(source) && !loaded.has(d.docKey);
+      if (!entryGone && !fileGone) continue;
+      ctx.note(`retired ${d.docKey}: ${entryGone ? 'its source was removed from the list' : 'its file is no longer in the directory'}`);
+      documents.push({
+        doc: { docKey: d.docKey, sourceSha256: d.sourceSha256, sourceName: d.sourceName, parseRecipe: d.parseRecipe, chunkRecipe: d.chunkRecipe, meta: { ...d.meta, retired: true } },
+        chunks: [],
+      });
+    }
+    return { patch: { retired: documents.map((x) => x.doc.docKey) }, writes: documents.length ? { documents } : {} };
   },
 };
 

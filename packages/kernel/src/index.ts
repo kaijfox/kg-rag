@@ -16,3 +16,4 @@ export * from './defaults';
 export * from './machine';
 export { runMachine, applyWrites, describeSlot, type RunEnv, type StepTrace } from './runner';
 export { Kg, type OpenOptions, type SearchResult } from './kg';
+export * from './version';

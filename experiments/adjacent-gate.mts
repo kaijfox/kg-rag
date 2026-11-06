@@ -2,16 +2,16 @@
  * The measurement that gates the adjacent-chunk step: retrieval recall of the baseline machine and the machine that adds the
  * chunks next to the best three, on the 63 pinned questions, by question type. Retrieval only; no answers or judging.
  *
- *   node_modules/.bin/tsx scratch/rebuild/adjacent-gate.mts
+ *   node_modules/.bin/tsx experiments/adjacent-gate.mts
  */
 import { mkdtempSync, readFileSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
-import { retrievalMetrics, type EvalSet } from '../../packages/eval/src';
-import { ingest } from '../../packages/modules/src';
-import { openKg } from '../../packages/app/src';
+import { retrievalMetrics, type EvalSet } from '../packages/eval/src';
+import { ingest } from '../packages/modules/src';
+import { openKg } from '../packages/app/src';
 
-const ROOT = resolve(import.meta.dirname, '../..');
+const ROOT = resolve(import.meta.dirname, '..');
 const authors: Record<string, string[]> = { kardar: ['FoundationsKardar', 'ThermoKardar'], plischke: ['FoundationsPlischke', 'ThermoPlischke'] };
 const tmp = mkdtempSync(join(tmpdir(), 'kg-gate-'));
 const machines = ['chunk-search', 'chunk-search-adjacent'];
@@ -20,7 +20,7 @@ for (const [author, docs] of Object.entries(authors)) {
   const kg = openKg({ db: join(tmp, author), create: true });
   kg.saveConfig({ sources: docs.map((d) => ({ path: join(ROOT, `test/corpa/stat-mech/${d}.pdf`) })) });
   await ingest(kg, { artifactDirs: [join(ROOT, 'test/corpa/stat-mech/artifacts')] });
-  const set = JSON.parse(readFileSync(join(ROOT, `scratch/sprint-2/eval-set-${author}.json`), 'utf8')) as EvalSet;
+  const set = JSON.parse(readFileSync(join(ROOT, `test/corpa/stat-mech/eval/eval-set-${author}.json`), 'utf8')) as EvalSet;
   const s = kg.openSession('eval', 'adjacent-gate');
   for (const machine of machines) {
     const ranked = new Map<string, { id: string; kind: 'chunk'; sourceChunkIds: string[] }[]>();

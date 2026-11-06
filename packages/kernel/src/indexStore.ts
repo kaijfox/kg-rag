@@ -8,6 +8,7 @@
 import { KgError } from './errors';
 import { ID_PATTERNS, canonicalJson, itemId, linkId, normName, spaceId, type Json, type JsonObject } from './ids';
 import { Sql, openDb, type SqlValue } from './sqlite';
+import { FORMAT_VERSION } from './version';
 import type {
   Candidate,
   ChunkRow,
@@ -127,11 +128,29 @@ export class IndexStore implements IndexReader {
     const have = sql.get<{ value: string }>(`SELECT value FROM meta WHERE key = 'index_id'`)?.value;
     const indexId = have ?? o.indexId ?? 'ix_unknown';
     if (!have) sql.run(`INSERT INTO meta (key, value) VALUES ('index_id', ?)`, indexId);
+    const format = Number(sql.get<{ value: string }>(`SELECT value FROM meta WHERE key = 'format'`)?.value ?? 0);
+    if (format > FORMAT_VERSION) {
+      sql.close();
+      throw new KgError('precondition', `${path} has format ${format}, newer than this program reads (${FORMAT_VERSION}); update kg`);
+    }
+    if (format === 0) sql.run(`INSERT INTO meta (key, value) VALUES ('format', ?)`, String(FORMAT_VERSION));
     return new IndexStore(sql, indexId, path);
   }
 
   close(): void {
     this.sql.close();
+  }
+
+  getMeta(key: string): string | null {
+    return this.sql.get<{ value: string }>(`SELECT value FROM meta WHERE key = ?`, key)?.value ?? null;
+  }
+  setMeta(key: string, value: string): void {
+    this.sql.run(`INSERT INTO meta (key, value) VALUES (?, ?) ON CONFLICT(key) DO UPDATE SET value = excluded.value`, key, value);
+  }
+
+  /** Writes a consistent copy of this index to a new file, keeping its ID. */
+  backupTo(path: string): void {
+    this.sql.db.exec(`VACUUM INTO '${path.replace(/'/g, "''")}'`);
   }
 
   /** Copies this index to a new file under a new ID (VACUUM INTO), and opens the copy. Used to redo one module's output. */
@@ -168,7 +187,7 @@ export class IndexStore implements IndexReader {
   /** True when the stored document has this source hash and these recipes, so loading it again would change nothing. */
   documentUnchanged(docKey: string, sourceSha256: string, parseRecipe: JsonObject, chunkRecipe: JsonObject): boolean {
     const d = this.getDocument(docKey);
-    return d !== null && d.sourceSha256 === sourceSha256 && canonicalJson(d.parseRecipe) === canonicalJson(parseRecipe) && canonicalJson(d.chunkRecipe) === canonicalJson(chunkRecipe);
+    return d !== null && d.meta.retired !== true && d.sourceSha256 === sourceSha256 && canonicalJson(d.parseRecipe) === canonicalJson(parseRecipe) && canonicalJson(d.chunkRecipe) === canonicalJson(chunkRecipe);
   }
 
   /**
@@ -204,7 +223,8 @@ export class IndexStore implements IndexReader {
         const exists = this.sql.get(`SELECT 1 AS x FROM chunks WHERE chunk_id = ?`, c.id);
         if (exists) {
           reused++;
-          this.sql.run(`UPDATE chunks SET ordinal = ?, ingest_no = ? WHERE chunk_id = ?`, c.ordinal, ingestNo, c.id);
+          // metadata is not part of the ID, so a source line that moved while the text stayed must be refreshed
+          this.sql.run(`UPDATE chunks SET ordinal = ?, ingest_no = ?, meta = ? WHERE chunk_id = ?`, c.ordinal, ingestNo, canonicalJson(c.meta), c.id);
         } else {
           inserted++;
           this.sql.run(
@@ -466,10 +486,11 @@ export class IndexStore implements IndexReader {
     });
   }
 
-  stats(): { documents: number; currentChunks: number; facts: number; summaries: number; mentions: number; links: number; embeddings: number; staleItems: number } {
+  stats(): { documents: number; retiredDocuments: number; currentChunks: number; facts: number; summaries: number; mentions: number; links: number; embeddings: number; staleItems: number } {
     const n = (sql: string) => this.sql.get<{ n: number }>(sql)!.n;
     return {
-      documents: n(`SELECT COUNT(*) AS n FROM documents`),
+      documents: n(`SELECT COUNT(*) AS n FROM documents WHERE json_extract(meta, '$.retired') IS NOT 1`),
+      retiredDocuments: n(`SELECT COUNT(*) AS n FROM documents WHERE json_extract(meta, '$.retired') IS 1`),
       currentChunks: n(`SELECT COUNT(*) AS n FROM chunks c ${CURRENT}`),
       facts: n(`SELECT COUNT(*) AS n FROM items WHERE kind = 'fact'`),
       summaries: n(`SELECT COUNT(*) AS n FROM items WHERE kind = 'summary'`),

@@ -6,8 +6,12 @@ export interface SourceEntry {
   /** a file path, relative to the database directory or absolute */
   path: string;
   docKey?: string;
-  /** which ingest module reads it: "docling-pdf", "markdown", "decision-log" */
+  /** which ingest module reads it: "docling-pdf", "markdown", "html", "decision-log" */
   adapter?: string;
+  /** for a folder: a regular expression that a file's name must match to be read, such as "^CODEMAP\\.md$" */
+  pattern?: string;
+  /** for a folder: a regular expression tested against a file's path below the folder; a match leaves the file out */
+  exclude?: string;
   meta?: JsonObject;
 }
 
@@ -19,6 +23,11 @@ export interface KgConfig {
   searchMachine: string;
   /** machine that builds an index from the sources */
   buildMachine: string;
+  /**
+   * A machine whose results are logged next to those of the machine an agent chose, without being returned. It lets real
+   * questions compare the chosen machine with the baseline. Null turns the comparison off.
+   */
+  shadowMachine: string | null;
   llm: { model: string; temperature: number; maxTokens: number };
   extract: { enabled: boolean; secondPass: boolean; maxFactsPerChunk: number };
   sources: SourceEntry[];
@@ -54,6 +63,7 @@ export const DEFAULT_CONFIG: KgConfig = {
   chunkRecipe: DEFAULT_CHUNK_RECIPE,
   searchMachine: 'chunk-search',
   buildMachine: 'build',
+  shadowMachine: 'chunk-search',
   llm: { model: 'qwen3.5:latest', temperature: 0, maxTokens: 1200 },
   extract: { enabled: false, secondPass: false, maxFactsPerChunk: 12 },
   sources: [],

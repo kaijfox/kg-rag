@@ -1,10 +1,10 @@
-# What was measured on the rebuilt system
+# Measurements
 
 All numbers are on the stat-mech corpus (two textbooks by two authors, one index per author), local embedding model
-embeddinggemma, and the 63 reviewed questions that the first build pinned. Scripts are in this folder and print the numbers
-below. Retrieval only unless stated: no answering or judging model is involved.
+embeddinggemma, and the 63 reviewed questions that the first build pinned. The scripts that print the numbers are in `experiments/`.
+New results are added as dated sections at the end. Retrieval only unless stated: no answering or judging model is involved.
 
-## 1. The baseline machine reproduces the first build exactly
+## The baseline machine reproduces the first build exactly
 
 `baseline-parity.mts` builds both authors' databases from the kept parsed documents and runs the 63 questions through the
 `chunk-search` machine. Recall at k = 1, 3 and 5 equals the first build's stored results for **63 of 63 questions**
@@ -12,7 +12,7 @@ below. Retrieval only unless stated: no answering or judging model is involved.
 documents reproduces all 102 gold chunk IDs of the pinned questions. So the pinned evaluation sets remain valid and the
 rebuilt system is a drop-in baseline.
 
-## 2. Adjacent-chunk expansion shows little to gain at k = 5 on this set
+## Adjacent-chunk expansion shows little to gain at k = 5 on this set
 
 `adjacent-gate.mts` and `adjacent-sweep.mts` compare the baseline with machines that add the chunks next to the best ones.
 Cells are recall@5 / share of questions with every gold chunk in the top 5.
@@ -31,7 +31,7 @@ chunks; with only five slots, neighbours rarely displace chunks that already sco
 recall against the 36% baseline) shows little to gain here. A test at larger k, or with a question set where answers span
 sections, could still show a gain. The module stays; the machine `chunk-search-adjacent` is not the default.
 
-## 3. Fact extraction with the local model (qwen3.5), one document
+## Fact extraction with the local model (qwen3.5), one document
 
 `extraction-trial.mts` builds ThermoPlischke (39 chunks) with extraction on and one model call per chunk.
 
@@ -55,3 +55,60 @@ sections, could still show a gain. The module stays; the machine `chunk-search-a
 
 The database is left at `kg-data/trial-thermo-plischke` (not committed) for inspection with `./kg status`, `./kg search
 --machine facts-and-neighbours` and `./kg serve viewer`.
+
+## 2026-11-06: Code map built from doc comments, on this repository
+
+Script: `experiments/code-map-selftest.mts`. Two databases were built from the same 50 source files with the real embedding
+model: one from documentation generated out of the doc comments (TypeDoc, then the `symbol-docs` adapter; 451 passages), and one
+from the raw source files cut into passages with the file path as the heading (252 passages). Twenty questions about this
+codebase, each with the file or files that answer it, were searched in both. A search succeeds at k when one of the top k results
+comes from an answering file. The author of the code wrote the questions, and most use words that appear in the code or its
+comments, so the test shows that the path works and not how well it generalises.
+
+| | top 1 | top 3 | top 5 | text returned per search | file and line on each result |
+|---|---|---|---|---|---|
+| documentation from doc comments | 17 of 20 | 19 of 20 | 19 of 20 | 1,161 characters | 100 of 100 |
+| raw source files | 17 of 20 | 19 of 20 | 19 of 20 | 5,395 characters | none |
+
+The two find the same files and miss the same question. The documentation returns about a fifth of the text and names the
+line. A repository of 50 files is small enough that locating a file is easy either way, so a gain in finding would need a larger
+repository or questions that do not echo the code's own words. The comments in this repository are uneven, so the result also
+reflects them, not the quality of comments written to the prompt in `docs/beta/code-map-prompt.md`.
+
+## 2026-11-06: Moving extraction between databases, with the real model
+
+Run by hand on two notes (two passages) with qwen3.5. Ingest with extraction made 2 model calls and produced 8 facts in 22 s.
+The cache was exported, imported into a second database with the same sources, and `ingest --cache-only` made 0 model calls and
+produced the same 8 facts. Before the import, the same command stopped with a message naming the missing request and the model.
+A test also covers the replay offline (`packages/modules/test/beta.test.ts`). The earlier measurement of a 39-passage rebuild
+(4.9 s against 1,122 s) is the larger case.
+
+## 2026-11-06: The server process, end to end
+
+Script: `experiments/mcp-smoke.mts`. A real `kg serve mcp --watch` was started as an agent client would start it. The client
+received the instructions and the six tools, searched, reported usage and feedback, then a new note was written into the source
+folder. The watcher read it, extracted 4 facts from it, and the next search returned it. `kg report` showed the comparison with
+the baseline on the 7 searches made.
+
+## 2026-11-06: Code map read from generated HTML, on this repository
+
+Script: `experiments/code-map-selftest.mts`. TypeDoc built an HTML site from the doc comments of the 50 source files (256 pages
+after leaving out the listing pages, 674 passages), the general HTML reader ingested it, and the same twenty questions as in the
+earlier code-map measurement were searched. A search succeeds at k when one of the top k results is a page about a file that
+answers the question. A page is matched to a file by its module name, so a result can be credited to the wrong package.
+
+| | top 1 | top 3 | top 5 | text returned per search |
+|---|---|---|---|---|
+| generated HTML, general reader | 13 of 20 | 14 of 20 | 15 of 20 | 1,578 characters |
+| earlier route (markdown with source lines) | 17 of 20 | 19 of 20 | 19 of 20 | 1,161 characters |
+
+This route finds fewer answering files and returns more text, and its results carry no file or line. The earlier numbers are
+for a route that has been removed (see the decisions entry of the same date).
+
+The five misses were looked at. Pages that only list other pages were taking result slots in four of them; leaving those pages
+out did not change the score. In one miss, the question about where parsed documents are kept, the top results came from a
+neighbouring file with a similar name (`parse_artifact`, the answer is in `parse_artifacts`), so the gold may be too strict. In
+the other four, the pages for the answering file (the viewer, the machines list, the runner, the command line) did not reach the
+top five, and results came from related files instead. Whether those pages hold thin comments or the questions use different
+words than the comments was not checked. The questions were written by the author of the code and the comments in this
+repository are uneven, so the result shows that the route works and not how good a map is.

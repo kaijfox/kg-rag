@@ -10,7 +10,7 @@ const FIXTURE = join(__dirname, 'fixtures/log.md');
 const CHUNK_RECIPE = { kind: 'chunk', version: '1', spec: { algorithm: 'section-pack/1', targetChars: 1000, maxChars: 1500, minChars: 200 } };
 
 describe('the chunker and chunk IDs (the pinned evaluation sets depend on them)', () => {
-  const have = existsSync(join(ROOT, 'test/corpa/stat-mech/artifacts/ThermoKardar.kgparse.json.gz')) && existsSync(join(ROOT, 'scratch/sprint-2/eval-set-kardar.json'));
+  const have = existsSync(join(ROOT, 'test/corpa/stat-mech/artifacts/ThermoKardar.kgparse.json.gz')) && existsSync(join(ROOT, 'test/corpa/stat-mech/eval/eval-set-kardar.json'));
   it.skipIf(!have)('reproduces every gold chunk ID of the 63 reviewed questions from the kept parsed documents', async () => {
     const ids = new Set<string>();
     for (const doc of ['FoundationsKardar', 'ThermoKardar', 'FoundationsPlischke', 'ThermoPlischke']) {
@@ -20,7 +20,7 @@ describe('the chunker and chunk IDs (the pinned evaluation sets depend on them)'
     let total = 0;
     let found = 0;
     for (const f of ['eval-set-kardar.json', 'eval-set-plischke.json']) {
-      for (const q of JSON.parse(readFileSync(join(ROOT, 'scratch/sprint-2', f), 'utf8')).questions as { goldChunkIds: string[] }[])
+      for (const q of JSON.parse(readFileSync(join(ROOT, 'test/corpa/stat-mech/eval', f), 'utf8')).questions as { goldChunkIds: string[] }[])
         for (const g of q.goldChunkIds) (total++, ids.has(g) && found++);
     }
     expect(total).toBe(102);

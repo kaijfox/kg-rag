@@ -84,6 +84,11 @@ export class HistoryStore {
     this.sql.close();
   }
 
+  /** Writes a consistent copy of the history to a new file, even while it is in use. */
+  backupTo(path: string): void {
+    this.sql.db.exec(`VACUUM INTO '${path.replace(/'/g, "''")}'`);
+  }
+
   openSession(o: { kind: string; label?: string | null; meta?: JsonObject }): string {
     const id = this.ids.ulid('se_');
     this.sql.run(`INSERT INTO sessions (session_id, kind, label, started_at, meta) VALUES (?, ?, ?, ?, ?)`, id, o.kind, o.label ?? null, this.now(), canonicalJson(o.meta ?? {}));
@@ -135,6 +140,32 @@ export class HistoryStore {
       .map(toEvent);
   }
 
+  /** Every event after a sequence number, in order. Used by the export. */
+  allEvents(afterSeq = 0): EventRow[] {
+    return this.sql
+      .all<{ seq: number; event_id: string; session_id: string; ts: string; type: string; index_id: string | null; search_id: string | null; payload: string }>(
+        `SELECT * FROM events WHERE seq > ? ORDER BY seq`, afterSeq,
+      )
+      .map(toEvent);
+  }
+
+  /** How many model calls a session made, and how many of those the cache answered. */
+  llmCalls(sessionId: string): { made: number; cached: number } {
+    const rows = this.sql.all<{ c: number | null; n: number }>(
+      `SELECT json_extract(payload, '$.cached') AS c, COUNT(*) AS n FROM events WHERE session_id = ? AND type = 'llm.called' GROUP BY c`,
+      sessionId,
+    );
+    let made = 0;
+    let cached = 0;
+    for (const r of rows) (r.c ? (cached += r.n) : (made += r.n));
+    return { made, cached };
+  }
+
+  /** The newest session of a kind (such as "ingest" or "rebuild"), or null. */
+  latestSession(kind: string): SessionRow | null {
+    return this.sessions(1000).find((s) => s.kind === kind) ?? null;
+  }
+
   eventsOfSearch(searchId: string): EventRow[] {
     return this.sql
       .all<{ seq: number; event_id: string; session_id: string; ts: string; type: string; index_id: string | null; search_id: string | null; payload: string }>(
@@ -166,6 +197,9 @@ export class HistoryStore {
       `INSERT OR REPLACE INTO eval_results (run_id, question_id, condition, search_id, retrieved, recall, answer, judge_score, judge_raw) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`,
       r.runId, r.questionId, r.condition, r.searchId, r.retrieved ? JSON.stringify(r.retrieved) : null, r.recall ? JSON.stringify(r.recall) : null, r.answer, r.judgeScore, r.judgeRaw,
     );
+  }
+  allEvalResults(): EvalResultRow[] {
+    return this.evalRuns().flatMap((r) => this.evalResults(r.runId));
   }
   evalRuns(): { runId: string; evalSetId: string; indexId: string; createdAt: string; config: JsonObject; summary: Json | null }[] {
     return this.sql

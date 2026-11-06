@@ -1,6 +1,7 @@
 import type { RecordKind } from '@kg/kernel';
 
-export type QuestionType = 'single-hop' | 'multi-hop' | 'topic' | 'exact-term';
+/** "logged": a question an agent asked in real use, with the chunks it reported using as the (weak) gold */
+export type QuestionType = 'single-hop' | 'multi-hop' | 'topic' | 'exact-term' | 'logged';
 
 export type EvalQuestion = {
   id: string;

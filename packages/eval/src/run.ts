@@ -24,22 +24,25 @@ export interface RunOptions {
   answerer?: Llm;
   judgeLlm?: Llm;
   sessionId?: string;
+  /** measure retrieval only: no answers, no judging, no model needed. Only retrieving conditions are allowed */
+  retrievalOnly?: boolean;
 }
 
 interface Outcome {
   questionId: string;
   condition: string;
   ranked: RankedSource[] | null;
-  judgeScore: number;
+  judgeScore: number | null;
 }
 
 export async function runEval(kg: Kg, set: EvalSet, o: RunOptions): Promise<{ runId: string; summary: Json }> {
   for (const c of o.conditions) if (!STANDARD.has(c) && !kg.registry.machines.has(c)) throw new KgError('invalid_input', `unknown condition ${JSON.stringify(c)}: not a standard name and not a search machine`);
+  if (o.retrievalOnly) for (const c of o.conditions) if (c === 'no-context' || c === 'gold') throw new KgError('invalid_input', `condition ${c} does not retrieve, so there is nothing to measure without answering`);
   const base = o.answerer ?? kg.services.llm;
-  if (!base) throw new KgError('precondition', 'an evaluation needs a model client');
+  if (!base && !o.retrievalOnly) throw new KgError('precondition', 'an evaluation needs a model client');
   const sessionId = o.sessionId ?? kg.openSession('eval', set.name);
-  const answerer = kg.llmFor(sessionId, base)!;
-  const judgeLlm = kg.llmFor(sessionId, o.judgeLlm ?? base)!;
+  const answerer = base ? kg.llmFor(sessionId, base) : undefined;
+  const judgeLlm = base || o.judgeLlm ? kg.llmFor(sessionId, o.judgeLlm ?? base) : undefined;
   const indexId = kg.index.indexId;
   const runId = kg.history.newRunId();
   const k = Math.max(...o.ks);
@@ -76,8 +79,8 @@ export async function runEval(kg: Kg, set: EvalSet, o: RunOptions): Promise<{ ru
           ranked = items.map((i) => ({ id: i.id, kind: i.kind, sourceChunkIds: i.sourceChunkIds }));
           passages = items.slice(0, contextK).map((i) => i.text);
         }
-        const text = await answer(answerer, q.question, passages);
-        const verdict = await judge(judgeLlm, q.question, q.referenceAnswer, text);
+        const text = o.retrievalOnly ? null : await answer(answerer!, q.question, passages);
+        const verdict = o.retrievalOnly ? { score: null, raw: null } : await judge(judgeLlm!, q.question, q.referenceAnswer, text!);
         const recall = ranked && q.goldChunkIds.length ? Object.fromEntries(o.ks.map((kk) => [String(kk), recallAt(q, ranked!, kk)])) : null;
         kg.history.putEvalResult({ runId, questionId: q.id, condition, searchId, retrieved: ranked ? ranked.map((x) => x.id) : null, recall, answer: text, judgeScore: verdict.score, judgeRaw: verdict.raw });
         kg.history.append(sessionId, 'eval.question.scored', { runId, questionId: q.id, condition, recall, judgeScore: verdict.score }, { indexId, searchId });
@@ -94,7 +97,8 @@ export async function runEval(kg: Kg, set: EvalSet, o: RunOptions): Promise<{ ru
   for (const c of o.conditions) {
     const rows = outcomes.filter((x) => x.condition === c);
     const ranked = new Map(rows.filter((x) => x.ranked).map((x) => [x.questionId, x.ranked!]));
-    const entry: Record<string, Json> = { scored: rows.length, failed: failures.filter((f) => f.condition === c).length, judge: judgeMeans(rows.map((x) => ({ condition: c, score: x.judgeScore })))[c] ?? null };
+    const judged = rows.flatMap((x) => (x.judgeScore === null ? [] : [{ condition: c, score: x.judgeScore }]));
+    const entry: Record<string, Json> = { scored: rows.length, failed: failures.filter((f) => f.condition === c).length, judge: judgeMeans(judged)[c] ?? null };
     // a question that failed under this condition is reported as failed and left out of the means
     if (ranked.size > 0) entry.retrieval = retrievalMetrics(set.questions.filter((x) => ranked.has(x.id)), (id) => ranked.get(id)!, o.ks) as unknown as Json;
     byCondition[c] = entry;

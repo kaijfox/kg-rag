@@ -1,6 +1,6 @@
 /** The machines that ship, and the registry that holds them and their modules. */
 import { Registry, type JsonObject, type MachineDef } from '@kg/kernel';
-import { embedRecords, linkReplaces, readSources, replayCorrections, segment } from './modules/ingest';
+import { embedRecords, linkReplaces, readSources, replayCorrections, retireMissing, segment } from './modules/ingest';
 import { extractFacts } from './modules/extract';
 import { adjacentChunks, citeChunks, dropReplaced, embedQuery, expandByNames, keepTopK, nearestAll, nearestChunks, nearestFacts } from './modules/search';
 
@@ -40,13 +40,14 @@ export const MACHINES: MachineDef[] = [
   ]),
   {
     name: 'build',
-    version: '1',
-    description: 'Read the sources, cut them into chunks, extract facts, embed everything new, replay confirmed corrections, link replaced entries.',
-    provides: ['sources'],
+    version: '2',
+    description: 'Read the sources, cut them into chunks, retire documents whose source is gone, extract facts, embed everything new, replay confirmed corrections, link replaced entries.',
+    provides: ['sources', 'full'],
     start: 'read',
     states: {
       read: { module: 'read-sources', next: 'segment' },
-      segment: { module: 'segment', next: 'extract' },
+      segment: { module: 'segment', next: 'retire' },
+      retire: { module: 'retire-missing', next: 'extract' },
       extract: { module: 'extract-facts', next: 'embed' },
       embed: { module: 'embed-records', next: 'corrections' },
       corrections: { module: 'replay-corrections', next: 'replaces' },
@@ -57,7 +58,7 @@ export const MACHINES: MachineDef[] = [
 
 export function createRegistry(): Registry {
   const r = new Registry();
-  for (const m of [embedQuery, nearestChunks, nearestFacts, nearestAll, expandByNames, citeChunks, dropReplaced, adjacentChunks, keepTopK, readSources, segment, extractFacts, embedRecords, replayCorrections, linkReplaces]) r.addModule(m);
+  for (const m of [embedQuery, nearestChunks, nearestFacts, nearestAll, expandByNames, citeChunks, dropReplaced, adjacentChunks, keepTopK, readSources, segment, retireMissing, extractFacts, embedRecords, replayCorrections, linkReplaces]) r.addModule(m);
   for (const m of MACHINES) r.addMachine(m);
   return r;
 }
