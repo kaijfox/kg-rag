@@ -1,0 +1,650 @@
+{
+ "summary": {
+  "indexId": "ix_01M6SDAQJGR2TEJF5ZRBJ270GY",
+  "questions": 12,
+  "ks": [
+   1,
+   5
+  ],
+  "byCondition": {
+   "no-context": {
+    "scored": 12,
+    "failed": 0,
+    "judge": 0.75
+   },
+   "gold": {
+    "scored": 12,
+    "failed": 0,
+    "judge": 1
+   },
+   "retrieved": {
+    "scored": 12,
+    "failed": 0,
+    "judge": 0.9583333333333334,
+    "retrieval": {
+     "ks": [
+      1,
+      5
+     ],
+     "perQuestion": {
+      "p1": {
+       "recall": {
+        "1": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "5": 1
+       }
+      },
+      "p2": {
+       "recall": {
+        "1": 0,
+        "5": 1
+       },
+       "allGold": {
+        "1": 0,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 0,
+        "5": 1
+       }
+      },
+      "p4": {
+       "recall": {
+        "1": 0,
+        "5": 1
+       },
+       "allGold": {
+        "1": 0,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 0,
+        "5": 1
+       }
+      },
+      "p5": {
+       "recall": {
+        "1": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "5": 1
+       }
+      },
+      "p6": {
+       "recall": {
+        "1": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "5": 1
+       }
+      },
+      "p7": {
+       "recall": {
+        "1": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "5": 1
+       }
+      },
+      "p8": {
+       "recall": {
+        "1": 0,
+        "5": 0
+       },
+       "allGold": {
+        "1": 0,
+        "5": 0
+       },
+       "withSummaries": {
+        "1": 0,
+        "5": 0
+       }
+      },
+      "p9": {
+       "recall": {
+        "1": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "5": 1
+       }
+      },
+      "p24": {
+       "recall": {
+        "1": 0.5,
+        "5": 1
+       },
+       "allGold": {
+        "1": 0,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 0.5,
+        "5": 1
+       }
+      },
+      "pr214": {
+       "recall": {
+        "1": 0.5,
+        "5": 1
+       },
+       "allGold": {
+        "1": 0,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 0.5,
+        "5": 1
+       }
+      },
+      "p29": {
+       "recall": {
+        "1": 0.3333333333333333,
+        "5": 1
+       },
+       "allGold": {
+        "1": 0,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 0.3333333333333333,
+        "5": 1
+       }
+      },
+      "p30": {
+       "recall": {
+        "1": 0.3333333333333333,
+        "5": 0.3333333333333333
+       },
+       "allGold": {
+        "1": 0,
+        "5": 0
+       },
+       "withSummaries": {
+        "1": 0.3333333333333333,
+        "5": 0.3333333333333333
+       }
+      }
+     },
+     "overall": {
+      "recall": {
+       "1": 0.5555555555555555,
+       "5": 0.8611111111111112
+      },
+      "withSummaries": {
+       "1": 0.5555555555555555,
+       "5": 0.8611111111111112
+      }
+     },
+     "byType": {
+      "single-hop": {
+       "n": 8,
+       "recall": {
+        "1": 0.625,
+        "5": 0.875
+       },
+       "allGold": {
+        "1": 0.625,
+        "5": 0.875
+       }
+      },
+      "multi-hop": {
+       "n": 2,
+       "recall": {
+        "1": 0.5,
+        "5": 1
+       },
+       "allGold": {
+        "1": 0,
+        "5": 1
+       }
+      },
+      "topic": {
+       "n": 2,
+       "recall": {
+        "1": 0.3333333333333333,
+        "5": 0.6666666666666666
+       },
+       "allGold": {
+        "1": 0,
+        "5": 0.5
+       }
+      }
+     }
+    }
+   }
+  },
+  "failures": [],
+  "orphaned": []
+ },
+ "questions": [
+  {
+   "id": "p1",
+   "type": "single-hop",
+   "question": "Under what condition does the product of the statistical weights of two energy-exchanging subsystems reach its maximum value?",
+   "referenceAnswer": "The product is at a maximum when the total entropy reaches its maximum."
+  },
+  {
+   "id": "p2",
+   "type": "single-hop",
+   "question": "What physical quantity is identified with the parameter A in the context of recovering the canonical distribution?",
+   "referenceAnswer": "The parameter A is identified as the Helmholtz free energy."
+  },
+  {
+   "id": "p4",
+   "type": "single-hop",
+   "question": "How can the foundational basis for equilibrium statistical mechanics be redefined to remove its reliance on dynamical evolution?",
+   "referenceAnswer": "The foundation can be formulated using information theory, where thermodynamic variables are derived from a least-possible-bias estimate based on available information, thereby severing the connection with dynamics and establishing a maximum entropy principle."
+  },
+  {
+   "id": "p5",
+   "type": "single-hop",
+   "question": "Which researcher is credited with proposing the most significant alternative to Boltzmann-Shannon entropy specifically to address systems that do not satisfy the extensivity requirement?",
+   "referenceAnswer": "Costantino Tsallis is credited with this attempt."
+  },
+  {
+   "id": "p6",
+   "type": "single-hop",
+   "question": "Under what condition involving the thermal wavelength and particle density does a fermion system transition from being nondegenerate to degenerate?",
+   "referenceAnswer": "The system is nondegenerate when the cube of the thermal wavelength is less than the volume per particle, and it becomes degenerate when this inequality is reversed."
+  },
+  {
+   "id": "p7",
+   "type": "single-hop",
+   "question": "What is the geometric dimensionality of the surface that confines the motion of an N-particle system when its energy E is specified?",
+   "referenceAnswer": "The motion is confined to a (6N - 1)-dimensional surface."
+  },
+  {
+   "id": "p8",
+   "type": "single-hop",
+   "question": "Which specific ensemble is introduced for classical systems that are isolated from their surroundings?",
+   "referenceAnswer": "The microcanonical ensemble is defined for a closed classical system."
+  },
+  {
+   "id": "p9",
+   "type": "single-hop",
+   "question": "What fundamental principle connects the response function C_V,N to the mean-square fluctuation of energy?",
+   "referenceAnswer": "The relationship between the response function C_V,N and the mean-square fluctuation of energy is a specific instance of the fluctuation-dissipation theorem."
+  },
+  {
+   "id": "p24",
+   "type": "multi-hop",
+   "question": "When analyzing a system in chemical equilibrium where the particle number fluctuates with temperature changes, how is the condition of equal chemical potentials derived from the maximization of entropy for two subsystems exchanging both energy and particles, and what specific ensemble is constructed when one of these subsystems is significantly larger than the other?",
+   "referenceAnswer": "In a system with variable particle numbers such as chemical equilibrium, the statistical treatment uses a partition function where concentrations adjust. For two systems in contact exchanging energy and particles, equilibrium occurs when temperatures are equal and chemical potentials are also equal, which maximizes total entropy. By letting one subsystem be extremely large, the grand canonical ensemble is constructed."
+  },
+  {
+   "id": "pr214",
+   "type": "multi-hop",
+   "question": "When two isolated subsystems can exchange energy but have fixed particle numbers and volumes, what specific condition regarding their total entropy must be met to maximize the product of their statistical weights, and how does this relate to the assumption that no bias exists in selecting allowed states for a microcanonical ensemble?",
+   "referenceAnswer": "The product of the statistical weights is maximized when the total entropy is at its maximum value. This outcome relies on the principle that, in the absence of additional information or bias, all accessible states within the energy tolerance are assumed to be equally likely."
+  },
+  {
+   "id": "p29",
+   "type": "topic",
+   "question": "How do the mathematical conditions derived from maximizing total entropy for isolated systems relate to the requirements for a system to maintain stable equilibrium when interacting with a large thermal and mechanical reservoir?",
+   "referenceAnswer": "The section first establishes that for two isolated systems in contact, equilibrium occurs when pressure and temperature are equalized, which corresponds to a maximum in the total entropy. It then transitions to analyzing stability by requiring this entropy maximum to be global, meaning the entropy must be a concave function of its variables. Finally, these conditions are extended to a small system coupled to a large reservoir using the Gibbs potential, where stability is ensured if the second derivatives of energy with respect to entropy and volume satisfy specific inequalities that prevent spontaneous fluctuations from driving the system away from equilibrium."
+  },
+  {
+   "id": "p30",
+   "type": "topic",
+   "question": "How do the definitions of state functions like internal energy contrast with heat and work in the context of reversible versus irreversible processes?",
+   "referenceAnswer": "The first law partitions a system's energy change into heat and work, where only the difference between these two quantities depends on the initial and final states, making internal energy a state function. In contrast, heat and work themselves are path-dependent, meaning their individual values depend on how the process occurs. This distinction is critical when comparing reversible processes, which follow a specific path in thermodynamic space that can be exactly reversed, to irreversible processes like free expansion, which do not."
+  }
+ ],
+ "rows": [
+  {
+   "questionId": "p1",
+   "type": "single-hop",
+   "condition": "gold",
+   "judge": 1,
+   "recall": null,
+   "answer": "Based on the provided text, the product of the statistical weights ($\\Omega_1 \\Omega_2$) reaches its maximum when the total entropy ($S_{total}$) is at a maximum. This condition occurs because the individual entropies are monotonically increasing functions of their respective statistical weights, and the system naturally evolves toward the state where this combined entropy is highest."
+  },
+  {
+   "questionId": "p1",
+   "type": "single-hop",
+   "condition": "no-context",
+   "judge": 1,
+   "recall": null,
+   "answer": "Based on general statistical mechanics principles, the product of the statistical weights (number of microstates) of two energy-exchanging subsystems reaches its maximum when the total energy is distributed between them such that their temperatures are equal. This condition corresponds to thermal equilibrium, where the entropy of the combined system is maximized. Without specific context passages provided, this answer is derived from standard physical knowledge."
+  },
+  {
+   "questionId": "p1",
+   "type": "single-hop",
+   "condition": "retrieved",
+   "judge": 1,
+   "recall": {
+    "1": 1,
+    "5": 1
+   },
+   "answer": "Based on the provided context, the product of the statistical weights ($\\Omega_1 \\Omega_2$) of two energy-exchanging subsystems reaches its maximum when the total entropy ($S = S_1 + S_2$) is at a maximum. This condition occurs when the systems are in equilibrium, which implies that their temperatures are equal ($T_1 = T_2$). The text notes that for sufficiently large subsystems, this product forms a sharply peaked function of energy distribution around this equilibrium point."
+  },
+  {
+   "questionId": "p2",
+   "type": "single-hop",
+   "condition": "gold",
+   "judge": 1,
+   "recall": null,
+   "answer": "Based on the provided text, the parameter $\\mathcal{A}$ is identified with the Helmholtz free energy when recovering the canonical distribution. The passage explicitly states this identification immediately following the formula relating the Lagrange multiplier to the probability distribution. No other physical quantity is mentioned in relation to $\\mathcal{A}$ within these specific context passages."
+  },
+  {
+   "questionId": "p2",
+   "type": "single-hop",
+   "condition": "no-context",
+   "judge": 0,
+   "recall": null,
+   "answer": "No context passages were provided for this question. Based on general statistical mechanics knowledge, the parameter $A$ (or $\\beta$) that appears when recovering the canonical distribution from the microcanonical ensemble or via maximum entropy principles is identified with **inverse temperature** ($1/k_B T$)."
+  },
+  {
+   "questionId": "p2",
+   "type": "single-hop",
+   "condition": "retrieved",
+   "judge": 1,
+   "recall": {
+    "1": 0,
+    "5": 1
+   },
+   "answer": "Based on the provided text, specifically passage [2], the parameter $\\lambda$ (referred to as $A$ in your question) is identified with the **Helmholtz free energy**. The text explicitly states that the canonical distribution is recovered \"with the identification\" where $\\lambda$ equals the Helmholtz free energy."
+  },
+  {
+   "questionId": "p24",
+   "type": "multi-hop",
+   "condition": "gold",
+   "judge": 1,
+   "recall": null,
+   "answer": "Based on the provided text, the condition of equal chemical potentials ($\\mu_1 = \\mu_2$) is derived by maximizing the total entropy of two systems in contact that exchange both energy and particles, which occurs when the product of their partition functions is sharply peaked. When one subsystem is significantly larger than the other, this framework allows for the construction of the grand canonical ensemble, where the smaller system's probability density incorporates fluctuations in particle number while being coupled to a reservoir with fixed temperature and chemical potential."
+  },
+  {
+   "questionId": "p24",
+   "type": "multi-hop",
+   "condition": "no-context",
+   "judge": 1,
+   "recall": null,
+   "answer": "Based on general thermodynamic principles (as no specific context was provided), the condition of equal chemical potentials ($\\mu_1 = \\mu_2$) is derived by maximizing the total entropy of two interacting subsystems with respect to particle exchange, which requires that the change in entropy due to a transfer of particles vanishes when the difference in their chemical potentials divided by temperature is zero. When one subsystem is significantly larger than the other, this setup leads to the construction of the Grand Canonical Ensemble, where the small system exchanges both energy and particles with a large reservoir characterized by fixed temperature $T$ and chemical potential $\\mu$."
+  },
+  {
+   "questionId": "p24",
+   "type": "multi-hop",
+   "condition": "retrieved",
+   "judge": 1,
+   "recall": {
+    "1": 0.5,
+    "5": 1
+   },
+   "answer": "Based on the provided text, the condition of equal chemical potentials ($\\mu_1 = \\mu_2$) is derived by maximizing the total entropy of two systems in contact that are free to exchange both energy and particles, which leads to the requirement that their chemical potentials must be identical at equilibrium. When one subsystem is significantly larger than the other, this framework allows for the construction of the grand canonical ensemble and its corresponding partition function."
+  },
+  {
+   "questionId": "p29",
+   "type": "topic",
+   "condition": "gold",
+   "judge": 1,
+   "recall": null,
+   "answer": "Based on the provided text, maximizing the total entropy for an isolated system leads to conditions where generalized forces (like temperature and pressure) are equalized between subsystems. When considering a small system in contact with a large reservoir, stability requires the Gibbs potential to be at a minimum, which imposes specific constraints on the second derivatives of the entropy function to ensure fluctuations do not grow. Therefore, while the isolated system condition focuses on equalizing forces via a maximum entropy state, the interacting system's stability depends on the concavity of the entropy (or convexity of the Gibbs potential) to guarantee that the equilibrium is a true minimum rather than just a stationary point."
+  },
+  {
+   "questionId": "p29",
+   "type": "topic",
+   "condition": "no-context",
+   "judge": 0.5,
+   "recall": null,
+   "answer": "Based on general thermodynamic principles, maximizing total entropy for an isolated system yields the condition that temperature and pressure must be uniform throughout. When a system interacts with a large thermal and mechanical reservoir, it reaches stable equilibrium under the same conditions of uniform temperature and pressure because these constraints effectively mimic the behavior of an isolated system at maximum entropy. Therefore, the mathematical conditions are identical in both scenarios, as the reservoir fixes the intensive variables that define equilibrium."
+  },
+  {
+   "questionId": "p29",
+   "type": "topic",
+   "condition": "retrieved",
+   "judge": 0.5,
+   "recall": {
+    "1": 0.3333333333333333,
+    "5": 1
+   },
+   "answer": "Based on the provided text, maximizing the total entropy for two isolated systems leads to the equality of their intensive parameters (temperature and pressure), whereas maintaining stable equilibrium in contact with a large reservoir requires the system's Gibbs potential to be at a minimum. This stability condition imposes specific constraints on the second derivatives of the entropy, requiring it to be a concave function of generalized displacements such that fluctuations result in a positive definite expression for the change in Gibbs potential. The text does not explicitly derive the mathematical link between these two scenarios but implies they represent different boundary conditions (isolated vs. reservoir) leading to equilibrium and stability criteria respectively."
+  },
+  {
+   "questionId": "p30",
+   "type": "topic",
+   "condition": "gold",
+   "judge": 1,
+   "recall": null,
+   "answer": "Based on the provided text, internal energy ($dE$) is defined as a state function because its change depends only on the initial and final states, making it an exact differential. In contrast, heat ($dQ$) and work ($dW$) are not state functions; their differentials are inexact because they depend on the specific path taken during a process. While reversible processes follow a path that can be exactly reversed, irreversible processes do not, yet this distinction does not alter the fact that $dE$ remains a state function while $dQ$ and $dW$ remain path-dependent quantities."
+  },
+  {
+   "questionId": "p30",
+   "type": "topic",
+   "condition": "no-context",
+   "judge": 1,
+   "recall": null,
+   "answer": "State functions such as internal energy depend only on the initial and final states of a system, meaning their change is path-independent regardless of whether a process is reversible or irreversible. In contrast, heat and work are path-dependent quantities that describe energy transfer across the system boundary; while the total change in internal energy remains the same for both types of processes, the specific amounts of heat and work exchanged differ significantly between reversible and irreversible paths."
+  },
+  {
+   "questionId": "p30",
+   "type": "topic",
+   "condition": "retrieved",
+   "judge": 1,
+   "recall": {
+    "1": 0.3333333333333333,
+    "5": 0.3333333333333333
+   },
+   "answer": "Based on the provided text, state functions like internal energy ($E$) and entropy ($S$) depend only on the initial and final states of a system, meaning their changes are identical for both reversible and irreversible processes connecting the same endpoints. In contrast, heat ($Q$) and work are path-dependent quantities; while the total change in internal energy remains constant between two states, the specific amounts of heat exchanged and work performed differ depending on whether the process is reversible or irreversible. For instance, the text notes that for an adiabatic process, the decrease in internal energy equals the maximum work obtainable only if the process is reversible, whereas irreversible processes involve additional entropy generation ($dS > 0$) not accounted for by heat transfer alone."
+  },
+  {
+   "questionId": "p4",
+   "type": "single-hop",
+   "condition": "gold",
+   "judge": 1,
+   "recall": null,
+   "answer": "Based on the provided text, the foundational basis for equilibrium statistical mechanics can be redefined using information theory, where thermodynamic variables are inferred from a least-possible-bias estimate based on available information. This approach severs the link with dynamics altogether by establishing a maximum entropy principle that yields results equivalent to traditional methods. Consequently, the reliance on the ergodic hypothesis connecting time evolution to ensemble concepts is removed."
+  },
+  {
+   "questionId": "p4",
+   "type": "single-hop",
+   "condition": "no-context",
+   "judge": 0.5,
+   "recall": null,
+   "answer": "No context passages were provided for this question. Based on general knowledge, redefining the foundation of equilibrium statistical mechanics to remove reliance on dynamical evolution typically involves shifting from time-dependent Liouville or Boltzmann equations to axiomatic approaches based solely on ensemble theory and the principle of maximum entropy, as pioneered by Jaynes. This framework treats probability distributions over phase space as fundamental postulates without explicitly invoking microscopic dynamics to derive equilibrium states. However, specific modern proposals for such a redefinition vary significantly across different theoretical frameworks."
+  },
+  {
+   "questionId": "p4",
+   "type": "single-hop",
+   "condition": "retrieved",
+   "judge": 1,
+   "recall": {
+    "1": 0,
+    "5": 1
+   },
+   "answer": "Based on the provided text, the reliance on dynamical evolution can be removed by formulating the foundations of equilibrium statistical mechanics in terms of information theory. This approach uses a maximum entropy principle to infer thermodynamic variables from a least-bias estimate based on available information, thereby severing the link with dynamics while yielding equivalent results to traditional methods."
+  },
+  {
+   "questionId": "p5",
+   "type": "single-hop",
+   "condition": "gold",
+   "judge": 1,
+   "recall": null,
+   "answer": "Based on the provided text, Costantino Tsallis is credited with making the most significant attempt to replace the Boltzmann-Shannon entropy. This proposal was specifically motivated by the need to handle systems that are not \"normal\" and therefore do not possess extensive energy. The text notes that this work has led to a very large literature on nonextensive measures."
+  },
+  {
+   "questionId": "p5",
+   "type": "single-hop",
+   "condition": "no-context",
+   "judge": 1,
+   "recall": null,
+   "answer": "Based on general scientific knowledge, the researcher most commonly credited with proposing the most significant alternative to Boltzmann-Shannon entropy for non-extensive systems is Constantino Tsallis. He introduced \"Tsallis entropy\" (or $q$-entropy) in 1988 as a generalization that does not satisfy the standard additivity property but instead follows a pseudo-additivity rule, specifically designed to handle complex systems with long-range interactions or memory effects where Boltzmann-Gibbs statistics fail. This framework has since become a cornerstone of non-extensive statistical mechanics."
+  },
+  {
+   "questionId": "p5",
+   "type": "single-hop",
+   "condition": "retrieved",
+   "judge": 1,
+   "recall": {
+    "1": 1,
+    "5": 1
+   },
+   "answer": "Based on the provided text, Costantino Tsallis is credited with making the most significant attempt to replace the Boltzmann-Shannon entropy with a nonextensive measure. This alternative was proposed specifically to address systems where the energy is not extensive, as noted in the discussion following Equation (2.100). The text highlights that this development has led to a very large literature on the subject."
+  },
+  {
+   "questionId": "p6",
+   "type": "single-hop",
+   "condition": "gold",
+   "judge": 1,
+   "recall": null,
+   "answer": "Based on the provided text, a fermion system transitions from being nondegenerate to degenerate when the cube of the thermal wavelength ($\\lambda^3$) becomes greater than the volume per particle ($V/N$). Specifically, the passage states that if $\\lambda^3 < V/N$, the system is nondegenerate and follows Boltzmann statistics, whereas if $\\lambda^3 > V/N$, the system becomes degenerate."
+  },
+  {
+   "questionId": "p6",
+   "type": "single-hop",
+   "condition": "no-context",
+   "judge": 1,
+   "recall": null,
+   "answer": "Based on general physics knowledge, a fermion system transitions from being nondegenerate to degenerate when the thermal de Broglie wavelength ($\\lambda_{th}$) becomes comparable to or larger than the average interparticle distance, which corresponds to the condition where the phase-space density $n\\lambda_{th}^3$ approaches or exceeds unity. In this regime, quantum statistical effects become significant, and the system is considered degenerate. If you have specific context passages regarding a particular fermion system, please provide them so I can tailor the answer accordingly."
+  },
+  {
+   "questionId": "p6",
+   "type": "single-hop",
+   "condition": "retrieved",
+   "judge": 1,
+   "recall": {
+    "1": 1,
+    "5": 1
+   },
+   "answer": "Based on context passage [0], a fermion system transitions from being nondegenerate (approximately satisfying Boltzmann statistics) to degenerate when the cube of the thermal wavelength ($\\lambda^3$) becomes greater than the inverse particle density ($V/N$). Conversely, the system remains nondegenerate if $\\lambda^3 < V/N$. Therefore, the condition for degeneracy is $\\lambda^3 > V/N$."
+  },
+  {
+   "questionId": "p7",
+   "type": "single-hop",
+   "condition": "gold",
+   "judge": 1,
+   "recall": null,
+   "answer": "Based on the provided context, when the energy $E$ of an $N$-particle system is specified, its motion is confined to a $(6N - 1)$-dimensional surface denoted by $V(E)$. This dimensionality arises because the system's state is defined in a $6N$-dimensional phase space, and fixing the energy reduces the accessible volume to a hypersurface of one lower dimension."
+  },
+  {
+   "questionId": "p7",
+   "type": "single-hop",
+   "condition": "no-context",
+   "judge": 0,
+   "recall": null,
+   "answer": "Based on general statistical mechanics principles, for a system of $N$ particles in three-dimensional space with $3N$ total degrees of freedom and a specified energy $E$, the surface confining the motion (the constant-energy hypersurface) has a geometric dimensionality of $3N - 1$. This reduction by one dimension arises because fixing the scalar value of the total energy imposes a single constraint equation on the phase space coordinates."
+  },
+  {
+   "questionId": "p7",
+   "type": "single-hop",
+   "condition": "retrieved",
+   "judge": 1,
+   "recall": {
+    "1": 1,
+    "5": 1
+   },
+   "answer": "Based on the provided text, specifying the energy $E$ of an $N$-particle system confines its motion to a $(6N - 1)$-dimensional surface. This surface, denoted as $\\Gamma(E)$, exists within the defined $6N$-dimensional phase space and represents the set of all possible states consistent with that specific energy level."
+  },
+  {
+   "questionId": "p8",
+   "type": "single-hop",
+   "condition": "gold",
+   "judge": 1,
+   "recall": null,
+   "answer": "Based on the provided text, the microcanonical ensemble is developed for a closed classical system, which corresponds to a system isolated from its surroundings. The passage explicitly states in Section 2.1 that this ensemble is considered before extending the formalism to systems in thermal contact (canonical ensemble) or those exchanging particles (grand canonical ensemble). Therefore, the specific ensemble introduced for such isolated classical systems is the microcanonical ensemble."
+  },
+  {
+   "questionId": "p8",
+   "type": "single-hop",
+   "condition": "no-context",
+   "judge": 1,
+   "recall": null,
+   "answer": "Based on general physics knowledge, the specific ensemble introduced for classical systems that are isolated from their surroundings is the **microcanonical ensemble**. This ensemble describes a system with fixed energy, volume, and number of particles, reflecting the condition of total isolation where no exchange of energy or matter occurs with the environment."
+  },
+  {
+   "questionId": "p8",
+   "type": "single-hop",
+   "condition": "retrieved",
+   "judge": 1,
+   "recall": {
+    "1": 0,
+    "5": 0
+   },
+   "answer": "Based on the provided text, the **microcanonical ensemble** is the specific ensemble introduced for a closed (isolated) classical system of energy E. The document explicitly states that this ensemble corresponds to equation (2.6), which describes such a system where the integral is carried out over the entire phase space with a constant energy constraint."
+  },
+  {
+   "questionId": "p9",
+   "type": "single-hop",
+   "condition": "gold",
+   "judge": 1,
+   "recall": null,
+   "answer": "The fundamental principle connecting the response function $C_{V,N}$ to the mean-square fluctuation of energy is the **fluctuation-dissipation theorem**. As stated in the provided text, this theorem establishes a general relationship between response functions and fluctuations, with the specific relation given being a special case of it."
+  },
+  {
+   "questionId": "p9",
+   "type": "single-hop",
+   "condition": "no-context",
+   "judge": 1,
+   "recall": null,
+   "answer": "Based on general statistical mechanics knowledge, the fundamental principle connecting the heat capacity at constant volume ($C_{V,N}$) to the mean-square fluctuation of energy is the **fluctuation-dissipation theorem**. This relationship arises from the canonical ensemble formalism, where $C_{V,N} = \\frac{\\langle E^2 \\rangle - \\langle E \\rangle^2}{k_B T^2}$, directly linking a macroscopic response (heat capacity) to microscopic energy fluctuations."
+  },
+  {
+   "questionId": "p9",
+   "type": "single-hop",
+   "condition": "retrieved",
+   "judge": 1,
+   "recall": {
+    "1": 1,
+    "5": 1
+   },
+   "answer": "Based on the provided text, the fundamental principle connecting the response function $C_{V,N}$ to the mean-square fluctuation of energy is the **fluctuation-dissipation theorem**. The document explicitly states that Equation (2.43), which relates these two quantities, is a special case of this general result where fluctuations in a thermodynamic variable are proportional to a specific response function."
+  },
+  {
+   "questionId": "pr214",
+   "type": "multi-hop",
+   "condition": "gold",
+   "judge": 1,
+   "recall": null,
+   "answer": "Based on the provided text, when two isolated subsystems exchange energy with fixed particle numbers and volumes, the product of their statistical weights is maximized when the total entropy ($S_1 + S_2$) reaches its maximum value. This condition implies that the system naturally evolves to a state where no further net energy transfer occurs between the subsystems. The text relates this to the microcanonical ensemble by noting that assuming all allowed states are equally likely (no bias) is necessary because, without such an assumption, one would be introducing additional information about the system that does not exist."
+  },
+  {
+   "questionId": "pr214",
+   "type": "multi-hop",
+   "condition": "no-context",
+   "judge": 1,
+   "recall": null,
+   "answer": "Based on general thermodynamic principles (as no specific context was provided), when two isolated subsystems exchange energy with fixed particle numbers and volumes, the product of their statistical weights is maximized when the total entropy of the combined system reaches its maximum value. This condition implies that the temperatures of the two subsystems must be equal ($T_1 = T_2$). This result directly relates to the microcanonical ensemble assumption because maximizing the number of accessible microstates (statistical weight) under the constraint of fixed total energy reflects the fundamental postulate that all allowed states are equally probable, with no bias favoring any particular distribution of energy between the subsystems."
+  },
+  {
+   "questionId": "pr214",
+   "type": "multi-hop",
+   "condition": "retrieved",
+   "judge": 1,
+   "recall": {
+    "1": 0.5,
+    "5": 1
+   },
+   "answer": "Based on the provided text, when two isolated subsystems exchange energy with fixed particle numbers and volumes, the product of their statistical weights is maximized when the total entropy of the combined system reaches its maximum value. This condition implies that the subsystems are in thermal equilibrium, where the probability distribution assumes all accessible states within the energy tolerance are equally likely ($p_i = 1/\\Omega$). This assumption of equal likelihood directly reflects the principle that no bias or additional information exists regarding the specific microstate of the system, which is the foundational postulate of the microcanonical ensemble."
+  }
+ ]
+}

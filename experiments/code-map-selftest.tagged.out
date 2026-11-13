@@ -1,0 +1,13 @@
+docs: 256 documents, 665 passages, 9.7 s
+
+documentation site from doc comments: top 1 12/20, top 3 14/20, top 5 17/20
+  text returned per search (top 5): 1469 characters
+  not in top 5: How does the viewer read passage text after a rebuild swapped the index file?
+      wanted app_src_viewer
+      got    functions › modules_src_build.rebuild | classes › kernel_src_kg.Kg | interfaces › kernel_src_indexStore.IndexReader | interfaces › kernel_src_indexStore.IndexReader | interfaces › modules_src_build.RebuildResult
+  not in top 5: What steps does the baseline search machine run?
+      wanted modules_src_machines or modules_src_modules_search
+      got    interfaces › kernel_src_kg.SearchResult | variables › app_src_mcp.INSTRUCTIONS | functions › kernel_src_runner.runMachine | functions › kernel_src_machine.checkMachine | interfaces › kernel_src_kg.SearchResult
+  not in top 5: How does the runner stop a module from setting a result it did not declare?
+      wanted kernel_src_runner
+      got    interfaces › kernel_src_indexStore.IndexReader | interfaces › kernel_src_machine.ModuleDef | interfaces › kernel_src_machine.Writes | classes › kernel_src_indexStore.IndexStore | interfaces › kernel_src_machine.ModuleDef

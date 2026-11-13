@@ -1,0 +1,413 @@
+{
+ "k": 3,
+ "extraction": false,
+ "entries": 16,
+ "buildSeconds": 0,
+ "modelCalls": {
+  "documents": 1,
+  "retiredDocuments": 0,
+  "currentChunks": 16,
+  "facts": 0,
+  "summaries": 0,
+  "mentions": 0,
+  "links": 5,
+  "embeddings": 16,
+  "staleItems": 0
+ },
+ "stats": {
+  "documents": 1,
+  "retiredDocuments": 0,
+  "currentChunks": 16,
+  "facts": 0,
+  "summaries": 0,
+  "mentions": 0,
+  "links": 5,
+  "embeddings": 16,
+  "staleItems": 0
+ },
+ "detection": [
+  {
+   "newer": "Record store is SQLite",
+   "older": "Record store is JSON files",
+   "how": "guide form",
+   "detected": true
+  },
+  {
+   "newer": "Record store is Postgres",
+   "older": "Record store is SQLite",
+   "how": "guide form",
+   "detected": true
+  },
+  {
+   "newer": "Chunk size is 1000",
+   "older": "Chunk size is 500",
+   "how": "guide form",
+   "detected": true
+  },
+  {
+   "newer": "Log lines are JSON",
+   "older": "Log lines are plain text",
+   "how": "guide form",
+   "detected": true
+  },
+  {
+   "newer": "Authentication uses OAuth",
+   "older": "Authentication uses API keys",
+   "how": "guide form (two entries share the older date)",
+   "detected": true
+  },
+  {
+   "newer": "Embedding model is embeddinggemma",
+   "older": "Embedding model is MiniLM",
+   "how": "states \"no longer used\", no date",
+   "detected": false
+  },
+  {
+   "newer": "Deployment runs from",
+   "older": "Deployment is by hand",
+   "how": "old date \"is replaced by this pipeline\"",
+   "detected": false
+  }
+ ],
+ "spurious": [],
+ "summary": {
+  "chunk-search": {
+   "currentInTop1": 4,
+   "currentInTopK": 8,
+   "questionsShowingAStaleEntry": 7,
+   "questionsWithStaleEntries": 7
+  },
+  "current-state": {
+   "currentInTop1": 7,
+   "currentInTopK": 9,
+   "questionsShowingAStaleEntry": 2,
+   "questionsWithStaleEntries": 7
+  }
+ },
+ "machines": {
+  "chunk-search": [
+   {
+    "q": "Where does the ingestion service keep its records?",
+    "returned": [
+     "Record store is JSON files",
+     "Record store is SQLite",
+     "Log lines are plain text"
+    ],
+    "currentRank": null,
+    "staleShown": [
+     "Record store is JSON files",
+     "Record store is SQLite"
+    ],
+    "kinds": [
+     "chunk",
+     "chunk",
+     "chunk"
+    ]
+   },
+   {
+    "q": "Which database do the workers write to?",
+    "returned": [
+     "Record store is SQLite",
+     "Record store is Postgres",
+     "Record store is JSON files"
+    ],
+    "currentRank": 2,
+    "staleShown": [
+     "Record store is SQLite",
+     "Record store is JSON files"
+    ],
+    "kinds": [
+     "chunk",
+     "chunk",
+     "chunk"
+    ]
+   },
+   {
+    "q": "How long is each piece of a document before embedding?",
+    "returned": [
+     "Chunk size is 500",
+     "Embedding model is MiniLM",
+     "Embedding model is embeddinggemma"
+    ],
+    "currentRank": null,
+    "staleShown": [
+     "Chunk size is 500"
+    ],
+    "kinds": [
+     "chunk",
+     "chunk",
+     "chunk"
+    ]
+   },
+   {
+    "q": "What model turns text into embeddings?",
+    "returned": [
+     "Embedding model is embeddinggemma",
+     "Embedding model is MiniLM",
+     "Chunk size is 500"
+    ],
+    "currentRank": 1,
+    "staleShown": [
+     "Embedding model is MiniLM"
+    ],
+    "kinds": [
+     "chunk",
+     "chunk",
+     "chunk"
+    ]
+   },
+   {
+    "q": "How is the service deployed?",
+    "returned": [
+     "Deployment is by hand",
+     "Deployment runs from",
+     "Embedding model is MiniLM"
+    ],
+    "currentRank": 2,
+    "staleShown": [
+     "Deployment is by hand"
+    ],
+    "kinds": [
+     "chunk",
+     "chunk",
+     "chunk"
+    ]
+   },
+   {
+    "q": "In what format does the service write its log?",
+    "returned": [
+     "Log lines are plain text",
+     "Log lines are JSON",
+     "Record store is JSON files"
+    ],
+    "currentRank": 2,
+    "staleShown": [
+     "Log lines are plain text"
+    ],
+    "kinds": [
+     "chunk",
+     "chunk",
+     "chunk"
+    ]
+   },
+   {
+    "q": "How do clients prove who they are?",
+    "returned": [
+     "Authentication uses API keys",
+     "Authentication uses OAuth",
+     "Deployment is by hand"
+    ],
+    "currentRank": 2,
+    "staleShown": [
+     "Authentication uses API keys"
+    ],
+    "kinds": [
+     "chunk",
+     "chunk",
+     "chunk"
+    ]
+   },
+   {
+    "q": "How many requests per minute may be sent upstream?",
+    "returned": [
+     "Request rate limit",
+     "Failed requests are retried",
+     "Log lines are JSON"
+    ],
+    "currentRank": 1,
+    "staleShown": [],
+    "kinds": [
+     "chunk",
+     "chunk",
+     "chunk"
+    ]
+   },
+   {
+    "q": "Did adding a reranking step help?",
+    "returned": [
+     "Query reranking was tried",
+     "Chunk size is 1000",
+     "Embedding model is embeddinggemma"
+    ],
+    "currentRank": 1,
+    "staleShown": [],
+    "kinds": [
+     "chunk",
+     "chunk",
+     "chunk"
+    ]
+   },
+   {
+    "q": "How many times is a failed upstream request retried?",
+    "returned": [
+     "Failed requests are retried",
+     "Request rate limit",
+     "Query reranking was tried"
+    ],
+    "currentRank": 1,
+    "staleShown": [],
+    "kinds": [
+     "chunk",
+     "chunk",
+     "chunk"
+    ]
+   }
+  ],
+  "current-state": [
+   {
+    "q": "Where does the ingestion service keep its records?",
+    "returned": [
+     "Failed requests are retried",
+     "Log lines are JSON",
+     "Deployment is by hand"
+    ],
+    "currentRank": null,
+    "staleShown": [],
+    "kinds": [
+     "chunk",
+     "chunk",
+     "chunk"
+    ]
+   },
+   {
+    "q": "Which database do the workers write to?",
+    "returned": [
+     "Record store is Postgres",
+     "Deployment is by hand",
+     "Log lines are JSON"
+    ],
+    "currentRank": 1,
+    "staleShown": [],
+    "kinds": [
+     "chunk",
+     "chunk",
+     "chunk"
+    ]
+   },
+   {
+    "q": "How long is each piece of a document before embedding?",
+    "returned": [
+     "Embedding model is MiniLM",
+     "Embedding model is embeddinggemma",
+     "Chunk size is 1000"
+    ],
+    "currentRank": 3,
+    "staleShown": [],
+    "kinds": [
+     "chunk",
+     "chunk",
+     "chunk"
+    ]
+   },
+   {
+    "q": "What model turns text into embeddings?",
+    "returned": [
+     "Embedding model is embeddinggemma",
+     "Embedding model is MiniLM",
+     "Query reranking was tried"
+    ],
+    "currentRank": 1,
+    "staleShown": [
+     "Embedding model is MiniLM"
+    ],
+    "kinds": [
+     "chunk",
+     "chunk",
+     "chunk"
+    ]
+   },
+   {
+    "q": "How is the service deployed?",
+    "returned": [
+     "Deployment is by hand",
+     "Deployment runs from",
+     "Embedding model is MiniLM"
+    ],
+    "currentRank": 2,
+    "staleShown": [
+     "Deployment is by hand"
+    ],
+    "kinds": [
+     "chunk",
+     "chunk",
+     "chunk"
+    ]
+   },
+   {
+    "q": "In what format does the service write its log?",
+    "returned": [
+     "Log lines are JSON",
+     "Record store is Postgres",
+     "Failed requests are retried"
+    ],
+    "currentRank": 1,
+    "staleShown": [],
+    "kinds": [
+     "chunk",
+     "chunk",
+     "chunk"
+    ]
+   },
+   {
+    "q": "How do clients prove who they are?",
+    "returned": [
+     "Authentication uses OAuth",
+     "Deployment is by hand",
+     "Embedding model is MiniLM"
+    ],
+    "currentRank": 1,
+    "staleShown": [],
+    "kinds": [
+     "chunk",
+     "chunk",
+     "chunk"
+    ]
+   },
+   {
+    "q": "How many requests per minute may be sent upstream?",
+    "returned": [
+     "Request rate limit",
+     "Failed requests are retried",
+     "Log lines are JSON"
+    ],
+    "currentRank": 1,
+    "staleShown": [],
+    "kinds": [
+     "chunk",
+     "chunk",
+     "chunk"
+    ]
+   },
+   {
+    "q": "Did adding a reranking step help?",
+    "returned": [
+     "Query reranking was tried",
+     "Chunk size is 1000",
+     "Embedding model is embeddinggemma"
+    ],
+    "currentRank": 1,
+    "staleShown": [],
+    "kinds": [
+     "chunk",
+     "chunk",
+     "chunk"
+    ]
+   },
+   {
+    "q": "How many times is a failed upstream request retried?",
+    "returned": [
+     "Failed requests are retried",
+     "Request rate limit",
+     "Query reranking was tried"
+    ],
+    "currentRank": 1,
+    "staleShown": [],
+    "kinds": [
+     "chunk",
+     "chunk",
+     "chunk"
+    ]
+   }
+  ]
+ }
+}

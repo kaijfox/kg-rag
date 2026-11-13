@@ -1,0 +1,514 @@
+{
+ "k": 3,
+ "extraction": true,
+ "entries": 16,
+ "buildSeconds": 99,
+ "modelCalls": {
+  "documents": 1,
+  "retiredDocuments": 0,
+  "currentChunks": 16,
+  "facts": 46,
+  "summaries": 0,
+  "mentions": 122,
+  "links": 5,
+  "embeddings": 62,
+  "staleItems": 0
+ },
+ "stats": {
+  "documents": 1,
+  "retiredDocuments": 0,
+  "currentChunks": 16,
+  "facts": 46,
+  "summaries": 0,
+  "mentions": 122,
+  "links": 5,
+  "embeddings": 62,
+  "staleItems": 0
+ },
+ "detection": [
+  {
+   "newer": "Record store is SQLite",
+   "older": "Record store is JSON files",
+   "how": "guide form",
+   "detected": true
+  },
+  {
+   "newer": "Record store is Postgres",
+   "older": "Record store is SQLite",
+   "how": "guide form",
+   "detected": true
+  },
+  {
+   "newer": "Chunk size is 1000",
+   "older": "Chunk size is 500",
+   "how": "guide form",
+   "detected": true
+  },
+  {
+   "newer": "Log lines are JSON",
+   "older": "Log lines are plain text",
+   "how": "guide form",
+   "detected": true
+  },
+  {
+   "newer": "Authentication uses OAuth",
+   "older": "Authentication uses API keys",
+   "how": "guide form (two entries share the older date)",
+   "detected": true
+  },
+  {
+   "newer": "Embedding model is embeddinggemma",
+   "older": "Embedding model is MiniLM",
+   "how": "states \"no longer used\", no date",
+   "detected": false
+  },
+  {
+   "newer": "Deployment runs from",
+   "older": "Deployment is by hand",
+   "how": "old date \"is replaced by this pipeline\"",
+   "detected": false
+  }
+ ],
+ "spurious": [],
+ "summary": {
+  "chunk-search": {
+   "currentInTop1": 4,
+   "currentInTopK": 8,
+   "questionsShowingAStaleEntry": 7,
+   "questionsWithStaleEntries": 7
+  },
+  "current-state": {
+   "currentInTop1": 7,
+   "currentInTopK": 8,
+   "questionsShowingAStaleEntry": 2,
+   "questionsWithStaleEntries": 7
+  }
+ },
+ "machines": {
+  "chunk-search": [
+   {
+    "q": "Where does the ingestion service keep its records?",
+    "returned": [
+     "Record store is JSON files",
+     "Record store is SQLite",
+     "Log lines are plain text"
+    ],
+    "currentRank": null,
+    "staleShown": [
+     "Record store is JSON files",
+     "Record store is SQLite"
+    ],
+    "kinds": [
+     "chunk",
+     "chunk",
+     "chunk"
+    ],
+    "texts": [
+     "## 2026-03-02: Record store is JSON files The ingestion service keeps every record as a JSON file in the data folder. JSON files n",
+     "## 2026-03-16: Record store is SQLite Two ingestion workers now write records at the same time, and concurrent writes corrupted th",
+     "## 2026-03-30: Log lines are plain text The ingestion service writes one plain text line per event to the log file, with the time,"
+    ]
+   },
+   {
+    "q": "Which database do the workers write to?",
+    "returned": [
+     "Record store is SQLite",
+     "Record store is Postgres",
+     "Record store is JSON files"
+    ],
+    "currentRank": 2,
+    "staleShown": [
+     "Record store is SQLite",
+     "Record store is JSON files"
+    ],
+    "kinds": [
+     "chunk",
+     "chunk",
+     "chunk"
+    ],
+    "texts": [
+     "## 2026-03-16: Record store is SQLite Two ingestion workers now write records at the same time, and concurrent writes corrupted th",
+     "## 2026-04-06: Record store is Postgres Three services now write records, and SQLite on one machine cannot be shared between them.",
+     "## 2026-03-02: Record store is JSON files The ingestion service keeps every record as a JSON file in the data folder. JSON files n"
+    ]
+   },
+   {
+    "q": "How long is each piece of a document before embedding?",
+    "returned": [
+     "Chunk size is 500",
+     "Embedding model is MiniLM",
+     "Embedding model is embeddinggemma"
+    ],
+    "currentRank": null,
+    "staleShown": [
+     "Chunk size is 500"
+    ],
+    "kinds": [
+     "chunk",
+     "chunk",
+     "chunk"
+    ],
+    "texts": [
+     "## 2026-03-04: Chunk size is 500 characters The ingestion service cuts each document into pieces of about 500 characters before em",
+     "## 2026-03-10: Embedding model is MiniLM The ingestion service computes embeddings with the MiniLM sentence model, which runs on a",
+     "## 2026-04-13: Embedding model is embeddinggemma The ingestion service now computes embeddings with the embeddinggemma model, whic"
+    ]
+   },
+   {
+    "q": "What model turns text into embeddings?",
+    "returned": [
+     "Embedding model is embeddinggemma",
+     "Embedding model is MiniLM",
+     "Chunk size is 500"
+    ],
+    "currentRank": 1,
+    "staleShown": [
+     "Embedding model is MiniLM"
+    ],
+    "kinds": [
+     "chunk",
+     "chunk",
+     "chunk"
+    ],
+    "texts": [
+     "## 2026-04-13: Embedding model is embeddinggemma The ingestion service now computes embeddings with the embeddinggemma model, whic",
+     "## 2026-03-10: Embedding model is MiniLM The ingestion service computes embeddings with the MiniLM sentence model, which runs on a",
+     "## 2026-03-04: Chunk size is 500 characters The ingestion service cuts each document into pieces of about 500 characters before em"
+    ]
+   },
+   {
+    "q": "How is the service deployed?",
+    "returned": [
+     "Deployment is by hand",
+     "Deployment runs from",
+     "Embedding model is MiniLM"
+    ],
+    "currentRank": 2,
+    "staleShown": [
+     "Deployment is by hand"
+    ],
+    "kinds": [
+     "chunk",
+     "chunk",
+     "chunk"
+    ],
+    "texts": [
+     "## 2026-03-12: Deployment is by hand with a copy script A developer deploys the ingestion service by running the copy script, whic",
+     "## 2026-04-20: Deployment runs from the continuous integration pipeline A merge to the main branch now builds and deploys the inge",
+     "## 2026-03-10: Embedding model is MiniLM The ingestion service computes embeddings with the MiniLM sentence model, which runs on a"
+    ]
+   },
+   {
+    "q": "In what format does the service write its log?",
+    "returned": [
+     "Log lines are plain text",
+     "Log lines are JSON",
+     "Record store is JSON files"
+    ],
+    "currentRank": 2,
+    "staleShown": [
+     "Log lines are plain text"
+    ],
+    "kinds": [
+     "chunk",
+     "chunk",
+     "chunk"
+    ],
+    "texts": [
+     "## 2026-03-30: Log lines are plain text The ingestion service writes one plain text line per event to the log file, with the time,",
+     "## 2026-04-27: Log lines are JSON The ingestion service writes one JSON object per event, with the time, the level, the message an",
+     "## 2026-03-02: Record store is JSON files The ingestion service keeps every record as a JSON file in the data folder. JSON files n"
+    ]
+   },
+   {
+    "q": "How do clients prove who they are?",
+    "returned": [
+     "Authentication uses API keys",
+     "Authentication uses OAuth",
+     "Deployment is by hand"
+    ],
+    "currentRank": 2,
+    "staleShown": [
+     "Authentication uses API keys"
+    ],
+    "kinds": [
+     "chunk",
+     "chunk",
+     "chunk"
+    ],
+    "texts": [
+     "## 2026-05-04: Authentication uses API keys Clients of the ingestion service authenticate with an API key sent in a request header",
+     "## 2026-05-18: Authentication uses OAuth Clients now authenticate with OAuth access tokens issued by the company login service, so",
+     "## 2026-03-12: Deployment is by hand with a copy script A developer deploys the ingestion service by running the copy script, whic"
+    ]
+   },
+   {
+    "q": "How many requests per minute may be sent upstream?",
+    "returned": [
+     "Request rate limit",
+     "Failed requests are retried",
+     "Log lines are JSON"
+    ],
+    "currentRank": 1,
+    "staleShown": [],
+    "kinds": [
+     "chunk",
+     "chunk",
+     "chunk"
+    ],
+    "texts": [
+     "## 2026-03-18: Request rate limit is 60 per minute The ingestion service caps requests to the upstream API at 60 per minute, becau",
+     "## 2026-05-04: Failed requests are retried three times The ingestion service retries a failed upstream request up to three times, ",
+     "## 2026-04-27: Log lines are JSON The ingestion service writes one JSON object per event, with the time, the level, the message an"
+    ]
+   },
+   {
+    "q": "Did adding a reranking step help?",
+    "returned": [
+     "Query reranking was tried",
+     "Chunk size is 1000",
+     "Embedding model is embeddinggemma"
+    ],
+    "currentRank": 1,
+    "staleShown": [],
+    "kinds": [
+     "chunk",
+     "chunk",
+     "chunk"
+    ],
+    "texts": [
+     "## 2026-04-02: Query reranking was tried and rejected A cross-encoder reranking step was added after the similarity search for one",
+     "## 2026-03-23: Chunk size is 1000 characters Questions about long explanations lost their context when the passage holding the ans",
+     "## 2026-04-13: Embedding model is embeddinggemma The ingestion service now computes embeddings with the embeddinggemma model, whic"
+    ]
+   },
+   {
+    "q": "How many times is a failed upstream request retried?",
+    "returned": [
+     "Failed requests are retried",
+     "Request rate limit",
+     "Query reranking was tried"
+    ],
+    "currentRank": 1,
+    "staleShown": [],
+    "kinds": [
+     "chunk",
+     "chunk",
+     "chunk"
+    ],
+    "texts": [
+     "## 2026-05-04: Failed requests are retried three times The ingestion service retries a failed upstream request up to three times, ",
+     "## 2026-03-18: Request rate limit is 60 per minute The ingestion service caps requests to the upstream API at 60 per minute, becau",
+     "## 2026-04-02: Query reranking was tried and rejected A cross-encoder reranking step was added after the similarity search for one"
+    ]
+   }
+  ],
+  "current-state": [
+   {
+    "q": "Where does the ingestion service keep its records?",
+    "returned": [
+     "Log lines are JSON",
+     "Log lines are JSON",
+     "Log lines are JSON"
+    ],
+    "currentRank": null,
+    "staleShown": [],
+    "kinds": [
+     "fact",
+     "fact",
+     "fact"
+    ],
+    "texts": [
+     "The ingestion service writes the level in each JSON object.",
+     "The ingestion service writes the message in each JSON object.",
+     "The ingestion service writes the request number in each JSON object."
+    ]
+   },
+   {
+    "q": "Which database do the workers write to?",
+    "returned": [
+     "Record store is Postgres",
+     "Record store is Postgres",
+     "Record store is Postgres"
+    ],
+    "currentRank": 1,
+    "staleShown": [],
+    "kinds": [
+     "chunk",
+     "fact",
+     "fact"
+    ],
+    "texts": [
+     "## 2026-04-06: Record store is Postgres Three services now write records, and SQLite on one machine cannot be shared between them.",
+     "Three services now write records.",
+     "The decision of 2026-03-16 was to keep the record store in SQLite."
+    ]
+   },
+   {
+    "q": "How long is each piece of a document before embedding?",
+    "returned": [
+     "Embedding model is MiniLM",
+     "Embedding model is MiniLM",
+     "Embedding model is embeddinggemma"
+    ],
+    "currentRank": null,
+    "staleShown": [],
+    "kinds": [
+     "chunk",
+     "fact",
+     "fact"
+    ],
+    "texts": [
+     "## 2026-03-10: Embedding model is MiniLM The ingestion service computes embeddings with the MiniLM sentence model, which runs on a",
+     "The MiniLM sentence model runs on a laptop processor in about 40 milliseconds per piece.",
+     "The ingestion service computes embeddings with the embeddinggemma model."
+    ]
+   },
+   {
+    "q": "What model turns text into embeddings?",
+    "returned": [
+     "Embedding model is embeddinggemma",
+     "Embedding model is embeddinggemma",
+     "Embedding model is MiniLM"
+    ],
+    "currentRank": 1,
+    "staleShown": [
+     "Embedding model is MiniLM"
+    ],
+    "kinds": [
+     "fact",
+     "chunk",
+     "fact"
+    ],
+    "texts": [
+     "The ingestion service computes embeddings with the embeddinggemma model.",
+     "## 2026-04-13: Embedding model is embeddinggemma The ingestion service now computes embeddings with the embeddinggemma model, whic",
+     "The ingestion service computes embeddings with the MiniLM sentence model."
+    ]
+   },
+   {
+    "q": "How is the service deployed?",
+    "returned": [
+     "Deployment is by hand",
+     "Deployment is by hand",
+     "Deployment runs from"
+    ],
+    "currentRank": 3,
+    "staleShown": [
+     "Deployment is by hand",
+     "Deployment is by hand"
+    ],
+    "kinds": [
+     "chunk",
+     "fact",
+     "fact"
+    ],
+    "texts": [
+     "## 2026-03-12: Deployment is by hand with a copy script A developer deploys the ingestion service by running the copy script, whic",
+     "A developer deploys the ingestion service.",
+     "A merge to the main branch deploys the ingestion service automatically."
+    ]
+   },
+   {
+    "q": "In what format does the service write its log?",
+    "returned": [
+     "Log lines are JSON",
+     "Log lines are JSON",
+     "Log lines are JSON"
+    ],
+    "currentRank": 1,
+    "staleShown": [],
+    "kinds": [
+     "fact",
+     "fact",
+     "fact"
+    ],
+    "texts": [
+     "The ingestion service writes the message in each JSON object.",
+     "The ingestion service writes the level in each JSON object.",
+     "The ingestion service writes the time in each JSON object."
+    ]
+   },
+   {
+    "q": "How do clients prove who they are?",
+    "returned": [
+     "Authentication uses OAuth",
+     "Authentication uses OAuth",
+     "Authentication uses OAuth"
+    ],
+    "currentRank": 1,
+    "staleShown": [],
+    "kinds": [
+     "fact",
+     "chunk",
+     "fact"
+    ],
+    "texts": [
+     "Clients authenticate with OAuth access tokens.",
+     "## 2026-05-18: Authentication uses OAuth Clients now authenticate with OAuth access tokens issued by the company login service, so",
+     "The company login service issues OAuth access tokens."
+    ]
+   },
+   {
+    "q": "How many requests per minute may be sent upstream?",
+    "returned": [
+     "Request rate limit",
+     "Request rate limit",
+     "Request rate limit"
+    ],
+    "currentRank": 1,
+    "staleShown": [],
+    "kinds": [
+     "fact",
+     "chunk",
+     "fact"
+    ],
+    "texts": [
+     "The ingestion service caps requests to the upstream API at 60 per minute.",
+     "## 2026-03-18: Request rate limit is 60 per minute The ingestion service caps requests to the upstream API at 60 per minute, becau",
+     "The API provider blocks clients that send more than 100 requests."
+    ]
+   },
+   {
+    "q": "Did adding a reranking step help?",
+    "returned": [
+     "Query reranking was tried",
+     "Query reranking was tried",
+     "Query reranking was tried"
+    ],
+    "currentRank": 1,
+    "staleShown": [],
+    "kinds": [
+     "chunk",
+     "fact",
+     "fact"
+    ],
+    "texts": [
+     "## 2026-04-02: Query reranking was tried and rejected A cross-encoder reranking step was added after the similarity search for one",
+     "The cross-encoder reranking step was added for one week.",
+     "The reranking step was removed from the system."
+    ]
+   },
+   {
+    "q": "How many times is a failed upstream request retried?",
+    "returned": [
+     "Failed requests are retried",
+     "Failed requests are retried",
+     "Failed requests are retried"
+    ],
+    "currentRank": 1,
+    "staleShown": [],
+    "kinds": [
+     "fact",
+     "chunk",
+     "fact"
+    ],
+    "texts": [
+     "The ingestion service retries a failed upstream request up to three times.",
+     "## 2026-05-04: Failed requests are retried three times The ingestion service retries a failed upstream request up to three times, ",
+     "The ingestion service waits twice as long before each new attempt when retrying a failed upstream request."
+    ]
+   }
+  ]
+ }
+}

@@ -58,10 +58,13 @@ text did not change keeps its identity, so after a commit only the symbols whose
 These are the limits we saw on real pages from each tool.
 
 - **TypeDoc** writes a heading per member, so each member becomes its own passage. This is the best case. Its pages also carry
-  an "On This Page" menu and "Preparing search index..." text, which add a little noise to results.
+  an "On This Page" menu and "Preparing search index..." text, which add a little noise to results. TypeDoc leaves out the
+  comment at the top of a file unless it contains a `@module` tag, and many projects put their explanation of how a file works
+  there. Add `@module` on its own line at the end of that comment, or put the explanation on the functions.
 - **Sphinx** writes little structure per symbol, so passages are coarser: several functions often share one passage.
-- **pdoc** embeds each module's whole source in "View Source" blocks, and these become passages. They make the index larger
-  and put raw code in results. If that bothers you, pass `--no-show-source`.
+- **pdoc** embeds each module's whole source in "View Source" blocks, and these become passages. On the Python sidecar in this
+  repository they raised the index from 11 to 57 passages and the text returned per search from about 3,000 to about 4,600
+  characters, with no gain in finding the right module. Pass `--no-show-source`.
 
 Source code itself is not indexed and no file or line is stored. If you want the agent to search code text, that is a
 different job from this one and is not covered here.

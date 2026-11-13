@@ -1,0 +1,1942 @@
+{
+ "buildSeconds": 677,
+ "stats": {
+  "documents": 2,
+  "retiredDocuments": 0,
+  "currentChunks": 89,
+  "facts": 530,
+  "summaries": 0,
+  "mentions": 1725,
+  "links": 0,
+  "embeddings": 619,
+  "staleItems": 0
+ },
+ "build": {
+  "documents": 2,
+  "retiredDocuments": 0,
+  "currentChunks": 89,
+  "facts": 530,
+  "summaries": 0,
+  "mentions": 1725,
+  "links": 0,
+  "embeddings": 619,
+  "staleItems": 0
+ },
+ "summary": {
+  "indexId": "ix_01M6SE7V9PPFBPND4HHWA2V7DY",
+  "questions": 26,
+  "ks": [
+   1,
+   3,
+   5
+  ],
+  "byCondition": {
+   "chunk-search": {
+    "scored": 26,
+    "failed": 0,
+    "judge": null,
+    "retrieval": {
+     "ks": [
+      1,
+      3,
+      5
+     ],
+     "perQuestion": {
+      "p1": {
+       "recall": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       }
+      },
+      "p2": {
+       "recall": {
+        "1": 0,
+        "3": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 0,
+        "3": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 0,
+        "3": 1,
+        "5": 1
+       }
+      },
+      "p4": {
+       "recall": {
+        "1": 0,
+        "3": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 0,
+        "3": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 0,
+        "3": 1,
+        "5": 1
+       }
+      },
+      "p5": {
+       "recall": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       }
+      },
+      "p6": {
+       "recall": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       }
+      },
+      "p7": {
+       "recall": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       }
+      },
+      "p8": {
+       "recall": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "allGold": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "withSummaries": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       }
+      },
+      "p9": {
+       "recall": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       }
+      },
+      "p10": {
+       "recall": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       }
+      },
+      "p11": {
+       "recall": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       }
+      },
+      "p12": {
+       "recall": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       }
+      },
+      "p13": {
+       "recall": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       }
+      },
+      "p14": {
+       "recall": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       }
+      },
+      "p17": {
+       "recall": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       }
+      },
+      "p18": {
+       "recall": {
+        "1": 0,
+        "3": 0,
+        "5": 1
+       },
+       "allGold": {
+        "1": 0,
+        "3": 0,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 0,
+        "3": 0,
+        "5": 1
+       }
+      },
+      "p19": {
+       "recall": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       }
+      },
+      "p21": {
+       "recall": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       }
+      },
+      "p24": {
+       "recall": {
+        "1": 0.5,
+        "3": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 0,
+        "3": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 0.5,
+        "3": 1,
+        "5": 1
+       }
+      },
+      "p29": {
+       "recall": {
+        "1": 0.3333333333333333,
+        "3": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 0,
+        "3": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 0.3333333333333333,
+        "3": 1,
+        "5": 1
+       }
+      },
+      "p30": {
+       "recall": {
+        "1": 0.3333333333333333,
+        "3": 0.3333333333333333,
+        "5": 0.3333333333333333
+       },
+       "allGold": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "withSummaries": {
+        "1": 0.3333333333333333,
+        "3": 0.3333333333333333,
+        "5": 0.3333333333333333
+       }
+      },
+      "pr22": {
+       "recall": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       }
+      },
+      "pr23": {
+       "recall": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       }
+      },
+      "pr25": {
+       "recall": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "allGold": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "withSummaries": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       }
+      },
+      "pr214": {
+       "recall": {
+        "1": 0.5,
+        "3": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 0,
+        "3": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 0.5,
+        "3": 1,
+        "5": 1
+       }
+      },
+      "pr217": {
+       "recall": {
+        "1": 0.5,
+        "3": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 0,
+        "3": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 0.5,
+        "3": 1,
+        "5": 1
+       }
+      },
+      "pr222": {
+       "recall": {
+        "1": 0.5,
+        "3": 0.5,
+        "5": 0.5
+       },
+       "allGold": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "withSummaries": {
+        "1": 0.5,
+        "3": 0.5,
+        "5": 0.5
+       }
+      }
+     },
+     "overall": {
+      "recall": {
+       "1": 0.6794871794871795,
+       "3": 0.8397435897435896,
+       "5": 0.8782051282051282
+      },
+      "withSummaries": {
+       "1": 0.6794871794871795,
+       "3": 0.8397435897435896,
+       "5": 0.8782051282051282
+      }
+     },
+     "byType": {
+      "single-hop": {
+       "n": 20,
+       "recall": {
+        "1": 0.75,
+        "3": 0.85,
+        "5": 0.9
+       },
+       "allGold": {
+        "1": 0.75,
+        "3": 0.85,
+        "5": 0.9
+       }
+      },
+      "multi-hop": {
+       "n": 4,
+       "recall": {
+        "1": 0.5,
+        "3": 0.875,
+        "5": 0.875
+       },
+       "allGold": {
+        "1": 0,
+        "3": 0.75,
+        "5": 0.75
+       }
+      },
+      "topic": {
+       "n": 2,
+       "recall": {
+        "1": 0.3333333333333333,
+        "3": 0.6666666666666666,
+        "5": 0.6666666666666666
+       },
+       "allGold": {
+        "1": 0,
+        "3": 0.5,
+        "5": 0.5
+       }
+      }
+     }
+    }
+   },
+   "facts-and-neighbours": {
+    "scored": 26,
+    "failed": 0,
+    "judge": null,
+    "retrieval": {
+     "ks": [
+      1,
+      3,
+      5
+     ],
+     "perQuestion": {
+      "p1": {
+       "recall": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       }
+      },
+      "p2": {
+       "recall": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       }
+      },
+      "p4": {
+       "recall": {
+        "1": 0,
+        "3": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 0,
+        "3": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 0,
+        "3": 1,
+        "5": 1
+       }
+      },
+      "p5": {
+       "recall": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       }
+      },
+      "p6": {
+       "recall": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       }
+      },
+      "p7": {
+       "recall": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       }
+      },
+      "p8": {
+       "recall": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "allGold": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "withSummaries": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       }
+      },
+      "p9": {
+       "recall": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       }
+      },
+      "p10": {
+       "recall": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       }
+      },
+      "p11": {
+       "recall": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "allGold": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "withSummaries": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       }
+      },
+      "p12": {
+       "recall": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       }
+      },
+      "p13": {
+       "recall": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       }
+      },
+      "p14": {
+       "recall": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       }
+      },
+      "p17": {
+       "recall": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       }
+      },
+      "p18": {
+       "recall": {
+        "1": 0,
+        "3": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 0,
+        "3": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 0,
+        "3": 1,
+        "5": 1
+       }
+      },
+      "p19": {
+       "recall": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       }
+      },
+      "p21": {
+       "recall": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       }
+      },
+      "p24": {
+       "recall": {
+        "1": 0.5,
+        "3": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 0,
+        "3": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 0.5,
+        "3": 1,
+        "5": 1
+       }
+      },
+      "p29": {
+       "recall": {
+        "1": 0.3333333333333333,
+        "3": 0.6666666666666666,
+        "5": 0.6666666666666666
+       },
+       "allGold": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "withSummaries": {
+        "1": 0.3333333333333333,
+        "3": 0.6666666666666666,
+        "5": 0.6666666666666666
+       }
+      },
+      "p30": {
+       "recall": {
+        "1": 0,
+        "3": 0.3333333333333333,
+        "5": 0.3333333333333333
+       },
+       "allGold": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "withSummaries": {
+        "1": 0,
+        "3": 0.3333333333333333,
+        "5": 0.3333333333333333
+       }
+      },
+      "pr22": {
+       "recall": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       }
+      },
+      "pr23": {
+       "recall": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       }
+      },
+      "pr25": {
+       "recall": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+       }
+      },
+      "pr214": {
+       "recall": {
+        "1": 0.5,
+        "3": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 0,
+        "3": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 0.5,
+        "3": 1,
+        "5": 1
+       }
+      },
+      "pr217": {
+       "recall": {
+        "1": 0.5,
+        "3": 1,
+        "5": 1
+       },
+       "allGold": {
+        "1": 0,
+        "3": 1,
+        "5": 1
+       },
+       "withSummaries": {
+        "1": 0.5,
+        "3": 1,
+        "5": 1
+       }
+      },
+      "pr222": {
+       "recall": {
+        "1": 0,
+        "3": 0.5,
+        "5": 0.5
+       },
+       "allGold": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       },
+       "withSummaries": {
+        "1": 0,
+        "3": 0.5,
+        "5": 0.5
+       }
+      }
+     },
+     "overall": {
+      "recall": {
+       "1": 0.685897435897436,
+       "3": 0.8653846153846154,
+       "5": 0.8653846153846154
+      },
+      "withSummaries": {
+       "1": 0.685897435897436,
+       "3": 0.8653846153846154,
+       "5": 0.8653846153846154
+      }
+     },
+     "byType": {
+      "single-hop": {
+       "n": 20,
+       "recall": {
+        "1": 0.8,
+        "3": 0.9,
+        "5": 0.9
+       },
+       "allGold": {
+        "1": 0.8,
+        "3": 0.9,
+        "5": 0.9
+       }
+      },
+      "multi-hop": {
+       "n": 4,
+       "recall": {
+        "1": 0.375,
+        "3": 0.875,
+        "5": 0.875
+       },
+       "allGold": {
+        "1": 0,
+        "3": 0.75,
+        "5": 0.75
+       }
+      },
+      "topic": {
+       "n": 2,
+       "recall": {
+        "1": 0.16666666666666666,
+        "3": 0.5,
+        "5": 0.5
+       },
+       "allGold": {
+        "1": 0,
+        "3": 0,
+        "5": 0
+       }
+      }
+     }
+    }
+   }
+  },
+  "failures": [],
+  "orphaned": []
+ },
+ "rows": [
+  {
+   "questionId": "p1",
+   "type": "single-hop",
+   "machine": "chunk-search",
+   "recall": {
+    "1": 1,
+    "3": 1,
+    "5": 1
+   },
+   "retrieved": [
+    "ch_5r3o6nyrajf6fb6guqyi",
+    "ch_2bwcymi3m4uwfmlfcarr",
+    "ch_iewysbkpgqaeri6nmudm",
+    "ch_fdbuy3wgrvs7hrptvslj",
+    "ch_mj6jcmhfavmfhkfiqgpu"
+   ]
+  },
+  {
+   "questionId": "p1",
+   "type": "single-hop",
+   "machine": "facts-and-neighbours",
+   "recall": {
+    "1": 1,
+    "3": 1,
+    "5": 1
+   },
+   "retrieved": [
+    "ch_5r3o6nyrajf6fb6guqyi",
+    "ch_n27a2wtd634bv6gqs7oq",
+    "ch_2bwcymi3m4uwfmlfcarr",
+    "ch_x4ja7vzfpd5j5nnb7fr7",
+    "ch_enl7bddiaahy6pmlxq7d"
+   ]
+  },
+  {
+   "questionId": "p10",
+   "type": "single-hop",
+   "machine": "chunk-search",
+   "recall": {
+    "1": 1,
+    "3": 1,
+    "5": 1
+   },
+   "retrieved": [
+    "ch_mj6jcmhfavmfhkfiqgpu",
+    "ch_wi7ugysqpkv7ffv6bzpa",
+    "ch_pzrqymkzhakidymyvap6",
+    "ch_mlkvjkfvxvy5kstgblxt",
+    "ch_bpmkglkp6tn63taf6cn6"
+   ]
+  },
+  {
+   "questionId": "p10",
+   "type": "single-hop",
+   "machine": "facts-and-neighbours",
+   "recall": {
+    "1": 1,
+    "3": 1,
+    "5": 1
+   },
+   "retrieved": [
+    "ch_mj6jcmhfavmfhkfiqgpu",
+    "ch_snoakkj2scda45nmwlqc",
+    "ch_bpmkglkp6tn63taf6cn6",
+    "ch_wi7ugysqpkv7ffv6bzpa",
+    "ch_n27a2wtd634bv6gqs7oq"
+   ]
+  },
+  {
+   "questionId": "p11",
+   "type": "single-hop",
+   "machine": "chunk-search",
+   "recall": {
+    "1": 1,
+    "3": 1,
+    "5": 1
+   },
+   "retrieved": [
+    "ch_e4m5mw2net6vdyepfdtv",
+    "ch_cfmvlwkrdkcc7j5dawzq",
+    "ch_fdbuy3wgrvs7hrptvslj",
+    "ch_snoakkj2scda45nmwlqc",
+    "ch_mj6jcmhfavmfhkfiqgpu"
+   ]
+  },
+  {
+   "questionId": "p11",
+   "type": "single-hop",
+   "machine": "facts-and-neighbours",
+   "recall": {
+    "1": 0,
+    "3": 0,
+    "5": 0
+   },
+   "retrieved": [
+    "ch_cfmvlwkrdkcc7j5dawzq",
+    "ch_44zlo3f4o52c5dyopusu",
+    "ch_5r3o6nyrajf6fb6guqyi",
+    "ch_fdbuy3wgrvs7hrptvslj",
+    "ch_snoakkj2scda45nmwlqc"
+   ]
+  },
+  {
+   "questionId": "p12",
+   "type": "single-hop",
+   "machine": "chunk-search",
+   "recall": {
+    "1": 1,
+    "3": 1,
+    "5": 1
+   },
+   "retrieved": [
+    "ch_tj22dx7prtg36f27ad4a",
+    "ch_hhz6bb2e5prx7mezjnkr",
+    "ch_2bwcymi3m4uwfmlfcarr",
+    "ch_wrei6jdlyy33tfyvvoi5",
+    "ch_7lma3lyoho7lssd7khd5"
+   ]
+  },
+  {
+   "questionId": "p12",
+   "type": "single-hop",
+   "machine": "facts-and-neighbours",
+   "recall": {
+    "1": 1,
+    "3": 1,
+    "5": 1
+   },
+   "retrieved": [
+    "ch_tj22dx7prtg36f27ad4a",
+    "ch_hhz6bb2e5prx7mezjnkr",
+    "ch_2bwcymi3m4uwfmlfcarr",
+    "ch_pznz7zrcubgwgfs2zsko",
+    "ch_wrei6jdlyy33tfyvvoi5"
+   ]
+  },
+  {
+   "questionId": "p13",
+   "type": "single-hop",
+   "machine": "chunk-search",
+   "recall": {
+    "1": 1,
+    "3": 1,
+    "5": 1
+   },
+   "retrieved": [
+    "ch_733r7vnzdjgirc37f6xk",
+    "ch_73r7y42yv4r4pdzfm4ku",
+    "ch_25fxms7ihs4ujyw2e3hl",
+    "ch_ibqdnjl4c4xp5djeufqj",
+    "ch_ewhrulbgg7v4tt7zpglg"
+   ]
+  },
+  {
+   "questionId": "p13",
+   "type": "single-hop",
+   "machine": "facts-and-neighbours",
+   "recall": {
+    "1": 1,
+    "3": 1,
+    "5": 1
+   },
+   "retrieved": [
+    "ch_733r7vnzdjgirc37f6xk",
+    "ch_25fxms7ihs4ujyw2e3hl",
+    "ch_73r7y42yv4r4pdzfm4ku",
+    "ch_ewhrulbgg7v4tt7zpglg",
+    "ch_4hebrfj4i7uti2qtpytg"
+   ]
+  },
+  {
+   "questionId": "p14",
+   "type": "single-hop",
+   "machine": "chunk-search",
+   "recall": {
+    "1": 1,
+    "3": 1,
+    "5": 1
+   },
+   "retrieved": [
+    "ch_7goibjnqlp3vvtdzjtm7",
+    "ch_fdbuy3wgrvs7hrptvslj",
+    "ch_pzrqymkzhakidymyvap6",
+    "ch_wxbiww4ynjvwsryhludx",
+    "ch_mj6jcmhfavmfhkfiqgpu"
+   ]
+  },
+  {
+   "questionId": "p14",
+   "type": "single-hop",
+   "machine": "facts-and-neighbours",
+   "recall": {
+    "1": 1,
+    "3": 1,
+    "5": 1
+   },
+   "retrieved": [
+    "ch_7goibjnqlp3vvtdzjtm7",
+    "ch_fdbuy3wgrvs7hrptvslj",
+    "ch_n5axd3pzoltd3eoikypc",
+    "ch_44zlo3f4o52c5dyopusu",
+    "ch_wi7ugysqpkv7ffv6bzpa"
+   ]
+  },
+  {
+   "questionId": "p17",
+   "type": "single-hop",
+   "machine": "chunk-search",
+   "recall": {
+    "1": 1,
+    "3": 1,
+    "5": 1
+   },
+   "retrieved": [
+    "ch_ptz5xpyr7hyol53gstx2",
+    "ch_joo45sqzt5b4t5qiuoe2",
+    "ch_rec7c75omcbfmv3b3riv",
+    "ch_22ssyoj4g24fzqrpfd5x",
+    "ch_xp62fz3xhiyps2rusvhc"
+   ]
+  },
+  {
+   "questionId": "p17",
+   "type": "single-hop",
+   "machine": "facts-and-neighbours",
+   "recall": {
+    "1": 1,
+    "3": 1,
+    "5": 1
+   },
+   "retrieved": [
+    "ch_ptz5xpyr7hyol53gstx2",
+    "ch_rv56eltv2ym5ori7bbas",
+    "ch_joo45sqzt5b4t5qiuoe2",
+    "ch_xp62fz3xhiyps2rusvhc",
+    "ch_x4ja7vzfpd5j5nnb7fr7"
+   ]
+  },
+  {
+   "questionId": "p18",
+   "type": "single-hop",
+   "machine": "chunk-search",
+   "recall": {
+    "1": 0,
+    "3": 0,
+    "5": 1
+   },
+   "retrieved": [
+    "ch_2bwcymi3m4uwfmlfcarr",
+    "ch_atzuh4y7r6rzsmw7fxx7",
+    "ch_fdbuy3wgrvs7hrptvslj",
+    "ch_ajkzqbiha72gitr3tqyf",
+    "ch_cfmvlwkrdkcc7j5dawzq"
+   ]
+  },
+  {
+   "questionId": "p18",
+   "type": "single-hop",
+   "machine": "facts-and-neighbours",
+   "recall": {
+    "1": 0,
+    "3": 1,
+    "5": 1
+   },
+   "retrieved": [
+    "ch_2bwcymi3m4uwfmlfcarr",
+    "ch_ajkzqbiha72gitr3tqyf",
+    "ch_rec7c75omcbfmv3b3riv",
+    "ch_5r3o6nyrajf6fb6guqyi",
+    "ch_cfmvlwkrdkcc7j5dawzq"
+   ]
+  },
+  {
+   "questionId": "p19",
+   "type": "single-hop",
+   "machine": "chunk-search",
+   "recall": {
+    "1": 1,
+    "3": 1,
+    "5": 1
+   },
+   "retrieved": [
+    "ch_3hhhxulzmswygv6grpoa",
+    "ch_7jyhqbxwwzfxg6ciggng",
+    "ch_ntnjxob4ulbk3pgl2bks",
+    "ch_r2rx2ybgioqq7xy6wuy6",
+    "ch_5qb4ugtonblyldtpulw7"
+   ]
+  },
+  {
+   "questionId": "p19",
+   "type": "single-hop",
+   "machine": "facts-and-neighbours",
+   "recall": {
+    "1": 1,
+    "3": 1,
+    "5": 1
+   },
+   "retrieved": [
+    "ch_3hhhxulzmswygv6grpoa",
+    "ch_7jyhqbxwwzfxg6ciggng",
+    "ch_ntnjxob4ulbk3pgl2bks",
+    "ch_22ssyoj4g24fzqrpfd5x",
+    "ch_xp62fz3xhiyps2rusvhc"
+   ]
+  },
+  {
+   "questionId": "p2",
+   "type": "single-hop",
+   "machine": "chunk-search",
+   "recall": {
+    "1": 0,
+    "3": 1,
+    "5": 1
+   },
+   "retrieved": [
+    "ch_iewysbkpgqaeri6nmudm",
+    "ch_ic4lwxekwbvo6ck44jlk",
+    "ch_cfmvlwkrdkcc7j5dawzq",
+    "ch_u6q6eyyjkbnxtwrdo2bi",
+    "ch_ibqdnjl4c4xp5djeufqj"
+   ]
+  },
+  {
+   "questionId": "p2",
+   "type": "single-hop",
+   "machine": "facts-and-neighbours",
+   "recall": {
+    "1": 1,
+    "3": 1,
+    "5": 1
+   },
+   "retrieved": [
+    "ch_cfmvlwkrdkcc7j5dawzq",
+    "ch_iewysbkpgqaeri6nmudm",
+    "ch_wxbiww4ynjvwsryhludx",
+    "ch_gqizv2xujppdp2bwac5b",
+    "ch_73r7y42yv4r4pdzfm4ku"
+   ]
+  },
+  {
+   "questionId": "p21",
+   "type": "single-hop",
+   "machine": "chunk-search",
+   "recall": {
+    "1": 1,
+    "3": 1,
+    "5": 1
+   },
+   "retrieved": [
+    "ch_j46sirqjzm4c4e2t6jxw",
+    "ch_eiu4rjpscmohqozlicsk",
+    "ch_fdjgngujjyaa6hueblag",
+    "ch_rzdmwkvqezdzoc4c4oes",
+    "ch_man7jvkeuu2dvyzssmgv"
+   ]
+  },
+  {
+   "questionId": "p21",
+   "type": "single-hop",
+   "machine": "facts-and-neighbours",
+   "recall": {
+    "1": 1,
+    "3": 1,
+    "5": 1
+   },
+   "retrieved": [
+    "ch_j46sirqjzm4c4e2t6jxw",
+    "ch_wi7ugysqpkv7ffv6bzpa",
+    "ch_fdjgngujjyaa6hueblag",
+    "ch_man7jvkeuu2dvyzssmgv",
+    "ch_rzdmwkvqezdzoc4c4oes"
+   ]
+  },
+  {
+   "questionId": "p24",
+   "type": "multi-hop",
+   "machine": "chunk-search",
+   "recall": {
+    "1": 0.5,
+    "3": 1,
+    "5": 1
+   },
+   "retrieved": [
+    "ch_jizkzzhmjarvx4drur57",
+    "ch_enl7bddiaahy6pmlxq7d",
+    "ch_2bwcymi3m4uwfmlfcarr",
+    "ch_atzuh4y7r6rzsmw7fxx7",
+    "ch_5r3o6nyrajf6fb6guqyi"
+   ]
+  },
+  {
+   "questionId": "p24",
+   "type": "multi-hop",
+   "machine": "facts-and-neighbours",
+   "recall": {
+    "1": 0.5,
+    "3": 1,
+    "5": 1
+   },
+   "retrieved": [
+    "ch_enl7bddiaahy6pmlxq7d",
+    "ch_jizkzzhmjarvx4drur57",
+    "ch_2bwcymi3m4uwfmlfcarr",
+    "ch_5r3o6nyrajf6fb6guqyi",
+    "ch_bpmkglkp6tn63taf6cn6"
+   ]
+  },
+  {
+   "questionId": "p29",
+   "type": "topic",
+   "machine": "chunk-search",
+   "recall": {
+    "1": 0.3333333333333333,
+    "3": 1,
+    "5": 1
+   },
+   "retrieved": [
+    "ch_ajkzqbiha72gitr3tqyf",
+    "ch_2bwcymi3m4uwfmlfcarr",
+    "ch_atzuh4y7r6rzsmw7fxx7",
+    "ch_bpmkglkp6tn63taf6cn6",
+    "ch_5r3o6nyrajf6fb6guqyi"
+   ]
+  },
+  {
+   "questionId": "p29",
+   "type": "topic",
+   "machine": "facts-and-neighbours",
+   "recall": {
+    "1": 0.3333333333333333,
+    "3": 0.6666666666666666,
+    "5": 0.6666666666666666
+   },
+   "retrieved": [
+    "ch_ajkzqbiha72gitr3tqyf",
+    "ch_2bwcymi3m4uwfmlfcarr",
+    "ch_rec7c75omcbfmv3b3riv",
+    "ch_44zlo3f4o52c5dyopusu",
+    "ch_b2nqg2rhnaw34djlyunr"
+   ]
+  },
+  {
+   "questionId": "p30",
+   "type": "topic",
+   "machine": "chunk-search",
+   "recall": {
+    "1": 0.3333333333333333,
+    "3": 0.3333333333333333,
+    "5": 0.3333333333333333
+   },
+   "retrieved": [
+    "ch_ptz5xpyr7hyol53gstx2",
+    "ch_joo45sqzt5b4t5qiuoe2",
+    "ch_22ssyoj4g24fzqrpfd5x",
+    "ch_jxgvgnn6vawbjj26prmu",
+    "ch_xp62fz3xhiyps2rusvhc"
+   ]
+  },
+  {
+   "questionId": "p30",
+   "type": "topic",
+   "machine": "facts-and-neighbours",
+   "recall": {
+    "1": 0,
+    "3": 0.3333333333333333,
+    "5": 0.3333333333333333
+   },
+   "retrieved": [
+    "ch_joo45sqzt5b4t5qiuoe2",
+    "ch_rv56eltv2ym5ori7bbas",
+    "ch_hurajqohny2xijhewc7v",
+    "ch_22ssyoj4g24fzqrpfd5x",
+    "ch_x4ja7vzfpd5j5nnb7fr7"
+   ]
+  },
+  {
+   "questionId": "p4",
+   "type": "single-hop",
+   "machine": "chunk-search",
+   "recall": {
+    "1": 0,
+    "3": 1,
+    "5": 1
+   },
+   "retrieved": [
+    "ch_4jfnggxwdvrrq4zidolo",
+    "ch_fdbuy3wgrvs7hrptvslj",
+    "ch_jizkzzhmjarvx4drur57",
+    "ch_tj22dx7prtg36f27ad4a",
+    "ch_bkadd25rcchreleknau7"
+   ]
+  },
+  {
+   "questionId": "p4",
+   "type": "single-hop",
+   "machine": "facts-and-neighbours",
+   "recall": {
+    "1": 0,
+    "3": 1,
+    "5": 1
+   },
+   "retrieved": [
+    "ch_4jfnggxwdvrrq4zidolo",
+    "ch_fdbuy3wgrvs7hrptvslj",
+    "ch_2bwcymi3m4uwfmlfcarr",
+    "ch_ajkzqbiha72gitr3tqyf",
+    "ch_tj22dx7prtg36f27ad4a"
+   ]
+  },
+  {
+   "questionId": "p5",
+   "type": "single-hop",
+   "machine": "chunk-search",
+   "recall": {
+    "1": 1,
+    "3": 1,
+    "5": 1
+   },
+   "retrieved": [
+    "ch_bfzlmt5iy4qae5fa6tcd",
+    "ch_nuzgilfyetd5ulfzvvew",
+    "ch_fdbuy3wgrvs7hrptvslj",
+    "ch_4jfnggxwdvrrq4zidolo",
+    "ch_mj6jcmhfavmfhkfiqgpu"
+   ]
+  },
+  {
+   "questionId": "p5",
+   "type": "single-hop",
+   "machine": "facts-and-neighbours",
+   "recall": {
+    "1": 1,
+    "3": 1,
+    "5": 1
+   },
+   "retrieved": [
+    "ch_bfzlmt5iy4qae5fa6tcd",
+    "ch_3yhndsdw3glhekpcgy7u",
+    "ch_bpmkglkp6tn63taf6cn6",
+    "ch_wrei6jdlyy33tfyvvoi5",
+    "ch_wi7ugysqpkv7ffv6bzpa"
+   ]
+  },
+  {
+   "questionId": "p6",
+   "type": "single-hop",
+   "machine": "chunk-search",
+   "recall": {
+    "1": 1,
+    "3": 1,
+    "5": 1
+   },
+   "retrieved": [
+    "ch_25fxms7ihs4ujyw2e3hl",
+    "ch_4hebrfj4i7uti2qtpytg",
+    "ch_733r7vnzdjgirc37f6xk",
+    "ch_73r7y42yv4r4pdzfm4ku",
+    "ch_u6q6eyyjkbnxtwrdo2bi"
+   ]
+  },
+  {
+   "questionId": "p6",
+   "type": "single-hop",
+   "machine": "facts-and-neighbours",
+   "recall": {
+    "1": 1,
+    "3": 1,
+    "5": 1
+   },
+   "retrieved": [
+    "ch_25fxms7ihs4ujyw2e3hl",
+    "ch_4hebrfj4i7uti2qtpytg",
+    "ch_73r7y42yv4r4pdzfm4ku",
+    "ch_7lma3lyoho7lssd7khd5",
+    "ch_733r7vnzdjgirc37f6xk"
+   ]
+  },
+  {
+   "questionId": "p7",
+   "type": "single-hop",
+   "machine": "chunk-search",
+   "recall": {
+    "1": 1,
+    "3": 1,
+    "5": 1
+   },
+   "retrieved": [
+    "ch_pvcztfdicdhklnbnvmme",
+    "ch_bpmkglkp6tn63taf6cn6",
+    "ch_ibqdnjl4c4xp5djeufqj",
+    "ch_5r3o6nyrajf6fb6guqyi",
+    "ch_liwdsteos6zb34ot3h6e"
+   ]
+  },
+  {
+   "questionId": "p7",
+   "type": "single-hop",
+   "machine": "facts-and-neighbours",
+   "recall": {
+    "1": 1,
+    "3": 1,
+    "5": 1
+   },
+   "retrieved": [
+    "ch_pvcztfdicdhklnbnvmme",
+    "ch_bpmkglkp6tn63taf6cn6",
+    "ch_4hebrfj4i7uti2qtpytg",
+    "ch_ibqdnjl4c4xp5djeufqj",
+    "ch_lo3hfzrqj2xdhhb5ccrj"
+   ]
+  },
+  {
+   "questionId": "p8",
+   "type": "single-hop",
+   "machine": "chunk-search",
+   "recall": {
+    "1": 0,
+    "3": 0,
+    "5": 0
+   },
+   "retrieved": [
+    "ch_3yhndsdw3glhekpcgy7u",
+    "ch_wxbiww4ynjvwsryhludx",
+    "ch_liwdsteos6zb34ot3h6e",
+    "ch_ibqdnjl4c4xp5djeufqj",
+    "ch_wrei6jdlyy33tfyvvoi5"
+   ]
+  },
+  {
+   "questionId": "p8",
+   "type": "single-hop",
+   "machine": "facts-and-neighbours",
+   "recall": {
+    "1": 0,
+    "3": 0,
+    "5": 0
+   },
+   "retrieved": [
+    "ch_3yhndsdw3glhekpcgy7u",
+    "ch_ibqdnjl4c4xp5djeufqj",
+    "ch_tj22dx7prtg36f27ad4a",
+    "ch_wxbiww4ynjvwsryhludx",
+    "ch_pvcztfdicdhklnbnvmme"
+   ]
+  },
+  {
+   "questionId": "p9",
+   "type": "single-hop",
+   "machine": "chunk-search",
+   "recall": {
+    "1": 1,
+    "3": 1,
+    "5": 1
+   },
+   "retrieved": [
+    "ch_w4fe6cyd3bbst5yvwgdl",
+    "ch_fwynntimvukk6c7wweup",
+    "ch_n27a2wtd634bv6gqs7oq",
+    "ch_eq3xmgfu3f2xgxc5wrto",
+    "ch_htw7obdtbch3w3hmmyuq"
+   ]
+  },
+  {
+   "questionId": "p9",
+   "type": "single-hop",
+   "machine": "facts-and-neighbours",
+   "recall": {
+    "1": 1,
+    "3": 1,
+    "5": 1
+   },
+   "retrieved": [
+    "ch_w4fe6cyd3bbst5yvwgdl",
+    "ch_n27a2wtd634bv6gqs7oq",
+    "ch_eq3xmgfu3f2xgxc5wrto",
+    "ch_7goibjnqlp3vvtdzjtm7",
+    "ch_lpwhtx36hnhev4ewfhxd"
+   ]
+  },
+  {
+   "questionId": "pr214",
+   "type": "multi-hop",
+   "machine": "chunk-search",
+   "recall": {
+    "1": 0.5,
+    "3": 1,
+    "5": 1
+   },
+   "retrieved": [
+    "ch_7goibjnqlp3vvtdzjtm7",
+    "ch_5r3o6nyrajf6fb6guqyi",
+    "ch_wxbiww4ynjvwsryhludx",
+    "ch_mlkvjkfvxvy5kstgblxt",
+    "ch_3yhndsdw3glhekpcgy7u"
+   ]
+  },
+  {
+   "questionId": "pr214",
+   "type": "multi-hop",
+   "machine": "facts-and-neighbours",
+   "recall": {
+    "1": 0.5,
+    "3": 1,
+    "5": 1
+   },
+   "retrieved": [
+    "ch_7goibjnqlp3vvtdzjtm7",
+    "ch_bpmkglkp6tn63taf6cn6",
+    "ch_5r3o6nyrajf6fb6guqyi",
+    "ch_ic4lwxekwbvo6ck44jlk",
+    "ch_wxbiww4ynjvwsryhludx"
+   ]
+  },
+  {
+   "questionId": "pr217",
+   "type": "multi-hop",
+   "machine": "chunk-search",
+   "recall": {
+    "1": 0.5,
+    "3": 1,
+    "5": 1
+   },
+   "retrieved": [
+    "ch_fdbuy3wgrvs7hrptvslj",
+    "ch_wmybldqc3jmn5i4s2vio",
+    "ch_n5axd3pzoltd3eoikypc",
+    "ch_4jfnggxwdvrrq4zidolo",
+    "ch_nuzgilfyetd5ulfzvvew"
+   ]
+  },
+  {
+   "questionId": "pr217",
+   "type": "multi-hop",
+   "machine": "facts-and-neighbours",
+   "recall": {
+    "1": 0.5,
+    "3": 1,
+    "5": 1
+   },
+   "retrieved": [
+    "ch_fdbuy3wgrvs7hrptvslj",
+    "ch_wmybldqc3jmn5i4s2vio",
+    "ch_4jfnggxwdvrrq4zidolo",
+    "ch_wrei6jdlyy33tfyvvoi5",
+    "ch_n5axd3pzoltd3eoikypc"
+   ]
+  },
+  {
+   "questionId": "pr22",
+   "type": "single-hop",
+   "machine": "chunk-search",
+   "recall": {
+    "1": 1,
+    "3": 1,
+    "5": 1
+   },
+   "retrieved": [
+    "ch_wrei6jdlyy33tfyvvoi5",
+    "ch_htw7obdtbch3w3hmmyuq",
+    "ch_jizkzzhmjarvx4drur57",
+    "ch_ewhrulbgg7v4tt7zpglg",
+    "ch_7lma3lyoho7lssd7khd5"
+   ]
+  },
+  {
+   "questionId": "pr22",
+   "type": "single-hop",
+   "machine": "facts-and-neighbours",
+   "recall": {
+    "1": 1,
+    "3": 1,
+    "5": 1
+   },
+   "retrieved": [
+    "ch_wrei6jdlyy33tfyvvoi5",
+    "ch_7lma3lyoho7lssd7khd5",
+    "ch_qoobiqandjy5pvztzyuj",
+    "ch_lpwhtx36hnhev4ewfhxd",
+    "ch_ewhrulbgg7v4tt7zpglg"
+   ]
+  },
+  {
+   "questionId": "pr222",
+   "type": "multi-hop",
+   "machine": "chunk-search",
+   "recall": {
+    "1": 0.5,
+    "3": 0.5,
+    "5": 0.5
+   },
+   "retrieved": [
+    "ch_e4m5mw2net6vdyepfdtv",
+    "ch_3yhndsdw3glhekpcgy7u",
+    "ch_4jfnggxwdvrrq4zidolo",
+    "ch_nuzgilfyetd5ulfzvvew",
+    "ch_7goibjnqlp3vvtdzjtm7"
+   ]
+  },
+  {
+   "questionId": "pr222",
+   "type": "multi-hop",
+   "machine": "facts-and-neighbours",
+   "recall": {
+    "1": 0,
+    "3": 0.5,
+    "5": 0.5
+   },
+   "retrieved": [
+    "ch_7goibjnqlp3vvtdzjtm7",
+    "ch_bpmkglkp6tn63taf6cn6",
+    "ch_bfzlmt5iy4qae5fa6tcd",
+    "ch_3yhndsdw3glhekpcgy7u",
+    "ch_44zlo3f4o52c5dyopusu"
+   ]
+  },
+  {
+   "questionId": "pr23",
+   "type": "single-hop",
+   "machine": "chunk-search",
+   "recall": {
+    "1": 1,
+    "3": 1,
+    "5": 1
+   },
+   "retrieved": [
+    "ch_ibqdnjl4c4xp5djeufqj",
+    "ch_wrei6jdlyy33tfyvvoi5",
+    "ch_bpmkglkp6tn63taf6cn6",
+    "ch_wxbiww4ynjvwsryhludx",
+    "ch_kpm7edoqnl7qzlsydijv"
+   ]
+  },
+  {
+   "questionId": "pr23",
+   "type": "single-hop",
+   "machine": "facts-and-neighbours",
+   "recall": {
+    "1": 1,
+    "3": 1,
+    "5": 1
+   },
+   "retrieved": [
+    "ch_ibqdnjl4c4xp5djeufqj",
+    "ch_p7va5ffou2cohq3ywv2u",
+    "ch_snoakkj2scda45nmwlqc",
+    "ch_man7jvkeuu2dvyzssmgv",
+    "ch_pvcztfdicdhklnbnvmme"
+   ]
+  },
+  {
+   "questionId": "pr25",
+   "type": "single-hop",
+   "machine": "chunk-search",
+   "recall": {
+    "1": 0,
+    "3": 0,
+    "5": 0
+   },
+   "retrieved": [
+    "ch_wi7ugysqpkv7ffv6bzpa",
+    "ch_fdbuy3wgrvs7hrptvslj",
+    "ch_4jfnggxwdvrrq4zidolo",
+    "ch_2vqtecok6gimbudc476p",
+    "ch_nuzgilfyetd5ulfzvvew"
+   ]
+  },
+  {
+   "questionId": "pr25",
+   "type": "single-hop",
+   "machine": "facts-and-neighbours",
+   "recall": {
+    "1": 1,
+    "3": 1,
+    "5": 1
+   },
+   "retrieved": [
+    "ch_ic4lwxekwbvo6ck44jlk",
+    "ch_kpm7edoqnl7qzlsydijv",
+    "ch_xp62fz3xhiyps2rusvhc",
+    "ch_4jfnggxwdvrrq4zidolo",
+    "ch_wi7ugysqpkv7ffv6bzpa"
+   ]
+  }
+ ]
+}

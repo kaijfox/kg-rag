@@ -8,9 +8,14 @@
  * first time (it runs TypeDoc through npx). Nothing is answered or judged by a model.
  *
  *   node_modules/.bin/tsx experiments/code-map-selftest.mts
+ *   TAG_MODULES=1 node_modules/.bin/tsx experiments/code-map-selftest.mts   # first adds @module to each file's top comment
+ *
+ * TypeDoc leaves out the comment at the top of a file unless it carries a @module tag, and in this repository that comment
+ * holds the explanation of how the file works. TAG_MODULES=1 builds from a copy of the sources with the tag added, to show
+ * how much of the result that explains.
  */
 import { execFileSync } from 'node:child_process';
-import { mkdtempSync, rmSync, writeFileSync } from 'node:fs';
+import { cpSync, mkdtempSync, readFileSync, realpathSync, readdirSync, rmSync, statSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
 import { ingest } from '../packages/modules/src';
@@ -45,16 +50,33 @@ const QUESTIONS: { q: string; gold: string[] }[] = [
   { q: 'How are the passages next to a search hit found for adjacent expansion?', gold: [M + 'modules/search.ts', K + 'indexStore.ts'] },
 ];
 
-const work = mkdtempSync(join(tmpdir(), 'kg-codemap-'));
+const work = realpathSync(mkdtempSync(join(tmpdir(), 'kg-codemap-')));
 try {
-  // the documentation site, built from the doc comments
+  // the documentation site, built from the doc comments (from a copy with @module tags when TAG_MODULES is set)
+  let srcRoot = ROOT;
+  if (process.env.TAG_MODULES) {
+    srcRoot = join(work, 'copy');
+    for (const p of ['kernel', 'modules', 'eval', 'app']) cpSync(join(ROOT, `packages/${p}/src`), join(srcRoot, `packages/${p}/src`), { recursive: true });
+    const tag = (dir: string) => {
+      for (const name of readdirSync(dir)) {
+        const f = join(dir, name);
+        if (statSync(f).isDirectory()) tag(f);
+        else if (f.endsWith('.ts')) {
+          const t = readFileSync(f, 'utf8');
+          const m = /^(#![^\n]*\n)?\/\*\*[\s\S]*?\n \*\//.exec(t);
+          if (m) writeFileSync(f, t.replace(m[0], () => m[0].replace(/\n \*\/$/, '\n * @module\n */')));
+        }
+      }
+    };
+    tag(join(srcRoot, 'packages'));
+  }
   const tsconfig = join(work, 'tsconfig.json');
-  writeFileSync(tsconfig, JSON.stringify({ extends: join(ROOT, 'tsconfig.base.json'), include: [join(ROOT, 'packages/*/src')] }));
+  writeFileSync(tsconfig, JSON.stringify({ extends: join(ROOT, 'tsconfig.base.json'), include: [join(srcRoot, 'packages/*/src')] }));
   const site = join(work, 'site');
   execFileSync(
     'npx',
     ['--yes', 'typedoc@0.28.14', '--entryPoints', ...['kernel', 'modules', 'eval', 'app'].map((p) => `packages/${p}/src`), '--entryPointStrategy', 'expand', '--tsconfig', tsconfig, '--excludePrivate', 'false', '--skipErrorChecking', '--gitRemote', 'none', '--out', site],
-    { cwd: ROOT, stdio: 'ignore' },
+    { cwd: srcRoot, stdio: process.env.VERBOSE ? 'inherit' : 'ignore' },
   );
 
   const build = async (name: string, path: string, adapter: string, exclude?: string) => {

@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Beta readiness report</title>
+<style>
+:root {
+  --bg: #fbfaf7; --fg: #1d1d1b; --muted: #5e5d57; --line: #dcd9cf; --card: #ffffff;
+  --accent: #2b5fa8; --accent-soft: #dfe9f6;
+  --good: #2e7d4f; --good-soft: #dcefe3; --bad: #b3402f; --bad-soft: #f6e0db; --other: #aaa89f; --other-soft: #ecebe6;
+  --warn-soft: #f8efd2; --warn: #8a6a12;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #161614; --fg: #ecebe6; --muted: #a09e95; --line: #3a3934; --card: #1f1f1c;
+    --accent: #7fa8e0; --accent-soft: #223247;
+    --good: #5fbf88; --good-soft: #1d3326; --bad: #e07a68; --bad-soft: #3b2420; --other: #6d6b64; --other-soft: #2a2a26;
+    --warn-soft: #3a3217; --warn: #d9b44a;
+  }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.55 Georgia, "Iowan Old Style", serif; }
+main { max-width: 860px; margin: 0 auto; padding: 32px 16px 80px; }
+h1 { font-size: 30px; line-height: 1.2; margin: 0 0 8px; }
+h2 { font-size: 23px; margin: 56px 0 8px; padding-top: 16px; border-top: 1px solid var(--line); }
+h3 { font-size: 17px; margin: 32px 0 4px; font-family: system-ui, sans-serif; }
+p { margin: 8px 0; }
+.lede { color: var(--muted); font-size: 17px; }
+.small { font-size: 14px; color: var(--muted); }
+code { font: 13.5px ui-monospace, Menlo, monospace; background: var(--other-soft); padding: 1px 4px; border-radius: 3px; }
+.label { font: 600 12px system-ui, sans-serif; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin-top: 14px; display: block; }
+.fig { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 16px; margin: 16px 0; }
+.fig .cap { font-size: 14.5px; margin-top: 10px; }
+.fig svg { max-width: 100%; height: auto; display: block; }
+table { border-collapse: collapse; width: 100%; font: 14px/1.4 system-ui, sans-serif; margin: 8px 0; }
+th, td { border-bottom: 1px solid var(--line); padding: 7px 8px; text-align: left; vertical-align: top; }
+th { color: var(--muted); font-weight: 600; }
+td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; }
+.verdict { border-left: 4px solid var(--accent); background: var(--accent-soft); padding: 10px 14px; margin: 14px 0; border-radius: 0 6px 6px 0; }
+.caveat { border-left: 4px solid var(--warn); background: var(--warn-soft); padding: 10px 14px; margin: 14px 0; border-radius: 0 6px 6px 0; }
+.legend { display: flex; gap: 14px; flex-wrap: wrap; font: 13px system-ui, sans-serif; margin: 6px 0 10px; }
+.legend i { display: inline-block; width: 12px; height: 12px; border-radius: 2px; margin-right: 5px; vertical-align: -1px; }
+.yes { color: var(--good); font-weight: 600; } .no { color: var(--bad); font-weight: 600; }
+svg text { font-family: system-ui, sans-serif; fill: var(--fg); }
+svg .m { fill: var(--muted); }
+ul { padding-left: 22px; } li { margin: 4px 0; }
+</style>
+</head>
+<body>
+<main>
+
+<h1>Does the rebuilt kg-rag work? Evidence for three uses</h1>
+<p class="lede">Written 2026-11-06 after a rebuild of the system and a round of beta preparation. Every number below was produced
+by a script in <code>experiments/</code>, and the raw output sits beside the script. The runs use one laptop, local models
+(embeddinggemma for search; qwen3.5 for extracting facts, answering and judging) and small corpora. They show whether each
+part behaves as designed. They do not estimate how well it will do for a tester.</p>
+
+<h2 id="summary">What the evidence says</h2>
+<table>
+<tr><th>Use</th><th>What held up</th><th>What did not, or is unknown</th></tr>
+<tr><td><b>Papers</b><br>(physics textbooks)</td>
+<td>Plain search returns the same results as the first build on all 63 reviewed questions. An answering model scored 0.96 with the passages that search returned, against 0.75 with none.</td>
+<td>The facts layer, which a new database uses by default, did not change retrieval measurably on 26 questions (top-five recall 0.865 against 0.878 for plain search). The answer test has 12 questions and is judged by the model that wrote the answers.</td></tr>
+<tr><td><b>Project log</b><br>(16 invented entries)</td>
+<td>Where a later entry states that it replaces an earlier one in the documented sentence form, the earlier entry stops appearing. Plain search showed a replaced entry on 7 of 7 questions; the log search showed one on 2 of 7, and those two replacements were written in other forms.</td>
+<td>Replacements written in other forms are missed, one without any message. Removing replaced entries does not help a search that misses: for 2 of 10 questions the current entry was not returned at all, by either search.</td></tr>
+<tr><td><b>Code map</b><br>(generated documentation)</td>
+<td>A TypeDoc site for this repository put an answering file in the top five for 15 of 20 questions, and 17 after a one-line fix to the comments. A pdoc site for the Python sidecar found the right module for 10 of 10.</td>
+<td>Results name a page and heading, not a file and line. The result depends on where comments are written. Sphinx was not measured here. All questions were written by the code's authors.</td></tr>
+</table>
+
+<div class="fig">
+<svg viewBox="0 0 820 250" role="img" aria-label="Pipeline from sources to search results">
+  <defs><marker id="ar" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="var(--muted)"/></marker></defs>
+  <g font-size="13">
+    <rect x="10" y="20" width="120" height="120" rx="6" fill="none" stroke="var(--line)"/>
+    <text x="70" y="40" text-anchor="middle" class="m">sources</text>
+    <text x="70" y="70" text-anchor="middle">PDF</text><text x="70" y="90" text-anchor="middle">markdown</text><text x="70" y="110" text-anchor="middle">dated log</text><text x="70" y="130" text-anchor="middle">HTML pages</text>
+    <rect x="170" y="50" width="110" height="60" rx="6" fill="var(--accent-soft)" stroke="var(--accent)"/>
+    <text x="225" y="76" text-anchor="middle">readers</text><text x="225" y="96" text-anchor="middle" class="m">cut into passages</text>
+    <rect x="320" y="20" width="170" height="120" rx="6" fill="var(--card)" stroke="var(--accent)"/>
+    <text x="405" y="42" text-anchor="middle">index</text>
+    <text x="405" y="68" text-anchor="middle" class="m">passages + embeddings</text>
+    <rect x="335" y="82" width="140" height="44" rx="5" fill="none" stroke="var(--other)" stroke-dasharray="4 3"/>
+    <text x="405" y="102" text-anchor="middle">facts, links</text><text x="405" y="118" text-anchor="middle" class="m">optional layer</text>
+    <rect x="530" y="50" width="130" height="60" rx="6" fill="var(--accent-soft)" stroke="var(--accent)"/>
+    <text x="595" y="76" text-anchor="middle">search machine</text><text x="595" y="96" text-anchor="middle" class="m">a short list of steps</text>
+    <rect x="700" y="50" width="110" height="60" rx="6" fill="var(--card)" stroke="var(--line)"/>
+    <text x="755" y="76" text-anchor="middle">results</text><text x="755" y="96" text-anchor="middle" class="m">to the agent</text>
+    <rect x="170" y="170" width="640" height="46" rx="6" fill="none" stroke="var(--line)"/>
+    <text x="490" y="190" text-anchor="middle">history: every search, every step's input and output, feedback</text>
+    <text x="490" y="207" text-anchor="middle" class="m">kept apart from the index, so a rebuild never touches it</text>
+  </g>
+  <g stroke="var(--muted)" stroke-width="1.5" fill="none" marker-end="url(#ar)">
+    <path d="M130 80 H168"/><path d="M280 80 H318"/><path d="M490 80 H528"/><path d="M660 80 H698"/>
+  </g>
+</svg>
+<div class="cap"><b>The path every test below exercises.</b> A source file is cut into passages, the passages are embedded into the index, and a search machine ranks them for a question. The dashed box is the part that is optional: facts extracted by a model, and links such as "this entry replaces that one". Each section below tests a different stretch of this path, and the history strip at the bottom is how every result in this report can be traced afterwards.</div>
+</div>
+
+<!-- ============================ PAPERS ============================ -->
+<h2 id="papers">1. Papers</h2>
+<p>The test material is four physics textbooks, two by each of two authors (Kardar: 223 passages; Plischke: 89), with 63 reviewed questions. Each question was written from one or more specific passages, which are its answer.</p>
+
+<h3>Does the rebuilt search return what the first build returned?</h3>
+<p><span class="label">Why it matters</span>The rebuild replaced a 14-package system. Every measurement made on the first build is only worth keeping if the new plain search returns the same passages.</p>
+<p><span class="label">What was done</span>Both textbook databases were rebuilt from the kept parsed documents, and the 63 questions were searched. Recall at <i>k</i> is the share of a question's answer passages among the first <i>k</i> results.</p>
+
+<div class="fig"><div id="f-parity"></div>
+<div class="cap"><b>What to see:</b> each pair of bars is the rebuilt system and the first build, and they are the same height everywhere. Recall was identical at <i>k</i> = 1, 3 and 5 for 63 of 63 questions (<code>baseline-parity.out</code>). <b>Why it matters:</b> an unchanged baseline means the earlier evaluation sets remain valid and any change we measure later comes from a new layer.</div></div>
+<p><span class="label">Judgement</span>This shows no regression, and nothing else. The questions were written from the passages and so share their vocabulary, which favours a similarity search. Even so, the right passage is first for only 57% (Kardar) and 68% (Plischke) of questions.</p>
+
+<h3>Do the retrieved passages improve an answer?</h3>
+<p><span class="label">Why it matters</span>Recall counts passages. What an agent needs is a better answer. A retrieved passage could be the wrong one and still score as a hit, or the right one and go unused.</p>
+<p><span class="label">What was done</span>Twelve Plischke questions (8 single-passage, 2 multi-passage, 2 whole-topic) were answered by the local model in three conditions: no passages; the answer passages themselves (the best a search could do); and the five passages that plain search returned. The same model then scored each answer from 0 to 1 against a reference answer.</p>
+
+<div class="fig"><div id="f-answers"></div>
+<div class="legend"><span><i style="background:var(--good)"></i>score 1</span><span><i style="background:#d9a441"></i>score 0.5</span><span><i style="background:var(--bad)"></i>score 0</span></div>
+<div class="cap"><b>What to see:</b> each row is a question, each column a condition. The left column (no passages) has four cells that are not green: two red and two amber. Three of them turn green in the middle column (search results); the amber whole-topic cell stays amber. The right column, with the correct passages, is green throughout. The number at the right is recall at five for that question. <b>Means:</b> no passages 0.75, search results 0.96, correct passages 1.00.</div></div>
+<p><span class="label">Judgement</span>The direction is right and the gain comes from questions where the model did not know the answer. Four things limit it. (1) Twelve questions: one question moves the mean by 0.04 to 0.08. (2) The scores come in three steps. (3) The judge is the model that wrote the answers. (4) Thermodynamics is well known, so the model scores 0.75 unaided; a private corpus would show a larger gap. Two further observations: the two multi-passage questions were already answered correctly without help, so this test says nothing about multi-passage retrieval, and in the seventh row the answer scored 1 in every condition although the search returned none of the answer passages (recall 0), so the model knew the answer without them.</p>
+
+<h3>Does the facts layer, the default for a new database, improve retrieval?</h3>
+<p><span class="label">Why it matters</span>A new database extracts short standalone facts from every passage with a model and ranks them beside the passages. That costs a model call per passage, so it should beat plain search or it should not be the default.</p>
+<p><span class="label">What was done</span>Both Plischke textbooks were built with extraction on: 89 passages gave 530 facts and 1,725 name mentions. The build took 677 s, with model responses from an earlier trial's cache available for 39 of the 89 passages. All 26 Plischke questions were then searched with plain search and with the facts machine (<code>facts-and-neighbours</code>), retrieval only. A fact counts for the passages it cites.</p>
+
+<div class="fig"><div id="f-facts"></div>
+<div class="cap"><b>What to see:</b> the two bars are close at every <i>k</i>. The facts machine is ahead at <i>k</i> = 1 (0.686 against 0.679) and 3 (0.865 against 0.840), and behind at 5 (0.865 against 0.878). Question by question at <i>k</i> = 5, it did better on 1 question, worse on 2 and the same on 23. <b>Why it matters:</b> differences this small, on 26 questions, are noise.</div></div>
+<p><span class="label">Judgement</span>This test gives no reason for the facts layer to be the default, and no reason to think it hurts. It is not a fair test of the layer's purpose, which is questions that combine several passages or ask about a whole topic: only 4 multi-passage and 2 topic questions exist here, and on the topic questions the facts machine was lower (top-five recall 0.50 against 0.67, averaged over two questions). The log trial below shows one cost of the layer that this test does not: facts can fill the result slots.</p>
+
+<!-- ============================ LOG ============================ -->
+<h2 id="log">2. Project log</h2>
+<p><span class="label">Why it matters</span>A project log contains decisions that later decisions cancel. A plain search for "where is the data kept?" returns the old and the new answer side by side, and an agent cannot tell which one holds. The log search is meant to return only the entry that still stands. It learns that an entry was replaced from a sentence in the newer entry, such as "This supersedes the decision of 2026-03-02", found by a text rule with no model involved.</p>
+<p><span class="label">What was done</span>I wrote a 16-entry log for an invented ingestion service in the format the beta guide teaches an agent. It contains seven true replacements: five written in the sentence form the rule reads, and two written the way a person might write them without having read the guide. Ten questions each have one entry as the right answer; seven of them have an older, replaced entry that a plain search would also find. Both searches ran on real embeddings with fact extraction on, as a new database is set up (99 to 121 s to build; 46 facts).</p>
+
+<div class="fig">
+<svg viewBox="0 0 820 230" role="img" aria-label="Worked example: authentication question">
+  <g font-size="13">
+    <text x="10" y="18" font-weight="600">Question: "How do clients prove who they are?"</text>
+    <rect x="10" y="30" width="250" height="52" rx="6" fill="var(--bad-soft)" stroke="var(--bad)"/>
+    <text x="20" y="50">2026-05-04 Authentication uses API keys</text><text x="20" y="70" class="m">replaced by the entry below</text>
+    <rect x="10" y="100" width="250" height="52" rx="6" fill="var(--good-soft)" stroke="var(--good)"/>
+    <text x="20" y="120">2026-05-18 Authentication uses OAuth</text><text x="20" y="140" class="m">"This replaces the decision of 2026-05-04…"</text>
+    <path d="M135 100 V84" stroke="var(--muted)" stroke-width="1.5" fill="none" marker-end="url(#ar)"/>
+    <text x="145" y="95" class="m" font-size="12">replaces</text>
+    <text x="310" y="48" font-weight="600">Plain search returns</text>
+    <text x="310" y="68">1. API keys  <tspan class="no">(replaced entry, ranked first)</tspan></text>
+    <text x="310" y="88">2. OAuth</text><text x="310" y="108">3. Deployment is by hand</text>
+    <text x="310" y="148" font-weight="600">Log search returns</text>
+    <text x="310" y="168">1. "Clients authenticate with OAuth access tokens."  <tspan class="m">(fact)</tspan></text>
+    <text x="310" y="188">2. the OAuth entry   3. "The company login service issues OAuth tokens."</text>
+  </g>
+</svg>
+<div class="cap"><b>What to see:</b> in the plain search the replaced entry is ranked above the current one. Because the OAuth entry states the replacement, the log search never returns the API-keys entry. <b>Why it matters:</b> an agent reading the first result would have acted on a decision that no longer holds. This is the case the feature exists for.</div>
+</div>
+
+<h3>Which replacements did the rule find?</h3>
+<table>
+<tr><th>Newer entry</th><th>Replaces</th><th>How the sentence is written</th><th>Found</th></tr>
+<tr><td>Record store is SQLite</td><td>JSON files</td><td>documented form</td><td class="yes">yes</td></tr>
+<tr><td>Record store is Postgres</td><td>SQLite</td><td>documented form</td><td class="yes">yes</td></tr>
+<tr><td>Chunk size is 1000</td><td>chunk size 500</td><td>documented form</td><td class="yes">yes</td></tr>
+<tr><td>Log lines are JSON</td><td>plain text lines</td><td>documented form</td><td class="yes">yes</td></tr>
+<tr><td>Authentication uses OAuth</td><td>API keys</td><td>documented form; two entries share the older date, resolved by title words</td><td class="yes">yes</td></tr>
+<tr><td>Embedding model is embeddinggemma</td><td>MiniLM</td><td>"MiniLM is no longer used anywhere", no date</td><td class="no">no, silently</td></tr>
+<tr><td>Deployment runs from CI</td><td>manual deployment</td><td>"The manual deployment of 2026-03-12 is replaced by this pipeline"</td><td class="no">no, with a logged reason</td></tr>
+</table>
+<p class="small"><b>What to see:</b> five of seven found, no false links, and the entry that shares a date with the replaced one (the retry limit) was left alone. The five were written to the rule's format, so finding them is expected; the information is in the two misses. The last was read backwards: the rule takes "X is replaced by" to mean that the entry named by date is the newer one, found the order impossible and skipped it, leaving a reason in the step log. The first has no date and no replacement verb, so the rule never considered it and wrote nothing.</p>
+
+<h3>What did each search return?</h3>
+<div class="fig"><div id="f-log"></div>
+<div class="legend"><span><i style="background:var(--good)"></i>the current entry</span><span><i style="background:var(--bad)"></i>an entry that was replaced</span><span><i style="background:var(--other)"></i>another entry</span><span>letter <b>f</b> = an extracted fact, no letter = a whole entry</span></div>
+<div class="cap"><b>What to see:</b> each row is a question and each trio of squares is the top three results, left to right. The left trios (plain search) contain red squares in all seven rows that have a replaced entry. The right trios (log search) contain red in two rows, the two undetected replacements (embedding model, deployment), and no red elsewhere. Current-entry results moved to first place for 7 questions, against 4 for plain search. In the last three rows nothing was replaced, and both searches put the current entry first. The rule did not retire the failed-experiment entry or the entry that shares a date with a replaced one. The log search fills the other slots with more of the same entry (as a whole entry or as facts), which is why those rows show three green squares.</div></div>
+
+<p><span class="label">Judgement</span>The mechanism works and the damage is visible. Three failures stand out.</p>
+<ul>
+<li><b>Silent misses.</b> A replacement stated without a date is invisible to the rule and leaves no log line. The guide tells an agent to name the earlier entry's date, so a log written to the guide is covered, and a log written without it is not. A tester has no way to know which they have.</li>
+<li><b>Backwards passive.</b> "X of [old date] is replaced by this" is a natural way to write a replacement in the newer entry, and the rule reads it backwards. The rule could check which entry is the newer one and flip the reading; it does not.</li>
+<li><b>Search misses are separate.</b> For the first and third questions the current entry is not returned by either search. Every entry in this toy log begins "The ingestion service…", so that phrase dominates the match: the log search's three results for the first question are facts that the log is written in JSON. With facts on, 22 of the 30 result slots held a fact, and in several rows two or three slots held near-duplicates of one entry (the OAuth example above shows it). A real log has less shared wording, but the slot crowding would remain.</li>
+</ul>
+<p>Without fact extraction the log search returned the current entry in the top three for 9 of 10 questions; with it, 8 of 10. This is one run on one invented log that I wrote together with its questions and knew the rule's format. Rates here describe this log; they are not estimates for a real one.</p>
+
+<!-- ============================ CODE MAP ============================ -->
+<h2 id="codemap">3. Code map</h2>
+<p><span class="label">Why it matters</span>An agent working on a codebase needs to find which file does a thing. The design uses what developers already write: documentation comments above functions. A documentation tool turns them into a folder of web pages, and kg-rag reads the pages as they are. kg-rag has no code-specific parts, so the quality depends on the pages.</p>
+<p><span class="label">What was done</span>Two tools, two codebases. TypeDoc built a site from this repository's TypeScript (50 files; 256 pages, 674 passages), and twenty questions about the code, each with the file that answers it, were searched. pdoc built a site from the Python sidecar (591 lines, 8 modules) with ten questions. A search succeeds at <i>k</i> when one of the top <i>k</i> results is a page about an answering file or module.</p>
+
+<div class="fig"><div id="f-code"></div>
+<div class="cap"><b>What to see:</b> TypeDoc as it comes finds the answering file in the top five for 15 of 20 questions (75%). When the comment at the top of each file gets a <code>@module</code> tag the figure rises to 17 of 20 (85%), though the first-result rate slips from 13 to 12. pdoc finds all 10 with or without its embedded source. <b>Caution:</b> the pdoc site without source is 11 passages, so five results cover almost half of it and 10 of 10 is an easy result.</div></div>
+
+<table>
+<tr><th>pdoc setting</th><th class="n">pages</th><th class="n">passages</th><th class="n">top 1</th><th class="n">top 5</th><th class="n">characters returned per search</th></tr>
+<tr><td>default (each module's source is in the page)</td><td class="n">8</td><td class="n">57</td><td class="n">9 of 10</td><td class="n">10 of 10</td><td class="n">4,571</td></tr>
+<tr><td><code>--no-show-source</code></td><td class="n">8</td><td class="n">11</td><td class="n">10 of 10</td><td class="n">10 of 10</td><td class="n">3,017</td></tr>
+</table>
+<p class="small"><b>What to see:</b> the source blocks multiply the index five times and add half again to every answer, with nothing gained in finding the module. The beta guide now says to pass the flag.</p>
+
+<p><span class="label">Judgement</span></p>
+<ul>
+<li><b>Where the five TypeDoc misses come from.</b> In this repository the explanation of how a file works is the comment at the top of the file, and TypeDoc drops that comment unless it carries <code>@module</code>. The function pages of <code>runMachine</code>, <code>createViewerServer</code>, <code>main</code> and <code>MACHINES</code> held only signatures. Tagging recovered two questions. Three are still missed (the viewer, the list of search machines, the runner) and I do not know why; the viewer file's page now has its comment.</li>
+<li><b>A weaker result than the route this replaced.</b> The earlier route, which converted TypeDoc data into markdown with a file-and-line marker, found 19 of 20 on the same questions and returned about 1,200 characters per search, against 1,578 now. It could also name the line. The new route is general and has no converter, and it costs those points.</li>
+<li><b>Limits of the test.</b> The questions were written by the code's author and mostly reuse the code's own words. The credit goes to a module, not to a function. The comments here are uneven. Sphinx, which the guide describes as coarse, was not measured in this report. Nothing compares against searching the raw source files, which the earlier route matched.</li>
+</ul>
+
+<!-- ============================ NOT TESTED ============================ -->
+<h2 id="untested">4. What was not tested</h2>
+<ul>
+<li><b>Real agents on real work.</b> No agent has used the tools to do a task. The server process was exercised end to end by a script earlier today (searches, usage reports, a watched file re-read, 7 searches compared with the baseline in <code>kg report</code>); that run is recorded in <code>design/measurements.md</code> and was not repeated here.</li>
+<li><b>A fresh install.</b> Nobody has followed the setup guide on a clean checkout. The sidecar's own Python tests pass (37, 1 skipped), but PDF parsing with docling was not run in this report; the textbook runs used kept parsed copies.</li>
+<li><b>Hard questions.</b> Multi-passage and whole-topic questions number 6 of 26 in the facts test and 2 of 12 in the answer test. The facts layer was designed for them and was not tested on them.</li>
+<li><b>Large corpora.</b> The largest index here holds 223 passages. Search speed, extraction time and cache size at thousands of passages are extrapolated from small runs.</li>
+<li><b>Upgrades and moving extraction.</b> Rebuilding from the model-call cache and moving the cache to a second database were measured earlier (4.9 s against 1,122 s; 0 model calls on the second database) and not repeated here.</li>
+<li><b>Independence.</b> The log, the code questions and the toy scenarios were written by the people who wrote the system; the judge and the answerer are one model. A tester's corpus may behave differently.</li>
+</ul>
+
+<h2 id="judgement">5. Is it ready for a beta?</h2>
+<div class="verdict">
+<p><b>For a small beta with testers who know it is early: yes.</b> The core path works and reproduces. Plain search is unchanged from a measured baseline, retrieved passages helped an answering model on a small sample, replaced decisions in a project log stop appearing when the log follows the documented format, and a generated documentation site is searchable with a general HTML reader.</p>
+</div>
+<div class="caveat">
+<p><b>Three things should be said plainly in the beta guide.</b></p>
+<ul>
+<li>The facts layer is on by default and no test here shows that it helps. The shadow log of plain search beside it is how the beta settles that.</li>
+<li>The project-log feature protects only entries whose replacement is stated with the earlier entry's date; otherwise it fails without a message.</li>
+<li>A code map is as good as the comments in the generated pages. TypeDoc needs <code>@module</code> to include file-level comments, and pdoc needs <code>--no-show-source</code>.</li>
+</ul>
+<p><b>Two defects are cheap to fix before testers arrive:</b> a replacement the rule reads backwards could be flipped when only one order is possible, and an entry that says "no longer used" without a date could be reported as a possible replacement instead of being ignored.</p>
+</div>
+
+<p class="small">Scripts and raw output: <code>experiments/baseline-parity</code> (<code>.out</code>), <code>answer-trial</code>, <code>facts-trial</code>, <code>project-log-trial</code>, <code>code-map-selftest</code> (<code>.out</code>, <code>.tagged.out</code>) and <code>code-map-pdoc</code> (<code>.out</code>). The toy log is <code>experiments/data/toy-project-log.md</code>.</p>
+
+</main>
+
+<script>
+(function () {
+  var css = function (v) { return getComputedStyle(document.documentElement).getPropertyValue(v).trim(); };
+  var NS = 'http://www.w3.org/2000/svg';
+  function el(tag, attrs, text) { var e = document.createElementNS(NS, tag); for (var k in attrs) e.setAttribute(k, attrs[k]); if (text != null) e.textContent = text; return e; }
+
+  // grouped vertical bars. groups: [label,...]; series: [{name, color, values:[...]}]
+  function bars(id, groups, series, o) {
+    o = o || {};
+    var W = 760, H = 290, L = 44, B = 40, R = 10, ymax = o.ymax || 1;
+    var legendRows = 1, cx0 = 0;
+    series.forEach(function (s) { var w = 28 + s.name.length * 6.6; if (L + cx0 + w > W - R) { legendRows++; cx0 = 0; } cx0 += w; });
+    var T = 22 + 18 * legendRows;
+    var svg = el('svg', { viewBox: '0 0 ' + W + ' ' + H, role: 'img' });
+    for (var t = 0; t <= 4; t++) {
+      var v = ymax * t / 4, y = T + (H - T - B) * (1 - t / 4);
+      svg.appendChild(el('line', { x1: L, x2: W - R, y1: y, y2: y, stroke: css('--line') }));
+      svg.appendChild(el('text', { x: L - 6, y: y + 4, 'text-anchor': 'end', 'font-size': 11, class: 'm' }, v.toFixed(2).replace(/0$/, '')));
+    }
+    var gw = (W - L - R) / groups.length, bw = Math.min(46, (gw - 30) / series.length);
+    groups.forEach(function (g, gi) {
+      var x0 = L + gi * gw + (gw - bw * series.length) / 2;
+      series.forEach(function (s, si) {
+        var val = s.values[gi], h = (H - T - B) * val / ymax, x = x0 + si * bw, y = H - B - h;
+        svg.appendChild(el('rect', { x: x + 2, y: y, width: bw - 4, height: h, fill: s.color, rx: 2 }));
+        svg.appendChild(el('text', { x: x + bw / 2, y: y - 5, 'text-anchor': 'middle', 'font-size': 11 }, (o.fmt ? o.fmt(val, gi, si) : val.toFixed(2))));
+      });
+      svg.appendChild(el('text', { x: L + gi * gw + gw / 2, y: H - B + 18, 'text-anchor': 'middle', 'font-size': 12 }, g));
+    });
+    var lx = L, ly = 4;
+    series.forEach(function (s) {
+      var w = 28 + s.name.length * 6.6;
+      if (lx + w > W - R) { lx = L; ly += 18; }
+      svg.appendChild(el('rect', { x: lx, y: ly, width: 11, height: 11, fill: s.color, rx: 2 }));
+      svg.appendChild(el('text', { x: lx + 16, y: ly + 10, 'font-size': 12 }, s.name));
+      lx += w;
+    });
+    document.getElementById(id).appendChild(svg);
+  }
+
+  var accent = css('--accent'), good = css('--good'), other = css('--other'), warn = '#d9a441';
+
+  bars('f-parity', ['recall at 1', 'recall at 3', 'recall at 5'], [
+    { name: 'Kardar, rebuilt', color: accent, values: [0.572, 0.885, 0.937] },
+    { name: 'Kardar, first build', color: css('--accent-soft'), values: [0.572, 0.885, 0.937] },
+    { name: 'Plischke, rebuilt', color: good, values: [0.679, 0.840, 0.878] },
+    { name: 'Plischke, first build', color: css('--good-soft'), values: [0.679, 0.840, 0.878] }
+  ]);
+
+  bars('f-facts', ['recall at 1', 'recall at 3', 'recall at 5'], [
+    { name: 'plain search', color: other, values: [0.679, 0.840, 0.878] },
+    { name: 'facts and neighbours (default)', color: accent, values: [0.686, 0.865, 0.865] }
+  ]);
+
+  bars('f-code', ['top 1', 'top 3', 'top 5'], [
+    { name: 'TypeDoc, as is (20 q)', color: other, values: [13 / 20, 14 / 20, 15 / 20] },
+    { name: 'TypeDoc, @module added (20 q)', color: accent, values: [12 / 20, 14 / 20, 17 / 20] },
+    { name: 'pdoc with source (10 q)', color: warn, values: [0.9, 1, 1] },
+    { name: 'pdoc no source (10 q)', color: good, values: [1, 1, 1] }
+  ], { fmt: function (v) { return Math.round(v * 100) + '%'; } });
+
+  // answer matrix: [type, no-context, retrieved, gold, recall@5]
+  var A = [["single",1,1,1,1],["single",0,1,1,1],["single",0.5,1,1,1],["single",1,1,1,1],["single",1,1,1,1],["single",0,1,1,1],["single",1,1,1,0],["single",1,1,1,1],["multi",1,1,1,1],["multi",1,1,1,1],["topic",0.5,0.5,1,1],["topic",1,1,1,0.333]];
+  (function () {
+    var W = 760, rowH = 24, H = 40 + A.length * rowH + 40, svg = el('svg', { viewBox: '0 0 ' + W + ' ' + H, role: 'img' });
+    var cols = [['no passages', 250], ['search results', 400], ['correct passages', 550]];
+    cols.forEach(function (c) { svg.appendChild(el('text', { x: c[1] + 40, y: 20, 'text-anchor': 'middle', 'font-size': 12, 'font-weight': 600 }, c[0])); });
+    svg.appendChild(el('text', { x: 680, y: 20, 'text-anchor': 'middle', 'font-size': 12, 'font-weight': 600 }, 'recall at 5'));
+    svg.appendChild(el('text', { x: 6, y: 20, 'font-size': 12, 'font-weight': 600 }, 'question type'));
+    var colr = function (s) { return s === 1 ? good : s === 0.5 ? warn : css('--bad'); };
+    A.forEach(function (r, i) {
+      var y = 34 + i * rowH;
+      svg.appendChild(el('text', { x: 6, y: y + 15, 'font-size': 12 }, r[0] === 'single' ? 'single passage' : r[0] === 'multi' ? 'multi passage' : 'whole topic'));
+      [1, 2, 3].forEach(function (k, ci) {
+        svg.appendChild(el('rect', { x: cols[ci][1], y: y, width: 80, height: rowH - 4, fill: colr(r[k]), rx: 3 }));
+        svg.appendChild(el('text', { x: cols[ci][1] + 40, y: y + 14, 'text-anchor': 'middle', 'font-size': 11, fill: '#fff', style: 'fill:#fff' }, String(r[k])));
+      });
+      svg.appendChild(el('text', { x: 680, y: y + 15, 'text-anchor': 'middle', 'font-size': 12 }, r[4] === 1 ? '1' : r[4].toFixed(2).replace(/^0/, '0')));
+    });
+    var yb = 40 + A.length * rowH;
+    [['mean 0.75', 250], ['mean 0.96', 400], ['mean 1.00', 550]].forEach(function (m) { svg.appendChild(el('text', { x: m[1] + 40, y: yb + 14, 'text-anchor': 'middle', 'font-size': 12, 'font-weight': 600 }, m[0])); });
+    document.getElementById('f-answers').appendChild(svg);
+  })();
+
+  // log grid. each code: 3 letters (c current, s replaced, o other) + 3 letters (F fact, P passage)
+  var Qs = ["Where is the data kept?", "Which database do workers write to?", "How long is each piece before embedding?", "What turns text into embeddings?", "How is it deployed?", "What format is the log?", "How do clients prove who they are?", "Upstream rate limit?", "Did reranking help?", "How often is a failed request retried?"];
+  var P = ["ssoPPP", "scsPPP", "sooPPP", "csoPPP", "scoPPP", "scoPPP", "scoPPP", "cooPPP", "cooPPP", "cooPPP"];
+  var C = ["oooFFF", "cccPFF", "oooPFF", "ccsFPF", "sscPFF", "cccFFF", "cccFPF", "cccFPF", "cccPFF", "cccFPF"];
+  (function () {
+    var W = 760, rowH = 26, H = 50 + Qs.length * rowH, svg = el('svg', { viewBox: '0 0 ' + W + ' ' + H, role: 'img' });
+    svg.appendChild(el('text', { x: 6, y: 20, 'font-size': 12, 'font-weight': 600 }, 'question'));
+    svg.appendChild(el('text', { x: 420, y: 20, 'text-anchor': 'middle', 'font-size': 12, 'font-weight': 600 }, 'plain search'));
+    svg.appendChild(el('text', { x: 625, y: 20, 'text-anchor': 'middle', 'font-size': 12, 'font-weight': 600 }, 'log search'));
+    var colr = { c: good, s: css('--bad'), o: other };
+    var trio = function (code, x0, y) {
+      for (var i = 0; i < 3; i++) {
+        svg.appendChild(el('rect', { x: x0 + i * 52, y: y, width: 46, height: rowH - 6, fill: colr[code[i]], rx: 3 }));
+        if (code[3 + i] === 'F') svg.appendChild(el('text', { x: x0 + i * 52 + 23, y: y + 14, 'text-anchor': 'middle', 'font-size': 12, style: 'fill:#fff', 'font-style': 'italic' }, 'f'));
+      }
+    };
+    Qs.forEach(function (q, i) {
+      var y = 32 + i * rowH;
+      svg.appendChild(el('text', { x: 6, y: y + 14, 'font-size': 12 }, q));
+      trio(P[i], 340, y); trio(C[i], 545, y);
+    });
+    document.getElementById('f-log').appendChild(svg);
+  })();
+})();
+</script>
+</body>
+</html>
